@@ -3,7 +3,7 @@ SRCS = DBTableDef.cs DBColumnDef.cs DBIndexDef.cs DBCon.cs DBConPool.cs DBTable.
 	A5erToDBTableDef.cs DBTableJson.cs
 LIBDIR = ..
 LOCALLIBS = $(LIBDIR)/MACS.dll
-IMPORTLIBS = Mysql.Data.dll Npgsql.dll Ionic.Zip.dll
+IMPORTLIBS = MySql.Data.dll Npgsql.dll Ionic.Zip.dll
 LIBS = $(LOCALLIBS) System.Data $(IMPORTLIBS)
 DOXFILES = Index.dox examples/Example.dox
 DOCDIR = ../doc/DB

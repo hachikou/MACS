@@ -51,7 +51,7 @@ clean:
 release:
 	$(MCS) $(MCSFLAGS_RELEASE) -t:library $(LIBS:%=-r:%) $(SRCS) -out:$(TARGET)
 
-SJISDictionary.cs: makeSJISDictionary.cs SJISDictionary.cs.in
+SJISDictionary.cs: makeSJISDictionary.exe SJISDictionary.cs.in
 	mono --debug makeSJISDictionary.exe
 
 makeSJISDictionary.exe: makeSJISDictionary.cs FileUtil.cs
