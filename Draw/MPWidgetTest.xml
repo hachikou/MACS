@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+  <default font="メイリオ" fontsize="20" color="#ff8080"/>
+  <class name="classA" fontsize="12" color="#303030" />
+  <class name="classB" color="#40a040" />
+  <class name="classC" class="classB" align="right" />
+</test>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+  <default font="メイリオ" fontsize="24" color="#ff8080"/>
+  <class name="classA" fontsize="18" color="#303030" />
+  <class name="classB" color="#40a040" />
+  <class name="classC" class="classB" align="right" />
+  
+  <text1>Hello</text1>
+
+  <text2 align="center">
+    <classA>Hello</classA>
+    こんにちわみなさん
+  </text2>
+
+  <text3>
+    Hello
+    <classB>こんにちわみなさん</classB>
+    <classC>Hola!</classC>
+  </text3>
+  
+</test>

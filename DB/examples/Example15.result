@@ -1,0 +1,6 @@
+mydb: Open Server=192.168.10.125;Database=mydb;Uid=myuser;Pwd=mypass;CharSet=utf8
+mydb: DELETE FROM サンプルテーブル WHERE ID<=10
+3件削除しました
+mydb: DELETE サンプルテーブル FROM サンプルテーブル LEFT JOIN サンプル役職 ON サンプル役職.ID=サンプルテーブル.ID WHERE サンプル役職.役職='取締役'
+1件削除しました
+mydb: Closed.

@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Sample Page</title>
+  </head>
+  <body>
+    {# コメントの例。HTMLコメントと異なり、クライアントには送られない。#}
+
+    {# !if コマンドを使って、条件に基づいて出力を制御できる。#}
+    {!if hoge}
+    Hoge is true.
+    {!endif}
+    {!if !hoge}
+    Hoge is false.
+    {!endif}
+    <br/>
+
+    {# !if コマンドでは、"=="と"!="を使って変数の等値確認ができる。#}
+    {!if moge == "/abc"}
+    Moge is /abc.
+    {!endif}
+    {!if moge != "/abc"}
+    Moge is not /abc.
+    {!endif}
+    <br/>
+
+    {# !assign コマンドを使うと、テンプレート中で変数に値を定義できる。#}
+    {!assign foo "hello"}
+    Foo is {foo}.
+
+    {# !include コマンドで他のテンプレートファイルをそこに読み込むことができる。#}
+    {!include example6_inc.html}
+
+  </body>
+</html>

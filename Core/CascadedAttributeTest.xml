@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<attribute a="a1" b="b1">
+  <default a="default-a" b="default-b" c="default-c" d="default-d" e="default-e" />
+  <class name="class1" a="class1-a" b="class1-b" c="class1-c" />
+  <class name="class2" a="class2-a" b="class2-b" />
+  <class name="group" a="group-a" b="group-b" />
+
+  <elemA a="elemA-a" b="elemA-b" c="elemA-c" d="elemA-d" e="elemA-e" />
+  <elemB a="elemB-a" />
+  <elemC class="class1" a="elemC-a" />
+
+  <group>
+    <default a="groupdefault-a" b="groupdefault-b" c="groupdefault-c" d="groupdefault-d" />
+    <elemD a="elemD-a" />
+    <elemE class="class1" a="elemE-a" />
+  </group>
+  <group>
+    <default class="class1" />
+    <elemF />
+    <elemG class="class2" />
+  </group>
+  <elemH class="class2" />
+  <elemI class="class2 class1" />
+  <group class="class1">
+    <elemJ />
+    <elemK class="class2" />
+  </group>
+  <container>
+    <elemL />
+    <elemM class="class2" />
+  </container>
+  <container elemclass="class1">
+    <elemN />
+    <elemO class="class2" />
+  </container>
+
+</attribute>

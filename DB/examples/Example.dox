@@ -1,0 +1,549 @@
+/** \page DBを使ったデータベースアクセスプログラム作成例
+
+DBモジュールを使うと、SQLデータベースにアクセスするコードを簡単に記述することができます。
+
+現在、MySQL(5.1)のみがサポートされています。（Oracle8にも対応していますが、フリーではないライブラリを使用しなければいけないため、本文書では未対応としています。）
+
+本文書で紹介しているコードの実行には、DB.dllおよびSCSLib.dllが必要となります。
+
+例えば、
+\verbatim
+export MONO_PATH='../../SCSLib:../'
+\endverbatim
+などのように、DB.dllとSCSLib.dllがあるディレクトリを環境変数 MONO_PATH にセットしてから、"mono Example1.exe" のように実行して下さい。
+
+なお、コンパイル方法については、
+\ref Makefile
+を参照して下さい。
+
+1: \subpage Example1 "DBに接続しSQL文を実行する"
+
+2: \subpage Example2 "クエリを実行する"
+
+3: \subpage Example3 "テーブル定義"
+
+4: \subpage Example4 "DBTableを用いたテーブルアクセス"
+   
+5: \subpage Example5 "様々な検索条件"
+
+6: \subpage Example6 "検索結果の獲得いろいろ"
+
+7: \subpage Example7 "サブクエリ"
+
+8: \subpage Example8 "テーブルの結合"
+
+9: \subpage Example9 "テーブルの内部結合"
+
+10: \subpage Example10 "連結テーブルの別名"
+
+11: \subpage Example11 "テーブルの別名"
+
+12: \subpage Example12 "レコードの挿入"
+
+13: \subpage Example13 "レコードの更新"
+
+14: \subpage Example14 "レコードの挿入または更新"
+
+15: \subpage Example15 "レコードの削除"
+
+16: \subpage Example16 "サブクエリを用いてレコードを挿入する"
+
+17: \subpage Example17 "トランザクション"
+
+*/
+
+/** \page Makefile Makefile
+\verbinclude Makefile
+*/
+
+/** \page Example1 DBに接続しSQL文を実行する
+
+MySQLデータベースに接続し、SQL文を実行する最も簡単な例です。
+
+Example1.cs:
+\include Example1.cs
+
+実行結果の例:
+\verbinclude Example1.result
+
+DBCon クラスを使うと、データベースエンジンと接続し、任意のSQL文を実行させる事ができます。
+
+DBCon のインスタンスを生成するとデータベースエンジンとの接続を行ないます。
+切断忘れが無いように、必ず using文を用いて new DBCon(...) を処理する事を強くお勧めします。
+
+DBCon.Execute() には、SQL文を記述した文字列または StringBuilder を渡します。
+なお、 StringBuilder を渡した場合、SQL文を実行した後に StringBulder.Clear() が実行されます。
+
+グローバル変数、 DBCon.UseConsoleLog を true にセットしておくと、データベースへの接続／切断時や、SQLを発行する度に、コンソールにデバッグメッセージを出力します。
+実行結果例では、"mydb:"で始まる行がそれにあたります。（"データベース名:"がデバッグメッセージの先頭につきます。）
+
+*/
+
+/** \page Example2 クエリを実行する
+
+SELECT文を実行し、結果を取り込む例です。
+
+なお、 DBTable クラスを使うと、SQL文を直接書く事無く、はるかに簡単にデータベース操作プログラムを書くことができますが、それは後ほどご紹介します。
+
+Example2.cs:
+\include Example2.cs
+
+実行結果の例:
+\verbinclude Example2.result
+
+クエリの説明をする前に、 DBCon のコンストラクト時にINIファイルを指定することができる事を説明します。
+
+IniFile クラスはSCSLib内にあるクラスで、INI形式のファイルを読み取り、定義値を取り出すオブジェクトです。
+このオブジェクトを DBCon のコンストラクタの引数にすると、INIファイルからパラメータを読み取って、データベースエンジンに接続します。
+INIファイルでは次のように指定します。
+
+Example.ini
+\verbinclude Example.ini
+
+さて、DBCon.Query() はSQLを実行し、 DBReader クラスのオブジェクトを返すメソッドです。
+
+DBReader は、検索結果を受信するためのカーソルのようなものと考えて下さい。
+DBReader.Read() で次のレコードを読み込みます。
+次のレコードが無い場合は、 DBReader.Read() はfalseを返します。
+
+DBReader.GetString(n) でn番目の要素を文字列として取り出すことができます。
+
+DBReader オブジェクトはデータベース接続のカーソルを作成しますので、クローズ忘れが無いように using文を用いる事を強くお勧めします。
+
+*/
+
+/** \page Example3 テーブル定義
+
+DBTableDefクラスは、簡単なXML定義ファイルでデータベーステーブルの構造を記述して管理するためのクラスです。
+
+テーブル定義XMLファイルは、次のように記述します。
+
+tabledef/table01.xml:
+\verbinclude tabledef/table01.xml
+
+このファイルを、例えば"tabledef"という名前のディレクトリ内に入れておき、次のプログラムを実行します。
+
+Example3.cs:
+\include Example3.cs
+
+実行結果の例:
+\verbinclude Example3.result
+
+DBTableDef.LoadAll() は、指定したディレクトリ内から"table"で始まり".xml"で終わる名前のファイルを全て読み取り、グローバル変数 DBTableDef.TableList に格納します。
+
+DBTableDef.Get() を用いると、指定したテーブル名のテーブル定義を取り出すことができます。
+
+テーブルの各カラムの定義は、 DBColumnDef 型で管理されます。
+
+カラムのデータタイプは、 DBColumnDef.Type で得られ、"NUMBER", "VARCHAR", "CHAR", "DATE", "TIME", "DATETIME", "BOOLEAN" のいずれかです。
+
+カラムの長さ（桁数または文字数）は、 DBColumnDef.Length で得られます。また、データタイプが"NUMBER"の時は、 DBColumnDef.FractionalLength が小数点下の桁数を示します。
+
+なお、テーブル定義からSQLのCREATE文を自動生成するツール、makesql のために、主キーやインデックスなどを定義する記述を付けることができるようになっていますが、本文書では説明を割愛します。
+
+*/
+
+/** \page Example4 DBTableを用いたテーブルアクセス
+
+DBTableクラスを用いると、複雑なSQLを書かずにデータベーステーブルを処理する事ができます。
+
+Example4.cs:
+\include Example4.cs
+
+実行結果の例:
+\verbinclude Example4.result
+
+まず、 DBTable オブジェクトを作成します。第1引数は DBCon で接続したDB、第2引数は DBTableDef.LoadAll() （または DBTableDef.Load() ）で取り込んだテーブル定義のテーブル名を指定します。
+
+検索を実行する前に、様々な条件などをこのオブジェクトに設定してゆきます。
+
+DBTable.SetColumns() は、検索を実行する時に取り出すカラム名の一覧を指定します。
+指定したカラム名の一覧は、後で DBTable.Columns プロパティで取り出す事ができます。
+
+DBTable.SetCondition() は、検索条件の設定です。
+様々な引数を持つメソッドですが、ここでは2つの引数を持つメソッドを利用しています。
+引数が2つの場合、第1引数がカラム名、第2引数がその値を指定します。
+
+DBTable.GetData() は設定された条件に従ってSQL文を生成し、結果を全て取り込んで DataArray のリストとして返します。
+
+DataArray は、SCSLib内で定義されているクラスで、文字列の配列を取り扱うのに便利なように設計されています。
+DataArray の最大の特徴は、配列の添字に名前を用いることができる点で、 DBTable.GetData() では、 DBTable に設定されているカラム名一覧が配列の添字になります。
+
+このため、このプログラムのように、
+\verbatim
+rec["名前"]
+\endverbatim
+というように、カラム名を指定して値を取り出すことができます。
+
+なお、 DataArray は数値による添字指定もできますので、rec["名前"]の代わりに rec[0]、rec["電話番号"]の代わりに rec[1] と書いても構いません。
+（添字の順番は、 DBTable.SetColumns() で定義した順番となります。）
+
+テーブル内の全てのカラムを取り出したい場合には、 DBTable.SetColumns で全てのカラム名を列挙しても構いませんが、 DBTable.SetAllColumns() を用いると、自動的にテーブル定義で定義されている全カラムが設定されます。
+
+DBTable.GetData() は、検索結果を全て取り込んでDataArrayのリストを作成します。
+このため、検索結果となるデータ量が膨大なものとなる場合はデータベースエンジンとの通信量が膨大となる上、使用メモリ量も膨大な者になる事に注意して下さい。
+
+DBTable.GetData(int limit) を使うと、取り込む検索結果の件数を最大limit件に抑えることができます。
+また、 DBTable.GetData(int limit, int offset) を使うと、検索結果のうち、offset件目からlimit件だけを取り出すことができます。
+ページングをして表示する場合などにご利用ください。
+
+*/
+
+/** \page Example5 様々な検索条件
+
+Example4.csでは2つの引数を持つ DBTable.SetCondition() を使いましたが、 DBTable.SetCondition() は様々な引数を持つバリエーションが用意されています。
+
+Example5.cs:
+\include Example5.cs
+
+実行結果の例:
+\verbinclude Example5.result
+
+引数を3つ持つ DBTable.SetCondition は、等値以外の検索条件を指定します。
+第1引数は DBCondition.Code 列挙体の値で、検索条件を示します。
+これは、次のいずれかです。
+
+DBCondition.Code.Equals :〜と等しい,
+DBCondition.Code.NotEquals :〜と等しくない,
+DBCondition.Code.Contains :〜を含む(文字列),
+DBCondition.Code.NotContains :〜を含まない(文字列),
+DBCondition.Code.StartsWith :〜で始まる(文字列),
+DBCondition.Code.EndsWith :〜で終わる(文字列),
+DBCondition.Code.GreaterOrEqual :〜以上,
+DBCondition.Code.GreaterThan :〜より大きい,
+DBCondition.Code.LessOrEqual :〜以下,
+DBCondition.Code.LessThan :〜より小さい,
+DBCondition.Code.In :〜のいずれか,
+DBCondition.Code.NotIn :〜のいずれでもない
+
+第2引数は対象となる項目名です。
+
+第3引数は条件値で、In/NotIn条件以外については、ToString()メソッドが適用できるオブジェクトなら何でも構いません。
+対象項目が数値の項目の場合は、条件値は一度ToString()で文字列化された後に StringUtil.ToInt() または StringUtil.ToDouble() を用いて数値化されて利用されます。
+（この際、万が一数値でない文字列が与えられた場合には、0として扱われ、エラーにはなりません。）
+
+条件がIn/NotInの場合は、条件値には配列オブジェクトを指定します。配列の要素のいずれかと一致する（In）、どれとも一致しない（NotIn）ことが条件になります。
+
+範囲を指定する条件の場合には、4つの引数を持つ DBTable.SetCondition を用います。
+DBTable.SetCondition(DBCondition.Code.Between, 項目名, 範囲初め, 範囲終り) を使うと、項目が範囲内である事が条件になります。
+この際、範囲初めと範囲終りは含まれます。
+
+DBTable.SetCondition() の代わりに DBTable.AddCondition() を使うと、それまでに設定した条件に検索条件を追加することができます。
+
+等値である条件については複数条件を指定するケースが非常に多いため、1つのメソッド呼び出しで2つまたは3つの条件を一度に指定できます。
+DBTable.SetCondition(項目名1, 値1, 項目名2, 値2) または DBTable.SetCondition(項目名1, 値1, 項目名2, 値2, 項目名3, 値3) というメソッドが用意されています。
+
+*/
+
+/** \page Example6 検索結果の獲得いろいろ
+
+Example6.cs:
+\include Example6.cs
+
+実行結果の例:
+\verbinclude Example6.result
+
+検索結果が1件しか必要ないという事がしばしば発生します。
+そのようなケースの際には DBTable.GetRecordData() を使うと便利です。
+DBTable.GetRecordData() は引数で等値条件を1項目から3項目まで指定できます。
+
+等値条件以外の場合は、 DBTable.SetCondition() と DBTable.GetOneData() を組み合わせて使って下さい。
+
+該当件数だけが必要な場合は、 DBTable.GetCount() を使います。
+この場合、対象カラム指定はする必要がありません。（しても無視されます。）
+
+Example4の説明のところで説明した通り、 DBTable.GetData() は検索結果を全て取り込んでリストを作成するため、検索結果が膨大な量になる場合にはメモリ使用量が膨大になってしまいます。
+このような場合には、データを1件ずつ取り込んで処理をする必要があります。
+DBTable.Query() を使うと、検索のカーソルを作成して DBReader オブジェクトを得ることができます。
+DBReader.Read() または DBReader.Get() を使うと、データを1件ずつ取り出して処理をすることができます。
+
+*/
+
+/** \page Example7 サブクエリ
+
+SQLのサブクエリを使って複雑な検索を行なうことができます。
+
+この例のサブクエリでは、もう一つのテーブル、"サンプル役職"を利用します。
+サンプル役職のテーブル定義は次のようになっているものとします。
+
+tabledef/table02.xml:
+\verbinclude tabledef/table02.xml
+
+これを使い、サブクエリを使う例を2種類紹介するプログラムがExample7.csです。
+
+Example7.cs:
+\include Example7.cs
+
+実行結果の例:
+\verbinclude Example7.result
+
+検索条件の DBCondition.Code.In を使う場合、値の指定に配列を与えるのではなく、サブクエリを与えることができます。
+この場合、「サブクエリの結果のいずれかである」という条件を指定することになります。
+なお、同様のサブクエリ条件は、 DBCondition.Code.NotIn で使うこともできます。
+
+検索条件 DBCondition.Code.Exists と DBCondition.Code.NotExists はサブクエリ用の条件です。
+それぞれ、サブクエリ結果が存在する場合、存在しない場合に真になります。
+
+Exists利用の例では、サブクエリ中でメインクエリの項目名を条件値として使っています。
+サブクエリに限った事ではありませんが、条件値として "!" で始まる文字列を指定すると、"!"以降の文字列がそのままSQL文の中に埋め込まれますので、他テーブルの項目名など、任意のSQL式を記述することができます。
+（誤って"!"を付けないと、文字列の値として扱われます。生成されるSQL文の違いを実験してみて下さい。）
+
+なお、これらの例題はサブクエリの例として紹介したもので、処理の実行効率はあまりよくありません。
+特に Exists 条件の例では、サンプルテーブルのレコード数の回数だけサンプル役職の検索が行なわれるため、レコード件数が多い場合にはデータベースエンジンの処理時間が膨大にかかることになります。
+
+サブクエリを使う検索の多くは、後述するテーブル連結(join)を使って実現したほうが圧倒的に処理効率が良くなります。
+
+*/
+
+/** \page Example8 テーブルの連結
+
+2つのテーブルを連結して使うことができます。
+
+Example8.cs:
+\include Example8.cs
+
+実行結果の例:
+\verbinclude Example8.result
+
+DBTable.Join() を使うと、基本となるテーブルに他のテーブルを連結させて使う事ができます。
+
+Joinの第1引数は副テーブルの名前です。
+第2引数は副テーブルのカラム名で、第3引数は基本テーブルのカラム名です。
+テーブルの結合条件は、指定したカラム同士の値が等しい、ということになります。
+
+もし結合条件が複数ある場合には、
+\verbatim
+tbl.Join("副テーブル名", "副カラム名1", "基本カラム名1", "副カラム名2", "基本カラム名2");
+tbl.Join("副テーブル名", "副カラム名1", "基本カラム名1", "副カラム名2", "基本カラム名2", "副カラム名3", "基本カラム名3");
+\endverbatim
+のように指定します。
+
+これらのカラム名を指定する際、内部でSQL文を生成する際に自動的にテーブル名指定が付加されますので、Joinの引数のカラム名にはテーブル名を付けないで下さい。
+
+もし結合条件が単純なカラム値の一致だけで記述できない場合には、SQLの条件式を直接書くこともできます。
+例えば、
+\verbatim
+tbl.Join("サンプル役職", "サンプル役職.ID=サンプルテーブル.ID+1");
+\endverbatim
+のように記述することができます。（Joinの引数が2つの時には、第2引数の文字列がそのままSQL文のJOIN条件式に使われます。）
+このとき、結合条件式中のカラム名はテーブル名の自動補完が行なわれない点に注意して下さい。
+
+テーブルを結合すると、取り出すカラム名や検索条件中のカラム名に、副テーブルのカラム名を指定することができるようになります。
+カラム名は、まず基本テーブルのカラム名に存在するかどうか確認され、無ければ1番目に結合したテーブルのカラム名を探し、無ければ2番目に結合したテーブルのカラム名を探す、というように探され、SQL文を生成する時に適切に展開されます。
+
+もし基本テーブルと副テーブルで全く同じ名前のカラムがある場合、単純にカラム名を指定すると基本テーブルのカラムとして処理されます。
+このような場合、副テーブルのカラムを指定するには、"副テーブル名.カラム名"のように、テーブル名を明示的に指定して下さい。
+
+テーブルの結合は、左外部結合（LEFT OUTER JOIN）で行なわれます。
+すなわち、結合条件に合致するレコードが副テーブルに存在しない場合、副テーブルから得られるカラムの値はNULLになります。
+また、結合条件に合致するレコードが副テーブルに複数存在する場合、その副テーブルのレコード数分だけ基本テーブルのレコードがコピーされて結果に含まれることになります。
+
+*/
+
+/** \page Example9 テーブルの内部連結
+
+テーブルを内部連結することができます。
+
+Example9.cs:
+\include Example9.cs
+
+実行結果の例:
+\verbinclude Example9.result
+
+DBTable.Join() は、左外部結合（LEFT OUTER JOIN）でテーブルを連結します。
+一方、 DBTable.InnerJoin() は、内部結合 (INNER JOIN) でテーブルを連結します。
+
+すなわち、 DBTable.Join() で連結すると、結合条件に合致するレコードが副テーブルに存在しない場合、副テーブルから得られるカラムの値はNULLになります。
+
+一方、 DBTable.InnerJoin() で連結すると、結合条件に合致するレコードが副テーブルに存在しない基本テーブルのレコードは、抽出されません。
+
+なお、結合条件に合致するレコードが副テーブルに複数存在する場合、その副テーブルのレコード数分だけ基本テーブルのレコードがコピーされて結果に含まれるという点は、どちらの方法で連結しても変わりありません。
+
+*/
+
+/** \page Example10 連結テーブルの別名
+
+同一のテーブルを複数回連結する場合など、テーブルに別名を付けないといけないケースがあります。
+この場合には DBTable.JoinAs() を用います。
+
+Example10.cs:
+\include Example10.cs
+
+実行結果の例:
+\verbinclude Example10.result
+
+この例で用いているサンプル翻訳テーブルは、次のように定義されているテーブルで、日本語と英語の対応を格納している事を想定しています。
+
+tabledef/table03.xml:
+\verbinclude tabledef/table03.xml
+
+DBTable.JoinAs() は DBTable.Join() とほぼ同じ動作をしますが、第1引数でテーブルの別名（仮テーブル名）を付けることができる点が異なります。
+
+この例の場合、サンプル翻訳テーブルを、名前の翻訳をする目的と役職の翻訳をする目的で2回連結しています。
+「英語」カラムがどちらのサンプル翻訳テーブルのものなのかを識別するために、片方にT1、他方にT2という別名を付けています。
+
+DBTable.JoinAs() も、 DBTable.Join() と同じく結合条件を指定することができます。
+この例では、役職の翻訳を行なうための結合は、基本テーブルのカラムとの連結ではないため、汎用的な連結条件指定のフォーマットを用いています。
+このとき、汎用的な連結条件指定の文字列はそのままSQL文内に埋め込まれるため、テーブル名を明示的に指定しなければいけないという点に注意して下さい。
+
+なお、内部連結を用いる場合には DBTable.InnerJoinAs() を用いて下さい。
+
+*/
+
+/** \page Example11 テーブルの別名
+
+Example10では連結するテーブルに別名を付ける例を紹介しましたが、複雑なサブクエリを用いる場合などに、基本のテーブル名にも別名を付けたい時があります。
+この場合には引数を3つ持つ DBTable コンストラクタを用います。
+
+Example11.cs:
+\include Example11.cs
+
+実行結果の例:
+\verbinclude Example11.result
+
+今まで DBTable を new するときには、 DBCon とテーブル名を指定する、2引数のコンストラクタを用いてきました。
+この2引数に加えて、第3引数としてテーブルの別名を指定すると、基本テーブルに別名を付ける事が可能です。
+
+テーブルに別名を付けておくと、SQL文を生成する際に、その別名を用いてカラム指定をするようになり、サブクエリなどに用いた際にテーブル名の衝突を避けることができます。
+
+なお、既にExample7.csのところで説明しましたが、条件値を指定する時に "!"で始まる文字列を書くと、それは値として扱われずに、"!"以降の文字列がSQL文の中にそのまま展開されます。
+
+*/
+
+/** \page Example12 レコードの挿入
+
+検索だけでなく、レコードの挿入を行なう際も DBTable を用いると簡便です。
+
+Example12.cs:
+\include Example12.cs
+
+実行結果の例:
+\verbinclude Example12.result
+
+DBTable.Insert() に DataArray を引数として渡すと、テーブルに新しいレコードを挿入することができます。
+
+このプログラム例のように、 DataArray に必要な要素を代入した後に DBTable.Insert() を呼び出します。
+このとき、値がnullであるカラム（この例では、rec["電話番号"] をセットしていないので、rec["電話番号"] == null になっている）は、INSERT文生成の際に値が指定されません。
+データベースのテーブル定義でカラム値のデフォルト値が指定されている場合にはそのデフォルト値がセットされますし、デフォルト値が指定されていない場合には NULL がセットされます。
+（本ライブラリの機能ではなく、データベースエンジンの機能です。）
+
+もしテーブルにユニークキー（主キーなど）が設定されている場合は、挿入するレコードのユニークキーが既存のレコードと重複すると DbException 例外を発生します。
+
+DBTable.Insert() 実行時には、検索条件指定は全て無視されます。
+
+*/
+
+/** \page Example13 レコードの更新
+
+DBTable.Update() を用いるとレコードの更新を行なうことができます。
+
+Example13.cs:
+\include Example13.cs
+
+実行結果の例:
+\verbinclude Example13.result
+
+DBTable.Update() に DataArray を引数として渡すと、テーブルの既存のレコードの内容を更新します。
+
+DBTable.Update() を実行する前に、必ず検索条件を指定して下さい。
+検索条件に合致する全てのレコードの内容が更新されます。
+
+このとき、値がnullであるカラム（この例では、rec["ID"] と rec["名前"] をセットしていないので、この2つの値は null になっている）は、UPDATE文生成の際に値が指定されません。
+すなわち、値が更新されません。
+（このことより、本メソッドではカラム値をNULLに更新する事はできません。）
+
+もしテーブルにユニークキー（主キーなど）が設定されている場合は、更新の結果として重複が発生する状況にあると、 DbException が発生します。
+
+DBTable.Update() は更新したレコード数（つまり検索条件に合致したレコード数）を返します。
+検索条件に合致するレコードが1件も無い時は、 DBTable.Update() はエラーとならず、0を返して終了します。
+
+一般的なSQLでは検索条件を指定しない（WHERE句なし）で UPDATE を実行すると全てのレコードを更新しますが、本ライブラリではプログラムミスによる被害を少なくする目的で、検索条件が指定されていない DBTable.Update() 呼び出しはエラーとなるようになっています。
+
+*/
+
+/** \page Example14 レコードの挿入または更新
+
+既存のレコードが無い時には挿入を、ある時には更新をする、という場合には、次のようにプログラムすればよいでしょう。
+
+Example14.cs:
+\include Example14.cs
+
+実行結果の例:
+\verbinclude Example14.result
+
+このプログラムで新しいのは、 "DBTable.ForUpdate = true;" としている点だけです。
+
+この指定は、SQLのSELECT文を生成する際に "FOR UPDATE" オプションをつけるためのものです。
+"FOR UPDATE" オプションの動作内容については、MySQLのリファレンスマニュアルなどをご覧下さい。
+
+*/
+
+/** \page Example15 レコードの削除
+
+レコードの削除は、 DBTable.Delete() で行なうことができます。
+
+Example15.cs:
+\include Example15.cs
+
+実行結果の例:
+\verbinclude Example15.result
+
+DBTable に検索条件を設定してから DBTable.Delete() を呼び出すと、条件に合致する全てのレコードを削除します。
+DBTable.Delete() は削除した件数を返します。
+
+テーブルを連結しておき、レコード削除をすることもできます。
+この場合、連結した副テーブルは条件指定にのみ用いられ、削除されるのは基本テーブルのレコードだけとなります。
+
+なお、一般のSQLでは検索条件指定をしないで（WHERE句を付けないで）DELETE文を実行すると、テーブルの全てのレコードを削除しますが、 DBTable ではプログラミングミスによる被害を少なくするために、検索条件が指定されていない場合はエラーとなります。
+
+*/
+
+/** \page Example16 サブクエリを用いてレコードを挿入する
+
+あるテーブルの検索結果を用いて他のテーブルにレコード挿入を行ないたい事があります。
+
+Example16.cs:
+\include Example16.cs
+
+実行結果の例:
+\verbinclude Example16.result
+
+この例で新たに登場するサンプル給与テーブルは、次のように定義されています。
+
+tabledef/table04.xml:
+\verbinclude tabledef/table04.xml
+
+DBTable.Insert() の引数に DataArray ではなく、 DBTable を渡すと、サブクエリを使ったレコード挿入を行ないます。
+
+サブクエリの抽出カラムは、レコード挿入をしようとするテーブルのカラムと順番、要素数が一致していなければいけません。
+
+なお、この例で、サブクエリの2番目のカラムが、カラム名ではなく "0.00" という定数になっている点に注意して下さい。
+
+DBTable.SetColumns() で指定する名前は、基本テーブルや連結テーブルのカラム名と一致するものでない場合には、そのままSQL文に展開されます。
+このため、定数を指定したい場合は、数値の場合は "123"、文字列の場合は "'abc'"（シングルクォートで囲っている点に注意）などのように指定します。
+また、SQLで有効な式は何でも記述できますので、"給与*100" とか "CONCAT(名前,'様')" などと記述する事もできます。
+（CONCAT()は MySQLの関数で、文字列を結合するものです。）
+
+*/
+
+/** \page Example17 トランザクション
+
+SQLのトランザクションを管理するには、 DBCon.Begin() と DBCon.Commit() を使います。
+
+Example17.cs:
+\include Example17.cs
+
+実行結果の例:
+\verbinclude Example17.result
+
+DBCon.Begin() を実行すると、SQLのトランザクションが開始され、 DBCon.Commit() が実行されるまでの間データベースへの変更は確定しません。
+
+DBCon.Commit() が呼ばれないまま DBCon.Rollback() が実行された場合には、 DBCon.Begin() 以降のデータベース変更は全て破棄され、内容が DBCon.Begin() 実行時点の状態に戻ります。
+
+例外発生など、なんらかの理由で DBCon.Dispose() が呼び出されると、自動的に DBCon.Rollback() が呼び出され、データベースはロールバックします。
+（この例では new DBCon() をusing文で保護しているため、usingブロックから外に出る時に確実に DBCon.Dispose() が呼び出されます。）
+
+もちろん、 DBCon.Begin() が呼び出されていない場合はトランザクション管理は行なわれず、SQL実行の都度データベースに変更が反映されます。
+また、 DBCon.Dispose() はロールバックを行ないません。
+
+*/

@@ -1,0 +1,5 @@
+mydb: Open Server=192.168.10.125;Database=mydb;Uid=myuser;Pwd=mydb;CharSet=utf8
+mydb: CREATE TABLE IF NOT EXISTS サンプルテーブル (ID INTEGER, 名前 VARCHAR(32), 電話番号 VARCHAR(16))
+mydb: INSERT INTO サンプルテーブル (ID,名前,電話番号) VALUES (1,'テスト一郎','03-4567-8901')
+1件登録しました
+mydb: Closed.

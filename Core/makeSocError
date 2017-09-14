@@ -1,0 +1,64 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import os,re,codecs
+
+csfile = "SocError.cs"
+txtfile = "SocError.txt"
+
+consts = u''
+getMessage = u'''
+    public static string GetMessage(int code) {
+        string msg;
+        switch(code) {
+'''
+
+pat_code = re.compile(r'WSA(\S+)\s*\((\d+)\)')
+
+code = ''
+for line in codecs.open(txtfile, 'r', 'utf-8'):
+    mo = pat_code.search(line)
+    if(mo):
+        code = mo.group(1)
+        num = int(mo.group(2))
+        consts += u'    public const int %s = %d;\n'%(code,num)
+        continue
+    i = map(lambda x:x.strip(),line.strip().split(':',1))
+    if(len(i) >= 2):
+        if((i[0] == u'意味') and (code != '')):
+            getMessage += u'        case %s:\n'%(code)
+            getMessage += u'            msg = "%s";\n'%(i[1])
+            getMessage += u'            break;\n'
+            code = ''
+
+getMessage += u'''
+        default:
+            msg = "システムエラー";
+            break;
+        }
+        return String.Format("{0}({1})", msg, code);
+    }
+'''
+
+f = codecs.open(csfile, 'w', 'utf-8')
+f.write(u'''/**
+ * SocError: Windows SocketException Error codes.
+ * $Id:$
+ *
+ * Copyright (C) 2015 Microbrains Inc.
+ * All Rights Reserved.
+ * This code was designed and coded by SHIBUYA K.
+ */
+
+using System;
+using System.Text;
+
+public class SocError {
+
+''')
+f.write(consts)
+f.write(getMessage)
+f.write(u'''
+}
+''')
+f.close()

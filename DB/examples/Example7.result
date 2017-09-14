@@ -1,0 +1,8 @@
+mydb: Open Server=192.168.10.125;Database=mydb;Uid=myuser;Pwd=mypass;CharSet=utf8
+mydb: SELECT 名前,電話番号 FROM サンプルテーブル WHERE ID IN (SELECT ID FROM サンプル役職 WHERE 役職='技術課長')
+なまえ:テスト一郎、でんわ:03-4567-8901
+なまえ:テスト次郎、でんわ:03-4444-5555
+mydb: SELECT 名前,電話番号 FROM サンプルテーブル WHERE  EXISTS (SELECT ID FROM サンプル役職 WHERE ID=サンプルテーブル.ID AND 役職='技術課長')
+なまえ:テスト一郎、でんわ:03-4567-8901
+なまえ:テスト次郎、でんわ:03-4444-5555
+mydb: Closed.

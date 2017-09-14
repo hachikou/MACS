@@ -1,0 +1,5 @@
+mydb: Open Server=192.168.10.125;Database=mydb;Uid=myuser;Pwd=mypass;CharSet=utf8
+mydb: SELECT ID,名前 FROM サンプルテーブル WHERE  NOT EXISTS (SELECT SUBTBL.ID FROM サンプルテーブル AS SUBTBL WHERE SUBTBL.ID=サンプルテーブル.ID+1)
+3: テスト三郎
+102: 鈴木一郎
+mydb: Closed.

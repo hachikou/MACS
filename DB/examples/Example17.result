@@ -1,0 +1,32 @@
+mydb: Open Server=192.168.10.125;Database=mydb;Uid=myuser;Pwd=mypass;CharSet=utf8
+mydb: START TRANSACTION
+mydb: INSERT INTO サンプルテーブル (ID,名前) VALUES (2000,'カルロス ゴーン')
+mydb: COMMIT
+mydb: SELECT ID,名前,電話番号 FROM サンプルテーブル
+1: テスト一郎
+2: テスト次郎
+3: テスト三郎
+100: 山田太郎
+101: 山田花子
+102: 鈴木一郎
+2000: カルロス ゴーン
+mydb: START TRANSACTION
+mydb: INSERT INTO サンプルテーブル (ID,名前) VALUES (2001,'マイケル ウッドフォード')
+mydb: ROLLBACK
+mydb: SELECT ID,名前,電話番号 FROM サンプルテーブル
+1: テスト一郎
+2: テスト次郎
+3: テスト三郎
+100: 山田太郎
+101: 山田花子
+102: 鈴木一郎
+2000: カルロス ゴーン
+mydb: START TRANSACTION
+mydb: INSERT INTO サンプルテーブル (ID,名前) VALUES (2002,'堀江貴文')
+
+Unhandled Exception: System.Exception: Aborted
+  at Program.Main (System.String[] args) [0x001ab] in examples/Example17.cs:59 
+mydb: ROLLBACK
+mydb: Closed.
+[ERROR] FATAL UNHANDLED EXCEPTION: System.Exception: Aborted
+  at Program.Main (System.String[] args) [0x001ab] in examples/Example17.cs:59 

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AD44B760-26D2-4373-B453-934C6B592ED8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DrawTextTest</RootNamespace>
+    <AssemblyName>DrawTextTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>DrawTextTest\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>DrawTextTest\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GraphicsExtensions_Rectangle.cs" />
+    <Compile Include="GraphicsExtensions_Text.cs" />
+    <Compile Include="GraphicsExtensions_AttrText.cs" />
+    <Compile Include="GraphicsExtensions_Button.cs" />
+    <Compile Include="FontExtensions.cs" />
+    <Compile Include="ControlExtensions.cs" />
+    <Compile Include="ColorUtil.cs" />
+    <Compile Include="MPAttribute.cs" />
+    <Compile Include="MPText.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DrawTextTest.cs" />
+    <Compile Include="DrawTextTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrawTextTestForm.Designer.cs">
+      <DependentUpon>DrawTextTestForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Core\StringUtil.cs">
+      <Link>MACS\Core\StringUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\CascadedAttribute.cs">
+      <Link>MACS\Core\CascadedAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\XmlFile.cs">
+      <Link>MACS\Core\XmlFile.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\FileUtil.cs">
+      <Link>MACS\Core\FileUtil.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DrawTextTestForm.resx">
+      <DependentUpon>DrawTextTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" "$(ProjectDir)"
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

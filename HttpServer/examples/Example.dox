@@ -1,0 +1,389 @@
+/** \page Httpサーバ構築例
+
+HttpServerモジュールを使うと、スタンドアローンのHTTPサーバや、それを使ったWebアプリケーションが簡単に作成できます。
+
+1: \subpage Example1 "HTTPサーバのサンプルコード"
+
+2: \subpage Example2 "HTMLの動的生成"
+
+3: \subpage Example3 "静的ページのサーバ"
+
+4: \subpage Example4 "テンプレート利用"
+
+5: \subpage Example5 "文字エスケープ"
+
+6: \subpage Example6 "テンプレートコマンド"
+
+7: \subpage Example7 "テンプレートコマンド2"
+
+8: \subpage Example8 "WebControl利用"
+
+9: \subpage Example9 "WebControl利用2"
+
+10: \subpage Example10 "コンテンツをEXEに埋め込む"
+
+11: \subpage Example11 "ファイルダウンロード"
+
+12: \subpage Example12 "ファイルアップロード"
+
+13: \subpage Example13 "セッション変数"
+
+14: \subpage Example14 "多言語化"
+
+15: \subpage Example15 "入力バリデーション"
+
+*/
+
+/** \page Example1 HTTPサーバのサンプルコード
+
+HTTPサーバを動かすサンプルコードを以下に示します。
+
+Example1.cs:
+\include Example1.cs
+
+このプログラムを動かすと、8888番ポートをListenしますので、Webブラウザで "http://localhost:8888" にアクセスして動作を確認します。
+
+例えば、"html"という名前のディレクトリに "abc.html"というファイルがある場合、"http://localhost:8888/abc.html" にアクセスすると、その内容が表示されます。
+
+また、"http://localhost:8888/sample"にアクセスすると、SamplePageクラスのインスタンスが作成され、そのPageLoadメソッドが呼び出されます。PageLoadメソッドの引数 "param"には、"http://localhost:8888/sample"の後に書かれた文字列が渡されます。例えば、"http://localhost:8888/sample/foo.baa"にアクセスすると、param="/foo.baa"になります。
+
+*/
+
+
+/** \page Example2 HTMLの動的生成
+
+AddPageメソッドでサーバに登録したページハンドラでは、動的にHTMLを生成します。
+
+このページハンドラの基底となる HttpPage クラスには、HTMLを生成するのに便利なメソッドが用意されています。
+また、HttpPage クラスのさらに基底になっている HtmlTool クラスにもHTML生成に役立つメソッドが用意されていますので、これらも使うことができます。
+
+Example2.cs:
+\include Example2.cs
+
+*/
+
+/** \page Example3 静的ページのサーバ
+
+HttpStaticPage クラスのページハンドラを使って、静的ページを返す際の動作を調整することができます。
+
+Example3.cs:
+\include Example3.cs
+
+デフォルトでは、ファイルの拡張子に応じてContent-Typeがつけられます。標準の拡張子とContent-Typeの対応については、 HttpStaticPage::SetDefaultContentTypeList() の説明をごらん下さい。
+
+"csspage"の例のように、Content-Typeを固定することもできます。
+
+また、"docpage"の例のように、拡張子とContent-Typeの対応を追加登録する事もできます。
+
+HttpStaticPage をコンストラクトする時に、第2引数に true を与えると、ブラウザが要求する言語に応じたコンテンツを返すことができるようになります。
+
+たとえば、"http://localhost:8888/nls/page.html" にアクセスした際、ブラウザが日本語を要求した場合には、"nls/page.html.ja"が、英語を要求した場合には "nls/page.html.en"が返ります。
+
+*/
+
+
+/** \page Example4 テンプレート利用
+
+HttpTemplatePage クラスを使って、テンプレートを使った動的ページ生成を行なうことができます。
+
+Example4.cs:
+\include Example4.cs
+
+テンプレートを使った動的ページ生成を行なうには、まず HttpTemplatePage クラスを派生するクラスを作ります。
+
+このクラスには PageLoadメソッドを作っておき、そこでテンプレート変数に値をセットし、最後にRenderTemplateメソッドを呼び出します。
+RenderTemplateメソッドは、"template/example4.html" または"template/SamplePage.html" というファイルを読み取って、そのテンプレート変数を展開して返します。
+
+なお、テンプレートが置かれるディレクトリは HttpTemplatePage::SetTemplateDir(string) メソッドで、テンプレートファイルの拡張子は HttpTemplatePage::SetTemplateSuffix(string) メソッドで変更することができます。
+
+example4.htmlの中身:
+\verbinclude template/example4.html
+
+テンプレート中では、変数は "{"と"}"で囲われて示されます。
+
+この変数には、 Assign(string, object) メソッドで値を定義できます。Assignの第1引数が変数名で、第2引数は ToString() メソッドが使えるオブジェクトならば何を指定しても構いません。
+
+なお、変数を示す記号は、 HttpTemplatePage::SetPrefixPostfix(string, string) メソッドで変更することができます。
+
+値が設定されていない変数は、"{"と"}"を含めてそのまま残ります。（未定義のままレンダリングされた変数に気づきやすいようにしてあります。）
+
+値に、パブリックなメンバを持つオブジェクトを指定した場合、テンプレート中で "変数名.メンバ名"という形式でメンバの値を使うことができます。
+
+なお、変数の文字置換は、HTMLやXMLの構造に関係なく行なわれます。
+このため、HTMLタグ内に変数があっても構いませんし、変数の値にHTMLタグが含まれていても構いません。
+
+*/
+
+/** \page Example5 文字エスケープ
+
+テンプレート変数を展開する時に、文字のエスケープを行なうことができます。
+
+Example5.cs:
+\include Example5.cs
+
+example5.htmlの中身:
+\verbinclude template/example5.html
+
+この例では、変数fooに様々な特殊記号を含む文字列がセットされています。
+
+テンプレート中で、変数名の直後に ":h" を付加すると、変数の値をHTMLエスケープして（つまり、&lt;を&amp;lt; に変換するなどして）出力します。
+
+同様に、":q" を付加すると、クォート文字をエスケープして出力します。これは、タグのプロパティやJavaScriptの文字列定数を指定する時に、""（ダブルクォート）内に変数を展開したい場合に用います。
+
+また、URLのパス名を変数展開したい場合には、":u"を用います。
+
+本サンプルプログラムで出力されたHTMLコードを確認して、どの文字がどのようにエスケープされているかをご覧下さい。
+
+*/
+
+
+/** \page Example6 テンプレートコマンド
+
+テンプレート内には、"{!"と"}"で囲ったテンプレートコマンドを書くことができます。
+
+example6.html:
+\verbinclude template/example6.html
+
+example6_inc.html:
+\verbinclude template/example6_inc.html
+
+Example6.cs:
+\include Example6.cs
+
+"{!if 変数}"〜"{!endif}" で、変数の値が真ならば使用されるブロックを書くことができます。
+変数の値が偽ならばそのブロックはクライアントブラウザに送られません。
+
+なお、変数の値は、ToString()で文字列にした時に "false", "no", "off", "0", 空文字列のいずれかになる場合に偽、それ以外は真とみなされます。
+また、変数が定義されていなかったり、変数の値がnullの場合も偽とみなされます。
+
+"{!if 変数 == 変数}" "{!if 変数 == 定数}" "{!if 変数 != 変数}" "{!if 変数 != 定数}" で、変数の値を条件にする事もできます。
+この場合、値の比較は文字列として行なわれます。定数は、整数、xxx.xxx形式の浮動小数点数、true、false、ダブルクォートまたはシングルクォートで囲った文字列のいずれかです。
+
+"{!assign 変数 値}" で、変数に値を代入する事ができます。値は定数または他の変数です。
+この変数代入はテンプレート展開時 ( HttpTemplatePage.RenderTemplate() 呼び出し時) に行なわれるので、アプリケーション中から読み出す事はできません。
+
+"{!include ファイル名}" で、他のテンプレートファイルをその場所に展開する事ができます。
+インクルードされるファイルも、変数置換やテンプレートコマンドの解釈が行なわれます。
+インクルード内において、呼び出し元で{!assign}によって代入された値を読み出すことができますし、逆にインクルード内で{!assign}によって代入した値を呼び出し元で（{!include}より後の行で）読み出すこともできます。
+
+これらのコマンドは任意の回数ネスティングさせることができます。
+
+*/
+
+/** \page Example7 テンプレートコマンド2
+
+テンプレート内で、ループを組んだり、変数をテンプレート展開することができます。
+
+example7.html:
+\verbinclude template/example7.html
+
+Example7.cs:
+\include Example7.cs
+
+"{!for 変数名 in 配列変数}"〜"{!endfor}"で、テンプレート展開をループさせることができます。
+配列変数に指定した変数には、配列またはListなどのEnumeratableなオブジェクトがアプリケーションでAssignされていなければいけません。
+"for 変数名 in 配列変数" の後に、オプションで "index=変数名"を付ける事ができます。この"index="で指定した変数には、ループの回数が 0, 1, 2... と代入されます。
+また、"count=変数名"を付けた場合には、"count="で指定した変数に "1, 2, 3..."という数値が代入されます。
+さらに、"even=変数名"と指定すると、ループ回数が偶数（最初のループは偶数として扱う）の時に、指定変数がtrueになります。"odd=変数名"と指定すると、ループ回数が奇数の時にtrueになる変数名を指定できます。
+
+"{!def 変数名}"〜"{!enddef}"で、テンプレートファイルの一部を変数に代入することができます。
+{!assign}は短い名前などを代入する時に使い、{!def}は大きなブロックをまるごと代入する時に用います。
+
+"{!extract 変数名}"を使うと、変数の内容をその場所にテンプレート展開することができます。
+"{変数名}"では、変数値にテンプレートコマンドなどが含まれていても一切解釈されないのに対し、"{!extract 変数名}"は、テンプレート展開作業を行なうという点が大きく異なります。
+
+これらのコマンドも、任意の回数ネスティングさせることができます。
+
+*/
+
+
+/** \page Example8 WebControl利用
+
+WebControl クラスを基底に持つクラスを使い、フォーム内の要素（ウィジェット）を簡単に扱うことができます。
+
+WebControl派生クラスは、 Button, SubmitButton, CheckBox, DropDown, RadioButton, TextBox, PasswordBox, FileInputBox, Literal, TemplateFlag が用意されています。
+
+Example8.cs:
+\include Example8.cs
+
+example8.html:
+\verbinclude template/example8.html
+
+PageLoadメソッド内で AssignWebControlsメソッドを呼び出すと、そのクラスのメンバ変数の内、WebControl派生クラスのものについて自動的に new（インスタンス生成） が行なわれ、さらにメンバ変数と同名のテンプレート変数に割り当てられます。
+
+このWebControlクラスの変数（ウィジェット変数と呼びます）は、ToString()で文字列化するとフォーム要素のHTMLコードに展開されるようになっていますので、テンプレート内には "{ウィジェット変数名}" と書いておくだけでその部分にフォーム要素が展開されます。
+
+ウィジェット変数は、種類に応じてそれぞれいくつかのメンバ変数を持っています。
+このメンバ変数をプログラム中で変更することにより、展開されるHTMLコードを調整することができます。
+
+例えば、Disabledメンバをtrueにしておくと、'disabled="disabled"' という属性がHTMLタグに付加されます。
+
+ウィジェット変数のメンバは、テンプレート側からも値を設定することができます。
+
+"{テンプレート変数名 メンバ名=値}" のように、テンプレート変数名の後にスペースで区切ってメンバ名の値定義を書くことができます。（複数のメンバの値を定義することもできます。）
+
+ボタンの表示文字列 (Button::Text)や、テキストインプットの幅 (TextBox::Size)などは、プログラム内で指定するよりもテンプレート内で指定した方がきれいでしょう。
+
+*/
+
+
+/** \page Example9 WebControl利用2
+
+Literal, TemplateFlag の2つは、他のウィジェットと異なり、HTMLのフォーム要素に直接対応していません。
+
+Literalは、Textメンバに入れた文字列がそのままレンダリングされます。ただし、CssClassメンバにCSSクラス名がセットされると、Textメンバの文字列がspanタグで囲まれてレンダリングされます。
+
+TemplateFlagは、テンプレートコマンドの{!if }で利用するためのもので、Disabledメンバがtrueになっているか、Visibleメンバがfalseになっているとfalseに、さもなければtrueになります。
+
+Example9.cs:
+\include Example9.cs
+
+example9.html:
+\verbinclude template/example9.html
+
+これらのウィジェットは、本来ならば不用（Assignメソッドを使って普通のテンプレート変数を設定すればよいだけ）なのですが、ASPXのLiteralを多用したページを移植する際に便利であるため、用意しました。
+
+*/
+
+
+/** \page Example10 コンテンツをEXEに埋め込む
+
+プログラムの配布を容易にするなどの目的で、HTMLコンテンツを別のディレクトリ内に配置するのではなく、EXEファイル内に埋め込んでしまいたいことがあります。
+この場合には、 HttpStaticPage.SetBuiltinContents(HttpBuiltinContent[]) メソッドを使います。
+
+Example10.cs:
+\include Example10.cs
+
+html.cs:
+\include html.cs
+
+この埋め込みコンテンツは、makebuiltincontent ツールを使って簡単に作成することができます。
+
+\verbatim
+makebuiltincontent ディレクトリ名
+\endverbatim
+と実行すると、"ディレクトリ名.cs"というC\#ソースコードファイルが生成されます。
+このコードには、ディレクトリ名と同じ名前のクラスが定義されており、そのクラスのContentsメンバが HttpStaticPage.SetBuiltinContents(HttpBuiltinContent[]) メソッドの引数として使えます。
+
+なお、 HttpTemplatePage クラスも HttpTemplatePage.SetBuiltinContents(HttpBuiltinContent[]) メソッドを持っていますので、テンプレートファイルも全く同様にEXEファイル内に埋め込むことができます。
+
+*/
+
+
+/** \page Example11 ファイルダウンロード
+
+HTMLコンテンツ以外のものを動的に生成してブラウザに返す場合には、 HttpPage.Response を使って直接クライアントへのレスポンスを操作します。
+
+Example11.cs:
+\include Example11.cs
+
+HttpPage.Response は .NETフレームワークの HttpListenerResponseクラスのインスタンスで、クライアント（ブラウザ）に送出するデータを管理するオブジェクトです。
+この Response の OutputStream に直接Writeを行なうことにより、任意のバイナリデータをクライアントに送信することができます。
+
+なお、OutputStreamに直接Writeした場合は、 HttpPage.IsRendered を trueにして、HttpPageクラスがそれ以上クライアントに余計な送信を行なわないように指示をして下さい。
+
+*/
+
+
+/** \page Example12 ファイルアップロード
+
+ブラウザからアップロードされたファイルは、 HttpPage.FetchFile(string) メソッドで受け取ることができます。
+
+Example12.cs:
+\include Example12.cs
+
+example12.html:
+\verbinclude template/example12.html
+
+なお、アップロードされたファイルは、 HttpServer.TemporaryDirectory で指定されるディレクトリ内に一時保存されます。
+
+*/
+
+
+/** \page Example13 セッション変数
+
+HttpPage.Session を使って、セッション毎の変数を保持することができます。
+HttpPage.Session は、任意のオブジェクトをValueに持つDictionaryです。
+
+Example13.cs:
+\include Example13.cs
+
+example13.html:
+\verbinclude template/example13.html
+
+セッションは、セッションIDをブラウザのクッキーに与える事によって識別しています。このため、クッキーが無効となっているブラウザではセッションの管理ができません。
+
+*/
+
+
+/** \page Example14 多言語化
+
+本フレームワークで作成したアプリケーションは、容易に多言語化することができます。
+
+翻訳する言語は、 HttpNlsSupport.DefaultLanguage で指定します。
+
+Example14.cs:
+\include Example14.cs
+
+index.html.ja:
+\verbinclude nls/index.html.ja
+
+index.html.en:
+\verbinclude nls/index.html.en
+
+index.html.es:
+\verbinclude nls/index.html.es
+
+example14.html:
+\verbinclude template/example14.html
+
+静的ページに関しては、言語コードに応じたコンテンツファイルを返すようになります。
+
+例えば、 HttpNlsSupport.DefaultLanguage = "es"; と指定すると、"abc.html" というファイルが要求された時に "abc.html.es" というファイルがあればそれを返します。
+
+言語コードとして "auto"を指定すると、ブラウザから送られてきた要求言語コードに従って言語コードを決定します。
+
+言語コード名が付いたコンテンツファイルが存在しない場合は、言語コードが付かないファイルを返します。
+
+テンプレートページに関しては、_(" と ") で囲った部分が、翻訳辞書に従って文字変換されて出力されます。
+
+また、アプリケーション内では、 HttpTemplatePage._(string) メソッドを使って文字列を翻訳辞書に従って文字変換することができます。
+
+翻訳辞書は、 Translator.DictionaryDirectory で指定したディレクトリ内の言語コード名のファイルで、1行に1つずつ "::" または "|" で区切って翻訳元の文字列と翻訳後の文字列を書き並べたものです。
+
+lang/en:
+\verbinclude lang/en
+
+lang/es:
+\verbinclude lang/es
+
+言語コードに対応した翻訳辞書が無い場合や翻訳辞書に翻訳元文字列が登録されていない場合には、文字列置換は行ないません。
+
+なお、テンプレートファイルについても静的コンテンツファイルと同様に、".言語コード"が末尾に付いたファイルがある場合にはそれが用いられます。
+テンプレートファイルを丸ごと翻訳した方が手っ取り早いという場合には、こちらの方法をお使いください。
+
+*/
+
+
+/** \page Example15 入力バリデーション
+
+Formの各入力要素に入力された値のチェックをするのに便利がメソッドが、 HttpValidationPage クラスに用意されています。
+
+Example15.cs:
+\include Example15.cs
+
+example15.html:
+\verbinclude template/example15.html
+
+HttpValidationPage.ValidateInt() メソッドは、指定した文字列が範囲内の数値になっているかどうかをチェックし、範囲内だったらその数値を返します。
+
+ValidateInt の第1引数はチェックをする文字列で、一般には HttpPage.Fetch() メソッドで獲得したフォーム要素の値を指定します。
+
+第2引数と第3引数で数値の範囲を指定し、第4引数でその項目が必須入力かどうかを指定します。
+
+第5引数は項目の名称で、最後の引数はフォーム内のウィジェットに対応する WebControl を指定します。（対応する WebControl が無い場合には、nullを指定しても構いません。）
+この WebControl は、バリデーションに失敗した際に、CssClassが"error"にセットされます。
+
+入力バリデーションを行なうメソッドは、ValidateInt以外にも、 HttpValidationPage.ValidateLength(),  HttpValidationPage.ValidateByteLength(),  HttpValidationPage.ValidateSelection(),  HttpValidationPage.ValidateIpaddr(),  HttpValidationPage.ValidateNetmask(),  HttpValidationPage.ValidateHwaddr(),  HttpValidationPage.ValidateDomain(),  HttpValidationPage.ValidateMailAddr(),  HttpValidationPage.ValidateUnixTime() が用意されています。
+
+*/

@@ -1,0 +1,12 @@
+<html>
+  <head>
+    <title>Sample Page</title>
+  </head>
+  <body>
+    {message}
+    <form method="post" enctype="multipart/form-data"> {# ファイル送信を伴うフォームは、必ずmultipart/form-dataにしておくこと #}
+      {uploadfile}
+      {sendbutton Text="送信"}
+    </form>
+  </body>
+</html>

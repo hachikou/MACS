@@ -1,0 +1,24 @@
+/** \mainpage
+SQLデータベースにアクセスするためのユーティリティライブラリです。
+
+\section サンプルプログラム
+- \subpage DBを使ったデータベースアクセスプログラム作成例
+
+\section データベース接続
+- DBCon : \copybrief DBCon
+- DBConPool : \copybrief DBConPool
+- DBReader : \copybrief DBReader
+
+\section データベース定義
+- DBTableDef : \copybrief DBTableDef
+- DBColumnDef : \copybrief DBColumnDef
+- DBIndexDef : \copybrief DBIndexDef
+
+\section SQL発行
+- DBTable : \copybrief DBTable
+- DBCondition : \copybrief DBCondition
+
+\section その他
+- DBDump : \copybrief DBDump
+
+*/

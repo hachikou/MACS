@@ -1,0 +1,58 @@
+/** \mainpage
+簡単に使える、汎用のC\#ライブラリ集です.
+
+\section 文字列関連
+- StringUtil : \copybrief StringUtil
+- ByteUtil : \copybrief ByteUtil
+- NetworkByteOrder : \copybrief NetworkByteOrder
+- LinedStringBuilder : \copybrief LinedStringBuilder
+- SJISDictionary : \copybrief SJISDictionary
+
+\section HTML関連
+- HtmlTool : \copybrief HtmlTool
+- JsonTool : \copybrief JsonTool
+- TableFormatter : \copybrief TableFormatter
+
+\section ファイル関連
+- FileUtil : \copybrief FileUtil
+- CSVFile : \copybrief CSVFile
+- SJISWriter : \copybrief SJISWriter
+- SJISReader : \copybrief SJISReader
+
+\section ストリーム関連
+- TempStream : \copybrief TempStream
+- TinyChunkStream: \copybrief TinyChunkStream
+- SocStream: \copybrief SocStream
+- TelnetStream: \copybrief TelnetStream
+
+\section データ構造
+- DataArray : \copybrief DataArray
+- Hwaddr : \copybrief Hwaddr
+- Ipaddr : \copybrief Ipaddr
+- HwaddrRange : \copybrief HwaddrRange
+- IpaddrRange : \copybrief IpaddrRange
+- UnixTime : \copybrief UnixTime
+
+\section 簡易データベース構造
+- IniFile : \copybrief IniFile
+- SectionIniFile : \copybrief SectionIniFile
+- ObjectDictionary : \copybrief ObjectDictionary
+- XmlFile : \copybrief XmlFile
+- NDJson : \copybrief NDJson
+
+\section ログ関連
+- Loggable : \copybrief Loggable
+- StaticLoggable : \copybrief StaticLoggable
+- OpeLog : \copybrief OpeLog
+
+\section 多言語化
+- Translatable : \copybrief Translatable
+- Translator : \copybrief Translator
+
+\section その他
+- ProcUtil : \copybrief ProcUtil
+- ThreadBase : \copybrief ThreadBase
+- SendMail : \copybrief SendMail
+- FtpClient : \copybrief FtpClient
+
+*/

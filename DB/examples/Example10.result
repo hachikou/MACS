@@ -1,0 +1,10 @@
+mydb: Open Server=192.168.10.125;Database=mydb;Uid=myuser;Pwd=mypass;CharSet=utf8
+mydb: SELECT T1.英語,T2.英語 FROM サンプルテーブル LEFT JOIN サンプル役職 ON サンプル役職.ID=サンプルテーブル.ID LEFT JOIN サンプル翻訳 AS T1 ON T1.日本語=サンプルテーブル.名前 LEFT JOIN サンプル翻訳 AS T2 ON T2.日本語=サンプル役職.役職
+Name:Test Ichiro,  Title:Technical Leader
+Name:Test Jiro,  Title:Technical Leader
+Name:Test Saburou,  Title:
+Name:Yamada Taro,  Title:
+Name:Yamada Hanako,  Title:Technical Manager
+Name:Yamada Hanako,  Title:Sales Manager
+Name:Suzuki Ichiro,  Title:President
+mydb: Closed.

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="サンプルテーブル">
+  <column name="ID" type="NUMBER" length="8" />
+  <column name="名前" type="VARCHAR" length="32" />
+  <column name="電話番号" type="VARCHAR" length="16" />
+</table>

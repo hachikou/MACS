@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Sample Page</title>
+    <style type="text/css">
+      <!--
+          .even_line { background-color: #ffdddd;}
+          .odd_line { background-color: #ddffdd;}
+        -->
+    </style>
+  </head>
+  <body>
+    {# !for コマンドを使ってHTMLを繰り返し展開させる例。#}
+    <table>
+      {!for myitem in mylist}
+      <tr>
+        <td>{myitem}</td>
+      </tr>
+      {!endfor}
+    </table>
+    <br />
+
+    {# !for コマンドのオプションの例。#}
+    <table>
+      {!for myitem in mylist count=mycounter index=myindex even=myeven odd=myodd}
+      <tr class="{!if myeven}even_line{!endif}{!if myodd}odd_line{!endif}">
+        <td>{mycounter}</td><td>{myindex}</td><td>{myitem}</td>
+      </tr>
+      {!endfor}
+    </table>
+    <br />
+
+    {# !def コマンドを使うと、変数にテンプレートファイルの一部を代入することができる。#}
+    {!def inputtag}
+    <input type="text" name="{tagname}" value="{tagname}" /><br />
+    {!enddef}
+
+    {# !extract コマンドを使って、変数の内容をテンプレート展開する例。#}
+    {!assign tagname "alpha"}
+    {!extract inputtag}
+    {!assign tagname "beta"}
+    {!extract inputtag}
+
+  </body>
+</html>

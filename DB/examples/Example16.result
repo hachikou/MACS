@@ -1,0 +1,4 @@
+mydb: Open Server=192.168.10.125;Database=mydb;Uid=myuser;Pwd=mypass;CharSet=utf8
+mydb: INSERT INTO サンプル給与 (ID,給与) SELECT ID,0.00 FROM サンプルテーブル
+2件追加しました
+mydb: Closed.

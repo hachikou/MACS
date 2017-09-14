@@ -1,0 +1,145 @@
+using System;
+using System.Text;
+using System.Collections.Generic;
+
+namespace MACS {
+
+public class SJISDictionary {
+
+    /// <summary>
+    ///   SJIS文字のバイト列を文字列に変換する。
+    /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     バイトの最後がSJIS1バイト目と1バイト目の境界になっている場合、最後の
+    ///     1バイト（SJIS1バイト目）は捨てられる。
+    ///     また、改行以外の全てのコントロールコードは捨てられる。
+    ///   </para>
+    /// </remarks>
+    public static string GetString(byte[] src, int ptr, int bytelen) {
+        char[] buf = new char[bytelen*2];
+        int bufptr = 0;
+        int len = bytelen;
+        while(len > 0) {
+            int ch = (int)(src[ptr]);
+            if((ch >= 0x20) && (ch <= 0x7e)) { // 英数記号
+                buf[bufptr++] = (char)ch;
+            } else if((ch == 0x0a) || (ch == 0x0d)) { // 改行コード
+                buf[bufptr++] = (char)ch;
+            } else if((ch >= 0x81) && (ch <= 0x9f)) { // SJIS1バイト目その1
+                if(len > 1) {
+                    int ch2 = (int)(src[ptr+1]);
+                    if((ch2 >= 0x40) && (ch2 <= 0x7e)) { // SJIS2バイト目その1
+                        buf[bufptr++] = ZenkakuTable[ch-0x81][ch2-0x40];
+                        ptr++;
+                        len--;
+                    } else if((ch2 >= 0x80) && (ch2 <= 0xfc)) { // SJIS2バイト目その2
+                        buf[bufptr++] = ZenkakuTable[ch-0x81][ch2-0x80+(0x7e-0x40+1)];
+                        ptr++;
+                        len--;
+                    }
+                }
+            } else if((ch >= 0xe0) && (ch <= 0xfc)) { // SJIS1バイト目その2
+                if(len > 1) {
+                    int ch2 = (int)(src[ptr+1]);
+                    if((ch2 >= 0x40) && (ch2 <= 0x7e)) { // SJIS2バイト目その1
+                        buf[bufptr++] = ZenkakuTable[ch-0xe0+(0x9f-0x81+1)][ch2-0x40];
+                        ptr++;
+                        len--;
+                    } else if((ch2 >= 0x80) && (ch2 <= 0xfc)) { // SJIS2バイト目その2
+                        buf[bufptr++] = ZenkakuTable[ch-0xe0+(0x9f-0x81+1)][ch2-0x80+(0x7e-0x40+1)];
+                        ptr++;
+                        len--;
+                    }
+                }
+            } else if((ch >= 0xa1) && (ch <= 0xdf)) { // 半角カタカナ
+                buf[bufptr++] = HankakuTable[ch-0xa1];
+            }
+            ptr++;
+            len--;
+        }
+        return new String(buf, 0, bufptr);
+    }
+
+
+    /// <summary>
+    ///   文字列をSJISバイト列に変換したものを返す
+    /// </summary>
+    public static byte[] GetBytes(string s) {
+        byte[] res = new byte[s.Length*2]; //暫定的に大きめの配列を確保しておく
+        int ptr = 0;
+        for(int i = 0; i < s.Length; i++) {
+            char ch = s[i];
+            if(ch < 0xff) {
+                res[ptr++] = (byte)ch;
+            } else if(ReverseTable.ContainsKey(ch)) {
+                ushort code = ReverseTable[ch];
+                res[ptr++] = (byte)(code/256);
+                res[ptr++] = (byte)(code%256);
+            } else {
+                ptr += enc.GetBytes(s, i, 1, res, ptr);
+            }
+        }
+        Array.Resize(ref res, ptr);
+        return res;
+    }
+
+    /// <summary>
+    ///   文字列をSJISバイト列にした時のバイト数を返す
+    /// </summary>
+    public static int GetByteCount(string s) {
+        int ptr = 0;
+        char[] buf = new char[1];
+        foreach(char ch in s) {
+            if(ch < 0xff) {
+                ptr++;
+            } else if(ReverseTable.ContainsKey(ch)) {
+                ptr += 2;
+            } else {
+                buf[0] = ch;
+                ptr += enc.GetByteCount(buf);
+            }
+        }
+        return ptr;
+    }
+
+    /// <summary>
+    ///   文字列をSJISバイト列でnバイト以下になる部分だけを取り出す。
+    /// </summary>
+    public static string Substring(string s, int n) {
+        if(s == null)
+            return null;
+        if(n <= 0)
+            return "";
+        while(GetByteCount(s) > n)
+            s = s.Substring(0, s.Length-1);
+        return s;
+    }
+
+    /// <summary>
+    ///   文字列をSJISバイト列でnバイト以下になる部分だけを取り出す。
+    /// </summary>
+    public static string Substring(string s, int n, out string rest) {
+        string res = Substring(s, n);
+        if(res == null) {
+            rest = null;
+        } else {
+            rest = s.Substring(res.Length);
+        }
+        return res;
+    }
+
+
+    private static readonly Encoding enc = Encoding.GetEncoding("Shift_JIS");
+
+    private static readonly string[] ZenkakuTable = new string[]{
+// ZENKAKUTABLE
+    };
+    private static readonly string HankakuTable = "// HANKAKUTABLE";
+
+    private static readonly Dictionary<char,ushort> ReverseTable = new Dictionary<char,ushort>() {
+// REVERSETABLE
+    };
+}
+
+} // End of namespace

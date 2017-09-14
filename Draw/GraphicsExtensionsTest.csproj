@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{11800291-8D88-4898-94B1-5941AB91A2E4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GraphicsExtensionsTest</RootNamespace>
+    <AssemblyName>GraphicsExtensionsTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>GraphicsExtensionsTest\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>GraphicsExtensionsTest\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GraphicsExtensions_Rectangle.cs" />
+    <Compile Include="GraphicsExtensions_Text.cs" />
+    <Compile Include="GraphicsExtensions_Button.cs" />
+    <Compile Include="GraphicsExtensions_AttrButton.cs" />
+    <Compile Include="GraphicsExtensions_AttrText.cs" />
+    <Compile Include="FontExtensions.cs" />
+    <Compile Include="ControlExtensions.cs" />
+    <Compile Include="ColorUtil.cs" />
+    <Compile Include="MPAttribute.cs" />
+    <Compile Include="MPText.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GraphicsExtensionsTest.cs" />
+    <Compile Include="GraphicsExtensionsTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphicsExtensionsTestForm.Designer.cs">
+      <DependentUpon>GraphicsExtensionsTestForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Core\StringUtil.cs">
+      <Link>MACS\Core\StringUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\CascadedAttribute.cs">
+      <Link>MACS\Core\CascadedAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\XmlFile.cs">
+      <Link>MACS\Core\XmlFile.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\FileUtil.cs">
+      <Link>MACS\Core\FileUtil.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GraphicsExtensionsTestForm.resx">
+      <DependentUpon>GraphicsExtensionsTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" "$(ProjectDir)"
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

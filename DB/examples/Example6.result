@@ -1,0 +1,13 @@
+mydb: Open Server=192.168.10.125;Database=mydb;Uid=myuser;Pwd=mypass;CharSet=utf8
+mydb: SELECT 名前,電話番号 FROM サンプルテーブル WHERE ID=1 LIMIT 1 OFFSET 0
+なまえ:テスト一郎、でんわ:03-4567-8901
+mydb: SELECT COUNT(1) FROM サンプルテーブル WHERE ID>=100
+該当件数は3
+mydb: SELECT 名前,電話番号 FROM サンプルテーブル WHERE ID>0
+なまえ:テスト一郎、でんわ:03-4567-8901
+なまえ:テスト次郎、でんわ:03-4444-5555
+なまえ:テスト三郎、でんわ:03-6666-7777
+なまえ:山田太郎、でんわ:
+なまえ:山田花子、でんわ:090-0000-1111
+なまえ:鈴木一郎、でんわ:090-9876-5432
+mydb: Closed.

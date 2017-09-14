@@ -1,0 +1,3 @@
+#!/bin/sh
+
+mono --debug makeSJISDictionary.exe

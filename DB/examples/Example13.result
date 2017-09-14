@@ -1,0 +1,6 @@
+mydb: Open Server=192.168.10.125;Database=mydb;Uid=myuser;Pwd=mypass;CharSet=utf8
+mydb: UPDATE サンプルテーブル SET 電話番号='01-2345-6789' WHERE ID=1000
+1レコード更新しました
+mydb: SELECT ID,名前,電話番号 FROM サンプルテーブル WHERE ID=1000 LIMIT 1 OFFSET 0
+なまえ:足柄金太郎、でんわ:01-2345-6789
+mydb: Closed.

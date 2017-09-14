@@ -1,0 +1,59 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+# makebuiltincontent : HttpBuiltinStaticPageクラス用の埋め込みコンテンツ生成
+#
+# $Id: $
+# Copyright (C) 2008-2012 Microbrains Inc.
+# All Rights Reserved.
+# This code was designed and coded by SHIBUYA K.
+#
+
+import sys, os, os.path
+
+def makeBuiltinContent(classfile, classname, dirname):
+
+    filelist = getFileList(dirname)
+    csfile = open(classfile, 'w')
+    csfile.write("/*! @file "+os.path.basename(classfile)+" */\n");
+    csfile.write("using SCS;\n");
+    csfile.write("public class "+classname+" {\n");
+    csfile.write("    public static readonly HttpBuiltinContent[] Contents =\n")
+    csfile.write("        new HttpBuiltinContent[%d] {\n"%len(filelist))
+    for file in filelist:
+        f = os.path.join(dirname,file)
+        csfile.write("            new HttpBuiltinContent(\"/%s\", new byte[] {"%file)
+        i = 0
+        for d in open(f).read():
+            if(i == 0):
+                csfile.write("\n")
+            csfile.write("0x%02x,"%ord(d))
+            i += 1
+            if(i >= 16):
+                i = 0
+        csfile.write("\n            }),\n")
+    csfile.write("        };\n")
+    csfile.write("}\n")
+    csfile.close()
+
+def getFileList(dirname):
+    filelist = []
+    for f in os.listdir(dirname):
+        if(f.startswith('.') or f.endswith('~') or f.startswith('#')):
+            continue
+        ff = os.path.join(dirname,f)
+        if(os.path.isdir(ff)):
+            filelist.extend(map(lambda x: os.path.join(f,x), getFileList(ff)))
+        elif(os.path.isfile(ff)):
+            filelist.append(f)
+    return filelist
+
+if(__name__ == "__main__"):
+    for arg in sys.argv[1:]:
+        if(arg.endswith('/')):
+            dirname = arg[:-1]
+        else:
+            dirname = arg
+        classname = os.path.basename(dirname)
+        filename = classname+".cs"
+        print "Making "+filename
+        makeBuiltinContent(filename, classname, dirname)
