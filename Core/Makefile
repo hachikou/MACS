@@ -10,15 +10,17 @@ SRCS = UnixTime.cs StringUtil.cs NetworkByteOrder.cs ByteUtil.cs SimpleCipher.cs
        LinedStringBuilder.cs CSVFile.cs SJISWriter.cs SJISReader.cs\
        ProcUtil.cs ThreadBase.cs DataArray.cs SJISDictionary.cs\
        SocStream.cs SocStream_Server.cs SocError.cs\
-       FtpClient.cs\
+       FtpClient.cs Syslog.cs\
+       ImageFileUtil.cs\
+       RWLock.cs NThread.cs\
        DebugTool.cs
 LIBDIR = ../../lib
-LIBS = System.Web.dll
+LIBS = System.Web.dll System.Drawing.dll
 DOXFILES = Index.dox
 DOCDIR = ../../doc/SCSLib
 DOCFILE = $(DOCDIR)/index.html
 
-MCS = dmcs
+MCS = mcs
 MCSFLAGS = -warn:4 -debug+
 MCSFLAGS_RELEASE = -optimize+
 

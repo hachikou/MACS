@@ -397,6 +397,95 @@ public class FileUtil {
     }
 
     /// <summary>
+    ///   ストリームからファイルにコピーする。
+    /// </summary>
+    public static bool Copy(Stream src, string dst) {
+        try {
+            using(FileStream fdst = BinaryWriter(dst)){
+                if(fdst == null)
+                    return false;
+                Copy(src, fdst);
+                fdst.Close();
+            }
+            return true;
+        } catch (Exception) {
+            // just ignore
+        }
+        return false;
+    }
+
+    /// <summary>
+    ///   ファイルからストリームにコピーする。
+    /// </summary>
+    public static bool Copy(string src, Stream dst) {
+        try {
+            using(FileStream fsrc = BinaryReader(src)){
+                if(fsrc == null)
+                    return false;
+                Copy(fsrc, dst);
+                fsrc.Close();
+            }
+            return true;
+        } catch (Exception) {
+            // just ignore
+        }
+        return false;
+    }
+
+    /// <summary>
+    ///   ストリームからストリームにコピーする。
+    /// </summary>
+    public static bool Copy(Stream src, Stream dst) {
+        try {
+            int len;
+            byte[] buf = new byte[1024*4];
+            while((len = src.Read(buf, 0, buf.Length)) > 0)
+                dst.Write(buf, 0, len);
+            return true;
+        } catch (Exception) {
+            // just ignore
+        }
+        return false;
+    }
+
+    /// <summary>
+    ///   ファイル内容をBase64文字列に変換する
+    /// </summary>
+    public static string FileToBase64String(string src) {
+        // ファイルをbyte型配列としてすべて読み込む
+        try {
+            using(FileStream fs = new FileStream(src, FileMode.Open, FileAccess.Read)) {
+                byte [] buf = new byte [fs.Length];
+                fs.Read(buf, 0, (int) fs.Length);
+                fs.Close();
+
+                // Base64で文字列に変換
+                return Convert.ToBase64String(buf);
+            }
+        } catch (Exception) {
+            // just ignore
+        }
+        return "";
+    }
+    
+    /// <summary>
+    ///   ファイル内容をBase64文字列に変換する
+    /// </summary>
+    public static string FileToBase64String(Stream src) {
+        // ファイルをbyte型配列としてすべて読み込む
+        try {
+            byte[] buf = new byte[src.Length];
+            src.Read(buf, 0, (int) src.Length);
+
+            // Base64で文字列に変換
+            return Convert.ToBase64String(buf);
+        } catch (Exception) {
+            // just ignore
+        }
+        return "";
+    }
+    
+    /// <summary>
     ///   最終変更日時が指定日時より昔のファイルを削除する。
     /// </summary>
     /// <remarks>
