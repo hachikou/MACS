@@ -1,0 +1,15 @@
+*.swp
+*.exe
+*~
+#*#
+*.mdb
+*.old
+*.new
+*.bak
+*.suo
+*.pdb
+*.dll
+obj
+*.log
+*.tag
+doc

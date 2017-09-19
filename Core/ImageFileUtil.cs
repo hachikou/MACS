@@ -11,6 +11,7 @@ using System;
 using System.Drawing;
 using System.IO;
 
+namespace MACS {
 
 /// <summary>
 ///   画像ファイルを取り扱うオブジェクト
@@ -114,3 +115,5 @@ public class ImageFileUtil {
         return ImageFileFormat.UNKNOWN;
     }
 }
+
+} // End of namespace

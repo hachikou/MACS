@@ -1,4 +1,4 @@
-TARGET = SCSLib.dll
+TARGET = MACS.dll
 SRCS = UnixTime.cs StringUtil.cs NetworkByteOrder.cs ByteUtil.cs SimpleCipher.cs\
        FileUtil.cs IniFile.cs SectionIniFile.cs\
        Ipaddr.cs IpaddrRange.cs Hwaddr.cs HwaddrRange.cs\
@@ -14,10 +14,10 @@ SRCS = UnixTime.cs StringUtil.cs NetworkByteOrder.cs ByteUtil.cs SimpleCipher.cs
        ImageFileUtil.cs\
        RWLock.cs NThread.cs\
        DebugTool.cs
-LIBDIR = ../../lib
+LIBDIR = ../
 LIBS = System.Web.dll System.Drawing.dll
 DOXFILES = Index.dox
-DOCDIR = ../../doc/SCSLib
+DOCDIR = ../doc/Core
 DOCFILE = $(DOCDIR)/index.html
 
 MCS = mcs

@@ -66,9 +66,9 @@ public class RWLock : ReaderWriterLockSlim {
     /// <summary>
     ///   コンストラクタ
     /// </summary>
-    /// <params name="name">ロック名称（デバッグ用）</params>
-    /// <params name="allowRecursiveLock">再帰的なロックを許可するかどうか</params>
-    /// <params name="debugThread">ロックしているスレッドのデバッグ情報を記録するかどうか</params>
+    /// <param name="name">ロック名称（デバッグ用）</param>
+    /// <param name="allowRecursiveLock">再帰的なロックを許可するかどうか</param>
+    /// <param name="debugThread">ロックしているスレッドのデバッグ情報を記録するかどうか</param>
     public RWLock(string name, bool allowRecursiveLock=true, bool debugThread=false)
         : base(allowRecursiveLock?LockRecursionPolicy.SupportsRecursion:LockRecursionPolicy.NoRecursion) {
         Name = name;

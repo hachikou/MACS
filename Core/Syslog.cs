@@ -12,6 +12,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
+namespace MACS {
 
 /// <summary>
 ///   syslogを書き出すロガー
@@ -469,3 +470,5 @@ public class Syslog : IDisposable {
 #endregion
 
 }
+
+} // End of namespace

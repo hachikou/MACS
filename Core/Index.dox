@@ -2,57 +2,61 @@
 簡単に使える、汎用のC\#ライブラリ集です.
 
 \section 文字列関連
-- StringUtil : \copybrief StringUtil
-- ByteUtil : \copybrief ByteUtil
-- NetworkByteOrder : \copybrief NetworkByteOrder
-- LinedStringBuilder : \copybrief LinedStringBuilder
-- SJISDictionary : \copybrief SJISDictionary
+- StringUtil : \copybrief MACS::StringUtil
+- ByteUtil : \copybrief MACS::ByteUtil
+- NetworkByteOrder : \copybrief MACS::NetworkByteOrder
+- LinedStringBuilder : \copybrief MACS::LinedStringBuilder
+- SJISDictionary : \copybrief MACS::SJISDictionary
 
 \section HTML関連
-- HtmlTool : \copybrief HtmlTool
-- JsonTool : \copybrief JsonTool
-- TableFormatter : \copybrief TableFormatter
+- HtmlTool : \copybrief MACS::HtmlTool
+- JsonTool : \copybrief MACS::JsonTool
+- TableFormatter : \copybrief MACS::TableFormatter
 
 \section ファイル関連
-- FileUtil : \copybrief FileUtil
-- CSVFile : \copybrief CSVFile
-- SJISWriter : \copybrief SJISWriter
-- SJISReader : \copybrief SJISReader
+- FileUtil : \copybrief MACS::FileUtil
+- CSVFile : \copybrief MACS::CSVFile
+- SJISWriter : \copybrief MACS::SJISWriter
+- SJISReader : \copybrief MACS::SJISReader
 
 \section ストリーム関連
-- TempStream : \copybrief TempStream
-- TinyChunkStream: \copybrief TinyChunkStream
-- SocStream: \copybrief SocStream
-- TelnetStream: \copybrief TelnetStream
+- TempStream : \copybrief MACS::TempStream
+- TinyChunkStream: \copybrief MACS::TinyChunkStream
+- SocStream: \copybrief MACS::SocStream
+- TelnetStream: \copybrief MACS::TelnetStream
 
 \section データ構造
-- DataArray : \copybrief DataArray
-- Hwaddr : \copybrief Hwaddr
-- Ipaddr : \copybrief Ipaddr
-- HwaddrRange : \copybrief HwaddrRange
-- IpaddrRange : \copybrief IpaddrRange
-- UnixTime : \copybrief UnixTime
+- DataArray : \copybrief MACS::DataArray
+- Hwaddr : \copybrief MACS::Hwaddr
+- Ipaddr : \copybrief MACS::Ipaddr
+- HwaddrRange : \copybrief MACS::HwaddrRange
+- IpaddrRange : \copybrief MACS::IpaddrRange
+- UnixTime : \copybrief MACS::UnixTime
 
 \section 簡易データベース構造
-- IniFile : \copybrief IniFile
-- SectionIniFile : \copybrief SectionIniFile
-- ObjectDictionary : \copybrief ObjectDictionary
-- XmlFile : \copybrief XmlFile
-- NDJson : \copybrief NDJson
+- IniFile : \copybrief MACS::IniFile
+- SectionIniFile : \copybrief MACS::SectionIniFile
+- ObjectDictionary : \copybrief MACS::ObjectDictionary
+- XmlFile : \copybrief MACS::XmlFile
+- NDJson : \copybrief MACS::NDJson
 
 \section ログ関連
-- Loggable : \copybrief Loggable
-- StaticLoggable : \copybrief StaticLoggable
-- OpeLog : \copybrief OpeLog
+- Loggable : \copybrief MACS::Loggable
+- StaticLoggable : \copybrief MACS::StaticLoggable
+- OpeLog : \copybrief MACS::OpeLog
 
 \section 多言語化
-- Translatable : \copybrief Translatable
-- Translator : \copybrief Translator
+- Translatable : \copybrief MACS::Translatable
+- Translator : \copybrief MACS::Translator
+
+\section マルチスレッド
+- NThread : \copybrief MACS::NThread
+- ThreadBase : \copybrief MACS::ThreadBase
+- RWLock : \copybrief MACS::RWLock
 
 \section その他
-- ProcUtil : \copybrief ProcUtil
-- ThreadBase : \copybrief ThreadBase
-- SendMail : \copybrief SendMail
-- FtpClient : \copybrief FtpClient
+- ProcUtil : \copybrief MACS::ProcUtil
+- SendMail : \copybrief MACS::SendMail
+- FtpClient : \copybrief MACS::FtpClient
 
 */
