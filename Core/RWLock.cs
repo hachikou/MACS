@@ -12,6 +12,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 
+namespace MACS {
+
 /// <summary>
 ///   ReaderWriterLockSlimをデバッグしやすくするためのラッピングクラス
 /// </summary>
@@ -426,3 +428,5 @@ public class UpgradeableReadLock : LockHandle {
     }
 
 }
+
+} // End of namespace

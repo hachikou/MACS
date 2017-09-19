@@ -13,6 +13,8 @@ using System.Text;
 using System.IO;
 using System.Diagnostics;
 
+namespace MACS {
+
 /// <summary>
 ///   Threadをデバッグしやすくするためのラッピングクラス
 /// </summary>
@@ -290,6 +292,8 @@ public class NThread : Loggable, IDisposable {
     ///     ドッグタイマのリセットだけを行なうことになります。
     ///     同一スレッドで次にWatchdog / StopWatchdogが呼ばれる前にtimeoutミリ秒
     ///     が経過すると、modeで指定した動作が起こります。
+    ///     タイムアウトでスレッドをAbortする際には、ExceptionStateに
+    ///     TimeoutExceptionオブジェクトがセットされます。
     ///   </para>
     /// </remarks>
     public static void Watchdog(int timeout=0, WatchdogMode mode=WatchdogMode.Keep) {
@@ -399,7 +403,7 @@ public class NThread : Loggable, IDisposable {
                     LOG_NOTICE("Watchdog alert on thread {0} ({1}msec), send abort", this.Name, watchdogTimeout);
                     watchdogTimeout = long.MaxValue;
                     isAborting = true;
-                    thread.Abort();
+                    thread.Abort(new TimeoutException(String.Format("Watchdog alert ({0}msec)", watchdogTimeout)));
                     break;
                 case WatchdogMode.DelayedInterrupt:
                     if(watchdogCount > 1) {
@@ -415,7 +419,7 @@ public class NThread : Loggable, IDisposable {
                         LOG_NOTICE("Watchdog alert twice on thread {0} ({1}msec), send abort", this.Name, watchdogTimeout);
                         watchdogTimeout = long.MaxValue;
                         isAborting = true;
-                        thread.Abort();
+                        thread.Abort(new TimeoutException(String.Format("Watchdog alert ({0}msec)", watchdogTimeout)));
                     } else {
                         LOG_NOTICE("Watchdog alert on thread {0} ({1}msec), will send abort on next alert", this.Name, watchdogTimeout);
                     }
@@ -613,3 +617,5 @@ public class NThread : Loggable, IDisposable {
 #endregion
 
 }
+
+} // End of namespace
