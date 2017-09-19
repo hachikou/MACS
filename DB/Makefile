@@ -7,7 +7,7 @@ DOXFILES = Index.dox examples/Example.dox
 DOCDIR = ../../doc/DB
 DOCFILE = $(DOCDIR)/index.html
 
-MCS = dmcs
+MCS = mcs
 MCSFLAGS = -warn:4 -debug+ -d:USE_POSTGRESQL
 MCSFLAGS_RELEASE = -optimize+
 

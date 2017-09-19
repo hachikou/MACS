@@ -9,6 +9,7 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Ionic.Zip;
 using MACS;
 
@@ -51,6 +52,16 @@ public class DBDump {
     public string TempDir = "/tmp";
 
     /// <summary>
+    ///   動作状況をロギングするOpeLog
+    /// </summary>
+    public OpeLog Logger = null;
+
+    /// <summary>
+    ///   動作状況を書き出すTextWriter
+    /// </summary>
+    public TextWriter LogWriter = null;
+    
+    /// <summary>
     ///   バックアップファイルを作成する
     /// </summary>
     /// <param name="filepath">ファイル名</param>
@@ -77,10 +88,13 @@ public class DBDump {
         if(rnd == null)
             rnd = new Random();
         string postfix = "."+rnd.Next().ToString();
-
         try {
+            timer.Restart();
             // まず一時ファイルにCSVダンプアウトする
+            int tblcount = 0;
             foreach(string tblname in tables) {
+                tblcount++;
+                progress("dumping {0} ({1}/{2})", tblname, tblcount, tables.Count);
                 string tmpfilepath = Path.Combine(TempDir, tblname+postfix);
                 DBTable tbl = new DBTable(db, tblname);
                 tbl.DumpCSV(tmpfilepath);
@@ -92,11 +106,16 @@ public class DBDump {
                     if(aesEncryption)
                         zip.Encryption = EncryptionAlgorithm.WinZipAes256;
                 }
+                tblcount = 0;
                 foreach(string tblname in tables) {
+                    tblcount++;
+                    progress("compressing {0} ({1}/{2})", tblname, tblcount, tables.Count);
                     string tmpfilepath = Path.Combine(TempDir, tblname+postfix);
                     zip.AddFile(tmpfilepath).FileName = tblname;
                 }
+                progress("start saving");
                 zip.Save(sw);
+                progress("finished saving");
             }
         } finally {
             foreach(string tblname in tables) {
@@ -191,31 +210,53 @@ public class DBDump {
     /// <param name="truncateFlag">テーブルを全てTruncateするかどうか</param>
     /// <returns>復元したテーブル数</returns>
     public int Load(Stream sr, DBCon db, string password=null, bool aesEncryption=false, bool truncateFlag=false) {
-        if(truncateFlag) {
-            foreach(string x in tables) {
-                db.LOG_DEBUG("Truncating {0}", x);
-                DBTable tbl = new DBTable(db, x);
-                tbl.Truncate();
+        Stopwatch timer = new Stopwatch();
+        bool oldUseDebugLog = db.UseDebugLog;
+        bool oldUseConsoleLog = db.UseConsoleLog;
+        db.UseDebugLog = false;
+        db.UseConsoleLog = false;
+        try {
+            timer.Start();
+            if(truncateFlag) {
+                foreach(string x in tables) {
+                    progress("truncating {0}", x);
+                    DBTable tbl = new DBTable(db, x);
+                    tbl.Truncate();
+                }
             }
+            return load(sr, db, password, aesEncryption, false, !truncateFlag);
+            // ここでtruncateしているので、この先ではtruncateの必要が無いことに注意
+        } finally {
+            db.UseDebugLog = oldUseDebugLog;
+            db.UseConsoleLog = oldUseConsoleLog;
         }
-        return load(sr, db, password, aesEncryption, false, !truncateFlag);
-        // ここでtruncateしているので、この先ではtruncateの必要が無いことに注意
     }
 
     private int load(Stream sr, DBCon db, string password, bool aesEncryption, bool testRun, bool truncateFlag) {
         DirectoryInfo dir = null;
         try {
             dir = extractFiles(sr, password, aesEncryption);
+            FileInfo[] files = dir.GetFiles();
             // ファイル内容チェック
+            int fileCount = 0;
             int count = 0;
-            foreach(FileInfo fi in dir.EnumerateFiles()) {
-                if(!tables.Contains(fi.Name))
+            foreach(FileInfo fi in files) {
+                fileCount++;
+                if(!tables.Contains(fi.Name)) {
+                    progress("found {0} ({1}/{2}), skip it", fi.Name, fileCount, files.Length);
                     continue;
+                }
                 DBTable tbl = new DBTable(db, fi.Name);
-                if(!testRun && truncateFlag)
+                if(!testRun && truncateFlag) {
+                    progress("truncationg {0}", fi.Name);
                     tbl.Truncate();
+                }
+                if(testRun)
+                    progress("checking {0} ({1}/{2})", fi.Name, fileCount, files.Length);
+                else
+                    progress("loading {0} ({1}/{2})", fi.Name, fileCount, files.Length);
                 int recs = tbl.LoadCSV(fi.FullName, !testRun, testRun);
-                db.LOG_DEBUG("Table {0}: {1} records.", fi.Name, recs);
+                progress("table {0} has {1} records.", fi.Name, recs);
                 count++;
             }
             return count;
@@ -252,9 +293,19 @@ public class DBDump {
         return dir;
     }
 
+    private void progress(string fmt, params object[] args) {
+        string msg = String.Format(fmt, args);
+        if(Logger != null) {
+            Logger.Log("DBDump Progress", OpeLog.Level.DEBUG, "{0,7:N0}msec {1}", timer.ElapsedMilliseconds, msg);
+        }
+        if(LogWriter != null) {
+            LogWriter.WriteLine("DBDump Progress: {0,7:N0}msec {1}", timer.ElapsedMilliseconds, msg);
+        }
+    }
 
 
     private List<string> tables = new List<string>();
+    private Stopwatch timer = new Stopwatch();
 
     private static Random rnd = null;
 }
