@@ -57,6 +57,15 @@ public class RadioSelector<T> : TranslatableWebControl
     /// </summary>
     public T[] ExceptionList = null;
 
+    /// <summary>
+    ///   選択肢の表示名
+    /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     指定がない場合は、typeof(T).Name+"."+T.ToString() を翻訳したもの
+    ///   </para>
+    /// </remarks>
+    public Dictionary<T,string> Text = null;
 
     /// <summary>
     ///   レンダリング
@@ -122,7 +131,10 @@ public class RadioSelector<T> : TranslatableWebControl
             sb.Append("/><label for=\"");
             sb.Append(id);
             sb.Append("\">");
-            sb.Append(HE(_(typeof(T).Name+"."+val)));
+            string vv;
+            if((Text == null) || !Text.TryGetValue(x, out vv))
+                vv = _(typeof(T).Name+"."+val);
+            sb.Append(HE(vv));
             sb.Append("</label></span>");
             if(Vertical)
                 sb.Append("<br/>");

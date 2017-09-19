@@ -6,7 +6,8 @@ SRCS = 	HttpServer.cs HttpPage.cs HttpBuiltinContentsSupport.cs HttpNlsSupport.c
         FileInputBox.cs HttpPostedFile.cs HtmlCalender.cs TranslatableWebControl.cs\
 	RadioSelector.cs DropDownSelector.cs YesNoSelector.cs DateSelector.cs\
 	TimeSelector.cs\
-	HttpStackTracePage.cs
+	HttpStackTracePage.cs HttpEmergencyPage.cs\
+	HttpProxy.cs
 LIBDIR = ../../lib
 LOCALLIBS = $(LIBDIR)/SCSLib.dll
 LIBS = $(LOCALLIBS) System.Web.dll
@@ -14,7 +15,7 @@ DOXFILES = Index.dox examples/Example.dox
 DOCDIR = ../../doc/HttpServer
 DOCFILE = $(DOCDIR)/index.html
 
-MCS = dmcs
+MCS = mcs
 MCSFLAGS = -warn:4 -debug+
 MCSFLAGS_RELEASE = -optimize+
 
@@ -33,7 +34,7 @@ doc: $(DOCFILE)
 
 $(TARGET): $(SRCS) Makefile $(LOCALLIBS)
 	$(MCS) $(MCSFLAGS) -t:library $(LIBS:%=-r:%) $(SRCS) -out:$@
-	cp $(TARGET) $(LIBDIR)
+	cp $(TARGET) $(TARGET).mdb $(LIBDIR)
 
 $(DOCFILE):	$(SRCS) $(DOXFILES) Doxyfile
 	$(MKDIR) $(DOCDIR)
