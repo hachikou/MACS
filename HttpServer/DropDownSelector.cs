@@ -10,6 +10,7 @@
 using System;
 using System.Web;
 using System.Text;
+using System.Collections.Generic;
 using MACS;
 
 namespace MACS.HttpServer {
@@ -140,7 +141,5 @@ public class DropDownSelector<T> : TranslatableWebControl
     private T[] exceptionList = null;
 
 }
-
-} // namespace SCS
 
 } // End of namespace

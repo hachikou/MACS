@@ -10,6 +10,7 @@
 using System;
 using System.Web;
 using System.Text;
+using System.Collections.Generic;
 using MACS;
 
 namespace MACS.HttpServer {
@@ -156,7 +157,5 @@ public class RadioSelector<T> : TranslatableWebControl
     }
 
 }
-
-} // namespace SCS
 
 } // End of namespace

@@ -33,20 +33,20 @@ DOXYGEN = doxygen
 .PHONY: all clean release doc
 
 
-all: $(TARGET)
+all: $(TARGET) doc
 
 doc: $(DOCFILE)
 
 $(TARGET): $(SRCS) Makefile
 	$(MCS) $(MCSFLAGS) -t:library $(LIBS:%=-r:%) $(SRCS) -out:$@
-	cp $(TARGET) $(LIBDIR)
+	cp $(TARGET) $(TARGET).mdb $(LIBDIR)
 
 $(DOCFILE): $(SRCS) $(DOXFILES) Doxyfile
 	$(MKDIR) $(DOCDIR)
 	$(DOXYGEN)
 
 clean:
-	$(RM) *.dll *.mdb
+	$(RM) *.dll *.mdb $(LIBDIR)$(TARGET) $(LIBDIR)$(TARGET).mdb $(DOCDIR)
 
 release:
 	$(MCS) $(MCSFLAGS_RELEASE) -t:library $(LIBS:%=-r:%) $(SRCS) -out:$(TARGET)

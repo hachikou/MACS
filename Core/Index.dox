@@ -2,61 +2,63 @@
 簡単に使える、汎用のC\#ライブラリ集です.
 
 \section 文字列関連
-- StringUtil : \copybrief MACS::StringUtil
-- ByteUtil : \copybrief MACS::ByteUtil
-- NetworkByteOrder : \copybrief MACS::NetworkByteOrder
-- LinedStringBuilder : \copybrief MACS::LinedStringBuilder
-- SJISDictionary : \copybrief MACS::SJISDictionary
+- \ref MACS::StringUtil "StringUtil" : \copybrief MACS::StringUtil
+- \ref MACS::ByteUtil "ByteUtil" : \copybrief MACS::ByteUtil
+- \ref MACS::NetworkByteOrder "NetworkByteOrder" : \copybrief MACS::NetworkByteOrder
+- \ref MACS::LinedStringBuilder "LinedStringBuilder" : \copybrief MACS::LinedStringBuilder
+- \ref MACS::SJISDictionary "SJISDictionary" : \copybrief MACS::SJISDictionary
 
 \section HTML関連
-- HtmlTool : \copybrief MACS::HtmlTool
-- JsonTool : \copybrief MACS::JsonTool
-- TableFormatter : \copybrief MACS::TableFormatter
+- \ref MACS::HtmlTool "HtmlTool" : \copybrief MACS::HtmlTool
+- \ref MACS::JsonTool "JsonTool" : \copybrief MACS::JsonTool
+- \ref MACS::TableFormatter "TableFormatter" : \copybrief MACS::TableFormatter
 
 \section ファイル関連
-- FileUtil : \copybrief MACS::FileUtil
-- CSVFile : \copybrief MACS::CSVFile
-- SJISWriter : \copybrief MACS::SJISWriter
-- SJISReader : \copybrief MACS::SJISReader
+- \ref MACS::FileUtil "FileUtil" : \copybrief MACS::FileUtil
+- \ref MACS::CSVFile "CSVFile" : \copybrief MACS::CSVFile
+- \ref MACS::SJISWriter "SJISWriter" : \copybrief MACS::SJISWriter
+- \ref MACS::SJISReader "SJISReader" : \copybrief MACS::SJISReader
 
 \section ストリーム関連
-- TempStream : \copybrief MACS::TempStream
-- TinyChunkStream: \copybrief MACS::TinyChunkStream
-- SocStream: \copybrief MACS::SocStream
-- TelnetStream: \copybrief MACS::TelnetStream
+- \ref MACS::TempStream "TempStream" : \copybrief MACS::TempStream
+- \ref MACS::TinyChunkStream "TinyChunkStream" : \copybrief MACS::TinyChunkStream
+- \ref MACS::SocStream "SocStream" : \copybrief MACS::SocStream
+- \ref MACS::TelnetStream "TelnetStream" : \copybrief MACS::TelnetStream
 
 \section データ構造
-- DataArray : \copybrief MACS::DataArray
-- Hwaddr : \copybrief MACS::Hwaddr
-- Ipaddr : \copybrief MACS::Ipaddr
-- HwaddrRange : \copybrief MACS::HwaddrRange
-- IpaddrRange : \copybrief MACS::IpaddrRange
-- UnixTime : \copybrief MACS::UnixTime
+- \ref MACS::DataArray "DataArray" : \copybrief MACS::DataArray
+- \ref MACS::Hwaddr "Hwaddr" : \copybrief MACS::Hwaddr
+- \ref MACS::Ipaddr "Ipaddr" : \copybrief MACS::Ipaddr
+- \ref MACS::HwaddrRange "HwaddrRange" : \copybrief MACS::HwaddrRange
+- \ref MACS::IpaddrRange "IpaddrRange" : \copybrief MACS::IpaddrRange
+- \ref MACS::UnixTime "UnixTime" : \copybrief MACS::UnixTime
+- ArrayUtil<T> : \copybrief MACS::ArrayUtil< T >
 
 \section 簡易データベース構造
-- IniFile : \copybrief MACS::IniFile
-- SectionIniFile : \copybrief MACS::SectionIniFile
-- ObjectDictionary : \copybrief MACS::ObjectDictionary
-- XmlFile : \copybrief MACS::XmlFile
-- NDJson : \copybrief MACS::NDJson
+- \ref MACS::IniFile "IniFile" : \copybrief MACS::IniFile
+- \ref MACS::SectionIniFile "SectionIniFile" : \copybrief MACS::SectionIniFile
+- \ref MACS::ObjectDictionary "ObjectDictionary" : \copybrief MACS::ObjectDictionary
+- \ref MACS::XmlFile "XmlFile" : \copybrief MACS::XmlFile
+- \ref MACS::NDJson "NDJson" : \copybrief MACS::NDJson
 
 \section ログ関連
-- Loggable : \copybrief MACS::Loggable
-- StaticLoggable : \copybrief MACS::StaticLoggable
-- OpeLog : \copybrief MACS::OpeLog
+- \ref MACS::Loggable "Loggable" : \copybrief MACS::Loggable
+- \ref MACS::StaticLoggable "StaticLoggable" : \copybrief MACS::StaticLoggable
+- \ref MACS::OpeLog "OpeLog" : \copybrief MACS::OpeLog
 
 \section 多言語化
-- Translatable : \copybrief MACS::Translatable
-- Translator : \copybrief MACS::Translator
+- \ref MACS::Translatable "Translatable" : \copybrief MACS::Translatable
+- \ref MACS::Translator "Translator" : \copybrief MACS::Translator
 
 \section マルチスレッド
-- NThread : \copybrief MACS::NThread
-- ThreadBase : \copybrief MACS::ThreadBase
-- RWLock : \copybrief MACS::RWLock
+- \ref MACS::NThread "NThread" : \copybrief MACS::NThread
+- \ref MACS::ThreadBase "ThreadBase" : \copybrief MACS::ThreadBase
+- \ref MACS::RWLock "RWLock" : \copybrief MACS::RWLock
 
 \section その他
-- ProcUtil : \copybrief MACS::ProcUtil
-- SendMail : \copybrief MACS::SendMail
-- FtpClient : \copybrief MACS::FtpClient
+- \ref MACS::ProcUtil "ProcUtil" : \copybrief MACS::ProcUtil
+- \ref MACS::SendMail "SendMail" : \copybrief MACS::SendMail
+- \ref MACS::FtpClient "FtpClient" : \copybrief MACS::FtpClient
+- \ref MACS::DebugTool "DebugTool" : \copybrief MACS::DebugTool
 
 */

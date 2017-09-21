@@ -227,6 +227,4 @@ public class DateSelector : TranslatableWebControl {
     }
 }
 
-} // namespace SCS
-
 } // End of namespace

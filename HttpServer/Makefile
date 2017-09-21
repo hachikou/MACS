@@ -1,4 +1,4 @@
-TARGET = HttpServer.dll
+TARGET = MACS.HttpServer.dll
 SRCS = 	HttpServer.cs HttpPage.cs HttpBuiltinContentsSupport.cs HttpNlsSupport.cs\
 	HttpStaticPage.cs HttpTemplatePage.cs HttpValidationPage.cs\
 	WebControl.cs TemplateFlag.cs Literal.cs TextBox.cs PasswordBox.cs HiddenText.cs\
@@ -8,11 +8,11 @@ SRCS = 	HttpServer.cs HttpPage.cs HttpBuiltinContentsSupport.cs HttpNlsSupport.c
 	TimeSelector.cs\
 	HttpStackTracePage.cs HttpEmergencyPage.cs\
 	HttpProxy.cs
-LIBDIR = ../../lib
-LOCALLIBS = $(LIBDIR)/SCSLib.dll
-LIBS = $(LOCALLIBS) System.Web.dll
+LIBDIR = ../
+LOCALLIBS = $(LIBDIR)MACS.dll
+LIBS = $(LOCALLIBS) System.Web.dll System.Drawing.dll
 DOXFILES = Index.dox examples/Example.dox
-DOCDIR = ../../doc/HttpServer
+DOCDIR = ../doc/HttpServer
 DOCFILE = $(DOCDIR)/index.html
 
 MCS = mcs
@@ -28,7 +28,7 @@ DOXYGEN = doxygen
 .PHONY: all clean release doc
 
 
-all: $(TARGET)
+all: $(TARGET) doc
 
 doc: $(DOCFILE)
 
@@ -41,7 +41,7 @@ $(DOCFILE):	$(SRCS) $(DOXFILES) Doxyfile
 	$(DOXYGEN)
 
 clean:
-	$(RM) *.dll *.mdb
+	$(RM) *.dll *.mdb $(LIBDIR)$(TARGET) $(LIBDIR)$(TARGET).mdb $(DOCDIR)
 
 release:
 	$(MCS) $(MCSFLAGS_RELEASE) -t:library $(LIBS:%=-r:%) $(SRCS) -out:$(TARGET)

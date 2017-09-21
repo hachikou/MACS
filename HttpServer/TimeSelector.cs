@@ -202,6 +202,4 @@ public class TimeSelector : TranslatableWebControl {
     }
 }
 
-} // namespace SCS
-
 } // End of namespace

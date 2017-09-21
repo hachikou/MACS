@@ -141,6 +141,4 @@ public class YesNoSelector: TranslatableWebControl {
     }
 }
 
-} // namespace SCS
-
 } // End of namespace
