@@ -28,7 +28,7 @@ DOXYGEN = doxygen
 .PHONY: all clean release doc
 
 
-all: $(TARGET) doc
+all: $(TARGET)
 
 doc: $(DOCFILE)
 
