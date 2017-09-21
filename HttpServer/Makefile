@@ -8,8 +8,8 @@ SRCS = 	HttpServer.cs HttpPage.cs HttpBuiltinContentsSupport.cs HttpNlsSupport.c
 	TimeSelector.cs\
 	HttpStackTracePage.cs HttpEmergencyPage.cs\
 	HttpProxy.cs
-LIBDIR = ../
-LOCALLIBS = $(LIBDIR)MACS.dll
+LIBDIR = ..
+LOCALLIBS = $(LIBDIR)/MACS.dll
 LIBS = $(LOCALLIBS) System.Web.dll System.Drawing.dll
 DOXFILES = Index.dox examples/Example.dox
 DOCDIR = ../doc/HttpServer
@@ -36,12 +36,12 @@ $(TARGET): $(SRCS) Makefile $(LOCALLIBS)
 	$(MCS) $(MCSFLAGS) -t:library $(LIBS:%=-r:%) $(SRCS) -out:$@
 	cp $(TARGET) $(TARGET).mdb $(LIBDIR)
 
-$(DOCFILE):	$(SRCS) $(DOXFILES) Doxyfile
+$(DOCFILE): $(SRCS) $(DOXFILES) Doxyfile Makefile
 	$(MKDIR) $(DOCDIR)
 	$(DOXYGEN)
 
 clean:
-	$(RM) *.dll *.mdb $(LIBDIR)$(TARGET) $(LIBDIR)$(TARGET).mdb $(DOCDIR)
+	$(RM) *.dll *.mdb $(LIBDIR)/$(TARGET) $(LIBDIR)/$(TARGET).mdb $(DOCDIR)
 
 release:
 	$(MCS) $(MCSFLAGS_RELEASE) -t:library $(LIBS:%=-r:%) $(SRCS) -out:$(TARGET)

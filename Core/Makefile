@@ -14,7 +14,7 @@ SRCS = UnixTime.cs StringUtil.cs NetworkByteOrder.cs ByteUtil.cs SimpleCipher.cs
        ImageFileUtil.cs\
        RWLock.cs NThread.cs\
        DebugTool.cs
-LIBDIR = ../
+LIBDIR = ..
 LIBS = System.Web.dll System.Drawing.dll
 DOXFILES = Index.dox
 DOCDIR = ../doc/Core
@@ -46,7 +46,7 @@ $(DOCFILE): $(SRCS) $(DOXFILES) Doxyfile
 	$(DOXYGEN)
 
 clean:
-	$(RM) *.dll *.mdb $(LIBDIR)$(TARGET) $(LIBDIR)$(TARGET).mdb $(DOCDIR)
+	$(RM) *.dll *.mdb $(LIBDIR)/$(TARGET) $(LIBDIR)/$(TARGET).mdb $(DOCDIR)
 
 release:
 	$(MCS) $(MCSFLAGS_RELEASE) -t:library $(LIBS:%=-r:%) $(SRCS) -out:$(TARGET)

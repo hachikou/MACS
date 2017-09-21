@@ -561,7 +561,7 @@ public class DBCon : Loggable, IDisposable {
                         return 0;
                     else
                         throw;
-                } catch(Exception e) {
+                } catch(Exception) {
                     abort();
                     if(ignoreexception)
                         return 0;
@@ -1012,14 +1012,14 @@ public class DBCon : Loggable, IDisposable {
             Console.WriteLine("{0}: {1}", dbname, msg);
     }
 
-        if (UseDebugLog)
-            LOG_ERR(String.Format("[{0}] {1}", cid, msg));
+    private void logWarning(string msg) {
+        LOG_WARNING(String.Format("[{0}] {1}", cid, msg));
         if (UseConsoleLog)
             Console.WriteLine("{0}: {1}", dbname, msg);
     }
 
     private void logErr(string msg) {
-            LOG_EXCEPTION(e);
+        LOG_ERR(String.Format("[{0}] {1}", cid, msg));
         if (UseConsoleLog)
             Console.WriteLine("{0}: {1}", dbname, msg);
     }
