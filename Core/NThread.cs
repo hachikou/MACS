@@ -179,7 +179,7 @@ public class NThread : Loggable, IDisposable {
     /// </summary>
     public System.Threading.ThreadState ThreadState {
         get {
-            return (thread != null)?thread.ThreadState:ThreadState.Stopped;
+            return (thread != null)?thread.ThreadState:System.Threading.ThreadState.Stopped;
         }
     }
 
