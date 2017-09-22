@@ -61,6 +61,4 @@ public class HiddenText : TextBox {
 
 }
 
-} // namespace SCS
-
 } // End of namespace

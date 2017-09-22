@@ -1,14 +1,16 @@
-TARGET = DB.dll
+TARGET = MACS.DB.dll
 SRCS = DBTableDef.cs DBColumnDef.cs DBIndexDef.cs DBCon.cs DBConPool.cs DBTable.cs DBCondition.cs DBReader.cs DBDump.cs \
 	A5erToDBTableDef.cs DBTableJson.cs
-LIBDIR = ../../lib
-LIBS = System.Data $(LIBDIR)/SCSLib.dll $(LIBDIR)/Npgsql.dll $(LIBDIR)/Ionic.Zip.dll
+LIBDIR = ..
+LOCALLIBS = $(LIBDIR)/MACS.dll
+IMPORTLIBS = Mysql.Data.dll Npgsql.dll Ionic.Zip.dll
+LIBS = $(LOCALLIBS) System.Data $(IMPORTLIBS)
 DOXFILES = Index.dox examples/Example.dox
-DOCDIR = ../../doc/DB
+DOCDIR = ../doc/DB
 DOCFILE = $(DOCDIR)/index.html
 
-MCS = dmcs
-MCSFLAGS = -warn:4 -debug+ -d:USE_POSTGRESQL
+MCS = mcs
+MCSFLAGS = -warn:4 -debug+ -d:USE_MYSQL -d:USE_POSTGRESQL
 MCSFLAGS_RELEASE = -optimize+
 
 RM = rm -rf
@@ -24,16 +26,16 @@ all: $(TARGET)
 
 doc: $(DOCFILE)
 
-$(TARGET): $(SRCS) Makefile
+$(TARGET): $(SRCS) Makefile $(LOCALLIBS)
 	$(MCS) $(MCSFLAGS) -t:library $(LIBS:%=-r:%) $(SRCS) -out:$@
-	cp $(TARGET) $(LIBDIR)
+	cp $(TARGET) $(TARGET).mdb $(IMPORTLIBS) $(LIBDIR)
 
 $(DOCFILE): $(SRCS) $(DOXFILES) Doxyfile Makefile
 	$(MKDIR) $(DOCDIR)
 	$(DOXYGEN)
 
 clean:
-	$(RM) $(TARGET) *.mdb
+	$(RM) $(TARGET) *.mdb $(LIBDIR)/$(TARGET) $(LIBDIR)/$(TARGET).mdb $(IMPORTLIBS:%=$(LIBDIR)/%) $(DOCDIR)
 
 release:
 	$(MCS) $(MCSFLAGS_RELEASE) -t:library $(LIBS:%=-r:%) $(SRCS) -out:$(TARGET)

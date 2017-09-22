@@ -189,6 +189,13 @@ public class OpeLog {
     }
 
     /// <summary>
+    ///   ログを追記する
+    /// </summary>
+    public void Log(string category, Level lv, string msg, params object[] objs) {
+        Log(category, lv, String.Format(msg, objs));
+    }
+
+    /// <summary>
     ///   ローテートする
     /// </summary>
     public void Rotate() {

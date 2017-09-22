@@ -28,7 +28,8 @@ public abstract class ThreadBase : Loggable,IDisposable {
     /// <summary>
     /// コンストラクタ
     /// </summary>
-    public ThreadBase() {
+    public ThreadBase(string name_) {
+        name = name_;
         threadMutex = new object();
         mythread = null;
     }
@@ -50,6 +51,13 @@ public abstract class ThreadBase : Loggable,IDisposable {
     }
 
     /// <summary>
+    ///   サービス名（デバッグメッセージ用）
+    /// </summary>
+    public virtual string ThreadName {
+        get { return (mythread!=null)?mythread.Name:name; }
+    }
+    
+    /// <summary>
     ///   スレッド動作を開始する
     /// </summary>
     /// <remarks>
@@ -62,7 +70,7 @@ public abstract class ThreadBase : Loggable,IDisposable {
             if(mythread != null)
                 return;
             StopRequest = false;
-            mythread = new Thread(Run);
+            mythread = new NThread(name, Run);
             mythread.Start();
         }
     }
@@ -105,7 +113,8 @@ public abstract class ThreadBase : Loggable,IDisposable {
 
 
     private object threadMutex;
-    private Thread mythread;
+    private string name;
+    private NThread mythread;
 
     private void _waitForStop(int timelimit) {
         if(mythread == null)

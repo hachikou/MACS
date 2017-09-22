@@ -94,6 +94,4 @@ public class TextArea : WebControl {
 
 }
 
-} // namespace SCS
-
 } // End of namespace

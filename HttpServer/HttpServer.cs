@@ -75,14 +75,74 @@ public class HttpServer : Loggable {
     public bool UseCookieExpires = true;
 
     /// <summary>
-    ///   ワーカースレッドに空きが無い場合の、ワーカースレッドの動作終了待ち最大時間（ミリ秒）
+    ///   最大ワーカースレッド数
     /// </summary>
-    public int WorkerThreadWaitTime = 10000; // msec.
+    public int MaxWorkers {
+        get { return m_maxworkers; }
+        set {
+            if(value < 1)
+                value = 1;
+            m_maxactivepages = value-(m_maxworkers-m_maxactivepages);
+            if(m_maxactivepages < 1)
+                m_maxactivepages = 1;
+            m_maxworkers = value;
+        }
+    }
 
     /// <summary>
-    ///   ワーカースレッドの応答に時間がかかっている場合時デッドロックと判断してスレッドを終了するまでの時間
+    ///   WEBアプリ用最大ワーカースレッド数
     /// </summary>
-    public int WorkerTimeout = 0; // sec
+    /// <remarks>
+    ///   <para>
+    ///     動的ページ処理をするワーカースレッドの最大同時実行数。
+    ///     この個数を超える動的ページのHttpセッションが要求された時には、
+    ///     EmergencyPageクラスで処理が行なわれるようになる。
+    ///   </para>
+    /// </remarks>
+    public int MaxActivePages {
+        get { return m_maxactivepages; }
+        set {
+            if(value < 1)
+                m_maxactivepages = 1;
+            else if(value > m_maxworkers)
+                m_maxactivepages = m_maxworkers;
+            else
+                m_maxactivepages = value;
+        }
+    }
+
+    /// <summary>
+    ///   緊急時用ワーカスレッド数
+    /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     この数は、MaxWorkersに含まれる。
+    ///     MaxActivePagesを超えた数の動的ページ生成セッションが張られた時に緊急
+    ///     ページ表示に使用するためのワーカスレッド数。
+    ///   </para>
+    /// </remarks>
+    public int ReservedWorkers {
+        get { return m_maxworkers-m_maxactivepages; }
+        set {
+            if(value < 0)
+                value = 0;
+            m_maxactivepages = m_maxworkers-value;
+            if(m_maxactivepages < 1)
+                m_maxactivepages = 1;
+        }
+    }
+    
+    /// <summary>
+    ///   ページレンダリングタイムアウトのデフォルト値（ミリ秒）
+    /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     この時間経過してもPageLoadが完了しない場合、AbortExceptionが
+    ///     発生する。
+    ///     0を設定するとタイムアウト処理なしになる。
+    ///   </para>
+    /// </remarks>
+    public int DefaultTimeout = 0;
 
     /// <summary>
     ///   セッション変数を保存するファイル名
@@ -103,6 +163,7 @@ public class HttpServer : Loggable {
         m_listener.Prefixes.Add(m_url);
         m_pagelist = new Dictionary<string,Type>();
         m_staticpagelist = new Dictionary<string,HttpStaticPage>();
+        m_emergencypage = typeof(HttpEmergencyPage);
         m_sessiondict = new Dictionary<string,ObjectDictionary>();
         m_sessiontime = new Dictionary<string,DateTime>();
         m_appl = new ObjectDictionary();
@@ -198,7 +259,7 @@ public class HttpServer : Loggable {
         set { m_defaultpage = value; }
     }
 
-
+    
     /// <summary>
     ///   ワーカが例外を発した時にスタックトレースページを表示するかどうか
     /// </summary>
@@ -225,7 +286,7 @@ public class HttpServer : Loggable {
     ///   PageLoadの引数paramには "/abcd.html" がセットされる。
     /// </example>
     public void AddPage(string path, Type pageClass) {
-        if(!pageClass.Equals(typeof(HttpPage)) && ! pageClass.IsSubclassOf(typeof(HttpPage)))
+        if(!pageClass.Equals(typeof(HttpPage)) && !pageClass.IsSubclassOf(typeof(HttpPage)))
             throw new InvalidCastException("Page class must be a subclass of HttpPage.");
         m_pagelist[path] = pageClass;
     }
@@ -262,6 +323,23 @@ public class HttpServer : Loggable {
         m_staticpagelist[path] = page;
     }
 
+    /// <summary>
+    ///   緊急ページレンダラを登録する
+    /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     動的ページを処理中のワーカー数がMaxActivePagesを超えた場合には、ここ
+    ///     で指定されたページレンダラが呼び出される。
+    ///     一般的には、緊急ページレンダラは、HTTPアクセスが過負荷状態になって
+    ///     いることを表示して終了する。
+    ///   </para>
+    /// </remarks>
+    public void SetEmergencyPage(Type pageClass) {
+        if(!pageClass.Equals(typeof(HttpPage)) && !pageClass.IsSubclassOf(typeof(HttpPage)))
+            throw new InvalidCastException("Page class must be a subclass of HttpPage.");
+        m_emergencypage = pageClass;
+    }
+    
     /// <summary>
     ///   接続許可アドレス一覧をクリアする（どこからでも接続できるようにする）
     /// </summary>
@@ -316,20 +394,19 @@ public class HttpServer : Loggable {
     ///     Stop()が（他のスレッドで）呼び出されるまで、本メソッドは戻らない。
     ///   </para>
     /// </remarks>
-    /// <param name="nworker">同時接続を許可するHTTPセッション数</param>
-    public void Run(int nworker) {
+    /// <param name="initworkers">初期ワーカースレッド数</param>
+    public void Run(int initworkers) {
         if(IsRunning){
             LOG_CRIT("Already running.");
             return;
         }
         m_stoprequest = false;
-        if(nworker <= 0)
-            nworker = 1;
+        if(initworkers <= 0)
+            initworkers = 1;
 
-        m_workerlist = new WorkerContext[nworker];
-        for(int i = 0; i < m_workerlist.Length; i++){
-            m_workerlist[i] = new WorkerContext();
-            initContext(m_workerlist[i]);
+        m_workerlist = new List<WorkerContext>();
+        for(int i = 0; i < initworkers; i++){
+            m_workerlist.Add(new WorkerContext(this, i));
         }
 
         try {
@@ -340,17 +417,16 @@ public class HttpServer : Loggable {
             // 管理者権限で 'netsh http add urlacl url=http://+:10080/ user=ユーザー名' を実行してください。
 
             LOG_CRIT(string.Format("Failed to listen on {0}: {1}", m_url, e.Message));
-            for(int i = 0; i < m_workerlist.Length; i++)
-                m_workerlist[i].WorkerThread.Abort();
+            foreach(WorkerContext wc in m_workerlist) {
+                wc.Dispose();
+            }
             m_workerlist = null;
             throw e;
         }
 
-        m_deadlockmonitthread = new Thread(monitorWorkerTimeout);
-        m_deadlockmonitthread.Start();
+        LOG_INFO(string.Format("Accepting {0}, {1} workers.", m_url, m_workerlist.Count));
 
-        LOG_INFO(string.Format("Accepting {0}, {1} workers.", m_url, nworker));
-
+        m_activepages = 0;
         while (!m_stoprequest) {
             // コネクトを待つ。
             HttpListenerContext context;
@@ -378,40 +454,53 @@ public class HttpServer : Loggable {
             }
             // 空いているワーカースレッドを探す
             int widx = -1;
-            int retry = WorkerThreadWaitTime/10;
-            while((widx < 0) && (retry > 0)){
-                for(int i = 0; i < m_workerlist.Length; i++){
+            lock(m_workerlist) {
+                for(int i = 0; i < m_workerlist.Count; i++){
                     if(m_workerlist[i].Status == WorkerStatus.WAITING){
-                        widx = i;
-                        break;
+                        if(widx < 0)
+                            widx = i;
+                    } else if(m_workerlist[i].Status == WorkerStatus.STOPPED) {
+                        // 止まってしまったスレッドを回収する
+                        LOG_NOTICE("Disposing worker#{0}", i);
+                        m_workerlist[i].Dispose();
+                        m_workerlist[i] = new WorkerContext(this, i);
+                        if(widx < 0)
+                            widx = i;
                     }
                 }
-                if(widx < 0)
-                    Thread.Sleep(10);
-                retry--;
-            }
-            if(widx < 0){ // All workers are too busy.
-                context.Response.Abort();
-                LOG_ERR("All workers are busy during "+WorkerThreadWaitTime.ToString()+"msec.");
-                continue;
-            }
+                if(widx < 0){ // All workers are busy.
+                    if(m_workerlist.Count >= m_maxworkers) {
+                        context.Response.Abort();
+                        LOG_ERR("No more workers (limit={0}). Connection from client is aborted.", m_maxworkers);
+                        continue;
+                    }
+                    // ワーカーを増やして対応する
+                    widx = m_workerlist.Count;
+                    m_workerlist.Add(new WorkerContext(this, widx));
+                }
+            } // end of lock(m_workerlist)
             // ワーカースレッドにcontextを渡して、処理させる。
             m_workerlist[widx].Status = WorkerStatus.CONNECTED;
             m_workerlist[widx].Context = context;
             m_workerlist[widx].WorkerEvent.Set();
             m_pagecount++;
         }
-        m_listener.Stop();
+        try {
+            m_listener.Stop();
+        } catch(Exception) {
+            // just ignore.
+        }
 
-        m_deadlockmonitthread.Join();
-        for(int i = 0; i < m_workerlist.Length; i++)
-            m_workerlist[i].WorkerEvent.Set();
-        for(int i = 0; i < m_workerlist.Length; i++)
-            m_workerlist[i].WorkerThread.Join();
+        foreach(WorkerContext wc in m_workerlist)
+            wc.WorkerEvent.Set();
+        foreach(WorkerContext wc in m_workerlist) {
+            wc.WorkerThread.Join();
+            wc.Dispose();
+        }
         m_workerlist = null;
         m_stoprequest = false;
 
-        LOG_INFO(string.Format("Finished accepting {0}, {1} workers.", m_url, nworker));
+        LOG_INFO("Finished accepting {0}", m_url);
     }
 
     /// <summary>
@@ -492,17 +581,17 @@ public class HttpServer : Loggable {
             return stat;
 
         lock(m_workerlist) {
-            stat.Workers = m_workerlist.Length;
-            for(int i = 0; i < m_workerlist.Length; i++){
-                if(m_workerlist[i] == null){
+            stat.Workers = m_workerlist.Count;
+            foreach(WorkerContext wc in m_workerlist) {
+                if(wc == null){
                     stat.Stopped++;
                     continue;
                 }
-                stat.PageCount += m_workerlist[i].Count;
-                stat.TotalTime += m_workerlist[i].TotalElapsed;
-                if(stat.MaxTime < m_workerlist[i].MaxElapsed)
-                    stat.MaxTime = m_workerlist[i].MaxElapsed;
-                switch(m_workerlist[i].Status){
+                stat.PageCount += wc.Count;
+                stat.TotalTime += wc.TotalElapsed;
+                if(stat.MaxTime < wc.MaxElapsed)
+                    stat.MaxTime = wc.MaxElapsed;
+                switch(wc.Status){
                 case WorkerStatus.WAITING:
                     stat.Waiting++;
                     break;
@@ -524,20 +613,36 @@ public class HttpServer : Loggable {
     /// <summary>
     ///   サーバ稼働状況をログに出力する
     /// </summary>
-    public void DebugLog() {
-        foreach(string msg in GetDebugMessage())
+    public void DebugLog(bool detail=false) {
+        foreach(string msg in GetDebugMessage(detail))
             LOG_DEBUG(msg);
     }
 
     /// <summary>
     ///   サーバ稼働状況メッセージを得る
     /// </summary>
-    public string[] GetDebugMessage() {
+    public string[] GetDebugMessage(bool detail=false) {
+        List<string> res = new List<string>();
         Statistics stat = GetStatistics();
-        return new string[]{
-            string.Format("Workers={0}; {1} waiting, {2} connected, {3} busy, {4} stopped", stat.Workers, stat.Waiting, stat.Connected, stat.Busy, stat.Stopped),
-            string.Format("Total {0} pages; mean {1}msec, max {2}msec", stat.PageCount, stat.MeanTime, stat.MaxTime)
-        };
+        res.Add(String.Format("Workers={0}; {1} waiting, {2} connected, {3} busy, {4} stopped", stat.Workers, stat.Waiting, stat.Connected, stat.Busy, stat.Stopped));
+        res.Add(String.Format("Total {0} pages; mean {1}msec, max {2}msec", stat.PageCount, stat.MeanTime, stat.MaxTime));
+        if(detail && (stat.Workers > 0)) {
+            if(m_workerlist == null) {
+                res.Add("Corrupted (workerlist is gone away)");
+            } else {
+                lock(m_workerlist) {
+                    foreach(WorkerContext wc in m_workerlist) {
+                        string title = String.Format("Worker#{0}: ", wc.WorkerNumber);
+                        if(wc == null) {
+                            res.Add(title+"DISPOSED");
+                            continue;
+                        }
+                        res.Add(String.Format("{0}{1} pages={2}, totalTime={3}msec, maxTime={4}msec", title, wc.Status.ToString(), wc.Count, wc.TotalElapsed, wc.MaxElapsed));
+                    }
+                }
+            }
+        }
+        return res.ToArray();
     }
 
 
@@ -572,28 +677,82 @@ public class HttpServer : Loggable {
     /// <summary>
     ///   ワーカー管理データ
     /// </summary>
-    private class WorkerContext {
-        public HttpServer   Server;
-        public WorkerStatus Status;
-        public Thread       WorkerThread;
+    private class WorkerContext : IDisposable {
+        
+        public readonly HttpServer   Server;
+        public readonly int          WorkerNumber;
+        public volatile WorkerStatus Status;
+        public NThread       WorkerThread;
         public HttpListenerContext Context;
         public AutoResetEvent WorkerEvent;
         public long         Count;
         public long         TotalElapsed; // Milliseconds
         public long         MaxElapsed; // Milliseconds
         public Stopwatch    Timer;
+
+        public WorkerContext(HttpServer server, int workerNumber) {
+            server.LOG_INFO("Creating worker#{0}", workerNumber);
+            this.WorkerNumber = workerNumber;
+            this.Status = WorkerStatus.WAITING;
+            this.Server = server;
+            this.Context = null;
+            this.WorkerEvent = new AutoResetEvent(false);
+            this.WorkerThread = new NThread(String.Format("HttpServer({0}):Worker#{1}", this.Server.ServerName, this.WorkerNumber), doWork);
+            this.MaxElapsed = 0;
+            this.Timer = new Stopwatch();
+            this.WorkerThread.Start();
+        }
+
+        ~WorkerContext() {
+           Dispose();
+        }
+
+        public void Dispose() {
+            if(this.WorkerEvent != null) {
+                this.WorkerEvent.Dispose();
+                this.WorkerEvent = null;
+            }
+            if(this.WorkerThread != null) {
+                this.WorkerThread.Abort();
+                this.WorkerThread.Dispose();
+                this.WorkerThread = null;
+            }
+        }
+        
+        private void doWork(){
+            HttpServer sv = this.Server;
+            try {
+                sv.LOG_DEBUG("Start worker#{0}", this.WorkerNumber);
+                while(!sv.m_stoprequest){
+                    this.WorkerEvent.WaitOne();
+                    if(sv.m_stoprequest)
+                        break;
+                    this.Status = WorkerStatus.BUSY;
+                    sv.OnConnect(this);
+                    this.Status = WorkerStatus.WAITING;
+                }
+                sv.LOG_DEBUG("Stop worker#{0}", this.WorkerNumber);
+            } catch(ThreadAbortException) {
+                // OnConnect内でログを吐いているので、ここでは何もしなくてよい
+            } catch(Exception ex) {
+                sv.LOG_ERR("Worker#{0} caught exception {1}", this.WorkerNumber, ex.GetType().Name);
+                sv.LOG_EXCEPTION(ex);
+            } finally {
+                this.Status = WorkerStatus.STOPPED;
+            }
+        }
     }
 
-    private Thread m_deadlockmonitthread;
     private string m_servername;
     private int m_port;
     private string m_url;
     private HttpListener m_listener;
-    private volatile WorkerContext[] m_workerlist;
+    private List<WorkerContext> m_workerlist;
     private int m_pagecount;
     private string m_defaultpage;
     private Dictionary<string,Type> m_pagelist;
     private Dictionary<string,HttpStaticPage> m_staticpagelist;
+    private Type m_emergencypage;
     private ObjectDictionary m_appl;
     private Dictionary<string,ObjectDictionary> m_sessiondict;
     private Dictionary<string,DateTime> m_sessiontime;
@@ -601,23 +760,13 @@ public class HttpServer : Loggable {
     private List<Ipaddr> m_allownetmask;
     private bool m_stoprequest;
     private bool m_listening;
+    private int m_maxworkers = 64;
+    private int m_maxactivepages = 48;
+    private int m_activepages;
+    private object m_activepages_mutex = new object();
 
     private static Random m_rand;
 
-
-    private static void DoWork(object param){
-        WorkerContext wc = (WorkerContext)param;
-        HttpServer sv = wc.Server;
-        while(!sv.m_stoprequest){
-            wc.WorkerEvent.WaitOne();
-            if(sv.m_stoprequest)
-                break;
-            wc.Status = WorkerStatus.BUSY;
-            sv.OnConnect(wc);
-            wc.Status = WorkerStatus.WAITING;
-        }
-        wc.Status = WorkerStatus.STOPPED;
-    }
 
     private void OnConnect(WorkerContext wc) {
         wc.Timer.Reset();
@@ -670,51 +819,77 @@ public class HttpServer : Loggable {
                 // アプリケーションページを探す
                 foreach(KeyValuePair<string,Type> kv in m_pagelist){
                     if(path.StartsWith(kv.Key) && ((path.Length == kv.Key.Length) || (path[kv.Key.Length] == '/'))){
-                        if((context.Request.HttpMethod == "GET") || (context.Request.HttpMethod == "POST")){
-                            // セッション変数をクッキー管理する。
-                            Cookie sessid = context.Request.Cookies[m_servername+"-SID"];
-                            ObjectDictionary sess;
-                            lock(m_sessiondict){
-                                if((sessid != null) && m_sessiondict.ContainsKey(sessid.Value)){
-                                    sess = m_sessiondict[sessid.Value];
-                                }else{
-                                    sessid = new Cookie(m_servername+"-SID", m_rand.Next(9999999).ToString()+m_rand.Next(9999999).ToString());
-                                    sess = new ObjectDictionary();
-                                    m_sessiondict[sessid.Value] = sess;
+                        // 動的ページにマッチした
+                        Type pageClass = kv.Value;
+                        // 動的ページは同時にMaxActivePages個しかレンダリングしない
+                        lock(m_activepages_mutex) {
+                            if(++m_activepages > m_maxactivepages) {
+                                // オーバーした時は強制的にEmergencyPageでレンダリングする
+                                LOG_NOTICE("Number of active pages exceeds MaxActivePages({0}), use {1}", m_maxactivepages, m_emergencypage.Name);
+                                pageClass = m_emergencypage;
+                            }
+                        }
+                        int timeout = 0; // ページレンダリングタイムアウト
+                        try {
+                            if((context.Request.HttpMethod == "GET") || (context.Request.HttpMethod == "POST")){
+                                // セッション変数をクッキー管理する。
+                                Cookie sessid = context.Request.Cookies[m_servername+"-SID"];
+                                ObjectDictionary sess;
+                                lock(m_sessiondict){
+                                    if((sessid != null) && m_sessiondict.ContainsKey(sessid.Value)){
+                                        sess = m_sessiondict[sessid.Value];
+                                    }else{
+                                        sessid = new Cookie(m_servername+"-SID", m_rand.Next(9999999).ToString()+m_rand.Next(9999999).ToString());
+                                        sess = new ObjectDictionary();
+                                        m_sessiondict[sessid.Value] = sess;
+                                    }
+                                    m_sessiontime[sessid.Value] = DateTime.Now;
                                 }
-                                m_sessiontime[sessid.Value] = DateTime.Now;
-                            }
-                            sessid.Version = 1;
-                            sessid.Path = "/";
-                            if(UseCookieExpires && (SessionTimeout > 0)) {
-                                sessid.Expires = DateTime.Now.AddSeconds(SessionTimeout);
-                                //context.Response.AppendCookie(sessid);
-                                // なぜか正しいSet-Cookieヘッダを生成してくれないので、自力でヘッダを作る。
-                                context.Response.AppendHeader("Set-Cookie", string.Format("{0}={1}; expires={2}; path={3}", sessid.Name, sessid.Value, sessid.Expires.ToString("r"), sessid.Path));
-                            } else {
-                                context.Response.AppendHeader("Set-Cookie", string.Format("{0}={1}; path={2}", sessid.Name, sessid.Value, sessid.Path));
-                            }
+                                sessid.Version = 1;
+                                sessid.Path = "/";
+                                if(UseCookieExpires && (SessionTimeout > 0)) {
+                                    sessid.Expires = DateTime.Now.AddSeconds(SessionTimeout);
+                                    //context.Response.AppendCookie(sessid);
+                                    // なぜか正しいSet-Cookieヘッダを生成してくれないので、自力でヘッダを作る。
+                                    context.Response.AppendHeader("Set-Cookie", string.Format("{0}={1}; expires={2}; path={3}", sessid.Name, sessid.Value, sessid.Expires.ToString("r"), sessid.Path));
+                                } else {
+                                    context.Response.AppendHeader("Set-Cookie", string.Format("{0}={1}; path={2}", sessid.Name, sessid.Value, sessid.Path));
+                                }
 
-                            // ページレンダラの呼び出し
-                            using(HttpPage page = (HttpPage)(kv.Value.GetConstructor(Type.EmptyTypes).Invoke(null))){
-                                page.SetLogger(this.Logger);
-                                page.SetServerContext(this, context, kv.Key.Substring(1));
-                                // セッション変数アクセスの排他を行なうと、同一端末からのアクセスの処理はシリアライズされる。
-                                if(page.UseSession){
-                                    lock(sess) {
+                                // ページレンダラの呼び出し
+                                using(HttpPage page = (HttpPage)(pageClass.GetConstructor(Type.EmptyTypes).Invoke(null))){
+                                    page.SetLogger(this.Logger);
+                                    page.SetServerContext(this, context, kv.Key.Substring(1));
+                                    // ページレンダリングタイムアウトの設定
+                                    timeout = page.Timeout;
+                                    if(timeout < 0)
+                                        timeout = DefaultTimeout;
+                                    if(timeout > 0)
+                                        NThread.Watchdog(timeout, NThread.WatchdogMode.Abort);
+                                    // セッション変数アクセスの排他を行なうと、同一端末からのアクセスの処理はシリアライズされる。
+                                    if(page.UseSession){
+                                        lock(sess) {
+                                            page.SetSession(sess, m_appl);
+                                            page.PageLoad(path.Substring(kv.Key.Length));
+                                        }
+                                    } else {
                                         page.SetSession(sess, m_appl);
                                         page.PageLoad(path.Substring(kv.Key.Length));
                                     }
-                                } else {
-                                    page.SetSession(sess, m_appl);
-                                    page.PageLoad(path.Substring(kv.Key.Length));
+                                    status = 200;
                                 }
-                                status = 200;
+                            } else {
+                                status = 405;
                             }
-                        } else {
-                            status = 405;
+                            break;
+                        } finally {
+                            if(timeout > 0)
+                                NThread.SuspendWatchdog();
+                            lock(m_activepages_mutex) {
+                                if(m_activepages > 0)
+                                    m_activepages--;
+                            }
                         }
-                        break;
                     }
                 }
             }
@@ -755,11 +930,24 @@ public class HttpServer : Loggable {
             // コンテンツ送信中にソケットが切れた(？)
             status = 200; // とりあえず、こちら側の処理は成功したことにする。
             LOG_DEBUG("IOError while sending contents: "+e.Message);
-        } catch(ThreadAbortException) {
+        } catch(ThreadInterruptedException) {
             using(HttpPage page = new HttpPage()){
                 page.SetLogger(this.Logger);
                 page.SetServerContext(this, context, "error");
-                page.PageLoad("500");
+                page.PageLoad("503");
+            }
+        } catch(ThreadAbortException ex) {
+            bool isTimeout = (ex.ExceptionState != null)&&(ex.ExceptionState is TimeoutException);
+            if(isTimeout) {
+                LOG_ERR("{0} is aborted due to timeout", path);
+            } else {
+                LOG_ERR("{0} is aborted", path);
+            }
+            LOG_EXCEPTION(ex);
+            using(HttpPage page = new HttpPage()){
+                page.SetLogger(this.Logger);
+                page.SetServerContext(this, context, "error");
+                page.PageLoad(isTimeout?"408":"500");
             }
         } catch(Exception e) {
             LOG_CRIT(String.Format("{0}: {1} in {2}", e.GetType().Name, e.Message, e.TargetSite));
@@ -818,45 +1006,6 @@ public class HttpServer : Loggable {
                 return true;
         }
         return false;
-    }
-    ///
-    /// <summary>
-    ///   HTTPServerがDeadlockした場合のタイムアウト処理
-    /// </summary>
-    private void monitorWorkerTimeout(object param){
-
-        while(!m_stoprequest){
-
-            if ( WorkerTimeout != 0 ) {
-                for(int i = 0; i < m_workerlist.Length; i++){
-                    WorkerContext context = m_workerlist[i];
-                    long elapsed = context.Timer.ElapsedMilliseconds;
-                    if(elapsed > WorkerTimeout * 1000) {
-                        lock(m_workerlist){
-                            // 新規のコンテキストと差し替える
-                            m_workerlist[i] = new WorkerContext();
-                            initContext(m_workerlist[i]);
-                        }
-
-                        context.WorkerThread.Abort();
-                        LOG_ERR("restart thread for deadlock");
-                    }
-                }
-            }
-
-            Thread.Sleep(1000); // 1秒に１回実行
-        }
-    }
-
-    private void initContext(WorkerContext ctx){
-        ctx.Status = WorkerStatus.WAITING;
-        ctx.Server = this;
-        ctx.Context = null;
-        ctx.WorkerEvent = new AutoResetEvent(false);
-        ctx.WorkerThread = new Thread(new ParameterizedThreadStart(DoWork));
-        ctx.MaxElapsed = 0;
-        ctx.Timer = new Stopwatch();
-        ctx.WorkerThread.Start(ctx);
     }
 
 }

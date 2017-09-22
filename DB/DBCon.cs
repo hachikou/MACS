@@ -13,6 +13,7 @@ using System.Data.Common;
 using System.Text;
 using System.IO;
 using System.Collections.Generic;
+using System.Diagnostics;
 #if USE_MYSQL
 using MySql.Data.MySqlClient;
 #endif
@@ -57,19 +58,39 @@ public class DBCon : Loggable, IDisposable {
     /// <summary>
     ///   Loggerにデバッグログを残すかどうか
     /// </summary>
-    public static bool UseDebugLog = false;
+    /// <remarks>
+    ///   <para>
+    ///     エラーログは本設定にかかわらず記録されます。
+    ///   </para>
+    /// </remarks>
+    public bool UseDebugLog = DefaultUseDebugLog;
 
     /// <summary>
     ///   コンソールにデバッグログを出すかどうか
     /// </summary>
-    public static bool UseConsoleLog = false;
+    public bool UseConsoleLog = DefaultUseConsoleLog;
 
     /// <summary>
-    ///   SQL実行タイムアウト（デフォルト値）
+    ///   Loggerにデバッグログを残すかどうか（デフォルト値）
     /// </summary>
-    public const int DefaultCommandTimeout = 60;
+    public static bool DefaultUseDebugLog = false;
 
+    /// <summary>
+    ///   コンソールにデバッグログを出すかどうか（デフォルト値）
+    /// </summary>
+    public static bool DefaultUseConsoleLog = false;
 
+    /// <summary>
+    ///   SQL実行時間が長すぎる警告ログを記録する閾値（ミリ秒）
+    /// </summary>
+    public int WarnThresholdTime = DefaultWarnThresholdTime;
+    
+    /// <summary>
+    ///   SQL実行時間が長すぎる警告ログを記録する閾値（ミリ秒）（デフォルト値）
+    /// </summary>
+    public static int DefaultWarnThresholdTime = 10000;
+    
+    
     /// <summary>
     ///   DB種別を文字列からパースする
     /// </summary>
@@ -125,7 +146,7 @@ public class DBCon : Loggable, IDisposable {
     ///   DBConPoolの接続を使ってDBConを作成する
     /// </summary>
     public DBCon(DBConPool pool_) {
-        if(pool_.PoolSize == 0) {
+        if(pool_.MaxPoolSize == 0) {
             _open(pool_.DBType, pool_.Server, pool_.DBName, pool_.User, pool_.Passwd);
             return;
         }
@@ -391,6 +412,18 @@ public class DBCon : Loggable, IDisposable {
     }
 
     /// <summary>
+    ///   現在実行中のSQL
+    /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     現在実行中でない場合はnullを返す。
+    ///   </para>
+    /// </remarks>
+    public string CurrentSQL {
+        get { return currentSQL; }
+    }
+    
+    /// <summary>
     ///   Query発行
     /// </summary>
     public DBReader Query(string sql) {
@@ -407,21 +440,27 @@ public class DBCon : Loggable, IDisposable {
                     cmd.CommandTimeout = commandtimeout;
                 cmd.CommandText = sql;
                 try {
+                    currentSQL = sql;
+                    timer.Restart();
                     reader = new DBReader(cmd.ExecuteReader());
+                    timer.Stop();
+                    if(timer.ElapsedMilliseconds >= WarnThresholdTime)
+                        logWarning(String.Format("Heavy SQL: {0}msec: SQL={1}", timer.ElapsedMilliseconds, sql));
                     return reader;
                 } catch(DbException e) {
                     logErr(String.Format("SQL Error: {0}: SQL={1}", e.Message, sql));
                     if(ignoreexception)
                         return new DBReader(); // 握りつぶすときはダミーリーダー
                     else
-                        throw e;
-                } catch(Exception e) {
-                    logErr(String.Format("Error: SQL={0}", sql));
-                    logException(e);
+                        throw;
+                } catch(Exception) {
+                    abort();
                     if(ignoreexception)
                         return new DBReader(); // 握りつぶすときはダミーリーダー
                     else
-                        throw e;
+                        throw;
+                } finally {
+                    currentSQL = null;
                 }
             }
         }
@@ -460,20 +499,22 @@ public class DBCon : Loggable, IDisposable {
                     cmd.CommandTimeout = commandtimeout;
                 cmd.CommandText = sql;
                 try {
+                    currentSQL = sql;
                     return cmd.ExecuteScalar().ToString();
                 } catch(DbException e) {
                     logErr(String.Format("SQL Error: {0}: SQL={1}", e.Message, sql));
                     if(ignoreexception)
                         return "";
                     else
-                        throw e;
-                } catch(Exception e) {
-                    logErr(String.Format("Error: SQL={0}", sql));
-                    logException(e);
+                        throw;
+                } catch(Exception) {
+                    abort();
                     if(ignoreexception)
                         return "";
                     else
-                        throw e;
+                        throw;
+                } finally {
+                    currentSQL = null;
                 }
             }
         }
@@ -512,20 +553,22 @@ public class DBCon : Loggable, IDisposable {
                     cmd.CommandTimeout = commandtimeout;
                 cmd.CommandText = sql;
                 try {
+                    currentSQL = sql;
                     return StringUtil.ToInt(cmd.ExecuteScalar().ToString(), 0);
                 } catch(DbException e) {
                     logErr(String.Format("SQL Error: {0}: SQL={1}", e.Message, sql));
                     if(ignoreexception)
                         return 0;
                     else
-                        throw e;
-                } catch(Exception e) {
-                    logErr(String.Format("Error: SQL={0}", sql));
-                    logException(e);
+                        throw;
+                } catch(Exception) {
+                    abort();
                     if(ignoreexception)
                         return 0;
                     else
-                        throw e;
+                        throw;
+                } finally {
+                    currentSQL = null;
                 }
             }
         }
@@ -596,20 +639,27 @@ public class DBCon : Loggable, IDisposable {
                 cmd.CommandTimeout = commandtimeout;
             cmd.CommandText = sql;
             try {
-                return cmd.ExecuteNonQuery();
+                currentSQL = sql;
+                timer.Restart();
+                int ret = cmd.ExecuteNonQuery();
+                timer.Stop();
+                if(timer.ElapsedMilliseconds >= WarnThresholdTime)
+                    logWarning(String.Format("Heavy SQL: {0}msec: SQL={1}", timer.ElapsedMilliseconds, sql));
+                return ret;
             } catch(DbException e) {
                 logErr(String.Format("SQL Error: {0}: SQL={1}", e.Message, sql));
                 if(ignoreexception)
                     return -1; // 握りつぶすときは -1
                 else
-                    throw e;
-            } catch(Exception e) {
-                logErr(String.Format("Error: SQL={0}", sql));
-                logException(e);
+                    throw;
+            } catch(Exception) {
+                abort();
                 if(ignoreexception)
                     return -1; // 握りつぶすときは -1
                 else
-                    throw e;
+                    throw;
+            } finally {
+                currentSQL = null;
             }
         }
     }
@@ -855,7 +905,7 @@ public class DBCon : Loggable, IDisposable {
             break;
 #endif
         default:
-            throw new InvalidOperationException("Invalid DB type");
+            throw new InvalidOperationException("Invalid DB type or connection has been lost");
         }
     }
 
@@ -873,7 +923,7 @@ public class DBCon : Loggable, IDisposable {
             return StringUtil.ToLong(QueryString("SELECT pg_database_size('"+dbname+"')"));
 #endif
         default:
-            throw new InvalidOperationException("Invalid DB type");
+            throw new InvalidOperationException("Invalid DB type or connection has been lost");
         }
     }
 
@@ -895,7 +945,7 @@ public class DBCon : Loggable, IDisposable {
             break;
 #endif
         default:
-            throw new InvalidOperationException("Invalid DB type");
+            throw new InvalidOperationException("Invalid DB type or connection has been lost");
         }
     }
 
@@ -916,7 +966,7 @@ public class DBCon : Loggable, IDisposable {
             break;
 #endif
         default:
-            throw new InvalidOperationException("Invalid DB type");
+            throw new InvalidOperationException("Invalid DB type or connection has been lost");
         }
         List<string> cols = new List<string>();
         using(DBReader reader = Query(query)) {
@@ -933,14 +983,28 @@ public class DBCon : Loggable, IDisposable {
     private string dbname;
     private DbConnection con;
     private DBReader reader = null;
+    private volatile string currentSQL = null;
+    private Stopwatch timer = new Stopwatch();
     private bool inTransaction = false;
-    private int commandtimeout = DefaultCommandTimeout;
+    private int commandtimeout = 60;
     private bool ignoreexception = false;
     private static int connectionId = 10000;
     private static object connectionIdMutex = new object();
     private int cid;
     private DBConPool pool = null;
 
+    private void abort() {
+        try {
+            if(con != null) {
+                _close();
+                con.Close();
+                con = null;
+            }
+        } catch(Exception) {
+            // just ignore.
+        }
+    }
+    
     private void log(string msg) {
         if(UseDebugLog)
             LOG_DEBUG(String.Format("[{0}] {1}", cid, msg));
@@ -948,18 +1012,16 @@ public class DBCon : Loggable, IDisposable {
             Console.WriteLine("{0}: {1}", dbname, msg);
     }
 
-    private void logErr(string msg) {
-        if (UseDebugLog)
-            LOG_ERR(String.Format("[{0}] {1}", cid, msg));
+    private void logWarning(string msg) {
+        LOG_WARNING(String.Format("[{0}] {1}", cid, msg));
         if (UseConsoleLog)
             Console.WriteLine("{0}: {1}", dbname, msg);
     }
 
-    private void logException(Exception e) {
-        if (UseDebugLog)
-            LOG_EXCEPTION(e);
+    private void logErr(string msg) {
+        LOG_ERR(String.Format("[{0}] {1}", cid, msg));
         if (UseConsoleLog)
-            Console.WriteLine("{0}: {1}", dbname, e.Message);
+            Console.WriteLine("{0}: {1}", dbname, msg);
     }
 
     protected override string GetCategoryName() {

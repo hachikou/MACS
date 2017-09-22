@@ -75,6 +75,21 @@ public class HttpPage : HtmlTool, IDisposable {
     }
 
     /// <summary>
+    ///   ページレンダリングタイムアウト（ミリ秒）
+    /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     この時間経過してもPageLoadが完了しない場合、InterruptedExceptionが
+    ///     発生する。
+    ///     0を設定するとタイムアウト処理なしになる。
+    ///     負の数を設定すると、HttpServer.DefaultTimeout が用いられる。
+    ///   </para>
+    /// </remarks>
+    public virtual int Timeout {
+        get { return -1; }
+    }
+    
+    /// <summary>
     ///   キャッシュ無効用コントロールヘッダをセットする。
     /// </summary>
     public void SetNoCache() {

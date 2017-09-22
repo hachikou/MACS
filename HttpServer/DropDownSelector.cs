@@ -10,6 +10,7 @@
 using System;
 using System.Web;
 using System.Text;
+using System.Collections.Generic;
 using MACS;
 
 namespace MACS.HttpServer {
@@ -53,6 +54,16 @@ public class DropDownSelector<T> : TranslatableWebControl
     ///   変更時に呼び出されるJavaScript
     /// </summary>
     public string OnChange;
+
+    /// <summary>
+    ///   選択肢の表示名
+    /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     指定がない場合は、typeof(T).Name+"."+T.ToString() を翻訳したもの
+    ///   </para>
+    /// </remarks>
+    public Dictionary<T,string> Text = null;
 
     /// <summary>
     ///   レンダリング
@@ -106,7 +117,10 @@ public class DropDownSelector<T> : TranslatableWebControl
             if(val == Selected.ToString())
                 sb.Append(" selected=\"selected\"");
             sb.Append(">");
-            sb.Append(HE(_(typeof(T).Name+"."+val)));
+            string vv;
+            if((Text == null) || !Text.TryGetValue(x, out vv))
+                vv = _(typeof(T).Name+"."+val);
+            sb.Append(HE(vv));
             sb.Append("</option>");
         }
         sb.Append("</select>");
@@ -127,7 +141,5 @@ public class DropDownSelector<T> : TranslatableWebControl
     private T[] exceptionList = null;
 
 }
-
-} // namespace SCS
 
 } // End of namespace

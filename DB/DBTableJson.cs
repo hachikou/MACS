@@ -6,7 +6,12 @@
  * This code was designed and coded by SHIBUYA K.
  */
 
-static class DBTableJson {
+namespace MACS.DB {
+
+/// <summary>
+///   DBTableとNDJsonを結びつける拡張メソッド
+/// </summary>
+public static class DBTableJson {
 
     /// <summary>
     ///   DBTableのQuery結果をNDJsonで取り出す。
@@ -17,6 +22,7 @@ static class DBTableJson {
     ///     "list":[["値1-1","値1-2",...],["値2-1","値2-2",...],...]} という形式になります。
     ///   </para>
     /// </remarks>
+    /// <param name="tbl">対象DBTable</param>
     /// <param name="limit">最大取り出し件数。0の場合無制限</param>
     /// <param name="offset">何件目以降を返すか。先頭レコードは0</param>
     public static NDJson GetJson(this DBTable tbl, int limit=0, int offset=0) {
