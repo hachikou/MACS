@@ -54,6 +54,16 @@ public class TextBox : WebControl {
     public string OnChange;
 
     /// <summary>
+    ///   変更時に呼び出されるJavaScript
+    /// </summary>
+    public string OnInput;
+
+    /// <summary>
+    ///   変更時に呼び出されるJavaScript
+    /// </summary>
+    public string OnKeyUp;
+
+    /// <summary>
     ///   コンストラクタ
     /// </summary>
     public TextBox(string name, string id, int maxlength) : base(name, id) {
@@ -121,6 +131,16 @@ public class TextBox : WebControl {
         if(!String.IsNullOrEmpty(OnChange)) {
             sb.Append(" onchange=\"");
             sb.Append(OnChange);
+            sb.Append("\"");
+        }
+        if(!String.IsNullOrEmpty(OnInput)) {
+            sb.Append(" oninput=\"");
+            sb.Append(OnInput);
+            sb.Append("\"");
+        }
+        if(!String.IsNullOrEmpty(OnKeyUp)) {
+            sb.Append(" onkeyup=\"");
+            sb.Append(OnKeyUp);
             sb.Append("\"");
         }
         CommonOptions(sb);
