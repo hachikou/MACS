@@ -481,7 +481,7 @@ public class NThread : Loggable, IDisposable {
         /// <summary>
         ///   時間計測を開始する
         /// </summary>
-        public void Start(string title_) {
+        public void Start(string title_=null) {
             title = title_;
             timer.Restart();
         }
@@ -502,7 +502,7 @@ public class NThread : Loggable, IDisposable {
         ///   時間計測結果を出力して次の計測を始める
         /// </summary>
         /// <returns>計測した実行時間（ミリ秒）</returns>
-        public long Next(string title_) {
+        public long Next(string title_=null) {
             long t = timer.ElapsedMilliseconds;
             show("Time", t);
             title = title_;
