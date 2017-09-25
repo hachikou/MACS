@@ -978,6 +978,19 @@ public class DBCon : Loggable, IDisposable {
         return cols.ToArray();
     }
 
+    /// <summary>
+    ///   データベースの初期ユーザ名を得る
+    /// </summary>
+    public static string GetSuperUser(Type dbtype) {
+        switch(dbtype) {
+        case Type.MySQL:
+            return "root";
+        case Type.PostgreSQL:
+            return "postgres";
+        default:
+            return "root";
+        }
+    }
 
     private Type dbtype;
     private string dbname;
