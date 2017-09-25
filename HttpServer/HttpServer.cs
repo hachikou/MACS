@@ -951,6 +951,7 @@ public class HttpServer : Loggable {
             }
         } catch(Exception e) {
             LOG_CRIT(String.Format("{0}: {1} in {2}", e.GetType().Name, e.Message, e.TargetSite));
+            LOG_EXCEPTION(e);
             if(ShowStackTrace) {
                 using(HttpStackTracePage page = new HttpStackTracePage(e)) {
                     try {
