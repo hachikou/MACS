@@ -981,7 +981,7 @@ public class DBCon : Loggable, IDisposable {
     /// <summary>
     ///   データベースの初期ユーザ名を得る
     /// </summary>
-    public static string GetSuperUser(Type dbtype) {
+    public static string GetDefaultSuperUser(Type dbtype) {
         switch(dbtype) {
         case Type.MySQL:
             return "root";
