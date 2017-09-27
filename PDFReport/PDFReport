@@ -2,5 +2,5 @@
 
 me=`which $0`
 dir=`dirname $me`
-export MONO_PATH="$dir:$dir/../SCSLib:$dir/../iText"
+export MONO_PATH="$dir:$dir/.."
 mono --debug $dir/PDFReport.exe $*

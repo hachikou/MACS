@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Xml;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using MACS;
 
 /// <summary>
 ///   XML定義に従ってPDF帳票を作成する

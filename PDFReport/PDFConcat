@@ -1,8 +1,6 @@
 #!/bin/sh
 
-if [ "$OS" = "Windows_NT" ]; then
-    export MONO_PATH=".:../SCSLib;../iText"
-else
-    export MONO_PATH=".:../SCSLib:../iText"
-fi
-mono --debug PDFConcat.exe $*
+me=`which $0`
+dir=`dirname $me`
+export MONO_PATH="$dir:$dir/.."
+mono --debug $dir/PDFConcat.exe $*
