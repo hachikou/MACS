@@ -1,0 +1,6 @@
+#!/bin/sh
+
+me=`which $0`
+dir=`dirname $me`
+export MONO_PATH="$dir:$dir/../SCSLib:$dir/../iText"
+mono --debug $dir/PDFReport.exe $*

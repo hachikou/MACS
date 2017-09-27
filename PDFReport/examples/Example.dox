@@ -1,0 +1,717 @@
+/** \page PDF帳票生成システム利用サンプル
+
+PDFReport.dllは、簡単なXMLフォーマットの定義を作るだけできれいなPDF帳票を作成することができるC#(Mono)用ツールライブラリです。
+
+また、単独のコマンドとして利用できる、PDFReportコマンドとPDFConcatコマンドが用意されており、プログラムをする事無く、CSVファイルなどの内容を元にPDF帳票を作成することができます。
+
+\section Part1 PDFReportコマンドの使い方と帳票定義ファイル
+
+1-1: \subpage Example1_1
+
+1-2: \subpage Example1_2
+
+1-3: \subpage Example1_3
+
+1-4: \subpage Example1_4
+
+1-5: \subpage Example1_5
+
+1-6: \subpage Example1_6
+
+1-7: \subpage Example1_7
+
+1-8: \subpage Example1_8
+
+1-9: \subpage Example1_9
+
+1-10: \subpage Example1_10
+
+1-11: \subpage Example1_11
+
+1-12: \subpage Example1_12
+
+1-13: \subpage Example1_13
+
+1-14: \subpage Example1_14
+
+1-15: \subpage Example1_15
+
+1-16: \subpage Example1_16
+
+1-17: \subpage Example1_17
+
+\section Part2 PDFReport.dllの使い方
+
+2-1: \subpage Example2_1
+
+*/
+
+/** \page Example1_1 PDFReportコマンドの実行
+
+まず、PDF帳票のフォーマットを定義するXMLファイルを用意します。
+
+ここでは、次のファイルを使います。
+
+Example1_1.xml
+\verbinclude Example1_1.xml
+
+この定義は、左から10mm、上から10mmの場所に「サンプルPDF」と書く事を指示しています。
+
+このファイルを用意したら、次のようにPDFReportコマンドを実行します。
+\code
+$ PDFReport Example1_1.xml -o output.pdf
+\endcode
+（先頭の \c $ は、コマンドプロンプトの意味です。）
+
+もし、PDFReportコマンドがPATHの通っていない場所にある場合には、
+\code
+$ ../PDFReport Example1_1.xml -o output.pdf
+\endcode
+のように、パス名を指定して下さい。
+
+この実行により、\c -o オプションで指定した <a href="Example1_1.pdf">output.pdf</a> という名前のファイルができます。
+\c -o オプションが無い場合は、標準出力にPDFファイル内容を出力します。
+
+帳票定義XMLファイルは、必ず次のXML宣言で始めて下さい。
+\code
+<?xml version="1.0" encoding="UTF-8"?>
+\endcode
+XMLのトップレベル要素は、 \c document です。
+その中に、描画を指定するタグが記述されます。
+この例では、 \c text タグだけが用いられています。
+
+\c text タグは、任意の文字を任意の位置に描画する指定です。
+\c text タグを含む、全ての描画タグには、属性 \c x および \c y で描画位置を指定することができます。
+
+この例で指定した「左から10mm、上から10mm」というのは、余白を除いた描画領域の中の位置で、用紙の端からではありません。
+
+\code
+$ PDFReport -f Example1_1.xml -o output.pdf
+\endcode
+のように、\c -f オプションを付けると、<a href="Example1_1_2.pdf">余白位置を示す枠線が描画されます</a>。
+
+*/
+
+/** \page Example1_2 描画位置の指定
+
+次のXMLファイルをご覧下さい。
+
+Example1_2.xml
+\verbinclude Example1_2.xml
+
+これを、
+\code
+$ PDFReport Example1_2.xml -o Example1_2.pdf
+\endcode
+として作成したのが、<a href="Example1_2.pdf">Example1_2.pdf</a>です。
+
+この例では、様々な位置指定のやり方を紹介しています。
+
+基本は"○○mm" と書く方法で、余白を除いた左上隅からの距離をmm単位で指定します。
+
+単位を"%"にすると、余白を除いた描画領域の幅または高さの比率で示すことになります。
+すなわち、"0%"は"0mm"と同じで左端（または上端）、"100%"は描画領域の右端（または下端）です。
+
+単位を"line"にすると、文字の高さを単位にすることができます。ただしY座標の指定時のみ有効です。
+
+単位を"char"にすると、文字の幅を単位にすることができます。ただし、"X"という文字の幅が基準となります。
+
+単位を付けないと、ポイント（1/72インチ）が単位となりますが、あまり用いる事は無いでしょう。
+
+どの単位を使う場合でも、小数を付けて指定することができます。
+
+数値の前に"+"または"-"をつけると、直前の座標値からの相対位置指定になります。
+また、座標値を指定しないと、直前の座標値がそのまま使われます。
+
+座標の相対指定をうまく活用すると、フォーマットの修正をする時に作業が楽になるでしょう。
+
+数値の前に"!"をつけると、左端（上端）からの距離ではなく、右端（下端）からの距離を指定する意味になります。
+つまり、"100%" と "!0" は同じ位置になります。
+
+なお、 \c text タグを使った文字列描画においては、文字列の左上隅が指定した位置になるという点に注意して下さい。
+
+*/
+
+/** \page Example1_3 文字列の位置合わせと幅指定
+
+\c text タグの \c align 属性と \c width 属性をご紹介します。
+
+Example1_3.xml
+\verbinclude Example1_3.xml
+
+結果は、<a href="Example1_3.pdf">Example1_3.pdf</a>をご覧下さい。
+
+\c text タグに \c align 属性をつけると、指定したX座標が文字列の左端になる(align="left")、文字列の中央になる(align="center")、文字列の右端になる(align="right")ことを指定できます。
+\c align 指定が無い場合は、"left"が指定されたものとみなされます。
+
+\c タグに \c width 属性をつけると、文字列を描画する際の最大幅を指定することができます。
+幅の指定には、X座標と同じ単位を用いることができます。
+（"char"は文字幅を単位とするものですが、"X"の幅が基準になっているという点に注意して下さい。）
+
+\c width 属性が指定されていると、その幅で収まらない文字は描画されません。
+このとき、align="right" や align="center" が指定されていても、文字列の先頭部分が描画されるという点に注意して下さい。
+
+\c width 属性を指定した際に、同時に \c clip="yes" 属性をつけると、文字単位でのクリッピングではなく、文字の途中でも切り取られます。
+このときは、align="right"指定の場合文字列の最後の部分が、align="center"指定の場合文字列の中央が、それぞれ描画されます。
+
+*/
+
+/** \page Example1_4 文字の大きさ
+
+標題などに大きさの違う文字を使いたい場合があります。
+このようなときには、まず \c font タグを使って使用するフォントを宣言しておき、 \c text タグに \c font 属性を付けて利用します。
+
+Example1_4.xml
+\verbinclude Example1_4.xml
+
+結果は、<a href="Example1_4.pdf">Example1_4.pdf</a>をご覧下さい。
+
+\c font タグで、この文書で使用するフォントに名前を付けて宣言します。
+\c name 属性で任意の名前を指定します。
+\c size 属性で文字の大きさを指定します。単位はポイントです。
+
+\c text タグで文字を描画する際に、 \c font 属性をつける事によって、 \c font タグで宣言したフォントを用いることができます。
+\c font 属性が指定されていない \c text は、"default"という名前のフォントが指定されたものとみなされます。
+
+\c font タグの属性として、 \c lineheight を指定することができます。
+これは、Y座標の指定をする際の "line"単位の大きさを指定することになります。
+line単位を全く用いない場合には、 \c lineheight 属性はあまり意味を持ちません。
+
+\c font タグの属性として、 \c descent を指定することができます。
+\c descent に正の数値を指定すると、文字列は下めに描画されます。
+逆に負の数値を指定すると、文字列は上めに描画されます。
+
+なお、 \c font タグは必ず \c text タグで使用するよりも前に宣言して下さい。
+document の最初の部分で全て宣言する事をお勧めします。
+*/
+
+/** \page Example1_5 文字の種類
+
+\c font タグを使って文字の種類を指定することもできます。
+
+Example1_5.xml
+\verbinclude Example1_5.xml
+
+結果は、<a href="Example1_5.pdf">Example1_5.pdf</a>をご覧下さい。
+
+\c font タグに \c file 属性をつけると、文字の種類（字体）を指定することができます。
+\c file 属性に指定するのは、TrueTypeフォントファイル名です。
+フォントファイルは、PDFReportコマンドが入っているディレクトリ内の "fonts" というディレクトリ内に入れておいて下さい。
+標準では、<a href="www.ipa.go.jp">IPA</a>で提供しているフリーのフォントである、ipag.ttc (IPAゴシック)と ipam.ttc (IPA明朝)の2つだけが入っています。
+
+一般のTrueTypeフォントファイルを用いる際には、 \c file 属性にはファイル名そのものを指定して下さい。
+ipag.ttc ファイルのような、TrueTypeフォントコレクションファイルを用いる際には、ファイル名の後に ",0" を付けて下さい。
+（TTCファイル内のセカンダリフォントを使う場合には ",1" を付けて下さい。）
+
+\c basefont タグを用いると、 \c font タグで \c file 属性を持たないものに対するデフォルトのフォントファイルを指定することができます。
+\c basefont タグは必ず \c font タグよりも前に宣言して下さい。
+
+PDFで標準とされている、次の14種類のフォントについては、 \c font 属性のファイル名としてフォント名を指定すれば（フォントファイルが無くても）使うことができます。
+\verbatim
+Courier, Courier-Bold, Courier-Oblique, Courier-BoldOblique,
+Helvetica, Helvetica-Bold, Helvetica-Oblique, Helvetica-BoldOblique,
+Times-Roman, Times-Bold, Times-Italic, Times-BoldItalic,
+Symbol, ZapfDingbats
+\endverbatim
+ただし、これらのフォントは日本語には対応していません。
+また、SymbolとZapfDingbatsは記号用のフォントで、通常の英数字の表示もできません。
+
+*/
+
+/** \page Example1_6 枠線
+
+枠線を引く方法をご説明します。
+
+Example1_6.xml
+\verbinclude Example1_6.xml
+
+結果は、<a href="Example1_6.pdf">Example1_6.pdf</a>をご覧下さい。
+
+\c text タグに \c border 属性をつけると、文字列の周りに線を描画することができます。
+\c border 属性の値は、枠線の太さです。
+
+\c border-top , \c border-bottom , \c border-left , \c border-right 属性を使うと、それぞれ上線、下線、左線、右線だけを描画することができます。
+また、上下左右のどれかに異なる太さを指定する事もできます。
+もちろん、4つの線にそれぞれ異なる太さを指定することもできます。
+
+なお、枠線を描画する場合には、必ず \c width 属性で幅を指定して下さい。
+
+\c box タグは、任意の枠線を描画するものです。
+\c box タグも、 \c x \c y 属性で左上隅の座標を指定し、 \c width 属性で幅を指定することができます。
+さらに、 \c height 属性で高さを指定します。
+\c border 属性の指定の仕方は、 \c text タグと全く同じです。
+
+\c box タグまたは \c text タグに \c crossline 属性を指定すると、対角線を結ぶバッテンの線を描画することができます。
+
+また、左下から右上の斜め線だけを引きたい場合には \c slashline 属性を使います。
+また、左上から右下の斜め線だけを引きたい場合には \c backslashline 属性を使います。
+
+\c box タグには \c align 属性を指定することができます。
+<tt>align="right"</tt>とすると、X座標はボックスの左側ではなく、右側の位置を指定する意味になります。
+<tt>align="center"</tt>とすると、X座標はボックスの中央を指定する意味になります。
+
+同様に、 \c box タグに \c vertical-align 属性を指定することができます。
+<tt>vertical-align="bottom"</tt>とすると、Y座標はボックスの上側ではなく、下側の位置を指定する意味になります。
+<tt>vertical-align="middle"</tt>とすると、Y座標はボックスの中央を指定する意味になります。
+
+*/
+
+/** \page Example1_7 テキストをボックスでまとめる
+
+Example1_6では \c box タグを枠線を引く目的で使いましたが、 \c box タグには描画要素をまとめるという用途もあります。
+
+Example1_7.xml
+\verbinclude Example1_7.xml
+
+結果は、<a href="Example1_7.pdf">Example1_7.pdf</a>をご覧下さい。
+
+「テキスト3」と「テキスト4」が \c box タグの内側に入っている点に注意して下さい。
+この場合、「テキスト3」の位置指定である「x="10mm" y="10mm"」は、 \c box の左上隅を起点とした座標になります。
+つまり、「テキスト3」は実際には X座標 30mm、Y座標40mm の位置に描画されます。
+
+さらに、 \c box を入れ子にする事もできます。
+
+\c box に属性 \c font を付けると、その内部の \c text タグに \c font 属性を付けたのと同じ効果が得られます。
+
+この例ではわかりやすいように \c box に枠線をつけましたが、もちろん枠線無しで \c box を使うこともできます。
+
+若干トリッキーな例ですが、用紙の中心からの位置指定をしたい場合には、次のようにすると実現できます。
+\verbatim
+  <box x="50%" y="50%" width="50%" height="50%">
+    <text x="10mm" y="10mm">X</text>
+  </box>
+\endverbatim
+文字Xは、中心から右に10mm、下に10mmの位置に描画されます。
+
+また、中心から左、上方向の位置を指定したい場合には、次のようにします。
+\verbatim
+  <box x="0" y="0" width="50%" height="50%">
+    <text x="!10mm" y="!10mm">Y</text>
+  </box>
+\endverbatim
+文字Yは、中心から左に10mm、上に10mmの位置に描画されます。
+
+*/
+
+/** \page Example1_8 用紙の指定
+
+PDFの用紙のサイズなどを指定することができます。
+
+Example1_8.xml
+\verbinclude Example1_8.xml
+
+結果は、<a href="Example1_8.pdf">Example1_8.pdf</a>をご覧下さい。
+
+用紙サイズなどは、XMLのトップレベル要素である \c document の属性で指定します。
+
+\c paper 属性が用紙サイズの指定です。
+指定可能なサイズは、以下の通りです。
+\verbatim
+A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,
+B0,B1,B2,B3,B4,B5,B6,B7,B8,B9,B10,
+HALFLETTER,LEGAL,LETTER,NOTE,POSTCARD,TABLOID
+\endverbatim
+または、"180mm,250mm" のような、幅と高さを指定する文字列でも構いません。
+デフォルトは"A4"です。
+
+\c orientation 属性は、用紙を縦長に使うか、横長に使うかの指定です。
+"landscape"（横長）または"portrait"（縦長）のいずれかです。
+\c orientation 指定が無い場合はportraitが指定されたものとみなします。
+
+余白のサイズを指定するには、 \c margin-top , \c margin-bottom , \c margin-left , \c margin-right 属性を使います。
+用紙の端から描画領域までの距離を指定します。
+
+\c margin 属性で4つの余白を同じ値で設定することができます。
+
+なお、余白を0にすると用紙端ギリギリまで描画させることができますが、それを表示／印刷できるかどうかは、表示／印字デバイスによります。
+
+一部のプリンタドライバ（PostScriptリッパー）で、横長の印字が正常にできない場合があります。
+このような場合、PDFReportコマンドに \c -r オプションをつけて実行することにより、全体を横倒しにした（つまり用紙としては縦長の状態で）PDFを作成することができます。
+
+例えば、本例を
+\verbatim
+% PDFReport -r Example1_8.xml -o Example1_8_2.pdf
+\endverbatim
+として作成したPDFは、<a href="Example1_8_2.pdf">Example1_8_2.pdf</a>のようになります。
+
+*/
+
+/** \page Example1_9 外部データの埋め込み
+
+出力する文字列を外部のデータで与えることができます。
+埋め込むデータは、帳票フォーマット指定XMLファイルとは別の、INI形式のファイルで指定します。
+
+埋め込みデータファイル: example.ini
+\verbinclude example.ini.utf8
+
+帳票フォーマットファイル: Example1_9.xml
+\verbinclude Example1_9.xml
+
+PDFReportコマンドのパラメータは、1番目に帳票フォーマットファイル、2番目に埋め込みデータファイルを指定します。
+
+\verbatim
+% PDFReport Example1_9.xml example.ini -o Example1_9.pdf
+\endverbatim
+
+結果は、<a href="Example1_9.pdf">Example1_9.pdf</a>をご覧下さい。
+
+データファイルは、「<tt>項目名=項目値</tt>」という定義を各行に記述します。
+日本語を使う場合には、Shift-JISコードを使って下さい。
+
+項目名には任意の英数字、日本語文字を使うことができますが、<tt>=",.:</tt>などの記号類を使う事はできません。
+（記号類のコードをShift-JISの第2バイトに持つ日本語文字は問題なく使うことができます。）
+
+帳票フォーマットファイルでは、描画する文字列中に「<tt>{項目名}</tt>」と記述することによってこの項目の値を参照することができます。
+
+この機能を使うと、同じ帳票フォーマットでデータだけが異なるPDFをどんどん作ることができます。
+
+なお、<tt>{ }</tt>内の項目名が定義されていないものである場合には、項目値への展開はおこなわれず、<tt>{ }</tt>を含めてそのままが描画されます。
+
+また、帳票フォーマット内で全く参照されていない項目名が定義されている場合、単純に無視されるだけでエラーなどにはなりません。
+
+<tt>{項目名}</tt>の展開は、ごく一部の例外を除き、 \c text タグ内の描画文字列だけに限られます。
+各タグの属性の部分に使う事はできません。
+
+*/
+
+/** \page Example1_10 外部データの埋め込み2
+
+外部データファイルは、INI形式のフォーマット以外にも、より単純なテキストファイルでもかまいません。
+
+埋め込みデータファイル: example.txt
+\verbinclude example.txt.utf8
+
+帳票フォーマットファイル: Example1_10.xml
+\verbinclude Example1_10.xml
+
+PDFReportコマンドの実行方法は、全く同じです。
+
+\verbatim
+% PDFReport Example1_10.xml example.txt -o Example1_10.pdf
+\endverbatim
+
+結果は、<a href="Example1_10.pdf">Example1_10.pdf</a>をご覧下さい。
+
+この例の外部データファイルは、項目名の指定が無く、1行に1項目ずつ記述したファイルになっています。
+
+このような項目名無しの項目を取り扱うときは、帳票フォーマットファイル中で「<tt>{field<i>項目番号</i>}</tt>」と指定します。
+
+なお、項目値に "=" を含むデータの場合、PDFReportコマンドは項目名宣言であると判断してしまいます。
+（最初の"="より後の文字列を項目値として取り扱います。）
+このような場合、正しく認識させるためには行の先頭に "=" を記述して下さい。
+
+外部データファイルで指定されなくても値を用いることができる特別な項目名がいくつか用意されています。
+<table>
+<tr><th>項目名</th><th>内容</th><th>例</th></tr>
+<tr><td>page</td><td>ページ番号</td><td>1</td></tr>
+<tr><td>totalpages</td><td>総ページ数</td><td>8</td></tr>
+<tr><td>currentdate</td><td>現在日付</td><td>2012/05/18</td></tr>
+<tr><td>currenttime</td><td>現在時刻</td><td>23:41:08</td></tr>
+</table>
+これらの特殊項目は、外部データファイルを指定しない場合でも用いることができます。
+
+なお、ここまでの例題では全て1ページの帳票を作成する事しかできないため、ページ番号と総ページ数はほとんど意味がありませんが、後述するリスト項目を用いる際に有用になります。
+
+*/
+
+/** \page Example1_11 値の加工
+
+外部データを取り込む際に、値の簡単な加工を指示することができます。
+
+埋め込みデータファイル: example2.ini
+\verbinclude example2.ini.utf8
+
+帳票フォーマットファイル: Example1_11.xml
+\verbinclude Example1_11.xml
+
+実行方法:
+\verbatim
+% PDFReport Example1_11.xml example2.ini -o Example1_11.pdf
+\endverbatim
+
+結果は、<a href="Example1_11.pdf">Example1_11.pdf</a>をご覧下さい。
+
+<tt>{項目名}</tt>を使って外部データを表示する際、<tt>項目名</tt>の後に \c : で区切って加工の指定ができます。
+
+指定できる加工コマンドは次の通りです。
+<table>
+<tr><th>コマンド</th><th>動作</th><th>コマンド例</th><th>結果例</th></tr>
+<tr><td>number(<i>n</i>)</td><td>小数点下<i>n</i>桁の数値にする</td><td>number(3)</td><td>314.159</td></tr>
+<tr><td>decimal(<i>n</i>)</td><td>位取り数値表記にする。<i>n</i>は小数点下桁数</td><td>decimal(1)</td><td>31,415.9</td></tr>
+<tr><td>fixlength(<i>n</i>,<i>c</i>)</td><td><i>n</i>文字より短い場合左側に<i>c</i>を付加する。</td><td>fixlength(7,.)</td><td>....abc</td></tr>
+<tr><td>plusonly</td><td>負の数値は0にする。</td><td>plusnumber</td><td>0</td></tr>
+<tr><td>prefix(<i>XXX</i>)</td><td><i>XXX</i>を前置する。</td><td>prefix(西暦)</td><td>西暦2012</td></tr>
+<tr><td>postfix(<i>XXX</i>)</td><td><i>XXX</i>を後置する。</td><td>prefix(年)</td><td>2012年</td></tr>
+</table>
+
+<tt>decimal</tt>にパラメータをつけないで指定すると、<tt>decimal(0)</tt>の意味になります。
+
+<tt>fixlength(<i>n</i>,<i>c</i>)</tt>の第2パラメータをつけないで指定すると、<tt>fixlength(<i>n</i>,0)</tt>の意味になります。
+
+全てのコマンドにおいて、元の文字列が空文字列の場合はなにも加工しない（空文字列のまま）になります。
+このため、「<tt>西暦{項目名}</tt>」と「<tt>{項目名:prefix(西暦)}</tt>」は、項目の値が空文字列の時に表示が異なります。
+
+これらのコマンドは \c : で区切って複数指定することができます。
+
+*/
+
+/** \page Example1_12 CSVファイルを表形式表示する
+
+CSVファイルからデータを読み込み、表形式の表示をすることができます。
+
+この場合、今までの例で使ったような、表部分以外のデータを定義するファイルと、表部分用のCSVファイルの2つのデータファイルをPDFReportに与えます。
+
+埋め込みデータファイル1: example.ini
+\verbinclude example.ini.utf8
+
+埋め込みデータファイル2: example.csv
+\verbinclude example.csv.utf8
+
+帳票フォーマットファイル: Example1_12.xml
+\verbinclude Example1_12.xml
+
+実行方法:
+\verbatim
+% PDFReport Example1_12.xml example.ini example.csv -o Example1_12.pdf
+\endverbatim
+
+結果は、<a href="Example1_12.pdf">Example1_12.pdf</a>をご覧下さい。
+
+CSVファイルから取り込んだデータは、<tt>{list.<i>項目名</i>}</tt>という指定で参照します。
+
+CSVの項目名は、ファイルの1行目にかかれたコメント行 ('<tt>#</tt>'で始まる行) で定義します。
+もし、CSVファイルの1行目に項目名定義が無い場合は、<tt>{list.<i>項目番号</i>}</tt>と、名前ではなく番号で項目を指定して下さい。
+
+表の描画には、 \c table タグを用います。
+\c table タグの属性で、表の位置と幅、行数などを指定します。
+（表の高さを \c height 属性で指定することもできますが、行数の制御がうまくゆかなくなるケースがありますので、できるだけ高さは指定せずに行数を指定して下さい。）
+
+\c table タグ内には、 \c body タグを1つ作り、その中に1行分の表示指示のタグを記述します。
+\c body タグには \c height 属性で1行の高さを指定して下さい。
+また、 \c body の \c border-bottom ( \c border-top でも可)属性で、行を区切る横線の太さを指定できます。
+
+\c body タグ内では、各行の左上隅が基準となる座標で文字描画などを指定します。
+
+この例では \c body タグ内に<tt>{list.<i>項目名</i>}</tt>項目だけが使われていますが、一般の<tt>{<i>項目名</i>}</tt>を使うこともできます。
+この場合、各行に同じ値が描画されることになります。
+
+表の描画で最も重要な点は、与えたCSVファイルの行数（レコード数）が、表の行数指定よりも多い場合には、自動的に複数ページで描画されるという事にあります。
+この際、表以外の部分は全てのページで同じものが描画されます。（ページ番号の例外を除く）。
+
+例えば、Example1_10.xml 内のテーブルで、「<tt>rows="12"</tt>」としている部分を「<tt>rows="10"</tt>」に変更して実行すると、<a href="Example1_12_2.pdf">Example1_12_2.pdf</a>のような、2ページ立てのPDFファイルになります。
+
+*/
+
+/** \page Example1_13 表ヘッダと2行組
+
+表にヘッダを付けたり、2行で表示をする場合の例をご紹介します。
+
+使用するデータファイルは Example1_12 と同じ、example.ini とexample.csvですので、内容はそちらをご確認ください。
+
+帳票フォーマットファイル: Example1_13.xml
+\verbinclude Example1_13.xml
+
+結果は、<a href="Example1_13.pdf">Example1_13.pdf</a>をご覧下さい。
+
+この例では、予算と実績を縦に並べて表示しています。
+\c body タグで示される各行の描画領域は、X座標だけでなくY座標も自由に指定できますので、2行組でも3行組でも、自由に構成する事が可能です。
+
+また、 \c header タグを使うと、表のヘッダ部分の描画を指定することができます。
+表が複数ページに分割される場合には、表ヘッダ部分は各ページに描画されます。
+
+本例では割愛しましたが、 \c footer タグを使うと、表のフッタ部分の描画を指定することもできます。
+
+なお、PDFReportはデータの集計機能は持っておりませんので、フッタ部分に合計数値などを表示したい場合には、あらかじめ他のプログラムなどで計算した上で example.ini のような項目値定義INIファイルに書き込んでおいて下さい。
+
+また、表の各行に表が入っているような複雑なデータ構造を持つものについては、PDFReportでは描画することができません。
+
+\c header , \c body , \c footer タグに属性 \c font を付けると、 \c box タグと同様にその中の全 \c text タグに \c font 属性を付けたのと同じ効果が得られます。
+また、 \c table タグに属性 \c font を付けると、ヘッダ部、ボディ部を問わず、表内の全 \c text タグに \c font 属性を付けたのと同じ効果が得られます。
+
+*/
+
+/** \page Example1_14 表の自動フォーマット
+
+表内の各項目のX座標と表示幅を、自動で設定させることができます。
+
+本例でも使用するデータファイルは Example1_12 と同じ、example.ini とexample.csvですので、内容はそちらをご確認ください。
+
+帳票フォーマットファイル: Example1_14.xml
+\verbinclude Example1_14.xml
+
+結果は、<a href="Example1_14.pdf">Example1_14.pdf</a>をご覧下さい。
+
+\c header , \c body , \c footer タグに \c autowidth="yes" という属性をつけると、表内の各項目の X座標と幅を自動的に調整して描画します。
+この場合、各描画項目( \c text タグ)には、X座標指定を付けません。（付けても無視されます。）
+また、かならず \c width 属性を指定します。
+
+\c width 属性で指定する幅は、幅の比率を示す数値です。
+本例の場合、「年/月」の項目の \c width が 7、「予算」と「実績」の項目の \c width が 10 となっており、表の幅が 70mm と指定されています。
+このとき、「年/月」の実際の描画幅はおおよそ 70mm * (7/(7+10+10)) = 18mm になります。
+（実際には項目間スペースの調整などで若干値が変わります。）
+
+X座標指定は、この幅と \c align 属性による描画位置指定を考慮して自動的に設定されます。
+
+幅と座標の算出は、 \c header , \c body , \c footer 毎に行なわれます。
+ヘッダ部とボディ部で項目数が違っていたり、幅指定が異なっている場合には、異なる位置に描画されることになりますのでご注意ください。
+
+また、各項目の Y座標値は全く考慮されませんので、2行組の表については自動設定はできません。
+
+各 \c text 項目には \c width 属性がついていますので、Example1_3 で説明した文字のクリッピングが働き、幅からあふれる文字が描画されません。
+なんらかの理由で、あふれた文字も描画させたい場合には、 \c text タグに \c clip="no" という属性を付けて下さい。
+
+*/
+
+/** \page Example1_15 複数の表
+
+複数の表を表示する例をご紹介します。
+
+本例でも使用するデータファイルは Example1_12 と同じ、example.ini とexample.csvですので、内容はそちらをご確認ください。
+
+帳票フォーマットファイル: Example1_15.xml
+\verbinclude Example1_15.xml
+
+結果は、<a href="Example1_15.pdf">Example1_15.pdf</a>をご覧下さい。
+
+\c document 内には、いくつでも \c table タグを設置する事ができます。
+つまり、表示する項目が異なる表をいくつか配置することができます。
+
+この例の上の2つの表は、それぞれ異なる項目を表示する例になっています。
+
+また、 \c table タグに \c rowoffset 属性をつけると、その表の一番上の行に表示するデータをどれにするか指定する事ができます。
+
+この例の最後の表は、<tt>rowoffset="7"</tt>と指定することにより、7番目のデータが表の1行目に表示されるように指定しています。
+
+この \c rowoffset 属性を用いると、本例の下の表のように、前半のデータを左半分に、後半のデータを右半分に表示するという事ができます。
+
+なお、CSVファイルのデータ数が多く、複数ページに表示される場合には、1ページ内で1度でも描画に使われたデータは次のページでは表示されません。
+
+*/
+
+/** \page Example1_16 複数のCSVファイル
+
+複数のCSVファイルを与え、複数の表を表示することができます。
+
+本例では、今までの example.ini と example.csv に加え、次の example2.csv をデータファイルとして使います。
+
+埋め込みデータファイル3: example2.csv
+\verbinclude example2.csv.utf8
+
+帳票フォーマットファイル: Example1_16.xml
+\verbinclude Example1_16.xml
+
+実行方法:
+\verbatim
+% PDFReport Example1_16.xml example.ini example.csv example2.csv -o Example1_16.pdf
+\endverbatim
+
+結果は、<a href="Example1_16.pdf">Example1_16.pdf</a>をご覧下さい。
+
+PDFReportコマンドの第3引数以降のパラメータは全て外部データのCSVファイル名として認識されます（オプションパラメータを除く）。
+
+\c table タグに \c list 属性をつけることにより、その表が対象とするデータが何番目のCSVファイルであるのかを指定することができます。
+\c list 属性が指定されていない場合は、<tt>list="1"</tt>が指定されたものとみなされます。
+
+この機能を用いると、1つのPDF帳票内に複数のCSVファイルの内容を同時に表示させることができます。
+
+なお、表のいずれか1つでもCSVファイルの全データを表示しきれていない場合は、次のページの描画が行なわれます。
+このとき、既に全データを表示し終えている表は全て空欄（データ無し）となって描画されます。
+
+*/
+
+/** \page Example1_17 バーコード
+
+PDFReportは主要なバーコードの印字機能を持っています。
+
+本例では、Example1_16で用いたデータファイルのうち、 example.ini と example2.csv を使います。
+
+帳票フォーマットファイル: Example1_17.xml
+\verbinclude Example1_17.xml
+
+実行方法:
+\verbatim
+% PDFReport Example1_17.xml example.ini example2.csv -o Example1_17.pdf
+\endverbatim
+
+結果は、<a href="Example1_17.pdf">Example1_17.pdf</a>をご覧下さい。
+
+\c barcode タグを使うと、バーコードを描画することができます。
+使用するコード形式は \c type 属性で指定します。
+指定できるコード形式は以下の通りです。
+
+<table>
+<tr><th>指定名称</th><th>コード形式</th><th>備考</th></tr>
+<tr><td>EAN13</td><td>EANコード標準</td><td>13桁</td></tr>
+<tr><td>EAN8</td><td>EANコード短縮</td><td>8桁</td></tr>
+<tr><td>UPCA</td><td>UPC-Aコード</td><td>12桁</td></tr>
+<tr><td>UPCE</td><td>UPC-Eコード</td><td>6桁</td></tr>
+<tr><td>ITF</td><td>ITFコード</td><td>偶数桁</td></tr>
+<tr><td>CODE39</td><td>CODE39コード</td><td>アルファベット/一部記号可</td></tr>
+<tr><td>CODABAR</td><td>CODABAR(NW-7)コード</td><td>A-Dのスタートストップコードが必要</td></tr>
+</table>
+
+なお、"EAN","JAN13","JAN"が"EAN13"の別名として、"JAN8"が"EAN8"の別名として、"ITF14"が"ITF"の別名として用いることができます。
+
+\c barcode タグには、描画位置指定の \c x , \c y , \c width , \c height , \c align 属性が指定できる他、次の属性を指定することができます。
+<table>
+<tr><th>属性名</th><th>意味</th><th>例</th><th>備考</th></tr>
+<tr><td>type</td><td>バーコード種類</td><td>type="JAN8"</td><td></td></tr>
+<tr><td>font</td><td>コード内文字表示用フォント</td><td>font="small"</td><td>widthまたはheightが指定された際は指定した文字サイズにはならない</td></tr>
+<tr><td>startstoptext</td><td>スタートストップテキスト表示</td><td>startstoptext="yes"</td><td>CODE39およびCODABARで有効</td></tr>
+<tr><td>notext</td><td>コード文字表示無し</td><td>notext="yes"</td><td></td></tr>
+<tr><td>toptext</td><td>コード文字を上に表示</td><td>toptext="yes"</td><td></td></tr>
+<tr><td>alttext</td><td>コード文字として表示する文字列</td><td>alttext="02-{list.商品コード}-00"</td><td><tt>{<i>項目名</i>}</tt>による外部データ項目を指定可</td></tr>
+</table>
+
+\c width 属性または \c height 属性で描画の大きさを指定した場合、（文字表示部分を含めた）バーコードイメージを指定した大きさに拡大／縮小します。
+このとき、縦横比は保持されません。
+
+指定したコード種類では表示できないコードが与えられた場合（EAN8コードなのに8桁の数値ではない、CODABARなのに'A'〜'D'のスタートストップコードがついていない、など）、コード文字列そのものが描画されます。
+
+コードが空（一文字もない）場合には、全く何も描画されません。
+
+*/
+
+/** \page pdffiles 例題で生成されるPDFファイル
+\image html Example1_1.pdf
+\image html Example1_1_2.pdf
+\image html Example1_2.pdf
+\image html Example1_3.pdf
+\image html Example1_4.pdf
+\image html Example1_5.pdf
+\image html Example1_6.pdf
+\image html Example1_7.pdf
+\image html Example1_8.pdf
+\image html Example1_8_2.pdf
+\image html Example1_9.pdf
+\image html Example1_10.pdf
+\image html Example1_11.pdf
+\image html Example1_12.pdf
+\image html Example1_12_2.pdf
+\image html Example1_13.pdf
+\image html Example1_14.pdf
+\image html Example1_15.pdf
+\image html Example1_16.pdf
+\image html Example1_17.pdf
+*/
+
+/** \page Example2_1 コンパイルと実行
+
+本文書で紹介しているコードのコンパイルと実行には、PDFReport.dll、itextsharp.dllおよびSCSLib.dllが必要となります。
+
+コンパイル方法については、
+\ref Makefile
+を参照して下さい。
+
+実行時には、例えば、
+\verbatim
+export MONO_PATH='../../iText:../../SCSLib:../'
+\endverbatim
+などのように、PDFReport.dll, itextsharp.dll, SCSLib.dllがあるディレクトリを環境変数 MONO_PATH にセットしてから、"mono Example1.exe" のように実行して下さい。
+
+*/
+
+/** \page Makefile Makefile
+\verbinclude Makefile
+*/
+

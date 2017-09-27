@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  <font name="default" size="12" />
+
+  <table x="10mm" y="10mm" width="70mm" rows="12" border="0.3mm">
+    <header height="1.5line" border-bottom="0.3mm" autowidth="yes">
+      <text y="1mm" width="7">年/月</text>
+      <text width="10" align="center">予算</text>
+      <text width="10" align="center">実績</text>
+    </header>
+    <body height="1.5line" border-bottom="0.1mm" autowidth="yes">
+      <text y="1mm" width="7">{list.年:postfix(/)}{list.月:fixlength(2)}</text>
+      <text width="10" align="right">{list.予算:decimal:postfix(円)}</text>
+      <text width="10" align="right">{list.実績:decimal:postfix(円)}</text>
+    </body>
+  </table>
+
+  <table x="!10mm" y="10mm" width="70mm" rows="10" align="right" border="0.3mm" list="2">
+    <header height="1.5line" border-bottom="0.3mm" autowidth="yes">
+      <text y="1mm" width="8">商品番号</text>
+      <text width="10" align="center">定価</text>
+      <text width="10" align="center">在庫数</text>
+    </header>
+    <body height="1.5line" border-bottom="0.1mm" autowidth="yes">
+      <text y="1mm" width="8">{list.商品コード}</text>
+      <text width="10" align="right">{list.定価:decimal:postfix(円)}</text>
+      <text width="10" align="right">{list.在庫数:decimal}</text>
+    </body>
+  </table>
+
+</document>

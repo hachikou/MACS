@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document paper="A4" orientation="landscape">
+  <basefont file="ipag.ttc,0"/>
+  <font name="default" size="11" lineheight="14" descent="-3"/>
+  <font name="title" size="24" />
+  <font name="small" size="9" />
+  <font name="large" size="16" />
+
+  <text x="100%" y="0" align="right" font="small">頁 {page} / {totalpages}</text>
+  <text x="100%" y="+2line" align="right" font="small">発行: {currentdate}</text>
+  <text x="100%" y="+2line" align="right" font="small">{currenttime}</text>
+
+  <box x="190mm" y="5mm" width="15mm" height="15mm" border="1.0" />
+  <box x="+15mm" width="15mm" height="15mm" border="1.0"/>
+  <box x="+15mm" width="15mm" height="15mm" border="1.0"/>
+
+  <text x="50%" y="0" align="center" font="title">製造依頼書</text>
+  <text x="0" y="10mm" font="large">依頼書NO:{依頼NO}</text>
+  <text x="20mm" y="+1.8line" font="large">{field4}</text>
+  <text x="70mm" y="15mm" width="20char" border-bottom="1.0">注番:{注文番号}</text>
+  <text x="130mm" width="20char" border-bottom="1.0">納期:{field3}</text>
+  <text x="100mm" y="+1.2line">{field5}</text>
+  <text x="130mm" width="20char" border-bottom="1.0">数量:</text><text x="+20char" width="17char" align="right">{field6}</text>
+  <text x="20mm" y="+1.2line">{field7}</text>
+  <text x="230mm">単価:￥</text><text x="+17char" width="10char" align="right">{field8}</text>
+
+  <table x="0" y="+1.2line" width="100%" rows="20" border-top="1" list="1">
+    <header height="8mm" border-bottom="1" autowidth="yes">
+      <text x="7.5char" width="15char" align="center">商品コード</text>
+      <text x="+37.5char" width="50char" align="center">商品名</text>
+      <text x="+33char" width="6char" align="center">員数</text>
+      <text x="+6char" width="6char" align="center">分類</text>
+      <text x="+6char" width="6char" align="center">仕入先</text>
+      <text x="+6char" width="6char" align="center">総引当</text>
+      <text x="+6char" width="6char" align="center">出庫引当</text>
+      <text x="+6char" width="6char" align="center">RTS数</text>
+      <text x="+6.5char" width="7char" align="center">売単価</text>
+    </header>
+    <body height="1.2line" border-bottom="0.5" autowidth="yes">
+      <text x="0" width="15char" align="left">{list1}</text>
+      <text x="+15char" width="50char" align="left">{list.商品名}</text>
+      <text x="+66char" width="6char" align="right">{list3}</text>
+      <text x="+0char" width="6char" align="left">{list4}</text>
+      <text x="+6char" width="6char" align="left">{list5}</text>
+      <text x="+12char" width="6char" align="right">{list6}</text>
+      <text x="+6char" width="6char" align="right">{list7}</text>
+      <text x="+6char" width="6char" align="right">{list8}</text>
+      <text x="+7char" width="7char" align="right">{list9}</text>
+    </body>
+    <footer height="1.5line">
+      <text x="0">{field9}</text>
+    </footer>
+  </table>
+
+</document>

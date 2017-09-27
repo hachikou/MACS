@@ -1,0 +1,9 @@
+/** \mainpage
+表形式の帳票をPDFで生成するライブラリです。
+
+\section 利用例
+- \subpage PDF帳票生成システム利用サンプル
+
+\section クラスライブラリ
+- PDFReport : \copybrief PDFReport
+*/

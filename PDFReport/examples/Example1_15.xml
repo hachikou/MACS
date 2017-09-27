@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  <font name="default" size="12" />
+  <font name="title" size="24" />
+  <font name="small" size="10" />
+
+  <text x="50%" y="0mm" align="center" font="title">年間業績表</text>
+  <text x="100%" y="0mm" align="right">{currentdate}</text>
+
+  <box x="50%" y ="15mm" width="100mm" height="20mm" align="center" border="0.3mm">
+    <text x="2mm" y="2mm">会社名: {会社名}</text>
+    <text y="+1.5line">TEL:{電話} FAX:{FAX}</text>
+  </box>
+
+  <table x="10mm" y="60mm" width="70mm" rows="12" border="0.3mm">
+    <header height="1.5line" border-bottom="0.3mm" autowidth="yes">
+      <text y="1mm" width="7">年/月</text>
+      <text width="10" align="center">予算</text>
+    </header>
+    <body height="1.5line" border-bottom="0.1mm" font="small" autowidth="yes">
+      <text y="1mm" width="7">{list.年:postfix(/)}{list.月:fixlength(2)}</text>
+      <text width="10" align="right">{list.予算:decimal:postfix(円)}</text>
+    </body>
+  </table>
+
+  <table x="!10mm" y="60mm" width="70mm" rows="12" align="right" border="0.3mm">
+    <header height="1.5line" border-bottom="0.3mm" autowidth="yes">
+      <text y="1mm" width="7">年/月</text>
+      <text width="10" align="center">実績</text>
+    </header>
+    <body height="1.5line" border-bottom="0.1mm" font="small" autowidth="yes">
+      <text y="1mm" width="7">{list.年:postfix(/)}{list.月:fixlength(2)}</text>
+      <text width="10" align="right">{list.実績:decimal:postfix(円)}</text>
+    </body>
+  </table>
+
+  <table x="10mm" y="160mm" width="70mm" rows="6" border="0.3mm">
+    <header height="1.5line" border-bottom="0.3mm" autowidth="yes">
+      <text y="1mm" width="7">年/月</text>
+      <text width="10" align="center">予算</text>
+      <text width="10" align="center">実績</text>
+    </header>
+    <body height="1.5line" border-bottom="0.1mm" font="small" autowidth="yes">
+      <text y="1mm" width="7">{list.年:postfix(/)}{list.月:fixlength(2)}</text>
+      <text width="10" align="right">{list.予算:decimal:postfix(円)}</text>
+      <text width="10" align="right">{list.実績:decimal:postfix(円)}</text>
+    </body>
+  </table>
+
+  <table x="!10mm" y="160mm" width="70mm" rows="6" align="right" border="0.3mm"  rowoffset="7">
+    <header height="1.5line" border-bottom="0.3mm" autowidth="yes">
+      <text y="1mm" width="7">年/月</text>
+      <text width="10" align="center">予算</text>
+      <text width="10" align="center">実績</text>
+    </header>
+    <body height="1.5line" border-bottom="0.1mm" font="small" autowidth="yes">
+      <text y="1mm" width="7">{list.年:postfix(/)}{list.月:fixlength(2)}</text>
+      <text width="10" align="right">{list.予算:decimal:postfix(円)}</text>
+      <text width="10" align="right">{list.実績:decimal:postfix(円)}</text>
+    </body>
+  </table>
+
+</document>

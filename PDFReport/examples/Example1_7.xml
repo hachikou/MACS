@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  <font name="default" size="12" />
+  <font name="title" size="24" />
+  <font name="small" size="9" />
+  <font name="large" size="18" />
+
+  <text x="50%" y="0mm" align="center" font="title">テキストをボックスでまとめる</text>
+
+  <text x="10mm" y="10mm">テキスト1</text>
+  <text x="100%" y="20mm" align="right" font="small">テキスト2</text>
+
+  <box x="20mm" y="30mm" width="100mm" height="150mm" border="0.1mm" font="large">
+    <text x="10mm" y="10mm">テキスト3</text>
+    <text x="100%" y="20mm" align="right" font="small">テキスト4</text>
+
+    <box x="20mm" y="30mm" width="50mm" height="100mm" border="0.3mm">
+      <text x="10mm" y="10mm">テキスト5</text>
+      <text x="100%" y="20mm" align="right" font="small">テキスト6</text>
+    </box>
+
+  </box>
+
+</document>

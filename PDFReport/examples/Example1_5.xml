@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  <basefont file="ipag.ttc,0" />
+  <font name="default" size="18" />
+  <font name="title" size="24" />
+  <font name="mincho" size="18" file="ipam.ttc,0" />
+  <font name="courier" size="18" file="Courier" />
+  <font name="courier-b" size="18" file="Courier-Bold" />
+  <font name="courier-o" size="18" file="Courier-Oblique" />
+  <font name="courier-bo" size="18" file="Courier-BoldOblique" />
+  <font name="helvetica" size="18" file="Helvetica" />
+  <font name="helvetica-b" size="18" file="Helvetica-Bold" />
+  <font name="helvetica-o" size="18" file="Helvetica-Oblique" />
+  <font name="helvetica-bo" size="18" file="Helvetica-BoldOblique" />
+  <font name="times" size="18" file="Times-Roman" />
+  <font name="times-b" size="18" file="Times-Bold" />
+  <font name="times-i" size="18" file="Times-Italic" />
+  <font name="times-bi" size="18" file="Times-BoldItalic" />
+
+  <text x="50%" y="0mm" align="center" font="title">FONT SAMPLE</text>
+  <text x="20mm" y="20mm">デフォルト (IPAゴシック)</text>
+  <text y="+10mm" font="mincho">明朝 (IPA明朝)</text>
+  <text y="+10mm" font="courier">Courier</text>
+  <text y="+10mm" font="courier-b">Courier Bold</text>
+  <text y="+10mm" font="courier-o">Courier Oblique</text>
+  <text y="+10mm" font="courier-bo">Courier BoldOblique</text>
+  <text y="+10mm" font="helvetica">Helvetica</text>
+  <text y="+10mm" font="helvetica-b">Helvetica Bold</text>
+  <text y="+10mm" font="helvetica-o">Helvetica Oblique</text>
+  <text y="+10mm" font="helvetica-bo">Helvetica BoldOblique</text>
+  <text y="+10mm" font="times">Times Roman</text>
+  <text y="+10mm" font="times-b">Times Bold</text>
+  <text y="+10mm" font="times-o">Times Italic</text>
+  <text y="+10mm" font="times-bo">Times BoldItalic</text>
+</document>

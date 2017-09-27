@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document paper="B5" orientation="landscape" margin-top="15mm" margin-bottom="20mm" margin-left="25mm" margin-right="30mm">
+  <font name="default" size="12" />
+  <font name="title" size="24" />
+
+  <text x="50%" y="0mm" align="center" font="title">B5横長</text>
+
+  <box x="0" y="0" width="100%" height="100%" border="0.5mm" crossline="0.5mm"/>
+
+</document>

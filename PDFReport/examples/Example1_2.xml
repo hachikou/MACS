@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  <text x="10mm" y="10mm">10mm,10mm</text>
+  <text x="50%" y="8%">50%,8%</text>
+  <text x="10mm" y="20mm">10mm,20mm</text>
+  <text y="30mm">xを省略すると直前のx座標指定がそのままつかわれる</text>
+  <text y="+10mm">数値に"+○○"または"-○○"と指定すると、直前の座標からの相対指定になる</text>
+  <text y="+2line">"○○line"と書くと文字の高さを単位にすることができる</text>
+  <text x="+4char" y="+1.2line">"○○char"と書くと文字の幅を単位にすることができる</text>
+  <text x="!100mm" y="!10mm">右から100mm,下から10mm</text>
+</document>

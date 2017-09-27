@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  <font name="default" size="12" />
+  <font name="title" size="24" />
+
+  <text x="50%" y="5mm" align="center" font="title">外部データの埋め込み</text>
+
+  <text x="0mm" y="20mm">会社名: {会社名}</text>
+  <text x="+15mm" y="+2line">住所: {住所}</text>
+  <text y="+2line">電話番号: {電話}</text>
+  <text y="+2line">FAX番号: {FAX}</text>
+</document>
