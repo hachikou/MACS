@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document paper="A4" orientation="portrait">
+  <basefont file="ipag.ttc,0"/>
+  <font name="default" size="18" />
+  <font name="title" size="24" />
+  <font name="courier" size="18" file="Courier" />
+  <font name="courier-b" size="18" file="Courier-Bold" />
+  <font name="courier-o" size="18" file="Courier-Oblique" />
+  <font name="courier-bo" size="18" file="Courier-BoldOblique" />
+  <font name="helvetica" size="18" file="Helvetica" />
+  <font name="helvetica-b" size="18" file="Helvetica-Bold" />
+  <font name="helvetica-o" size="18" file="Helvetica-Oblique" />
+  <font name="helvetica-bo" size="18" file="Helvetica-BoldOblique" />
+  <font name="times" size="18" file="Times-Roman" />
+  <font name="times-b" size="18" file="Times-Bold" />
+  <font name="times-i" size="18" file="Times-Italic" />
+  <font name="times-bi" size="18" file="Times-BoldItalic" />
+
+  <text x="0mm" y="0mm" font="title">FONT SAMPLE</text>
+  <text x="20mm" y="20mm">0: Default (IPA Gothic)</text>
+  <text x="20mm" y="+10mm" font="courier">1: Courier</text>
+  <text x="20mm" y="+10mm" font="courier-b">2: Courier Bold</text>
+  <text x="20mm" y="+10mm" font="courier-o">3: Courier Oblique</text>
+  <text x="20mm" y="+10mm" font="courier-bo">4: Courier BoldOblique</text>
+  <text x="20mm" y="+10mm" font="helvetica">5: Helvetica</text>
+  <text x="20mm" y="+10mm" font="helvetica-b">6: Helvetica Bold</text>
+  <text x="20mm" y="+10mm" font="helvetica-o">7: Helvetica Oblique</text>
+  <text x="20mm" y="+10mm" font="helvetica-bo">8: Helvetica BoldOblique</text>
+  <text x="20mm" y="+10mm" font="times">9: Times Roman</text>
+  <text x="20mm" y="+10mm" font="times-b">10: Times Bold</text>
+  <text x="20mm" y="+10mm" font="times-o">11: Times Italic</text>
+  <text x="20mm" y="+10mm" font="times-bo">12: Times BoldItalic</text>
+
+</document>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  <font name="default" size="12" />
+  <font name="title" size="24" />
+
+  <text x="50%" y="0mm" align="center" font="title">値の加工</text>
+
+  <text x="10mm" y="20mm">加工無し:</text>
+  <text x="+50mm">{数値1}</text>
+  <text x="+25mm">{数値2}</text>
+  <text x="+25mm">{数値3}</text>
+  <text x="+25mm">{文字列1}</text>
+  <text x="+25mm">{文字列2}</text>
+
+  <text x="10mm" y="+10mm">decimal:</text>
+  <text x="+50mm">{数値1:decimal}</text>
+  <text x="+25mm">{数値2:decimal}</text>
+  <text x="+25mm">{数値3:decimal}</text>
+  <text x="+25mm">{文字列1:decimal}</text>
+  <text x="+25mm">{文字列2:decimal}</text>
+
+  <text x="10mm" y="+10mm">number(2):</text>
+  <text x="+50mm">{数値1:number(2)}</text>
+  <text x="+25mm">{数値2:number(2)}</text>
+  <text x="+25mm">{数値3:number(2)}</text>
+  <text x="+25mm">{文字列1:number(2)}</text>
+  <text x="+25mm">{文字列2:number(2)}</text>
+
+  <text x="10mm" y="+10mm">plusonly:number(2):</text>
+  <text x="+50mm">{数値1:plusonly:number(2)}</text>
+  <text x="+25mm">{数値2:plusonly:number(2)}</text>
+  <text x="+25mm">{数値3:plusonly:number(2)}</text>
+  <text x="+25mm">{文字列1:plusonly:number(2)}</text>
+  <text x="+25mm">{文字列2:plusonly:number(2)}</text>
+
+  <text x="10mm" y="+10mm">fixlength(6):</text>
+  <text x="+50mm">{数値1:fixlength(6)}</text>
+  <text x="+25mm">{数値2:fixlength(6)}</text>
+  <text x="+25mm">{数値3:fixlength(6)}</text>
+  <text x="+25mm">{文字列1:fixlength(6)}</text>
+  <text x="+25mm">{文字列2:fixlength(6)}</text>
+
+  <text x="10mm" y="+10mm">fixlength(6,X):</text>
+  <text x="+50mm">{数値1:fixlength(6,X)}</text>
+  <text x="+25mm">{数値2:fixlength(6,X)}</text>
+  <text x="+25mm">{数値3:fixlength(6,X)}</text>
+  <text x="+25mm">{文字列1:fixlength(6,X)}</text>
+  <text x="+25mm">{文字列2:fixlength(6,X)}</text>
+
+  <text x="10mm" y="+10mm">prefix($):</text>
+  <text x="+50mm">{数値1:prefix($)}</text>
+  <text x="+25mm">{数値2:prefix($)}</text>
+  <text x="+25mm">{数値3:prefix($)}</text>
+  <text x="+25mm">{文字列1:prefix($)}</text>
+  <text x="+25mm">{文字列2:prefix($)}</text>
+
+  <text x="10mm" y="+10mm">postfix(円):</text>
+  <text x="+50mm">{数値1:postfix(円)}</text>
+  <text x="+25mm">{数値2:postfix(円)}</text>
+  <text x="+25mm">{数値3:postfix(円)}</text>
+  <text x="+25mm">{文字列1:postfix(円)}</text>
+  <text x="+25mm">{文字列2:postfix(円)}</text>
+</document>

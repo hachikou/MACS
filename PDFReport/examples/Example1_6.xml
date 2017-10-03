@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  <font name="default" size="14" />
+  <font name="title" size="24" />
+
+  <text x="50%" y="0mm" align="center" font="title">枠線のサンプル</text>
+
+  <text x="20mm" y="20mm" width="50mm">枠線指定無し</text>
+  <text y="+10mm" width="50mm" border="0.2mm">枠線あり</text>
+  <text y="+10mm" width="50mm" border-top="0.2mm">上線あり</text>
+  <text y="+10mm" width="50mm" border-bottom="0.2mm">下線あり</text>
+  <text y="+10mm" width="50mm" border-left="0.2mm" border-right="0.2mm">左右線あり</text>
+  <text y="+10mm" width="50mm" border="0.2mm" border-bottom="0.5mm">下線だけ太い</text>
+
+  <box y="+10mm" width="50mm" height="10mm" border="0.2mm" />
+  <box y="+15mm" width="50mm" height="10mm" border="0.2mm" crossline="0.2mm"/>
+  <box y="+15mm" width="50mm" height="10mm" border="0.2mm" slashline="0.2mm"/>
+  <box y="+15mm" width="50mm" height="10mm" border="0.2mm" backslashline="0.2mm"/>
+
+  <box x="50%" y="150mm" width="20mm" height="20mm" border="0.1mm"/>
+  <box x="50%" y="150mm" width="20mm" height="20mm" align="right" border="0.3mm"/>
+  <box x="50%" y="150mm" width="20mm" height="20mm" vertical-align="bottom" border="0.6mm"/>
+</document>

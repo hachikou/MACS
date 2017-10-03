@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  <text x="50%" y="10mm" align="left">左あわせ</text>
+  <text y="+10mm" align="center">中央あわせ</text>
+  <text y="+10mm" align="right">右あわせ</text>
+
+  <text y="+10mm">長い文字列を表示してみよう</text>
+  <text y="+10mm" width="20mm">長い文字列を表示してみよう</text>
+  <text y="+10mm" align="center" width="20mm">長い文字列を表示してみよう</text>
+  <text y="+10mm" align="right" width="20mm">長い文字列を表示してみよう</text>
+  <text y="+10mm" width="20mm" clip="yes">長い文字列を表示してみよう</text>
+  <text y="+10mm" width="20mm" align="center" clip="yes">長い文字列を表示してみよう</text>
+  <text y="+10mm" width="20mm" align="right" clip="yes">長い文字列を表示してみよう</text>
+</document>

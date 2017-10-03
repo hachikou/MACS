@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  <font name="default" size="14" />
+  <font name="title" size="30" />
+  <font name="heightadjust" size="14" lineheight="18" />
+  <font name="upper" size="14" lineheight="18" descent="-4" />
+  <font name="lower" size="14" lineheight="18" descent="4" />
+
+  <text x="50%" y="10mm" align="center" font="title">Font指定</text>
+
+  <text x="10mm" y="+20mm">デフォルトフォント</text>
+  <text y="+1line">デフォルトフォントで+1lineする。</text>
+  <text y="+1line" font="heightadjust">行高さ指定フォントで+1lineする。</text>
+  <text y="+1line" font="heightadjust">標準のベースライン</text>
+  <text x="+50mm" font="upper">ベースラインを上に</text>
+  <text x="+50mm" font="lower">ベースラインを下に</text>
+</document>

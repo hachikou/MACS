@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  <font name="default" size="12" />
+  <font name="title" size="24" />
+
+  <text x="50%" y="0mm" align="center" font="title">年間業績表</text>
+  <text x="100%" y="0mm" align="right">{currentdate}</text>
+
+  <box x="50%" y ="15mm" width="100mm" height="20mm" align="center" border="0.3mm">
+    <text x="2mm" y="2mm">会社名: {会社名}</text>
+    <text y="+1.5line">TEL:{電話} FAX:{FAX}</text>
+  </box>
+
+  <table x="50%" y="40mm" align="center" width="100mm" rows="12" border="0.3mm">
+    <body height="1.5line" border-bottom="0.1mm">
+      <text x="1mm" y="1mm" width="15mm">{list.年:postfix(/)}{list.月:fixlength(2)}</text>
+      <text x="+30mm" width="30mm">{list.予算:decimal:postfix(円)}</text>
+      <text x="+40mm" width="30mm">{list.実績:decimal:postfix(円)}</text>
+    </body>
+  </table>
+
+</document>

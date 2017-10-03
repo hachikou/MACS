@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document paper="A4" orientation="landscape">
+  <basefont file="ipag.ttc,0"/>
+  <font name="default" size="11"/>
+  <font name="title" size="24" />
+  <font name="small" size="9" />
+  <font name="large" size="16" />
+
+  <text x="0" y="0" font="title">バーコードサンプル</text>
+  <text x="10mm" y="10mm">{code}</text>
+  <barcode x="+20mm" height="10mm" type="CODABAR">{code}</barcode>
+  <barcode x="+60mm" height="10mm" type="CODABAR" startstoptext="yes">{code}</barcode>
+  <barcode x="+60mm" height="10mm" type="CODABAR" notext="yes">{code}</barcode>
+  <barcode x="+60mm" height="10mm" type="CODABAR" toptext="yes">{code}</barcode>
+
+  <text x="10mm" y="30mm">{code2}</text>
+  <barcode x="+20mm" height="10mm" type="CODABAR">{code2}</barcode>
+  <barcode x="+60mm" height="10mm" type="CODABAR" startstoptext="yes">{code2}</barcode>
+  <barcode x="+60mm" height="10mm" type="CODABAR" notext="yes">{code2}</barcode>
+
+  <text x="10mm" y="50mm">{code}</text>
+  <barcode x="+20mm" height="10mm" type="CODABAR">{code}</barcode>
+  <barcode x="+60mm" width="20mm" height="10mm" type="CODABAR">{code}</barcode>
+  <barcode x="+60mm" width="30mm" height="10mm" type="CODABAR">{code}</barcode>
+</document>
