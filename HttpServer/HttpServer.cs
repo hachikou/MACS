@@ -783,6 +783,7 @@ public class HttpServer : Loggable {
         PurgeSession();
 
         context.Response.KeepAlive = false;
+        context.Response.AddHeader("Server", "MACS HttpServer");
         string path = context.Request.Url.AbsolutePath;
         int status = 0;
         try {
