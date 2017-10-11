@@ -49,6 +49,11 @@ public class TextBox : WebControl {
     public int Size = 0;
 
     /// <summary>
+    ///   Placeholder文字列
+    /// </summary>
+    public string Placeholder = null;
+    
+    /// <summary>
     ///   変更時に呼び出されるJavaScript
     /// </summary>
     public string OnChange;
@@ -126,6 +131,11 @@ public class TextBox : WebControl {
         if(Value != null){
             sb.Append(" value=\"");
             sb.Append(HE(Value.ToString()));
+            sb.Append("\"");
+        }
+        if(Placeholder != null){
+            sb.Append(" placeholder=\"");
+            sb.Append(HE(Placeholder));
             sb.Append("\"");
         }
         if(!String.IsNullOrEmpty(OnChange)) {
