@@ -62,6 +62,7 @@ public class DBTable {
             throw new ArgumentNullException("Table alias name must not be null.");
         dbcon = dbcon_;
         def = getTableDef(name_);
+        tbl = null;
         name = alias_;
         columns = null;
         sqlcolumns = null;
@@ -81,6 +82,7 @@ public class DBTable {
     public DBTable(DBCon dbcon_, DBTableDef def_) {
         dbcon = dbcon_;
         def = def_;
+        tbl = null;
         name = def.Name;
         columns = null;
         sqlcolumns = null;
@@ -101,6 +103,28 @@ public class DBTable {
     public DBTable(DBCon dbcon_, DBTableDef def_, string name_) {
         dbcon = dbcon_;
         def = def_;
+        tbl = null;
+        name = name_;
+        columns = null;
+        sqlcolumns = null;
+        sortcolumns = null;
+        condition = null;
+        having = null;
+        forupdate = false;
+        calcrows = false;
+        distinct = false;
+    }
+
+    /// <summary>
+    ///   テーブル定義を指定したコンストラクタ（テーブル別名付き）
+    /// </summary>
+    /// <param name="dbcon_">接続DB</param>
+    /// <param name="tbl_">DBテーブルアクセスユーティリティクラス</param>
+    /// <param name="name_">テーブル別名</param>
+    public DBTable(DBCon dbcon_, DBTable tbl_, string name_) {
+        dbcon = dbcon_;
+        def = null;
+        tbl = tbl_;
         name = name_;
         columns = null;
         sqlcolumns = null;
@@ -130,9 +154,16 @@ public class DBTable {
     public string[] Columns {
         get {
             if(columns == null) {
-                string[] res = new string[def.Columns.Length];
-                for(int i = 0; i < def.Columns.Length; i++)
-                    res[i] = def.Columns[i].Name;
+                string[] res = new string[0];
+                if(def != null) {
+                    res = new string[def.Columns.Length];
+                    for(int i = 0; i < def.Columns.Length; i++)
+                        res[i] = def.Columns[i].Name;
+                }else if(tbl != null) {
+                    res = new string[tbl.Columns.Length];
+                    for(int i = 0; i < tbl.Columns.Length; i++)
+                        res[i] = tbl.Columns[i];
+                }
                 return res;
             }
             return columns;
@@ -163,7 +194,10 @@ public class DBTable {
     ///   </para>
     /// </remarks>
     public DBTable SetAllColumns() {
-        columns = def.ColumnNames;
+        if(def != null)
+            columns = def.ColumnNames;
+        else if(tbl != null)
+            columns = tbl.Columns;
         sqlcolumns = null;
         return this;
     }
@@ -177,10 +211,17 @@ public class DBTable {
     ///   </para>
     /// </remarks>
     public DBTable SetAllColumnsWithRowId() {
-        columns = new string[def.Columns.Length+1];
-        columns[0] = "rowid";
-        for(int i = 0; i < def.Columns.Length; i++)
-            columns[i+1] = def.Columns[i].Name;
+        if(def != null) {
+            columns = new string[def.Columns.Length+1];
+            columns[0] = "rowid";
+            for(int i = 0; i < def.Columns.Length; i++)
+                columns[i+1] = def.Columns[i].Name;
+        }else if(tbl != null) {
+            columns = new string[tbl.Columns.Length+1];
+            columns[0] = "rowid";
+            for(int i = 0; i < tbl.Columns.Length; i++)
+                columns[i+1] = tbl.Columns[i];
+        }
         sqlcolumns = null;
         return this;
     }
@@ -275,7 +316,13 @@ public class DBTable {
             throw new ArgumentException("This DBTable does not have joined tables");
         foreach(JoinTable jt in joinList) {
             if(jt.name == joinname) {
-                string[] jcolumns = jt.def.ColumnNames;
+                string[] jcolumns;
+                if(jt.def != null)
+                    jcolumns = jt.def.ColumnNames;
+                else if(jt.tbl != null)
+                    jcolumns = jt.tbl.Columns;
+                else
+                    throw new ArgumentException("This joined table does not have valid column definition");
                 string[] newcolumns = new string[jcolumns.Length];
                 for(int i = 0; i < jcolumns.Length; i++)
                     newcolumns[i] = joinname+"."+jcolumns[i];
@@ -314,7 +361,13 @@ public class DBTable {
             throw new ArgumentException("This DBTable does not have joined tables");
         foreach(JoinTable jt in joinList) {
             if(jt.name == joinname) {
-                string[] jcolumns = jt.def.ColumnNames;
+                string[] jcolumns;
+                if(jt.def != null)
+                    jcolumns = jt.def.ColumnNames;
+                else if(jt.tbl != null)
+                    jcolumns = jt.tbl.Columns;
+                else
+                    throw new ArgumentException("This joined table does not have valid column definition");
                 string[] newcolumns = new string[jcolumns.Length];
                 for(int i = 0; i < jcolumns.Length; i++) {
                     bool duplicated = false;
@@ -389,25 +442,44 @@ public class DBTable {
         if(idx >= 0) {
             string tblname = colname.Substring(0,idx);
             colname = colname.Substring(idx+1);
-            if(tblname == name)
-                return def.GetColumnDef(colname);
+            if(tblname == name) {
+                if(def != null)
+                    return def.GetColumnDef(colname);
+                else if(tbl != null)
+                    return tbl.GetColumnDef(colname);
+            }
             if(joinList == null)
                 return null;
             foreach(JoinTable jt in joinList) {
-                if(tblname == jt.name)
-                    return jt.def.GetColumnDef(colname);
+                if(tblname == jt.name) {
+                    if(jt.def != null)
+                        return jt.def.GetColumnDef(colname);
+                    else if(jt.tbl != null)
+                        return jt.tbl.GetColumnDef(colname);
+                }
             }
             return null;
         }
         if(joinList != null) {
-            if((colname == "rowid") || def.HasColumn(colname))
-                return def.GetColumnDef(colname);
+            if((colname == "rowid") || ((def != null) && def.HasColumn(colname)) || ((tbl != null) && tbl.ContainsColumn(colname))) {
+                if(def != null)
+                    return def.GetColumnDef(colname);
+                else if(tbl != null)
+                    return tbl.GetColumnDef(colname);
+            }
             foreach(JoinTable jt in joinList) {
-                if(jt.def.HasColumn(colname))
+                if((jt.def != null) && jt.def.HasColumn(colname))
                     return jt.def.GetColumnDef(colname);
+                else if((jt.tbl != null) && jt.tbl.ContainsColumn(colname))
+                    return jt.tbl.GetColumnDef(colname);
             }
         }
-        return def.GetColumnDef(colname);
+        if(def != null)
+            return def.GetColumnDef(colname);
+        else if(tbl != null)
+            return tbl.GetColumnDef(colname);
+        else
+            throw new ArgumentException("DBTable or DBTableDef must not be null.");           
     }
 
 #endregion
@@ -698,6 +770,106 @@ public class DBTable {
         AddCondition(DBCondition.Code.Equals, columnname2, columnvalue2);
         AddCondition(DBCondition.Code.Equals, columnname3, columnvalue3);
         return this;
+    }
+
+    /// <summary>
+    ///   検索条件を取得する。
+    /// </summary>
+    public string GetCondition(string cond) {
+        StringBuilder condition = new StringBuilder();
+        addCondition(ref condition, cond);
+
+        return condition.ToString();
+    }
+
+    /// <summary>
+    ///   検索条件を取得する。
+    /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     第1引数は比較条件を示す。
+    ///     DBCondition.Code.Equals, DBCondition.Code.NotEquals,
+    ///     DBCondition.Code.Contains, DBCondition.Code.NotContains,
+    ///     DBCondition.Code.StartsWith, DBCondition.Code.EndsWith,
+    ///     DBCondition.Code.GreaterOrEqual, DBCondition.Code.GreaterThan,
+    ///     DBCondition.Code.LessOrEqual, DBCondition.Code.LessThan,
+    ///     DBCondition.Code.In, DBCondition.Code.NotIn,
+    ///     DBCondition.Code.CollateEquals, DBCondition.Code.NotCollateEquals,
+    ///     DBCondition.Code.CollateContains, DBCondition.Code.NotCollateContains,
+    ///     DBCondition.Code.CollateStartsWith, DBCondition.Code.CollateEndsWith,
+    ///     のいずれか。
+    ///     DBCondition.Code.InまたはDBCondition.Code.NotInの場合は、第3引数の
+    ///     カラム値はDBTable(サブクエリを生成)、DataArray、配列のいずれかで
+    ///     なければならない。
+    ///   </para>
+    /// </remarks>
+    /// <param name="conditioncode">比較条件</param>
+    /// <param name="columnname">カラム名</param>
+    /// <param name="columnvalue">カラム値</param>
+    public string GetCondition(DBCondition.Code conditioncode, string columnname, object columnvalue) {
+        StringBuilder condition = new StringBuilder();
+        addCondition(ref condition, conditioncode, columnname, columnvalue);
+        
+        return condition.ToString();
+    }
+
+    /// <summary>
+    ///   検索条件を取得する。Between, NotBetween用。
+    /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     第1引数は比較条件を示す。
+    ///     DBCondition.Code.Between, DBCondition.Code.NotBetween のみ有効。
+    ///   </para>
+    /// </remarks>
+    /// <param name="conditioncode">比較条件</param>
+    /// <param name="columnname">カラム名</param>
+    /// <param name="columnvalue1">カラム値1</param>
+    /// <param name="columnvalue2">カラム値2</param>
+    public string GetCondition(DBCondition.Code conditioncode, string columnname, object columnvalue1, object columnvalue2) {
+        StringBuilder condition = new StringBuilder();
+        addCondition(ref condition, conditioncode, columnname, columnvalue1, columnvalue2);
+        
+        return condition.ToString();
+    }
+
+    /// <summary>
+    ///   検索条件を取得する。Exists, NotExists用
+    /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     第1引数は比較条件を示す。
+    ///     DBCondition.Code.Exists, DBCondition.Code.NotExists のいずれか。
+    ///     第2引数はサブクエリとなるSELECT文の文字列か、サブクエリの条件を指定
+    ///     したDBTable。
+    ///   </para>
+    /// </remarks>
+    /// <param name="conditioncode">比較条件</param>
+    /// <param name="subquery">条件サブクエリ</param>
+    public string GetCondition(DBCondition.Code conditioncode, object subquery) {
+        StringBuilder condition = new StringBuilder();
+        addCondition(ref condition, conditioncode, subquery);
+        
+        return condition.ToString();
+    }
+
+    /// <summary>
+    ///   等値検索条件を取得する。
+    /// </summary>
+    /// <param name="columnnames">カラム名一覧</param>
+    /// <param name="columnvalues">カラム値一覧</param>
+    /// <remarks>
+    ///   <para>
+    ///     columnnamesで指定したカラムの値が、それぞれvaluesで指定した値である
+    ///     ことを検索条件に追加する。
+    ///     columnnamesとcolumnvaluesの長さは同じでなければならない。
+    ///   </para>
+    /// </remarks>
+    public string GetCondition(string[] columnnames, object[] columnvalues) {
+        StringBuilder condition = new StringBuilder();
+        addCondition(ref condition, columnnames, columnvalues);
+        
+        return condition.ToString();
     }
 
     /// <summary>
@@ -1482,6 +1654,129 @@ public class DBTable {
         joinList.Add(new JoinTable(othername, othertable, "INNER", cond));
     }
 
+    /// <summary>
+    ///   サブクエリのJoin指定。テーブル別名をつける版。
+    /// </summary>
+    /// <param name="othername">サブクエリのテーブル別名</param>
+    /// <param name="othertable">サブクエリのDBTable</param>
+    /// <param name="othercolumnname">サブクエリの項目名</param>
+    /// <param name="columnname">上記項目とjoinする自テーブルの項目名</param>
+    /// <remarks>
+    ///   <para>
+    ///     LEFT OUTER JOINされます。
+    ///   </para>
+    /// </remarks>
+    public void JoinAs(string othername, DBTable othertable, string othercolumnname, string columnname) {
+        JoinAs(othername, othertable, String.Format("{0}.{1}={2}", othername, othercolumnname, expandColumnName(columnname,true)));
+    }
+
+    /// <summary>
+    ///   サブクエリのJoin指定。テーブル別名をつける版。
+    /// </summary>
+    /// <param name="othername">サブクエリのテーブル別名</param>
+    /// <param name="othertable">サブクエリのDBTable</param>
+    /// <param name="othercolumnname1">サブクエリの項目名1</param>
+    /// <param name="columnname1">上記項目1とjoinする自テーブルの項目名1</param>
+    /// <param name="othercolumnname2">サブクエリの項目名2</param>
+    /// <param name="columnname2">上記項目2とjoinする自テーブルの項目名2</param>
+    /// <remarks>
+    ///   <para>
+    ///     LEFT OUTER JOINされます。
+    ///   </para>
+    /// </remarks>
+    public void JoinAs(string othername, DBTable othertable, string othercolumnname1, string columnname1, string othercolumnname2, string columnname2) {
+        JoinAs(othername, othertable, String.Format("{0}.{1}={2} AND {0}.{3}={4}", othername, othercolumnname1, expandColumnName(columnname1,true), othercolumnname2, expandColumnName(columnname2,true)));
+    }
+
+    /// <summary>
+    ///   サブクエリのJoin指定。テーブル別名をつける版。
+    /// </summary>
+    /// <param name="othername">サブクエリのテーブル別名</param>
+    /// <param name="othertable">サブクエリのDBTable</param>
+    /// <param name="othercolumnname1">サブクエリの項目名1</param>
+    /// <param name="columnname1">上記項目1とjoinする自テーブルの項目名1</param>
+    /// <param name="othercolumnname2">サブクエリの項目名2</param>
+    /// <param name="columnname2">上記項目2とjoinする自テーブルの項目名2</param>
+    /// <param name="othercolumnname3">サブクエリの項目名3</param>
+    /// <param name="columnname3">上記項目3とjoinする自テーブルの項目名3</param>
+    /// <remarks>
+    ///   <para>
+    ///     LEFT OUTER JOINされます。
+    ///   </para>
+    /// </remarks>
+    public void JoinAs(string othername, DBTable othertable, string othercolumnname1, string columnname1, string othercolumnname2, string columnname2, string othercolumnname3, string columnname3) {
+        JoinAs(othername, othertable, String.Format("{0}.{1}={2} AND {0}.{3}={4} AND {0}.{5}={6}", othername, othercolumnname1, expandColumnName(columnname1,true), othercolumnname2, expandColumnName(columnname2,true), othercolumnname3, expandColumnName(columnname3,true)));
+    }
+
+    /// <summary>
+    ///   サブクエリのJoin指定。Join条件指定版。テーブル別名をつける版。
+    /// </summary>
+    /// <param name="othername">サブクエリのテーブル別名</param>
+    /// <param name="othertable">サブクエリのDBTable</param>
+    /// <param name="cond">Join条件指定文字列</param>
+    /// <remarks>
+    ///   <para>
+    ///     LEFT OUTER JOINされます。
+    ///   </para>
+    /// </remarks>
+    public void JoinAs(string othername, DBTable othertable, string cond) {
+        if(joinList == null)
+            joinList = new List<JoinTable>();
+        joinList.Add(new JoinTable(othername, othertable, "LEFT", cond));
+    }
+
+    /// <summary>
+    ///   サブクエリのInner Join指定。テーブル別名をつける版。
+    /// </summary>
+    /// <param name="othername">サブクエリのテーブル別名</param>
+    /// <param name="othertable">サブクエリのDBTable</param>
+    /// <param name="othercolumnname">サブクエリの項目名</param>
+    /// <param name="columnname">上記項目とjoinする自テーブルの項目名</param>
+    public void InnerJoinAs(string othername, DBTable othertable, string othercolumnname, string columnname) {
+        InnerJoinAs(othername, othertable, String.Format("{0}.{1}={2}", othername, othercolumnname, expandColumnName(columnname,true)));
+    }
+
+    /// <summary>
+    ///   サブクエリのInner Join指定。テーブル別名をつける版。
+    /// </summary>
+    /// <param name="othername">サブクエリのテーブル別名</param>
+    /// <param name="othertable">サブクエリのDBTable</param>
+    /// <param name="othercolumnname1">サブクエリの項目名1</param>
+    /// <param name="columnname1">上記項目1とjoinする自テーブルの項目名1</param>
+    /// <param name="othercolumnname2">サブクエリの項目名2</param>
+    /// <param name="columnname2">上記項目2とjoinする自テーブルの項目名2</param>
+    public void InnerJoinAs(string othername, DBTable othertable, string othercolumnname1, string columnname1, string othercolumnname2, string columnname2) {
+        InnerJoinAs(othername, othertable, String.Format("{0}.{1}={2} AND {0}.{3}={4}", othername, othercolumnname1, expandColumnName(columnname1,true), othercolumnname2, expandColumnName(columnname2,true)));
+    }
+
+    /// <summary>
+    ///   サブクエリのInner Join指定。テーブル別名をつける版。
+    /// </summary>
+    /// <param name="othername">サブクエリのテーブル別名</param>
+    /// <param name="othertable">サブクエリのDBTable</param>
+    /// <param name="othercolumnname1">サブクエリの項目名1</param>
+    /// <param name="columnname1">上記項目1とjoinする自テーブルの項目名1</param>
+    /// <param name="othercolumnname2">サブクエリの項目名2</param>
+    /// <param name="columnname2">上記項目2とjoinする自テーブルの項目名2</param>
+    /// <param name="othercolumnname3">サブクエリの項目名3</param>
+    /// <param name="columnname3">上記項目3とjoinする自テーブルの項目名3</param>
+    public void InnerJoinAs(string othername, DBTable othertable, string othercolumnname1, string columnname1, string othercolumnname2, string columnname2, string othercolumnname3, string columnname3) {
+        InnerJoinAs(othername, othertable, String.Format("{0}.{1}={2} AND {0}.{3}={4} AND {0}.{5}={6}", othername, othercolumnname1, expandColumnName(columnname1,true), othercolumnname2, expandColumnName(columnname2,true), othercolumnname3, expandColumnName(columnname3,true)));
+    }
+
+    /// <summary>
+    ///   サブクエリのInner Join指定。Join条件指定版。テーブル別名をつける版。
+    /// </summary>
+    /// <param name="othername">サブクエリのテーブル別名</param>
+    /// <param name="othertable">サブクエリのDBTable</param>
+    /// <param name="cond">Join条件指定文字列</param>
+    public void InnerJoinAs(string othername, DBTable othertable, string cond) {
+        if(joinList == null)
+            joinList = new List<JoinTable>();
+        joinList.Add(new JoinTable(othername, othertable, "INNER", cond));
+    }
+
+
 #endregion
 
 #region 検索オプション
@@ -1819,25 +2114,20 @@ public class DBTable {
         if(dbcon.IsPostgreSQL && calcrows)
             sql.Append(",COUNT(*) OVER()");
         sql.Append(" FROM ");
-        sql.Append(def.Name);
-        if(def.Name != name) {
+        if(def != null) {
+            sql.Append(def.Name);
+            if(def.Name != name) {
+                sql.Append(" AS ");
+                sql.Append(name);
+            }
+        }else if(tbl != null) {
+            sql.Append("(");
+            sql.Append(tbl.GetQuerySql(0,0));
+            sql.Append(")");
             sql.Append(" AS ");
             sql.Append(name);
         }
-        if(joinList != null) {
-            foreach(JoinTable jt in joinList) {
-                sql.Append(' ');
-                sql.Append(jt.mode);
-                sql.Append(" JOIN ");
-                sql.Append(jt.def.Name);
-                if(jt.def.Name != jt.name) {
-                    sql.Append(" AS ");
-                    sql.Append(jt.name);
-                }
-                sql.Append(" ON ");
-                sql.Append(jt.condition);
-            }
-        }
+        expandJoin(sql);
         if(!IsNullCondition) {
             sql.Append(" WHERE ");
             sql.Append(condition.ToString());
@@ -1887,27 +2177,22 @@ public class DBTable {
     public int GetCount() {
         StringBuilder sql = new StringBuilder();
         sql.Append("SELECT COUNT(1) FROM ");
-        sql.Append(def.Name);
-        if(def.Name != name) {
+        if(def != null) {
+            sql.Append(def.Name);
+            if(def.Name != name) {
+                sql.Append(" AS ");
+                sql.Append(name);
+            }
+        }else if(tbl != null) {
+            sql.Append("(");
+            sql.Append(tbl.GetQuerySql(0,0));
+            sql.Append(")");
             sql.Append(" AS ");
             sql.Append(name);
         }
         if(groupby != null)
             throw new ArgumentException("Can't count up records with group-by clause.");
-        if(joinList != null) {
-            foreach(JoinTable jt in joinList) {
-                sql.Append(' ');
-                sql.Append(jt.mode);
-                sql.Append(" JOIN ");
-                sql.Append(jt.def.Name);
-                if(jt.def.Name != jt.name) {
-                    sql.Append(" AS ");
-                    sql.Append(jt.name);
-                }
-                sql.Append(" ON ");
-                sql.Append(jt.condition);
-            }
-        }
+        expandJoin(sql);
         if(!IsNullCondition) {
             sql.Append(" WHERE ");
             sql.Append(condition.ToString());
@@ -2134,6 +2419,8 @@ public class DBTable {
             throw new ArgumentException("Can't update records with group-by clause.");
         if(IsNullCondition)
             throw new ArgumentException("Can't update records without condition.");
+        if(def == null)
+            throw new ArgumentException("Can't update on sub-query.");
         StringBuilder sql = new StringBuilder();
         sql.Append("UPDATE ");
         sql.Append(def.Name);
@@ -2141,20 +2428,7 @@ public class DBTable {
             sql.Append(" AS ");
             sql.Append(name);
         }
-        if(joinList != null) {
-            foreach(JoinTable jt in joinList) {
-                sql.Append(' ');
-                sql.Append(jt.mode);
-                sql.Append(" JOIN ");
-                sql.Append(jt.def.Name);
-                if(jt.def.Name != jt.name) {
-                    sql.Append(" AS ");
-                    sql.Append(jt.name);
-                }
-                sql.Append(" ON ");
-                sql.Append(jt.condition);
-            }
-        }
+        expandJoin(sql);
         sql.Append(" SET ");
         bool first = true;
         for(int i = 0; i < mycolumns.Length; i++) {
@@ -2254,6 +2528,8 @@ public class DBTable {
             throw new ArgumentException("Can't update records with group-by clause.");
         if(IsNullCondition)
             throw new ArgumentException("Can't update records without condition.");
+        if(def == null)
+            throw new ArgumentException("Can't update records on sub-query.");
         StringBuilder sql = new StringBuilder();
         sql.Append("UPDATE ");
         sql.Append(def.Name);
@@ -2357,6 +2633,8 @@ public class DBTable {
     public int Delete(int limit) {
         if(IsNullCondition)
             throw new ArgumentException("Can't delete records without condition.");
+        if(def == null)
+            throw new ArgumentException("Can't delete records on sub-query.");
         StringBuilder sql = new StringBuilder();
         sql.Append("DELETE ");
         if(joinList != null) {
@@ -2369,20 +2647,7 @@ public class DBTable {
             sql.Append(" AS ");
             sql.Append(name);
         }
-        if(joinList != null) {
-            foreach(JoinTable jt in joinList) {
-                sql.Append(' ');
-                sql.Append(jt.mode);
-                sql.Append(" JOIN ");
-                sql.Append(jt.def.Name);
-                if(jt.def.Name != jt.name) {
-                    sql.Append(" AS ");
-                    sql.Append(jt.name);
-                }
-                sql.Append(" ON ");
-                sql.Append(jt.condition);
-            }
-        }
+        expandJoin(sql);
         sql.Append(" WHERE ");
         sql.Append(condition.ToString());
         if(limit > 0) {
@@ -2405,6 +2670,8 @@ public class DBTable {
     public void Truncate() {
         if(joinList != null)
             throw new ArgumentException("Can't truncate joined tables.");
+        if(def == null)
+            throw new ArgumentException("Can't truncate on sub-query.");
         dbcon.Execute("TRUNCATE TABLE "+def.Name);
     }
 
@@ -2914,6 +3181,24 @@ public class DBTable {
                     throw new InvalidOperationException(conditioncode.ToString()+" is not supported on "+dbcon.DBType.ToString());
                 }
                 break;
+            case DBCondition.Code.NotCollateStartsWith:
+                switch(dbcon.DBType) {
+                case DBCon.Type.MySQL:
+                    condvar.Append(expandColumnName(columnname));
+                    condvar.Append(" NOT LIKE '");
+                    condvar.Append(DBCon.LikeEscape(columnvalue.ToString()));
+                    condvar.Append("%' COLLATE utf8_unicode_ci");
+                    break;
+                case DBCon.Type.PostgreSQL:
+                    condvar.Append(expandColumnName(columnname));
+                    condvar.Append(" NOT SIMILAR TO '");
+                    addSimilarToExpression(condvar, columnvalue.ToString());
+                    condvar.Append("%'");
+                    break;
+                default:
+                    throw new InvalidOperationException(conditioncode.ToString()+" is not supported on "+dbcon.DBType.ToString());
+                }
+                break;
             case DBCondition.Code.CollateEndsWith:
                 switch(dbcon.DBType) {
                 case DBCon.Type.MySQL:
@@ -2925,6 +3210,24 @@ public class DBTable {
                 case DBCon.Type.PostgreSQL:
                     condvar.Append(expandColumnName(columnname));
                     condvar.Append(" SIMILAR TO '%");
+                    addSimilarToExpression(condvar, columnvalue.ToString());
+                    condvar.Append("'");
+                    break;
+                default:
+                    throw new InvalidOperationException(conditioncode.ToString()+" is not supported on "+dbcon.DBType.ToString());
+                }
+                break;
+            case DBCondition.Code.NotCollateEndsWith:
+                switch(dbcon.DBType) {
+                case DBCon.Type.MySQL:
+                    condvar.Append(expandColumnName(columnname));
+                    condvar.Append(" NOT LIKE '%");
+                    condvar.Append(DBCon.LikeEscape(columnvalue.ToString()));
+                    condvar.Append("' COLLATE utf8_unicode_ci");
+                    break;
+                case DBCon.Type.PostgreSQL:
+                    condvar.Append(expandColumnName(columnname));
+                    condvar.Append(" NOT SIMILAR TO '%");
                     addSimilarToExpression(condvar, columnvalue.ToString());
                     condvar.Append("'");
                     break;
@@ -3053,6 +3356,8 @@ public class DBTable {
             throw new ArgumentException("Can't insert records into joined table.");
         if(groupby != null)
             throw new ArgumentException("Can't insert records with group-by clause.");
+        if(def == null)
+            throw new ArgumentException("Can't insert records on sub-query.");
         StringBuilder sql = new StringBuilder();
         sql.Append(cmd);
         sql.Append(" INTO ");
@@ -3093,6 +3398,8 @@ public class DBTable {
             throw new ArgumentException("Can't insert records into joined table.");
         if(groupby != null)
             throw new ArgumentException("Can't insert records with group-by clause.");
+        if(def == null)
+            throw new ArgumentException("Can't insert records on sub-query.");
         StringBuilder sql = new StringBuilder();
         sql.Append(cmd);
         sql.Append(" INTO ");
@@ -3147,14 +3454,14 @@ public class DBTable {
     private string expandColumnName(string col, bool force=false) {
         StringBuilder sb = new StringBuilder();
         if((col.IndexOf(".",StringComparison.Ordinal) < 0) && (col.IndexOf(" as ",StringComparison.OrdinalIgnoreCase) < 0)) {
-            if((col == "rowid") || def.HasColumn(col)) {
-                if(force || (joinList != null) || (name != def.Name)) {
+            if((col == "rowid") || ((def != null) && def.HasColumn(col)) || ((tbl != null) && tbl.ContainsColumn(col))) {
+                if(force || (joinList != null) || ((def != null) && name != def.Name) || (tbl != null)) {
                     sb.Append(name);
                     sb.Append('.');
                 }
             } else if(joinList != null){
                 foreach(JoinTable jt in joinList) {
-                    if(jt.def.HasColumn(col)) {
+                    if(((jt.def != null) && jt.def.HasColumn(col)) || ((jt.tbl != null) && jt.tbl.ContainsColumn(col))) {
                         sb.Append(jt.name);
                         sb.Append('.');
                         break;
@@ -3166,6 +3473,35 @@ public class DBTable {
         return sb.ToString();
     }
 
+    private void expandJoin(StringBuilder sql) {
+        if(joinList == null)
+            return;
+        foreach(JoinTable jt in joinList) {
+            sql.Append(' ');
+            sql.Append(jt.mode);
+            sql.Append(" JOIN ");
+            if(jt.def != null) {
+                sql.Append(jt.def.Name);
+                if(jt.def.Name != jt.name) {
+                    sql.Append(" AS ");
+                    sql.Append(jt.name);
+                }
+            } else if(jt.tbl != null) {
+                sql.Append('(');
+                jt.tbl.GetQuerySql(sql, 0, 0);
+                sql.Append(')');
+                if(jt.tbl.Name != jt.name) {
+                    sql.Append(" AS ");
+                    sql.Append(jt.name);
+                }
+            } else {
+                throw new ArgumentException("This joined table does not have valid definition");
+            }
+            sql.Append(" ON ");
+            sql.Append(jt.condition);
+        }
+    }
+    
     private static string csvEscape(string str) {
         StringBuilder sb = new StringBuilder();
         foreach(char ch in str) {
@@ -3233,11 +3569,20 @@ public class DBTable {
         public JoinTable(string name_, DBTableDef def_, string mode_, string condition_) {
             name = name_;
             def = def_;
+            tbl = null;
+            mode = mode_;
+            condition = condition_;
+        }
+        public JoinTable(string name_, DBTable tbl_, string mode_, string condition_) {
+            name = name_;
+            def = null;
+            tbl = tbl_;
             mode = mode_;
             condition = condition_;
         }
         public readonly string name;
         public readonly DBTableDef def;
+        public readonly DBTable tbl;
         public readonly string mode;
         public readonly string condition;
     }
@@ -3253,6 +3598,7 @@ public class DBTable {
 
     private readonly DBCon dbcon;
     private readonly DBTableDef def;
+    private readonly DBTable tbl;
     private readonly string name;
     private string[] columns;
     private string[] sqlcolumns;
