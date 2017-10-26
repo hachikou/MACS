@@ -54,6 +54,10 @@ public class DBCon : Loggable, IDisposable {
     /// </remarks>
     public const string DEFAULT_DATABASE = "__DEFAULT_DATABASE__";
 
+    /// <summary>
+    ///   デフォルトのタイムアウト時間
+    /// </summary>
+    public const int DefaultCommandTimeout = 180;
 
     /// <summary>
     ///   Loggerにデバッグログを残すかどうか
@@ -271,7 +275,7 @@ public class DBCon : Loggable, IDisposable {
               inifile.Get(prefix+"name", "dbname"),
               inifile.Get(prefix+"user", "username"),
               inifile.Get(prefix+"pass", "password"));
-        commandtimeout = inifile.Get(prefix+"timeout", 180);
+        commandtimeout = inifile.Get(prefix+"timeout", DefaultCommandTimeout);
         ignoreexception = inifile.Get(prefix+"ignore_exception", false);
     }
 
