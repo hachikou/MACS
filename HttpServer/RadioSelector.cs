@@ -69,6 +69,14 @@ public class RadioSelector<T> : TranslatableWebControl
     public Dictionary<T,string> Text = null;
 
     /// <summary>
+    /// 　ラジオボタン Enum名表示
+    /// 　<remarks>
+    /// 　　true:Enum名表示 false:Enum名非表示
+    /// 　</remarks>
+    /// </summary>
+    public bool ShowEnumName = true;
+
+    /// <summary>
     ///   レンダリング
     /// </summary>
     public override StringBuilder Render(StringBuilder sb) {
@@ -133,8 +141,12 @@ public class RadioSelector<T> : TranslatableWebControl
             sb.Append(id);
             sb.Append("\">");
             string vv;
-            if((Text == null) || !Text.TryGetValue(x, out vv))
-                vv = _(typeof(T).Name+"."+val);
+            if((Text == null) || !Text.TryGetValue(x, out vv)){
+                if(ShowEnumName)
+                    vv = _(typeof(T).Name+"."+val);
+                else
+                    vv = _(val);
+            }
             sb.Append(HE(vv));
             sb.Append("</label></span>");
             if(Vertical)

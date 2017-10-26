@@ -47,7 +47,9 @@ public class DBCondition {
         CollateContains,
         NotCollateContains,
         CollateStartsWith,
+        NotCollateStartsWith,
         CollateEndsWith,
+        NotCollateEndsWith,
     }
 
     public static string CodeName(Code code) {
