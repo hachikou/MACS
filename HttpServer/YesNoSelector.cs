@@ -52,6 +52,16 @@ public class YesNoSelector: TranslatableWebControl {
     public string NoString = "No";
 
     /// <summary>
+    ///   yesとnoの選択肢の表示順を逆にする
+    /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     通常は、yes, noの順番です。
+    ///   </para>
+    /// </remarks>
+    public bool SwapOrder = false;
+    
+    /// <summary>
     ///   レンダリング
     /// </summary>
     public override StringBuilder Render(StringBuilder sb) {
@@ -83,51 +93,15 @@ public class YesNoSelector: TranslatableWebControl {
         }
         sb.Append(">");
 
-        string id = Name+"-true";
-        sb.Append("<span class=\"radio\" style=\"white-space:nowrap\">");
-        sb.Append("<input type=\"radio\" name=\"");
-        sb.Append(Name);
-        sb.Append("\" id=\"");
-        sb.Append(id);
-        sb.Append("\" value=\"yes\"");
-        if(Selected)
-            sb.Append(" checked=\"checked\"");
-        if(!String.IsNullOrEmpty(OnClick)) {
-            sb.Append(" onclick=\"");
-            sb.Append(OnClick);
-            sb.Append("\"");
+        if(SwapOrder) {
+            showRadio(sb, false);
+            sb.Append(" ");
+            showRadio(sb, true);
+        } else {
+            showRadio(sb, true);
+            sb.Append(" ");
+            showRadio(sb, false);
         }
-        if(Disabled)
-            sb.Append(" disabled=\"disabled\"");
-        sb.Append("/><label for=\"");
-        sb.Append(id);
-        sb.Append("\">");
-        sb.Append(HE(_(YesString)));
-        sb.Append("</label></span>");
-
-        sb.Append(" ");
-
-        id = Name+"-false";
-        sb.Append("<span class=\"radio\" style=\"white-space:nowrap\">");
-        sb.Append("<input type=\"radio\" name=\"");
-        sb.Append(Name);
-        sb.Append("\" id=\"");
-        sb.Append(id);
-        sb.Append("\" value=\"no\"");
-        if(!Selected)
-            sb.Append(" checked=\"checked\"");
-        if(!String.IsNullOrEmpty(OnClick)) {
-            sb.Append(" onclick=\"");
-            sb.Append(OnClick);
-            sb.Append("\"");
-        }
-        if(Disabled)
-            sb.Append(" disabled=\"disabled\"");
-        sb.Append("/><label for=\"");
-        sb.Append(id);
-        sb.Append("\">");
-        sb.Append(HE(_(NoString)));
-        sb.Append("</label></span>");
 
         sb.Append("</div>");
         RenderInLineError(sb);
@@ -138,6 +112,32 @@ public class YesNoSelector: TranslatableWebControl {
         if(defaultValue == null)
             defaultValue = "";
         Value = StringUtil.ToBool(page.Fetch(Name,defaultValue.ToString()));
+    }
+
+    private void showRadio(StringBuilder sb, bool yesno) {
+        string id = Name+"-"+(yesno?"true":"false");
+        sb.Append("<span class=\"radio\" style=\"white-space:nowrap\">");
+        sb.Append("<input type=\"radio\" name=\"");
+        sb.Append(Name);
+        sb.Append("\" id=\"");
+        sb.Append(id);
+        sb.Append("\" value=\"");
+        sb.Append(yesno?"yes":"no");
+        sb.Append("\"");
+        if(Selected == yesno)
+            sb.Append(" checked=\"checked\"");
+        if(!String.IsNullOrEmpty(OnClick)) {
+            sb.Append(" onclick=\"");
+            sb.Append(OnClick);
+            sb.Append("\"");
+        }
+        if(Disabled)
+            sb.Append(" disabled=\"disabled\"");
+        sb.Append("/><label for=\"");
+        sb.Append(id);
+        sb.Append("\">");
+        sb.Append(HE(_(yesno?YesString:NoString)));
+        sb.Append("</label></span>");
     }
 }
 
