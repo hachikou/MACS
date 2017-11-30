@@ -14,6 +14,7 @@ using System.Text;
 using System.IO;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 #if USE_MYSQL
 using MySql.Data.MySqlClient;
 #endif
@@ -996,6 +997,36 @@ public class DBCon : Loggable, IDisposable {
         }
     }
 
+    /// <summary>
+    ///   データベースサーバのバージョン名
+    /// </summary>
+    public string Version {
+        get {
+            if(versionString != null)
+                return versionString;
+            getVersion();
+            return versionString;
+        }
+    }
+
+    /// <summary>
+    ///   データベースバージョン番号
+    /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     メジャー番号*10000+マイナー番号*100+サブマイナー番号
+    ///   </para>
+    /// </remarks>
+    public int VersionNumber {
+        get {
+            if(versionNumber >= 0)
+                return versionNumber;
+            getVersion();
+            return versionNumber;
+        }
+    }
+
+    
     private Type dbtype;
     private string dbname;
     private DbConnection con;
@@ -1009,7 +1040,10 @@ public class DBCon : Loggable, IDisposable {
     private static object connectionIdMutex = new object();
     private int cid;
     private DBConPool pool = null;
+    private string versionString = null;
+    private int versionNumber = -1;
 
+    
     private void abort() {
         try {
             if(con != null) {
@@ -1041,6 +1075,29 @@ public class DBCon : Loggable, IDisposable {
             Console.WriteLine("{0}: {1}", dbname, msg);
     }
 
+    private Regex pat_version = new Regex(@"(\d+)\.(\d+)\.(\d+)");
+    
+    private void getVersion() {
+        Match mo;
+        switch(dbtype) {
+        case Type.MySQL:
+        case Type.PostgreSQL:
+            mo = pat_version.Match(QueryString("SELECT VERSION()"));
+            if(mo.Success) {
+                versionString = mo.Groups[0].Value;
+                versionNumber = StringUtil.ToInt(mo.Groups[1].Value)*10000+StringUtil.ToInt(mo.Groups[2].Value)*100+StringUtil.ToInt(mo.Groups[3].Value);
+            } else {
+                versionString = "";
+                versionNumber = 0;
+            }
+            break;
+        default:
+            versionString = "";
+            versionNumber = 0;
+            break;
+        }
+    }
+    
     protected override string GetCategoryName() {
         return dbname;
     }
