@@ -197,9 +197,16 @@ public class Hwaddr:IComparable {
     ///   文字列表現を返す
     /// </summary>
     override public string ToString() {
+        return ToString(":","INVALID");
+    }
+
+    /// <summary>
+    ///   文字列表現を返す（セパレータ、デフォルト文字列指定版）
+    /// </summary>
+    public string ToString(string separator, string defaultString="") {
         if(!IsValid())
-            return "INVALID";
-        return BitConverter.ToString(vals).Replace("-", ":");
+            return defaultString;
+        return BitConverter.ToString(vals).Replace("-", separator);
     }
 
     /// <summary>
