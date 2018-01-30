@@ -2935,6 +2935,8 @@ public class DBTable {
     }
 
     private DBTable addCondition(ref StringBuilder condvar, DBCondition.Code conditioncode, string columnname, object columnvalue) {
+        if(conditioncode == DBCondition.Code.Free)
+            return this;
         if(String.IsNullOrEmpty(columnname))
             throw new ArgumentException("Column name is null.");
         if(condvar == null)
@@ -3243,6 +3245,8 @@ public class DBTable {
     }
 
     private DBTable addCondition(ref StringBuilder condvar, DBCondition.Code conditioncode, string columnname, object columnvalue1, object columnvalue2) {
+        if(conditioncode == DBCondition.Code.Free)
+            return this;
         if(String.IsNullOrEmpty(columnname))
             throw new ArgumentException("Column name is null.");
         if(condvar == null)
@@ -3272,6 +3276,8 @@ public class DBTable {
     }
 
     private DBTable addCondition(ref StringBuilder condvar, DBCondition.Code conditioncode, object subquery) {
+        if(conditioncode == DBCondition.Code.Free)
+            return this;
         if(condvar == null)
             condvar = new StringBuilder();
         if(condvar.Length > 0)
