@@ -53,6 +53,8 @@ f.write(u'''/**
 using System;
 using System.Text;
 
+namespace MACS {
+
 public class SocError {
 
 ''')
@@ -60,5 +62,7 @@ f.write(consts)
 f.write(getMessage)
 f.write(u'''
 }
+
+} // End of namespace
 ''')
 f.close()
