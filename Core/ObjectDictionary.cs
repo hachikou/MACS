@@ -10,6 +10,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.IO;
 using System.Reflection;
 
@@ -629,10 +630,239 @@ public class ObjectDictionary : SortedDictionary<string,object> {
         return vars.ToArray();
     }
 
+    /// <summary>
+    ///   オブジェクトメンバを抽出する
+    /// </summary>
+    public object GetObject(string fieldname) {
+        return getObject(fieldname, null);
+    }
 
+    private static Regex pat_float = new Regex(@"^[+-]?\d+\.\d*$");
+    private static Regex pat_int = new Regex(@"^[+-]?\d+$");
+    private static Regex pat_hex = new Regex(@"^[+-]?0x([0-9a-fA-F]+)$");
+    
+    private object getObject(string fieldname, object baseobj) {
+        if(String.IsNullOrEmpty(fieldname))
+            return baseobj;
+        Match m;
+        // 定数のチェック
+        if((m = pat_int.Match(fieldname)).Success) {
+            return StringUtil.ToInt(fieldname);
+        } else if((m = pat_float.Match(fieldname)).Success) {
+            return StringUtil.ToDouble(fieldname);
+        } else if((m = pat_hex.Match(fieldname)).Success) {
+            return StringUtil.ToHexInt(m.Groups[1].Value);
+        } else if(fieldname == "true") {
+            return true;
+        } else if(fieldname == "false") {
+            return false;
+        } else if((fieldname.Length > 1) && (((fieldname[0] == '"')&&(fieldname[fieldname.Length-1] == '"')) || ((fieldname[0] == '\'')&&(fieldname[fieldname.Length-1] == '\'')))) {
+            return fieldname.Substring(1, fieldname.Length-2);
+        }
+        // .で分割し、最初のフィールド指定をチェック
+        string varname, indexname;
+        splitField(fieldname, out varname, out fieldname);
+        splitIndex(varname, out varname, out indexname);
+        object index = getObject(indexname, null);
+        object obj = null;
+        if(baseobj == null) {
+            // baseobjがnullの場合、辞書を探す
+            if(!this.ContainsKey(varname))
+                return null;
+            obj = this[varname];
+        } else if(baseobj is DataArray) {
+            // baseobjがDataArrayの場合、カラム名を探す
+            DataArray da = baseobj as DataArray;
+            int idx = da.ColumnNum(varname);
+            if(idx >= 0)
+                return da[idx];
+        } else {
+            // baseobjのメンバを探す
+            foreach(FieldInfo fi in baseobj.GetType().GetFields(BindingFlags.Instance|BindingFlags.Public|BindingFlags.FlattenHierarchy)) {
+                if(fi.Name == varname) {
+                    obj = fi.GetValue(baseobj);
+                    break;
+                }
+            }
+            if(obj == null) {
+                foreach(PropertyInfo pi in baseobj.GetType().GetProperties(BindingFlags.Instance|BindingFlags.Public|BindingFlags.FlattenHierarchy)) {
+                    if(pi.Name == varname) {
+                        try {
+                            obj = pi.GetValue(baseobj, null);
+                        } catch(ArgumentException) {
+                            obj = null;
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+        // 添字を展開
+        if(index is int) {
+            if(obj is Array) {
+                try {
+                    obj = (obj as Array).GetValue((int)index);
+                } catch(ArgumentException) {
+                    //LOG_ERR("{0} has invalid array type", varname);
+                    return null;
+                } catch(IndexOutOfRangeException) {
+                    //LOG_ERR("index out of range for {0}", varname);
+                    return null;
+                }
+            } else if(obj is IEnumerable<object>) {
+                bool found = false;
+                int i = 0;
+                foreach(object o in (IEnumerable<object>)obj) {
+                    if(i == (int)index) {
+                        obj = o;
+                        found = true;
+                        break;
+                    }
+                    i++;
+                }
+                if(!found) {
+                    //LOG_ERR("out of range for {0}", varname);
+                    return null;
+                }
+            } else {
+                //LOG_ERR("{0} is not an Array", varname);
+                return null;
+            }
+        } else if(index is string) {
+            if(obj is ObjectDictionary) {
+                obj = (obj as ObjectDictionary).Get((string)index);
+            } else if(obj is DataArray) {
+                obj = (obj as DataArray).Get((string)index);
+            }
+        }
+        if(obj == null)
+            return null;
+        // サブフィールド指定を展開して返す
+        return getObject(fieldname, obj);
+    }
 
+    /// <summary>
+    ///   文字列を'.'の前と後に分割する
+    /// </summary>
+    private static void splitField(string str, out string varname, out string fieldname) {
+        if(String.IsNullOrEmpty(str)) {
+            varname = "";
+            fieldname = "";
+        }
+        bool inEscape = false;
+        bool inQuote = false;
+        bool inDQuote = false;
+        int blockLevel = 0;
+        int i = 0;
+        while(i < str.Length) {
+            char ch = str[i];
+            if(inEscape) {
+                inEscape = false;
+            } else if(inQuote) {
+                if(ch == '\'')
+                    inQuote = false;
+            } else if(inDQuote) {
+                if(ch == '"')
+                    inDQuote = false;
+            } else if(ch == '\\') {
+                inEscape = true;
+            } else if(ch == '\'') {
+                inQuote = true;
+            } else if(ch == '"') {
+                inDQuote = true;
+            } else if(ch == '[') {
+                blockLevel++;
+            } else if(blockLevel > 0) {
+                if(ch == ']')
+                    blockLevel--;
+            } else if(ch == '.') {
+                varname = str.Substring(0,i);
+                fieldname = str.Substring(i+1);
+                return;
+            }
+            i++;
+        }
+        varname = str;
+        fieldname = "";
+    }
+
+    /// <summary>
+    ///   変数名[インデックス] の形の文字列を変数名とインデックスに分解する
+    /// </summary>
+    private static void splitIndex(string str, out string varname, out string index) {
+        if(String.IsNullOrEmpty(str)) {
+            varname = "";
+            index = null;
+            return;
+        }
+        int idx = str.IndexOf('[');
+        if((idx >= 0) && (str[str.Length-1] == ']')) {
+            varname = str.Substring(0, idx);
+            index = str.Substring(idx+1, str.Length-idx-2);
+        } else {
+            varname = str;
+            index = null;
+        }
+    }
+    
     protected enum Status {BEFORE_KEY, IN_KEY, BEFORE_EQUAL, BEFORE_VALUE, IN_VALUE, IN_QUOTEVALUE};
 
 }
 
+#if SELFTEST
+
+    public class TestClass {
+
+        public int IntNumber;
+        public double DoubleNumber;
+        public string StringField;
+
+        public int IntNumber2 {
+            get { return IntNumber*2; }
+        }
+
+        public string[] StringList;
+    
+        public static int Main(string[] args) {
+            ObjectDictionary dict = new ObjectDictionary();
+            dict["abc"] = "hello";
+            dict["def"] = 3;
+            TestClass tc = new TestClass();
+            tc.IntNumber = 2;
+            tc.DoubleNumber = 3.14;
+            tc.StringField = "a long time ago";
+            tc.StringList = new string[]{"uno", "dos", "tres"};
+            dict["testclass"] = tc;
+            List<TestClass> list = new List<TestClass>();
+            for(int i = 0; i < 10; i++) {
+                tc = new TestClass();
+                tc.IntNumber = i;
+                tc.DoubleNumber = (double)i/3.0;
+                tc.StringField = String.Format("Number#{0}", i);
+                tc.StringList = new string[8];
+                for(int j = 0; j < tc.StringList.Length; j++) {
+                    tc.StringList[j] = String.Format("Number#{0}-{1}", i, j);
+                }
+                list.Add(tc);
+            }
+            dict["list"] = list;
+
+            Console.WriteLine("abc={0}", dict.Get("abc"));
+            Console.WriteLine("def={0}", dict["def"]);
+            tc = (TestClass)dict["testclass"];
+            Console.WriteLine("tc: {0}, {1}, {2}, {3}", tc.IntNumber, tc.DoubleNumber, tc.StringField, tc.IntNumber2);
+            tc = (TestClass)dict.GetObject("testclass");
+            Console.WriteLine("tc: {0}, {1}, {2}, {3}", tc.IntNumber, tc.DoubleNumber, tc.StringField, tc.IntNumber2);
+            Console.WriteLine("testclass.StringList[1] = {0}", dict.GetObject("testclass.StringList[1]"));
+            Console.WriteLine("list[3].StringList[5] = {0}", dict.GetObject("list[3].StringList[5]"));
+            Console.WriteLine("list[def].StringList[5] = {0}", dict.GetObject("list[def].StringList[5]"));
+            Console.WriteLine("list[testclass.IntNumber2].StringList[5] = {0}", dict.GetObject("list[testclass.IntNumber2].StringList[5]"));
+            Console.WriteLine("list[list[6].IntNumber].StringList[5] = {0}", dict.GetObject("list[list[6].IntNumber].StringList[5]"));
+            Console.WriteLine("'hogehoge' = {0}", dict.GetObject("'hogehoge'"));
+            Console.WriteLine("3.14 = {0}", dict.GetObject("3.14"));
+            return 0;
+        }
+    }
+#endif
+    
 } // End of namespace

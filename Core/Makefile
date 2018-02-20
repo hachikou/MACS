@@ -68,3 +68,6 @@ IpaddrTest.exe: Ipaddr.cs StringUtil.cs
 
 CascadedAttributeTest.exe: CascadedAttributeTest.cs CascadedAttribute.cs StringUtil.cs XmlFile.cs FileUtil.cs
 	$(MCS) $(MCSFLAGS) $^ -out:$@
+
+ObjectDictionaryTest.exe: ObjectDictionary.cs StringUtil.cs DataArray.cs FileUtil.cs
+	$(MCS) $(MCSFLAGS) -define:SELFTEST $^ -out:$@
