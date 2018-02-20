@@ -381,7 +381,7 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
             p[0] = p[0].Substring(0,p[0].Length-2);
             urlescape = true;
         }
-        object obj = GetObject(dict, p[0]);
+        object obj = dict.GetObject(p[0]);
         if(obj == null)
             return null;
         // アサインされたオブジェクトにパラメータをセットする
@@ -400,9 +400,6 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
     }
 
     private static Regex ExprPattern = new Regex(@"^(.+)(==|!=|&&|\|\|)(.+)$");
-    private static Regex FloatPattern = new Regex(@"^[+-]?\d+\.\d*$");
-    private static Regex IntegerPattern = new Regex(@"^[+-]?\d+$");
-    private static Regex HexPattern = new Regex(@"^[+-]?0x([0-9a-fA-F]+)$");
 
     private object GetExpr(ObjectDictionary dict, string varname) {
         if(String.IsNullOrEmpty(varname))
@@ -429,79 +426,12 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
             }
         }
 
-        // 定数を評価
-        if((varname.Length > 1)
-           && (((varname[0] == '\"') && (varname[varname.Length-1] == '\"'))
-               || ((varname[0] == '\'') && (varname[varname.Length-1] == '\'')))) {
-            return varname.Substring(1,varname.Length-2);
-        }
-        if(FloatPattern.IsMatch(varname)){
-            return Single.Parse(varname);
-        }
-        if(IntegerPattern.IsMatch(varname)){
-            return StringUtil.ToInt(varname);
-        }
-        m = HexPattern.Match(varname);
-        if(m.Success){
-            return StringUtil.ToHexInt(m.Groups[1].ToString());
-        }
-        if(varname == "true")
-            return true;
-        if(varname == "false")
-            return false;
-
         // 変数を評価
-        object obj = GetObject(dict, varname);
+        object obj = dict.GetObject(varname);
         return (obj==null)?"":obj;
     }
 
-    private object GetObject(ObjectDictionary dict, string varname) {
-        string[] v = varname.Split(".".ToCharArray(), 2);
-        if(!dict.ContainsKey(v[0]))
-            return null;
-        if(v.Length == 1)
-            return dict[v[0]];
-        // "."修飾されている場合、オブジェクトのフィールドを探す。
-        return GetObjectField(dict[v[0]], v[1]);
-    }
-
-    private static object GetObjectField(object baseobj, string fieldname) {
-        if(baseobj == null)
-            return null;
-        if(String.IsNullOrEmpty(fieldname))
-            return baseobj;
-        string[] v = fieldname.Split(".".ToCharArray(), 2);
-        // baseobjがDataArrayの場合、カラム名を探す
-        if(baseobj is DataArray) {
-            DataArray da = baseobj as DataArray;
-            int idx = da.ColumnNum(fieldname);
-            if(idx >= 0)
-                return da[idx];
-        }
-        // baseobjのメンバを探す
-        foreach(FieldInfo fi in baseobj.GetType().GetFields(BindingFlags.Instance|BindingFlags.Public|BindingFlags.FlattenHierarchy)) {
-            if(fi.Name == v[0]) {
-                if(v.Length == 1)
-                    return fi.GetValue(baseobj);
-                else
-                    return GetObjectField(fi.GetValue(baseobj), v[1]);
-            }
-        }
-        foreach(PropertyInfo pi in baseobj.GetType().GetProperties(BindingFlags.Instance|BindingFlags.Public|BindingFlags.FlattenHierarchy)) {
-            if(pi.Name == v[0]) {
-                try {
-                    if(v.Length == 1)
-                        return pi.GetValue(baseobj, null);
-                    else
-                        return GetObjectField(pi.GetValue(baseobj, null), v[1]);
-                } catch(ArgumentException) {
-                    // just ignore
-                }
-            }
-        }
-        return null;
-    }
-
+    
     private static bool Cond(object obj) {
         if(obj == null)
             return false;
@@ -607,11 +537,11 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
 
     private int CommandAssign(string line, int index, TemplateContext tc, string commandname, string param){
         ObjectDictionary args = ObjectDictionary.FromString(param);
-        string var = null;
+        string variable = null;
         if(args.ContainsKey("0"))
-            var = args["0"].ToString();
+            variable = args["0"].ToString();
         else if(args.ContainsKey("var"))
-            var = args["var"].ToString();
+            variable = args["var"].ToString();
 
         string value = null;
         if(args.ContainsKey("1"))
@@ -619,11 +549,11 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
         else if(args.ContainsKey("value"))
             value = args["value"].ToString();
 
-        if((var == null) || (value == null)){
+        if((variable == null) || (value == null)){
             LOG_ERR(string.Format("Error: Invalid syntax, should be '{0}{1} var-name expression{2}'", m_commandprefix, commandname, m_commandpostfix));
             return index;
         }
-        tc.dict[var] = GetExpr(tc.dict, value);
+        tc.dict[variable] = GetExpr(tc.dict, value);
         return index;
     }
 
@@ -631,11 +561,11 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
         string contents;
         index = Capture(line, index, m_commandprefix+commandname, m_commandprefix+"end"+commandname+m_commandpostfix, out contents);
         ObjectDictionary args = ObjectDictionary.FromString(param);
-        string var = null;
+        string variable = null;
         if(args.ContainsKey("0"))
-            var = args["0"].ToString();
+            variable = args["0"].ToString();
         else if(args.ContainsKey("var"))
-            var = args["var"].ToString();
+            variable = args["var"].ToString();
 
         string list = null;
         if(args.ContainsKey("1") && (args["1"].ToString() == "in") && args.ContainsKey("2"))
@@ -648,7 +578,7 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
             countvar = args["count"].ToString();
         int countstart = 1;
         if(args.ContainsKey("countstart")) {
-            object countstartobj = GetObject(tc.dict, args["countstart"].ToString());
+            object countstartobj = tc.dict.GetObject(args["countstart"].ToString());
             if(countstartobj != null)
                 countstart = StringUtil.ToInt(countstartobj.ToString(), countstart);
         }
@@ -662,11 +592,11 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
         if(args.ContainsKey("odd"))
             oddvar = args["odd"].ToString();
 
-        if(string.IsNullOrEmpty(var) || string.IsNullOrEmpty(list)){
+        if(string.IsNullOrEmpty(variable) || string.IsNullOrEmpty(list)){
             LOG_ERR(string.Format("Error: Invalid syntax, should be '{0}{1} var-name in list-variable {2}'", m_commandprefix, commandname, m_commandpostfix));
             return index;
         }
-        object listobj = GetObject(tc.dict, list);
+        object listobj = tc.dict.GetObject(list);
         if(listobj == null) {
             LOG_ERR(string.Format("Error: Object {0} is not assigned.", list));
             return index;
@@ -678,7 +608,7 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
         TemplateContext innertc = new TemplateContext(tc.sb, tc.dict);
         int i = 0;
         foreach(object obj in (listobj as IEnumerable)) {
-            innertc.dict[var] = obj;
+            innertc.dict[variable] = obj;
             if(!String.IsNullOrEmpty(countvar))
                 innertc.dict[countvar] = i+countstart;
             if(!String.IsNullOrEmpty(indexvar))
@@ -702,17 +632,17 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
         string contents;
         index = Capture(line, index, m_commandprefix+commandname, m_commandprefix+"end"+commandname+m_commandpostfix, out contents);
         ObjectDictionary args = ObjectDictionary.FromString(param);
-        string var = null;
+        string variable = null;
         if(args.ContainsKey("0"))
-            var = args["0"].ToString();
+            variable = args["0"].ToString();
         else if(args.ContainsKey("var"))
-            var = args["var"].ToString();
+            variable = args["var"].ToString();
 
-        if(string.IsNullOrEmpty(var)){
+        if(string.IsNullOrEmpty(variable)){
             LOG_ERR(string.Format("Error: Invalid syntax, should be '{0}{1} var-name{2}'", m_commandprefix, commandname, m_commandpostfix));
             return index;
         }
-        tc.dict[var] = contents;
+        tc.dict[variable] = contents;
         return index;
     }
 
@@ -723,19 +653,19 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
 
     private int CommandExtract(string line, int index, TemplateContext tc, string commandname, string param){
         ObjectDictionary args = ObjectDictionary.FromString(param);
-        string var = null;
+        string variable = null;
         if(args.ContainsKey("0"))
-            var = args["0"].ToString();
+            variable = args["0"].ToString();
         else if(args.ContainsKey("var"))
-            var = args["var"].ToString();
+            variable = args["var"].ToString();
 
-        if(string.IsNullOrEmpty(var)){
+        if(string.IsNullOrEmpty(variable)){
             LOG_ERR(string.Format("Error: Invalid syntax, should be '{0}{1} var-name{2}'", m_commandprefix, commandname, m_commandpostfix));
             return index;
         }
-        object obj = GetObject(tc.dict, var);
+        object obj = tc.dict.GetObject(variable);
         if(obj == null){
-            LOG_ERR(string.Format("Error: Object {0} is not assigned.", var));
+            LOG_ERR(string.Format("Error: Object {0} is not assigned.", variable));
             return index;
         }
         Dispatch(tc, obj.ToString());
