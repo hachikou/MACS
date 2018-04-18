@@ -685,7 +685,6 @@ public abstract class HttpValidationPage : HttpTemplatePage {
     ///   txtがASCII文字列として有効であるかどうかを確認する。
     /// </summary>
     /// <param name="txt">確認する文字列</param>
-    /// <param name="required">入力が必須かどうか</param>
     /// <param name="minlength">最小の文字数</param>
     /// <param name="maxlength">最大の文字数</param>
     /// <param name="fieldname">入力欄の名称</param>
@@ -697,12 +696,12 @@ public abstract class HttpValidationPage : HttpTemplatePage {
     ///     itemを指定しておくと、エラー時にそのitemのCssClassを"error"にする。
     ///   </para>
     /// </remarks>
-    protected string ValidateASCIIString(string txt, bool required, int minlength, int maxlength, string fieldname, WebControl item) {
+    protected string ValidateASCIIString(string txt, int minlength, int maxlength, string fieldname, WebControl item) {
         if(txt == null)
             txt = "";
         txt = txt.Trim();
         int len = txt.Length;
-        if(required && (len == 0)) {
+        if(minlength > 0 && (len == 0)) {
             AddValidationMessage(string.Format(_("{0}は必須です。"), fieldname),item);
             goto fail;
         }
