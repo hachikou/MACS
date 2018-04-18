@@ -686,6 +686,8 @@ public abstract class HttpValidationPage : HttpTemplatePage {
     /// </summary>
     /// <param name="txt">確認する文字列</param>
     /// <param name="required">入力が必須かどうか</param>
+    /// <param name="minlength">最小の文字数</param>
+    /// <param name="maxlength">最大の文字数</param>
     /// <param name="fieldname">入力欄の名称</param>
     /// <param name="item">フォーム要素に対応するWebControl</param>
     /// <remarks>
@@ -695,7 +697,7 @@ public abstract class HttpValidationPage : HttpTemplatePage {
     ///     itemを指定しておくと、エラー時にそのitemのCssClassを"error"にする。
     ///   </para>
     /// </remarks>
-    protected string ValidateASCIIString(string txt, bool required, string fieldname, WebControl item) {
+    protected string ValidateASCIIString(string txt, bool required, int minlength, int maxlength, string fieldname, WebControl item) {
         if(txt == null)
             txt = "";
         txt = txt.Trim();
@@ -706,6 +708,13 @@ public abstract class HttpValidationPage : HttpTemplatePage {
         }
         if(len > 0){ 
             Regex r = new Regex(@"^[a-zA-Z0-9\!""\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^_\`\{\|\}\~]+$");
+            if((txt.Length < minlength) || (txt.Length > maxlength && maxlength > 0)) {
+                AddValidationMessage(string.Format(_("{0}は{1}文字以上{2}文字以下でなければいけません。"), fieldname, minlength, maxlength),item);
+                if(!r.IsMatch(txt)) {
+                    AddValidationMessage(string.Format(_("{0}にはASCII文字以外の使用できない文字が含まれています。"), fieldname),item);
+                }
+                goto fail;
+            }
             if(!r.IsMatch(txt)) {
                 AddValidationMessage(string.Format(_("{0}にはASCII文字以外の使用できない文字が含まれています。"), fieldname),item);
                 goto fail;
