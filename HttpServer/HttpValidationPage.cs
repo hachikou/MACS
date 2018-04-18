@@ -681,6 +681,49 @@ public abstract class HttpValidationPage : HttpTemplatePage {
         return UnixTime.None;
     }
 
+    /// <summary>
+    ///   txtがASCII文字列として有効であるかどうかを確認する。
+    /// </summary>
+    /// <param name="txt">確認する文字列</param>
+    /// <param name="required">入力が必須かどうか</param>
+    /// <param name="fieldname">入力欄の名称</param>
+    /// <param name="item">フォーム要素に対応するWebControl</param>
+    /// <remarks>
+    ///   <para>
+    ///     条件を満たさない時は m_validation_messageにエラーメッセージをセットする。
+    ///
+    ///     itemを指定しておくと、エラー時にそのitemのCssClassを"error"にする。
+    ///   </para>
+    /// </remarks>
+    protected string ValidateASCIIString(string txt, bool required, string fieldname, WebControl item) {
+        if(txt == null)
+            txt = "";
+        txt = txt.Trim();
+        int len = txt.Length;
+        if(required && (len == 0)) {
+            AddValidationMessage(string.Format(_("{0}は必須です。"), fieldname),item);
+            goto fail;
+        }
+        if(len > 0){ 
+            Regex r = new Regex(@"^[a-zA-Z0-9\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^_\`\{\|\}\~]+$");
+            if(!r.IsMatch(parts[0])) {
+                AddValidationMessage(string.Format(_("{0}にはASCII文字以外の使用できない文字が含まれています。"), fieldname),item);
+                goto fail;
+            }
+            if(ValidateDomain(parts[1], true, fieldname, item) == "")
+                goto fail;
+        }
+        if(item != null) {
+            item.RemoveCssClass("error");
+        }
+        return txt;
+
+    fail:
+        if(item != null) {
+            item.AddCssClass("error");
+        }
+        return "";
+    }
 
     /// <summary>
     ///   WebControlフィールド全部にInLineErrorフラグを立てる
