@@ -705,13 +705,11 @@ public abstract class HttpValidationPage : HttpTemplatePage {
             goto fail;
         }
         if(len > 0){ 
-            Regex r = new Regex(@"^[a-zA-Z0-9\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^_\`\{\|\}\~]+$");
-            if(!r.IsMatch(parts[0])) {
+            Regex r = new Regex(@"^[a-zA-Z0-9\!""\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^_\`\{\|\}\~]+$");
+            if(!r.IsMatch(txt) {
                 AddValidationMessage(string.Format(_("{0}にはASCII文字以外の使用できない文字が含まれています。"), fieldname),item);
                 goto fail;
             }
-            if(ValidateDomain(parts[1], true, fieldname, item) == "")
-                goto fail;
         }
         if(item != null) {
             item.RemoveCssClass("error");
