@@ -706,7 +706,7 @@ public abstract class HttpValidationPage : HttpTemplatePage {
         }
         if(len > 0){ 
             Regex r = new Regex(@"^[a-zA-Z0-9\!""\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^_\`\{\|\}\~]+$");
-            if(!r.IsMatch(txt) {
+            if(!r.IsMatch(txt)) {
                 AddValidationMessage(string.Format(_("{0}にはASCII文字以外の使用できない文字が含まれています。"), fieldname),item);
                 goto fail;
             }
