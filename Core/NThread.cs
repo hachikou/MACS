@@ -195,20 +195,19 @@ public class NThread : Loggable, IDisposable {
 #region インスタンスメソッド
 
     public void Abort(object stateInfo=null) {
-        if(thread == null)
-            throw new ThreadStateException("Thread is disposed.");
         isAborting = true;
         if(watchdogThread != null) {
             watchdogThread.Abort();
             watchdogThread = null;
         }
-        thread.Abort(stateInfo);
+        if(thread != null) {
+            thread.Abort(stateInfo);
+        }
     }
 
     public void Interrupt() {
-        if(thread == null)
-            throw new ThreadStateException("Thread is disposed.");
-        thread.Interrupt();
+        if(thread != null)
+            thread.Interrupt();
     }
 
     public void Join() {
