@@ -666,6 +666,25 @@ public class FileUtil {
         }
         return totalSize;
     }
+
+    /// <summary>
+    ///   ディレクトリをまるごとコピーする
+    /// </summary>
+    /// <param name="srcdir">コピー元ディレクトリ名</param>
+    /// <param name="dstdir">コピー先ディレクトリ名</param>
+    public static void CopyDirectory(string srcdir, string dstdir) {
+        if(!Directory.Exists(dstdir)) {
+            Directory.CreateDirectory(dstdir);
+            File.SetAttributes(dstdir, File.GetAttributes(srcdir));
+        }
+        foreach(string f in Directory.EnumerateFiles(srcdir)) {
+            File.Copy(f, Path.Combine(dstdir, Path.GetFileName(f)));
+        }
+        foreach(string d in Directory.EnumerateDirectories(srcdir)) {
+            CopyDirectory(d, Path.Combine(dstdir, Path.GetFileName(d)));
+        }
+    }
+    
 }
 
 } // End of namespace
