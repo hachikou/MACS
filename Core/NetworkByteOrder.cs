@@ -1,11 +1,8 @@
-﻿/*! @file NetworkByteOrder.cs
- * @brief ネットワークバイトオーダ操作ユーティリティクラス
- * $Id: $
- *
- * Copyright (C) 2008-2012 Microbrains Inc.
- * All Rights Reserved.
- * This code was designed and coded by SHIBUYA K.
- */
+/// NetworkByteOrder: ネットワークバイトオーダ操作ユーティリティクラス.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 using System;
 using System.Text;

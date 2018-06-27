@@ -1,11 +1,8 @@
-﻿/*! @file HttpEmergencyPage.cs
- * @brief HttpServer内ワーカーが枯渇した時の非常ページ表示クラス
- * $Id: $
- *
- * Copyright (C) 2017 Microbrains Inc.
- * All Rights Reserved.
- * This code was designed and coded by SHIBUYA K.
- */
+/// HttpEmergencyPage: HttpServer内ワーカーが枯渇した時の非常ページ表示クラス.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 using System;
 using System.Text;

@@ -1,11 +1,8 @@
-﻿/*! @file HttpPage.cs
- * @brief ページレンダラ基底クラス
- * $Id: $
- *
- * Copyright (C) 2008-2015 Microbrains Inc.
- * All Rights Reserved.
- * This code was designed and coded by SHIBUYA K.
- */
+/// HttpPage: ページレンダラ基底クラス.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 //#define FORMDEBUG
 

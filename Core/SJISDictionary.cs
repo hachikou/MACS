@@ -1,4 +1,10 @@
-﻿using System;
+﻿/// SJISDictionary: SJIS文字のバイト列を文字列に変換する.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
+
+using System;
 using System.Text;
 using System.Collections.Generic;
 

@@ -1,10 +1,8 @@
-/*! @file RWLock.cs
- * @brief 安全に使え、デバッグが容易なReadLock/WriteLock/UpgradableLockを提供する
- *
- * Copyright (C) 2017 Microbrains Inc.
- * All Rights Reserved.
- * This code was designed and coded by SHIBUYA K.
- */
+/// RWLock: 安全に使え、デバッグが容易なReadLock/WriteLock/UpgradableLockを提供する.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 using System;
 using System.Threading;

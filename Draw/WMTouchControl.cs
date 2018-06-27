@@ -1,9 +1,11 @@
-/*
- * WM Touch Control : タッチパネル対応のコントロールモジュール
- *
- * Copyright (C) 2017 Nippon C.A.D. Co.,Ltd. All rights reserved.
- * This code was designed and coded by YAGI H. (COSMOSTORK Inc.)
- */
+/// WMTouchControl: タッチパネル対応のコントロールモジュール.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
+
+// This code was designed and coded by YAGI H. (COSMOSTORK Inc.)
+
 /*
  * 注意: Windows10より古いOSでは動作しません。
  */

@@ -1,3 +1,9 @@
+/// PDFReport: XML定義に従ってPDF帳票を作成する.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
+
 using System;
 using System.IO;
 using System.Text;

@@ -1,11 +1,8 @@
-﻿/*! @file ObjectDictionary.cs
- * @brief string - object対応ディクショナリ。
- * $Id: $
- *
- * Copyright (C) 2008-2012 Microbrains Inc.
- * All Rights Reserved.
- * This code was designed and coded by SHIBUYA K.
- */
+/// ObjectDictionary: string-object対応ディクショナリ.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 using System;
 using System.Collections.Generic;

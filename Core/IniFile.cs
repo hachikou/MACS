@@ -1,12 +1,8 @@
-﻿/*! @file IniFile.cs
- *	@brief INIファイルツール
- *
- * @author shibuya@ncad.co.jp
- * @date 2009/07/08
- * @version $Id: IniFile.cs 68 2011-06-16 05:17:50Z shibuya $
- *
- * Copyright (C) 2008-2015 Nippon C.A.D. Co.,Ltd. All rights reserved.
- */
+/// IniFile: INIファイルツール.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 using System;
 using System.IO;

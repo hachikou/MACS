@@ -1,10 +1,8 @@
-﻿/*
-  * A5ER形式のDBテーブル定義からDBTableDef用のXMLファイルを生成する。
-  * $Id: A5erToDBTableDef.cs 1890 2014-06-05 04:34:56Z shibuya $
-  *
-  * Copyright (C) 2013 Microbrains Inc. All rights reserved.
-  * This code was designed and coded by SHIBUYA K.
-  */
+/// A5erToDBTableDef: A5ER形式のDBテーブル定義からDBTableDef用のXMLファイルを生成する.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 using System;
 using System.Collections.Generic;

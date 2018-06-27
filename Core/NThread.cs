@@ -1,10 +1,8 @@
-/*! @file NThread.cs
- * @brief デバッグが容易なThreadを提供する
- *
- * Copyright (C) 2017 Microbrains Inc.
- * All Rights Reserved.
- * This code was designed and coded by SHIBUYA K.
- */
+/// NThread: デバッグが容易なThreadを提供する.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 using System;
 using System.Threading;

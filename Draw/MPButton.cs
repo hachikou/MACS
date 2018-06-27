@@ -1,9 +1,8 @@
-/*
- * Macs Powered Button : Forms.Buttonの機能強化版
- *
- * Copyright (C) 2017 Nippon C.A.D. Co.,Ltd. All rights reserved.
- * This code was designed and coded by SHIBUYA K. (Microbrains Inc.)
- */
+/// MPButton: Macs Powered Button : Forms.Buttonの機能強化版.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 using System;
 using System.Text;

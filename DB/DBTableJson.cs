@@ -1,10 +1,8 @@
-/*
- * DBTableとNDJsonを結びつける拡張メソッド
- * $Id: $
- *
- * Copyright (C) 2015 Microbrains Inc. All rights reserved.
- * This code was designed and coded by SHIBUYA K.
- */
+/// DBTableJson: DBTableとNDJsonを結びつける拡張メソッド.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 namespace MACS.DB {
 

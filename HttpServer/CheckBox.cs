@@ -1,11 +1,8 @@
-﻿/*! @file CheckBox.cs
- * @brief input checkbox要素
- * $Id: $
- *
- * Copyright (C) 2008-2015 Microbrains Inc.
- * All Rights Reserved.
- * This code was designed and coded by SHIBUYA K.
- */
+/// CheckBox: input checkbox要素.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 using System;
 using System.Web;

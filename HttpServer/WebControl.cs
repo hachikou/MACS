@@ -1,11 +1,8 @@
-﻿/*! @file WebControl.cs
- * @brief HTMLのForm要素コード作成に便利なユーティリティクラス。
- * $Id: $
- *
- * Copyright (C) 2008-2015 Microbrains Inc.
- * All Rights Reserved.
- * This code was designed and coded by SHIBUYA K.
- */
+/// WebControl: HTMLのForm要素コード作成に便利なユーティリティクラス.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 using System;
 using System.Web;

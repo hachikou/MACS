@@ -1,3 +1,9 @@
+/// MPText: Macs Powered Text : Forms.Labelの機能強化版.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
+
 /*
  * Macs Powered Text : Forms.Labelの機能強化版
  *
