@@ -1,0 +1,714 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.Core: クラス MACS.SJISWriter</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.Core
+   </div>
+   <div id="projectbrief">Miscellaneous Assets for C-Sharp</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classMACS_1_1SJISWriter.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="classMACS_1_1SJISWriter-members.html">すべてのメンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス MACS.SJISWriter</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Shift_JISによる固定バイト数出力をサポートするクラス  
+ <a href="classMACS_1_1SJISWriter.html#details">[詳細]</a></p>
+<div class="dynheader">
+MACS.SJISWriterに対する継承グラフ</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classMACS_1_1SJISWriter.png" usemap="#MACS.SJISWriter_map" alt=""/>
+  <map id="MACS.SJISWriter_map" name="MACS.SJISWriter_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr class="memitem:a2aebf3b2d1b75d75ba6cace3999f501b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SJISWriter.html#a2aebf3b2d1b75d75ba6cace3999f501b">SJISWriter</a> (string filename)</td></tr>
+<tr class="memdesc:a2aebf3b2d1b75d75ba6cace3999f501b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shift_JISによるファイル出力ストリームを開く  <a href="#a2aebf3b2d1b75d75ba6cace3999f501b"></a><br/></td></tr>
+<tr class="separator:a2aebf3b2d1b75d75ba6cace3999f501b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dddace3cfda87840a3a7c2adf57a168"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SJISWriter.html#a7dddace3cfda87840a3a7c2adf57a168">SJISWriter</a> (Stream fs_)</td></tr>
+<tr class="memdesc:a7dddace3cfda87840a3a7c2adf57a168"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ストリームをShift_JIS書き出し用ストリームとして使う  <a href="#a7dddace3cfda87840a3a7c2adf57a168"></a><br/></td></tr>
+<tr class="separator:a7dddace3cfda87840a3a7c2adf57a168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97d3b3448a9aafa2890bbdc18b463f6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SJISWriter.html#a97d3b3448a9aafa2890bbdc18b463f6e">Dispose</a> ()</td></tr>
+<tr class="memdesc:a97d3b3448a9aafa2890bbdc18b463f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用リソースの解放  <a href="#a97d3b3448a9aafa2890bbdc18b463f6e"></a><br/></td></tr>
+<tr class="separator:a97d3b3448a9aafa2890bbdc18b463f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9103cd9e60aa9790835256b37161c163"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SJISWriter.html#a9103cd9e60aa9790835256b37161c163">Close</a> ()</td></tr>
+<tr class="memdesc:a9103cd9e60aa9790835256b37161c163"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル書き込みを終了する。  <a href="#a9103cd9e60aa9790835256b37161c163"></a><br/></td></tr>
+<tr class="separator:a9103cd9e60aa9790835256b37161c163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75d0e81f797a3b9ebc1619db545ddc11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SJISWriter.html#a75d0e81f797a3b9ebc1619db545ddc11">Write</a> (string txt)</td></tr>
+<tr class="memdesc:a75d0e81f797a3b9ebc1619db545ddc11"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定文字列を書き出す。  <a href="#a75d0e81f797a3b9ebc1619db545ddc11"></a><br/></td></tr>
+<tr class="separator:a75d0e81f797a3b9ebc1619db545ddc11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa01d4006bfe65a2c11681501db10857c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SJISWriter.html#aa01d4006bfe65a2c11681501db10857c">Write</a> (string fmt, params object[] objs)</td></tr>
+<tr class="memdesc:aa01d4006bfe65a2c11681501db10857c"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォーマット付き文字列書き出し  <a href="#aa01d4006bfe65a2c11681501db10857c"></a><br/></td></tr>
+<tr class="separator:aa01d4006bfe65a2c11681501db10857c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a926429877cd35a2b01b8653f44ee5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SJISWriter.html#a8a926429877cd35a2b01b8653f44ee5c">WriteLine</a> (string txt=null)</td></tr>
+<tr class="memdesc:a8a926429877cd35a2b01b8653f44ee5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定文字列を書き出し、改行を書き出す。  <a href="#a8a926429877cd35a2b01b8653f44ee5c"></a><br/></td></tr>
+<tr class="separator:a8a926429877cd35a2b01b8653f44ee5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14d166e160d6236f0a7e3b1bebb84488"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SJISWriter.html#a14d166e160d6236f0a7e3b1bebb84488">WriteLine</a> (string fmt, params object[] objs)</td></tr>
+<tr class="memdesc:a14d166e160d6236f0a7e3b1bebb84488"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォーマット付き文字列書き出し。改行付き。  <a href="#a14d166e160d6236f0a7e3b1bebb84488"></a><br/></td></tr>
+<tr class="separator:a14d166e160d6236f0a7e3b1bebb84488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a343bb5bf91bca1ede1044aaf443f7a16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SJISWriter.html#a343bb5bf91bca1ede1044aaf443f7a16">Write</a> (int len, bool rightAlign, string txt, byte fillbyte=0x20)</td></tr>
+<tr class="memdesc:a343bb5bf91bca1ede1044aaf443f7a16"><td class="mdescLeft">&#160;</td><td class="mdescRight">出力バイト数指定付き文字列書き出し  <a href="#a343bb5bf91bca1ede1044aaf443f7a16"></a><br/></td></tr>
+<tr class="separator:a343bb5bf91bca1ede1044aaf443f7a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e9cc17d02881c457375d44a04eaaf82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SJISWriter.html#a7e9cc17d02881c457375d44a04eaaf82">Write</a> (int len, string txt, byte fillbyte=0x20)</td></tr>
+<tr class="memdesc:a7e9cc17d02881c457375d44a04eaaf82"><td class="mdescLeft">&#160;</td><td class="mdescRight">出力バイト数指定付き文字列書き出し（左寄せ）  <a href="#a7e9cc17d02881c457375d44a04eaaf82"></a><br/></td></tr>
+<tr class="separator:a7e9cc17d02881c457375d44a04eaaf82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96917eeb1f7f0345dcb8fc011ae17f0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SJISWriter.html#a96917eeb1f7f0345dcb8fc011ae17f0c">WriteRight</a> (int len, string txt, byte fillbyte=0x20)</td></tr>
+<tr class="memdesc:a96917eeb1f7f0345dcb8fc011ae17f0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">出力バイト数指定付き文字列書き出し（右寄せ）  <a href="#a96917eeb1f7f0345dcb8fc011ae17f0c"></a><br/></td></tr>
+<tr class="separator:a96917eeb1f7f0345dcb8fc011ae17f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a3071ef71823b65871241d372783185"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SJISWriter.html#a7a3071ef71823b65871241d372783185">WriteLimitLength</a> (int len, string txt)</td></tr>
+<tr class="memdesc:a7a3071ef71823b65871241d372783185"><td class="mdescLeft">&#160;</td><td class="mdescRight">出力バイト数指定付き文字列書き出し（最大バイト数指定）  <a href="#a7a3071ef71823b65871241d372783185"></a><br/></td></tr>
+<tr class="separator:a7a3071ef71823b65871241d372783185"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed6660b55921fa789064487cdc509178"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SJISWriter.html#aed6660b55921fa789064487cdc509178">WriteAll</a> (int len, bool rightAlign, string txt, byte fillbyte=0x20)</td></tr>
+<tr class="memdesc:aed6660b55921fa789064487cdc509178"><td class="mdescLeft">&#160;</td><td class="mdescRight">出力バイト数指定付き文字列書き出し（切り捨て無し）  <a href="#aed6660b55921fa789064487cdc509178"></a><br/></td></tr>
+<tr class="separator:aed6660b55921fa789064487cdc509178"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f5aaebb9a52e6a7a515a8c0372d9cbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SJISWriter.html#a7f5aaebb9a52e6a7a515a8c0372d9cbf">WriteAll</a> (int len, string txt, byte fillbyte=0x20)</td></tr>
+<tr class="memdesc:a7f5aaebb9a52e6a7a515a8c0372d9cbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">出力バイト数指定付き文字列書き出し（左寄せ、切り捨て無し）  <a href="#a7f5aaebb9a52e6a7a515a8c0372d9cbf"></a><br/></td></tr>
+<tr class="separator:a7f5aaebb9a52e6a7a515a8c0372d9cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f7bc37faada18a6f767b168a1e0ee80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SJISWriter.html#a4f7bc37faada18a6f767b168a1e0ee80">WriteRightAll</a> (int len, string txt, byte fillbyte=0x20)</td></tr>
+<tr class="memdesc:a4f7bc37faada18a6f767b168a1e0ee80"><td class="mdescLeft">&#160;</td><td class="mdescRight">出力バイト数指定付き文字列書き出し（右寄せ、切り捨て無し）  <a href="#a4f7bc37faada18a6f767b168a1e0ee80"></a><br/></td></tr>
+<tr class="separator:a4f7bc37faada18a6f767b168a1e0ee80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">説明</h2>
+<div class="textblock"><p>Shift_JISによる固定バイト数出力をサポートするクラス </p>
+
+<p> <a class="el" href="SJISWriter_8cs_source.html">SJISWriter.cs</a> の <a class="el" href="SJISWriter_8cs_source.html#l00017">17</a> 行で定義されています。</p>
+</div><h2 class="groupheader">コンストラクタとデストラクタ</h2>
+<a class="anchor" id="a2aebf3b2d1b75d75ba6cace3999f501b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.SJISWriter.SJISWriter </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Shift_JISによるファイル出力ストリームを開く </p>
+
+<p> <a class="el" href="SJISWriter_8cs_source.html">SJISWriter.cs</a> の <a class="el" href="SJISWriter_8cs_source.html#l00022">22</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a7dddace3cfda87840a3a7c2adf57a168"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.SJISWriter.SJISWriter </td>
+          <td>(</td>
+          <td class="paramtype">Stream&#160;</td>
+          <td class="paramname"><em>fs_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定ストリームをShift_JIS書き出し用ストリームとして使う </p>
+<p>本クラスでClose()しても、指定ストリームはClose()されない。 </p>
+
+<p> <a class="el" href="SJISWriter_8cs_source.html">SJISWriter.cs</a> の <a class="el" href="SJISWriter_8cs_source.html#l00037">37</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド</h2>
+<a class="anchor" id="a97d3b3448a9aafa2890bbdc18b463f6e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.SJISWriter.Dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>使用リソースの解放 </p>
+
+<p> <a class="el" href="SJISWriter_8cs_source.html">SJISWriter.cs</a> の <a class="el" href="SJISWriter_8cs_source.html#l00054">54</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a9103cd9e60aa9790835256b37161c163"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.SJISWriter.Close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ファイル書き込みを終了する。 </p>
+
+<p> <a class="el" href="SJISWriter_8cs_source.html">SJISWriter.cs</a> の <a class="el" href="SJISWriter_8cs_source.html#l00061">61</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="SJISWriter_8cs_source.html#l00054">MACS.SJISWriter.Dispose()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a75d0e81f797a3b9ebc1619db545ddc11"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.SJISWriter.Write </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定文字列を書き出す。 </p>
+<p>txtがnullの場合は何も書き出さない。 </p>
+
+<p> <a class="el" href="SJISWriter_8cs_source.html">SJISWriter.cs</a> の <a class="el" href="SJISWriter_8cs_source.html#l00076">76</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="SJISWriter_8cs_source.html#l00086">MACS.SJISWriter.Write()</a>, と <a class="el" href="SJISWriter_8cs_source.html#l00099">MACS.SJISWriter.WriteLine()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa01d4006bfe65a2c11681501db10857c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.SJISWriter.Write </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>objs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>フォーマット付き文字列書き出し </p>
+
+<p> <a class="el" href="SJISWriter_8cs_source.html">SJISWriter.cs</a> の <a class="el" href="SJISWriter_8cs_source.html#l00086">86</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8a926429877cd35a2b01b8653f44ee5c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.SJISWriter.WriteLine </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em> = <code>null</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定文字列を書き出し、改行を書き出す。 </p>
+<p>txtがnullの場合は改行のみ書き出す。 改行は "\r\n"。 </p>
+
+<p> <a class="el" href="SJISWriter_8cs_source.html">SJISWriter.cs</a> の <a class="el" href="SJISWriter_8cs_source.html#l00099">99</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a14d166e160d6236f0a7e3b1bebb84488"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.SJISWriter.WriteLine </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>objs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>フォーマット付き文字列書き出し。改行付き。 </p>
+
+<p> <a class="el" href="SJISWriter_8cs_source.html">SJISWriter.cs</a> の <a class="el" href="SJISWriter_8cs_source.html#l00107">107</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a343bb5bf91bca1ede1044aaf443f7a16"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.SJISWriter.Write </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>rightAlign</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>fillbyte</em> = <code>0x20</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>出力バイト数指定付き文字列書き出し </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>出力バイト数</td></tr>
+    <tr><td class="paramname">rightAlign</td><td>右寄せにするかどうか</td></tr>
+    <tr><td class="paramname">txt</td><td>出力文字列</td></tr>
+    <tr><td class="paramname">fillbyte</td><td>埋め文字コード</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>指定文字列がlenバイトに満たない場合、rightAlignフラグに応じて左また は右にfillbyteで指定したコードが挿入される。 なお、fillbyteのデフォルトは 0x20 (' ')である。 </p>
+<p>指定文字列がlenバイトよりも大きい場合、先頭のlenバイトだけが出力され る。この際、文字コードの区切りが考慮される。 </p>
+<p>txtがnullの時にはlen個のfillbyteで指定したコードが出力される。 </p>
+
+<p> <a class="el" href="SJISWriter_8cs_source.html">SJISWriter.cs</a> の <a class="el" href="SJISWriter_8cs_source.html#l00133">133</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a7e9cc17d02881c457375d44a04eaaf82"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.SJISWriter.Write </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>fillbyte</em> = <code>0x20</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>出力バイト数指定付き文字列書き出し（左寄せ） </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>出力バイト数</td></tr>
+    <tr><td class="paramname">txt</td><td>出力文字列</td></tr>
+    <tr><td class="paramname">fillbyte</td><td>埋め文字コード</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>指定文字列がlenバイトに満たない場合、右にfillbyteで指定するコードが挿入される。 なお、fillbyteのデフォルトは 0x20 (' ')である。 </p>
+<p>指定文字列がlenバイトよりも大きい場合、先頭のlenバイトだけが出力され る。この際、文字コードの区切りが考慮される。 </p>
+<p>txtがnullの時にはlen個のfillbyteで指定するコードが出力される。 </p>
+
+<p> <a class="el" href="SJISWriter_8cs_source.html">SJISWriter.cs</a> の <a class="el" href="SJISWriter_8cs_source.html#l00157">157</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a96917eeb1f7f0345dcb8fc011ae17f0c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.SJISWriter.WriteRight </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>fillbyte</em> = <code>0x20</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>出力バイト数指定付き文字列書き出し（右寄せ） </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>出力バイト数</td></tr>
+    <tr><td class="paramname">txt</td><td>出力文字列</td></tr>
+    <tr><td class="paramname">fillbyte</td><td>埋め文字コード</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>指定文字列がlenバイトに満たない場合、左にfillbyteで指定するコードが挿入される。 なお、fillbyteのデフォルトは 0x20 (' ')である。 </p>
+<p>指定文字列がlenバイトよりも大きい場合、先頭のlenバイトだけが出力され る。この際、文字コードの区切りが考慮される。 </p>
+<p>txtがnullの時にはlen個のfillbyteで指定するコードが出力される。 </p>
+
+<p> <a class="el" href="SJISWriter_8cs_source.html">SJISWriter.cs</a> の <a class="el" href="SJISWriter_8cs_source.html#l00180">180</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a7a3071ef71823b65871241d372783185"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.SJISWriter.WriteLimitLength </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>出力バイト数指定付き文字列書き出し（最大バイト数指定） </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>出力バイト数</td></tr>
+    <tr><td class="paramname">txt</td><td>出力文字列</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>指定文字列がlenバイトに満たない場合指定文字列だけが出力される。 （lenより少ないバイト数が出力される。） </p>
+<p>指定文字列がlenバイトよりも大きい場合、先頭のlenバイトだけが出力され る。この際、文字コードの区切りが考慮される。 </p>
+<p>txtがnullの時には何も出力されない。 </p>
+
+<p> <a class="el" href="SJISWriter_8cs_source.html">SJISWriter.cs</a> の <a class="el" href="SJISWriter_8cs_source.html#l00202">202</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aed6660b55921fa789064487cdc509178"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.SJISWriter.WriteAll </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>rightAlign</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>fillbyte</em> = <code>0x20</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>出力バイト数指定付き文字列書き出し（切り捨て無し） </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>出力バイト数</td></tr>
+    <tr><td class="paramname">rightAlign</td><td>右寄せにするかどうか</td></tr>
+    <tr><td class="paramname">txt</td><td>出力文字列</td></tr>
+    <tr><td class="paramname">fillbyte</td><td>埋め文字コード</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>指定文字列がlenバイトに満たない場合、rightAlignフラグに応じて左また は右にfillbyteで指定したコードが挿入される。 なお、fillbyteのデフォルトは 0x20 (' ')である。 </p>
+<p>指定文字列がlenバイトよりも大きい場合、lenに関係なくすべての文字が 出力される。この点がWrite(len,rightAlign,txt,fillbyte)と異なる点で ある。 </p>
+<p>txtがnullの時にはlen個のfillbyteで指定したコードが出力される。 </p>
+
+<p> <a class="el" href="SJISWriter_8cs_source.html">SJISWriter.cs</a> の <a class="el" href="SJISWriter_8cs_source.html#l00228">228</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a7f5aaebb9a52e6a7a515a8c0372d9cbf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.SJISWriter.WriteAll </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>fillbyte</em> = <code>0x20</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>出力バイト数指定付き文字列書き出し（左寄せ、切り捨て無し） </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>出力バイト数</td></tr>
+    <tr><td class="paramname">txt</td><td>出力文字列</td></tr>
+    <tr><td class="paramname">fillbyte</td><td>埋め文字コード</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>指定文字列がlenバイトに満たない場合、右にfillbyteで指定するコードが挿入される。 なお、fillbyteのデフォルトは 0x20 (' ')である。 </p>
+<p>指定文字列がlenバイトよりも大きい場合、lenに関係なくすべての文字が 出力される。この点がWrite(len,txt,fillbyte)と異なる点である。 </p>
+<p>txtがnullの時にはlen個のfillbyteで指定するコードが出力される。 </p>
+
+<p> <a class="el" href="SJISWriter_8cs_source.html">SJISWriter.cs</a> の <a class="el" href="SJISWriter_8cs_source.html#l00252">252</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4f7bc37faada18a6f767b168a1e0ee80"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.SJISWriter.WriteRightAll </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>fillbyte</em> = <code>0x20</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>出力バイト数指定付き文字列書き出し（右寄せ、切り捨て無し） </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>出力バイト数</td></tr>
+    <tr><td class="paramname">txt</td><td>出力文字列</td></tr>
+    <tr><td class="paramname">fillbyte</td><td>埋め文字コード</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>指定文字列がlenバイトに満たない場合、左にfillbyteで指定するコードが挿入される。 なお、fillbyteのデフォルトは 0x20 (' ')である。 </p>
+<p>指定文字列がlenバイトよりも大きい場合、lenに関係なくすべての文字が 出力される。この点がWriteRight(len,txt,fillbyte)と異なる点である。 </p>
+<p>txtがnullの時にはlen個のfillbyteで指定するコードが出力される。 </p>
+
+<p> <a class="el" href="SJISWriter_8cs_source.html">SJISWriter.cs</a> の <a class="el" href="SJISWriter_8cs_source.html#l00275">275</a> 行で定義されています。</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="SJISWriter_8cs_source.html">SJISWriter.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceMACS.html">MACS</a></li><li class="navelem"><a class="el" href="classMACS_1_1SJISWriter.html">SJISWriter</a></li>
+    <li class="footer">MACS.Coreに対してWed Jun 27 2018 17:45:45に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

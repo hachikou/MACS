@@ -1,0 +1,793 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.HttpServer: クラス MACS.HttpServer.WebControl</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.HttpServer
+   </div>
+   <div id="projectbrief">HTTP Server and Template Engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classMACS_1_1HttpServer_1_1WebControl.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-attribs">Public 変数</a> &#124;
+<a href="#pro-methods">Protected メソッド</a> &#124;
+<a href="#pro-static-methods">Static Protected メソッド</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="classMACS_1_1HttpServer_1_1WebControl-members.html">すべてのメンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス MACS.HttpServer.WebControl<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>HTMLのForm要素コード作成に便利なユーティリティクラス。 <a class="el" href="classMACS_1_1HttpServer_1_1Button.html" title="input button要素 ">Button</a>, <a class="el" href="classMACS_1_1HttpServer_1_1TextBox.html" title="input text要素 ">TextBox</a> などのクラスの共通部分。  
+ <a href="classMACS_1_1HttpServer_1_1WebControl.html#details">[詳細]</a></p>
+<div class="dynheader">
+MACS.HttpServer.WebControlに対する継承グラフ</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classMACS_1_1HttpServer_1_1WebControl.png" usemap="#MACS.HttpServer.WebControl_map" alt=""/>
+  <map id="MACS.HttpServer.WebControl_map" name="MACS.HttpServer.WebControl_map">
+<area href="classMACS_1_1HttpServer_1_1Literal.html" title="文字列表示要素 " alt="MACS.HttpServer.Literal" shape="rect" coords="0,56,256,80"/>
+<area href="classMACS_1_1HttpServer_1_1TemplateFlag.html" title="TemplateFlag要素 " alt="MACS.HttpServer.TemplateFlag" shape="rect" coords="266,56,522,80"/>
+<area href="classMACS_1_1HttpServer_1_1TextArea.html" title="textarea要素 " alt="MACS.HttpServer.TextArea" shape="rect" coords="532,56,788,80"/>
+<area href="classMACS_1_1HttpServer_1_1TextBox.html" title="input text要素 " alt="MACS.HttpServer.TextBox" shape="rect" coords="798,56,1054,80"/>
+<area href="classMACS_1_1HttpServer_1_1TranslatableWebControl.html" title="翻訳機能付きWebControl " alt="MACS.HttpServer.TranslatableWebControl" shape="rect" coords="1330,56,1586,80"/>
+<area href="classMACS_1_1HttpServer_1_1FileInputBox.html" title="input file要素 " alt="MACS.HttpServer.FileInputBox" shape="rect" coords="1064,112,1320,136"/>
+<area href="classMACS_1_1HttpServer_1_1HiddenText.html" title="input hidden要素 " alt="MACS.HttpServer.HiddenText" shape="rect" coords="1064,168,1320,192"/>
+<area href="classMACS_1_1HttpServer_1_1PasswordBox.html" title="input password要素 " alt="MACS.HttpServer.PasswordBox" shape="rect" coords="1064,224,1320,248"/>
+<area href="classMACS_1_1HttpServer_1_1Button.html" title="input button要素 " alt="MACS.HttpServer.Button" shape="rect" coords="1596,112,1852,136"/>
+<area href="classMACS_1_1HttpServer_1_1CheckBox.html" title="input checkbox要素 " alt="MACS.HttpServer.CheckBox" shape="rect" coords="1596,168,1852,192"/>
+<area href="classMACS_1_1HttpServer_1_1DateSelector.html" title="日付入力ウィジェット " alt="MACS.HttpServer.DateSelector" shape="rect" coords="1596,224,1852,248"/>
+<area href="classMACS_1_1HttpServer_1_1DropDown.html" title="プルダウンメニュー要素 " alt="MACS.HttpServer.DropDown" shape="rect" coords="1596,280,1852,304"/>
+<area href="classMACS_1_1HttpServer_1_1DropDownSelector_3_01T_01_4.html" title="Enumをプルダウンメニューで選択する要素 " alt="MACS.HttpServer.DropDownSelector&lt; T &gt;" shape="rect" coords="1596,336,1852,360"/>
+<area href="classMACS_1_1HttpServer_1_1RadioButton.html" title="input radio要素 " alt="MACS.HttpServer.RadioButton" shape="rect" coords="1596,392,1852,416"/>
+<area href="classMACS_1_1HttpServer_1_1RadioSelector_3_01T_01_4.html" title="Enumをラジオボタンで選択する要素 " alt="MACS.HttpServer.RadioSelector&lt; T &gt;" shape="rect" coords="1596,448,1852,472"/>
+<area href="classMACS_1_1HttpServer_1_1TimeSelector.html" title="時刻入力ウィジェット " alt="MACS.HttpServer.TimeSelector" shape="rect" coords="1596,504,1852,528"/>
+<area href="classMACS_1_1HttpServer_1_1YesNoSelector.html" title="Yes/Noをラジオボタンで選択する要素 " alt="MACS.HttpServer.YesNoSelector" shape="rect" coords="1596,560,1852,584"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr class="memitem:a17c9758cd14a6a8e5d163f11dff7388b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#a17c9758cd14a6a8e5d163f11dff7388b">AddCssClass</a> (string classname)</td></tr>
+<tr class="memdesc:a17c9758cd14a6a8e5d163f11dff7388b"><td class="mdescLeft">&#160;</td><td class="mdescRight">CSSクラスを追加する  <a href="#a17c9758cd14a6a8e5d163f11dff7388b"></a><br/></td></tr>
+<tr class="separator:a17c9758cd14a6a8e5d163f11dff7388b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1bd2064cf48fbe48b4ea49902dc4b64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#ae1bd2064cf48fbe48b4ea49902dc4b64">RemoveCssClass</a> (string classname)</td></tr>
+<tr class="memdesc:ae1bd2064cf48fbe48b4ea49902dc4b64"><td class="mdescLeft">&#160;</td><td class="mdescRight">CSSクラスを削除する  <a href="#ae1bd2064cf48fbe48b4ea49902dc4b64"></a><br/></td></tr>
+<tr class="separator:ae1bd2064cf48fbe48b4ea49902dc4b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0843645e2bc3c3099bec3e406bd0da9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#a0843645e2bc3c3099bec3e406bd0da9d">WebControl</a> (string name, string id)</td></tr>
+<tr class="memdesc:a0843645e2bc3c3099bec3e406bd0da9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素名、IDを指定したコンストラクタ  <a href="#a0843645e2bc3c3099bec3e406bd0da9d"></a><br/></td></tr>
+<tr class="separator:a0843645e2bc3c3099bec3e406bd0da9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa66bd089ae4f86dcc6d7ce75cc8020ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#aa66bd089ae4f86dcc6d7ce75cc8020ce">WebControl</a> (string name)</td></tr>
+<tr class="memdesc:aa66bd089ae4f86dcc6d7ce75cc8020ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素名だけを指定したコンストラクタ  <a href="#aa66bd089ae4f86dcc6d7ce75cc8020ce"></a><br/></td></tr>
+<tr class="separator:aa66bd089ae4f86dcc6d7ce75cc8020ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ca4424e0e62fe425bf87cff7583c71a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#a2ca4424e0e62fe425bf87cff7583c71a">WebControl</a> ()</td></tr>
+<tr class="memdesc:a2ca4424e0e62fe425bf87cff7583c71a"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ  <a href="#a2ca4424e0e62fe425bf87cff7583c71a"></a><br/></td></tr>
+<tr class="separator:a2ca4424e0e62fe425bf87cff7583c71a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe0b84e374e3b68a1f231767399b744a"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#afe0b84e374e3b68a1f231767399b744a">ToString</a> ()</td></tr>
+<tr class="memdesc:afe0b84e374e3b68a1f231767399b744a"><td class="mdescLeft">&#160;</td><td class="mdescRight">レンダリングする  <a href="#afe0b84e374e3b68a1f231767399b744a"></a><br/></td></tr>
+<tr class="separator:afe0b84e374e3b68a1f231767399b744a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f44d8d494e1ddce26f01d186071e5ad"><td class="memItemLeft" align="right" valign="top">abstract StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#a0f44d8d494e1ddce26f01d186071e5ad">Render</a> (StringBuilder sb)</td></tr>
+<tr class="memdesc:a0f44d8d494e1ddce26f01d186071e5ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">レンダリングする（StringBuilder版）  <a href="#a0f44d8d494e1ddce26f01d186071e5ad"></a><br/></td></tr>
+<tr class="separator:a0f44d8d494e1ddce26f01d186071e5ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71335a22b3b7e3ac7f5740557312d5ce"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#a71335a22b3b7e3ac7f5740557312d5ce">Fetch</a> (<a class="el" href="classMACS_1_1HttpServer_1_1HttpPage.html">HttpPage</a> page, object defaultValue=null)</td></tr>
+<tr class="memdesc:a71335a22b3b7e3ac7f5740557312d5ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formの値をValueに取り込む  <a href="#a71335a22b3b7e3ac7f5740557312d5ce"></a><br/></td></tr>
+<tr class="separator:a71335a22b3b7e3ac7f5740557312d5ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 変数</h2></td></tr>
+<tr class="memitem:a683d86048d36d119871097d1da512af1"><td class="memItemLeft" align="right" valign="top">object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#a683d86048d36d119871097d1da512af1">Value</a></td></tr>
+<tr class="memdesc:a683d86048d36d119871097d1da512af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィジェットの持つ値  <a href="#a683d86048d36d119871097d1da512af1"></a><br/></td></tr>
+<tr class="separator:a683d86048d36d119871097d1da512af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c9fec6750ce38ba5bd7cc1570b5bed7"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#a3c9fec6750ce38ba5bd7cc1570b5bed7">Name</a></td></tr>
+<tr class="memdesc:a3c9fec6750ce38ba5bd7cc1570b5bed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィジェットの名前  <a href="#a3c9fec6750ce38ba5bd7cc1570b5bed7"></a><br/></td></tr>
+<tr class="separator:a3c9fec6750ce38ba5bd7cc1570b5bed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fe7812733e6bbb25cfb930f89721c3d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#a5fe7812733e6bbb25cfb930f89721c3d">ID</a></td></tr>
+<tr class="memdesc:a5fe7812733e6bbb25cfb930f89721c3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィジェットのID名  <a href="#a5fe7812733e6bbb25cfb930f89721c3d"></a><br/></td></tr>
+<tr class="separator:a5fe7812733e6bbb25cfb930f89721c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712e22de0c9f30911a00001abde3b269"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#a712e22de0c9f30911a00001abde3b269">CssClass</a></td></tr>
+<tr class="memdesc:a712e22de0c9f30911a00001abde3b269"><td class="mdescLeft">&#160;</td><td class="mdescRight">CSSのクラス名  <a href="#a712e22de0c9f30911a00001abde3b269"></a><br/></td></tr>
+<tr class="separator:a712e22de0c9f30911a00001abde3b269"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a977111afd4bf8f26b05925cdd0f81b1c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#a977111afd4bf8f26b05925cdd0f81b1c">Disabled</a></td></tr>
+<tr class="memdesc:a977111afd4bf8f26b05925cdd0f81b1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力禁止属性  <a href="#a977111afd4bf8f26b05925cdd0f81b1c"></a><br/></td></tr>
+<tr class="separator:a977111afd4bf8f26b05925cdd0f81b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc4ab9e122219c85ad1b3fd26be57352"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#acc4ab9e122219c85ad1b3fd26be57352">OnClick</a></td></tr>
+<tr class="memdesc:acc4ab9e122219c85ad1b3fd26be57352"><td class="mdescLeft">&#160;</td><td class="mdescRight">クリック時に呼び出されるJavaScript  <a href="#acc4ab9e122219c85ad1b3fd26be57352"></a><br/></td></tr>
+<tr class="separator:acc4ab9e122219c85ad1b3fd26be57352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a555c537275b1def1f590632893f33d96"><td class="memItemLeft" align="right" valign="top">object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#a555c537275b1def1f590632893f33d96">Width</a></td></tr>
+<tr class="memdesc:a555c537275b1def1f590632893f33d96"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィジェットの表示幅  <a href="#a555c537275b1def1f590632893f33d96"></a><br/></td></tr>
+<tr class="separator:a555c537275b1def1f590632893f33d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a510741eaba8c717798fa9f1ef42c3a54"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#a510741eaba8c717798fa9f1ef42c3a54">Visible</a></td></tr>
+<tr class="memdesc:a510741eaba8c717798fa9f1ef42c3a54"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィジェットの表示属性  <a href="#a510741eaba8c717798fa9f1ef42c3a54"></a><br/></td></tr>
+<tr class="separator:a510741eaba8c717798fa9f1ef42c3a54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a321960d35b0ad64d159593207f237750"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#a321960d35b0ad64d159593207f237750">InLineError</a></td></tr>
+<tr class="memdesc:a321960d35b0ad64d159593207f237750"><td class="mdescLeft">&#160;</td><td class="mdescRight">インラインエラー表示をするかどうか  <a href="#a321960d35b0ad64d159593207f237750"></a><br/></td></tr>
+<tr class="separator:a321960d35b0ad64d159593207f237750"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab90ac35fe878368818cb987f98e82624"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#ab90ac35fe878368818cb987f98e82624">ErrorMessage</a></td></tr>
+<tr class="memdesc:ab90ac35fe878368818cb987f98e82624"><td class="mdescLeft">&#160;</td><td class="mdescRight">エラー時のメッセージ  <a href="#ab90ac35fe878368818cb987f98e82624"></a><br/></td></tr>
+<tr class="separator:ab90ac35fe878368818cb987f98e82624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected メソッド</h2></td></tr>
+<tr class="memitem:a84212a40f36dbf839f08308ce61585c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#a84212a40f36dbf839f08308ce61585c0">CommonOptions</a> (StringBuilder sb)</td></tr>
+<tr class="memdesc:a84212a40f36dbf839f08308ce61585c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">タグ内の共通オプションをレンダリングする  <a href="#a84212a40f36dbf839f08308ce61585c0"></a><br/></td></tr>
+<tr class="separator:a84212a40f36dbf839f08308ce61585c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a174746318f480351014b2d12a1f78e0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#a174746318f480351014b2d12a1f78e0b">RenderInLineError</a> (StringBuilder sb)</td></tr>
+<tr class="memdesc:a174746318f480351014b2d12a1f78e0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">エラーメッセージをレンダリングする  <a href="#a174746318f480351014b2d12a1f78e0b"></a><br/></td></tr>
+<tr class="separator:a174746318f480351014b2d12a1f78e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected メソッド</h2></td></tr>
+<tr class="memitem:a62ad29534b2508779b37111d9ab5194d"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#a62ad29534b2508779b37111d9ab5194d">QE</a> (string x)</td></tr>
+<tr class="memdesc:a62ad29534b2508779b37111d9ab5194d"><td class="mdescLeft">&#160;</td><td class="mdescRight">クォートをエスケープする。 派生クラスでよく使うので便宜上用意している。  <a href="#a62ad29534b2508779b37111d9ab5194d"></a><br/></td></tr>
+<tr class="separator:a62ad29534b2508779b37111d9ab5194d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72baf0239f1c6ac3f84a1d6450931054"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#a72baf0239f1c6ac3f84a1d6450931054">HE</a> (string x)</td></tr>
+<tr class="memdesc:a72baf0239f1c6ac3f84a1d6450931054"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTMLエスケープする。 派生クラスでよく使うので便宜上用意している。  <a href="#a72baf0239f1c6ac3f84a1d6450931054"></a><br/></td></tr>
+<tr class="separator:a72baf0239f1c6ac3f84a1d6450931054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a8d7777faae6cd1fb8db5c4c947cffc"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#a0a8d7777faae6cd1fb8db5c4c947cffc">UE</a> (string x)</td></tr>
+<tr class="memdesc:a0a8d7777faae6cd1fb8db5c4c947cffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">URLエスケープする。 派生クラスでよく使うので便宜上用意している。  <a href="#a0a8d7777faae6cd1fb8db5c4c947cffc"></a><br/></td></tr>
+<tr class="separator:a0a8d7777faae6cd1fb8db5c4c947cffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:a831157a4b5015baf0750a7c24c6bba71"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#a831157a4b5015baf0750a7c24c6bba71">Enabled</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a831157a4b5015baf0750a7c24c6bba71"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力許可属性  <a href="#a831157a4b5015baf0750a7c24c6bba71"></a><br/></td></tr>
+<tr class="separator:a831157a4b5015baf0750a7c24c6bba71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">説明</h2>
+<div class="textblock"><p>HTMLのForm要素コード作成に便利なユーティリティクラス。 <a class="el" href="classMACS_1_1HttpServer_1_1Button.html" title="input button要素 ">Button</a>, <a class="el" href="classMACS_1_1HttpServer_1_1TextBox.html" title="input text要素 ">TextBox</a> などのクラスの共通部分。 </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00018">18</a> 行で定義されています。</p>
+</div><h2 class="groupheader">コンストラクタとデストラクタ</h2>
+<a class="anchor" id="a0843645e2bc3c3099bec3e406bd0da9d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.HttpServer.WebControl.WebControl </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>要素名、IDを指定したコンストラクタ </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00139">139</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa66bd089ae4f86dcc6d7ce75cc8020ce"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.HttpServer.WebControl.WebControl </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>要素名だけを指定したコンストラクタ </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00147">147</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a2ca4424e0e62fe425bf87cff7583c71a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.HttpServer.WebControl.WebControl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>デフォルトコンストラクタ </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00154">154</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド</h2>
+<a class="anchor" id="a17c9758cd14a6a8e5d163f11dff7388b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HttpServer.WebControl.AddCssClass </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>classname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CSSクラスを追加する </p>
+<p>すでにそのクラスが設定されている場合には何もしない </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00058">58</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="HttpValidationPage_8cs_source.html#l00696">MACS.HttpServer.HttpValidationPage.ValidateASCIIString()</a>, <a class="el" href="HttpValidationPage_8cs_source.html#l00076">MACS.HttpServer.HttpValidationPage.ValidateByteLength()</a>, <a class="el" href="HttpValidationPage_8cs_source.html#l00485">MACS.HttpServer.HttpValidationPage.ValidateDomain()</a>, <a class="el" href="HttpValidationPage_8cs_source.html#l00421">MACS.HttpServer.HttpValidationPage.ValidateHwaddr()</a>, <a class="el" href="HttpValidationPage_8cs_source.html#l00117">MACS.HttpServer.HttpValidationPage.ValidateInt()</a>, <a class="el" href="HttpValidationPage_8cs_source.html#l00269">MACS.HttpServer.HttpValidationPage.ValidateIpaddr()</a>, <a class="el" href="HttpValidationPage_8cs_source.html#l00036">MACS.HttpServer.HttpValidationPage.ValidateLength()</a>, <a class="el" href="HttpValidationPage_8cs_source.html#l00539">MACS.HttpServer.HttpValidationPage.ValidateMailAddr()</a>, <a class="el" href="HttpValidationPage_8cs_source.html#l00370">MACS.HttpServer.HttpValidationPage.ValidateNetmask()</a>, と <a class="el" href="HttpValidationPage_8cs_source.html#l00655">MACS.HttpServer.HttpValidationPage.ValidateUnixTime()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae1bd2064cf48fbe48b4ea49902dc4b64"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HttpServer.WebControl.RemoveCssClass </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>classname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CSSクラスを削除する </p>
+<p>そのクラスが設定されていない場合には何もしない </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00078">78</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="HttpValidationPage_8cs_source.html#l00696">MACS.HttpServer.HttpValidationPage.ValidateASCIIString()</a>, <a class="el" href="HttpValidationPage_8cs_source.html#l00076">MACS.HttpServer.HttpValidationPage.ValidateByteLength()</a>, <a class="el" href="HttpValidationPage_8cs_source.html#l00485">MACS.HttpServer.HttpValidationPage.ValidateDomain()</a>, <a class="el" href="HttpValidationPage_8cs_source.html#l00421">MACS.HttpServer.HttpValidationPage.ValidateHwaddr()</a>, <a class="el" href="HttpValidationPage_8cs_source.html#l00117">MACS.HttpServer.HttpValidationPage.ValidateInt()</a>, <a class="el" href="HttpValidationPage_8cs_source.html#l00307">MACS.HttpServer.HttpValidationPage.ValidateIp4addr()</a>, <a class="el" href="HttpValidationPage_8cs_source.html#l00269">MACS.HttpServer.HttpValidationPage.ValidateIpaddr()</a>, <a class="el" href="HttpValidationPage_8cs_source.html#l00036">MACS.HttpServer.HttpValidationPage.ValidateLength()</a>, <a class="el" href="HttpValidationPage_8cs_source.html#l00539">MACS.HttpServer.HttpValidationPage.ValidateMailAddr()</a>, <a class="el" href="HttpValidationPage_8cs_source.html#l00370">MACS.HttpServer.HttpValidationPage.ValidateNetmask()</a>, <a class="el" href="HttpValidationPage_8cs_source.html#l00182">MACS.HttpServer.HttpValidationPage.ValidateUInt()</a>, と <a class="el" href="HttpValidationPage_8cs_source.html#l00655">MACS.HttpServer.HttpValidationPage.ValidateUnixTime()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afe0b84e374e3b68a1f231767399b744a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override string MACS.HttpServer.WebControl.ToString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>レンダリングする </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00159">159</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a0f44d8d494e1ddce26f01d186071e5ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract StringBuilder MACS.HttpServer.WebControl.Render </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>レンダリングする（StringBuilder版） </p>
+<p>派生クラスで実装する事。 </p>
+
+<p><a class="el" href="classMACS_1_1HttpServer_1_1DropDown.html#a7e36d1f66c8906d42c2ac83eeae0cdde">MACS.HttpServer.DropDown</a>, <a class="el" href="classMACS_1_1HttpServer_1_1TextBox.html#a0af644b6602116bafe86fdbafc96d5d7">MACS.HttpServer.TextBox</a>, <a class="el" href="classMACS_1_1HttpServer_1_1CheckBox.html#a30a84669453ca8d826a5357c6649bb3c">MACS.HttpServer.CheckBox</a>, <a class="el" href="classMACS_1_1HttpServer_1_1DateSelector.html#a7dee11e2a645ee36739cac5f86881de1">MACS.HttpServer.DateSelector</a>, <a class="el" href="classMACS_1_1HttpServer_1_1RadioButton.html#aa3a75c4ac48c7f4adf8adcc843f3bfe2">MACS.HttpServer.RadioButton</a>, <a class="el" href="classMACS_1_1HttpServer_1_1RadioSelector_3_01T_01_4.html#aadb26d9dfc214d053d7def3b16d5a0ee">MACS.HttpServer.RadioSelector&lt; T &gt;</a>, <a class="el" href="classMACS_1_1HttpServer_1_1TimeSelector.html#ac6fabaf24e303dd172e5aafff8e9d239">MACS.HttpServer.TimeSelector</a>, <a class="el" href="classMACS_1_1HttpServer_1_1Button.html#a8aa51d4ba09fd0dc9426ae1cefc7df4c">MACS.HttpServer.Button</a>, <a class="el" href="classMACS_1_1HttpServer_1_1DropDownSelector_3_01T_01_4.html#a2a9c51019f995bbb49f34e666413d159">MACS.HttpServer.DropDownSelector&lt; T &gt;</a>, <a class="el" href="classMACS_1_1HttpServer_1_1TextArea.html#a2b8b9b73f7e54ab45d20982151f1f63b">MACS.HttpServer.TextArea</a>, <a class="el" href="classMACS_1_1HttpServer_1_1YesNoSelector.html#a283a9536df55920102436536420b96a7">MACS.HttpServer.YesNoSelector</a>, <a class="el" href="classMACS_1_1HttpServer_1_1Literal.html#ad8acbda5041b85f6cc7b87ac4a52d5a1">MACS.HttpServer.Literal</a>, と <a class="el" href="classMACS_1_1HttpServer_1_1TemplateFlag.html#a5362f26f1adbdab04aece795e13e056c">MACS.HttpServer.TemplateFlag</a>で実装されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a71335a22b3b7e3ac7f5740557312d5ce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void MACS.HttpServer.WebControl.Fetch </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1HttpServer_1_1HttpPage.html">HttpPage</a>&#160;</td>
+          <td class="paramname"><em>page</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>defaultValue</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Formの値をValueに取り込む </p>
+<p>テンプレートHTML内で Name= を指定している場合、正しい値を読み取る ことができません。（Fetchをする時点ではテンプレートをパースしてい ないため。） </p>
+
+<p><a class="el" href="classMACS_1_1HttpServer_1_1DateSelector.html#addad987a3e85eeeefa5ab9f0237543ce">MACS.HttpServer.DateSelector</a>, <a class="el" href="classMACS_1_1HttpServer_1_1TimeSelector.html#aeb19e4b4e3bddd33331d1744241384e4">MACS.HttpServer.TimeSelector</a>, <a class="el" href="classMACS_1_1HttpServer_1_1RadioSelector_3_01T_01_4.html#a7307e6ccc9ea0006292bd88c21826a14">MACS.HttpServer.RadioSelector&lt; T &gt;</a>, <a class="el" href="classMACS_1_1HttpServer_1_1CheckBox.html#a7705fdbdeb0e2a6781857442215731de">MACS.HttpServer.CheckBox</a>, <a class="el" href="classMACS_1_1HttpServer_1_1DropDownSelector_3_01T_01_4.html#ab012058835eff822b318fcdcc534987e">MACS.HttpServer.DropDownSelector&lt; T &gt;</a>, と <a class="el" href="classMACS_1_1HttpServer_1_1YesNoSelector.html#af32edbf242990d576f5fec98c00da269">MACS.HttpServer.YesNoSelector</a>で再定義されています。</p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00183">183</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a84212a40f36dbf839f08308ce61585c0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HttpServer.WebControl.CommonOptions </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>タグ内の共通オプションをレンダリングする </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00206">206</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a174746318f480351014b2d12a1f78e0b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HttpServer.WebControl.RenderInLineError </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>エラーメッセージをレンダリングする </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00246">246</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a62ad29534b2508779b37111d9ab5194d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HttpServer.WebControl.QE </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>クォートをエスケープする。 派生クラスでよく使うので便宜上用意している。 </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00258">258</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a72baf0239f1c6ac3f84a1d6450931054"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HttpServer.WebControl.HE </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTMLエスケープする。 派生クラスでよく使うので便宜上用意している。 </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00266">266</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a0a8d7777faae6cd1fb8db5c4c947cffc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HttpServer.WebControl.UE </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>URLエスケープする。 派生クラスでよく使うので便宜上用意している。 </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00274">274</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">変数</h2>
+<a class="anchor" id="a683d86048d36d119871097d1da512af1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">object MACS.HttpServer.WebControl.Value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ウィジェットの持つ値 </p>
+<p><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html#afe0b84e374e3b68a1f231767399b744a" title="レンダリングする ">ToString()</a>を実装するオブジェクトでなければいけない。 </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00028">28</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a3c9fec6750ce38ba5bd7cc1570b5bed7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.HttpServer.WebControl.Name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ウィジェットの名前 </p>
+<p>一般的には、アプリケーション内のウィジェット変数名と同じになる。 </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00038">38</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="HttpTemplatePage_8cs_source.html#l00129">MACS.HttpServer.HttpTemplatePage.AssignWebControls()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5fe7812733e6bbb25cfb930f89721c3d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.HttpServer.WebControl.ID</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ウィジェットのID名 </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00043">43</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a712e22de0c9f30911a00001abde3b269"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.HttpServer.WebControl.CssClass</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CSSのクラス名 </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00048">48</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a977111afd4bf8f26b05925cdd0f81b1c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.HttpServer.WebControl.Disabled</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>入力禁止属性 </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00096">96</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="acc4ab9e122219c85ad1b3fd26be57352"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.HttpServer.WebControl.OnClick</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>クリック時に呼び出されるJavaScript </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00114">114</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a555c537275b1def1f590632893f33d96"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">object MACS.HttpServer.WebControl.Width</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ウィジェットの表示幅 </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00119">119</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a510741eaba8c717798fa9f1ef42c3a54"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.HttpServer.WebControl.Visible</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ウィジェットの表示属性 </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00124">124</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a321960d35b0ad64d159593207f237750"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.HttpServer.WebControl.InLineError</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>インラインエラー表示をするかどうか </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00129">129</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="HttpValidationPage_8cs_source.html#l00740">MACS.HttpServer.HttpValidationPage.UseInLineError()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab90ac35fe878368818cb987f98e82624"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.HttpServer.WebControl.ErrorMessage</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>エラー時のメッセージ </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00134">134</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="HttpValidationPage_8cs_source.html#l00771">MACS.HttpServer.HttpValidationPage.AddValidationMessage()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">プロパティ</h2>
+<a class="anchor" id="a831157a4b5015baf0750a7c24c6bba71"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.HttpServer.WebControl.Enabled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>入力許可属性 </p>
+<p>Disabledの逆を示すプロパティ。 </p>
+
+<p> <a class="el" href="WebControl_8cs_source.html">WebControl.cs</a> の <a class="el" href="WebControl_8cs_source.html#l00106">106</a> 行で定義されています。</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="WebControl_8cs_source.html">WebControl.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceMACS.html">MACS</a></li><li class="navelem"><a class="el" href="namespaceMACS_1_1HttpServer.html">HttpServer</a></li><li class="navelem"><a class="el" href="classMACS_1_1HttpServer_1_1WebControl.html">WebControl</a></li>
+    <li class="footer">MACS.HttpServerに対してWed Jun 27 2018 17:45:47に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

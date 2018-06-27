@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>PDFReport: テキストをボックスでまとめる</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PDFReport
+   </div>
+   <div id="projectbrief">PDF Table Report Generator</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('Example1_7.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">テキストをボックスでまとめる </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Example1_6では <code>box</code> タグを枠線を引く目的で使いましたが、 <code>box</code> タグには描画要素をまとめるという用途もあります。</p>
+<p>Example1_7.xml </p>
+<pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;document&gt;
+  &lt;font name="default" size="12" /&gt;
+  &lt;font name="title" size="24" /&gt;
+  &lt;font name="small" size="9" /&gt;
+  &lt;font name="large" size="18" /&gt;
+
+  &lt;text x="50%" y="0mm" align="center" font="title"&gt;テキストをボックスでまとめる&lt;/text&gt;
+
+  &lt;text x="10mm" y="10mm"&gt;テキスト1&lt;/text&gt;
+  &lt;text x="100%" y="20mm" align="right" font="small"&gt;テキスト2&lt;/text&gt;
+
+  &lt;box x="20mm" y="30mm" width="100mm" height="150mm" border="0.1mm" font="large"&gt;
+    &lt;text x="10mm" y="10mm"&gt;テキスト3&lt;/text&gt;
+    &lt;text x="100%" y="20mm" align="right" font="small"&gt;テキスト4&lt;/text&gt;
+
+    &lt;box x="20mm" y="30mm" width="50mm" height="100mm" border="0.3mm"&gt;
+      &lt;text x="10mm" y="10mm"&gt;テキスト5&lt;/text&gt;
+      &lt;text x="100%" y="20mm" align="right" font="small"&gt;テキスト6&lt;/text&gt;
+    &lt;/box&gt;
+
+  &lt;/box&gt;
+
+&lt;/document&gt;
+</pre><p>結果は、<a href="Example1_7.pdf">Example1_7.pdf</a>をご覧下さい。</p>
+<p>「テキスト3」と「テキスト4」が <code>box</code> タグの内側に入っている点に注意して下さい。 この場合、「テキスト3」の位置指定である「x="10mm" y="10mm"」は、 <code>box</code> の左上隅を起点とした座標になります。 つまり、「テキスト3」は実際には X座標 30mm、Y座標40mm の位置に描画されます。</p>
+<p>さらに、 <code>box</code> を入れ子にする事もできます。</p>
+<p><code>box</code> に属性 <code>font</code> を付けると、その内部の <code>text</code> タグに <code>font</code> 属性を付けたのと同じ効果が得られます。</p>
+<p>この例ではわかりやすいように <code>box</code> に枠線をつけましたが、もちろん枠線無しで <code>box</code> を使うこともできます。</p>
+<p>若干トリッキーな例ですが、用紙の中心からの位置指定をしたい場合には、次のようにすると実現できます。 </p>
+<pre class="fragment">  &lt;box x="50%" y="50%" width="50%" height="50%"&gt;
+    &lt;text x="10mm" y="10mm"&gt;X&lt;/text&gt;
+  &lt;/box&gt;
+</pre><p> 文字Xは、中心から右に10mm、下に10mmの位置に描画されます。</p>
+<p>また、中心から左、上方向の位置を指定したい場合には、次のようにします。 </p>
+<pre class="fragment">  &lt;box x="0" y="0" width="50%" height="50%"&gt;
+    &lt;text x="!10mm" y="!10mm"&gt;Y&lt;/text&gt;
+  &lt;/box&gt;
+</pre><p> 文字Yは、中心から左に10mm、上に10mmの位置に描画されます。 </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="index.html">index</a></li><li class="navelem"><a class="el" href="PDF_xE5_xB8_xB3_xE7_xA5_xA8_xE7_x94_x9F_xE6_x88_x90_xE3_x82_xB7_xE3_x82_xB9_xE3_x83_x86_xE3_x83_0c0cb9027cd8211d527ea2b3c0c75b6c.html">PDF帳票生成システム利用サンプル</a></li>
+    <li class="footer">PDFReportに対してWed Jun 27 2018 17:45:49に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

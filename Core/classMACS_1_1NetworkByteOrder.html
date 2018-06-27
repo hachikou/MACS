@@ -1,0 +1,2463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.Core: クラス MACS.NetworkByteOrder</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.Core
+   </div>
+   <div id="projectbrief">Miscellaneous Assets for C-Sharp</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classMACS_1_1NetworkByteOrder.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Static Public メソッド</a> &#124;
+<a href="classMACS_1_1NetworkByteOrder-members.html">すべてのメンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス MACS.NetworkByteOrder</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>ネットワークバイトオーダ操作ユーティリティクラス  
+ <a href="classMACS_1_1NetworkByteOrder.html#details">[詳細]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public メソッド</h2></td></tr>
+<tr class="memitem:a7ea748412b736fc2c1f8ecb5f6fd5e7e"><td class="memItemLeft" align="right" valign="top">static ulong&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a7ea748412b736fc2c1f8ecb5f6fd5e7e">ToULong</a> (byte[] buf)</td></tr>
+<tr class="memdesc:a7ea748412b736fc2c1f8ecb5f6fd5e7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダで64bit符号無し整数を読み取る  <a href="#a7ea748412b736fc2c1f8ecb5f6fd5e7e"></a><br/></td></tr>
+<tr class="separator:a7ea748412b736fc2c1f8ecb5f6fd5e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c7e6a4bc781d98e3f57c064438e1015"><td class="memItemLeft" align="right" valign="top">static ulong&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a7c7e6a4bc781d98e3f57c064438e1015">ToULong</a> (byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a7c7e6a4bc781d98e3f57c064438e1015"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダで64bit符号無し整数を読み取る  <a href="#a7c7e6a4bc781d98e3f57c064438e1015"></a><br/></td></tr>
+<tr class="separator:a7c7e6a4bc781d98e3f57c064438e1015"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a826a4dfee488b79ee55df00dc35bafc1"><td class="memItemLeft" align="right" valign="top">static ulong&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a826a4dfee488b79ee55df00dc35bafc1">ToULong</a> (byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:a826a4dfee488b79ee55df00dc35bafc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダで64bit符号無し整数を読み取る  <a href="#a826a4dfee488b79ee55df00dc35bafc1"></a><br/></td></tr>
+<tr class="separator:a826a4dfee488b79ee55df00dc35bafc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b38b7d0426984f979b8028f8a794415"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a0b38b7d0426984f979b8028f8a794415">ToBytes</a> (ulong val, byte[] buf)</td></tr>
+<tr class="memdesc:a0b38b7d0426984f979b8028f8a794415"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーで64bit符号無し整数を書き込む  <a href="#a0b38b7d0426984f979b8028f8a794415"></a><br/></td></tr>
+<tr class="separator:a0b38b7d0426984f979b8028f8a794415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fb0ac5c30e007076fa4f7c53cda5137"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a4fb0ac5c30e007076fa4f7c53cda5137">ToBytes</a> (ulong val, byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a4fb0ac5c30e007076fa4f7c53cda5137"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーで64bit符号無し整数を書き込む  <a href="#a4fb0ac5c30e007076fa4f7c53cda5137"></a><br/></td></tr>
+<tr class="separator:a4fb0ac5c30e007076fa4f7c53cda5137"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3311754b9bc227a04230f25ac68cbb38"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a3311754b9bc227a04230f25ac68cbb38">ToBytes</a> (ulong val, byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:a3311754b9bc227a04230f25ac68cbb38"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーで64bit符号無し整数を書き込む  <a href="#a3311754b9bc227a04230f25ac68cbb38"></a><br/></td></tr>
+<tr class="separator:a3311754b9bc227a04230f25ac68cbb38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a199a80dba83652350728171d09633fc3"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a199a80dba83652350728171d09633fc3">ToLong</a> (byte[] buf)</td></tr>
+<tr class="memdesc:a199a80dba83652350728171d09633fc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーで64bit符号付き整数を読み取る  <a href="#a199a80dba83652350728171d09633fc3"></a><br/></td></tr>
+<tr class="separator:a199a80dba83652350728171d09633fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4d8b9e88a47e85abe9bfd98605dcaec"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#ab4d8b9e88a47e85abe9bfd98605dcaec">ToLong</a> (byte[] buf, int offset)</td></tr>
+<tr class="memdesc:ab4d8b9e88a47e85abe9bfd98605dcaec"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーで64bit符号付き整数を読み取る  <a href="#ab4d8b9e88a47e85abe9bfd98605dcaec"></a><br/></td></tr>
+<tr class="separator:ab4d8b9e88a47e85abe9bfd98605dcaec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aade39631d8dae516a2c4cd068dfc6745"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#aade39631d8dae516a2c4cd068dfc6745">ToLong</a> (byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:aade39631d8dae516a2c4cd068dfc6745"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーで64bit符号付き整数を読み取る  <a href="#aade39631d8dae516a2c4cd068dfc6745"></a><br/></td></tr>
+<tr class="separator:aade39631d8dae516a2c4cd068dfc6745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77cfed92ed5605e533b4afa957a60402"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a77cfed92ed5605e533b4afa957a60402">ToBytes</a> (long val, byte[] buf)</td></tr>
+<tr class="memdesc:a77cfed92ed5605e533b4afa957a60402"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーで64bit符号付き整数を書き込む  <a href="#a77cfed92ed5605e533b4afa957a60402"></a><br/></td></tr>
+<tr class="separator:a77cfed92ed5605e533b4afa957a60402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4813257e36a919b2db74353d96d948a3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a4813257e36a919b2db74353d96d948a3">ToBytes</a> (long val, byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a4813257e36a919b2db74353d96d948a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーで64bit符号付き整数を書き込む  <a href="#a4813257e36a919b2db74353d96d948a3"></a><br/></td></tr>
+<tr class="separator:a4813257e36a919b2db74353d96d948a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af684b975a60c0b2f82f7ae6cf9373e4a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#af684b975a60c0b2f82f7ae6cf9373e4a">ToBytes</a> (long val, byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:af684b975a60c0b2f82f7ae6cf9373e4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーで64bit符号付き整数を書き込む  <a href="#af684b975a60c0b2f82f7ae6cf9373e4a"></a><br/></td></tr>
+<tr class="separator:af684b975a60c0b2f82f7ae6cf9373e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a294ebded1723ebace8404135a4f76029"><td class="memItemLeft" align="right" valign="top">static uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a294ebded1723ebace8404135a4f76029">ToUInt</a> (byte[] buf)</td></tr>
+<tr class="memdesc:a294ebded1723ebace8404135a4f76029"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダで32bit符号無し整数を読み取る  <a href="#a294ebded1723ebace8404135a4f76029"></a><br/></td></tr>
+<tr class="separator:a294ebded1723ebace8404135a4f76029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fb4ea88349dbb4a6a5717a86f3a2cb1"><td class="memItemLeft" align="right" valign="top">static uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a4fb4ea88349dbb4a6a5717a86f3a2cb1">ToUInt</a> (byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a4fb4ea88349dbb4a6a5717a86f3a2cb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダで32bit符号無し整数を読み取る  <a href="#a4fb4ea88349dbb4a6a5717a86f3a2cb1"></a><br/></td></tr>
+<tr class="separator:a4fb4ea88349dbb4a6a5717a86f3a2cb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5627df45659f52a9777dc5322487fefe"><td class="memItemLeft" align="right" valign="top">static uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a5627df45659f52a9777dc5322487fefe">ToUInt</a> (byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:a5627df45659f52a9777dc5322487fefe"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダで32bit符号無し整数を読み取る  <a href="#a5627df45659f52a9777dc5322487fefe"></a><br/></td></tr>
+<tr class="separator:a5627df45659f52a9777dc5322487fefe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6e9118fab21beccd01595fbd8ba05bd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#aa6e9118fab21beccd01595fbd8ba05bd">ToBytes</a> (uint val, byte[] buf)</td></tr>
+<tr class="memdesc:aa6e9118fab21beccd01595fbd8ba05bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーで32bit符号無し整数を書き込む  <a href="#aa6e9118fab21beccd01595fbd8ba05bd"></a><br/></td></tr>
+<tr class="separator:aa6e9118fab21beccd01595fbd8ba05bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a200bf2303e06422d8a27653d05566c16"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a200bf2303e06422d8a27653d05566c16">ToBytes</a> (uint val, byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a200bf2303e06422d8a27653d05566c16"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーで32bit符号無し整数を書き込む  <a href="#a200bf2303e06422d8a27653d05566c16"></a><br/></td></tr>
+<tr class="separator:a200bf2303e06422d8a27653d05566c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a596f91175329624f5658c9e61ed2f37c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a596f91175329624f5658c9e61ed2f37c">ToBytes</a> (uint val, byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:a596f91175329624f5658c9e61ed2f37c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーで32bit符号無し整数を書き込む  <a href="#a596f91175329624f5658c9e61ed2f37c"></a><br/></td></tr>
+<tr class="separator:a596f91175329624f5658c9e61ed2f37c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace9ef7612aa9f985601ad8ceee2e408a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#ace9ef7612aa9f985601ad8ceee2e408a">ToInt</a> (byte[] buf)</td></tr>
+<tr class="memdesc:ace9ef7612aa9f985601ad8ceee2e408a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダで32bit符号付き整数を読み取る  <a href="#ace9ef7612aa9f985601ad8ceee2e408a"></a><br/></td></tr>
+<tr class="separator:ace9ef7612aa9f985601ad8ceee2e408a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d87c7e190f30e42931a8b57bd08b4a1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a2d87c7e190f30e42931a8b57bd08b4a1">ToInt</a> (byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a2d87c7e190f30e42931a8b57bd08b4a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダで32bit符号付き整数を読み取る  <a href="#a2d87c7e190f30e42931a8b57bd08b4a1"></a><br/></td></tr>
+<tr class="separator:a2d87c7e190f30e42931a8b57bd08b4a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73f26446a4b6181bdb4148ac6e8130d9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a73f26446a4b6181bdb4148ac6e8130d9">ToInt</a> (byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:a73f26446a4b6181bdb4148ac6e8130d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダで32bit符号付き整数を読み取る  <a href="#a73f26446a4b6181bdb4148ac6e8130d9"></a><br/></td></tr>
+<tr class="separator:a73f26446a4b6181bdb4148ac6e8130d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a412a3c4bc4db5a28cb0362c2f97f16da"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a412a3c4bc4db5a28cb0362c2f97f16da">ToBytes</a> (int val, byte[] buf)</td></tr>
+<tr class="memdesc:a412a3c4bc4db5a28cb0362c2f97f16da"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダで32bit符号付き整数を書き込む  <a href="#a412a3c4bc4db5a28cb0362c2f97f16da"></a><br/></td></tr>
+<tr class="separator:a412a3c4bc4db5a28cb0362c2f97f16da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82b5c7bab84b6a368ce8a6191eacaecc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a82b5c7bab84b6a368ce8a6191eacaecc">ToBytes</a> (int val, byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a82b5c7bab84b6a368ce8a6191eacaecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダで32bit符号付き整数を書き込む  <a href="#a82b5c7bab84b6a368ce8a6191eacaecc"></a><br/></td></tr>
+<tr class="separator:a82b5c7bab84b6a368ce8a6191eacaecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1b4916a3ac8324d58558dd6ec126180"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#ab1b4916a3ac8324d58558dd6ec126180">ToBytes</a> (int val, byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:ab1b4916a3ac8324d58558dd6ec126180"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダで32bit符号付き整数を書き込む  <a href="#ab1b4916a3ac8324d58558dd6ec126180"></a><br/></td></tr>
+<tr class="separator:ab1b4916a3ac8324d58558dd6ec126180"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1352df94f553682322c183b42a0cb75f"><td class="memItemLeft" align="right" valign="top">static ushort&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a1352df94f553682322c183b42a0cb75f">ToUShort</a> (byte[] buf)</td></tr>
+<tr class="memdesc:a1352df94f553682322c183b42a0cb75f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダで16bit符号無し整数を読み取る  <a href="#a1352df94f553682322c183b42a0cb75f"></a><br/></td></tr>
+<tr class="separator:a1352df94f553682322c183b42a0cb75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0202cbf0ac290851968a7e8830b1fe6"><td class="memItemLeft" align="right" valign="top">static ushort&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#ab0202cbf0ac290851968a7e8830b1fe6">ToUShort</a> (byte[] buf, int offset)</td></tr>
+<tr class="memdesc:ab0202cbf0ac290851968a7e8830b1fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダで16bit符号無し整数を読み取る  <a href="#ab0202cbf0ac290851968a7e8830b1fe6"></a><br/></td></tr>
+<tr class="separator:ab0202cbf0ac290851968a7e8830b1fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb6bcc98da7427fe9d1bc426485ac3c1"><td class="memItemLeft" align="right" valign="top">static ushort&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#afb6bcc98da7427fe9d1bc426485ac3c1">ToUShort</a> (byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:afb6bcc98da7427fe9d1bc426485ac3c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダで16bit符号無し整数を読み取る  <a href="#afb6bcc98da7427fe9d1bc426485ac3c1"></a><br/></td></tr>
+<tr class="separator:afb6bcc98da7427fe9d1bc426485ac3c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69a660ef272b89bd6d71fadeaf6d65d2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a69a660ef272b89bd6d71fadeaf6d65d2">ToBytes</a> (ushort val, byte[] buf)</td></tr>
+<tr class="memdesc:a69a660ef272b89bd6d71fadeaf6d65d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーで16bit符号無し整数を書き込む  <a href="#a69a660ef272b89bd6d71fadeaf6d65d2"></a><br/></td></tr>
+<tr class="separator:a69a660ef272b89bd6d71fadeaf6d65d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada7bbd306a70d102ed6d61df330d66ff"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#ada7bbd306a70d102ed6d61df330d66ff">ToBytes</a> (ushort val, byte[] buf, int offset)</td></tr>
+<tr class="memdesc:ada7bbd306a70d102ed6d61df330d66ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーで16bit符号無し整数を書き込む  <a href="#ada7bbd306a70d102ed6d61df330d66ff"></a><br/></td></tr>
+<tr class="separator:ada7bbd306a70d102ed6d61df330d66ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa777c5ba7f9461c4a143b6fad95579ef"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#aa777c5ba7f9461c4a143b6fad95579ef">ToBytes</a> (ushort val, byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:aa777c5ba7f9461c4a143b6fad95579ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーで16bit符号無し整数を書き込む  <a href="#aa777c5ba7f9461c4a143b6fad95579ef"></a><br/></td></tr>
+<tr class="separator:aa777c5ba7f9461c4a143b6fad95579ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03b374809a6afcff56889ccb0c601547"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a03b374809a6afcff56889ccb0c601547">ToShort</a> (byte[] buf)</td></tr>
+<tr class="memdesc:a03b374809a6afcff56889ccb0c601547"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーで16bit符号付き整数を読み取る  <a href="#a03b374809a6afcff56889ccb0c601547"></a><br/></td></tr>
+<tr class="separator:a03b374809a6afcff56889ccb0c601547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee006612680e19210e7c6f5a7524e36c"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#aee006612680e19210e7c6f5a7524e36c">ToShort</a> (byte[] buf, int offset)</td></tr>
+<tr class="memdesc:aee006612680e19210e7c6f5a7524e36c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーで16bit符号付き整数を読み取る  <a href="#aee006612680e19210e7c6f5a7524e36c"></a><br/></td></tr>
+<tr class="separator:aee006612680e19210e7c6f5a7524e36c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af324c40692335e7bc8039766117f1105"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#af324c40692335e7bc8039766117f1105">ToShort</a> (byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:af324c40692335e7bc8039766117f1105"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーで16bit符号付き整数を読み取る  <a href="#af324c40692335e7bc8039766117f1105"></a><br/></td></tr>
+<tr class="separator:af324c40692335e7bc8039766117f1105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12b9b8599e72e102569e5d1663871998"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a12b9b8599e72e102569e5d1663871998">ToBytes</a> (short val, byte[] buf)</td></tr>
+<tr class="memdesc:a12b9b8599e72e102569e5d1663871998"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーで16bit符号付き整数を書き込む  <a href="#a12b9b8599e72e102569e5d1663871998"></a><br/></td></tr>
+<tr class="separator:a12b9b8599e72e102569e5d1663871998"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a845f9c5ca2439a737baa285d0c82bc0b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a845f9c5ca2439a737baa285d0c82bc0b">ToBytes</a> (short val, byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a845f9c5ca2439a737baa285d0c82bc0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーで16bit符号付き整数を書き込む  <a href="#a845f9c5ca2439a737baa285d0c82bc0b"></a><br/></td></tr>
+<tr class="separator:a845f9c5ca2439a737baa285d0c82bc0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fa5c53fb43959c634865211e3ce737c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a8fa5c53fb43959c634865211e3ce737c">ToBytes</a> (short val, byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:a8fa5c53fb43959c634865211e3ce737c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーで16bit符号付き整数を書き込む  <a href="#a8fa5c53fb43959c634865211e3ce737c"></a><br/></td></tr>
+<tr class="separator:a8fa5c53fb43959c634865211e3ce737c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab19a50f0db57f179386447505e11cc2e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#ab19a50f0db57f179386447505e11cc2e">ToBool</a> (byte[] buf)</td></tr>
+<tr class="memdesc:ab19a50f0db57f179386447505e11cc2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">bool値を読み取る  <a href="#ab19a50f0db57f179386447505e11cc2e"></a><br/></td></tr>
+<tr class="separator:ab19a50f0db57f179386447505e11cc2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fd23b315b8f4d85aecb129db8c2b35b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a7fd23b315b8f4d85aecb129db8c2b35b">ToBool</a> (byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a7fd23b315b8f4d85aecb129db8c2b35b"><td class="mdescLeft">&#160;</td><td class="mdescRight">bool値を読み取る  <a href="#a7fd23b315b8f4d85aecb129db8c2b35b"></a><br/></td></tr>
+<tr class="separator:a7fd23b315b8f4d85aecb129db8c2b35b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a717b74d59f2f42b5866a05ae2843aa45"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a717b74d59f2f42b5866a05ae2843aa45">ToBool</a> (byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:a717b74d59f2f42b5866a05ae2843aa45"><td class="mdescLeft">&#160;</td><td class="mdescRight">bool値を読み取る  <a href="#a717b74d59f2f42b5866a05ae2843aa45"></a><br/></td></tr>
+<tr class="separator:a717b74d59f2f42b5866a05ae2843aa45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68f6f43edc2ffa16ec52b4f05f1504b0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a68f6f43edc2ffa16ec52b4f05f1504b0">ToBytes</a> (bool val, byte[] buf)</td></tr>
+<tr class="memdesc:a68f6f43edc2ffa16ec52b4f05f1504b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">bool値を書き込む  <a href="#a68f6f43edc2ffa16ec52b4f05f1504b0"></a><br/></td></tr>
+<tr class="separator:a68f6f43edc2ffa16ec52b4f05f1504b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7d10710afeb95cc7cebb115bf3ceb50"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#ab7d10710afeb95cc7cebb115bf3ceb50">ToBytes</a> (bool val, byte[] buf, int offset)</td></tr>
+<tr class="memdesc:ab7d10710afeb95cc7cebb115bf3ceb50"><td class="mdescLeft">&#160;</td><td class="mdescRight">bool値を書き込む  <a href="#ab7d10710afeb95cc7cebb115bf3ceb50"></a><br/></td></tr>
+<tr class="separator:ab7d10710afeb95cc7cebb115bf3ceb50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45f314532dcd4bb85907aaff90fc9abb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a45f314532dcd4bb85907aaff90fc9abb">ToBytes</a> (bool val, byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:a45f314532dcd4bb85907aaff90fc9abb"><td class="mdescLeft">&#160;</td><td class="mdescRight">bool値を書き込む  <a href="#a45f314532dcd4bb85907aaff90fc9abb"></a><br/></td></tr>
+<tr class="separator:a45f314532dcd4bb85907aaff90fc9abb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6b0f7f0b9b4bfd6dcf8d1b3c6e42dd0"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#ab6b0f7f0b9b4bfd6dcf8d1b3c6e42dd0">ToFloat</a> (byte[] buf)</td></tr>
+<tr class="memdesc:ab6b0f7f0b9b4bfd6dcf8d1b3c6e42dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーでfloat値を読み取る  <a href="#ab6b0f7f0b9b4bfd6dcf8d1b3c6e42dd0"></a><br/></td></tr>
+<tr class="separator:ab6b0f7f0b9b4bfd6dcf8d1b3c6e42dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2570fd6f608e607c777d71b497021433"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a2570fd6f608e607c777d71b497021433">ToFloat</a> (byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a2570fd6f608e607c777d71b497021433"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーでfloat値を読み取る  <a href="#a2570fd6f608e607c777d71b497021433"></a><br/></td></tr>
+<tr class="separator:a2570fd6f608e607c777d71b497021433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0f40f58587959dee8ff015651adfd27"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#ab0f40f58587959dee8ff015651adfd27">ToFloat</a> (byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:ab0f40f58587959dee8ff015651adfd27"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーでfloat値を読み取る  <a href="#ab0f40f58587959dee8ff015651adfd27"></a><br/></td></tr>
+<tr class="separator:ab0f40f58587959dee8ff015651adfd27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd7c801477e64850b5c22e8d659e2b35"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#abd7c801477e64850b5c22e8d659e2b35">ToBytes</a> (float val, byte[] buf)</td></tr>
+<tr class="memdesc:abd7c801477e64850b5c22e8d659e2b35"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーでfloat値を書き込む  <a href="#abd7c801477e64850b5c22e8d659e2b35"></a><br/></td></tr>
+<tr class="separator:abd7c801477e64850b5c22e8d659e2b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb877e62e1ef56bbddad72aaf43dfcb4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#aeb877e62e1ef56bbddad72aaf43dfcb4">ToBytes</a> (float val, byte[] buf, int offset)</td></tr>
+<tr class="memdesc:aeb877e62e1ef56bbddad72aaf43dfcb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーでfloat値を書き込む  <a href="#aeb877e62e1ef56bbddad72aaf43dfcb4"></a><br/></td></tr>
+<tr class="separator:aeb877e62e1ef56bbddad72aaf43dfcb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf8c388d0cc0fb90db4120edaff509c6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#adf8c388d0cc0fb90db4120edaff509c6">ToBytes</a> (float val, byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:adf8c388d0cc0fb90db4120edaff509c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ネットワークバイトオーダーでfloat値を書き込む  <a href="#adf8c388d0cc0fb90db4120edaff509c6"></a><br/></td></tr>
+<tr class="separator:adf8c388d0cc0fb90db4120edaff509c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7382bb105c79487103219981f66c6dc0"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a7382bb105c79487103219981f66c6dc0">ToString</a> (byte[] buf, int offset, int len, Encoding enc)</td></tr>
+<tr class="memdesc:a7382bb105c79487103219981f66c6dc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列を読み取る  <a href="#a7382bb105c79487103219981f66c6dc0"></a><br/></td></tr>
+<tr class="separator:a7382bb105c79487103219981f66c6dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadcab5d0bc4772f2c456f61dcdd775a6"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#aadcab5d0bc4772f2c456f61dcdd775a6">ToString</a> (byte[] buf, ref int offset, int len, Encoding enc)</td></tr>
+<tr class="memdesc:aadcab5d0bc4772f2c456f61dcdd775a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列を読み取る  <a href="#aadcab5d0bc4772f2c456f61dcdd775a6"></a><br/></td></tr>
+<tr class="separator:aadcab5d0bc4772f2c456f61dcdd775a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae13d50b38e07aa4844c1d02ded09b2da"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#ae13d50b38e07aa4844c1d02ded09b2da">ToBytes</a> (string val, byte[] buf, int offset, int len, Encoding enc)</td></tr>
+<tr class="memdesc:ae13d50b38e07aa4844c1d02ded09b2da"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列を書き込む  <a href="#ae13d50b38e07aa4844c1d02ded09b2da"></a><br/></td></tr>
+<tr class="separator:ae13d50b38e07aa4844c1d02ded09b2da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6225ed6224845d0fdf4459f31017f30e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a6225ed6224845d0fdf4459f31017f30e">ToBytes</a> (string val, byte[] buf, ref int offset, int len, Encoding enc)</td></tr>
+<tr class="memdesc:a6225ed6224845d0fdf4459f31017f30e"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列を書き込む  <a href="#a6225ed6224845d0fdf4459f31017f30e"></a><br/></td></tr>
+<tr class="separator:a6225ed6224845d0fdf4459f31017f30e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a988d097172e6885da10d9ec6ea589dcc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#a988d097172e6885da10d9ec6ea589dcc">ToBytes</a> (byte[] val, byte[] buf, int offset, int len)</td></tr>
+<tr class="memdesc:a988d097172e6885da10d9ec6ea589dcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">バイト列を書き込む。 コピー元バイト列の長さが必要サイズ未満の場合には、ゼロで埋められる。  <a href="#a988d097172e6885da10d9ec6ea589dcc"></a><br/></td></tr>
+<tr class="separator:a988d097172e6885da10d9ec6ea589dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa313719e53ac281a6bc9bd0da3ebe2da"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NetworkByteOrder.html#aa313719e53ac281a6bc9bd0da3ebe2da">ToBytes</a> (byte[] val, byte[] buf, ref int offset, int len)</td></tr>
+<tr class="memdesc:aa313719e53ac281a6bc9bd0da3ebe2da"><td class="mdescLeft">&#160;</td><td class="mdescRight">バイト列を書き込む。 コピー元バイト列の長さが必要サイズ未満の場合には、ゼロで埋められる。  <a href="#aa313719e53ac281a6bc9bd0da3ebe2da"></a><br/></td></tr>
+<tr class="separator:aa313719e53ac281a6bc9bd0da3ebe2da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">説明</h2>
+<div class="textblock"><p>ネットワークバイトオーダ操作ユーティリティクラス </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00015">15</a> 行で定義されています。</p>
+</div><h2 class="groupheader">メソッド</h2>
+<a class="anchor" id="a7ea748412b736fc2c1f8ecb5f6fd5e7e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ulong MACS.NetworkByteOrder.ToULong </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダで64bit符号無し整数を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00020">20</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="NetworkByteOrder_8cs_source.html#l00075">MACS.NetworkByteOrder.ToLong()</a>, と <a class="el" href="NetworkByteOrder_8cs_source.html#l00032">MACS.NetworkByteOrder.ToULong()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7c7e6a4bc781d98e3f57c064438e1015"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ulong MACS.NetworkByteOrder.ToULong </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダで64bit符号無し整数を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00026">26</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a826a4dfee488b79ee55df00dc35bafc1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ulong MACS.NetworkByteOrder.ToULong </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダで64bit符号無し整数を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00032">32</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a0b38b7d0426984f979b8028f8a794415"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">ulong&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーで64bit符号無し整数を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00041">41</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="NetworkByteOrder_8cs_source.html#l00067">MACS.NetworkByteOrder.ToBytes()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4fb0ac5c30e007076fa4f7c53cda5137"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">ulong&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーで64bit符号無し整数を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00047">47</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a3311754b9bc227a04230f25ac68cbb38"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">ulong&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーで64bit符号無し整数を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00067">67</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a199a80dba83652350728171d09633fc3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static long MACS.NetworkByteOrder.ToLong </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーで64bit符号付き整数を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00075">75</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab4d8b9e88a47e85abe9bfd98605dcaec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static long MACS.NetworkByteOrder.ToLong </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーで64bit符号付き整数を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00081">81</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aade39631d8dae516a2c4cd068dfc6745"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static long MACS.NetworkByteOrder.ToLong </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーで64bit符号付き整数を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00087">87</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a77cfed92ed5605e533b4afa957a60402"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーで64bit符号付き整数を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00096">96</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4813257e36a919b2db74353d96d948a3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーで64bit符号付き整数を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00102">102</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af684b975a60c0b2f82f7ae6cf9373e4a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーで64bit符号付き整数を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00108">108</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a294ebded1723ebace8404135a4f76029"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint MACS.NetworkByteOrder.ToUInt </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダで32bit符号無し整数を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00116">116</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="NetworkByteOrder_8cs_source.html#l00163">MACS.NetworkByteOrder.ToInt()</a>, と <a class="el" href="NetworkByteOrder_8cs_source.html#l00128">MACS.NetworkByteOrder.ToUInt()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4fb4ea88349dbb4a6a5717a86f3a2cb1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint MACS.NetworkByteOrder.ToUInt </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダで32bit符号無し整数を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00122">122</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5627df45659f52a9777dc5322487fefe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint MACS.NetworkByteOrder.ToUInt </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダで32bit符号無し整数を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00128">128</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa6e9118fab21beccd01595fbd8ba05bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーで32bit符号無し整数を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00137">137</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a200bf2303e06422d8a27653d05566c16"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーで32bit符号無し整数を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00143">143</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a596f91175329624f5658c9e61ed2f37c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーで32bit符号無し整数を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00155">155</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ace9ef7612aa9f985601ad8ceee2e408a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.NetworkByteOrder.ToInt </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダで32bit符号付き整数を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00163">163</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a2d87c7e190f30e42931a8b57bd08b4a1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.NetworkByteOrder.ToInt </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダで32bit符号付き整数を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00169">169</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a73f26446a4b6181bdb4148ac6e8130d9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.NetworkByteOrder.ToInt </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダで32bit符号付き整数を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00175">175</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a412a3c4bc4db5a28cb0362c2f97f16da"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダで32bit符号付き整数を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00184">184</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a82b5c7bab84b6a368ce8a6191eacaecc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダで32bit符号付き整数を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00190">190</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab1b4916a3ac8324d58558dd6ec126180"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダで32bit符号付き整数を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00196">196</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1352df94f553682322c183b42a0cb75f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ushort MACS.NetworkByteOrder.ToUShort </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダで16bit符号無し整数を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00204">204</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="NetworkByteOrder_8cs_source.html#l00247">MACS.NetworkByteOrder.ToShort()</a>, と <a class="el" href="NetworkByteOrder_8cs_source.html#l00216">MACS.NetworkByteOrder.ToUShort()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab0202cbf0ac290851968a7e8830b1fe6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ushort MACS.NetworkByteOrder.ToUShort </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダで16bit符号無し整数を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00210">210</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="afb6bcc98da7427fe9d1bc426485ac3c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ushort MACS.NetworkByteOrder.ToUShort </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダで16bit符号無し整数を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00216">216</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a69a660ef272b89bd6d71fadeaf6d65d2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">ushort&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーで16bit符号無し整数を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00225">225</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ada7bbd306a70d102ed6d61df330d66ff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">ushort&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーで16bit符号無し整数を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00231">231</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa777c5ba7f9461c4a143b6fad95579ef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">ushort&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーで16bit符号無し整数を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00239">239</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a03b374809a6afcff56889ccb0c601547"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static short MACS.NetworkByteOrder.ToShort </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーで16bit符号付き整数を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00247">247</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aee006612680e19210e7c6f5a7524e36c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static short MACS.NetworkByteOrder.ToShort </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーで16bit符号付き整数を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00253">253</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af324c40692335e7bc8039766117f1105"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static short MACS.NetworkByteOrder.ToShort </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーで16bit符号付き整数を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00259">259</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a12b9b8599e72e102569e5d1663871998"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーで16bit符号付き整数を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00268">268</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a845f9c5ca2439a737baa285d0c82bc0b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーで16bit符号付き整数を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00274">274</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8fa5c53fb43959c634865211e3ce737c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーで16bit符号付き整数を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00280">280</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab19a50f0db57f179386447505e11cc2e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool MACS.NetworkByteOrder.ToBool </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>bool値を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00288">288</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a7fd23b315b8f4d85aecb129db8c2b35b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool MACS.NetworkByteOrder.ToBool </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>bool値を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00294">294</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a717b74d59f2f42b5866a05ae2843aa45"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool MACS.NetworkByteOrder.ToBool </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>bool値を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00300">300</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a68f6f43edc2ffa16ec52b4f05f1504b0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>bool値を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00309">309</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab7d10710afeb95cc7cebb115bf3ceb50"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>bool値を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00315">315</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a45f314532dcd4bb85907aaff90fc9abb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>bool値を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00321">321</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab6b0f7f0b9b4bfd6dcf8d1b3c6e42dd0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float MACS.NetworkByteOrder.ToFloat </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーでfloat値を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00329">329</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="NetworkByteOrder_8cs_source.html#l00346">MACS.NetworkByteOrder.ToFloat()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2570fd6f608e607c777d71b497021433"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float MACS.NetworkByteOrder.ToFloat </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーでfloat値を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00335">335</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab0f40f58587959dee8ff015651adfd27"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float MACS.NetworkByteOrder.ToFloat </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーでfloat値を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00346">346</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="abd7c801477e64850b5c22e8d659e2b35"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーでfloat値を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00355">355</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aeb877e62e1ef56bbddad72aaf43dfcb4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーでfloat値を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00361">361</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="adf8c388d0cc0fb90db4120edaff509c6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ネットワークバイトオーダーでfloat値を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00371">371</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a7382bb105c79487103219981f66c6dc0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.NetworkByteOrder.ToString </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoding&#160;</td>
+          <td class="paramname"><em>enc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文字列を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00380">380</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aadcab5d0bc4772f2c456f61dcdd775a6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.NetworkByteOrder.ToString </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoding&#160;</td>
+          <td class="paramname"><em>enc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文字列を読み取る </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00386">386</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae13d50b38e07aa4844c1d02ded09b2da"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoding&#160;</td>
+          <td class="paramname"><em>enc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文字列を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00395">395</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a6225ed6224845d0fdf4459f31017f30e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoding&#160;</td>
+          <td class="paramname"><em>enc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文字列を書き込む </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00404">404</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a988d097172e6885da10d9ec6ea589dcc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>バイト列を書き込む。 コピー元バイト列の長さが必要サイズ未満の場合には、ゼロで埋められる。 </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00417">417</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa313719e53ac281a6bc9bd0da3ebe2da"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.NetworkByteOrder.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>バイト列を書き込む。 コピー元バイト列の長さが必要サイズ未満の場合には、ゼロで埋められる。 </p>
+
+<p> <a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a> の <a class="el" href="NetworkByteOrder_8cs_source.html#l00429">429</a> 行で定義されています。</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="NetworkByteOrder_8cs_source.html">NetworkByteOrder.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceMACS.html">MACS</a></li><li class="navelem"><a class="el" href="classMACS_1_1NetworkByteOrder.html">NetworkByteOrder</a></li>
+    <li class="footer">MACS.Coreに対してWed Jun 27 2018 17:45:44に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

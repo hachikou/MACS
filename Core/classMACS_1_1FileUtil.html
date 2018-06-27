@@ -1,0 +1,1305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.Core: クラス MACS.FileUtil</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.Core
+   </div>
+   <div id="projectbrief">Miscellaneous Assets for C-Sharp</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classMACS_1_1FileUtil.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Static Public メソッド</a> &#124;
+<a href="#pub-static-attribs">Static Public 変数</a> &#124;
+<a href="classMACS_1_1FileUtil-members.html">すべてのメンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス MACS.FileUtil</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>安全なファイルのオープンを提供するクラス  
+ <a href="classMACS_1_1FileUtil.html#details">[詳細]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public メソッド</h2></td></tr>
+<tr class="memitem:a0d872d6bffff0f9f7a16ef5eebee1152"><td class="memItemLeft" align="right" valign="top">static StreamWriter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#a0d872d6bffff0f9f7a16ef5eebee1152">Writer</a> (string filename)</td></tr>
+<tr class="memdesc:a0d872d6bffff0f9f7a16ef5eebee1152"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ファイルをテキスト書き込み用にオープンする。  <a href="#a0d872d6bffff0f9f7a16ef5eebee1152"></a><br/></td></tr>
+<tr class="separator:a0d872d6bffff0f9f7a16ef5eebee1152"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a839ba06c532c8af39f936a126acf961d"><td class="memItemLeft" align="right" valign="top">static StreamWriter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#a839ba06c532c8af39f936a126acf961d">Writer</a> (string filename, Encoding enc)</td></tr>
+<tr class="memdesc:a839ba06c532c8af39f936a126acf961d"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ファイルを指定エンコーディングでテキスト書き込み用にオープンする。  <a href="#a839ba06c532c8af39f936a126acf961d"></a><br/></td></tr>
+<tr class="separator:a839ba06c532c8af39f936a126acf961d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7099559c9be4190bef346b81282bd3d"><td class="memItemLeft" align="right" valign="top">static StreamWriter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#af7099559c9be4190bef346b81282bd3d">AppendWriter</a> (string filename)</td></tr>
+<tr class="memdesc:af7099559c9be4190bef346b81282bd3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ファイルをテキスト追加書き込み用にオープンする。  <a href="#af7099559c9be4190bef346b81282bd3d"></a><br/></td></tr>
+<tr class="separator:af7099559c9be4190bef346b81282bd3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab69ec5c9899e236d481016b44cec3ec3"><td class="memItemLeft" align="right" valign="top">static StreamWriter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#ab69ec5c9899e236d481016b44cec3ec3">AppendWriter</a> (string filename, Encoding enc)</td></tr>
+<tr class="memdesc:ab69ec5c9899e236d481016b44cec3ec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ファイルを指定エンコーディングでテキスト追加書き込み用にオープンする。  <a href="#ab69ec5c9899e236d481016b44cec3ec3"></a><br/></td></tr>
+<tr class="separator:ab69ec5c9899e236d481016b44cec3ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a866f62999712bdfd739af1e52c60f53a"><td class="memItemLeft" align="right" valign="top">static StreamWriter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#a866f62999712bdfd739af1e52c60f53a">Writer</a> (string filename, Encoding enc, bool appendflag)</td></tr>
+<tr class="separator:a866f62999712bdfd739af1e52c60f53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91582dc9071cbac35b941a7ad8f493dc"><td class="memItemLeft" align="right" valign="top">static StreamWriter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#a91582dc9071cbac35b941a7ad8f493dc">SharedAppendWriter</a> (string filename, Encoding enc)</td></tr>
+<tr class="memdesc:a91582dc9071cbac35b941a7ad8f493dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ファイルを指定エンコーディングでテキスト追加書き込み用にオープンする。 ファイルのReadアクセスロックをかけない版。  <a href="#a91582dc9071cbac35b941a7ad8f493dc"></a><br/></td></tr>
+<tr class="separator:a91582dc9071cbac35b941a7ad8f493dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a194cc0377d9fbcf97fe9a642b267a92d"><td class="memItemLeft" align="right" valign="top">static StreamReader&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#a194cc0377d9fbcf97fe9a642b267a92d">Reader</a> (string filename)</td></tr>
+<tr class="memdesc:a194cc0377d9fbcf97fe9a642b267a92d"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ファイルをテキスト読み出し用にオープンする。  <a href="#a194cc0377d9fbcf97fe9a642b267a92d"></a><br/></td></tr>
+<tr class="separator:a194cc0377d9fbcf97fe9a642b267a92d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add64bc0327be8743b5d76247127aeffd"><td class="memItemLeft" align="right" valign="top">static StreamReader&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#add64bc0327be8743b5d76247127aeffd">Reader</a> (string filename, Encoding enc)</td></tr>
+<tr class="memdesc:add64bc0327be8743b5d76247127aeffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ファイルを指定エンコーディングでテキスト読み出し用にオープンする。  <a href="#add64bc0327be8743b5d76247127aeffd"></a><br/></td></tr>
+<tr class="separator:add64bc0327be8743b5d76247127aeffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad716ca482f3fed23e30836fbc8ec6fb2"><td class="memItemLeft" align="right" valign="top">static FileStream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#ad716ca482f3fed23e30836fbc8ec6fb2">BinaryWriter</a> (string filename)</td></tr>
+<tr class="memdesc:ad716ca482f3fed23e30836fbc8ec6fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ファイルをバイナリ書き込み用にオープンする。  <a href="#ad716ca482f3fed23e30836fbc8ec6fb2"></a><br/></td></tr>
+<tr class="separator:ad716ca482f3fed23e30836fbc8ec6fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a254f016f3e042c5ca23533bfa26ac3e9"><td class="memItemLeft" align="right" valign="top">static FileStream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#a254f016f3e042c5ca23533bfa26ac3e9">BinaryAppendWriter</a> (string filename)</td></tr>
+<tr class="memdesc:a254f016f3e042c5ca23533bfa26ac3e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ファイルをバイナリ追加書き込み用にオープンする。  <a href="#a254f016f3e042c5ca23533bfa26ac3e9"></a><br/></td></tr>
+<tr class="separator:a254f016f3e042c5ca23533bfa26ac3e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea5e5df7fd369d9d53ca30949d82233e"><td class="memItemLeft" align="right" valign="top">static FileStream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#aea5e5df7fd369d9d53ca30949d82233e">BinaryOverwriteWriter</a> (string filename)</td></tr>
+<tr class="memdesc:aea5e5df7fd369d9d53ca30949d82233e"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ファイルをバイナリ上書き用にオープンする。  <a href="#aea5e5df7fd369d9d53ca30949d82233e"></a><br/></td></tr>
+<tr class="separator:aea5e5df7fd369d9d53ca30949d82233e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b111e387ce0794712ab7deb2e12a6af"><td class="memItemLeft" align="right" valign="top">static FileStream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#a8b111e387ce0794712ab7deb2e12a6af">BinaryOverwriteWriter</a> (string filename, out bool iswritable)</td></tr>
+<tr class="memdesc:a8b111e387ce0794712ab7deb2e12a6af"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ファイルをバイナリ上書き用にオープンする。もしファイルが書き 込み禁止状態ならば、書き込み許可状態に変更してからオープンする。  <a href="#a8b111e387ce0794712ab7deb2e12a6af"></a><br/></td></tr>
+<tr class="separator:a8b111e387ce0794712ab7deb2e12a6af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada64790b854dda76c6db92da6903bf8b"><td class="memItemLeft" align="right" valign="top">static FileStream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#ada64790b854dda76c6db92da6903bf8b">BinaryWriter</a> (string filename, FileMode fmode)</td></tr>
+<tr class="separator:ada64790b854dda76c6db92da6903bf8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada19bebfa67900c3849812159b859d4a"><td class="memItemLeft" align="right" valign="top">static FileStream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#ada19bebfa67900c3849812159b859d4a">BinaryReader</a> (string filename)</td></tr>
+<tr class="memdesc:ada19bebfa67900c3849812159b859d4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ファイルをバイナリ読み出し用にオープンする。  <a href="#ada19bebfa67900c3849812159b859d4a"></a><br/></td></tr>
+<tr class="separator:ada19bebfa67900c3849812159b859d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb4e936cd938741db069a14ddd243342"><td class="memItemLeft" align="right" valign="top">static FileStream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#acb4e936cd938741db069a14ddd243342">BinarySharedReader</a> (string filename)</td></tr>
+<tr class="memdesc:acb4e936cd938741db069a14ddd243342"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ファイルをバイナリ読み出し用にオープンする。アクセス排他なし版。  <a href="#acb4e936cd938741db069a14ddd243342"></a><br/></td></tr>
+<tr class="separator:acb4e936cd938741db069a14ddd243342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6264b230ff27a6ce91fb2b07063173c6"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#a6264b230ff27a6ce91fb2b07063173c6">Copy</a> (string src, string dst)</td></tr>
+<tr class="memdesc:a6264b230ff27a6ce91fb2b07063173c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルをコピーする。コピーの際にはファイルにアクセスロックがかかる。  <a href="#a6264b230ff27a6ce91fb2b07063173c6"></a><br/></td></tr>
+<tr class="separator:a6264b230ff27a6ce91fb2b07063173c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53ee4631eb07308ce022c181648b3750"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#a53ee4631eb07308ce022c181648b3750">Copy</a> (Stream src, string dst)</td></tr>
+<tr class="memdesc:a53ee4631eb07308ce022c181648b3750"><td class="mdescLeft">&#160;</td><td class="mdescRight">ストリームからファイルにコピーする。  <a href="#a53ee4631eb07308ce022c181648b3750"></a><br/></td></tr>
+<tr class="separator:a53ee4631eb07308ce022c181648b3750"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a835fbc77eddf383ac7169b497d7a3605"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#a835fbc77eddf383ac7169b497d7a3605">Copy</a> (string src, Stream dst)</td></tr>
+<tr class="memdesc:a835fbc77eddf383ac7169b497d7a3605"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルからストリームにコピーする。  <a href="#a835fbc77eddf383ac7169b497d7a3605"></a><br/></td></tr>
+<tr class="separator:a835fbc77eddf383ac7169b497d7a3605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f816c856d56c64269d17fbd904df789"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#a5f816c856d56c64269d17fbd904df789">Copy</a> (Stream src, Stream dst)</td></tr>
+<tr class="memdesc:a5f816c856d56c64269d17fbd904df789"><td class="mdescLeft">&#160;</td><td class="mdescRight">ストリームからストリームにコピーする。  <a href="#a5f816c856d56c64269d17fbd904df789"></a><br/></td></tr>
+<tr class="separator:a5f816c856d56c64269d17fbd904df789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a424bcc9042ae19c66d444f914c961e21"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#a424bcc9042ae19c66d444f914c961e21">FileToBase64String</a> (string src)</td></tr>
+<tr class="memdesc:a424bcc9042ae19c66d444f914c961e21"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル内容をBase64文字列に変換する  <a href="#a424bcc9042ae19c66d444f914c961e21"></a><br/></td></tr>
+<tr class="separator:a424bcc9042ae19c66d444f914c961e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a320bb727007c396642681f9480eff597"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#a320bb727007c396642681f9480eff597">FileToBase64String</a> (Stream src)</td></tr>
+<tr class="memdesc:a320bb727007c396642681f9480eff597"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル内容をBase64文字列に変換する  <a href="#a320bb727007c396642681f9480eff597"></a><br/></td></tr>
+<tr class="separator:a320bb727007c396642681f9480eff597"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a971be8dcf62ab234c81ffe50d562a8c8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#a971be8dcf62ab234c81ffe50d562a8c8">Purge</a> (string path, string pattern, DateTime before)</td></tr>
+<tr class="memdesc:a971be8dcf62ab234c81ffe50d562a8c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">最終変更日時が指定日時より昔のファイルを削除する。  <a href="#a971be8dcf62ab234c81ffe50d562a8c8"></a><br/></td></tr>
+<tr class="separator:a971be8dcf62ab234c81ffe50d562a8c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8bbeca2126595aeb240e8f3c92a1f4f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#ae8bbeca2126595aeb240e8f3c92a1f4f">Purge</a> (string path, string pattern, int seconds)</td></tr>
+<tr class="memdesc:ae8bbeca2126595aeb240e8f3c92a1f4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">最終変更日時が指定秒数より昔のファイルを削除する。  <a href="#ae8bbeca2126595aeb240e8f3c92a1f4f"></a><br/></td></tr>
+<tr class="separator:ae8bbeca2126595aeb240e8f3c92a1f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a722272ba846c64ead2bf2a2b194ebed4"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#a722272ba846c64ead2bf2a2b194ebed4">GetRealName</a> (string filepath)</td></tr>
+<tr class="memdesc:a722272ba846c64ead2bf2a2b194ebed4"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル名の大文字小文字を無視して、実ファイル名を探索する。  <a href="#a722272ba846c64ead2bf2a2b194ebed4"></a><br/></td></tr>
+<tr class="separator:a722272ba846c64ead2bf2a2b194ebed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03fcd3bc4aa8d0048fe7aa5b3f482fc1"><td class="memItemLeft" align="right" valign="top">static string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#a03fcd3bc4aa8d0048fe7aa5b3f482fc1">ExpandWildCard</a> (string path, bool ignoreCase=true)</td></tr>
+<tr class="memdesc:a03fcd3bc4aa8d0048fe7aa5b3f482fc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル名ワイルドカード文字(*,?)を展開してマッチするファイル名の一覧を返す  <a href="#a03fcd3bc4aa8d0048fe7aa5b3f482fc1"></a><br/></td></tr>
+<tr class="separator:a03fcd3bc4aa8d0048fe7aa5b3f482fc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ac31c1b227429f1831cd85f2efea07c"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#a9ac31c1b227429f1831cd85f2efea07c">GetDirectorySize</a> (string dir, int depth=99)</td></tr>
+<tr class="memdesc:a9ac31c1b227429f1831cd85f2efea07c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ディレクトリ内の総ファイルサイズを得る  <a href="#a9ac31c1b227429f1831cd85f2efea07c"></a><br/></td></tr>
+<tr class="separator:a9ac31c1b227429f1831cd85f2efea07c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c538da5877bd96da1be081ba6ac2b62"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#a2c538da5877bd96da1be081ba6ac2b62">GetDirectorySize</a> (DirectoryInfo di, int depth=99)</td></tr>
+<tr class="memdesc:a2c538da5877bd96da1be081ba6ac2b62"><td class="mdescLeft">&#160;</td><td class="mdescRight">ディレクトリ内の総ファイルサイズを得る  <a href="#a2c538da5877bd96da1be081ba6ac2b62"></a><br/></td></tr>
+<tr class="separator:a2c538da5877bd96da1be081ba6ac2b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace85d6de82e7c60029520fb61b0fd9cc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#ace85d6de82e7c60029520fb61b0fd9cc">CopyDirectory</a> (string srcdir, string dstdir)</td></tr>
+<tr class="memdesc:ace85d6de82e7c60029520fb61b0fd9cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">ディレクトリをまるごとコピーする  <a href="#ace85d6de82e7c60029520fb61b0fd9cc"></a><br/></td></tr>
+<tr class="separator:ace85d6de82e7c60029520fb61b0fd9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public 変数</h2></td></tr>
+<tr class="memitem:a34c9644b5c29b7dfe087fe55792429ad"><td class="memItemLeft" align="right" valign="top">static Encoding&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FileUtil.html#a34c9644b5c29b7dfe087fe55792429ad">DefaultEncoding</a></td></tr>
+<tr class="memdesc:a34c9644b5c29b7dfe087fe55792429ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルアクセス時のデフォルトエンコーディング。SJIS。  <a href="#a34c9644b5c29b7dfe087fe55792429ad"></a><br/></td></tr>
+<tr class="separator:a34c9644b5c29b7dfe087fe55792429ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">説明</h2>
+<div class="textblock"><p>安全なファイルのオープンを提供するクラス </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00019">19</a> 行で定義されています。</p>
+</div><h2 class="groupheader">メソッド</h2>
+<a class="anchor" id="a0d872d6bffff0f9f7a16ef5eebee1152"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StreamWriter MACS.FileUtil.Writer </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定ファイルをテキスト書き込み用にオープンする。 </p>
+<p>ファイルにRead/Writeのロックをかけてオープンします。 指定ファイルに既にロックがかかっているときには、10msec置きに10秒 までリトライします。 ファイルオープンに失敗するとnullを返します。 </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00047">47</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="FileUtil_8cs_source.html#l00077">MACS.FileUtil.AppendWriter()</a>, <a class="el" href="makeSJISDictionary_8cs_source.html#l00037">MACS.Program.Main()</a>, <a class="el" href="SectionIniFile_8cs_source.html#l00075">MACS.SectionIniFile.Write()</a>, <a class="el" href="IniFile_8cs_source.html#l00113">MACS.IniFile.Write()</a>, と <a class="el" href="FileUtil_8cs_source.html#l00062">MACS.FileUtil.Writer()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a839ba06c532c8af39f936a126acf961d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StreamWriter MACS.FileUtil.Writer </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoding&#160;</td>
+          <td class="paramname"><em>enc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定ファイルを指定エンコーディングでテキスト書き込み用にオープンする。 </p>
+<p>ファイルにRead/Write禁止のロックをかけてオープンします。 指定ファイルに既にロックがかかっているときには、10msec置きに10秒 までリトライします。 ファイルオープンに失敗するとnullを返します。 </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00062">62</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af7099559c9be4190bef346b81282bd3d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StreamWriter MACS.FileUtil.AppendWriter </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定ファイルをテキスト追加書き込み用にオープンする。 </p>
+<p>ファイルにRead/Writeのロックをかけてオープンします。 指定ファイルに既にロックがかかっているときには、10msec置きに10秒 までリトライします。 ファイルオープンに失敗するとnullを返します。 </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00077">77</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab69ec5c9899e236d481016b44cec3ec3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StreamWriter MACS.FileUtil.AppendWriter </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoding&#160;</td>
+          <td class="paramname"><em>enc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定ファイルを指定エンコーディングでテキスト追加書き込み用にオープンする。 </p>
+<p>ファイルにRead/Write禁止のロックをかけてオープンします。 指定ファイルに既にロックがかかっているときには、10msec置きに10秒 までリトライします。 ファイルオープンに失敗するとnullを返します。 </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00092">92</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a866f62999712bdfd739af1e52c60f53a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StreamWriter MACS.FileUtil.Writer </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoding&#160;</td>
+          <td class="paramname"><em>enc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>appendflag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00096">96</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a91582dc9071cbac35b941a7ad8f493dc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StreamWriter MACS.FileUtil.SharedAppendWriter </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoding&#160;</td>
+          <td class="paramname"><em>enc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定ファイルを指定エンコーディングでテキスト追加書き込み用にオープンする。 ファイルのReadアクセスロックをかけない版。 </p>
+<p>指定ファイルに既にロックがかかっているときには、10msec置きに10秒 までリトライします。 ファイルオープンに失敗するとnullを返します。 </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00144">144</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="OpeLog_8cs_source.html#l00152">MACS.OpeLog.Log()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a194cc0377d9fbcf97fe9a642b267a92d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StreamReader MACS.FileUtil.Reader </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定ファイルをテキスト読み出し用にオープンする。 </p>
+<p>ファイルにWrite禁止のロックをかけてオープンします。 指定ファイルに既にロックがかかっているときには、10msec置きに10秒 までリトライします。 ファイルオープンに失敗するとnullを返します。 </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00183">183</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="DataArray_8cs_source.html#l00560">MACS.DataArray.FromFile()</a>, <a class="el" href="makeSJISDictionary_8cs_source.html#l00037">MACS.Program.Main()</a>, <a class="el" href="SectionIniFile_8cs_source.html#l00075">MACS.SectionIniFile.Write()</a>, と <a class="el" href="IniFile_8cs_source.html#l00113">MACS.IniFile.Write()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="add64bc0327be8743b5d76247127aeffd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StreamReader MACS.FileUtil.Reader </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoding&#160;</td>
+          <td class="paramname"><em>enc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定ファイルを指定エンコーディングでテキスト読み出し用にオープンする。 </p>
+<p>ファイルにWrite禁止のロックをかけてオープンします。 指定ファイルに既にロックがかかっているときには、10msec置きに10秒 までリトライします。 ファイルオープンに失敗するとnullを返します。 </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00198">198</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad716ca482f3fed23e30836fbc8ec6fb2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static FileStream MACS.FileUtil.BinaryWriter </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定ファイルをバイナリ書き込み用にオープンする。 </p>
+<p>ファイルにRead/Writeのロックをかけてオープンします。 指定ファイルに既にロックがかかっているときには、10msec置きに10秒 までリトライします。 ファイルオープンに失敗するとnullを返します。 </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00232">232</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="FileUtil_8cs_source.html#l00247">MACS.FileUtil.BinaryAppendWriter()</a>, <a class="el" href="FileUtil_8cs_source.html#l00262">MACS.FileUtil.BinaryOverwriteWriter()</a>, <a class="el" href="FileUtil_8cs_source.html#l00378">MACS.FileUtil.Copy()</a>, <a class="el" href="FtpClient_8cs_source.html#l00067">MACS.FtpClient.Download()</a>, <a class="el" href="XmlFile_8cs_source.html#l00386">MACS.XmlFile.lockFile()</a>, と <a class="el" href="SJISWriter_8cs_source.html#l00022">MACS.SJISWriter.SJISWriter()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a254f016f3e042c5ca23533bfa26ac3e9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static FileStream MACS.FileUtil.BinaryAppendWriter </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定ファイルをバイナリ追加書き込み用にオープンする。 </p>
+<p>ファイルにRead/Writeのロックをかけてオープンします。 指定ファイルに既にロックがかかっているときには、10msec置きに10秒 までリトライします。 ファイルオープンに失敗するとnullを返します。 </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00247">247</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aea5e5df7fd369d9d53ca30949d82233e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static FileStream MACS.FileUtil.BinaryOverwriteWriter </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定ファイルをバイナリ上書き用にオープンする。 </p>
+<p>ファイルにRead/Writeのロックをかけてオープンします。 指定ファイルに既にロックがかかっているときには、10msec置きに10秒 までリトライします。 ファイルオープンに失敗するとnullを返します。 </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00262">262</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8b111e387ce0794712ab7deb2e12a6af"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static FileStream MACS.FileUtil.BinaryOverwriteWriter </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out bool&#160;</td>
+          <td class="paramname"><em>iswritable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定ファイルをバイナリ上書き用にオープンする。もしファイルが書き 込み禁止状態ならば、書き込み許可状態に変更してからオープンする。 </p>
+<p>ファイルにRead/Writeのロックをかけてオープンします。 指定ファイルに既にロックがかかっているときには、10msec置きに10秒 までリトライします。 ファイルオープンに失敗するとnullを返します。 オープン前にファイルが書き込み禁止状態である場合、書き込み許可に 強制的に変えてからオープンします。このとき、引数iswritableに falseがセットされます。 </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00281">281</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ada64790b854dda76c6db92da6903bf8b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static FileStream MACS.FileUtil.BinaryWriter </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FileMode&#160;</td>
+          <td class="paramname"><em>fmode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00295">295</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ada19bebfa67900c3849812159b859d4a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static FileStream MACS.FileUtil.BinaryReader </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定ファイルをバイナリ読み出し用にオープンする。 </p>
+<p>ファイルにWrite禁止のロックをかけてオープンします。 指定ファイルに既にロックがかかっているときには、10msec置きに10秒 までリトライします。 ファイルオープンに失敗するとnullを返します。 </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00335">335</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="FileUtil_8cs_source.html#l00350">MACS.FileUtil.BinarySharedReader()</a>, <a class="el" href="FileUtil_8cs_source.html#l00378">MACS.FileUtil.Copy()</a>, <a class="el" href="SJISReader_8cs_source.html#l00021">MACS.SJISReader.SJISReader()</a>, と <a class="el" href="FtpClient_8cs_source.html#l00112">MACS.FtpClient.Upload()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acb4e936cd938741db069a14ddd243342"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static FileStream MACS.FileUtil.BinarySharedReader </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定ファイルをバイナリ読み出し用にオープンする。アクセス排他なし版。 </p>
+<p>ファイルをReadWrite許可の状態でオープンします。 指定ファイルに既にロックがかかっているときには、10msec置きに10秒 までリトライします。 ファイルオープンに失敗するとnullを返します。 </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00350">350</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a6264b230ff27a6ce91fb2b07063173c6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool MACS.FileUtil.Copy </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイルをコピーする。コピーの際にはファイルにアクセスロックがかかる。 </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00378">378</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="FileUtil_8cs_source.html#l00399">MACS.FileUtil.Copy()</a>, <a class="el" href="SectionIniFile_8cs_source.html#l00075">MACS.SectionIniFile.Write()</a>, と <a class="el" href="IniFile_8cs_source.html#l00113">MACS.IniFile.Write()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a53ee4631eb07308ce022c181648b3750"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool MACS.FileUtil.Copy </td>
+          <td>(</td>
+          <td class="paramtype">Stream&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ストリームからファイルにコピーする。 </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00399">399</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a835fbc77eddf383ac7169b497d7a3605"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool MACS.FileUtil.Copy </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Stream&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイルからストリームにコピーする。 </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00417">417</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5f816c856d56c64269d17fbd904df789"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool MACS.FileUtil.Copy </td>
+          <td>(</td>
+          <td class="paramtype">Stream&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Stream&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ストリームからストリームにコピーする。 </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00435">435</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a424bcc9042ae19c66d444f914c961e21"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.FileUtil.FileToBase64String </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイル内容をBase64文字列に変換する </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00451">451</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a320bb727007c396642681f9480eff597"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.FileUtil.FileToBase64String </td>
+          <td>(</td>
+          <td class="paramtype">Stream&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイル内容をBase64文字列に変換する </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00471">471</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a971be8dcf62ab234c81ffe50d562a8c8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.FileUtil.Purge </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>pattern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>before</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最終変更日時が指定日時より昔のファイルを削除する。 </p>
+<p>ファイルパターンの詳細は、Directory.GetFiles(string, string)メソッドのファイルパターンを参照。 ただし、nullまたは空文字列を指定すると、全ファイル ("*")の意味になる。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>ディレクトリ名</td></tr>
+    <tr><td class="paramname">pattern</td><td>ファイルパターン</td></tr>
+    <tr><td class="paramname">before</td><td>最終変更日時がこの日時より古いファイルを削除する</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>削除したファイルの数</dd></dl>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00498">498</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="FileUtil_8cs_source.html#l00534">MACS.FileUtil.Purge()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae8bbeca2126595aeb240e8f3c92a1f4f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.FileUtil.Purge </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>pattern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>seconds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最終変更日時が指定秒数より昔のファイルを削除する。 </p>
+<p>ファイルパターンの詳細は、Directory.GetFiles(string, string)メソッドのファイルパターンを参照。 ただし、nullまたは空文字列を指定すると、全ファイル ("*")の意味になる。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>ディレクトリ名</td></tr>
+    <tr><td class="paramname">pattern</td><td>ファイルパターン</td></tr>
+    <tr><td class="paramname">seconds</td><td>変更日時がこの秒数より古いファイルを削除する</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>削除したファイルの数</dd></dl>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00534">534</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a722272ba846c64ead2bf2a2b194ebed4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.FileUtil.GetRealName </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filepath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイル名の大文字小文字を無視して、実ファイル名を探索する。 </p>
+<p>指定ファイルが存在しない場合には引数をそのまま返す。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>ファイル名（ディレクトリ名を含んでもよい）</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>実ファイル名</dd></dl>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00549">549</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a03fcd3bc4aa8d0048fe7aa5b3f482fc1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string [] MACS.FileUtil.ExpandWildCard </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>ignoreCase</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイル名ワイルドカード文字(*,?)を展開してマッチするファイル名の一覧を返す </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00585">585</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a9ac31c1b227429f1831cd85f2efea07c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static long MACS.FileUtil.GetDirectorySize </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>depth</em> = <code>99</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ディレクトリ内の総ファイルサイズを得る </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dir</td><td>ディレクトリ名</td></tr>
+    <tr><td class="paramname">depth</td><td>サブディレクトリをたどる深さ。0の場合サブディレクトリをたどらない</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>ファイルサイズ (byte)</dd></dl>
+<p>シンボリックリンクは正しくたどれません。 </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00635">635</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="FileUtil_8cs_source.html#l00650">MACS.FileUtil.GetDirectorySize()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2c538da5877bd96da1be081ba6ac2b62"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static long MACS.FileUtil.GetDirectorySize </td>
+          <td>(</td>
+          <td class="paramtype">DirectoryInfo&#160;</td>
+          <td class="paramname"><em>di</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>depth</em> = <code>99</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ディレクトリ内の総ファイルサイズを得る </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">di</td><td>ディレクトリ情報</td></tr>
+    <tr><td class="paramname">depth</td><td>サブディレクトリをたどる深さ。0の場合サブディレクトリをたどらない</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>ファイルサイズ (byte)</dd></dl>
+<p>シンボリックリンクは正しくたどれません。 </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00650">650</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ace85d6de82e7c60029520fb61b0fd9cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.FileUtil.CopyDirectory </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>srcdir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>dstdir</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ディレクトリをまるごとコピーする </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">srcdir</td><td>コピー元ディレクトリ名</td></tr>
+    <tr><td class="paramname">dstdir</td><td>コピー先ディレクトリ名</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00672">672</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">変数</h2>
+<a class="anchor" id="a34c9644b5c29b7dfe087fe55792429ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Encoding MACS.FileUtil.DefaultEncoding</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイルアクセス時のデフォルトエンコーディング。SJIS。 </p>
+
+<p> <a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a> の <a class="el" href="FileUtil_8cs_source.html#l00024">24</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="DataArray_8cs_source.html#l00542">MACS.DataArray.FromFile()</a>, <a class="el" href="FileUtil_8cs_source.html#l00198">MACS.FileUtil.Reader()</a>, <a class="el" href="FileUtil_8cs_source.html#l00144">MACS.FileUtil.SharedAppendWriter()</a>, と <a class="el" href="FileUtil_8cs_source.html#l00096">MACS.FileUtil.Writer()</a>.</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="FileUtil_8cs_source.html">FileUtil.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceMACS.html">MACS</a></li><li class="navelem"><a class="el" href="classMACS_1_1FileUtil.html">FileUtil</a></li>
+    <li class="footer">MACS.Coreに対してWed Jun 27 2018 17:45:44に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

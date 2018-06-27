@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>PDFReport: CSVファイルを表形式表示する</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PDFReport
+   </div>
+   <div id="projectbrief">PDF Table Report Generator</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('Example1_12.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">CSVファイルを表形式表示する </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>CSVファイルからデータを読み込み、表形式の表示をすることができます。</p>
+<p>この場合、今までの例で使ったような、表部分以外のデータを定義するファイルと、表部分用のCSVファイルの2つのデータファイルをPDFReportに与えます。</p>
+<p>埋め込みデータファイル1: example.ini </p>
+<pre class="fragment">会社名=PDF商事
+住所=東京都北区赤羽
+電話=03-0123-4567
+FAX=03-0123-4568
+</pre><p>埋め込みデータファイル2: example.csv </p>
+<pre class="fragment">#年,月,予算,実績
+2011,1,853000,801100
+2011,2,720000,748000
+2011,3,811000,820900
+2011,4,830000,815800
+2011,5,835000,921000
+2011,6,821000,908300
+2011,7,804000,807600
+2011,8,729000,732000
+2011,9,813000,758800
+2011,10,838000,799900
+2011,11,843000,867100
+2011,12,801000,884700
+</pre><p>帳票フォーマットファイル: Example1_12.xml </p>
+<pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;document&gt;
+  &lt;font name="default" size="12" /&gt;
+  &lt;font name="title" size="24" /&gt;
+
+  &lt;text x="50%" y="0mm" align="center" font="title"&gt;年間業績表&lt;/text&gt;
+  &lt;text x="100%" y="0mm" align="right"&gt;{currentdate}&lt;/text&gt;
+
+  &lt;box x="50%" y ="15mm" width="100mm" height="20mm" align="center" border="0.3mm"&gt;
+    &lt;text x="2mm" y="2mm"&gt;会社名: {会社名}&lt;/text&gt;
+    &lt;text y="+1.5line"&gt;TEL:{電話} FAX:{FAX}&lt;/text&gt;
+  &lt;/box&gt;
+
+  &lt;table x="50%" y="40mm" align="center" width="100mm" rows="12" border="0.3mm"&gt;
+    &lt;body height="1.5line" border-bottom="0.1mm"&gt;
+      &lt;text x="1mm" y="1mm" width="15mm"&gt;{list.年:postfix(/)}{list.月:fixlength(2)}&lt;/text&gt;
+      &lt;text x="+30mm" width="30mm"&gt;{list.予算:decimal:postfix(円)}&lt;/text&gt;
+      &lt;text x="+40mm" width="30mm"&gt;{list.実績:decimal:postfix(円)}&lt;/text&gt;
+    &lt;/body&gt;
+  &lt;/table&gt;
+
+&lt;/document&gt;
+</pre><p>実行方法: </p>
+<pre class="fragment">% PDFReport Example1_12.xml example.ini example.csv -o Example1_12.pdf
+</pre><p>結果は、<a href="Example1_12.pdf">Example1_12.pdf</a>をご覧下さい。</p>
+<p>CSVファイルから取り込んだデータは、<code>{list.<em>項目名</em>}</code>という指定で参照します。</p>
+<p>CSVの項目名は、ファイルの1行目にかかれたコメント行 ('<code>#</code>'で始まる行) で定義します。 もし、CSVファイルの1行目に項目名定義が無い場合は、<code>{list.<em>項目番号</em>}</code>と、名前ではなく番号で項目を指定して下さい。</p>
+<p>表の描画には、 <code>table</code> タグを用います。 <code>table</code> タグの属性で、表の位置と幅、行数などを指定します。 （表の高さを <code>height</code> 属性で指定することもできますが、行数の制御がうまくゆかなくなるケースがありますので、できるだけ高さは指定せずに行数を指定して下さい。）</p>
+<p><code>table</code> タグ内には、 <code>body</code> タグを1つ作り、その中に1行分の表示指示のタグを記述します。 <code>body</code> タグには <code>height</code> 属性で1行の高さを指定して下さい。 また、 <code>body</code> の <code>border-bottom</code> ( <code>border-top</code> でも可)属性で、行を区切る横線の太さを指定できます。</p>
+<p><code>body</code> タグ内では、各行の左上隅が基準となる座標で文字描画などを指定します。</p>
+<p>この例では <code>body</code> タグ内に<code>{list.<em>項目名</em>}</code>項目だけが使われていますが、一般の<code>{<em>項目名</em>}</code>を使うこともできます。 この場合、各行に同じ値が描画されることになります。</p>
+<p>表の描画で最も重要な点は、与えたCSVファイルの行数（レコード数）が、表の行数指定よりも多い場合には、自動的に複数ページで描画されるという事にあります。 この際、表以外の部分は全てのページで同じものが描画されます。（ページ番号の例外を除く）。</p>
+<p>例えば、Example1_10.xml 内のテーブルで、「<code>rows="12"</code>」としている部分を「<code>rows="10"</code>」に変更して実行すると、<a href="Example1_12_2.pdf">Example1_12_2.pdf</a>のような、2ページ立てのPDFファイルになります。 </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="index.html">index</a></li><li class="navelem"><a class="el" href="PDF_xE5_xB8_xB3_xE7_xA5_xA8_xE7_x94_x9F_xE6_x88_x90_xE3_x82_xB7_xE3_x82_xB9_xE3_x83_x86_xE3_x83_0c0cb9027cd8211d527ea2b3c0c75b6c.html">PDF帳票生成システム利用サンプル</a></li>
+    <li class="footer">PDFReportに対してWed Jun 27 2018 17:45:49に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

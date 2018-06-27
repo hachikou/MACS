@@ -1,0 +1,655 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.Core: クラス MACS.HwaddrRange</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.Core
+   </div>
+   <div id="projectbrief">Miscellaneous Assets for C-Sharp</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classMACS_1_1HwaddrRange.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-static-methods">Static Public メソッド</a> &#124;
+<a href="#pub-attribs">Public 変数</a> &#124;
+<a href="classMACS_1_1HwaddrRange-members.html">すべてのメンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス MACS.HwaddrRange</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>MACアドレス範囲  
+ <a href="classMACS_1_1HwaddrRange.html#details">[詳細]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr class="memitem:a01dc20e02c2618e2c1acfc010c5411f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HwaddrRange.html#a01dc20e02c2618e2c1acfc010c5411f8">HwaddrRange</a> ()</td></tr>
+<tr class="memdesc:a01dc20e02c2618e2c1acfc010c5411f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#a01dc20e02c2618e2c1acfc010c5411f8"></a><br/></td></tr>
+<tr class="separator:a01dc20e02c2618e2c1acfc010c5411f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3129b9cdc33dcbe380171d91e4698f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HwaddrRange.html#ad3129b9cdc33dcbe380171d91e4698f5">HwaddrRange</a> (<a class="el" href="classMACS_1_1Hwaddr.html">Hwaddr</a> start, <a class="el" href="classMACS_1_1Hwaddr.html">Hwaddr</a> end)</td></tr>
+<tr class="memdesc:ad3129b9cdc33dcbe380171d91e4698f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#ad3129b9cdc33dcbe380171d91e4698f5"></a><br/></td></tr>
+<tr class="separator:ad3129b9cdc33dcbe380171d91e4698f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1c8adf582965867c406cb5fc6abe5b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HwaddrRange.html#ae1c8adf582965867c406cb5fc6abe5b0">HwaddrRange</a> (string start, string end)</td></tr>
+<tr class="memdesc:ae1c8adf582965867c406cb5fc6abe5b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#ae1c8adf582965867c406cb5fc6abe5b0"></a><br/></td></tr>
+<tr class="separator:ae1c8adf582965867c406cb5fc6abe5b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a639f2042f986859466cf0792df0c9d65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HwaddrRange.html#a639f2042f986859466cf0792df0c9d65">HwaddrRange</a> (<a class="el" href="classMACS_1_1Hwaddr.html">Hwaddr</a> addr)</td></tr>
+<tr class="memdesc:a639f2042f986859466cf0792df0c9d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#a639f2042f986859466cf0792df0c9d65"></a><br/></td></tr>
+<tr class="separator:a639f2042f986859466cf0792df0c9d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbded944bfc4153be529988530f3eac9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HwaddrRange.html#acbded944bfc4153be529988530f3eac9">HwaddrRange</a> (string addr)</td></tr>
+<tr class="memdesc:acbded944bfc4153be529988530f3eac9"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#acbded944bfc4153be529988530f3eac9"></a><br/></td></tr>
+<tr class="separator:acbded944bfc4153be529988530f3eac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbdf3712a8ceebc0f3762ed44127ec6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HwaddrRange.html#acbdf3712a8ceebc0f3762ed44127ec6d">HwaddrRange</a> (<a class="el" href="classMACS_1_1HwaddrRange.html">HwaddrRange</a> src)</td></tr>
+<tr class="memdesc:acbdf3712a8ceebc0f3762ed44127ec6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピーコンストラクタ  <a href="#acbdf3712a8ceebc0f3762ed44127ec6d"></a><br/></td></tr>
+<tr class="separator:acbdf3712a8ceebc0f3762ed44127ec6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e9b7462bdc736f4d3e779641f6fd17f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HwaddrRange.html#a8e9b7462bdc736f4d3e779641f6fd17f">Set</a> (<a class="el" href="classMACS_1_1Hwaddr.html">Hwaddr</a> start, <a class="el" href="classMACS_1_1Hwaddr.html">Hwaddr</a> end)</td></tr>
+<tr class="memdesc:a8e9b7462bdc736f4d3e779641f6fd17f"><td class="mdescLeft">&#160;</td><td class="mdescRight">値をセットする  <a href="#a8e9b7462bdc736f4d3e779641f6fd17f"></a><br/></td></tr>
+<tr class="separator:a8e9b7462bdc736f4d3e779641f6fd17f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa399968e5aa69ed46f4eb07d6017a152"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HwaddrRange.html#aa399968e5aa69ed46f4eb07d6017a152">Set</a> (<a class="el" href="classMACS_1_1Hwaddr.html">Hwaddr</a> addr)</td></tr>
+<tr class="memdesc:aa399968e5aa69ed46f4eb07d6017a152"><td class="mdescLeft">&#160;</td><td class="mdescRight">値をセットする  <a href="#aa399968e5aa69ed46f4eb07d6017a152"></a><br/></td></tr>
+<tr class="separator:aa399968e5aa69ed46f4eb07d6017a152"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b4b46bb6f20fc26e92542655c516ad4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1Hwaddr.html">Hwaddr</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HwaddrRange.html#a5b4b46bb6f20fc26e92542655c516ad4">GetList</a> (int limit=-1)</td></tr>
+<tr class="memdesc:a5b4b46bb6f20fc26e92542655c516ad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">アドレス範囲をアドレスリストにして返す  <a href="#a5b4b46bb6f20fc26e92542655c516ad4"></a><br/></td></tr>
+<tr class="separator:a5b4b46bb6f20fc26e92542655c516ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5983f4a22de2e0eb2d69ffa6e6524dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HwaddrRange.html#ac5983f4a22de2e0eb2d69ffa6e6524dd">GetList</a> (List&lt; <a class="el" href="classMACS_1_1Hwaddr.html">Hwaddr</a> &gt; list, int limit)</td></tr>
+<tr class="memdesc:ac5983f4a22de2e0eb2d69ffa6e6524dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">アドレス範囲をアドレスリストに追加する  <a href="#ac5983f4a22de2e0eb2d69ffa6e6524dd"></a><br/></td></tr>
+<tr class="separator:ac5983f4a22de2e0eb2d69ffa6e6524dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8fa61db2abe60c7960c2b251473c6f0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HwaddrRange.html#ad8fa61db2abe60c7960c2b251473c6f0">Equals</a> (<a class="el" href="classMACS_1_1HwaddrRange.html">HwaddrRange</a> src)</td></tr>
+<tr class="memdesc:ad8fa61db2abe60c7960c2b251473c6f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスがsrcで示されるアドレス範囲と同じかどうかを返す  <a href="#ad8fa61db2abe60c7960c2b251473c6f0"></a><br/></td></tr>
+<tr class="separator:ad8fa61db2abe60c7960c2b251473c6f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2e1f02f6ed616d6302f88e034b0b7e2"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HwaddrRange.html#ad2e1f02f6ed616d6302f88e034b0b7e2">Equals</a> (Object obj)</td></tr>
+<tr class="memdesc:ad2e1f02f6ed616d6302f88e034b0b7e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスがsrcで示されるアドレス範囲と同じかどうかを返す 一般オブジェクトとの比較バージョン。  <a href="#ad2e1f02f6ed616d6302f88e034b0b7e2"></a><br/></td></tr>
+<tr class="separator:ad2e1f02f6ed616d6302f88e034b0b7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97da076ff89362dd9bc45fc76c2ff6c3"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HwaddrRange.html#a97da076ff89362dd9bc45fc76c2ff6c3">GetHashCode</a> ()</td></tr>
+<tr class="memdesc:a97da076ff89362dd9bc45fc76c2ff6c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスのハッシュコードを返す。  <a href="#a97da076ff89362dd9bc45fc76c2ff6c3"></a><br/></td></tr>
+<tr class="separator:a97da076ff89362dd9bc45fc76c2ff6c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public メソッド</h2></td></tr>
+<tr class="memitem:adb6fa96e0277b04f2061ff660e0a805d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classMACS_1_1HwaddrRange.html">HwaddrRange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HwaddrRange.html#adb6fa96e0277b04f2061ff660e0a805d">GetVendorCode</a> (<a class="el" href="classMACS_1_1Hwaddr.html">Hwaddr</a> src)</td></tr>
+<tr class="memdesc:adb6fa96e0277b04f2061ff660e0a805d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ベンダコードをMACアドレス範囲として得る  <a href="#adb6fa96e0277b04f2061ff660e0a805d"></a><br/></td></tr>
+<tr class="separator:adb6fa96e0277b04f2061ff660e0a805d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02413b1a22e410e1524c9cac00c01ac9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HwaddrRange.html#a02413b1a22e410e1524c9cac00c01ac9">operator==</a> (<a class="el" href="classMACS_1_1HwaddrRange.html">HwaddrRange</a> a, <a class="el" href="classMACS_1_1HwaddrRange.html">HwaddrRange</a> b)</td></tr>
+<tr class="separator:a02413b1a22e410e1524c9cac00c01ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f7187e6fca4faeff55521ead7af623"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HwaddrRange.html#ab8f7187e6fca4faeff55521ead7af623">operator!=</a> (<a class="el" href="classMACS_1_1HwaddrRange.html">HwaddrRange</a> a, <a class="el" href="classMACS_1_1HwaddrRange.html">HwaddrRange</a> b)</td></tr>
+<tr class="separator:ab8f7187e6fca4faeff55521ead7af623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 変数</h2></td></tr>
+<tr class="memitem:a0e70c2dc57cef26fd890b1e0453e24ed"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="classMACS_1_1Hwaddr.html">Hwaddr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HwaddrRange.html#a0e70c2dc57cef26fd890b1e0453e24ed">StartAddr</a></td></tr>
+<tr class="memdesc:a0e70c2dc57cef26fd890b1e0453e24ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">開始アドレス  <a href="#a0e70c2dc57cef26fd890b1e0453e24ed"></a><br/></td></tr>
+<tr class="separator:a0e70c2dc57cef26fd890b1e0453e24ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87290f95b403d99b71601bec8226d6ce"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="classMACS_1_1Hwaddr.html">Hwaddr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HwaddrRange.html#a87290f95b403d99b71601bec8226d6ce">EndAddr</a></td></tr>
+<tr class="memdesc:a87290f95b403d99b71601bec8226d6ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了アドレス  <a href="#a87290f95b403d99b71601bec8226d6ce"></a><br/></td></tr>
+<tr class="separator:a87290f95b403d99b71601bec8226d6ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">説明</h2>
+<div class="textblock"><p>MACアドレス範囲 </p>
+
+<p> <a class="el" href="HwaddrRange_8cs_source.html">HwaddrRange.cs</a> の <a class="el" href="HwaddrRange_8cs_source.html#l00016">16</a> 行で定義されています。</p>
+</div><h2 class="groupheader">コンストラクタとデストラクタ</h2>
+<a class="anchor" id="a01dc20e02c2618e2c1acfc010c5411f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.HwaddrRange.HwaddrRange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+
+<p> <a class="el" href="HwaddrRange_8cs_source.html">HwaddrRange.cs</a> の <a class="el" href="HwaddrRange_8cs_source.html#l00031">31</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="HwaddrRange_8cs_source.html#l00153">MACS.HwaddrRange.Equals()</a>, と <a class="el" href="HwaddrRange_8cs_source.html#l00102">MACS.HwaddrRange.GetVendorCode()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad3129b9cdc33dcbe380171d91e4698f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.HwaddrRange.HwaddrRange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1Hwaddr.html">Hwaddr</a>&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1Hwaddr.html">Hwaddr</a>&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+
+<p> <a class="el" href="HwaddrRange_8cs_source.html">HwaddrRange.cs</a> の <a class="el" href="HwaddrRange_8cs_source.html#l00038">38</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae1c8adf582965867c406cb5fc6abe5b0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.HwaddrRange.HwaddrRange </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+
+<p> <a class="el" href="HwaddrRange_8cs_source.html">HwaddrRange.cs</a> の <a class="el" href="HwaddrRange_8cs_source.html#l00045">45</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a639f2042f986859466cf0792df0c9d65"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.HwaddrRange.HwaddrRange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1Hwaddr.html">Hwaddr</a>&#160;</td>
+          <td class="paramname"><em>addr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+
+<p> <a class="el" href="HwaddrRange_8cs_source.html">HwaddrRange.cs</a> の <a class="el" href="HwaddrRange_8cs_source.html#l00052">52</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="acbded944bfc4153be529988530f3eac9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.HwaddrRange.HwaddrRange </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>addr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+
+<p> <a class="el" href="HwaddrRange_8cs_source.html">HwaddrRange.cs</a> の <a class="el" href="HwaddrRange_8cs_source.html#l00060">60</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="acbdf3712a8ceebc0f3762ed44127ec6d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.HwaddrRange.HwaddrRange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1HwaddrRange.html">HwaddrRange</a>&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コピーコンストラクタ </p>
+
+<p> <a class="el" href="HwaddrRange_8cs_source.html">HwaddrRange.cs</a> の <a class="el" href="HwaddrRange_8cs_source.html#l00068">68</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド</h2>
+<a class="anchor" id="a8e9b7462bdc736f4d3e779641f6fd17f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HwaddrRange.Set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1Hwaddr.html">Hwaddr</a>&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1Hwaddr.html">Hwaddr</a>&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値をセットする </p>
+
+<p> <a class="el" href="HwaddrRange_8cs_source.html">HwaddrRange.cs</a> の <a class="el" href="HwaddrRange_8cs_source.html#l00076">76</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="HwaddrRange_8cs_source.html#l00038">MACS.HwaddrRange.HwaddrRange()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa399968e5aa69ed46f4eb07d6017a152"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HwaddrRange.Set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1Hwaddr.html">Hwaddr</a>&#160;</td>
+          <td class="paramname"><em>addr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値をセットする </p>
+
+<p> <a class="el" href="HwaddrRange_8cs_source.html">HwaddrRange.cs</a> の <a class="el" href="HwaddrRange_8cs_source.html#l00089">89</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="adb6fa96e0277b04f2061ff660e0a805d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classMACS_1_1HwaddrRange.html">HwaddrRange</a> MACS.HwaddrRange.GetVendorCode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1Hwaddr.html">Hwaddr</a>&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ベンダコードをMACアドレス範囲として得る </p>
+<p>srcの上位3オクテットのみをベンダコードとして用います。 </p>
+
+<p> <a class="el" href="HwaddrRange_8cs_source.html">HwaddrRange.cs</a> の <a class="el" href="HwaddrRange_8cs_source.html#l00102">102</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5b4b46bb6f20fc26e92542655c516ad4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1Hwaddr.html">Hwaddr</a> [] MACS.HwaddrRange.GetList </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>limit</em> = <code>-1</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アドレス範囲をアドレスリストにして返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">limit</td><td>最大件数（負の場合制限無し）</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="HwaddrRange_8cs_source.html">HwaddrRange.cs</a> の <a class="el" href="HwaddrRange_8cs_source.html#l00118">118</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac5983f4a22de2e0eb2d69ffa6e6524dd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HwaddrRange.GetList </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classMACS_1_1Hwaddr.html">Hwaddr</a> &gt;&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>limit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アドレス範囲をアドレスリストに追加する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>このリストに追加する</td></tr>
+    <tr><td class="paramname">limit</td><td>最大件数（負の場合制限無し）</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="HwaddrRange_8cs_source.html">HwaddrRange.cs</a> の <a class="el" href="HwaddrRange_8cs_source.html#l00129">129</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad8fa61db2abe60c7960c2b251473c6f0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.HwaddrRange.Equals </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1HwaddrRange.html">HwaddrRange</a>&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>インスタンスがsrcで示されるアドレス範囲と同じかどうかを返す </p>
+
+<p> <a class="el" href="HwaddrRange_8cs_source.html">HwaddrRange.cs</a> の <a class="el" href="HwaddrRange_8cs_source.html#l00143">143</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="HwaddrRange_8cs_source.html#l00153">MACS.HwaddrRange.Equals()</a>, と <a class="el" href="HwaddrRange_8cs_source.html#l00167">MACS.HwaddrRange.operator==()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad2e1f02f6ed616d6302f88e034b0b7e2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool MACS.HwaddrRange.Equals </td>
+          <td>(</td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>インスタンスがsrcで示されるアドレス範囲と同じかどうかを返す 一般オブジェクトとの比較バージョン。 </p>
+
+<p> <a class="el" href="HwaddrRange_8cs_source.html">HwaddrRange.cs</a> の <a class="el" href="HwaddrRange_8cs_source.html#l00153">153</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a97da076ff89362dd9bc45fc76c2ff6c3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override int MACS.HwaddrRange.GetHashCode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>インスタンスのハッシュコードを返す。 </p>
+
+<p> <a class="el" href="HwaddrRange_8cs_source.html">HwaddrRange.cs</a> の <a class="el" href="HwaddrRange_8cs_source.html#l00163">163</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a02413b1a22e410e1524c9cac00c01ac9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool MACS.HwaddrRange.operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1HwaddrRange.html">HwaddrRange</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1HwaddrRange.html">HwaddrRange</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="HwaddrRange_8cs_source.html">HwaddrRange.cs</a> の <a class="el" href="HwaddrRange_8cs_source.html#l00167">167</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab8f7187e6fca4faeff55521ead7af623"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool MACS.HwaddrRange.operator!= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1HwaddrRange.html">HwaddrRange</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1HwaddrRange.html">HwaddrRange</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="HwaddrRange_8cs_source.html">HwaddrRange.cs</a> の <a class="el" href="HwaddrRange_8cs_source.html#l00175">175</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">変数</h2>
+<a class="anchor" id="a0e70c2dc57cef26fd890b1e0453e24ed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="classMACS_1_1Hwaddr.html">Hwaddr</a> MACS.HwaddrRange.StartAddr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>開始アドレス </p>
+
+<p> <a class="el" href="HwaddrRange_8cs_source.html">HwaddrRange.cs</a> の <a class="el" href="HwaddrRange_8cs_source.html#l00021">21</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="HwaddrRange_8cs_source.html#l00143">MACS.HwaddrRange.Equals()</a>, <a class="el" href="HwaddrRange_8cs_source.html#l00163">MACS.HwaddrRange.GetHashCode()</a>, <a class="el" href="HwaddrRange_8cs_source.html#l00129">MACS.HwaddrRange.GetList()</a>, <a class="el" href="HwaddrRange_8cs_source.html#l00102">MACS.HwaddrRange.GetVendorCode()</a>, <a class="el" href="HwaddrRange_8cs_source.html#l00052">MACS.HwaddrRange.HwaddrRange()</a>, と <a class="el" href="HwaddrRange_8cs_source.html#l00076">MACS.HwaddrRange.Set()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a87290f95b403d99b71601bec8226d6ce"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="classMACS_1_1Hwaddr.html">Hwaddr</a> MACS.HwaddrRange.EndAddr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>終了アドレス </p>
+
+<p> <a class="el" href="HwaddrRange_8cs_source.html">HwaddrRange.cs</a> の <a class="el" href="HwaddrRange_8cs_source.html#l00026">26</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="HwaddrRange_8cs_source.html#l00143">MACS.HwaddrRange.Equals()</a>, <a class="el" href="HwaddrRange_8cs_source.html#l00163">MACS.HwaddrRange.GetHashCode()</a>, <a class="el" href="HwaddrRange_8cs_source.html#l00129">MACS.HwaddrRange.GetList()</a>, <a class="el" href="HwaddrRange_8cs_source.html#l00102">MACS.HwaddrRange.GetVendorCode()</a>, <a class="el" href="HwaddrRange_8cs_source.html#l00052">MACS.HwaddrRange.HwaddrRange()</a>, と <a class="el" href="HwaddrRange_8cs_source.html#l00076">MACS.HwaddrRange.Set()</a>.</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="HwaddrRange_8cs_source.html">HwaddrRange.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceMACS.html">MACS</a></li><li class="navelem"><a class="el" href="classMACS_1_1HwaddrRange.html">HwaddrRange</a></li>
+    <li class="footer">MACS.Coreに対してWed Jun 27 2018 17:45:44に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

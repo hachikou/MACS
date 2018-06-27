@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.DB: A5erToDBTableDef.cs ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.DB
+   </div>
+   <div id="projectbrief">SQL Database Access Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('A5erToDBTableDef_8cs_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">A5erToDBTableDef.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="A5erToDBTableDef_8cs.html">説明を見る。</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/// A5erToDBTableDef: A5ER形式のDBテーブル定義からDBTableDef用のXMLファイルを生成する.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"></span><span class="comment">///</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"></span><span class="comment">/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span><span class="comment">/// Released under the MIT license</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"></span><span class="comment">/// See ../MITLicense.txt</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> System;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> System.Collections.Generic;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> System.IO;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using</span> System.Xml;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using</span> System.Text;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using</span> System.Text.RegularExpressions;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using</span> MACS;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="namespaceMACS_1_1DB.html">   15</a></span>&#160;<span class="keyword">namespace </span>MACS.DB {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">/// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">///   A5ERからDBTableDefのコンバータ</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">/// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="classMACS_1_1DB_1_1A5erToDBTableDef.html">   20</a></span>&#160;<span class="comment"></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classMACS_1_1DB_1_1A5erToDBTableDef.html" title="A5ERからDBTableDefのコンバータ ">A5erToDBTableDef</a> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">    ///   コンバータコンストラクタ</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="classMACS_1_1DB_1_1A5erToDBTableDef.html#aeafaef84be944803a450a1e57856f3f0">   25</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <a class="code" href="classMACS_1_1DB_1_1A5erToDBTableDef.html#aeafaef84be944803a450a1e57856f3f0" title="コンバータコンストラクタ ">A5erToDBTableDef</a>() {}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    ///   コンバートする</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="classMACS_1_1DB_1_1A5erToDBTableDef.html#a0702628c76ff9e09302442b5f97dd829">   30</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="classMACS_1_1DB_1_1A5erToDBTableDef.html#a0702628c76ff9e09302442b5f97dd829" title="コンバートする ">Convert</a>(<span class="keywordtype">string</span> a5erfile, <span class="keywordtype">string</span> outdir) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">if</span>(!Directory.Exists(outdir))</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            Directory.CreateDirectory(outdir);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">using</span>(StreamReader sr = <a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1FileUtil.html">FileUtil</a>.<a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1FileUtil.html#a194cc0377d9fbcf97fe9a642b267a92d">Reader</a>(a5erfile, Encoding.UTF8)) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">if</span>(sr == null)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> IOException(<span class="stringliteral">&quot;Can&#39;t open &quot;</span>+a5erfile+<span class="stringliteral">&quot; for reading&quot;</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            Regex pat_type = <span class="keyword">new</span> Regex(<span class="stringliteral">@&quot;^[\*@]?(\w+)(\(([0-9,]+)\))?$&quot;</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <a class="code" href="classMACS_1_1DB_1_1DBTableDef.html" title="データベーステーブル定義 ">DBTableDef</a> tabledef = null;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordtype">string</span> line;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">while</span>((line = sr.ReadLine()) != null) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                line = line.Trim();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordflow">if</span>(line.StartsWith(<span class="stringliteral">&quot;[&quot;</span>) &amp;&amp; line.EndsWith(<span class="stringliteral">&quot;]&quot;</span>)) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                    <span class="keywordflow">if</span>((tabledef != null) &amp;&amp; (tabledef.<a class="code" href="classMACS_1_1DB_1_1DBTableDef.html#a708c6d655c4f2438e9d74d16e11c0b91" title="カラム定義 ">Columns</a> != null)) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                        tabledef.<a class="code" href="classMACS_1_1DB_1_1DBTableDef.html#a8ba910157af8757597ba1d99a2b587d3" title="指定ファイルに定義を書き出す ">SaveAs</a>(Path.Combine(outdir, tabledef.<a class="code" href="classMACS_1_1DB_1_1DBTableDef.html#ab5a6f9cddeec8e7f62bfb9e85321cfd5" title="定義XMLファイル名 ">XmlFileName</a>));</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                        count++;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    tabledef = null;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keywordflow">if</span>(line == <span class="stringliteral">&quot;[Entity]&quot;</span>) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    tabledef = <span class="keyword">new</span> <a class="code" href="classMACS_1_1DB_1_1DBTableDef.html" title="データベーステーブル定義 ">DBTableDef</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keywordflow">if</span>(tabledef == null)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="keywordtype">string</span>[] kv = line.Split(<span class="stringliteral">&quot;=&quot;</span>.ToCharArray(), 2);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="keywordflow">if</span>(kv.Length &lt; 2)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="keywordflow">switch</span>(kv[0]) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&quot;PName&quot;</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    tabledef.<a class="code" href="classMACS_1_1DB_1_1DBTableDef.html#aef2e08ea279b490b86afd0f3d980f32b" title="テーブルID名 ">Id</a> = kv[1];</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    tabledef.<a class="code" href="classMACS_1_1DB_1_1DBTableDef.html#af9d2b0a2eb688184b9c9659066f9e07e" title="テーブル名 ">Name</a> = kv[1];</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&quot;LName&quot;</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    tabledef.<a class="code" href="classMACS_1_1DB_1_1DBTableDef.html#a967092d98a14280c542f387e8e5260fd" title="テーブル内容 ">Expr</a> = kv[1];</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&quot;Comment&quot;</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    tabledef.<a class="code" href="classMACS_1_1DB_1_1DBTableDef.html#adb8ae3741a965ecf6d7fc2802307952a" title="説明文 ">Note</a> = kv[1].Replace(<span class="stringliteral">@&quot;\n&quot;</span>,<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&quot;Field&quot;</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                        <span class="keywordtype">string</span>[] x = <a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1StringUtil.html">StringUtil</a>.<a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1StringUtil.html#a06051c705d63344004f309dd72315ba7">SplitCSV</a>(kv[1]);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                        <span class="keywordflow">if</span>(x.Length &lt; 7)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                            <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception(<span class="stringliteral">&quot;Invalid Field declaration.&quot;</span>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                        Match mo = pat_type.Match(x[2]);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                        <span class="keywordflow">if</span>(!mo.Success)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                            <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception(<span class="stringliteral">&quot;Invalid type declaration&quot;</span>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                        <span class="keywordtype">string</span> type = mo.Groups[1].Value;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                        <span class="keywordtype">int</span> length = 0;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                        <span class="keywordtype">int</span> fractional = 0;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                        <span class="keywordflow">if</span>(mo.Groups[2].Success) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                            <span class="keywordtype">string</span>[] xx = mo.Groups[3].Value.Split(<span class="stringliteral">&quot;,&quot;</span>.ToCharArray());</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                            <span class="keywordflow">if</span>(xx.Length &lt; 2) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                length = <a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1StringUtil.html">StringUtil</a>.<a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1StringUtil.html#afe15673a7e3084bb36953e201a5bef52">ToInt</a>(xx[0]);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                                fractional = 0;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                                length = <a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1StringUtil.html">StringUtil</a>.<a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1StringUtil.html#afe15673a7e3084bb36953e201a5bef52">ToInt</a>(xx[0]);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                fractional = <a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1StringUtil.html">StringUtil</a>.<a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1StringUtil.html#afe15673a7e3084bb36953e201a5bef52">ToInt</a>(xx[1]);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                            }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                        }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                        <a class="code" href="classMACS_1_1DB_1_1DBColumnDef.html" title="DBテーブルのカラム定義 ">DBColumnDef</a> coldef = <span class="keyword">new</span> <a class="code" href="classMACS_1_1DB_1_1DBColumnDef.html" title="DBテーブルのカラム定義 ">DBColumnDef</a>(x[1], <span class="comment">// Name</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                                                             type, length, fractional,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                                                             x[3]==<span class="stringliteral">&quot;&quot;</span>, <span class="comment">// Nullable</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                                                             x[4]!=<span class="stringliteral">&quot;&quot;</span>, <span class="comment">// PK</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                                                             x[5]);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                        coldef.<a class="code" href="classMACS_1_1DB_1_1DBColumnDef.html#ac3a5fdc6c1a0f49a3f96e0842c9b76ee" title="カラム内容 ">Expr</a> = x[0];</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                        coldef.<a class="code" href="classMACS_1_1DB_1_1DBColumnDef.html#a8f77e05b564cf7bb55af62bb0a716ceb" title="説明文 ">Note</a> = x[6].Replace(<span class="stringliteral">@&quot;\n&quot;</span>,<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                        tabledef.<a class="code" href="classMACS_1_1DB_1_1DBTableDef.html#a5c5537d33df3fbc0cc274c43157d0921" title="カラム追加 ">AddColumn</a>(coldef);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&quot;Index&quot;</span>:</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                        kv = kv[1].Split(<span class="stringliteral">&quot;=&quot;</span>.ToCharArray(), 2);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                        <span class="keywordflow">if</span>(kv.Length &lt; 2)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                            <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception(<span class="stringliteral">&quot;Invalid Index declaration.&quot;</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                        <span class="keywordtype">string</span>[] x = <a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1StringUtil.html">StringUtil</a>.<a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1StringUtil.html#a06051c705d63344004f309dd72315ba7">SplitCSV</a>(kv[1]);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                        <span class="keywordflow">if</span>(x.Length &lt; 2)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                            <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception(<span class="stringliteral">&quot;Invalid Index declaration..&quot;</span>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                        <span class="keywordtype">string</span>[] columns = <span class="keyword">new</span> <span class="keywordtype">string</span>[x.Length-1];</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; x.Length-1; i++)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                            columns[i] = x[i+1];</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                        <a class="code" href="classMACS_1_1DB_1_1DBIndexDef.html" title="DBテーブルのインデックス定義 ">DBIndexDef</a> inddef = <span class="keyword">new</span> <a class="code" href="classMACS_1_1DB_1_1DBIndexDef.html" title="DBテーブルのインデックス定義 ">DBIndexDef</a>(columns, x[0]==<span class="stringliteral">&quot;1&quot;</span>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                        tabledef.<a class="code" href="classMACS_1_1DB_1_1DBTableDef.html#a8581bb12d6e97db0cb03440056454319" title="インデックス追加 ">AddIndex</a>(inddef);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                    }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">if</span>((tabledef != null) &amp;&amp; (tabledef.<a class="code" href="classMACS_1_1DB_1_1DBTableDef.html#a708c6d655c4f2438e9d74d16e11c0b91" title="カラム定義 ">Columns</a> != null)) {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                tabledef.<a class="code" href="classMACS_1_1DB_1_1DBTableDef.html#a8ba910157af8757597ba1d99a2b587d3" title="指定ファイルに定義を書き出す ">SaveAs</a>(Path.Combine(outdir, tabledef.<a class="code" href="classMACS_1_1DB_1_1DBTableDef.html#ab5a6f9cddeec8e7f62bfb9e85321cfd5" title="定義XMLファイル名 ">XmlFileName</a>));</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                count++;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            sr.Close();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">return</span> count;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;} <span class="comment">// End of namespace</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="A5erToDBTableDef_8cs.html">A5erToDBTableDef.cs</a></li>
+    <li class="footer">MACS.DBに対してWed Jun 27 2018 17:45:48に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

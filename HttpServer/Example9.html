@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.HttpServer: WebControl利用2</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.HttpServer
+   </div>
+   <div id="projectbrief">HTTP Server and Template Engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('Example9.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">WebControl利用2 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Literal, TemplateFlag の2つは、他のウィジェットと異なり、HTMLのフォーム要素に直接対応していません。</p>
+<p>Literalは、Textメンバに入れた文字列がそのままレンダリングされます。ただし、CssClassメンバにCSSクラス名がセットされると、Textメンバの文字列がspanタグで囲まれてレンダリングされます。</p>
+<p>TemplateFlagは、テンプレートコマンドの{!if }で利用するためのもので、Disabledメンバがtrueになっているか、Visibleメンバがfalseになっているとfalseに、さもなければtrueになります。</p>
+<p>Example9.cs: </p>
+<div class="fragment"><div class="line">﻿<span class="comment">/*! @file Example9.cs</span></div>
+<div class="line"><span class="comment"> * $Id: $</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Copyright (C) 2008-2012 Microbrains Inc.</span></div>
+<div class="line"><span class="comment"> * All Rights Reserved.</span></div>
+<div class="line"><span class="comment"> * This code was designed and coded by SHIBUYA K.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">using</span> SCS;</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">class </span><a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classProgram.html">Program</a> {</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classProgram.html#afcfdd245ac54647c4931389fa84f5693">Main</a>(<span class="keywordtype">string</span>[] args) {</div>
+<div class="line">        HttpServer sv = <span class="keyword">new</span> HttpServer(<span class="stringliteral">&quot;SampleHttpServer&quot;</span>, <span class="stringliteral">&quot;*&quot;</span>, 8888);</div>
+<div class="line">        HttpTemplatePage.SetTemplateDir(<span class="stringliteral">&quot;template&quot;</span>);</div>
+<div class="line">        sv.AddPage(<span class="stringliteral">&quot;/example9&quot;</span>, typeof(SamplePage));</div>
+<div class="line">        sv.DefaultPage = <span class="stringliteral">&quot;/example9&quot;</span>;</div>
+<div class="line">        sv.Run(4);</div>
+<div class="line">        <span class="keywordflow">return</span> 0;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// WebControlを利用するテンプレートレンダラの例</span></div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>SamplePage : HttpTemplatePage {</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// LiteralとTemplateFlagの例</span></div>
+<div class="line">    <span class="keyword">protected</span> Literal foo;</div>
+<div class="line">    <span class="keyword">protected</span> Literal foo2;</div>
+<div class="line">    <span class="keyword">protected</span> TemplateFlag baa;</div>
+<div class="line"></div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> PageLoad(<span class="keywordtype">string</span> param) {</div>
+<div class="line"></div>
+<div class="line">        AssignWebControls();</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">// {foo}はTextの値がそのままレンダリングされる。</span></div>
+<div class="line">        foo.Text = <span class="stringliteral">&quot;おはよう&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">// {foo2}はspan要素でCSSクラスが指定される</span></div>
+<div class="line">        foo2.Text = <span class="stringliteral">&quot;こんにちわ&quot;</span>;</div>
+<div class="line">        foo2.CssClass = <span class="stringliteral">&quot;reverse&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">// baaは {!if } で利用する</span></div>
+<div class="line">        baa.Disabled = <span class="keyword">false</span>;</div>
+<div class="line"></div>
+<div class="line">        RenderTemplate();</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment --><p>example9.html: </p>
+<pre class="fragment">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Sample Page&lt;/title&gt;
+    &lt;style type="text/css"&gt;
+      &lt;!--
+          .reverse { color: white; background-color: black;}
+        --&gt;
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    {foo}&lt;br/&gt;
+    {foo2}&lt;br/&gt;
+    {!if baa}
+    おやすみ&lt;br/&gt;
+    {!endif}
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre><p>これらのウィジェットは、本来ならば不用（Assignメソッドを使って普通のテンプレート変数を設定すればよいだけ）なのですが、ASPXのLiteralを多用したページを移植する際に便利であるため、用意しました。 </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="index.html">index</a></li><li class="navelem"><a class="el" href="Http_xE3_x82_xB5_xE3_x83_xBC_xE3_x83_x90_xE6_xA7_x8B_xE7_xAF_x89_xE4_xBE_x8B.html">Httpサーバ構築例</a></li>
+    <li class="footer">MACS.HttpServerに対してWed Jun 27 2018 17:45:46に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

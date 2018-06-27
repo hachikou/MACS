@@ -1,0 +1,685 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.Core: クラス MACS.SectionIniFile</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.Core
+   </div>
+   <div id="projectbrief">Miscellaneous Assets for C-Sharp</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classMACS_1_1SectionIniFile.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="classMACS_1_1SectionIniFile-members.html">すべてのメンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス MACS.SectionIniFile</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>[]でセクション分けされたINI形式のファイルを取り扱うオブジェクト  
+ <a href="classMACS_1_1SectionIniFile.html#details">[詳細]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr class="memitem:af7ca6f241185bd42ace10534df01767e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SectionIniFile.html#af7ca6f241185bd42ace10534df01767e">SectionIniFile</a> (string filename, Encoding enc)</td></tr>
+<tr class="memdesc:af7ca6f241185bd42ace10534df01767e"><td class="mdescLeft">&#160;</td><td class="mdescRight">INIファイルを読み取り、データベースを作成する。  <a href="#af7ca6f241185bd42ace10534df01767e"></a><br/></td></tr>
+<tr class="separator:af7ca6f241185bd42ace10534df01767e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbf48710c6601ae28850e3e85109c9cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SectionIniFile.html#acbf48710c6601ae28850e3e85109c9cb">SectionIniFile</a> (string filename)</td></tr>
+<tr class="memdesc:acbf48710c6601ae28850e3e85109c9cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">INIファイルを読み取り、データベースを作成する。 デフォルトエンコーディング版。  <a href="#acbf48710c6601ae28850e3e85109c9cb"></a><br/></td></tr>
+<tr class="separator:acbf48710c6601ae28850e3e85109c9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f0d0ddef63921ead2a5a3eecf5c6ed4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SectionIniFile.html#a7f0d0ddef63921ead2a5a3eecf5c6ed4">Reload</a> ()</td></tr>
+<tr class="memdesc:a7f0d0ddef63921ead2a5a3eecf5c6ed4"><td class="mdescLeft">&#160;</td><td class="mdescRight">INIファイルを読み取る。  <a href="#a7f0d0ddef63921ead2a5a3eecf5c6ed4"></a><br/></td></tr>
+<tr class="separator:a7f0d0ddef63921ead2a5a3eecf5c6ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2985c3695182fc4311a138b2513d4a6a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SectionIniFile.html#a2985c3695182fc4311a138b2513d4a6a">Write</a> (bool makebak=true, string tmpdir=null)</td></tr>
+<tr class="memdesc:a2985c3695182fc4311a138b2513d4a6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">INIファイルを書き出す。  <a href="#a2985c3695182fc4311a138b2513d4a6a"></a><br/></td></tr>
+<tr class="separator:a2985c3695182fc4311a138b2513d4a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac885f6393d9ebecb256f30be34a407fb"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SectionIniFile.html#ac885f6393d9ebecb256f30be34a407fb">Get</a> (string sect, string key)</td></tr>
+<tr class="memdesc:ac885f6393d9ebecb256f30be34a407fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したキーに対応する値を返す。デフォルトは""。  <a href="#ac885f6393d9ebecb256f30be34a407fb"></a><br/></td></tr>
+<tr class="separator:ac885f6393d9ebecb256f30be34a407fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54e02269506609e6c9546d370eae79b9"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SectionIniFile.html#a54e02269506609e6c9546d370eae79b9">Get</a> (string sect, string key, string def)</td></tr>
+<tr class="memdesc:a54e02269506609e6c9546d370eae79b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したキーに対応する値を返す。文字列版。  <a href="#a54e02269506609e6c9546d370eae79b9"></a><br/></td></tr>
+<tr class="separator:a54e02269506609e6c9546d370eae79b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accd8c67f2f14352734b62343d3752b26"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SectionIniFile.html#accd8c67f2f14352734b62343d3752b26">Get</a> (string sect, string key, int def)</td></tr>
+<tr class="memdesc:accd8c67f2f14352734b62343d3752b26"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したキーに対応する値を返す。整数版。  <a href="#accd8c67f2f14352734b62343d3752b26"></a><br/></td></tr>
+<tr class="separator:accd8c67f2f14352734b62343d3752b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d54327aba43f80a7cb61eb031cc06d8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SectionIniFile.html#a2d54327aba43f80a7cb61eb031cc06d8">Get</a> (string sect, string key, double def)</td></tr>
+<tr class="memdesc:a2d54327aba43f80a7cb61eb031cc06d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したキーに対応する値を返す。浮動小数点数版。  <a href="#a2d54327aba43f80a7cb61eb031cc06d8"></a><br/></td></tr>
+<tr class="separator:a2d54327aba43f80a7cb61eb031cc06d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac178fc34b826e0fd1f07679fee98da2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SectionIniFile.html#aac178fc34b826e0fd1f07679fee98da2">Get</a> (string sect, string key, bool def)</td></tr>
+<tr class="memdesc:aac178fc34b826e0fd1f07679fee98da2"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したキーに対応する値を返す。 true/false版。  <a href="#aac178fc34b826e0fd1f07679fee98da2"></a><br/></td></tr>
+<tr class="separator:aac178fc34b826e0fd1f07679fee98da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae76962000084625547f6f304f5a8a33c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SectionIniFile.html#ae76962000084625547f6f304f5a8a33c">Set</a> (string sect, string key, string val)</td></tr>
+<tr class="memdesc:ae76962000084625547f6f304f5a8a33c"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したキーに対応する値をセットする。文字列版。 ファイルへの書き込みは行なわない。  <a href="#ae76962000084625547f6f304f5a8a33c"></a><br/></td></tr>
+<tr class="separator:ae76962000084625547f6f304f5a8a33c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2097f288938af423213fe136be025bc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SectionIniFile.html#a2097f288938af423213fe136be025bc4">Set</a> (string sect, string key, int val)</td></tr>
+<tr class="memdesc:a2097f288938af423213fe136be025bc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したキーに対応する値をセットする。整数版。 ファイルへの書き込みは行なわない。  <a href="#a2097f288938af423213fe136be025bc4"></a><br/></td></tr>
+<tr class="separator:a2097f288938af423213fe136be025bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bd0f82ef72bad2a699c79a652656858"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SectionIniFile.html#a1bd0f82ef72bad2a699c79a652656858">Set</a> (string sect, string key, double val)</td></tr>
+<tr class="memdesc:a1bd0f82ef72bad2a699c79a652656858"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したキーに対応する値をセットする。浮動小数点数版。 ファイルへの書き込みは行なわない。  <a href="#a1bd0f82ef72bad2a699c79a652656858"></a><br/></td></tr>
+<tr class="separator:a1bd0f82ef72bad2a699c79a652656858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a906fb4d97c868c648c14a6a2248420ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SectionIniFile.html#a906fb4d97c868c648c14a6a2248420ab">Set</a> (string sect, string key, bool val)</td></tr>
+<tr class="memdesc:a906fb4d97c868c648c14a6a2248420ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したキーに対応する値をセットする。true/false版。 ファイルへの書き込みは行なわない。  <a href="#a906fb4d97c868c648c14a6a2248420ab"></a><br/></td></tr>
+<tr class="separator:a906fb4d97c868c648c14a6a2248420ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f7b6b1030250a71fd8c7bd8a33eb76c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SectionIniFile.html#a6f7b6b1030250a71fd8c7bd8a33eb76c">DeleteSection</a> (string sect)</td></tr>
+<tr class="memdesc:a6f7b6b1030250a71fd8c7bd8a33eb76c"><td class="mdescLeft">&#160;</td><td class="mdescRight">セクションを丸ごと削除する  <a href="#a6f7b6b1030250a71fd8c7bd8a33eb76c"></a><br/></td></tr>
+<tr class="separator:a6f7b6b1030250a71fd8c7bd8a33eb76c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff450e5d7546230d5c577d1b1b431331"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SectionIniFile.html#aff450e5d7546230d5c577d1b1b431331">GetSections</a> ()</td></tr>
+<tr class="memdesc:aff450e5d7546230d5c577d1b1b431331"><td class="mdescLeft">&#160;</td><td class="mdescRight">セクション名の一覧を獲得する。  <a href="#aff450e5d7546230d5c577d1b1b431331"></a><br/></td></tr>
+<tr class="separator:aff450e5d7546230d5c577d1b1b431331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:a51c112e5da40a630008aa974f6d661e0"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1SectionIniFile.html#a51c112e5da40a630008aa974f6d661e0">FileName</a><code> [get]</code></td></tr>
+<tr class="memdesc:a51c112e5da40a630008aa974f6d661e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル名  <a href="#a51c112e5da40a630008aa974f6d661e0"></a><br/></td></tr>
+<tr class="separator:a51c112e5da40a630008aa974f6d661e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">説明</h2>
+<div class="textblock"><p>[]でセクション分けされたINI形式のファイルを取り扱うオブジェクト </p>
+
+<p> <a class="el" href="SectionIniFile_8cs_source.html">SectionIniFile.cs</a> の <a class="el" href="SectionIniFile_8cs_source.html#l00019">19</a> 行で定義されています。</p>
+</div><h2 class="groupheader">コンストラクタとデストラクタ</h2>
+<a class="anchor" id="af7ca6f241185bd42ace10534df01767e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.SectionIniFile.SectionIniFile </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoding&#160;</td>
+          <td class="paramname"><em>enc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>INIファイルを読み取り、データベースを作成する。 </p>
+
+<p> <a class="el" href="SectionIniFile_8cs_source.html">SectionIniFile.cs</a> の <a class="el" href="SectionIniFile_8cs_source.html#l00030">30</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="acbf48710c6601ae28850e3e85109c9cb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.SectionIniFile.SectionIniFile </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>INIファイルを読み取り、データベースを作成する。 デフォルトエンコーディング版。 </p>
+
+<p> <a class="el" href="SectionIniFile_8cs_source.html">SectionIniFile.cs</a> の <a class="el" href="SectionIniFile_8cs_source.html#l00040">40</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド</h2>
+<a class="anchor" id="a7f0d0ddef63921ead2a5a3eecf5c6ed4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.SectionIniFile.Reload </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>INIファイルを読み取る。 </p>
+
+<p> <a class="el" href="SectionIniFile_8cs_source.html">SectionIniFile.cs</a> の <a class="el" href="SectionIniFile_8cs_source.html#l00057">57</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a2985c3695182fc4311a138b2513d4a6a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.SectionIniFile.Write </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>makebak</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tmpdir</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>INIファイルを書き出す。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">makebak</td><td>バックアップファイルを作るかどうか。</td></tr>
+    <tr><td class="paramname">tmpdir</td><td>一時保存ファイルを作るディレクトリ名。nullを指定したり省略した場合はINIファイルと同じディレクトリが使われる。</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>既存ファイルに書き出す場合、そのファイルに書かれている内容のうち、 本データベースで値を持っている定義行以外のすべての行は、そのまま 保持される。（コメント行や空行は変更されない。） </p>
+
+<p> <a class="el" href="SectionIniFile_8cs_source.html">SectionIniFile.cs</a> の <a class="el" href="SectionIniFile_8cs_source.html#l00075">75</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac885f6393d9ebecb256f30be34a407fb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.SectionIniFile.Get </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>sect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定したキーに対応する値を返す。デフォルトは""。 </p>
+
+<p> <a class="el" href="SectionIniFile_8cs_source.html">SectionIniFile.cs</a> の <a class="el" href="SectionIniFile_8cs_source.html#l00168">168</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="SectionIniFile_8cs_source.html#l00174">MACS.SectionIniFile.Get()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a54e02269506609e6c9546d370eae79b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.SectionIniFile.Get </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>sect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>def</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定したキーに対応する値を返す。文字列版。 </p>
+
+<p> <a class="el" href="SectionIniFile_8cs_source.html">SectionIniFile.cs</a> の <a class="el" href="SectionIniFile_8cs_source.html#l00174">174</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="accd8c67f2f14352734b62343d3752b26"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.SectionIniFile.Get </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>sect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>def</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定したキーに対応する値を返す。整数版。 </p>
+
+<p> <a class="el" href="SectionIniFile_8cs_source.html">SectionIniFile.cs</a> の <a class="el" href="SectionIniFile_8cs_source.html#l00190">190</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a2d54327aba43f80a7cb61eb031cc06d8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double MACS.SectionIniFile.Get </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>sect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>def</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定したキーに対応する値を返す。浮動小数点数版。 </p>
+
+<p> <a class="el" href="SectionIniFile_8cs_source.html">SectionIniFile.cs</a> の <a class="el" href="SectionIniFile_8cs_source.html#l00196">196</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aac178fc34b826e0fd1f07679fee98da2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.SectionIniFile.Get </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>sect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>def</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定したキーに対応する値を返す。 true/false版。 </p>
+
+<p> <a class="el" href="SectionIniFile_8cs_source.html">SectionIniFile.cs</a> の <a class="el" href="SectionIniFile_8cs_source.html#l00207">207</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae76962000084625547f6f304f5a8a33c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.SectionIniFile.Set </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>sect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定したキーに対応する値をセットする。文字列版。 ファイルへの書き込みは行なわない。 </p>
+
+<p> <a class="el" href="SectionIniFile_8cs_source.html">SectionIniFile.cs</a> の <a class="el" href="SectionIniFile_8cs_source.html#l00215">215</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="SectionIniFile_8cs_source.html#l00229">MACS.SectionIniFile.Set()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2097f288938af423213fe136be025bc4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.SectionIniFile.Set </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>sect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定したキーに対応する値をセットする。整数版。 ファイルへの書き込みは行なわない。 </p>
+
+<p> <a class="el" href="SectionIniFile_8cs_source.html">SectionIniFile.cs</a> の <a class="el" href="SectionIniFile_8cs_source.html#l00229">229</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1bd0f82ef72bad2a699c79a652656858"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.SectionIniFile.Set </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>sect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定したキーに対応する値をセットする。浮動小数点数版。 ファイルへの書き込みは行なわない。 </p>
+
+<p> <a class="el" href="SectionIniFile_8cs_source.html">SectionIniFile.cs</a> の <a class="el" href="SectionIniFile_8cs_source.html#l00236">236</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a906fb4d97c868c648c14a6a2248420ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.SectionIniFile.Set </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>sect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定したキーに対応する値をセットする。true/false版。 ファイルへの書き込みは行なわない。 </p>
+
+<p> <a class="el" href="SectionIniFile_8cs_source.html">SectionIniFile.cs</a> の <a class="el" href="SectionIniFile_8cs_source.html#l00243">243</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a6f7b6b1030250a71fd8c7bd8a33eb76c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.SectionIniFile.DeleteSection </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>sect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>セクションを丸ごと削除する </p>
+
+<p> <a class="el" href="SectionIniFile_8cs_source.html">SectionIniFile.cs</a> の <a class="el" href="SectionIniFile_8cs_source.html#l00250">250</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aff450e5d7546230d5c577d1b1b431331"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] MACS.SectionIniFile.GetSections </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>セクション名の一覧を獲得する。 </p>
+
+<p> <a class="el" href="SectionIniFile_8cs_source.html">SectionIniFile.cs</a> の <a class="el" href="SectionIniFile_8cs_source.html#l00265">265</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">プロパティ</h2>
+<a class="anchor" id="a51c112e5da40a630008aa974f6d661e0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.SectionIniFile.FileName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイル名 </p>
+
+<p> <a class="el" href="SectionIniFile_8cs_source.html">SectionIniFile.cs</a> の <a class="el" href="SectionIniFile_8cs_source.html#l00050">50</a> 行で定義されています。</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="SectionIniFile_8cs_source.html">SectionIniFile.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceMACS.html">MACS</a></li><li class="navelem"><a class="el" href="classMACS_1_1SectionIniFile.html">SectionIniFile</a></li>
+    <li class="footer">MACS.Coreに対してWed Jun 27 2018 17:45:45に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

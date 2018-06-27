@@ -1,0 +1,785 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.Core: クラス MACS.TelnetStream</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.Core
+   </div>
+   <div id="projectbrief">Miscellaneous Assets for C-Sharp</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classMACS_1_1TelnetStream.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-attribs">Public 変数</a> &#124;
+<a href="#pro-methods">Protected メソッド</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="classMACS_1_1TelnetStream-members.html">すべてのメンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス MACS.TelnetStream</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Telnetプロトコルを処理するストリーム  
+ <a href="classMACS_1_1TelnetStream.html#details">[詳細]</a></p>
+<div class="dynheader">
+MACS.TelnetStreamに対する継承グラフ</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classMACS_1_1TelnetStream.png" usemap="#MACS.TelnetStream_map" alt=""/>
+  <map id="MACS.TelnetStream_map" name="MACS.TelnetStream_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr class="memitem:ab099c9fbb482267a3ea54bcb239819e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#ab099c9fbb482267a3ea54bcb239819e4">TelnetStream</a> (Stream baseStream_, bool leaveOpen_=false)</td></tr>
+<tr class="memdesc:ab099c9fbb482267a3ea54bcb239819e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#ab099c9fbb482267a3ea54bcb239819e4"></a><br/></td></tr>
+<tr class="separator:ab099c9fbb482267a3ea54bcb239819e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12966728fcdfc15506f8f3abe76d4811"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#a12966728fcdfc15506f8f3abe76d4811">Close</a> ()</td></tr>
+<tr class="memdesc:a12966728fcdfc15506f8f3abe76d4811"><td class="mdescLeft">&#160;</td><td class="mdescRight">ストリームを閉じる  <a href="#a12966728fcdfc15506f8f3abe76d4811"></a><br/></td></tr>
+<tr class="separator:a12966728fcdfc15506f8f3abe76d4811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1c158b222a65415e44b75b30f66351f"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#ab1c158b222a65415e44b75b30f66351f">ReadByte</a> ()</td></tr>
+<tr class="separator:ab1c158b222a65415e44b75b30f66351f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75cbf74a4e24671856651bb323acb237"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#a75cbf74a4e24671856651bb323acb237">Read</a> (byte[] buf, int offset, int size)</td></tr>
+<tr class="separator:a75cbf74a4e24671856651bb323acb237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10fb57746bc7016444536c0f2c3d0451"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#a10fb57746bc7016444536c0f2c3d0451">WriteByte</a> (byte val)</td></tr>
+<tr class="separator:a10fb57746bc7016444536c0f2c3d0451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0233be52fb3488568e15fc7892b96c05"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#a0233be52fb3488568e15fc7892b96c05">Write</a> (byte[] buf, int offset, int size)</td></tr>
+<tr class="separator:a0233be52fb3488568e15fc7892b96c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d9f85817db2722050d59683f5ebd7bb"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#a8d9f85817db2722050d59683f5ebd7bb">Flush</a> ()</td></tr>
+<tr class="separator:a8d9f85817db2722050d59683f5ebd7bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdc7f2467a56d803dc3b229aac911fc9"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#abdc7f2467a56d803dc3b229aac911fc9">SetLength</a> (long len)</td></tr>
+<tr class="separator:abdc7f2467a56d803dc3b229aac911fc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7e3004fa87fc51ec37a0c37bfc7b5b6"><td class="memItemLeft" align="right" valign="top">override long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#ac7e3004fa87fc51ec37a0c37bfc7b5b6">Seek</a> (long pos, SeekOrigin o)</td></tr>
+<tr class="separator:ac7e3004fa87fc51ec37a0c37bfc7b5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9887d7309da9ccbfb0e603b83fe31ff3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#a9887d7309da9ccbfb0e603b83fe31ff3">RequestBinaryTransmission</a> (bool yesno=true)</td></tr>
+<tr class="memdesc:a9887d7309da9ccbfb0e603b83fe31ff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">相手にBinaryTransmissionオプションを要求する  <a href="#a9887d7309da9ccbfb0e603b83fe31ff3"></a><br/></td></tr>
+<tr class="separator:a9887d7309da9ccbfb0e603b83fe31ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac5d2fe2a9488d722b906e6a5f607444"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#aac5d2fe2a9488d722b906e6a5f607444">DeclareBinaryTransmission</a> (bool yesno=true)</td></tr>
+<tr class="memdesc:aac5d2fe2a9488d722b906e6a5f607444"><td class="mdescLeft">&#160;</td><td class="mdescRight">自分がBinaryTransmissionオプションを宣言する  <a href="#aac5d2fe2a9488d722b906e6a5f607444"></a><br/></td></tr>
+<tr class="separator:aac5d2fe2a9488d722b906e6a5f607444"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3742da06af98c510d45ea5e6709ea2f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#a3742da06af98c510d45ea5e6709ea2f5">RequestEcho</a> (bool yesno=true)</td></tr>
+<tr class="memdesc:a3742da06af98c510d45ea5e6709ea2f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">相手にEchoオプションを要求する  <a href="#a3742da06af98c510d45ea5e6709ea2f5"></a><br/></td></tr>
+<tr class="separator:a3742da06af98c510d45ea5e6709ea2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a159078a7ee3d23c05ab94db882467673"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#a159078a7ee3d23c05ab94db882467673">DeclareEcho</a> (bool yesno=true)</td></tr>
+<tr class="memdesc:a159078a7ee3d23c05ab94db882467673"><td class="mdescLeft">&#160;</td><td class="mdescRight">自分がEchoオプションを宣言する  <a href="#a159078a7ee3d23c05ab94db882467673"></a><br/></td></tr>
+<tr class="separator:a159078a7ee3d23c05ab94db882467673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60ebcc3f5951988759fe545fa46fdc75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#a60ebcc3f5951988759fe545fa46fdc75">RequestLineMode</a> (bool yesno=true)</td></tr>
+<tr class="memdesc:a60ebcc3f5951988759fe545fa46fdc75"><td class="mdescLeft">&#160;</td><td class="mdescRight">相手にLineModeオプションを要求する  <a href="#a60ebcc3f5951988759fe545fa46fdc75"></a><br/></td></tr>
+<tr class="separator:a60ebcc3f5951988759fe545fa46fdc75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61121d1d86b47f85bce2d6971cb85ace"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#a61121d1d86b47f85bce2d6971cb85ace">DeclareLineMode</a> (bool yesno=true)</td></tr>
+<tr class="memdesc:a61121d1d86b47f85bce2d6971cb85ace"><td class="mdescLeft">&#160;</td><td class="mdescRight">自分がLineModeオプションを宣言する  <a href="#a61121d1d86b47f85bce2d6971cb85ace"></a><br/></td></tr>
+<tr class="separator:a61121d1d86b47f85bce2d6971cb85ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 変数</h2></td></tr>
+<tr class="memitem:a0c097fd73273e4fb1e51ae96cdc622f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#a0c097fd73273e4fb1e51ae96cdc622f9">ForceFlush</a></td></tr>
+<tr class="memdesc:a0c097fd73273e4fb1e51ae96cdc622f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">WriteのたびにFlushするフラグ  <a href="#a0c097fd73273e4fb1e51ae96cdc622f9"></a><br/></td></tr>
+<tr class="separator:a0c097fd73273e4fb1e51ae96cdc622f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa405a092d6c2979429749fba1b4f25"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#a1fa405a092d6c2979429749fba1b4f25">CookedMode</a></td></tr>
+<tr class="memdesc:a1fa405a092d6c2979429749fba1b4f25"><td class="mdescLeft">&#160;</td><td class="mdescRight">特殊コードを加工して送信するフラグ  <a href="#a1fa405a092d6c2979429749fba1b4f25"></a><br/></td></tr>
+<tr class="separator:a1fa405a092d6c2979429749fba1b4f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac689facb73bac39a6b4b731ca8f3f89a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#ac689facb73bac39a6b4b731ca8f3f89a">SuspendEcho</a></td></tr>
+<tr class="memdesc:ac689facb73bac39a6b4b731ca8f3f89a"><td class="mdescLeft">&#160;</td><td class="mdescRight">エコーバックを一時的に止めるフラグ  <a href="#ac689facb73bac39a6b4b731ca8f3f89a"></a><br/></td></tr>
+<tr class="separator:ac689facb73bac39a6b4b731ca8f3f89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected メソッド</h2></td></tr>
+<tr class="memitem:a4ff004216b86047760608081f8ab1427"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#a4ff004216b86047760608081f8ab1427">Dispose</a> (bool disposing)</td></tr>
+<tr class="memdesc:a4ff004216b86047760608081f8ab1427"><td class="mdescLeft">&#160;</td><td class="mdescRight">ディスポーザ  <a href="#a4ff004216b86047760608081f8ab1427"></a><br/></td></tr>
+<tr class="separator:a4ff004216b86047760608081f8ab1427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:a0cd610da22ad55adef11845af0168962"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#a0cd610da22ad55adef11845af0168962">CanRead</a><code> [get]</code></td></tr>
+<tr class="separator:a0cd610da22ad55adef11845af0168962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa3a18f68df70155c9aecc2e3bfa2837"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#afa3a18f68df70155c9aecc2e3bfa2837">CanSeek</a><code> [get]</code></td></tr>
+<tr class="separator:afa3a18f68df70155c9aecc2e3bfa2837"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab17e9fa84ed65bc9c03af270def75f75"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#ab17e9fa84ed65bc9c03af270def75f75">CanWrite</a><code> [get]</code></td></tr>
+<tr class="separator:ab17e9fa84ed65bc9c03af270def75f75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeaf791a82e6c0af566f697e79a588e2"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#aeeaf791a82e6c0af566f697e79a588e2">CanTimeout</a><code> [get]</code></td></tr>
+<tr class="separator:aeeaf791a82e6c0af566f697e79a588e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bbe41ff16a4478e11068f4173b1c37f"><td class="memItemLeft" align="right" valign="top">override long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#a6bbe41ff16a4478e11068f4173b1c37f">Length</a><code> [get]</code></td></tr>
+<tr class="separator:a6bbe41ff16a4478e11068f4173b1c37f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21090e11c89f04986911a3c2b0d32d74"><td class="memItemLeft" align="right" valign="top">override long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1TelnetStream.html#a21090e11c89f04986911a3c2b0d32d74">Position</a><code> [get, set]</code></td></tr>
+<tr class="separator:a21090e11c89f04986911a3c2b0d32d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">説明</h2>
+<div class="textblock"><p>Telnetプロトコルを処理するストリーム </p>
+<p>本ストリームはバイト列を取り扱います。文字エンコードが必要な場合は、 StreamReaderなどを使ってラッピングしてください。 </p>
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00028">28</a> 行で定義されています。</p>
+</div><h2 class="groupheader">コンストラクタとデストラクタ</h2>
+<a class="anchor" id="ab099c9fbb482267a3ea54bcb239819e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.TelnetStream.TelnetStream </td>
+          <td>(</td>
+          <td class="paramtype">Stream&#160;</td>
+          <td class="paramname"><em>baseStream_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>leaveOpen_</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">baseStream_</td><td></td></tr>
+    <tr><td class="paramname">leaveOpen_</td><td>Closeする際にbaseStreamをCloseしない場合にはtrue。デフォルトはfalse（Closeの際にbaseStreamもCloseする）</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00035">35</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド</h2>
+<a class="anchor" id="a4ff004216b86047760608081f8ab1427"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void MACS.TelnetStream.Dispose </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disposing</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ディスポーザ </p>
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00050">50</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a12966728fcdfc15506f8f3abe76d4811"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void MACS.TelnetStream.Close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ストリームを閉じる </p>
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00082">82</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="TelnetStream_8cs_source.html#l00050">MACS.TelnetStream.Dispose()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab1c158b222a65415e44b75b30f66351f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override int MACS.TelnetStream.ReadByte </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00091">91</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="TelnetStream_8cs_source.html#l00298">MACS.TelnetStream.Read()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a75cbf74a4e24671856651bb323acb237"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override int MACS.TelnetStream.Read </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00298">298</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a10fb57746bc7016444536c0f2c3d0451"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void MACS.TelnetStream.WriteByte </td>
+          <td>(</td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00315">315</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a0233be52fb3488568e15fc7892b96c05"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void MACS.TelnetStream.Write </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00321">321</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d9f85817db2722050d59683f5ebd7bb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void MACS.TelnetStream.Flush </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00327">327</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="abdc7f2467a56d803dc3b229aac911fc9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void MACS.TelnetStream.SetLength </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>len</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00331">331</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac7e3004fa87fc51ec37a0c37bfc7b5b6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override long MACS.TelnetStream.Seek </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SeekOrigin&#160;</td>
+          <td class="paramname"><em>o</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00335">335</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a9887d7309da9ccbfb0e603b83fe31ff3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.TelnetStream.RequestBinaryTransmission </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>yesno</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>相手にBinaryTransmissionオプションを要求する </p>
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00357">357</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aac5d2fe2a9488d722b906e6a5f607444"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.TelnetStream.DeclareBinaryTransmission </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>yesno</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>自分がBinaryTransmissionオプションを宣言する </p>
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00368">368</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a3742da06af98c510d45ea5e6709ea2f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.TelnetStream.RequestEcho </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>yesno</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>相手にEchoオプションを要求する </p>
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00379">379</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a159078a7ee3d23c05ab94db882467673"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.TelnetStream.DeclareEcho </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>yesno</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>自分がEchoオプションを宣言する </p>
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00390">390</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a60ebcc3f5951988759fe545fa46fdc75"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.TelnetStream.RequestLineMode </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>yesno</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>相手にLineModeオプションを要求する </p>
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00401">401</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a61121d1d86b47f85bce2d6971cb85ace"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.TelnetStream.DeclareLineMode </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>yesno</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>自分がLineModeオプションを宣言する </p>
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00412">412</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">変数</h2>
+<a class="anchor" id="a0c097fd73273e4fb1e51ae96cdc622f9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.TelnetStream.ForceFlush</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>WriteのたびにFlushするフラグ </p>
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00342">342</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="TelnetStream_8cs_source.html#l00321">MACS.TelnetStream.Write()</a>, と <a class="el" href="TelnetStream_8cs_source.html#l00315">MACS.TelnetStream.WriteByte()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1fa405a092d6c2979429749fba1b4f25"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.TelnetStream.CookedMode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>特殊コードを加工して送信するフラグ </p>
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00347">347</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="TelnetStream_8cs_source.html#l00091">MACS.TelnetStream.ReadByte()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac689facb73bac39a6b4b731ca8f3f89a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.TelnetStream.SuspendEcho</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>エコーバックを一時的に止めるフラグ </p>
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00352">352</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="TelnetStream_8cs_source.html#l00091">MACS.TelnetStream.ReadByte()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">プロパティ</h2>
+<a class="anchor" id="a0cd610da22ad55adef11845af0168962"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool MACS.TelnetStream.CanRead</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00054">54</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="afa3a18f68df70155c9aecc2e3bfa2837"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool MACS.TelnetStream.CanSeek</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00058">58</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab17e9fa84ed65bc9c03af270def75f75"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool MACS.TelnetStream.CanWrite</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00062">62</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aeeaf791a82e6c0af566f697e79a588e2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool MACS.TelnetStream.CanTimeout</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00066">66</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a6bbe41ff16a4478e11068f4173b1c37f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override long MACS.TelnetStream.Length</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00070">70</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a21090e11c89f04986911a3c2b0d32d74"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override long MACS.TelnetStream.Position</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a> の <a class="el" href="TelnetStream_8cs_source.html#l00074">74</a> 行で定義されています。</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="TelnetStream_8cs_source.html">TelnetStream.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceMACS.html">MACS</a></li><li class="navelem"><a class="el" href="classMACS_1_1TelnetStream.html">TelnetStream</a></li>
+    <li class="footer">MACS.Coreに対してWed Jun 27 2018 17:45:45に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

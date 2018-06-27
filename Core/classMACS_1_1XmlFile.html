@@ -1,0 +1,1049 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.Core: クラス MACS.XmlFile</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.Core
+   </div>
+   <div id="projectbrief">Miscellaneous Assets for C-Sharp</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classMACS_1_1XmlFile.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">構成</a> &#124;
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-static-methods">Static Public メソッド</a> &#124;
+<a href="#pro-static-attribs">Static Protected 変数</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="classMACS_1_1XmlFile-members.html">すべてのメンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス MACS.XmlFile</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>XMLファイルを取り扱うクラス  
+ <a href="classMACS_1_1XmlFile.html#details">[詳細]</a></p>
+<div class="dynheader">
+MACS.XmlFileに対する継承グラフ</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classMACS_1_1XmlFile.png" usemap="#MACS.XmlFile_map" alt=""/>
+  <map id="MACS.XmlFile_map" name="MACS.XmlFile_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr class="memitem:a78f6dc7aa71ca3da307d71d6f7a43734"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#a78f6dc7aa71ca3da307d71d6f7a43734">XmlFile</a> (string filepath, string rootelementname)</td></tr>
+<tr class="memdesc:a78f6dc7aa71ca3da307d71d6f7a43734"><td class="mdescLeft">&#160;</td><td class="mdescRight">XMLファイルを読み込み専用で開く。 指定ファイルがある場合にはそれを読み込む。  <a href="#a78f6dc7aa71ca3da307d71d6f7a43734"></a><br/></td></tr>
+<tr class="separator:a78f6dc7aa71ca3da307d71d6f7a43734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2608527beb1c8f6e4698125924b6954e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#a2608527beb1c8f6e4698125924b6954e">XmlFile</a> (string filepath, string rootelementname, bool writable_)</td></tr>
+<tr class="memdesc:a2608527beb1c8f6e4698125924b6954e"><td class="mdescLeft">&#160;</td><td class="mdescRight">XMLファイルを読み込み用/書き込み用を指定して開く。 指定ファイルがある場合にはそれを読み込む。  <a href="#a2608527beb1c8f6e4698125924b6954e"></a><br/></td></tr>
+<tr class="separator:a2608527beb1c8f6e4698125924b6954e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08bb19d9c1c8940c9347c569563e9d2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#a08bb19d9c1c8940c9347c569563e9d2a">Dispose</a> ()</td></tr>
+<tr class="memdesc:a08bb19d9c1c8940c9347c569563e9d2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用リソースを解放する。  <a href="#a08bb19d9c1c8940c9347c569563e9d2a"></a><br/></td></tr>
+<tr class="separator:a08bb19d9c1c8940c9347c569563e9d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e382f86649251a2eee56adc71d62d46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#a2e382f86649251a2eee56adc71d62d46">Close</a> ()</td></tr>
+<tr class="memdesc:a2e382f86649251a2eee56adc71d62d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">リソースを解放する。  <a href="#a2e382f86649251a2eee56adc71d62d46"></a><br/></td></tr>
+<tr class="separator:a2e382f86649251a2eee56adc71d62d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d063867ba95af9f365cbb21c60a4c1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#a8d063867ba95af9f365cbb21c60a4c1e">Save</a> ()</td></tr>
+<tr class="memdesc:a8d063867ba95af9f365cbb21c60a4c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">XMLファイルを書き出す  <a href="#a8d063867ba95af9f365cbb21c60a4c1e"></a><br/></td></tr>
+<tr class="separator:a8d063867ba95af9f365cbb21c60a4c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefd5941f654fcca0aeff744e3f8b5706"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#aefd5941f654fcca0aeff744e3f8b5706">Save</a> (string filename)</td></tr>
+<tr class="memdesc:aefd5941f654fcca0aeff744e3f8b5706"><td class="mdescLeft">&#160;</td><td class="mdescRight">XMLファイルを指定名のファイルに書き出す  <a href="#aefd5941f654fcca0aeff744e3f8b5706"></a><br/></td></tr>
+<tr class="separator:aefd5941f654fcca0aeff744e3f8b5706"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef3baf836bdb74df92ff1d2bf289b6ae"><td class="memItemLeft" align="right" valign="top">XmlElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#aef3baf836bdb74df92ff1d2bf289b6ae">GetSubRoot</a> (string tagname)</td></tr>
+<tr class="memdesc:aef3baf836bdb74df92ff1d2bf289b6ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">ルート直下のエレメントを得る。 当該エレメントが無い場合は作成する。  <a href="#aef3baf836bdb74df92ff1d2bf289b6ae"></a><br/></td></tr>
+<tr class="separator:aef3baf836bdb74df92ff1d2bf289b6ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abedbf9a0685f99f21d27deb4b47bd969"><td class="memItemLeft" align="right" valign="top">List&lt; XmlElement &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#abedbf9a0685f99f21d27deb4b47bd969">GetElements</a> (XmlElement parent, string name)</td></tr>
+<tr class="memdesc:abedbf9a0685f99f21d27deb4b47bd969"><td class="mdescLeft">&#160;</td><td class="mdescRight">parentで指定したエレメント内のnameエレメントを全て探す。  <a href="#abedbf9a0685f99f21d27deb4b47bd969"></a><br/></td></tr>
+<tr class="separator:abedbf9a0685f99f21d27deb4b47bd969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4cd1a02c64b113f2f0f67ffa257bac6"><td class="memItemLeft" align="right" valign="top">XmlElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#ac4cd1a02c64b113f2f0f67ffa257bac6">GetElement</a> (XmlElement parent, string name)</td></tr>
+<tr class="memdesc:ac4cd1a02c64b113f2f0f67ffa257bac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">parentで指定したエレメント内の最初に見つかったnameエレメントを返す。 指定エレメントが無い場合にはnullを返す。  <a href="#ac4cd1a02c64b113f2f0f67ffa257bac6"></a><br/></td></tr>
+<tr class="separator:ac4cd1a02c64b113f2f0f67ffa257bac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacafdd5d3db35f1aaa83abcbcb0f71c2"><td class="memItemLeft" align="right" valign="top">XmlElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#aacafdd5d3db35f1aaa83abcbcb0f71c2">GetElementByAttribute</a> (XmlElement parent, string tagname, string attrname, string attrvalue)</td></tr>
+<tr class="memdesc:aacafdd5d3db35f1aaa83abcbcb0f71c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定エレメント直下のエレメントのうち、アトリビュートが指定値のものを得る。 当該エレメントが存在しない場合はnullを返す。  <a href="#aacafdd5d3db35f1aaa83abcbcb0f71c2"></a><br/></td></tr>
+<tr class="separator:aacafdd5d3db35f1aaa83abcbcb0f71c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0504b6ee41c081013eab9ccdd1541f6e"><td class="memItemLeft" align="right" valign="top">XmlElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#a0504b6ee41c081013eab9ccdd1541f6e">AddElement</a> (XmlElement parent, string tagname)</td></tr>
+<tr class="memdesc:a0504b6ee41c081013eab9ccdd1541f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定エレメント内に新たなエレメントを追加し、追加したエレメントを返す。  <a href="#a0504b6ee41c081013eab9ccdd1541f6e"></a><br/></td></tr>
+<tr class="separator:a0504b6ee41c081013eab9ccdd1541f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b065029f81996042c7222fbec403601"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#a3b065029f81996042c7222fbec403601">RemoveElement</a> (XmlElement parent, string tagname)</td></tr>
+<tr class="memdesc:a3b065029f81996042c7222fbec403601"><td class="mdescLeft">&#160;</td><td class="mdescRight">parentエレメント内の指定エレメントをすべて削除する。 削除したエレメント数を返す。  <a href="#a3b065029f81996042c7222fbec403601"></a><br/></td></tr>
+<tr class="separator:a3b065029f81996042c7222fbec403601"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe3c84f2b43904962c0457245a5aceb9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#afe3c84f2b43904962c0457245a5aceb9">RemoveElement</a> (XmlElement parent, string tagname, int n)</td></tr>
+<tr class="memdesc:afe3c84f2b43904962c0457245a5aceb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">parentエレメント内のn番目の指定エレメントを削除する。 削除したらtrue、削除しなかったらfalseを返す。  <a href="#afe3c84f2b43904962c0457245a5aceb9"></a><br/></td></tr>
+<tr class="separator:afe3c84f2b43904962c0457245a5aceb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cd3c9cb43d947ca8827038a3e6f4167"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#a8cd3c9cb43d947ca8827038a3e6f4167">RemoveElementByAttribute</a> (XmlElement parent, string tagname, string attrname, string attrvalue)</td></tr>
+<tr class="memdesc:a8cd3c9cb43d947ca8827038a3e6f4167"><td class="mdescLeft">&#160;</td><td class="mdescRight">parentエレメント内で、属性が指定されたものであるエレメントを削除する。 削除したエレメント数を返す。  <a href="#a8cd3c9cb43d947ca8827038a3e6f4167"></a><br/></td></tr>
+<tr class="separator:a8cd3c9cb43d947ca8827038a3e6f4167"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f6726c18a647b6f3acbc1e623d06a41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#a5f6726c18a647b6f3acbc1e623d06a41">Sort</a> (XmlElement parent, string tagname, IComparer&lt; XmlElement &gt; comp)</td></tr>
+<tr class="memdesc:a5f6726c18a647b6f3acbc1e623d06a41"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した名前のエレメントをソートする。  <a href="#a5f6726c18a647b6f3acbc1e623d06a41"></a><br/></td></tr>
+<tr class="separator:a5f6726c18a647b6f3acbc1e623d06a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08fc625c94fc9eab903f8b8ac0e627ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#a08fc625c94fc9eab903f8b8ac0e627ad">Sort</a> (XmlElement parent, string tagname, string attrname)</td></tr>
+<tr class="memdesc:a08fc625c94fc9eab903f8b8ac0e627ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した名前のエレメントを属性値に基づいてソートする。  <a href="#a08fc625c94fc9eab903f8b8ac0e627ad"></a><br/></td></tr>
+<tr class="separator:a08fc625c94fc9eab903f8b8ac0e627ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8af2714cbdb4a8b82dc5cc908d3cd14e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#a8af2714cbdb4a8b82dc5cc908d3cd14e">AddText</a> (XmlElement elem, string txt)</td></tr>
+<tr class="memdesc:a8af2714cbdb4a8b82dc5cc908d3cd14e"><td class="mdescLeft">&#160;</td><td class="mdescRight">テキスト要素を追加する  <a href="#a8af2714cbdb4a8b82dc5cc908d3cd14e"></a><br/></td></tr>
+<tr class="separator:a8af2714cbdb4a8b82dc5cc908d3cd14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a941928f3658e04fe9224f854e6aa00ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#a941928f3658e04fe9224f854e6aa00ad">lockFile</a> ()</td></tr>
+<tr class="memdesc:a941928f3658e04fe9224f854e6aa00ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルをロックする  <a href="#a941928f3658e04fe9224f854e6aa00ad"></a><br/></td></tr>
+<tr class="separator:a941928f3658e04fe9224f854e6aa00ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public メソッド</h2></td></tr>
+<tr class="memitem:ae4aab74a96d8b2cf4ba8a1fdf09bf727"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#ae4aab74a96d8b2cf4ba8a1fdf09bf727">GetText</a> (XmlElement elem, bool recursiveFlag=true)</td></tr>
+<tr class="memdesc:ae4aab74a96d8b2cf4ba8a1fdf09bf727"><td class="mdescLeft">&#160;</td><td class="mdescRight">テキスト要素を全て取り出す。  <a href="#ae4aab74a96d8b2cf4ba8a1fdf09bf727"></a><br/></td></tr>
+<tr class="separator:ae4aab74a96d8b2cf4ba8a1fdf09bf727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23c23bb74e8fb65901a7eaca0d2f5288"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#a23c23bb74e8fb65901a7eaca0d2f5288">GetAttribute</a> (XmlElement elem, string attrname, string def)</td></tr>
+<tr class="memdesc:a23c23bb74e8fb65901a7eaca0d2f5288"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性値を読み出す。属性値が未定義のときはデフォルト値を返す  <a href="#a23c23bb74e8fb65901a7eaca0d2f5288"></a><br/></td></tr>
+<tr class="separator:a23c23bb74e8fb65901a7eaca0d2f5288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0f5eac4f25d18cb13edd28ca4c2ffa4"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#af0f5eac4f25d18cb13edd28ca4c2ffa4">GetAttribute</a> (XmlElement elem, string attrname, int def)</td></tr>
+<tr class="memdesc:af0f5eac4f25d18cb13edd28ca4c2ffa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性値を読み出す。属性値が未定義のときはデフォルト値を返す  <a href="#af0f5eac4f25d18cb13edd28ca4c2ffa4"></a><br/></td></tr>
+<tr class="separator:af0f5eac4f25d18cb13edd28ca4c2ffa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8ece5e092a5823e4a5fbc4f2ac5c9d2"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#ab8ece5e092a5823e4a5fbc4f2ac5c9d2">GetAttribute</a> (XmlElement elem, string attrname, double def)</td></tr>
+<tr class="memdesc:ab8ece5e092a5823e4a5fbc4f2ac5c9d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性値を読み出す。属性値が未定義のときはデフォルト値を返す  <a href="#ab8ece5e092a5823e4a5fbc4f2ac5c9d2"></a><br/></td></tr>
+<tr class="separator:ab8ece5e092a5823e4a5fbc4f2ac5c9d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected 変数</h2></td></tr>
+<tr class="memitem:af4a3c8db26c718ba81bc1bad9b80afb2"><td class="memItemLeft" align="right" valign="top">static readonly Encoding&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#af4a3c8db26c718ba81bc1bad9b80afb2">encoding</a></td></tr>
+<tr class="separator:af4a3c8db26c718ba81bc1bad9b80afb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:a3515efdb759333f331bc213bf3b409cc"><td class="memItemLeft" align="right" valign="top">XmlDocument&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#a3515efdb759333f331bc213bf3b409cc">Document</a><code> [get]</code></td></tr>
+<tr class="memdesc:a3515efdb759333f331bc213bf3b409cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">ドキュメント  <a href="#a3515efdb759333f331bc213bf3b409cc"></a><br/></td></tr>
+<tr class="separator:a3515efdb759333f331bc213bf3b409cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bc4432e356233991af367161198a6a2"><td class="memItemLeft" align="right" valign="top">XmlElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#a2bc4432e356233991af367161198a6a2">Root</a><code> [get]</code></td></tr>
+<tr class="memdesc:a2bc4432e356233991af367161198a6a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ルート要素  <a href="#a2bc4432e356233991af367161198a6a2"></a><br/></td></tr>
+<tr class="separator:a2bc4432e356233991af367161198a6a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5f95e726d60ef92c2785446b6dfe51b"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1XmlFile.html#ad5f95e726d60ef92c2785446b6dfe51b">FilePath</a><code> [get]</code></td></tr>
+<tr class="memdesc:ad5f95e726d60ef92c2785446b6dfe51b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル名  <a href="#ad5f95e726d60ef92c2785446b6dfe51b"></a><br/></td></tr>
+<tr class="separator:ad5f95e726d60ef92c2785446b6dfe51b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">説明</h2>
+<div class="textblock"><p>XMLファイルを取り扱うクラス </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00018">18</a> 行で定義されています。</p>
+</div><h2 class="groupheader">コンストラクタとデストラクタ</h2>
+<a class="anchor" id="a78f6dc7aa71ca3da307d71d6f7a43734"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.XmlFile.XmlFile </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filepath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>rootelementname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>XMLファイルを読み込み専用で開く。 指定ファイルがある場合にはそれを読み込む。 </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00027">27</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a2608527beb1c8f6e4698125924b6954e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.XmlFile.XmlFile </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filepath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>rootelementname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>writable_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>XMLファイルを読み込み用/書き込み用を指定して開く。 指定ファイルがある場合にはそれを読み込む。 </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00035">35</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド</h2>
+<a class="anchor" id="a08bb19d9c1c8940c9347c569563e9d2a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.XmlFile.Dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>使用リソースを解放する。 </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00049">49</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a2e382f86649251a2eee56adc71d62d46"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.XmlFile.Close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>リソースを解放する。 </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00056">56</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="XmlFile_8cs_source.html#l00049">MACS.XmlFile.Dispose()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d063867ba95af9f365cbb21c60a4c1e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.XmlFile.Save </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>XMLファイルを書き出す </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00066">66</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aefd5941f654fcca0aeff744e3f8b5706"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.XmlFile.Save </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>XMLファイルを指定名のファイルに書き出す </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00073">73</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aef3baf836bdb74df92ff1d2bf289b6ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">XmlElement MACS.XmlFile.GetSubRoot </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tagname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ルート直下のエレメントを得る。 当該エレメントが無い場合は作成する。 </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00097">97</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="abedbf9a0685f99f21d27deb4b47bd969"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;XmlElement&gt; MACS.XmlFile.GetElements </td>
+          <td>(</td>
+          <td class="paramtype">XmlElement&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>parentで指定したエレメント内のnameエレメントを全て探す。 </p>
+<p>指定したエレメントが一つも存在しない場合は、空のリストを返す。 </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00115">115</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="XmlFile_8cs_source.html#l00097">MACS.XmlFile.GetSubRoot()</a>, と <a class="el" href="XmlFile_8cs_source.html#l00253">MACS.XmlFile.Sort()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac4cd1a02c64b113f2f0f67ffa257bac6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">XmlElement MACS.XmlFile.GetElement </td>
+          <td>(</td>
+          <td class="paramtype">XmlElement&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>parentで指定したエレメント内の最初に見つかったnameエレメントを返す。 指定エレメントが無い場合にはnullを返す。 </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00128">128</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aacafdd5d3db35f1aaa83abcbcb0f71c2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">XmlElement MACS.XmlFile.GetElementByAttribute </td>
+          <td>(</td>
+          <td class="paramtype">XmlElement&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tagname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>attrname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>attrvalue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定エレメント直下のエレメントのうち、アトリビュートが指定値のものを得る。 当該エレメントが存在しない場合はnullを返す。 </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00140">140</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a0504b6ee41c081013eab9ccdd1541f6e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">XmlElement MACS.XmlFile.AddElement </td>
+          <td>(</td>
+          <td class="paramtype">XmlElement&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tagname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定エレメント内に新たなエレメントを追加し、追加したエレメントを返す。 </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00156">156</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a3b065029f81996042c7222fbec403601"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.XmlFile.RemoveElement </td>
+          <td>(</td>
+          <td class="paramtype">XmlElement&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tagname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>parentエレメント内の指定エレメントをすべて削除する。 削除したエレメント数を返す。 </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00166">166</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="afe3c84f2b43904962c0457245a5aceb9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.XmlFile.RemoveElement </td>
+          <td>(</td>
+          <td class="paramtype">XmlElement&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tagname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>parentエレメント内のn番目の指定エレメントを削除する。 削除したらtrue、削除しなかったらfalseを返す。 </p>
+<p>nは0から始まる数値。 </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00196">196</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8cd3c9cb43d947ca8827038a3e6f4167"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.XmlFile.RemoveElementByAttribute </td>
+          <td>(</td>
+          <td class="paramtype">XmlElement&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tagname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>attrname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>attrvalue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>parentエレメント内で、属性が指定されたものであるエレメントを削除する。 削除したエレメント数を返す。 </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00225">225</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5f6726c18a647b6f3acbc1e623d06a41"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.XmlFile.Sort </td>
+          <td>(</td>
+          <td class="paramtype">XmlElement&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tagname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IComparer&lt; XmlElement &gt;&#160;</td>
+          <td class="paramname"><em>comp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定した名前のエレメントをソートする。 </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00253">253</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="XmlFile_8cs_source.html#l00263">MACS.XmlFile.Sort()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a08fc625c94fc9eab903f8b8ac0e627ad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.XmlFile.Sort </td>
+          <td>(</td>
+          <td class="paramtype">XmlElement&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tagname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>attrname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定した名前のエレメントを属性値に基づいてソートする。 </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00263">263</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae4aab74a96d8b2cf4ba8a1fdf09bf727"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.XmlFile.GetText </td>
+          <td>(</td>
+          <td class="paramtype">XmlElement&#160;</td>
+          <td class="paramname"><em>elem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>recursiveFlag</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>テキスト要素を全て取り出す。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elem</td><td>対象エレメント</td></tr>
+    <tr><td class="paramname">recursiveFlag</td><td>子要素内のテキストも抽出するかどうか</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>本メソッドはクラスメソッドである事に注意する事 </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00277">277</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a23c23bb74e8fb65901a7eaca0d2f5288"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.XmlFile.GetAttribute </td>
+          <td>(</td>
+          <td class="paramtype">XmlElement&#160;</td>
+          <td class="paramname"><em>elem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>attrname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>def</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>属性値を読み出す。属性値が未定義のときはデフォルト値を返す </p>
+<p>本メソッドはクラスメソッドである事に注意する事 </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00296">296</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="XmlFile_8cs_source.html#l00140">MACS.XmlFile.GetElementByAttribute()</a>, と <a class="el" href="XmlFile_8cs_source.html#l00225">MACS.XmlFile.RemoveElementByAttribute()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af0f5eac4f25d18cb13edd28ca4c2ffa4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.XmlFile.GetAttribute </td>
+          <td>(</td>
+          <td class="paramtype">XmlElement&#160;</td>
+          <td class="paramname"><em>elem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>attrname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>def</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>属性値を読み出す。属性値が未定義のときはデフォルト値を返す </p>
+<p>本メソッドはクラスメソッドである事に注意する事 </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00311">311</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab8ece5e092a5823e4a5fbc4f2ac5c9d2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double MACS.XmlFile.GetAttribute </td>
+          <td>(</td>
+          <td class="paramtype">XmlElement&#160;</td>
+          <td class="paramname"><em>elem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>attrname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>def</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>属性値を読み出す。属性値が未定義のときはデフォルト値を返す </p>
+<p>本メソッドはクラスメソッドである事に注意する事 </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00326">326</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8af2714cbdb4a8b82dc5cc908d3cd14e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.XmlFile.AddText </td>
+          <td>(</td>
+          <td class="paramtype">XmlElement&#160;</td>
+          <td class="paramname"><em>elem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>テキスト要素を追加する </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00336">336</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a941928f3658e04fe9224f854e6aa00ad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.XmlFile.lockFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ファイルをロックする </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00386">386</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">変数</h2>
+<a class="anchor" id="af4a3c8db26c718ba81bc1bad9b80afb2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Encoding MACS.XmlFile.encoding</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00020">20</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">プロパティ</h2>
+<a class="anchor" id="a3515efdb759333f331bc213bf3b409cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XmlDocument MACS.XmlFile.Document</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ドキュメント </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00082">82</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a2bc4432e356233991af367161198a6a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XmlElement MACS.XmlFile.Root</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ルート要素 </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00089">89</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad5f95e726d60ef92c2785446b6dfe51b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.XmlFile.FilePath</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイル名 </p>
+
+<p> <a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a> の <a class="el" href="XmlFile_8cs_source.html#l00344">344</a> 行で定義されています。</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="XmlFile_8cs_source.html">XmlFile.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceMACS.html">MACS</a></li><li class="navelem"><a class="el" href="classMACS_1_1XmlFile.html">XmlFile</a></li>
+    <li class="footer">MACS.Coreに対してWed Jun 27 2018 17:45:45に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

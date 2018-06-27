@@ -1,0 +1,559 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.Core: Hwaddr.cs ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.Core
+   </div>
+   <div id="projectbrief">Miscellaneous Assets for C-Sharp</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('Hwaddr_8cs_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Hwaddr.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Hwaddr_8cs.html">説明を見る。</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/// Hwaddr: MACアドレスを管理するクラス.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"></span><span class="comment">///</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"></span><span class="comment">/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span><span class="comment">/// Released under the MIT license</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"></span><span class="comment">/// See ../MITLicense.txt</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> System;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> System.Text;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> System.Web;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using</span> System.Net;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>MACS {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">/// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">///   MACアドレスを管理するクラス</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html">   17</a></span>&#160;<span class="comment"></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a>:IComparable {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">private</span> byte[] vals;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">    ///   デフォルトコンストラクタ</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a766c729dbb08f52e0647335985d2c70c">   24</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <a class="code" href="classMACS_1_1Hwaddr.html#a766c729dbb08f52e0647335985d2c70c" title="デフォルトコンストラクタ ">Hwaddr</a>() {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        vals = null;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">    ///   文字列表現からのコンストラクタ</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a1e188516318445bade24221f23181365">   31</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <a class="code" href="classMACS_1_1Hwaddr.html#a1e188516318445bade24221f23181365" title="文字列表現からのコンストラクタ ">Hwaddr</a>(<span class="keywordtype">string</span> hwaddr) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="classMACS_1_1Hwaddr.html#a8bb45c60c5305edb7ff49139d76b009b" title="文字列からMACアドレスをセットする ">Set</a>(hwaddr);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">    ///   ulong値からのコンストラクタ</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a3d321d1988ed664912975dc385907940">   38</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <a class="code" href="classMACS_1_1Hwaddr.html#a3d321d1988ed664912975dc385907940" title="ulong値からのコンストラクタ ">Hwaddr</a>(ulong addr) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="classMACS_1_1Hwaddr.html#a8bb45c60c5305edb7ff49139d76b009b" title="文字列からMACアドレスをセットする ">Set</a>(addr);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">    ///   バイト列からのコンストラクタ</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    /// &lt;param name=&quot;addr&quot;&gt;バイト列先頭アドレス&lt;/param&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">    /// &lt;param name=&quot;offset&quot;&gt;読み取りオフセットバイト数&lt;/param&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">    /// &lt;param name=&quot;len&quot;&gt;読み取りバイト数&lt;/param&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#aea8aa8cb21fa01fbe270605a96ac636c">   48</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <a class="code" href="classMACS_1_1Hwaddr.html#aea8aa8cb21fa01fbe270605a96ac636c" title="バイト列からのコンストラクタ ">Hwaddr</a>(byte[] addr, <span class="keywordtype">int</span> offset, <span class="keywordtype">int</span> len) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        vals = <span class="keyword">new</span> byte[len];</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; len; i++)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            vals[i] = addr[offset + i];</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">    ///   コピーコンストラクタ</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a9dae4360e731fdde7a3f822ed976d1e2">   57</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <a class="code" href="classMACS_1_1Hwaddr.html#a9dae4360e731fdde7a3f822ed976d1e2" title="コピーコンストラクタ ">Hwaddr</a>(<a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> src) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="classMACS_1_1Hwaddr.html#a8bb45c60c5305edb7ff49139d76b009b" title="文字列からMACアドレスをセットする ">Set</a>(src);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">    ///   文字列からMACアドレスをセットする</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">    /// &lt;remarks&gt;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">    ///   &lt;para&gt;</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">    ///     HEX値の区切り文字は&#39;:&#39;、&#39;-&#39;または&#39; &#39;のいずれでもよい。</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">    ///     6バイト以下のデータも読み取る。</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">    ///   &lt;/para&gt;</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">    /// &lt;/remarks&gt;</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">    /// &lt;returns&gt;自分自身&lt;/returns&gt;</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a8bb45c60c5305edb7ff49139d76b009b">   71</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> <a class="code" href="classMACS_1_1Hwaddr.html#a8bb45c60c5305edb7ff49139d76b009b" title="文字列からMACアドレスをセットする ">Set</a>(<span class="keywordtype">string</span> hwaddr) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">if</span>((hwaddr == null) || (hwaddr == <span class="stringliteral">&quot;&quot;</span>)){</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            vals = <span class="keyword">new</span> byte[0];</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        vals = null;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        byte[] tmp = <span class="keyword">new</span> byte[6];</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">int</span> digit = 0;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        tmp[count] = 0;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">foreach</span>(<span class="keywordtype">char</span> ch <span class="keywordflow">in</span> hwaddr.ToCharArray()){</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">if</span>((ch == <span class="charliteral">&#39;:&#39;</span>) || (ch == <span class="charliteral">&#39;-&#39;</span>) || (ch == <span class="charliteral">&#39; &#39;</span>)){ <span class="comment">// delimiter</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="keywordflow">if</span>(++count &gt;= tmp.Length)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">this</span>; <span class="comment">// Format error</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                tmp[count] = 0;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                digit = 0;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <span class="keywordflow">if</span>(digit &gt;= 2){ <span class="comment">// delimiter無しで書き連ねた場合</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    <span class="keywordflow">if</span>(++count &gt;= tmp.Length)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                        <span class="keywordflow">return</span> <span class="keyword">this</span>; <span class="comment">// Too many digits</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    digit = 0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                tmp[count] *= 16;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="keywordflow">if</span>((ch &gt;= <span class="charliteral">&#39;0&#39;</span>) &amp;&amp; (ch &lt;= <span class="charliteral">&#39;9&#39;</span>))</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                    tmp[count] += (byte)(Convert.ToByte(ch)-Convert.ToByte(<span class="charliteral">&#39;0&#39;</span>));</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span>((ch &gt;= <span class="charliteral">&#39;a&#39;</span>) &amp;&amp; (ch &lt;= <span class="charliteral">&#39;f&#39;</span>))</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                    tmp[count] += (byte)(Convert.ToByte(ch)-Convert.ToByte(<span class="charliteral">&#39;a&#39;</span>)+10);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span>((ch &gt;= <span class="charliteral">&#39;A&#39;</span>) &amp;&amp; (ch &lt;= <span class="charliteral">&#39;F&#39;</span>))</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    tmp[count] += (byte)(Convert.ToByte(ch)-Convert.ToByte(<span class="charliteral">&#39;A&#39;</span>)+10);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">this</span>; <span class="comment">// Invalid char for hexadecimal</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                digit++;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">if</span>(digit &gt; 0)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            count++;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        vals = <span class="keyword">new</span> byte[count];</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        Array.Copy(tmp, 0, vals, 0, count);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="comment">/* OLD CODE - ちょっと動作が遅いかもしれない</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">        string[] x = hwaddr.Split(&quot;:-&quot;.ToCharArray());</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">        vals = new byte[x.Length];</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">        try {</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">            for(int i = 0; i &lt; x.Length; i++)</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">                vals[i] = Byte.Parse(x[i], System.Globalization.NumberStyles.HexNumber);</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">        } catch(OverflowException) {</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">            vals = null;</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">        } catch(FormatException) {</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">            vals = null;</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">        }</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">        return this;</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">    ///   ulong値からMACアドレスをセットする</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">    /// &lt;returns&gt;自分自身&lt;/returns&gt;</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a1ae47a39d2d5a1c82035697ca358fd66">  130</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> <a class="code" href="classMACS_1_1Hwaddr.html#a1ae47a39d2d5a1c82035697ca358fd66" title="ulong値からMACアドレスをセットする ">Set</a>(ulong hwaddr) {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">if</span>((vals == null) || (vals.Length != 6))</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            vals = <span class="keyword">new</span> byte[6];</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 5; i &gt;= 0; i--) {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            vals[i] = (byte)(hwaddr % 256);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            hwaddr /= 256;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#adf4caf461bf5acc0a69d4be31968532a">  140</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> <a class="code" href="classMACS_1_1Hwaddr.html#adf4caf461bf5acc0a69d4be31968532a">Set</a>(<a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> src) {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordflow">if</span>(src.<a class="code" href="classMACS_1_1Hwaddr.html#a293d94ecb84edb84f6e30e0581856912" title="インスタンスが有効かどうかを返す ">IsValid</a>()) {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            vals = <span class="keyword">new</span> byte[src.vals.Length];</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; vals.Length; i++)</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                vals[i] = src.vals[i];</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            vals = null;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#ae2009138049b3fcf6e84959d03772362">  151</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> <a class="code" href="classMACS_1_1Hwaddr.html#ae2009138049b3fcf6e84959d03772362">Set</a>(byte[] addr, <span class="keywordtype">int</span> offset, <span class="keywordtype">int</span> len) {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        vals = <span class="keyword">new</span> byte[len];</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; len; i++)</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            vals[i] = addr[offset + i];</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">    ///   インスタンスが有効かどうかを返す</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment">    /// &lt;remarks&gt;</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment">    ///   &lt;para&gt;</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">    ///     6バイト以下の状態でもtrueを返す。</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment">    ///     6バイトそろっているかどうかは、IsComplete()を使って確認すること。</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment">    ///   &lt;/para&gt;</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="comment">    /// &lt;/remarks&gt;</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a293d94ecb84edb84f6e30e0581856912">  167</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="classMACS_1_1Hwaddr.html#a293d94ecb84edb84f6e30e0581856912" title="インスタンスが有効かどうかを返す ">IsValid</a>() {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">if</span>((vals == null) || (vals.Length == 0))</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment">    ///   インスタンスが6バイトのアドレスを持っているかどうかを返す</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a7abda07a59bdcfda9e3a3547cde763b0">  176</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="classMACS_1_1Hwaddr.html#a7abda07a59bdcfda9e3a3547cde763b0" title="インスタンスが6バイトのアドレスを持っているかどうかを返す ">IsComplete</a>() {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">if</span>((vals == null) || (vals.Length != 6))</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="comment">    ///   インスタンスが6バイトのアドレスを持っているかまたはまったく設定されていないときにtrueを返す</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#aee64bf83ceff6a1fd1f7985729907458">  185</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="classMACS_1_1Hwaddr.html#aee64bf83ceff6a1fd1f7985729907458" title="インスタンスが6バイトのアドレスを持っているかまたはまったく設定されていないときにtrueを返す ">IsCompleteOrNull</a>() {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordflow">if</span>(vals == null)</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">if</span>((vals.Length != 0) &amp;&amp; (vals.Length != 6))</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment">    ///   文字列表現を返す</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a243bb73e757d0041ec9e4de0bffc2f73">  196</a></span>&#160;<span class="comment"></span>    <span class="keyword">override</span> <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="classMACS_1_1Hwaddr.html#a243bb73e757d0041ec9e4de0bffc2f73" title="文字列表現を返す ">ToString</a>() {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classMACS_1_1Hwaddr.html#a243bb73e757d0041ec9e4de0bffc2f73" title="文字列表現を返す ">ToString</a>(<span class="stringliteral">&quot;:&quot;</span>,<span class="stringliteral">&quot;INVALID&quot;</span>);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="comment">    ///   文字列表現を返す（セパレータ、デフォルト文字列指定版）</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a5175084108df9d6e000946ffc5f897a7">  203</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="classMACS_1_1Hwaddr.html#a5175084108df9d6e000946ffc5f897a7" title="文字列表現を返す（セパレータ、デフォルト文字列指定版） ">ToString</a>(<span class="keywordtype">string</span> separator, <span class="keywordtype">string</span> defaultString=<span class="stringliteral">&quot;&quot;</span>) {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordflow">if</span>(!<a class="code" href="classMACS_1_1Hwaddr.html#a293d94ecb84edb84f6e30e0581856912" title="インスタンスが有効かどうかを返す ">IsValid</a>())</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="keywordflow">return</span> defaultString;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">return</span> BitConverter.ToString(vals).Replace(<span class="stringliteral">&quot;-&quot;</span>, separator);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="comment">    ///   URLエンコーディングされた文字列表現を返す</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#afdcdfd153f3233618ddd702d4828e971">  212</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="classMACS_1_1Hwaddr.html#afdcdfd153f3233618ddd702d4828e971" title="URLエンコーディングされた文字列表現を返す ">ToUrlString</a>() {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="keywordflow">return</span> HttpUtility.UrlEncode(<a class="code" href="classMACS_1_1Hwaddr.html#a243bb73e757d0041ec9e4de0bffc2f73" title="文字列表現を返す ">ToString</a>(), Encoding.GetEncoding(<span class="stringliteral">&quot;us-ascii&quot;</span>));</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    }</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment">    ///   アドレスをulong型の値として返す。</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a36af0eef581d4c710751407f42216c17">  219</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> ulong <a class="code" href="classMACS_1_1Hwaddr.html#a36af0eef581d4c710751407f42216c17" title="アドレスをulong型の値として返す。 ">ToUlong</a>() {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keywordflow">if</span>(vals == null)</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        ulong x = 0;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 6; i++) {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            x *= 256;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="keywordflow">if</span>(i &lt; vals.Length)</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                x += vals[i];</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment">    ///   MACアドレスのバイト列を返す。</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#ad023c249a22e73157b877e013212cc57">  234</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> byte[] <a class="code" href="classMACS_1_1Hwaddr.html#ad023c249a22e73157b877e013212cc57" title="MACアドレスのバイト列を返す。 ">GetBytes</a>() {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keywordflow">return</span> vals;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="comment">    ///   MACアドレスのバイト列を獲得する。</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="comment">    /// &lt;param name=&quot;dst&quot;&gt;格納先のバイト列&lt;/param&gt;</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="comment">    /// &lt;param name=&quot;index&quot;&gt;dstの何バイト目から格納するか&lt;/param&gt;</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a56cbc6c0cc7aab7735348502aa338457">  243</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classMACS_1_1Hwaddr.html#a56cbc6c0cc7aab7735348502aa338457" title="MACアドレスのバイト列を獲得する。 ">GetBytes</a>(byte[] dst, <span class="keywordtype">int</span> index) {</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordflow">if</span>(vals != null)</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            Array.Copy(vals, 0, dst, index, vals.Length);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment">    ///   インスタンスがsrcで示されるアドレスパターンを内包しているかどうかをチェックする。</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#afb7322c475cf454409b6365247ad9e47">  251</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="classMACS_1_1Hwaddr.html#afb7322c475cf454409b6365247ad9e47" title="インスタンスがsrcで示されるアドレスパターンを内包しているかどうかをチェックする。 ">Contains</a>(<a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> src) {</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classMACS_1_1Hwaddr.html#a243bb73e757d0041ec9e4de0bffc2f73" title="文字列表現を返す ">ToString</a>().Contains(src.<a class="code" href="classMACS_1_1Hwaddr.html#a243bb73e757d0041ec9e4de0bffc2f73" title="文字列表現を返す ">ToString</a>());</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    }<span class="comment"></span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="comment">    ///   インスタンスがsrcで示されるアドレスパターンを内包しているかどうかをチェックする。</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="comment">    ///   文字列と比較するバージョン。</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a99a050f8b8944c187dd132cf90069ada">  258</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="classMACS_1_1Hwaddr.html#a99a050f8b8944c187dd132cf90069ada" title="インスタンスがsrcで示されるアドレスパターンを内包しているかどうかをチェックする。 文字列と比較するバージョン。 ">Contains</a>(<span class="keywordtype">string</span> src) {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classMACS_1_1Hwaddr.html#a243bb73e757d0041ec9e4de0bffc2f73" title="文字列表現を返す ">ToString</a>().Contains(src.ToUpper());</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="comment">    ///   OUI(ベンダーコード)を獲得する。</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="comment">    /// &lt;returns&gt;OUIの3バイトだけが定義されたHwaddrインスタンス&lt;/returns&gt;</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a0af06873e518184f3f185f529dbc1cb4">  266</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> <a class="code" href="classMACS_1_1Hwaddr.html#a0af06873e518184f3f185f529dbc1cb4" title="OUI(ベンダーコード)を獲得する。 ">GetOui</a>() {</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keywordflow">if</span>((vals == null) || (vals.Length &lt; 3))</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classMACS_1_1Hwaddr.html#a766c729dbb08f52e0647335985d2c70c" title="デフォルトコンストラクタ ">Hwaddr</a>();</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> res = <span class="keyword">new</span> <a class="code" href="classMACS_1_1Hwaddr.html#a766c729dbb08f52e0647335985d2c70c" title="デフォルトコンストラクタ ">Hwaddr</a>();</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        res.vals = <span class="keyword">new</span> byte[3];</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 3; i++)</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            res.vals[i] = vals[i];</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    }</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="comment">    ///   インスタンスがsrcで示されるアドレスと同じかどうかを返す</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a63c8108035c3a3eed2557b51712ddc3a">  279</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="classMACS_1_1Hwaddr.html#a63c8108035c3a3eed2557b51712ddc3a" title="インスタンスがsrcで示されるアドレスと同じかどうかを返す ">Equals</a>(<a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> src) {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">if</span>((vals == null) || (src == null) || (src.vals == null))</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keywordflow">if</span>(vals.Length != src.vals.Length)</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; vals.Length; i++) {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <span class="keywordflow">if</span>(vals[i] != src.vals[i])</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        }</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    }<span class="comment"></span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment">    ///   インスタンスがsrcで示されるアドレスと同じかどうかを返す</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="comment">    ///   一般オブジェクトとの比較バージョン。</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a542243a13dd95326daacdcd2366fd298">  294</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="classMACS_1_1Hwaddr.html#a542243a13dd95326daacdcd2366fd298" title="インスタンスがsrcで示されるアドレスと同じかどうかを返す 一般オブジェクトとの比較バージョン。 ">Equals</a>(Object obj) {</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordflow">if</span>(obj == null)</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> src = obj as <a class="code" href="classMACS_1_1Hwaddr.html#a766c729dbb08f52e0647335985d2c70c" title="デフォルトコンストラクタ ">Hwaddr</a>;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classMACS_1_1Hwaddr.html#a63c8108035c3a3eed2557b51712ddc3a" title="インスタンスがsrcで示されるアドレスと同じかどうかを返す ">Equals</a>(src);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    }</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="comment">    ///   インスタンスのハッシュコードを返す。</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="comment">    /// &lt;remarks&gt;</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="comment">    ///   &lt;para&gt;</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="comment">    ///     全バイトを足し合わせたものをハッシュ値としている。</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="comment">    ///   &lt;/para&gt;</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="comment">    /// &lt;/remarks&gt;</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#acf3de2c44b03e0e2eafac3811af4017e">  309</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code" href="classMACS_1_1Hwaddr.html#acf3de2c44b03e0e2eafac3811af4017e" title="インスタンスのハッシュコードを返す。 ">GetHashCode</a>() {</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordflow">if</span>(vals == null)</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keywordtype">int</span> res = 0;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; vals.Length; i++)</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            res += (<span class="keywordtype">int</span>)vals[i];</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    }</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
+<div class="line"><a name="l00318"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a1f02d8c43c51f839267ba5c2cd93f87d">  318</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classMACS_1_1Hwaddr.html#a1f02d8c43c51f839267ba5c2cd93f87d">operator ==</a>(<a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> a, <a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> b) {</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keywordflow">if</span>(ReferenceEquals(a, b))</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <span class="keywordflow">if</span>(ReferenceEquals(a, null))</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <span class="keywordflow">return</span> a.<a class="code" href="classMACS_1_1Hwaddr.html#a63c8108035c3a3eed2557b51712ddc3a" title="インスタンスがsrcで示されるアドレスと同じかどうかを返す ">Equals</a>(b);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    }</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
+<div class="line"><a name="l00326"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#afbac4c02fe47d3101ab8fe42d74c6e31">  326</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classMACS_1_1Hwaddr.html#afbac4c02fe47d3101ab8fe42d74c6e31">operator !=</a>(<a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> a, <a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> b) {</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keywordflow">return</span> !(a == b);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    }</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="comment">    ///   アドレス値の大小を比較する。</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a58f923b7207d6cbdce727e27493ee2ed">  333</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="classMACS_1_1Hwaddr.html#a58f923b7207d6cbdce727e27493ee2ed" title="アドレス値の大小を比較する。 ">CompareTo</a>(<a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> src) {</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="keywordflow">if</span>(vals == null)</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <span class="keywordflow">if</span>((src == null) || (src.vals == null))</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <span class="keywordflow">if</span>(vals.Length &lt; src.vals.Length)</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keywordflow">if</span>(vals.Length &gt; src.vals.Length)</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; vals.Length; i++) {</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            <span class="keywordflow">if</span>(vals[i] &lt; src.vals[i])</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            <span class="keywordflow">if</span>(vals[i] &gt; src.vals[i])</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        }</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    }</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="comment">    ///   アドレス値の大小を比較する。</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="comment">    ///   一般オブジェクトとの比較バージョン。</span></div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#ab13427f6a333920110d86e81cc6a9037">  355</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="classMACS_1_1Hwaddr.html#ab13427f6a333920110d86e81cc6a9037" title="アドレス値の大小を比較する。 一般オブジェクトとの比較バージョン。 ">CompareTo</a>(Object obj) {</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="keywordflow">if</span>(obj == null)</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classMACS_1_1Hwaddr.html#a58f923b7207d6cbdce727e27493ee2ed" title="アドレス値の大小を比較する。 ">CompareTo</a>(obj as <a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a>);</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    }</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
+<div class="line"><a name="l00361"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#afa107d20fad42e49756e741c28a2aa11">  361</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classMACS_1_1Hwaddr.html#afa107d20fad42e49756e741c28a2aa11">operator &lt;</a>(<a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> a, <a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> b) {</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="keywordflow">return</span> (a.<a class="code" href="classMACS_1_1Hwaddr.html#a58f923b7207d6cbdce727e27493ee2ed" title="アドレス値の大小を比較する。 ">CompareTo</a>(b) &lt; 0);</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    }</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;</div>
+<div class="line"><a name="l00365"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a77fd1bebf2fc6408cbf4b0d8911d3edd">  365</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classMACS_1_1Hwaddr.html#a77fd1bebf2fc6408cbf4b0d8911d3edd">operator &lt;=</a>(<a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> a, <a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> b) {</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        <span class="keywordflow">return</span> (a.<a class="code" href="classMACS_1_1Hwaddr.html#a58f923b7207d6cbdce727e27493ee2ed" title="アドレス値の大小を比較する。 ">CompareTo</a>(b) &lt;= 0);</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    }</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;</div>
+<div class="line"><a name="l00369"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a90b0a61065ad1fdd4d5666a19d958082">  369</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classMACS_1_1Hwaddr.html#a90b0a61065ad1fdd4d5666a19d958082">operator &gt;</a>(<a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> a, <a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> b) {</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <span class="keywordflow">return</span> (a.<a class="code" href="classMACS_1_1Hwaddr.html#a58f923b7207d6cbdce727e27493ee2ed" title="アドレス値の大小を比較する。 ">CompareTo</a>(b) &gt; 0);</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    }</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;</div>
+<div class="line"><a name="l00373"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a017b9d2790ae4b0d990b48640d5f9453">  373</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classMACS_1_1Hwaddr.html#a017b9d2790ae4b0d990b48640d5f9453">operator &gt;=</a>(<a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> a, <a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> b) {</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="keywordflow">return</span> (a.<a class="code" href="classMACS_1_1Hwaddr.html#a58f923b7207d6cbdce727e27493ee2ed" title="アドレス値の大小を比較する。 ">CompareTo</a>(b) &gt;= 0);</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    }</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="comment">    ///   アドレス値の大小を比較する。</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#ae324a856f23ff08606f2f08aa7851314">  380</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classMACS_1_1Hwaddr.html#ae324a856f23ff08606f2f08aa7851314" title="アドレス値の大小を比較する。 ">Compare</a>(<a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> a, <a class="code" href="classMACS_1_1Hwaddr.html" title="MACアドレスを管理するクラス ">Hwaddr</a> b) {</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <span class="keywordflow">return</span> a.<a class="code" href="classMACS_1_1Hwaddr.html#a58f923b7207d6cbdce727e27493ee2ed" title="アドレス値の大小を比較する。 ">CompareTo</a>(b);</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    }</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="comment">    ///   アドレスを一つ進める</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#ae88e4be163b12f7a31bf9d63a36b9916">  387</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classMACS_1_1Hwaddr.html#ae88e4be163b12f7a31bf9d63a36b9916" title="アドレスを一つ進める ">Incr</a>() {</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <span class="keywordflow">if</span>(vals == null)</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <span class="keywordtype">int</span> idx = vals.Length-1;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <span class="keywordflow">while</span>(idx &gt;= 0) {</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            <span class="keywordflow">if</span>(vals[idx] &gt;= 255) {</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                vals[idx] = 0;</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                idx--;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                vals[idx]++;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;            }</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        }</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    }</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;<span class="comment">    ///   文字列がMACアドレスの形式になっているかどうかを確認する</span></div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00405"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a14bb453707fe768aedc257472baeb13e">  405</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classMACS_1_1Hwaddr.html#a14bb453707fe768aedc257472baeb13e" title="文字列がMACアドレスの形式になっているかどうかを確認する ">IsHwaddrString</a>(<span class="keywordtype">string</span> str) {</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        <span class="keywordflow">if</span>(String.IsNullOrEmpty(str))</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        <span class="keywordtype">string</span>[] x = str.Trim().Split(<span class="stringliteral">&quot;:- &quot;</span>.ToCharArray());</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        <span class="keywordflow">if</span>(x.Length != 6)</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        <span class="keywordflow">foreach</span>(<span class="keywordtype">string</span> i <span class="keywordflow">in</span> x) {</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;            <span class="keywordflow">if</span>(i.Length != 2)</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            <span class="keywordflow">if</span>(!isHexDigit(i[0]) || !isHexDigit(i[1]))</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        }</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    }</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;<span class="comment">    ///   文字列表現にした時に指定文字列から始まっているかどうか</span></div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00423"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#ad9c0b7014a8c1e2c56a8f0f94424e0f3">  423</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="classMACS_1_1Hwaddr.html#ad9c0b7014a8c1e2c56a8f0f94424e0f3" title="文字列表現にした時に指定文字列から始まっているかどうか ">StartsWith</a>(<span class="keywordtype">string</span> str) {</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        <span class="keywordflow">return</span> this.<a class="code" href="classMACS_1_1Hwaddr.html#a243bb73e757d0041ec9e4de0bffc2f73" title="文字列表現を返す ">ToString</a>().StartsWith(str.ToUpper());</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    }</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;<span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;<span class="comment">    ///   文字列表現にした時に指定文字列で終わっているかどうか</span></div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;<span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a name="l00430"></a><span class="lineno"><a class="code" href="classMACS_1_1Hwaddr.html#a1f12bb536459422d2d0427f75bcb1521">  430</a></span>&#160;<span class="comment"></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="classMACS_1_1Hwaddr.html#a1f12bb536459422d2d0427f75bcb1521" title="文字列表現にした時に指定文字列で終わっているかどうか ">EndsWith</a>(<span class="keywordtype">string</span> str) {</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        <span class="keywordflow">return</span> this.<a class="code" href="classMACS_1_1Hwaddr.html#a243bb73e757d0041ec9e4de0bffc2f73" title="文字列表現を返す ">ToString</a>().EndsWith(str.ToUpper());</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    }</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> isHexDigit(<span class="keywordtype">char</span> x) {</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;        <span class="keywordflow">return</span> ((<span class="charliteral">&#39;0&#39;</span>&lt;=x)&amp;&amp;(x&lt;=<span class="charliteral">&#39;9&#39;</span>))||((<span class="charliteral">&#39;a&#39;</span>&lt;=x)&amp;&amp;(x&lt;=<span class="charliteral">&#39;f&#39;</span>))||((<span class="charliteral">&#39;A&#39;</span>&lt;=x)&amp;&amp;(x&lt;=<span class="charliteral">&#39;F&#39;</span>));</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    }</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;}</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;} <span class="comment">// End of namespace</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="Hwaddr_8cs.html">Hwaddr.cs</a></li>
+    <li class="footer">MACS.Coreに対してWed Jun 27 2018 17:45:43に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.DB: クラス MACS.DB.DBReader</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.DB
+   </div>
+   <div id="projectbrief">SQL Database Access Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classMACS_1_1DB_1_1DBReader.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="classMACS_1_1DB_1_1DBReader-members.html">すべてのメンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス MACS.DB.DBReader</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>DBテーブルアクセス: DbDataReaderのラッパークラス  
+ <a href="classMACS_1_1DB_1_1DBReader.html#details">[詳細]</a></p>
+<div class="dynheader">
+MACS.DB.DBReaderに対する継承グラフ</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classMACS_1_1DB_1_1DBReader.png" usemap="#MACS.DB.DBReader_map" alt=""/>
+  <map id="MACS.DB.DBReader_map" name="MACS.DB.DBReader_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr class="memitem:a7b03f58d3f2eb88c36d89634854981f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBReader.html#a7b03f58d3f2eb88c36d89634854981f6">DBReader</a> (DbDataReader reader_)</td></tr>
+<tr class="memdesc:a7b03f58d3f2eb88c36d89634854981f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#a7b03f58d3f2eb88c36d89634854981f6"></a><br/></td></tr>
+<tr class="separator:a7b03f58d3f2eb88c36d89634854981f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e854677e876337655c74dbff219c966"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBReader.html#a1e854677e876337655c74dbff219c966">DBReader</a> ()</td></tr>
+<tr class="memdesc:a1e854677e876337655c74dbff219c966"><td class="mdescLeft">&#160;</td><td class="mdescRight">ダミーコンストラクタ  <a href="#a1e854677e876337655c74dbff219c966"></a><br/></td></tr>
+<tr class="separator:a1e854677e876337655c74dbff219c966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a1e9bb9feb5bdb1a3334a54d4cb6990"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBReader.html#a7a1e9bb9feb5bdb1a3334a54d4cb6990">Dispose</a> ()</td></tr>
+<tr class="memdesc:a7a1e9bb9feb5bdb1a3334a54d4cb6990"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用リソース解放  <a href="#a7a1e9bb9feb5bdb1a3334a54d4cb6990"></a><br/></td></tr>
+<tr class="separator:a7a1e9bb9feb5bdb1a3334a54d4cb6990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8729c545c54c989ebdf6fbb8d7caa24c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBReader.html#a8729c545c54c989ebdf6fbb8d7caa24c">Close</a> ()</td></tr>
+<tr class="memdesc:a8729c545c54c989ebdf6fbb8d7caa24c"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用リソース解放  <a href="#a8729c545c54c989ebdf6fbb8d7caa24c"></a><br/></td></tr>
+<tr class="separator:a8729c545c54c989ebdf6fbb8d7caa24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a597127c6ca9284a1c80c7c3cfd501f7c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBReader.html#a597127c6ca9284a1c80c7c3cfd501f7c">Read</a> ()</td></tr>
+<tr class="memdesc:a597127c6ca9284a1c80c7c3cfd501f7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">次のレコードを読み取る  <a href="#a597127c6ca9284a1c80c7c3cfd501f7c"></a><br/></td></tr>
+<tr class="separator:a597127c6ca9284a1c80c7c3cfd501f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68afc5462ae7ff425edde2d2804c6b69"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBReader.html#a68afc5462ae7ff425edde2d2804c6b69">Get</a> ()</td></tr>
+<tr class="memdesc:a68afc5462ae7ff425edde2d2804c6b69"><td class="mdescLeft">&#160;</td><td class="mdescRight">次のレコードを読み取り、全カラムの値を文字列にしたものを返す  <a href="#a68afc5462ae7ff425edde2d2804c6b69"></a><br/></td></tr>
+<tr class="separator:a68afc5462ae7ff425edde2d2804c6b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20cf305fb579e7bc302ed4ceb2d00fc7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBReader.html#a20cf305fb579e7bc302ed4ceb2d00fc7">IsNull</a> (int i)</td></tr>
+<tr class="memdesc:a20cf305fb579e7bc302ed4ceb2d00fc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">i番目のカラムの値がヌルかどうかを返す  <a href="#a20cf305fb579e7bc302ed4ceb2d00fc7"></a><br/></td></tr>
+<tr class="separator:a20cf305fb579e7bc302ed4ceb2d00fc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b74805fffeccc782ae6176c950ba8a7"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBReader.html#a4b74805fffeccc782ae6176c950ba8a7">GetString</a> (int i)</td></tr>
+<tr class="memdesc:a4b74805fffeccc782ae6176c950ba8a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">i番目のカラムの値を文字列として返す。  <a href="#a4b74805fffeccc782ae6176c950ba8a7"></a><br/></td></tr>
+<tr class="separator:a4b74805fffeccc782ae6176c950ba8a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9812fae06776381638169bf3ee5b985"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBReader.html#ac9812fae06776381638169bf3ee5b985">GetInt</a> (int i)</td></tr>
+<tr class="memdesc:ac9812fae06776381638169bf3ee5b985"><td class="mdescLeft">&#160;</td><td class="mdescRight">i番目のカラムの値を整数値として返す。  <a href="#ac9812fae06776381638169bf3ee5b985"></a><br/></td></tr>
+<tr class="separator:ac9812fae06776381638169bf3ee5b985"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c023a8f50e7a3de611b2a9d46cd8894"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBReader.html#a0c023a8f50e7a3de611b2a9d46cd8894">GetLong</a> (int i)</td></tr>
+<tr class="memdesc:a0c023a8f50e7a3de611b2a9d46cd8894"><td class="mdescLeft">&#160;</td><td class="mdescRight">i番目のカラムの値をLONG整数値として返す。  <a href="#a0c023a8f50e7a3de611b2a9d46cd8894"></a><br/></td></tr>
+<tr class="separator:a0c023a8f50e7a3de611b2a9d46cd8894"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fbe85c6bd93c5368743427450573d52"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBReader.html#a5fbe85c6bd93c5368743427450573d52">GetDouble</a> (int i)</td></tr>
+<tr class="memdesc:a5fbe85c6bd93c5368743427450573d52"><td class="mdescLeft">&#160;</td><td class="mdescRight">i番目のカラムの値を浮動小数点値として返す。  <a href="#a5fbe85c6bd93c5368743427450573d52"></a><br/></td></tr>
+<tr class="separator:a5fbe85c6bd93c5368743427450573d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af98e4f460a46708e13ae60560100aa97"><td class="memItemLeft" align="right" valign="top">DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBReader.html#af98e4f460a46708e13ae60560100aa97">GetDateTime</a> (int i)</td></tr>
+<tr class="memdesc:af98e4f460a46708e13ae60560100aa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">i番目のカラムの値をDateTimeとして返す。  <a href="#af98e4f460a46708e13ae60560100aa97"></a><br/></td></tr>
+<tr class="separator:af98e4f460a46708e13ae60560100aa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8927514a99a08887f42f7ac446ea064c"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBReader.html#a8927514a99a08887f42f7ac446ea064c">GetColumns</a> ()</td></tr>
+<tr class="memdesc:a8927514a99a08887f42f7ac446ea064c"><td class="mdescLeft">&#160;</td><td class="mdescRight">カラム名の一覧を得る  <a href="#a8927514a99a08887f42f7ac446ea064c"></a><br/></td></tr>
+<tr class="separator:a8927514a99a08887f42f7ac446ea064c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2c6803b71fadf8c9a5ecf70fd67808d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBReader.html#ae2c6803b71fadf8c9a5ecf70fd67808d">GetColumnName</a> (int i)</td></tr>
+<tr class="memdesc:ae2c6803b71fadf8c9a5ecf70fd67808d"><td class="mdescLeft">&#160;</td><td class="mdescRight">i番目のカラムの名前を返す  <a href="#ae2c6803b71fadf8c9a5ecf70fd67808d"></a><br/></td></tr>
+<tr class="separator:ae2c6803b71fadf8c9a5ecf70fd67808d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:abc14b3152e03a3e82a981db8249045dd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBReader.html#abc14b3152e03a3e82a981db8249045dd">FieldCount</a><code> [get]</code></td></tr>
+<tr class="memdesc:abc14b3152e03a3e82a981db8249045dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">カラム数  <a href="#abc14b3152e03a3e82a981db8249045dd"></a><br/></td></tr>
+<tr class="separator:abc14b3152e03a3e82a981db8249045dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">説明</h2>
+<div class="textblock"><p>DBテーブルアクセス: DbDataReaderのラッパークラス </p>
+<p>データ読み出し時に適切な文字列に変換して読み出す。 </p>
+
+<p> <a class="el" href="DBReader_8cs_source.html">DBReader.cs</a> の <a class="el" href="DBReader_8cs_source.html#l00029">29</a> 行で定義されています。</p>
+</div><h2 class="groupheader">コンストラクタとデストラクタ</h2>
+<a class="anchor" id="a7b03f58d3f2eb88c36d89634854981f6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.DB.DBReader.DBReader </td>
+          <td>(</td>
+          <td class="paramtype">DbDataReader&#160;</td>
+          <td class="paramname"><em>reader_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<p>DBConのQueryメソッドが作成する。 </p>
+
+<p> <a class="el" href="DBReader_8cs_source.html">DBReader.cs</a> の <a class="el" href="DBReader_8cs_source.html#l00039">39</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1e854677e876337655c74dbff219c966"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.DB.DBReader.DBReader </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ダミーコンストラクタ </p>
+<p>本コンストラクタで作成したDBReaderに対する読み取りは全て空データを返す </p>
+
+<p> <a class="el" href="DBReader_8cs_source.html">DBReader.cs</a> の <a class="el" href="DBReader_8cs_source.html#l00051">51</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド</h2>
+<a class="anchor" id="a7a1e9bb9feb5bdb1a3334a54d4cb6990"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.DB.DBReader.Dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>使用リソース解放 </p>
+
+<p> <a class="el" href="DBReader_8cs_source.html">DBReader.cs</a> の <a class="el" href="DBReader_8cs_source.html#l00076">76</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8729c545c54c989ebdf6fbb8d7caa24c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.DB.DBReader.Close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>使用リソース解放 </p>
+
+<p> <a class="el" href="DBReader_8cs_source.html">DBReader.cs</a> の <a class="el" href="DBReader_8cs_source.html#l00086">86</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a597127c6ca9284a1c80c7c3cfd501f7c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.DB.DBReader.Read </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>次のレコードを読み取る </p>
+
+<p> <a class="el" href="DBReader_8cs_source.html">DBReader.cs</a> の <a class="el" href="DBReader_8cs_source.html#l00093">93</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="DBCon_8cs_source.html#l00603">MACS.DB.DBCon.QueryDateTime()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a68afc5462ae7ff425edde2d2804c6b69"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] MACS.DB.DBReader.Get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>次のレコードを読み取り、全カラムの値を文字列にしたものを返す </p>
+<p>次のレコードが無い場合はnullを返す。 </p>
+
+<p> <a class="el" href="DBReader_8cs_source.html">DBReader.cs</a> の <a class="el" href="DBReader_8cs_source.html#l00107">107</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="DBTable_8cs_source.html#l02717">MACS.DB.DBTable.DumpCSV()</a>, <a class="el" href="DBCon_8cs_source.html#l00793">MACS.DB.DBCon.Execute()</a>, <a class="el" href="DBTable_8cs_source.html#l01847">MACS.DB.DBTable.Get()</a>, <a class="el" href="DBTable_8cs_source.html#l01891">MACS.DB.DBTable.GetData()</a>, <a class="el" href="DBTableJson_8cs_source.html#l00026">MACS.DB.DBTableJson.GetJson()</a>, <a class="el" href="DBTable_8cs_source.html#l01916">MACS.DB.DBTable.GetOne()</a>, と <a class="el" href="DBTable_8cs_source.html#l01925">MACS.DB.DBTable.GetOneData()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a20cf305fb579e7bc302ed4ceb2d00fc7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.DB.DBReader.IsNull </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>i番目のカラムの値がヌルかどうかを返す </p>
+
+<p> <a class="el" href="DBReader_8cs_source.html">DBReader.cs</a> の <a class="el" href="DBReader_8cs_source.html#l00119">119</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4b74805fffeccc782ae6176c950ba8a7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.DB.DBReader.GetString </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>i番目のカラムの値を文字列として返す。 </p>
+<p>NULLの場合、空文字列を返す。 </p>
+
+<p> <a class="el" href="DBReader_8cs_source.html">DBReader.cs</a> の <a class="el" href="DBReader_8cs_source.html#l00133">133</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac9812fae06776381638169bf3ee5b985"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.DB.DBReader.GetInt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>i番目のカラムの値を整数値として返す。 </p>
+<p>NULLの場合、0を返す。 </p>
+
+<p> <a class="el" href="DBReader_8cs_source.html">DBReader.cs</a> の <a class="el" href="DBReader_8cs_source.html#l00190">190</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a0c023a8f50e7a3de611b2a9d46cd8894"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long MACS.DB.DBReader.GetLong </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>i番目のカラムの値をLONG整数値として返す。 </p>
+<p>NULLの場合、0を返す。 </p>
+
+<p> <a class="el" href="DBReader_8cs_source.html">DBReader.cs</a> の <a class="el" href="DBReader_8cs_source.html#l00204">204</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5fbe85c6bd93c5368743427450573d52"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double MACS.DB.DBReader.GetDouble </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>i番目のカラムの値を浮動小数点値として返す。 </p>
+<p>NULLの場合、0.0を返す。 </p>
+
+<p> <a class="el" href="DBReader_8cs_source.html">DBReader.cs</a> の <a class="el" href="DBReader_8cs_source.html#l00218">218</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af98e4f460a46708e13ae60560100aa97"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime MACS.DB.DBReader.GetDateTime </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>i番目のカラムの値をDateTimeとして返す。 </p>
+<p>NULLの場合、0001/01/01 00:00:00を返す。 </p>
+
+<p> <a class="el" href="DBReader_8cs_source.html">DBReader.cs</a> の <a class="el" href="DBReader_8cs_source.html#l00232">232</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="DBCon_8cs_source.html#l00603">MACS.DB.DBCon.QueryDateTime()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8927514a99a08887f42f7ac446ea064c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] MACS.DB.DBReader.GetColumns </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>カラム名の一覧を得る </p>
+
+<p> <a class="el" href="DBReader_8cs_source.html">DBReader.cs</a> の <a class="el" href="DBReader_8cs_source.html#l00252">252</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="DBCon_8cs_source.html#l00793">MACS.DB.DBCon.Execute()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae2c6803b71fadf8c9a5ecf70fd67808d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.DB.DBReader.GetColumnName </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>i番目のカラムの名前を返す </p>
+
+<p> <a class="el" href="DBReader_8cs_source.html">DBReader.cs</a> の <a class="el" href="DBReader_8cs_source.html#l00262">262</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">プロパティ</h2>
+<a class="anchor" id="abc14b3152e03a3e82a981db8249045dd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.DB.DBReader.FieldCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>カラム数 </p>
+
+<p> <a class="el" href="DBReader_8cs_source.html">DBReader.cs</a> の <a class="el" href="DBReader_8cs_source.html#l00065">65</a> 行で定義されています。</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="DBReader_8cs_source.html">DBReader.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceMACS.html">MACS</a></li><li class="navelem"><a class="el" href="namespaceMACS_1_1DB.html">DB</a></li><li class="navelem"><a class="el" href="classMACS_1_1DB_1_1DBReader.html">DBReader</a></li>
+    <li class="footer">MACS.DBに対してWed Jun 27 2018 17:45:48に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

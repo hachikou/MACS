@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.HttpServer: 多言語化</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.HttpServer
+   </div>
+   <div id="projectbrief">HTTP Server and Template Engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('Example14.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">多言語化 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>本フレームワークで作成したアプリケーションは、容易に多言語化することができます。</p>
+<p>翻訳する言語は、 HttpNlsSupport.DefaultLanguage で指定します。</p>
+<p>Example14.cs: </p>
+<div class="fragment"><div class="line">﻿<span class="comment">/*! @file Example14.cs</span></div>
+<div class="line"><span class="comment"> * $Id: $</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Copyright (C) 2008-2012 Microbrains Inc.</span></div>
+<div class="line"><span class="comment"> * All Rights Reserved.</span></div>
+<div class="line"><span class="comment"> * This code was designed and coded by SHIBUYA K.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">using</span> System;</div>
+<div class="line"><span class="keyword">using</span> System.Text;</div>
+<div class="line"><span class="keyword">using</span> SCS;</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">class </span><a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classProgram.html">Program</a> {</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classProgram.html#afcfdd245ac54647c4931389fa84f5693">Main</a>(<span class="keywordtype">string</span>[] args) {</div>
+<div class="line">        HttpServer sv = <span class="keyword">new</span> HttpServer(<span class="stringliteral">&quot;SampleHttpServer&quot;</span>, <span class="stringliteral">&quot;*&quot;</span>, 8888);</div>
+<div class="line">        HttpTemplatePage.SetTemplateDir(<span class="stringliteral">&quot;template&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">// 使用言語を設定する</span></div>
+<div class="line">        HttpNlsSupport.DefaultLanguage = <span class="stringliteral">&quot;auto&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">// &quot;/xxxx&quot; にアクセスすると、nls/xxxx.言語コード ファイルを返す。</span></div>
+<div class="line">        HttpStaticPage nlspage = <span class="keyword">new</span> HttpStaticPage(<span class="stringliteral">&quot;nls&quot;</span>);</div>
+<div class="line">        <span class="comment">// 個別に使用言語を変えたい場合: nlspage.SetLanguage(&quot;es&quot;);</span></div>
+<div class="line">        sv.AddStaticPage(<span class="stringliteral">&quot;/&quot;</span>, nlspage);</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">// テンプレートの翻訳辞書ファイルのディレクトリを指定する。</span></div>
+<div class="line">        Translator.DictionaryDirectory = <span class="stringliteral">&quot;lang&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">        sv.AddPage(<span class="stringliteral">&quot;/example14&quot;</span>, typeof(SamplePage));</div>
+<div class="line"></div>
+<div class="line">        sv.DefaultPage = <span class="stringliteral">&quot;/index.html&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">        sv.Run(4); <span class="comment">// 4 workers</span></div>
+<div class="line">        <span class="keywordflow">return</span> 0;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// メッセージの翻訳を行なう例:</span></div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>SamplePage : HttpTemplatePage {</div>
+<div class="line"></div>
+<div class="line">    <span class="keyword">protected</span> Literal message;</div>
+<div class="line"></div>
+<div class="line">    <span class="keyword">public</span> SamplePage() {</div>
+<div class="line">        <span class="comment">// 個別に使用言語を変えたい場合: SetLanguage(&quot;es&quot;);</span></div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> PageLoad(<span class="keywordtype">string</span> param) {</div>
+<div class="line">        AssignWebControls();</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">// _() メソッドは、言語コードに応じて翻訳を行なう。</span></div>
+<div class="line">        message.Text = _(<span class="stringliteral">&quot;おはようございます&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">        RenderTemplate();</div>
+<div class="line"></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>index.html.ja: </p>
+<pre class="fragment">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;EXAMPLE&lt;/title&gt;
+  &lt;meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /&gt;
+  &lt;meta http-equiv="content-language" content="ja" /&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;h1&gt;日本語&lt;/h1&gt;
+   &lt;a href="/example14"&gt;多言語化したテンプレートページの例&lt;/a&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre><p>index.html.en: </p>
+<pre class="fragment">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;EXAMPLE&lt;/title&gt;
+  &lt;meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /&gt;
+  &lt;meta http-equiv="content-language" content="en" /&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;h1&gt;English&lt;/h1&gt;
+   &lt;a href="/example14"&gt;Example for native language supported template page.&lt;/a&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre><p>index.html.es: </p>
+<pre class="fragment">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;EXAMPLE&lt;/title&gt;
+  &lt;meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /&gt;
+  &lt;meta http-equiv="content-language" content="en" /&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;h1&gt;Español&lt;/h1&gt;
+   &lt;a href="/example14"&gt;Ejemplo de página modelo para lenguaje nativo.&lt;/a&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre><p>example14.html: </p>
+<pre class="fragment">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Sample Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    {message}&lt;br/&gt;
+    _("おやすみなさい")
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre><p>静的ページに関しては、言語コードに応じたコンテンツファイルを返すようになります。</p>
+<p>例えば、 HttpNlsSupport.DefaultLanguage = "es"; と指定すると、"abc.html" というファイルが要求された時に "abc.html.es" というファイルがあればそれを返します。</p>
+<p>言語コードとして "auto"を指定すると、ブラウザから送られてきた要求言語コードに従って言語コードを決定します。</p>
+<p>言語コード名が付いたコンテンツファイルが存在しない場合は、言語コードが付かないファイルを返します。</p>
+<p>テンプレートページに関しては、_(" と ") で囲った部分が、翻訳辞書に従って文字変換されて出力されます。</p>
+<p>また、アプリケーション内では、 HttpTemplatePage._(string) メソッドを使って文字列を翻訳辞書に従って文字変換することができます。</p>
+<p>翻訳辞書は、 Translator.DictionaryDirectory で指定したディレクトリ内の言語コード名のファイルで、1行に1つずつ "::" または "|" で区切って翻訳元の文字列と翻訳後の文字列を書き並べたものです。</p>
+<p>lang/en: </p>
+<pre class="fragment">おはようございます::Good morning
+おやすみなさい::Good night
+</pre><p>lang/es: </p>
+<pre class="fragment">おはようございます::Buenos días
+おやすみなさい::Buenas noches
+</pre><p>言語コードに対応した翻訳辞書が無い場合や翻訳辞書に翻訳元文字列が登録されていない場合には、文字列置換は行ないません。</p>
+<p>なお、テンプレートファイルについても静的コンテンツファイルと同様に、".言語コード"が末尾に付いたファイルがある場合にはそれが用いられます。 テンプレートファイルを丸ごと翻訳した方が手っ取り早いという場合には、こちらの方法をお使いください。 </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="index.html">index</a></li><li class="navelem"><a class="el" href="Http_xE3_x82_xB5_xE3_x83_xBC_xE3_x83_x90_xE6_xA7_x8B_xE7_xAF_x89_xE4_xBE_x8B.html">Httpサーバ構築例</a></li>
+    <li class="footer">MACS.HttpServerに対してWed Jun 27 2018 17:45:46に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

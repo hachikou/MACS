@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.DB: テーブルの連結</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.DB
+   </div>
+   <div id="projectbrief">SQL Database Access Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('Example8.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">テーブルの連結 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>2つのテーブルを連結して使うことができます。</p>
+<p>Example8.cs: </p>
+<div class="fragment"><div class="line">﻿<span class="comment">/*! @file Example8.cs</span></div>
+<div class="line"><span class="comment"> * $Id: Example8.cs 1890 2014-06-05 04:34:56Z shibuya $</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Copyright (C) 2008-2012 Microbrains Inc.</span></div>
+<div class="line"><span class="comment"> * All Rights Reserved.</span></div>
+<div class="line"><span class="comment"> * This code was designed and coded by SHIBUYA K.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">using</span> System;</div>
+<div class="line"><span class="keyword">using</span> System.Collections.Generic;</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">class </span><a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classProgram.html">Program</a> {</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classProgram.html#afcfdd245ac54647c4931389fa84f5693">Main</a>(<span class="keywordtype">string</span>[] args) {</div>
+<div class="line"></div>
+<div class="line">        IniFile conf = <span class="keyword">new</span> IniFile(<span class="stringliteral">&quot;Example.ini&quot;</span>);</div>
+<div class="line">        DBCon.UseConsoleLog = <span class="keyword">true</span>;</div>
+<div class="line">        DBTableDef.LoadAll(<span class="stringliteral">&quot;tabledef&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">        <span class="keyword">using</span>(DBCon db = <span class="keyword">new</span> DBCon(conf)) {</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// 複数のテーブルを連結して使う</span></div>
+<div class="line">            DBTable tbl = <span class="keyword">new</span> DBTable(db, <span class="stringliteral">&quot;サンプルテーブル&quot;</span>);</div>
+<div class="line">            tbl.Join(<span class="stringliteral">&quot;サンプル役職&quot;</span>, <span class="comment">// 副テーブル名</span></div>
+<div class="line">                     <span class="stringliteral">&quot;ID&quot;</span>,           <span class="comment">// 副テーブルのカラム名</span></div>
+<div class="line">                     <span class="stringliteral">&quot;ID&quot;</span>);          <span class="comment">// 親テーブルのカラム名</span></div>
+<div class="line">            tbl.SetColumns(<span class="stringliteral">&quot;名前&quot;</span>, <span class="stringliteral">&quot;役職&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// 検索条件を指定せず、全レコードを表示してみる</span></div>
+<div class="line">            <span class="keywordflow">foreach</span>(DataArray rec <span class="keywordflow">in</span> tbl.GetData()) {</div>
+<div class="line">                Console.WriteLine(<span class="stringliteral">&quot;なまえ:{0}、やくしょく:{1}&quot;</span>, rec[<span class="stringliteral">&quot;名前&quot;</span>], rec[<span class="stringliteral">&quot;役職&quot;</span>]);</div>
+<div class="line">            }</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// 副テーブルのカラムを検索条件に使ってもよい</span></div>
+<div class="line">            tbl.SetCondition(<span class="stringliteral">&quot;役職&quot;</span>, <span class="stringliteral">&quot;技術課長&quot;</span>);</div>
+<div class="line">            <span class="comment">// tbl.SetCondition(&quot;サンプル役職.役職&quot;, &quot;技術課長&quot;) と、テーブル名を明記してもよい。</span></div>
+<div class="line">            <span class="keywordflow">foreach</span>(DataArray rec <span class="keywordflow">in</span> tbl.GetData()) {</div>
+<div class="line">                Console.WriteLine(<span class="stringliteral">&quot;なまえ:{0}、やくしょく:{1}&quot;</span>, rec[<span class="stringliteral">&quot;名前&quot;</span>], rec[<span class="stringliteral">&quot;役職&quot;</span>]);</div>
+<div class="line">            }</div>
+<div class="line"></div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">return</span> 0;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>実行結果の例: </p>
+<pre class="fragment">mydb: Open Server=192.168.10.125;Database=mydb;Uid=myuser;Pwd=mypass;CharSet=utf8
+mydb: SELECT サンプルテーブル.名前,サンプル役職.役職 FROM サンプルテーブル LEFT JOIN サンプル役職 ON サンプル役職.ID=サンプルテーブル.ID
+なまえ:テスト一郎、やくしょく:技術課長
+なまえ:テスト次郎、やくしょく:技術課長
+なまえ:テスト三郎、やくしょく:
+なまえ:山田太郎、やくしょく:
+なまえ:山田花子、やくしょく:技術本部長
+なまえ:山田花子、やくしょく:営業本部長
+なまえ:鈴木一郎、やくしょく:取締役
+mydb: SELECT サンプルテーブル.名前,サンプル役職.役職 FROM サンプルテーブル LEFT JOIN サンプル役職 ON サンプル役職.ID=サンプルテーブル.ID WHERE サンプル役職.役職='技術課長'
+なまえ:テスト一郎、やくしょく:技術課長
+なまえ:テスト次郎、やくしょく:技術課長
+mydb: Closed.
+</pre><p>DBTable.Join() を使うと、基本となるテーブルに他のテーブルを連結させて使う事ができます。</p>
+<p>Joinの第1引数は副テーブルの名前です。 第2引数は副テーブルのカラム名で、第3引数は基本テーブルのカラム名です。 テーブルの結合条件は、指定したカラム同士の値が等しい、ということになります。</p>
+<p>もし結合条件が複数ある場合には、 </p>
+<pre class="fragment">tbl.Join("副テーブル名", "副カラム名1", "基本カラム名1", "副カラム名2", "基本カラム名2");
+tbl.Join("副テーブル名", "副カラム名1", "基本カラム名1", "副カラム名2", "基本カラム名2", "副カラム名3", "基本カラム名3");
+</pre><p> のように指定します。</p>
+<p>これらのカラム名を指定する際、内部でSQL文を生成する際に自動的にテーブル名指定が付加されますので、Joinの引数のカラム名にはテーブル名を付けないで下さい。</p>
+<p>もし結合条件が単純なカラム値の一致だけで記述できない場合には、SQLの条件式を直接書くこともできます。 例えば、 </p>
+<pre class="fragment">tbl.Join("サンプル役職", "サンプル役職.ID=サンプルテーブル.ID+1");
+</pre><p> のように記述することができます。（Joinの引数が2つの時には、第2引数の文字列がそのままSQL文のJOIN条件式に使われます。） このとき、結合条件式中のカラム名はテーブル名の自動補完が行なわれない点に注意して下さい。</p>
+<p>テーブルを結合すると、取り出すカラム名や検索条件中のカラム名に、副テーブルのカラム名を指定することができるようになります。 カラム名は、まず基本テーブルのカラム名に存在するかどうか確認され、無ければ1番目に結合したテーブルのカラム名を探し、無ければ2番目に結合したテーブルのカラム名を探す、というように探され、SQL文を生成する時に適切に展開されます。</p>
+<p>もし基本テーブルと副テーブルで全く同じ名前のカラムがある場合、単純にカラム名を指定すると基本テーブルのカラムとして処理されます。 このような場合、副テーブルのカラムを指定するには、"副テーブル名.カラム名"のように、テーブル名を明示的に指定して下さい。</p>
+<p>テーブルの結合は、左外部結合（LEFT OUTER JOIN）で行なわれます。 すなわち、結合条件に合致するレコードが副テーブルに存在しない場合、副テーブルから得られるカラムの値はNULLになります。 また、結合条件に合致するレコードが副テーブルに複数存在する場合、その副テーブルのレコード数分だけ基本テーブルのレコードがコピーされて結果に含まれることになります。 </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="index.html">index</a></li><li class="navelem"><a class="el" href="DB_xE3_x82_x92_xE4_xBD_xBF_xE3_x81_xA3_xE3_x81_x9F_xE3_x83_x87_xE3_x83_xBC_xE3_x82_xBF_xE3_x83_xecb51fe6fcb759ae61f839d5c92dd895.html">DBを使ったデータベースアクセスプログラム作成例</a></li>
+    <li class="footer">MACS.DBに対してWed Jun 27 2018 17:45:48に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

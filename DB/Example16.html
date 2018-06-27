@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.DB: サブクエリを用いてレコードを挿入する</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.DB
+   </div>
+   <div id="projectbrief">SQL Database Access Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('Example16.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">サブクエリを用いてレコードを挿入する </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>あるテーブルの検索結果を用いて他のテーブルにレコード挿入を行ないたい事があります。</p>
+<p>Example16.cs: </p>
+<div class="fragment"><div class="line">﻿<span class="comment">/*! @file Example16.cs</span></div>
+<div class="line"><span class="comment"> * $Id: Example16.cs 1890 2014-06-05 04:34:56Z shibuya $</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Copyright (C) 2008-2012 Microbrains Inc.</span></div>
+<div class="line"><span class="comment"> * All Rights Reserved.</span></div>
+<div class="line"><span class="comment"> * This code was designed and coded by SHIBUYA K.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">using</span> System;</div>
+<div class="line"><span class="keyword">using</span> System.Collections.Generic;</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">class </span><a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classProgram.html">Program</a> {</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classProgram.html#afcfdd245ac54647c4931389fa84f5693">Main</a>(<span class="keywordtype">string</span>[] args) {</div>
+<div class="line"></div>
+<div class="line">        IniFile conf = <span class="keyword">new</span> IniFile(<span class="stringliteral">&quot;Example.ini&quot;</span>);</div>
+<div class="line">        DBCon.UseConsoleLog = <span class="keyword">true</span>;</div>
+<div class="line">        DBTableDef.LoadAll(<span class="stringliteral">&quot;tabledef&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">        <span class="keyword">using</span>(DBCon db = <span class="keyword">new</span> DBCon(conf)) {</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// サンプルテーブルをサブクエリとして使う</span></div>
+<div class="line">            DBTable subtbl = <span class="keyword">new</span> DBTable(db, <span class="stringliteral">&quot;サンプルテーブル&quot;</span>);</div>
+<div class="line">            <span class="comment">// INSERTするサンプル給与テーブルのカラムにあわせてカラム一覧を</span></div>
+<div class="line">            <span class="comment">// セットしておく。</span></div>
+<div class="line">            subtbl.SetColumns(<span class="stringliteral">&quot;ID&quot;</span>, <span class="stringliteral">&quot;0.00&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// サンプルテーブルに存在する全レコードに対応するサンプル給与レコードを作る</span></div>
+<div class="line">            DBTable tbl = <span class="keyword">new</span> DBTable(db, <span class="stringliteral">&quot;サンプル給与&quot;</span>);</div>
+<div class="line">            tbl.SetColumns(<span class="stringliteral">&quot;ID&quot;</span>, <span class="stringliteral">&quot;給与&quot;</span>);</div>
+<div class="line">            <span class="keywordtype">int</span> n = tbl.Insert(subtbl);</div>
+<div class="line"></div>
+<div class="line">            Console.WriteLine(<span class="stringliteral">&quot;{0}件追加しました&quot;</span>, n);</div>
+<div class="line"></div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">return</span> 0;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>実行結果の例: </p>
+<pre class="fragment">mydb: Open Server=192.168.10.125;Database=mydb;Uid=myuser;Pwd=mypass;CharSet=utf8
+mydb: INSERT INTO サンプル給与 (ID,給与) SELECT ID,0.00 FROM サンプルテーブル
+2件追加しました
+mydb: Closed.
+</pre><p>この例で新たに登場するサンプル給与テーブルは、次のように定義されています。</p>
+<p>tabledef/table04.xml: </p>
+<pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;table name="サンプル給与"&gt;
+  &lt;column name="ID" type="NUMBER" length="8" /&gt;
+  &lt;column name="給与" type="NUMBER" length="10" fractional="2"/&gt;
+&lt;/table&gt;
+</pre><p>DBTable.Insert() の引数に DataArray ではなく、 DBTable を渡すと、サブクエリを使ったレコード挿入を行ないます。</p>
+<p>サブクエリの抽出カラムは、レコード挿入をしようとするテーブルのカラムと順番、要素数が一致していなければいけません。</p>
+<p>なお、この例で、サブクエリの2番目のカラムが、カラム名ではなく "0.00" という定数になっている点に注意して下さい。</p>
+<p>DBTable.SetColumns() で指定する名前は、基本テーブルや連結テーブルのカラム名と一致するものでない場合には、そのままSQL文に展開されます。 このため、定数を指定したい場合は、数値の場合は "123"、文字列の場合は "'abc'"（シングルクォートで囲っている点に注意）などのように指定します。 また、SQLで有効な式は何でも記述できますので、"給与*100" とか "CONCAT(名前,'様')" などと記述する事もできます。 （CONCAT()は MySQLの関数で、文字列を結合するものです。） </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="index.html">index</a></li><li class="navelem"><a class="el" href="DB_xE3_x82_x92_xE4_xBD_xBF_xE3_x81_xA3_xE3_x81_x9F_xE3_x83_x87_xE3_x83_xBC_xE3_x82_xBF_xE3_x83_xecb51fe6fcb759ae61f839d5c92dd895.html">DBを使ったデータベースアクセスプログラム作成例</a></li>
+    <li class="footer">MACS.DBに対してWed Jun 27 2018 17:45:48に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.Core: 構成メンバ - 変数</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.Core
+   </div>
+   <div id="projectbrief">Miscellaneous Assets for C-Sharp</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li class="current"><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow3" class="tabs2">
+    <ul class="tablist">
+      <li><a href="functions.html"><span>全て</span></a></li>
+      <li><a href="functions_func.html"><span>関数</span></a></li>
+      <li class="current"><a href="functions_vars.html"><span>変数</span></a></li>
+      <li><a href="functions_enum.html"><span>列挙型</span></a></li>
+      <li><a href="functions_prop.html"><span>プロパティ</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow4" class="tabs3">
+    <ul class="tablist">
+      <li><a href="#index_a"><span>a</span></a></li>
+      <li><a href="#index_b"><span>b</span></a></li>
+      <li><a href="#index_c"><span>c</span></a></li>
+      <li><a href="#index_d"><span>d</span></a></li>
+      <li><a href="#index_e"><span>e</span></a></li>
+      <li><a href="#index_f"><span>f</span></a></li>
+      <li><a href="#index_h"><span>h</span></a></li>
+      <li><a href="#index_i"><span>i</span></a></li>
+      <li><a href="#index_k"><span>k</span></a></li>
+      <li><a href="#index_l"><span>l</span></a></li>
+      <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_n"><span>n</span></a></li>
+      <li><a href="#index_p"><span>p</span></a></li>
+      <li><a href="#index_r"><span>r</span></a></li>
+      <li><a href="#index_s"><span>s</span></a></li>
+      <li><a href="#index_t"><span>t</span></a></li>
+      <li><a href="#index_v"><span>v</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('functions_vars.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="contents">
+&#160;
+
+<h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
+<li>Attr
+: <a class="el" href="classProgram_1_1Element.html#a8137b3d45b1181b84fe5381a0dd4aa07">Program.Element</a>
+</li>
+<li>Auth
+: <a class="el" href="classMACS_1_1SendMail.html#aa2e20fba23b62e23b5e023cd1bf8b62d">MACS.SendMail</a>
+</li>
+<li>AuthPass
+: <a class="el" href="classMACS_1_1SendMail.html#a1127c2101a08654fc550074173730a3e">MACS.SendMail</a>
+</li>
+<li>AuthUser
+: <a class="el" href="classMACS_1_1SendMail.html#a343b7d1cca25875678682cea95fd4205">MACS.SendMail</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
+<li>BaseTime
+: <a class="el" href="structMACS_1_1UnixTime.html#aa6ce7c25ffdb5771140437b5ba21e3dd">MACS.UnixTime</a>
+</li>
+<li>Body
+: <a class="el" href="classMACS_1_1SendMail.html#a80d7739f37b50af5f21079ce27a7daf3">MACS.SendMail</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>childClassKey
+: <a class="el" href="classMACS_1_1CascadedAttribute.html#a36ebe219f4aa552d56fe2394aacb8164">MACS.CascadedAttribute</a>
+</li>
+<li>classDict
+: <a class="el" href="classMACS_1_1CascadedAttribute.html#a6b47a9030d25439252d90892ccfc80d6">MACS.CascadedAttribute</a>
+</li>
+<li>CookedMode
+: <a class="el" href="classMACS_1_1TelnetStream.html#a1fa405a092d6c2979429749fba1b4f25">MACS.TelnetStream</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
+<li>DefaultChunkSize
+: <a class="el" href="classMACS_1_1TinyChunkStream.html#a253102f93664cd3d2a96d80e2510d800">MACS.TinyChunkStream</a>
+</li>
+<li>defaultClassName
+: <a class="el" href="classMACS_1_1CascadedAttribute.html#af9e2830b52fef486342e1269c767e504">MACS.CascadedAttribute</a>
+</li>
+<li>DefaultComparer
+: <a class="el" href="classMACS_1_1ObjectDictionary.html#a43e6afc87fcc16ffb076c156c9756b25">MACS.ObjectDictionary</a>
+</li>
+<li>DefaultEncoding
+: <a class="el" href="classMACS_1_1FileUtil.html#a34c9644b5c29b7dfe087fe55792429ad">MACS.FileUtil</a>
+</li>
+<li>DefaultLimitSize
+: <a class="el" href="classMACS_1_1TempStream.html#a579f4062881ea18a63850dd55f4be8ff">MACS.TempStream</a>
+</li>
+<li>DefaultPort
+: <a class="el" href="classMACS_1_1Syslog.html#a2a384b571c61d458b86c7ec29afbf75d">MACS.Syslog</a>
+</li>
+<li>DefaultTimeout
+: <a class="el" href="classMACS_1_1ProcUtil.html#aa8fb46a959084f91fb8f2ef06a7125f9">MACS.ProcUtil</a>
+</li>
+<li>DefaultWriteBufferSize
+: <a class="el" href="classMACS_1_1SocStream.html#a15c3e7941d79598d03e08b777bf09aaf">MACS.SocStream</a>
+</li>
+<li>dict
+: <a class="el" href="classMACS_1_1CascadedAttribute.html#a49488557f00bd831b0a4068473cdd3a0">MACS.CascadedAttribute</a>
+</li>
+<li>DictionaryDirectory
+: <a class="el" href="classMACS_1_1Translator.html#aafe8c51e3651006a817128fc4705013e">MACS.Translator</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
+<li>EACCES
+: <a class="el" href="classMACS_1_1SocError.html#aa4acac70995c2092abe988fcee85ee4e">MACS.SocError</a>
+</li>
+<li>EADDRINUSE
+: <a class="el" href="classMACS_1_1SocError.html#a91d0a73ffc4a47204b6f620b68559dbe">MACS.SocError</a>
+</li>
+<li>EADDRNOTAVAIL
+: <a class="el" href="classMACS_1_1SocError.html#aec2db03cbd85dae8d0f42e774e777d44">MACS.SocError</a>
+</li>
+<li>EAFNOSUPPORT
+: <a class="el" href="classMACS_1_1SocError.html#a5907a2b7be77536d2a8d97a7fcb0641f">MACS.SocError</a>
+</li>
+<li>EALREADY
+: <a class="el" href="classMACS_1_1SocError.html#a5f0222fef462e2ea5aa04cbdfd0dba01">MACS.SocError</a>
+</li>
+<li>ECONNABORTED
+: <a class="el" href="classMACS_1_1SocError.html#aadbea875e1ce5b923006a370d31fed09">MACS.SocError</a>
+</li>
+<li>ECONNREFUSED
+: <a class="el" href="classMACS_1_1SocError.html#a44caff1678d24b5f66309f31311fd949">MACS.SocError</a>
+</li>
+<li>ECONNRESET
+: <a class="el" href="classMACS_1_1SocError.html#adedabdaa4e78722071fccb0e7d91efca">MACS.SocError</a>
+</li>
+<li>EDESTADDRREQ
+: <a class="el" href="classMACS_1_1SocError.html#af5a90dc8b2031c614fa353eb2ddc9a6f">MACS.SocError</a>
+</li>
+<li>EDISCON
+: <a class="el" href="classMACS_1_1SocError.html#a94fd9568c7c97403db8e750d1b26d692">MACS.SocError</a>
+</li>
+<li>EFAULT
+: <a class="el" href="classMACS_1_1SocError.html#ad161142148aca36195b0d2d3b700acf1">MACS.SocError</a>
+</li>
+<li>EHOSTDOWN
+: <a class="el" href="classMACS_1_1SocError.html#ad38b4bcdf0bddbea5faeff3e2631ab30">MACS.SocError</a>
+</li>
+<li>EHOSTUNREACH
+: <a class="el" href="classMACS_1_1SocError.html#a56012a8aa3e10ec41e8245abbdefd7e0">MACS.SocError</a>
+</li>
+<li>EINPROGRESS
+: <a class="el" href="classMACS_1_1SocError.html#ac74c5d34c9b268a66f977e21da45a8b1">MACS.SocError</a>
+</li>
+<li>EINTR
+: <a class="el" href="classMACS_1_1SocError.html#ad1d28630f0495a2782e5d766fa715565">MACS.SocError</a>
+</li>
+<li>EINVAL
+: <a class="el" href="classMACS_1_1SocError.html#a83e2ac31b3c33a0805ce56f1aef201ef">MACS.SocError</a>
+</li>
+<li>EISCONN
+: <a class="el" href="classMACS_1_1SocError.html#a4eb66eb404abd3954911f49d8d61a1c4">MACS.SocError</a>
+</li>
+<li>EMFILE
+: <a class="el" href="classMACS_1_1SocError.html#a39e29195e269d5925d261f44f0de589f">MACS.SocError</a>
+</li>
+<li>EMSGSIZE
+: <a class="el" href="classMACS_1_1SocError.html#a9584758633e292412a2499c4ec2781c2">MACS.SocError</a>
+</li>
+<li>EnableSsl
+: <a class="el" href="classMACS_1_1SendMail.html#a2008f367a090e3e00bb1ad7391cbc471">MACS.SendMail</a>
+</li>
+<li>encoding
+: <a class="el" href="classMACS_1_1XmlFile.html#af4a3c8db26c718ba81bc1bad9b80afb2">MACS.XmlFile</a>
+</li>
+<li>EndAddr
+: <a class="el" href="classMACS_1_1IpaddrRange.html#a5bed2e2f064f55fca893a3507c7d655c">MACS.IpaddrRange</a>
+, <a class="el" href="classMACS_1_1HwaddrRange.html#a87290f95b403d99b71601bec8226d6ce">MACS.HwaddrRange</a>
+</li>
+<li>ENETDOWN
+: <a class="el" href="classMACS_1_1SocError.html#ac1c4460ab7ace1e2e336c9c7cf618dbd">MACS.SocError</a>
+</li>
+<li>ENETRESET
+: <a class="el" href="classMACS_1_1SocError.html#aa80f0ca359b0f8c2e8d7a8c012eb1464">MACS.SocError</a>
+</li>
+<li>ENETUNREACH
+: <a class="el" href="classMACS_1_1SocError.html#afe2142bee1486890c3357d02d80f6734">MACS.SocError</a>
+</li>
+<li>ENOBUFS
+: <a class="el" href="classMACS_1_1SocError.html#ad54cbf7c90f034f1c2d16566b2a786b6">MACS.SocError</a>
+</li>
+<li>ENOPROTOOPT
+: <a class="el" href="classMACS_1_1SocError.html#a8e4791fab47ff2df9cfb5df0e2cd9f24">MACS.SocError</a>
+</li>
+<li>ENOTCONN
+: <a class="el" href="classMACS_1_1SocError.html#ad4fc669686f6e7bcc16eeadd9269f492">MACS.SocError</a>
+</li>
+<li>ENOTSOCK
+: <a class="el" href="classMACS_1_1SocError.html#ab2314e9916dd3ac63bc6223cc3c0d3cf">MACS.SocError</a>
+</li>
+<li>EOPNOTSUPP
+: <a class="el" href="classMACS_1_1SocError.html#ad46ff16316e467e7accca395ef488f3f">MACS.SocError</a>
+</li>
+<li>EPFNOSUPPORT
+: <a class="el" href="classMACS_1_1SocError.html#ac6a44fe2563a9125e77b5297856a177b">MACS.SocError</a>
+</li>
+<li>EPROCLIM
+: <a class="el" href="classMACS_1_1SocError.html#a03cd1a82a015c27b3908cb0bed358c97">MACS.SocError</a>
+</li>
+<li>EPROTONOSUPPORT
+: <a class="el" href="classMACS_1_1SocError.html#ae929bb93038b6a99b989cf28917c31bc">MACS.SocError</a>
+</li>
+<li>EPROTOTYPE
+: <a class="el" href="classMACS_1_1SocError.html#a1b916127a1ac66e0c54fc1070eb90ced">MACS.SocError</a>
+</li>
+<li>ESHUTDOWN
+: <a class="el" href="classMACS_1_1SocError.html#a9a2e94bad66e8be7f04ae7d66ec7d81d">MACS.SocError</a>
+</li>
+<li>ESOCKTNOSUPPORT
+: <a class="el" href="classMACS_1_1SocError.html#aadbabad2cb530852732ff9a1689ddddc">MACS.SocError</a>
+</li>
+<li>ETIMEDOUT
+: <a class="el" href="classMACS_1_1SocError.html#a5bf7e4a9423ffcbf1fb7a166f28632e5">MACS.SocError</a>
+</li>
+<li>EWOULDBLOCK
+: <a class="el" href="classMACS_1_1SocError.html#aff771e99d1755ca7a8d0ee1967edd8f9">MACS.SocError</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
+<li>Facility
+: <a class="el" href="classMACS_1_1Syslog.html#a7b520a1db265a0013df9d29e49b329dd">MACS.Syslog</a>
+</li>
+<li>ForceFlush
+: <a class="el" href="classMACS_1_1TelnetStream.html#a0c097fd73273e4fb1e51ae96cdc622f9">MACS.TelnetStream</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
+<li>HOST_NOT_FOUND
+: <a class="el" href="classMACS_1_1SocError.html#a13796f92c95ec75307213dcd4ee5ea2e">MACS.SocError</a>
+</li>
+<li>HostName
+: <a class="el" href="classMACS_1_1Syslog.html#a7295936ccb38d66a124c1c99f5f90087">MACS.Syslog</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
+<li>IgnoreCaseComparer
+: <a class="el" href="classMACS_1_1ObjectDictionary.html#aeb5f58b1f446ee914d237a34a843b596">MACS.ObjectDictionary</a>
+</li>
+<li>IgnoreCert
+: <a class="el" href="classMACS_1_1SendMail.html#a647979513c448bc71e7ef966f28d46e9">MACS.SendMail</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_k"></a>- k -</h3><ul>
+<li>KeyLengthComparer
+: <a class="el" href="classMACS_1_1ObjectDictionary.html#a1c8f14b5179e758fe6ab9a569a3d9be4">MACS.ObjectDictionary</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
+<li>Logger
+: <a class="el" href="classMACS_1_1Syslog.html#a20a27b58b77cf31b678be82ff429b2e3">MACS.Syslog</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>MailEncoding
+: <a class="el" href="classMACS_1_1SendMail.html#af3f17306b44ba3693dbfe49718590fd1">MACS.SendMail</a>
+</li>
+<li>ModuleName
+: <a class="el" href="classMACS_1_1Syslog.html#a7578e67340714c8bc818fd11ed326b93">MACS.Syslog</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>Name
+: <a class="el" href="classProgram_1_1Element.html#acf3be335d7ff18160e023298dfe5ab6a">Program.Element</a>
+, <a class="el" href="classMACS_1_1RWLock.html#a50ca227611496d679cdba0d5c38ad187">MACS.RWLock</a>
+</li>
+<li>NO_DATA
+: <a class="el" href="classMACS_1_1SocError.html#ad136f30f54ebc94568eb7d36e78dfb63">MACS.SocError</a>
+</li>
+<li>NO_RECOVERY
+: <a class="el" href="classMACS_1_1SocError.html#a8f978786c65fb79c34133e183d6bcfc8">MACS.SocError</a>
+</li>
+<li>None
+: <a class="el" href="structMACS_1_1UnixTime.html#a1e6c09a8b6b7082352895ab69d83887c">MACS.UnixTime</a>
+</li>
+<li>NOTINITIALISED
+: <a class="el" href="classMACS_1_1SocError.html#ae2eff0510489e6b540eb248d004f8605">MACS.SocError</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>parent
+: <a class="el" href="classMACS_1_1CascadedAttribute.html#a905d9db2aa76bcde9f56a88149fa7c1e">MACS.CascadedAttribute</a>
+</li>
+<li>PopPort
+: <a class="el" href="classMACS_1_1SendMail.html#a7d8098fb862641db6aeda140a02de6d5">MACS.SendMail</a>
+</li>
+<li>PopServer
+: <a class="el" href="classMACS_1_1SendMail.html#a2ace5e313a9a02229b592e52c8aaf58e">MACS.SendMail</a>
+</li>
+<li>PopWait
+: <a class="el" href="classMACS_1_1SendMail.html#a81b395652187eb104a0e4aeadfb84ed7">MACS.SendMail</a>
+</li>
+<li>Port
+: <a class="el" href="classMACS_1_1SendMail.html#ae1820cdaf45a970ffd433cc89c62cd72">MACS.SendMail</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
+<li>Receivers
+: <a class="el" href="classMACS_1_1SendMail.html#af6b947525dea25ab6d148a428b98764e">MACS.SendMail</a>
+</li>
+<li>rwlock
+: <a class="el" href="classMACS_1_1LockHandle.html#a2383ac518bb50051a3739b1319cd2d79">MACS.LockHandle</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>Sender
+: <a class="el" href="classMACS_1_1SendMail.html#a876df06e629c94fa483972e4a5fe24ca">MACS.SendMail</a>
+</li>
+<li>SendLevel
+: <a class="el" href="classMACS_1_1Syslog.html#af29fbe43c80daf7d66ace70d6bb85b90">MACS.Syslog</a>
+</li>
+<li>Server
+: <a class="el" href="classMACS_1_1SendMail.html#aa190412ba3dc54348f043ae44295cf15">MACS.SendMail</a>
+</li>
+<li>SimilarCharList
+: <a class="el" href="classMACS_1_1StringUtil.html#a78ecceaf16ddf3d376cb66c3ec5222a2">MACS.StringUtil</a>
+</li>
+<li>StartAddr
+: <a class="el" href="classMACS_1_1HwaddrRange.html#a0e70c2dc57cef26fd890b1e0453e24ed">MACS.HwaddrRange</a>
+, <a class="el" href="classMACS_1_1IpaddrRange.html#aff689a824ab72de81a0c8eb00579be87">MACS.IpaddrRange</a>
+</li>
+<li>Subject
+: <a class="el" href="classMACS_1_1SendMail.html#ae93bb4aa2c8113cf2651864106cc4ac9">MACS.SendMail</a>
+</li>
+<li>SuspendEcho
+: <a class="el" href="classMACS_1_1TelnetStream.html#ac689facb73bac39a6b4b731ca8f3f89a">MACS.TelnetStream</a>
+</li>
+<li>SYSNOTREADY
+: <a class="el" href="classMACS_1_1SocError.html#a90cf9315f071151613c197c896ce3697">MACS.SocError</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>TempPath
+: <a class="el" href="classMACS_1_1TempStream.html#a91fdaf8cb016e5553371ad5d67859a9c">MACS.TempStream</a>
+</li>
+<li>Timeout
+: <a class="el" href="classMACS_1_1SendMail.html#a9cc677e7bb762818391151c1f7aeb6a7">MACS.SendMail</a>
+</li>
+<li>TRY_AGAIN
+: <a class="el" href="classMACS_1_1SocError.html#a2ab43f224881bae0478812d0ad483e0a">MACS.SocError</a>
+</li>
+<li>TYPE_NOT_FOUND
+: <a class="el" href="classMACS_1_1SocError.html#a09343d5b4b0108009088f928af5f1d4b">MACS.SocError</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_v"></a>- v -</h3><ul>
+<li>VERNOTSUPPORTED
+: <a class="el" href="classMACS_1_1SocError.html#ac6254df429f4d51e1a2b6d43dedabcc1">MACS.SocError</a>
+</li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">MACS.Coreに対してWed Jun 27 2018 17:45:45に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

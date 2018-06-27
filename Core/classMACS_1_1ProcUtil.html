@@ -1,0 +1,1208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.Core: クラス MACS.ProcUtil</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.Core
+   </div>
+   <div id="projectbrief">Miscellaneous Assets for C-Sharp</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classMACS_1_1ProcUtil.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Static Public メソッド</a> &#124;
+<a href="#pub-static-attribs">Static Public 変数</a> &#124;
+<a href="classMACS_1_1ProcUtil-members.html">すべてのメンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス MACS.ProcUtil</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>外部コマンド実行ユーティリティ  
+ <a href="classMACS_1_1ProcUtil.html#details">[詳細]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public メソッド</h2></td></tr>
+<tr class="memitem:a048b9217aae491295d745ad66663a175"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ProcUtil.html#a048b9217aae491295d745ad66663a175">Exec</a> (string cmd, int timeout, string[] args, bool createNoWindow=true, bool killOnTimeout=true)</td></tr>
+<tr class="memdesc:a048b9217aae491295d745ad66663a175"><td class="mdescLeft">&#160;</td><td class="mdescRight">外部コマンドを実行する  <a href="#a048b9217aae491295d745ad66663a175"></a><br/></td></tr>
+<tr class="separator:a048b9217aae491295d745ad66663a175"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af11531f5d1a5c4293dcb63e6cd557bf2"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ProcUtil.html#af11531f5d1a5c4293dcb63e6cd557bf2">Exec</a> (string cmd, string[] args)</td></tr>
+<tr class="memdesc:af11531f5d1a5c4293dcb63e6cd557bf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">外部コマンドを実行する  <a href="#af11531f5d1a5c4293dcb63e6cd557bf2"></a><br/></td></tr>
+<tr class="separator:af11531f5d1a5c4293dcb63e6cd557bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58314d1f015eaab6cafdf92767e43365"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ProcUtil.html#a58314d1f015eaab6cafdf92767e43365">Exec</a> (string cmd, int timeout)</td></tr>
+<tr class="memdesc:a58314d1f015eaab6cafdf92767e43365"><td class="mdescLeft">&#160;</td><td class="mdescRight">外部コマンドを実行する  <a href="#a58314d1f015eaab6cafdf92767e43365"></a><br/></td></tr>
+<tr class="separator:a58314d1f015eaab6cafdf92767e43365"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affd255504fffc9c2b0ef09a8975c8362"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ProcUtil.html#affd255504fffc9c2b0ef09a8975c8362">Exec</a> (string cmd)</td></tr>
+<tr class="memdesc:affd255504fffc9c2b0ef09a8975c8362"><td class="mdescLeft">&#160;</td><td class="mdescRight">外部コマンドを実行する  <a href="#affd255504fffc9c2b0ef09a8975c8362"></a><br/></td></tr>
+<tr class="separator:affd255504fffc9c2b0ef09a8975c8362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a584f2b9c7406a4c4d1a70fb40eabaa19"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ProcUtil.html#a584f2b9c7406a4c4d1a70fb40eabaa19">Exec</a> (string cmd, int timeout, string arg1)</td></tr>
+<tr class="memdesc:a584f2b9c7406a4c4d1a70fb40eabaa19"><td class="mdescLeft">&#160;</td><td class="mdescRight">外部コマンドを実行する  <a href="#a584f2b9c7406a4c4d1a70fb40eabaa19"></a><br/></td></tr>
+<tr class="separator:a584f2b9c7406a4c4d1a70fb40eabaa19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39f62e8d764accc349a0749419fb906e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ProcUtil.html#a39f62e8d764accc349a0749419fb906e">Exec</a> (string cmd, string arg1)</td></tr>
+<tr class="memdesc:a39f62e8d764accc349a0749419fb906e"><td class="mdescLeft">&#160;</td><td class="mdescRight">外部コマンドを実行する  <a href="#a39f62e8d764accc349a0749419fb906e"></a><br/></td></tr>
+<tr class="separator:a39f62e8d764accc349a0749419fb906e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab63e2061292a23f6dac5ed35d6051580"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ProcUtil.html#ab63e2061292a23f6dac5ed35d6051580">Exec</a> (string cmd, int timeout, string arg1, string arg2)</td></tr>
+<tr class="memdesc:ab63e2061292a23f6dac5ed35d6051580"><td class="mdescLeft">&#160;</td><td class="mdescRight">外部コマンドを実行する  <a href="#ab63e2061292a23f6dac5ed35d6051580"></a><br/></td></tr>
+<tr class="separator:ab63e2061292a23f6dac5ed35d6051580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06c8d5dfe2aa3bf55ce108b4210a7800"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ProcUtil.html#a06c8d5dfe2aa3bf55ce108b4210a7800">Exec</a> (string cmd, string arg1, string arg2)</td></tr>
+<tr class="memdesc:a06c8d5dfe2aa3bf55ce108b4210a7800"><td class="mdescLeft">&#160;</td><td class="mdescRight">外部コマンドを実行する  <a href="#a06c8d5dfe2aa3bf55ce108b4210a7800"></a><br/></td></tr>
+<tr class="separator:a06c8d5dfe2aa3bf55ce108b4210a7800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d963a85c1689a79c4f17c43fbfc8efb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ProcUtil.html#a8d963a85c1689a79c4f17c43fbfc8efb">Exec</a> (string cmd, int timeout, string arg1, string arg2, string arg3)</td></tr>
+<tr class="memdesc:a8d963a85c1689a79c4f17c43fbfc8efb"><td class="mdescLeft">&#160;</td><td class="mdescRight">外部コマンドを実行する  <a href="#a8d963a85c1689a79c4f17c43fbfc8efb"></a><br/></td></tr>
+<tr class="separator:a8d963a85c1689a79c4f17c43fbfc8efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabffdb5866126604645070dd704e93d6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ProcUtil.html#aabffdb5866126604645070dd704e93d6">Exec</a> (string cmd, string arg1, string arg2, string arg3)</td></tr>
+<tr class="memdesc:aabffdb5866126604645070dd704e93d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">外部コマンドを実行する  <a href="#aabffdb5866126604645070dd704e93d6"></a><br/></td></tr>
+<tr class="separator:aabffdb5866126604645070dd704e93d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad979220a36e86ce2084b9cf3ab3c7a60"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ProcUtil.html#ad979220a36e86ce2084b9cf3ab3c7a60">Exec</a> (string cmd, int timeout, string arg1, string arg2, string arg3, string arg4)</td></tr>
+<tr class="memdesc:ad979220a36e86ce2084b9cf3ab3c7a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">外部コマンドを実行する  <a href="#ad979220a36e86ce2084b9cf3ab3c7a60"></a><br/></td></tr>
+<tr class="separator:ad979220a36e86ce2084b9cf3ab3c7a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae587f29db0a82dde6570e56fd0e30f13"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ProcUtil.html#ae587f29db0a82dde6570e56fd0e30f13">Exec</a> (string cmd, string arg1, string arg2, string arg3, string arg4)</td></tr>
+<tr class="memdesc:ae587f29db0a82dde6570e56fd0e30f13"><td class="mdescLeft">&#160;</td><td class="mdescRight">外部コマンドを実行する  <a href="#ae587f29db0a82dde6570e56fd0e30f13"></a><br/></td></tr>
+<tr class="separator:ae587f29db0a82dde6570e56fd0e30f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84fde4ec2d3e88f10914222e1612e499"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ProcUtil.html#a84fde4ec2d3e88f10914222e1612e499">SplitCommand</a> (string str, out string cmd, out string[] args)</td></tr>
+<tr class="memdesc:a84fde4ec2d3e88f10914222e1612e499"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンド名と引数文字列を分離する  <a href="#a84fde4ec2d3e88f10914222e1612e499"></a><br/></td></tr>
+<tr class="separator:a84fde4ec2d3e88f10914222e1612e499"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a7aa8d5ffade02b4c4dabfa7346fec1"><td class="memItemLeft" align="right" valign="top">static List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ProcUtil.html#a7a7aa8d5ffade02b4c4dabfa7346fec1">GetStdout</a> (string cmd, string[] args)</td></tr>
+<tr class="memdesc:a7a7aa8d5ffade02b4c4dabfa7346fec1"><td class="mdescLeft">&#160;</td><td class="mdescRight">外部コマンドを実行し、結果の標準出力文字列を文字列のリストで返す  <a href="#a7a7aa8d5ffade02b4c4dabfa7346fec1"></a><br/></td></tr>
+<tr class="separator:a7a7aa8d5ffade02b4c4dabfa7346fec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6d925efc78d6089703347ed1d1d1b64"><td class="memItemLeft" align="right" valign="top">static List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ProcUtil.html#ad6d925efc78d6089703347ed1d1d1b64">GetStdout</a> (string cmd)</td></tr>
+<tr class="separator:ad6d925efc78d6089703347ed1d1d1b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb410a5d8f6787382677ab95b8eceded"><td class="memItemLeft" align="right" valign="top">static List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ProcUtil.html#aeb410a5d8f6787382677ab95b8eceded">GetStdout</a> (string cmd, string arg1)</td></tr>
+<tr class="separator:aeb410a5d8f6787382677ab95b8eceded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c99f10998f7ba3f7c7b655a55c5771"><td class="memItemLeft" align="right" valign="top">static List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ProcUtil.html#a29c99f10998f7ba3f7c7b655a55c5771">GetStdout</a> (string cmd, string arg1, string arg2)</td></tr>
+<tr class="separator:a29c99f10998f7ba3f7c7b655a55c5771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1697aa452cb1de5ace7d07524981b0cf"><td class="memItemLeft" align="right" valign="top">static List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ProcUtil.html#a1697aa452cb1de5ace7d07524981b0cf">GetStdout</a> (string cmd, string arg1, string arg2, string arg3)</td></tr>
+<tr class="separator:a1697aa452cb1de5ace7d07524981b0cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f816c6e85b1134fd7a5ce98ddbf211e"><td class="memItemLeft" align="right" valign="top">static List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ProcUtil.html#a4f816c6e85b1134fd7a5ce98ddbf211e">GetStdout</a> (string cmd, string arg1, string arg2, string arg3, string arg4)</td></tr>
+<tr class="separator:a4f816c6e85b1134fd7a5ce98ddbf211e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public 変数</h2></td></tr>
+<tr class="memitem:aa8fb46a959084f91fb8f2ef06a7125f9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ProcUtil.html#aa8fb46a959084f91fb8f2ef06a7125f9">DefaultTimeout</a></td></tr>
+<tr class="memdesc:aa8fb46a959084f91fb8f2ef06a7125f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">プロセス完了待ち時間のデフォルト（ミリ秒）  <a href="#aa8fb46a959084f91fb8f2ef06a7125f9"></a><br/></td></tr>
+<tr class="separator:aa8fb46a959084f91fb8f2ef06a7125f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">説明</h2>
+<div class="textblock"><p>外部コマンド実行ユーティリティ </p>
+
+<p> <a class="el" href="ProcUtil_8cs_source.html">ProcUtil.cs</a> の <a class="el" href="ProcUtil_8cs_source.html#l00019">19</a> 行で定義されています。</p>
+</div><h2 class="groupheader">メソッド</h2>
+<a class="anchor" id="a048b9217aae491295d745ad66663a175"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.ProcUtil.Exec </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>args</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>createNoWindow</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>killOnTimeout</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>外部コマンドを実行する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>実行コマンド名（パス名付きも可）</td></tr>
+    <tr><td class="paramname">timeout</td><td>最大実行待ち時間（ミリ秒）</td></tr>
+    <tr><td class="paramname">args</td><td>コマンド引数（nullの場合コマンド引数無しで実行）</td></tr>
+    <tr><td class="paramname">createNoWindow</td><td>trueでコマンドプロンプトを開かない</td></tr>
+    <tr><td class="paramname">killOnTimeout</td><td>timeout時間待ってもプロセスが終了しないときにプロセスをkillするかどうか</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>コマンドの終了コード</dd></dl>
+<p>コマンド引数にスペースを含む事はできません。スペースはコマンド引数の 区切りとみなされます。 </p>
+
+<p> <a class="el" href="ProcUtil_8cs_source.html">ProcUtil.cs</a> の <a class="el" href="ProcUtil_8cs_source.html#l00036">36</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="ProcUtil_8cs_source.html#l00085">MACS.ProcUtil.Exec()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af11531f5d1a5c4293dcb63e6cd557bf2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.ProcUtil.Exec </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>外部コマンドを実行する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>実行コマンド名（パス名付きも可）</td></tr>
+    <tr><td class="paramname">args</td><td>コマンド引数（nullの場合コマンド引数無しで実行）</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>コマンドの終了コード</dd></dl>
+<p>コマンド引数にスペースを含む事はできない。スペースはコマンド引数の 区切りとみなされる。<br/>
+ コマンド実行タイムアウトはデフォルトの10000ミリ秒。 </p>
+
+<p> <a class="el" href="ProcUtil_8cs_source.html">ProcUtil.cs</a> の <a class="el" href="ProcUtil_8cs_source.html#l00085">85</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a58314d1f015eaab6cafdf92767e43365"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.ProcUtil.Exec </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>外部コマンドを実行する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>実行コマンド名（パス名付きも可）</td></tr>
+    <tr><td class="paramname">timeout</td><td>最大実行待ち時間（ミリ秒）</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>コマンドの終了コード</dd></dl>
+
+<p> <a class="el" href="ProcUtil_8cs_source.html">ProcUtil.cs</a> の <a class="el" href="ProcUtil_8cs_source.html#l00095">95</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="affd255504fffc9c2b0ef09a8975c8362"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.ProcUtil.Exec </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cmd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>外部コマンドを実行する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>実行コマンド名（パス名付きも可）</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>コマンドの終了コード</dd></dl>
+<p>コマンド実行タイムアウトはデフォルトの10000ミリ秒。 </p>
+
+<p> <a class="el" href="ProcUtil_8cs_source.html">ProcUtil.cs</a> の <a class="el" href="ProcUtil_8cs_source.html#l00109">109</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a584f2b9c7406a4c4d1a70fb40eabaa19"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.ProcUtil.Exec </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>外部コマンドを実行する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>実行コマンド名（パス名付きも可）</td></tr>
+    <tr><td class="paramname">timeout</td><td>最大実行待ち時間（ミリ秒）</td></tr>
+    <tr><td class="paramname">arg1</td><td>コマンド引数</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>コマンドの終了コード</dd></dl>
+<p>コマンド引数にスペースを含む事はできません。スペースはコマンド引数の 区切りとみなされます。 </p>
+
+<p> <a class="el" href="ProcUtil_8cs_source.html">ProcUtil.cs</a> の <a class="el" href="ProcUtil_8cs_source.html#l00126">126</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a39f62e8d764accc349a0749419fb906e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.ProcUtil.Exec </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>外部コマンドを実行する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>実行コマンド名（パス名付きも可）</td></tr>
+    <tr><td class="paramname">arg1</td><td>コマンド引数</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>コマンドの終了コード</dd></dl>
+<p>コマンド引数にスペースを含む事はできません。スペースはコマンド引数の 区切りとみなされます。<br/>
+ コマンド実行タイムアウトはデフォルトの10000ミリ秒。 </p>
+
+<p> <a class="el" href="ProcUtil_8cs_source.html">ProcUtil.cs</a> の <a class="el" href="ProcUtil_8cs_source.html#l00143">143</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab63e2061292a23f6dac5ed35d6051580"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.ProcUtil.Exec </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>外部コマンドを実行する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>実行コマンド名（パス名付きも可）</td></tr>
+    <tr><td class="paramname">timeout</td><td>最大実行待ち時間（ミリ秒）</td></tr>
+    <tr><td class="paramname">arg1</td><td>コマンド引数1</td></tr>
+    <tr><td class="paramname">arg2</td><td>コマンド引数2</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>コマンドの終了コード</dd></dl>
+<p>コマンド引数にスペースを含む事はできません。スペースはコマンド引数の 区切りとみなされます。 </p>
+
+<p> <a class="el" href="ProcUtil_8cs_source.html">ProcUtil.cs</a> の <a class="el" href="ProcUtil_8cs_source.html#l00161">161</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a06c8d5dfe2aa3bf55ce108b4210a7800"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.ProcUtil.Exec </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>外部コマンドを実行する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>実行コマンド名（パス名付きも可）</td></tr>
+    <tr><td class="paramname">arg1</td><td>コマンド引数1</td></tr>
+    <tr><td class="paramname">arg2</td><td>コマンド引数2</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>コマンドの終了コード</dd></dl>
+<p>コマンド引数にスペースを含む事はできません。スペースはコマンド引数の 区切りとみなされます。<br/>
+ コマンド実行タイムアウトはデフォルトの10000ミリ秒。 </p>
+
+<p> <a class="el" href="ProcUtil_8cs_source.html">ProcUtil.cs</a> の <a class="el" href="ProcUtil_8cs_source.html#l00179">179</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d963a85c1689a79c4f17c43fbfc8efb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.ProcUtil.Exec </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>外部コマンドを実行する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>実行コマンド名（パス名付きも可）</td></tr>
+    <tr><td class="paramname">timeout</td><td>最大実行待ち時間（ミリ秒）</td></tr>
+    <tr><td class="paramname">arg1</td><td>コマンド引数1</td></tr>
+    <tr><td class="paramname">arg2</td><td>コマンド引数2</td></tr>
+    <tr><td class="paramname">arg3</td><td>コマンド引数3</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>コマンドの終了コード</dd></dl>
+<p>コマンド引数にスペースを含む事はできません。スペースはコマンド引数の 区切りとみなされます。 </p>
+
+<p> <a class="el" href="ProcUtil_8cs_source.html">ProcUtil.cs</a> の <a class="el" href="ProcUtil_8cs_source.html#l00198">198</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aabffdb5866126604645070dd704e93d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.ProcUtil.Exec </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>外部コマンドを実行する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>実行コマンド名（パス名付きも可）</td></tr>
+    <tr><td class="paramname">arg1</td><td>コマンド引数1</td></tr>
+    <tr><td class="paramname">arg2</td><td>コマンド引数2</td></tr>
+    <tr><td class="paramname">arg3</td><td>コマンド引数3</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>コマンドの終了コード</dd></dl>
+<p>コマンド引数にスペースを含む事はできません。スペースはコマンド引数の 区切りとみなされます。<br/>
+ コマンド実行タイムアウトはデフォルトの10000ミリ秒。 </p>
+
+<p> <a class="el" href="ProcUtil_8cs_source.html">ProcUtil.cs</a> の <a class="el" href="ProcUtil_8cs_source.html#l00217">217</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad979220a36e86ce2084b9cf3ab3c7a60"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.ProcUtil.Exec </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg4</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>外部コマンドを実行する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>実行コマンド名（パス名付きも可）</td></tr>
+    <tr><td class="paramname">timeout</td><td>最大実行待ち時間（ミリ秒）</td></tr>
+    <tr><td class="paramname">arg1</td><td>コマンド引数1</td></tr>
+    <tr><td class="paramname">arg2</td><td>コマンド引数2</td></tr>
+    <tr><td class="paramname">arg3</td><td>コマンド引数3</td></tr>
+    <tr><td class="paramname">arg4</td><td>コマンド引数4</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>コマンドの終了コード</dd></dl>
+<p>コマンド引数にスペースを含む事はできません。スペースはコマンド引数の 区切りとみなされます。 </p>
+
+<p> <a class="el" href="ProcUtil_8cs_source.html">ProcUtil.cs</a> の <a class="el" href="ProcUtil_8cs_source.html#l00237">237</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae587f29db0a82dde6570e56fd0e30f13"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.ProcUtil.Exec </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg4</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>外部コマンドを実行する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>実行コマンド名（パス名付きも可）</td></tr>
+    <tr><td class="paramname">arg1</td><td>コマンド引数1</td></tr>
+    <tr><td class="paramname">arg2</td><td>コマンド引数2</td></tr>
+    <tr><td class="paramname">arg3</td><td>コマンド引数3</td></tr>
+    <tr><td class="paramname">arg4</td><td>コマンド引数4</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>コマンドの終了コード</dd></dl>
+<p>コマンド引数にスペースを含む事はできません。スペースはコマンド引数の 区切りとみなされます。<br/>
+ コマンド実行タイムアウトはデフォルトの10000ミリ秒。 </p>
+
+<p> <a class="el" href="ProcUtil_8cs_source.html">ProcUtil.cs</a> の <a class="el" href="ProcUtil_8cs_source.html#l00257">257</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a84fde4ec2d3e88f10914222e1612e499"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ProcUtil.SplitCommand </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out string&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out string[]&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コマンド名と引数文字列を分離する </p>
+
+<p> <a class="el" href="ProcUtil_8cs_source.html">ProcUtil.cs</a> の <a class="el" href="ProcUtil_8cs_source.html#l00265">265</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a7a7aa8d5ffade02b4c4dabfa7346fec1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static List&lt;string&gt; MACS.ProcUtil.GetStdout </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>外部コマンドを実行し、結果の標準出力文字列を文字列のリストで返す </p>
+
+<p> <a class="el" href="ProcUtil_8cs_source.html">ProcUtil.cs</a> の <a class="el" href="ProcUtil_8cs_source.html#l00300">300</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="ProcUtil_8cs_source.html#l00328">MACS.ProcUtil.GetStdout()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad6d925efc78d6089703347ed1d1d1b64"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static List&lt;string&gt; MACS.ProcUtil.GetStdout </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cmd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="ProcUtil_8cs_source.html">ProcUtil.cs</a> の <a class="el" href="ProcUtil_8cs_source.html#l00328">328</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aeb410a5d8f6787382677ab95b8eceded"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static List&lt;string&gt; MACS.ProcUtil.GetStdout </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="ProcUtil_8cs_source.html">ProcUtil.cs</a> の <a class="el" href="ProcUtil_8cs_source.html#l00332">332</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a29c99f10998f7ba3f7c7b655a55c5771"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static List&lt;string&gt; MACS.ProcUtil.GetStdout </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="ProcUtil_8cs_source.html">ProcUtil.cs</a> の <a class="el" href="ProcUtil_8cs_source.html#l00336">336</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1697aa452cb1de5ace7d07524981b0cf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static List&lt;string&gt; MACS.ProcUtil.GetStdout </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="ProcUtil_8cs_source.html">ProcUtil.cs</a> の <a class="el" href="ProcUtil_8cs_source.html#l00340">340</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4f816c6e85b1134fd7a5ce98ddbf211e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static List&lt;string&gt; MACS.ProcUtil.GetStdout </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg4</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="ProcUtil_8cs_source.html">ProcUtil.cs</a> の <a class="el" href="ProcUtil_8cs_source.html#l00344">344</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">変数</h2>
+<a class="anchor" id="aa8fb46a959084f91fb8f2ef06a7125f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.ProcUtil.DefaultTimeout</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>プロセス完了待ち時間のデフォルト（ミリ秒） </p>
+<p>GetStdoutでは、標準出力を読み終えた後の待ち時間である点に注意。 </p>
+
+<p> <a class="el" href="ProcUtil_8cs_source.html">ProcUtil.cs</a> の <a class="el" href="ProcUtil_8cs_source.html#l00357">357</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="ProcUtil_8cs_source.html#l00085">MACS.ProcUtil.Exec()</a>, と <a class="el" href="ProcUtil_8cs_source.html#l00300">MACS.ProcUtil.GetStdout()</a>.</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="ProcUtil_8cs_source.html">ProcUtil.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceMACS.html">MACS</a></li><li class="navelem"><a class="el" href="classMACS_1_1ProcUtil.html">ProcUtil</a></li>
+    <li class="footer">MACS.Coreに対してWed Jun 27 2018 17:45:44に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

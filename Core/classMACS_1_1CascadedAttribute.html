@@ -1,0 +1,764 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.Core: クラス MACS.CascadedAttribute</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.Core
+   </div>
+   <div id="projectbrief">Miscellaneous Assets for C-Sharp</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classMACS_1_1CascadedAttribute.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-static-methods">Static Public メソッド</a> &#124;
+<a href="#pro-methods">Protected メソッド</a> &#124;
+<a href="#pro-attribs">Protected 変数</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="classMACS_1_1CascadedAttribute-members.html">すべてのメンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス MACS.CascadedAttribute</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>属性管理機構  
+ <a href="classMACS_1_1CascadedAttribute.html#details">[詳細]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr class="memitem:a227ebf842e905ce4bc91c6a22fbd9e43"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1CascadedAttribute.html#a227ebf842e905ce4bc91c6a22fbd9e43">CascadedAttribute</a> (XmlElement elem, <a class="el" href="classMACS_1_1CascadedAttribute.html">CascadedAttribute</a> parent_=null, string childClassKey_=&quot;&quot;)</td></tr>
+<tr class="memdesc:a227ebf842e905ce4bc91c6a22fbd9e43"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#a227ebf842e905ce4bc91c6a22fbd9e43"></a><br/></td></tr>
+<tr class="separator:a227ebf842e905ce4bc91c6a22fbd9e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c16c70c7fe97a6623f29ee0938e0600"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1CascadedAttribute.html#a7c16c70c7fe97a6623f29ee0938e0600">LoadClass</a> (XmlElement elem)</td></tr>
+<tr class="memdesc:a7c16c70c7fe97a6623f29ee0938e0600"><td class="mdescLeft">&#160;</td><td class="mdescRight">クラス定義を追加で取り込む  <a href="#a7c16c70c7fe97a6623f29ee0938e0600"></a><br/></td></tr>
+<tr class="separator:a7c16c70c7fe97a6623f29ee0938e0600"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a766749f7afabfc50baa8cb39f3b358d1"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1CascadedAttribute.html#a766749f7afabfc50baa8cb39f3b358d1">Get</a> (string name, string defValue=null, int depth=0)</td></tr>
+<tr class="memdesc:a766749f7afabfc50baa8cb39f3b358d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性値取得  <a href="#a766749f7afabfc50baa8cb39f3b358d1"></a><br/></td></tr>
+<tr class="separator:a766749f7afabfc50baa8cb39f3b358d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f00833dba88a271f81fedc7bfdb181"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1CascadedAttribute.html#a34f00833dba88a271f81fedc7bfdb181">Get</a> (string name, int defValue)</td></tr>
+<tr class="memdesc:a34f00833dba88a271f81fedc7bfdb181"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性値取得  <a href="#a34f00833dba88a271f81fedc7bfdb181"></a><br/></td></tr>
+<tr class="separator:a34f00833dba88a271f81fedc7bfdb181"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8adf3abef01e906b8b01f3478f44764b"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1CascadedAttribute.html#a8adf3abef01e906b8b01f3478f44764b">Get</a> (string name, long defValue)</td></tr>
+<tr class="memdesc:a8adf3abef01e906b8b01f3478f44764b"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性値取得  <a href="#a8adf3abef01e906b8b01f3478f44764b"></a><br/></td></tr>
+<tr class="separator:a8adf3abef01e906b8b01f3478f44764b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0e62507a5a86b0d56df3b3483ac25e1"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1CascadedAttribute.html#af0e62507a5a86b0d56df3b3483ac25e1">Get</a> (string name, uint defValue)</td></tr>
+<tr class="memdesc:af0e62507a5a86b0d56df3b3483ac25e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性値取得  <a href="#af0e62507a5a86b0d56df3b3483ac25e1"></a><br/></td></tr>
+<tr class="separator:af0e62507a5a86b0d56df3b3483ac25e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34d0e79257e1bb5cebe2d47d356269a8"><td class="memItemLeft" align="right" valign="top">ulong&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1CascadedAttribute.html#a34d0e79257e1bb5cebe2d47d356269a8">Get</a> (string name, ulong defValue)</td></tr>
+<tr class="memdesc:a34d0e79257e1bb5cebe2d47d356269a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性値取得  <a href="#a34d0e79257e1bb5cebe2d47d356269a8"></a><br/></td></tr>
+<tr class="separator:a34d0e79257e1bb5cebe2d47d356269a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c2f4916e442da398f961f75065a5a57"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1CascadedAttribute.html#a4c2f4916e442da398f961f75065a5a57">Get</a> (string name, float defValue)</td></tr>
+<tr class="memdesc:a4c2f4916e442da398f961f75065a5a57"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性値取得  <a href="#a4c2f4916e442da398f961f75065a5a57"></a><br/></td></tr>
+<tr class="separator:a4c2f4916e442da398f961f75065a5a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4828ed01b42fd2d462cde823bbb98de"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1CascadedAttribute.html#aa4828ed01b42fd2d462cde823bbb98de">Get</a> (string name, double defValue)</td></tr>
+<tr class="memdesc:aa4828ed01b42fd2d462cde823bbb98de"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性値取得  <a href="#aa4828ed01b42fd2d462cde823bbb98de"></a><br/></td></tr>
+<tr class="separator:aa4828ed01b42fd2d462cde823bbb98de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a61915a12c1032d4b2c68afdec1f7fd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1CascadedAttribute.html#a5a61915a12c1032d4b2c68afdec1f7fd">Get</a> (string name, bool defValue)</td></tr>
+<tr class="memdesc:a5a61915a12c1032d4b2c68afdec1f7fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性値取得  <a href="#a5a61915a12c1032d4b2c68afdec1f7fd"></a><br/></td></tr>
+<tr class="separator:a5a61915a12c1032d4b2c68afdec1f7fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c993ca28990e0a4b2d79bf766105145"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1CascadedAttribute.html">CascadedAttribute</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1CascadedAttribute.html#a4c993ca28990e0a4b2d79bf766105145">GetClass</a> (string classname)</td></tr>
+<tr class="memdesc:a4c993ca28990e0a4b2d79bf766105145"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定クラス名の属性定義を返す  <a href="#a4c993ca28990e0a4b2d79bf766105145"></a><br/></td></tr>
+<tr class="separator:a4c993ca28990e0a4b2d79bf766105145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7b34ec934090e537265e3377bd56aa8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1CascadedAttribute.html#aa7b34ec934090e537265e3377bd56aa8">HasClass</a> (string classname)</td></tr>
+<tr class="memdesc:aa7b34ec934090e537265e3377bd56aa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">本属性が指定したクラスに属しているか確認する  <a href="#aa7b34ec934090e537265e3377bd56aa8"></a><br/></td></tr>
+<tr class="separator:aa7b34ec934090e537265e3377bd56aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public メソッド</h2></td></tr>
+<tr class="memitem:a82606a96eba72d9539b56fb0f303fa59"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1CascadedAttribute.html#a82606a96eba72d9539b56fb0f303fa59">IsSpecialTag</a> (string tagname)</td></tr>
+<tr class="memdesc:a82606a96eba72d9539b56fb0f303fa59"><td class="mdescLeft">&#160;</td><td class="mdescRight">CascadedAttributeで特別扱いされるXMLタグかどうか  <a href="#a82606a96eba72d9539b56fb0f303fa59"></a><br/></td></tr>
+<tr class="separator:a82606a96eba72d9539b56fb0f303fa59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected メソッド</h2></td></tr>
+<tr class="memitem:a5ad2a83dd314a9d8803ec0e00b920e44"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classMACS_1_1CascadedAttribute.html">CascadedAttribute</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1CascadedAttribute.html#a5ad2a83dd314a9d8803ec0e00b920e44">CreateChild</a> (XmlElement elem)</td></tr>
+<tr class="separator:a5ad2a83dd314a9d8803ec0e00b920e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 変数</h2></td></tr>
+<tr class="memitem:a905d9db2aa76bcde9f56a88149fa7c1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1CascadedAttribute.html">CascadedAttribute</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1CascadedAttribute.html#a905d9db2aa76bcde9f56a88149fa7c1e">parent</a></td></tr>
+<tr class="separator:a905d9db2aa76bcde9f56a88149fa7c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9e2830b52fef486342e1269c767e504"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1CascadedAttribute.html#af9e2830b52fef486342e1269c767e504">defaultClassName</a></td></tr>
+<tr class="separator:af9e2830b52fef486342e1269c767e504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36ebe219f4aa552d56fe2394aacb8164"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1CascadedAttribute.html#a36ebe219f4aa552d56fe2394aacb8164">childClassKey</a></td></tr>
+<tr class="separator:a36ebe219f4aa552d56fe2394aacb8164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49488557f00bd831b0a4068473cdd3a0"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1CascadedAttribute.html#a49488557f00bd831b0a4068473cdd3a0">dict</a></td></tr>
+<tr class="separator:a49488557f00bd831b0a4068473cdd3a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b47a9030d25439252d90892ccfc80d6"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, <br class="typebreak"/>
+<a class="el" href="classMACS_1_1CascadedAttribute.html">CascadedAttribute</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1CascadedAttribute.html#a6b47a9030d25439252d90892ccfc80d6">classDict</a></td></tr>
+<tr class="separator:a6b47a9030d25439252d90892ccfc80d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:a29e9788cdfde3e5b61da2eb6fab958f9"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1CascadedAttribute.html#a29e9788cdfde3e5b61da2eb6fab958f9">Name</a><code> [get]</code></td></tr>
+<tr class="memdesc:a29e9788cdfde3e5b61da2eb6fab958f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">name属性値取得  <a href="#a29e9788cdfde3e5b61da2eb6fab958f9"></a><br/></td></tr>
+<tr class="separator:a29e9788cdfde3e5b61da2eb6fab958f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">説明</h2>
+<div class="textblock"><p>属性管理機構 </p>
+
+<p> <a class="el" href="CascadedAttribute_8cs_source.html">CascadedAttribute.cs</a> の <a class="el" href="CascadedAttribute_8cs_source.html#l00017">17</a> 行で定義されています。</p>
+</div><h2 class="groupheader">コンストラクタとデストラクタ</h2>
+<a class="anchor" id="a227ebf842e905ce4bc91c6a22fbd9e43"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.CascadedAttribute.CascadedAttribute </td>
+          <td>(</td>
+          <td class="paramtype">XmlElement&#160;</td>
+          <td class="paramname"><em>elem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1CascadedAttribute.html">CascadedAttribute</a>&#160;</td>
+          <td class="paramname"><em>parent_</em> = <code>null</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>childClassKey_</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elem</td><td>属性を読み取るXML要素</td></tr>
+    <tr><td class="paramname">parent_</td><td>親の属性管理機構</td></tr>
+    <tr><td class="paramname">childClassKey_</td><td>子のクラス属性を探すときの付加キーワード</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="CascadedAttribute_8cs_source.html">CascadedAttribute.cs</a> の <a class="el" href="CascadedAttribute_8cs_source.html#l00025">25</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="CascadedAttribute_8cs_source.html#l00172">MACS.CascadedAttribute.CreateChild()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド</h2>
+<a class="anchor" id="a7c16c70c7fe97a6623f29ee0938e0600"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.CascadedAttribute.LoadClass </td>
+          <td>(</td>
+          <td class="paramtype">XmlElement&#160;</td>
+          <td class="paramname"><em>elem</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>クラス定義を追加で取り込む </p>
+
+<p> <a class="el" href="CascadedAttribute_8cs_source.html">CascadedAttribute.cs</a> の <a class="el" href="CascadedAttribute_8cs_source.html#l00035">35</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a766749f7afabfc50baa8cb39f3b358d1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.CascadedAttribute.Get </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>defValue</em> = <code>null</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>depth</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>属性値取得 </p>
+
+<p> <a class="el" href="CascadedAttribute_8cs_source.html">CascadedAttribute.cs</a> の <a class="el" href="CascadedAttribute_8cs_source.html#l00042">42</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="CascadedAttribute_8cs_source.html#l00077">MACS.CascadedAttribute.Get()</a>, と <a class="el" href="CascadedAttributeTest_8cs_source.html#l00024">Program.Main()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a34f00833dba88a271f81fedc7bfdb181"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.CascadedAttribute.Get </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>defValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>属性値取得 </p>
+
+<p> <a class="el" href="CascadedAttribute_8cs_source.html">CascadedAttribute.cs</a> の <a class="el" href="CascadedAttribute_8cs_source.html#l00077">77</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8adf3abef01e906b8b01f3478f44764b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long MACS.CascadedAttribute.Get </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>defValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>属性値取得 </p>
+
+<p> <a class="el" href="CascadedAttribute_8cs_source.html">CascadedAttribute.cs</a> の <a class="el" href="CascadedAttribute_8cs_source.html#l00084">84</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af0e62507a5a86b0d56df3b3483ac25e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint MACS.CascadedAttribute.Get </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>defValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>属性値取得 </p>
+
+<p> <a class="el" href="CascadedAttribute_8cs_source.html">CascadedAttribute.cs</a> の <a class="el" href="CascadedAttribute_8cs_source.html#l00091">91</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a34d0e79257e1bb5cebe2d47d356269a8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ulong MACS.CascadedAttribute.Get </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ulong&#160;</td>
+          <td class="paramname"><em>defValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>属性値取得 </p>
+
+<p> <a class="el" href="CascadedAttribute_8cs_source.html">CascadedAttribute.cs</a> の <a class="el" href="CascadedAttribute_8cs_source.html#l00098">98</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4c2f4916e442da398f961f75065a5a57"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MACS.CascadedAttribute.Get </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>defValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>属性値取得 </p>
+
+<p> <a class="el" href="CascadedAttribute_8cs_source.html">CascadedAttribute.cs</a> の <a class="el" href="CascadedAttribute_8cs_source.html#l00105">105</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa4828ed01b42fd2d462cde823bbb98de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double MACS.CascadedAttribute.Get </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>defValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>属性値取得 </p>
+
+<p> <a class="el" href="CascadedAttribute_8cs_source.html">CascadedAttribute.cs</a> の <a class="el" href="CascadedAttribute_8cs_source.html#l00112">112</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5a61915a12c1032d4b2c68afdec1f7fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.CascadedAttribute.Get </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>defValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>属性値取得 </p>
+
+<p> <a class="el" href="CascadedAttribute_8cs_source.html">CascadedAttribute.cs</a> の <a class="el" href="CascadedAttribute_8cs_source.html#l00119">119</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a82606a96eba72d9539b56fb0f303fa59"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool MACS.CascadedAttribute.IsSpecialTag </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tagname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>CascadedAttributeで特別扱いされるXMLタグかどうか </p>
+
+<p> <a class="el" href="CascadedAttribute_8cs_source.html">CascadedAttribute.cs</a> の <a class="el" href="CascadedAttribute_8cs_source.html#l00139">139</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4c993ca28990e0a4b2d79bf766105145"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1CascadedAttribute.html">CascadedAttribute</a> MACS.CascadedAttribute.GetClass </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>classname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定クラス名の属性定義を返す </p>
+<p>指定名のクラスが無いときはthisを返します。 </p>
+
+<p> <a class="el" href="CascadedAttribute_8cs_source.html">CascadedAttribute.cs</a> の <a class="el" href="CascadedAttribute_8cs_source.html#l00157">157</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa7b34ec934090e537265e3377bd56aa8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.CascadedAttribute.HasClass </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>classname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>本属性が指定したクラスに属しているか確認する </p>
+
+<p> <a class="el" href="CascadedAttribute_8cs_source.html">CascadedAttribute.cs</a> の <a class="el" href="CascadedAttribute_8cs_source.html#l00167">167</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5ad2a83dd314a9d8803ec0e00b920e44"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classMACS_1_1CascadedAttribute.html">CascadedAttribute</a> MACS.CascadedAttribute.CreateChild </td>
+          <td>(</td>
+          <td class="paramtype">XmlElement&#160;</td>
+          <td class="paramname"><em>elem</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="CascadedAttribute_8cs_source.html">CascadedAttribute.cs</a> の <a class="el" href="CascadedAttribute_8cs_source.html#l00172">172</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">変数</h2>
+<a class="anchor" id="a905d9db2aa76bcde9f56a88149fa7c1e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1CascadedAttribute.html">CascadedAttribute</a> MACS.CascadedAttribute.parent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="CascadedAttribute_8cs_source.html">CascadedAttribute.cs</a> の <a class="el" href="CascadedAttribute_8cs_source.html#l00176">176</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="CascadedAttribute_8cs_source.html#l00025">MACS.CascadedAttribute.CascadedAttribute()</a>, <a class="el" href="CascadedAttribute_8cs_source.html#l00042">MACS.CascadedAttribute.Get()</a>, と <a class="el" href="CascadedAttribute_8cs_source.html#l00157">MACS.CascadedAttribute.GetClass()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af9e2830b52fef486342e1269c767e504"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.CascadedAttribute.defaultClassName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="CascadedAttribute_8cs_source.html">CascadedAttribute.cs</a> の <a class="el" href="CascadedAttribute_8cs_source.html#l00177">177</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="CascadedAttribute_8cs_source.html#l00025">MACS.CascadedAttribute.CascadedAttribute()</a>, と <a class="el" href="CascadedAttribute_8cs_source.html#l00042">MACS.CascadedAttribute.Get()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a36ebe219f4aa552d56fe2394aacb8164"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.CascadedAttribute.childClassKey</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="CascadedAttribute_8cs_source.html">CascadedAttribute.cs</a> の <a class="el" href="CascadedAttribute_8cs_source.html#l00178">178</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="CascadedAttribute_8cs_source.html#l00025">MACS.CascadedAttribute.CascadedAttribute()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a49488557f00bd831b0a4068473cdd3a0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;string,string&gt; MACS.CascadedAttribute.dict</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="CascadedAttribute_8cs_source.html">CascadedAttribute.cs</a> の <a class="el" href="CascadedAttribute_8cs_source.html#l00179">179</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="CascadedAttribute_8cs_source.html#l00042">MACS.CascadedAttribute.Get()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6b47a9030d25439252d90892ccfc80d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;string,<a class="el" href="classMACS_1_1CascadedAttribute.html">CascadedAttribute</a>&gt; MACS.CascadedAttribute.classDict</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="CascadedAttribute_8cs_source.html">CascadedAttribute.cs</a> の <a class="el" href="CascadedAttribute_8cs_source.html#l00180">180</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">プロパティ</h2>
+<a class="anchor" id="a29e9788cdfde3e5b61da2eb6fab958f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.CascadedAttribute.Name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>name属性値取得 </p>
+
+<p> <a class="el" href="CascadedAttribute_8cs_source.html">CascadedAttribute.cs</a> の <a class="el" href="CascadedAttribute_8cs_source.html#l00126">126</a> 行で定義されています。</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="CascadedAttribute_8cs_source.html">CascadedAttribute.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceMACS.html">MACS</a></li><li class="navelem"><a class="el" href="classMACS_1_1CascadedAttribute.html">CascadedAttribute</a></li>
+    <li class="footer">MACS.Coreに対してWed Jun 27 2018 17:45:44に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

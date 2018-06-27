@@ -1,0 +1,3437 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.Core: クラス MACS.HtmlTool</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.Core
+   </div>
+   <div id="projectbrief">Miscellaneous Assets for C-Sharp</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classMACS_1_1HtmlTool.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-static-methods">Static Public メソッド</a> &#124;
+<a href="#pro-methods">Protected メソッド</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="classMACS_1_1HtmlTool-members.html">すべてのメンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス MACS.HtmlTool</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>HTMLコード作成に便利なユーティリティ集。  
+ <a href="classMACS_1_1HtmlTool.html#details">[詳細]</a></p>
+<div class="dynheader">
+MACS.HtmlToolに対する継承グラフ</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classMACS_1_1HtmlTool.png" usemap="#MACS.HtmlTool_map" alt=""/>
+  <map id="MACS.HtmlTool_map" name="MACS.HtmlTool_map">
+<area href="classMACS_1_1Loggable.html" title="操作ログ記録アプリケーション用基底クラス " alt="MACS.Loggable" shape="rect" coords="0,0,105,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr class="memitem:a1b087da523368e6c9210d1af3370615f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#a1b087da523368e6c9210d1af3370615f">LOG_EMERG</a> (string msg, params object[] objs)</td></tr>
+<tr class="memdesc:a1b087da523368e6c9210d1af3370615f"><td class="mdescLeft">&#160;</td><td class="mdescRight">非常事態ログ  <a href="#a1b087da523368e6c9210d1af3370615f"></a><br/></td></tr>
+<tr class="separator:a1b087da523368e6c9210d1af3370615f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50252d11bef2f336ce5e840e4b9b25c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#a50252d11bef2f336ce5e840e4b9b25c2">LOG_ALERT</a> (string msg, params object[] objs)</td></tr>
+<tr class="memdesc:a50252d11bef2f336ce5e840e4b9b25c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">警告ログ  <a href="#a50252d11bef2f336ce5e840e4b9b25c2"></a><br/></td></tr>
+<tr class="separator:a50252d11bef2f336ce5e840e4b9b25c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad887acb38cd24634df0ca3499d98e7c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#ad887acb38cd24634df0ca3499d98e7c8">LOG_CRIT</a> (string msg, params object[] objs)</td></tr>
+<tr class="memdesc:ad887acb38cd24634df0ca3499d98e7c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">致命的ログ  <a href="#ad887acb38cd24634df0ca3499d98e7c8"></a><br/></td></tr>
+<tr class="separator:ad887acb38cd24634df0ca3499d98e7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af713a231c44b784df68890b7ea001153"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#af713a231c44b784df68890b7ea001153">LOG_ERR</a> (string msg, params object[] objs)</td></tr>
+<tr class="memdesc:af713a231c44b784df68890b7ea001153"><td class="mdescLeft">&#160;</td><td class="mdescRight">エラーログ  <a href="#af713a231c44b784df68890b7ea001153"></a><br/></td></tr>
+<tr class="separator:af713a231c44b784df68890b7ea001153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e8ce70bcc869f7996904e868f12c23a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#a4e8ce70bcc869f7996904e868f12c23a">LOG_WARNING</a> (string msg, params object[] objs)</td></tr>
+<tr class="memdesc:a4e8ce70bcc869f7996904e868f12c23a"><td class="mdescLeft">&#160;</td><td class="mdescRight">注意ログ  <a href="#a4e8ce70bcc869f7996904e868f12c23a"></a><br/></td></tr>
+<tr class="separator:a4e8ce70bcc869f7996904e868f12c23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa1a837b35ad4917ff008375d628d8ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#afa1a837b35ad4917ff008375d628d8ef">LOG_NOTICE</a> (string msg, params object[] objs)</td></tr>
+<tr class="memdesc:afa1a837b35ad4917ff008375d628d8ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">報告ログ  <a href="#afa1a837b35ad4917ff008375d628d8ef"></a><br/></td></tr>
+<tr class="separator:afa1a837b35ad4917ff008375d628d8ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2af82eefc7d2b91a8fe52e4a7db6ca5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#a2af82eefc7d2b91a8fe52e4a7db6ca5e">LOG_INFO</a> (string msg, params object[] objs)</td></tr>
+<tr class="memdesc:a2af82eefc7d2b91a8fe52e4a7db6ca5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">情報ログ  <a href="#a2af82eefc7d2b91a8fe52e4a7db6ca5e"></a><br/></td></tr>
+<tr class="separator:a2af82eefc7d2b91a8fe52e4a7db6ca5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18b319f0ae97bbac6108ed0938ba7662"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#a18b319f0ae97bbac6108ed0938ba7662">LOG_DEBUG</a> (string msg, params object[] objs)</td></tr>
+<tr class="memdesc:a18b319f0ae97bbac6108ed0938ba7662"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグログ  <a href="#a18b319f0ae97bbac6108ed0938ba7662"></a><br/></td></tr>
+<tr class="separator:a18b319f0ae97bbac6108ed0938ba7662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa934fdf4fd746a8ea328740a6805a3ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#aa934fdf4fd746a8ea328740a6805a3ed">LOG_EXCEPTION</a> (Exception e)</td></tr>
+<tr class="memdesc:aa934fdf4fd746a8ea328740a6805a3ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">例外のログ  <a href="#aa934fdf4fd746a8ea328740a6805a3ed"></a><br/></td></tr>
+<tr class="separator:aa934fdf4fd746a8ea328740a6805a3ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d0b356336848258a1c04bc5ddfd4af6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#a5d0b356336848258a1c04bc5ddfd4af6">SetLogger</a> (<a class="el" href="classMACS_1_1OpeLog.html">OpeLog</a> logger_)</td></tr>
+<tr class="memdesc:a5d0b356336848258a1c04bc5ddfd4af6"><td class="mdescLeft">&#160;</td><td class="mdescRight">独自のロガーをセットする  <a href="#a5d0b356336848258a1c04bc5ddfd4af6"></a><br/></td></tr>
+<tr class="separator:a5d0b356336848258a1c04bc5ddfd4af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1129d7aba79f6bf0ba61b50d18d61716"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#a1129d7aba79f6bf0ba61b50d18d61716">SetLogger</a> (string filename, Encoding enc=null, int size=1000, int rotation=9)</td></tr>
+<tr class="memdesc:a1129d7aba79f6bf0ba61b50d18d61716"><td class="mdescLeft">&#160;</td><td class="mdescRight">独自のロガーをセットする  <a href="#a1129d7aba79f6bf0ba61b50d18d61716"></a><br/></td></tr>
+<tr class="separator:a1129d7aba79f6bf0ba61b50d18d61716"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa470b89d1ce59a04539c6521099cf31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#aaa470b89d1ce59a04539c6521099cf31">DisableLogging</a> ()</td></tr>
+<tr class="memdesc:aaa470b89d1ce59a04539c6521099cf31"><td class="mdescLeft">&#160;</td><td class="mdescRight">一時的にログ記録を停止する  <a href="#aaa470b89d1ce59a04539c6521099cf31"></a><br/></td></tr>
+<tr class="separator:aaa470b89d1ce59a04539c6521099cf31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace864dc269e9b20cfc4bb17267efcb39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#ace864dc269e9b20cfc4bb17267efcb39">EnableLogging</a> ()</td></tr>
+<tr class="memdesc:ace864dc269e9b20cfc4bb17267efcb39"><td class="mdescLeft">&#160;</td><td class="mdescRight">DisableLoggingで止めたログ記録を再開する  <a href="#ace864dc269e9b20cfc4bb17267efcb39"></a><br/></td></tr>
+<tr class="separator:ace864dc269e9b20cfc4bb17267efcb39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public メソッド</h2></td></tr>
+<tr class="memitem:a71580f1a6a478dc5792e4c0745056048"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a71580f1a6a478dc5792e4c0745056048">UE</a> (string txt)</td></tr>
+<tr class="memdesc:a71580f1a6a478dc5792e4c0745056048"><td class="mdescLeft">&#160;</td><td class="mdescRight">URLエンコーディングした文字列を返す。  <a href="#a71580f1a6a478dc5792e4c0745056048"></a><br/></td></tr>
+<tr class="separator:a71580f1a6a478dc5792e4c0745056048"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f84dc54300929d19029b7b7ecd1161c"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a0f84dc54300929d19029b7b7ecd1161c">EU</a> (string txt)</td></tr>
+<tr class="memdesc:a0f84dc54300929d19029b7b7ecd1161c"><td class="mdescLeft">&#160;</td><td class="mdescRight">URLエンコーディングされた文字列をデコードして返す。  <a href="#a0f84dc54300929d19029b7b7ecd1161c"></a><br/></td></tr>
+<tr class="separator:a0f84dc54300929d19029b7b7ecd1161c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a835509d2124357118a8a7ba879972da4"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a835509d2124357118a8a7ba879972da4">HE</a> (string txt)</td></tr>
+<tr class="memdesc:a835509d2124357118a8a7ba879972da4"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTMLエンコーディングした文字列を返す。  <a href="#a835509d2124357118a8a7ba879972da4"></a><br/></td></tr>
+<tr class="separator:a835509d2124357118a8a7ba879972da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0010ce77b92197d613048b8f21352f3"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#ab0010ce77b92197d613048b8f21352f3">EH</a> (string txt)</td></tr>
+<tr class="memdesc:ab0010ce77b92197d613048b8f21352f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTMLエンコーディングされた文字列をデコードして返す。  <a href="#ab0010ce77b92197d613048b8f21352f3"></a><br/></td></tr>
+<tr class="separator:ab0010ce77b92197d613048b8f21352f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4b6d3d0f81079da27556ffcaf718c0c"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#ad4b6d3d0f81079da27556ffcaf718c0c">QE</a> (string txt)</td></tr>
+<tr class="memdesc:ad4b6d3d0f81079da27556ffcaf718c0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">クォート文字をエスケープした文字列を返す。  <a href="#ad4b6d3d0f81079da27556ffcaf718c0c"></a><br/></td></tr>
+<tr class="separator:ad4b6d3d0f81079da27556ffcaf718c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8996f40f686aaf51c1829234c5d8770"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#aa8996f40f686aaf51c1829234c5d8770">DT</a> (string txt)</td></tr>
+<tr class="memdesc:aa8996f40f686aaf51c1829234c5d8770"><td class="mdescLeft">&#160;</td><td class="mdescRight">日時表示をフォーマットしなおす  <a href="#aa8996f40f686aaf51c1829234c5d8770"></a><br/></td></tr>
+<tr class="separator:aa8996f40f686aaf51c1829234c5d8770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39d1c2c2485bcb4ce3b8155d8c6ddd87"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a39d1c2c2485bcb4ce3b8155d8c6ddd87">HtmlCheckBox</a> (string name, string txt, bool flag)</td></tr>
+<tr class="memdesc:a39d1c2c2485bcb4ce3b8155d8c6ddd87"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML checkbox input要素タグを生成する。  <a href="#a39d1c2c2485bcb4ce3b8155d8c6ddd87"></a><br/></td></tr>
+<tr class="separator:a39d1c2c2485bcb4ce3b8155d8c6ddd87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64bef7146103eed8eeec445def89cf8f"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a64bef7146103eed8eeec445def89cf8f">HtmlCheckBox</a> (StringBuilder sb, string name, string txt, bool flag)</td></tr>
+<tr class="memdesc:a64bef7146103eed8eeec445def89cf8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML checkbox input要素タグをStringBuilderに書き込む。  <a href="#a64bef7146103eed8eeec445def89cf8f"></a><br/></td></tr>
+<tr class="separator:a64bef7146103eed8eeec445def89cf8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cffc9f7bc91d309209ee386e766f53f"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a4cffc9f7bc91d309209ee386e766f53f">HtmlCheckBox</a> (string name, object val, string txt, bool flag)</td></tr>
+<tr class="memdesc:a4cffc9f7bc91d309209ee386e766f53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML checkbox input要素タグを生成する。value付き。  <a href="#a4cffc9f7bc91d309209ee386e766f53f"></a><br/></td></tr>
+<tr class="separator:a4cffc9f7bc91d309209ee386e766f53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0ff5a267447e5ad3530880e2c87122f"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#ab0ff5a267447e5ad3530880e2c87122f">HtmlCheckBox</a> (StringBuilder sb, string name, object val, string txt, bool flag)</td></tr>
+<tr class="memdesc:ab0ff5a267447e5ad3530880e2c87122f"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML checkbox input要素タグをStringBuilderに書き込む。value付き。  <a href="#ab0ff5a267447e5ad3530880e2c87122f"></a><br/></td></tr>
+<tr class="separator:ab0ff5a267447e5ad3530880e2c87122f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cf04cdb40507fbd00dd3e009de2806d"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a0cf04cdb40507fbd00dd3e009de2806d">HtmlCheckBox</a> (string name, string txt, bool flag, bool disableflag)</td></tr>
+<tr class="memdesc:a0cf04cdb40507fbd00dd3e009de2806d"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML checkbox input要素タグを生成する。disabledフラグ付き。  <a href="#a0cf04cdb40507fbd00dd3e009de2806d"></a><br/></td></tr>
+<tr class="separator:a0cf04cdb40507fbd00dd3e009de2806d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab43dc56ab8806ea5f95cdedab82f0e4b"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#ab43dc56ab8806ea5f95cdedab82f0e4b">HtmlCheckBox</a> (StringBuilder sb, string name, string txt, bool flag, bool disableflag)</td></tr>
+<tr class="memdesc:ab43dc56ab8806ea5f95cdedab82f0e4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML checkbox input要素タグをStringBuilderに書き込む。disabledフラグ付き。  <a href="#ab43dc56ab8806ea5f95cdedab82f0e4b"></a><br/></td></tr>
+<tr class="separator:ab43dc56ab8806ea5f95cdedab82f0e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32babb3406d36d60fa81cb659b813bc4"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a32babb3406d36d60fa81cb659b813bc4">HtmlCheckBox</a> (string name, object val, string txt, bool flag, bool disableflag)</td></tr>
+<tr class="memdesc:a32babb3406d36d60fa81cb659b813bc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML checkbox input要素タグを生成する。CSS以外全属性指定。  <a href="#a32babb3406d36d60fa81cb659b813bc4"></a><br/></td></tr>
+<tr class="separator:a32babb3406d36d60fa81cb659b813bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64eb05d683691f2332cf8e02d86b188a"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a64eb05d683691f2332cf8e02d86b188a">HtmlCheckBox</a> (StringBuilder sb, string name, object val, string txt, bool flag, bool disableflag)</td></tr>
+<tr class="memdesc:a64eb05d683691f2332cf8e02d86b188a"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML checkbox input要素タグをStringBuilderに書き込む。CSS以外全属性指定。  <a href="#a64eb05d683691f2332cf8e02d86b188a"></a><br/></td></tr>
+<tr class="separator:a64eb05d683691f2332cf8e02d86b188a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2572e2d91ee5b0abdf72c8caa6dfd5e"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#ad2572e2d91ee5b0abdf72c8caa6dfd5e">HtmlCheckBox</a> (StringBuilder sb, string name, object val, string cssclass, string txt, bool flag, bool disableflag)</td></tr>
+<tr class="memdesc:ad2572e2d91ee5b0abdf72c8caa6dfd5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML checkbox input要素タグをStringBuilderに書き込む。全属性指定。  <a href="#ad2572e2d91ee5b0abdf72c8caa6dfd5e"></a><br/></td></tr>
+<tr class="separator:ad2572e2d91ee5b0abdf72c8caa6dfd5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa116cd5874f1f856fa61c8c5c9867a5f"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#aa116cd5874f1f856fa61c8c5c9867a5f">HtmlRadio</a> (string name, object value, string txt, bool flag)</td></tr>
+<tr class="memdesc:aa116cd5874f1f856fa61c8c5c9867a5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML radio input要素タグを生成する。  <a href="#aa116cd5874f1f856fa61c8c5c9867a5f"></a><br/></td></tr>
+<tr class="separator:aa116cd5874f1f856fa61c8c5c9867a5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1b8ad407da462517fa787de83b84b15"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#ab1b8ad407da462517fa787de83b84b15">HtmlRadio</a> (StringBuilder sb, string name, object value, string txt, bool flag)</td></tr>
+<tr class="memdesc:ab1b8ad407da462517fa787de83b84b15"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML radio input要素タグをStringBuilderに書き込む。  <a href="#ab1b8ad407da462517fa787de83b84b15"></a><br/></td></tr>
+<tr class="separator:ab1b8ad407da462517fa787de83b84b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36ff2c86b7e68c8e6f600f775fb1b584"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a36ff2c86b7e68c8e6f600f775fb1b584">HtmlRadio</a> (string name, object value, string txt, bool checkflag, bool disableflag)</td></tr>
+<tr class="memdesc:a36ff2c86b7e68c8e6f600f775fb1b584"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML radio input要素タグを生成する。disabledフラグ付き。  <a href="#a36ff2c86b7e68c8e6f600f775fb1b584"></a><br/></td></tr>
+<tr class="separator:a36ff2c86b7e68c8e6f600f775fb1b584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a787c19e309c7c24072300c6cf3cd378d"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a787c19e309c7c24072300c6cf3cd378d">HtmlRadio</a> (StringBuilder sb, string name, object value, string txt, bool checkflag, bool disableflag)</td></tr>
+<tr class="memdesc:a787c19e309c7c24072300c6cf3cd378d"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML radio input要素タグをStringBuilderに書き込む。disabledフラグ付き。  <a href="#a787c19e309c7c24072300c6cf3cd378d"></a><br/></td></tr>
+<tr class="separator:a787c19e309c7c24072300c6cf3cd378d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdadcdc24c20008fc636db8c8fd746b0"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#acdadcdc24c20008fc636db8c8fd746b0">HtmlRadio</a> (StringBuilder sb, string name, string label, object value, string cssclass, string txt, bool checkflag, bool disableflag, string onclick)</td></tr>
+<tr class="memdesc:acdadcdc24c20008fc636db8c8fd746b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML radio input要素タグをStringBuilderに書き込む。全属性指定。  <a href="#acdadcdc24c20008fc636db8c8fd746b0"></a><br/></td></tr>
+<tr class="separator:acdadcdc24c20008fc636db8c8fd746b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a718ce886460dc0075e15a751fc435f24"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a718ce886460dc0075e15a751fc435f24">HtmlOption</a> (string value, string txt, bool flag)</td></tr>
+<tr class="memdesc:a718ce886460dc0075e15a751fc435f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML option要素タグを生成する。  <a href="#a718ce886460dc0075e15a751fc435f24"></a><br/></td></tr>
+<tr class="separator:a718ce886460dc0075e15a751fc435f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc3e1577bc75462d77eef14b7d65844b"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#acc3e1577bc75462d77eef14b7d65844b">HtmlOption</a> (StringBuilder sb, string value, string txt, bool flag)</td></tr>
+<tr class="memdesc:acc3e1577bc75462d77eef14b7d65844b"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML option要素タグをStringBuilderに書き込む。  <a href="#acc3e1577bc75462d77eef14b7d65844b"></a><br/></td></tr>
+<tr class="separator:acc3e1577bc75462d77eef14b7d65844b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61d9769b6f40303cfd9d6016d0cfa792"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a61d9769b6f40303cfd9d6016d0cfa792">HtmlAnchorButton</a> (string name, string txt, string cssclass, string loc)</td></tr>
+<tr class="memdesc:a61d9769b6f40303cfd9d6016d0cfa792"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML button input要素タグを生成する。(他ページへに遷移する版）  <a href="#a61d9769b6f40303cfd9d6016d0cfa792"></a><br/></td></tr>
+<tr class="separator:a61d9769b6f40303cfd9d6016d0cfa792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5875f93e2161fb186e5ae16e277c3832"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a5875f93e2161fb186e5ae16e277c3832">HtmlAnchorButton</a> (StringBuilder sb, string name, string txt, string cssclass, string loc)</td></tr>
+<tr class="memdesc:a5875f93e2161fb186e5ae16e277c3832"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML button input要素タグをStringBuilderに書き込む。(他ページへに遷移する版）  <a href="#a5875f93e2161fb186e5ae16e277c3832"></a><br/></td></tr>
+<tr class="separator:a5875f93e2161fb186e5ae16e277c3832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd8814ddc20314e71372565c4fea2cfd"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#abd8814ddc20314e71372565c4fea2cfd">HtmlInput</a> (string name, object value)</td></tr>
+<tr class="memdesc:abd8814ddc20314e71372565c4fea2cfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML text input要素タグを生成する。  <a href="#abd8814ddc20314e71372565c4fea2cfd"></a><br/></td></tr>
+<tr class="separator:abd8814ddc20314e71372565c4fea2cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6aca3a64d091989396064ee0b57889c"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#ab6aca3a64d091989396064ee0b57889c">HtmlInput</a> (string name, object value, string cssclass)</td></tr>
+<tr class="memdesc:ab6aca3a64d091989396064ee0b57889c"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML text input要素タグを生成する。CSSクラス指定版。  <a href="#ab6aca3a64d091989396064ee0b57889c"></a><br/></td></tr>
+<tr class="separator:ab6aca3a64d091989396064ee0b57889c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d3e5bbb390324027f03252c1f107a73"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a3d3e5bbb390324027f03252c1f107a73">HtmlInput</a> (string name, object value, string cssclass, int maxlength)</td></tr>
+<tr class="memdesc:a3d3e5bbb390324027f03252c1f107a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML text input要素タグを生成する。CSSクラスと最大文字数指定版。  <a href="#a3d3e5bbb390324027f03252c1f107a73"></a><br/></td></tr>
+<tr class="separator:a3d3e5bbb390324027f03252c1f107a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade224ca067fa10760b52c1e00f5091ec"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#ade224ca067fa10760b52c1e00f5091ec">HtmlInput</a> (StringBuilder sb, string name, object value)</td></tr>
+<tr class="memdesc:ade224ca067fa10760b52c1e00f5091ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML text input要素タグをStringBuilderに書き込む。  <a href="#ade224ca067fa10760b52c1e00f5091ec"></a><br/></td></tr>
+<tr class="separator:ade224ca067fa10760b52c1e00f5091ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47b4e07bb5b10414f34ef336c3941acf"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a47b4e07bb5b10414f34ef336c3941acf">HtmlInput</a> (StringBuilder sb, string name, object value, string cssclass)</td></tr>
+<tr class="memdesc:a47b4e07bb5b10414f34ef336c3941acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML text input要素タグをStringBuilderに書き込む。CSSクラス指定版。  <a href="#a47b4e07bb5b10414f34ef336c3941acf"></a><br/></td></tr>
+<tr class="separator:a47b4e07bb5b10414f34ef336c3941acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3781f69f6767116807e3b2a1f2f5badd"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a3781f69f6767116807e3b2a1f2f5badd">HtmlInput</a> (StringBuilder sb, string name, object value, string cssclass, int maxlength)</td></tr>
+<tr class="memdesc:a3781f69f6767116807e3b2a1f2f5badd"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML text input要素タグをStringBuilderに書き込む。CSSクラスと最大文字数指定版。  <a href="#a3781f69f6767116807e3b2a1f2f5badd"></a><br/></td></tr>
+<tr class="separator:a3781f69f6767116807e3b2a1f2f5badd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84c32e59b2a44e257eb81bed5eb7e80e"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a84c32e59b2a44e257eb81bed5eb7e80e">HtmlInput</a> (StringBuilder sb, string name, object value, string cssclass, bool disabled, int maxlength)</td></tr>
+<tr class="memdesc:a84c32e59b2a44e257eb81bed5eb7e80e"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML text input要素タグをStringBuilderに書き込む。CSSクラス、disableフラグ、最大文字数指定版。  <a href="#a84c32e59b2a44e257eb81bed5eb7e80e"></a><br/></td></tr>
+<tr class="separator:a84c32e59b2a44e257eb81bed5eb7e80e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac09c67b92fb6d5332547ae25a70595ea"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#ac09c67b92fb6d5332547ae25a70595ea">HtmlInput</a> (StringBuilder sb, string type, string name, object value, string cssclass, bool disabled, int maxlength)</td></tr>
+<tr class="memdesc:ac09c67b92fb6d5332547ae25a70595ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML text input要素タグをStringBuilderに書き込む。全属性指定版。  <a href="#ac09c67b92fb6d5332547ae25a70595ea"></a><br/></td></tr>
+<tr class="separator:ac09c67b92fb6d5332547ae25a70595ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67761274a7e7aa72039374782845aeb9"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a67761274a7e7aa72039374782845aeb9">HtmlPassword</a> (string name, string value)</td></tr>
+<tr class="memdesc:a67761274a7e7aa72039374782845aeb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML password input要素タグを生成する。  <a href="#a67761274a7e7aa72039374782845aeb9"></a><br/></td></tr>
+<tr class="separator:a67761274a7e7aa72039374782845aeb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b4020a7ec6b73fe899694ec9b0e8cdb"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a5b4020a7ec6b73fe899694ec9b0e8cdb">HtmlPassword</a> (string name, string value, string cssclass)</td></tr>
+<tr class="memdesc:a5b4020a7ec6b73fe899694ec9b0e8cdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML password input要素タグを生成する。CSSクラス指定版。  <a href="#a5b4020a7ec6b73fe899694ec9b0e8cdb"></a><br/></td></tr>
+<tr class="separator:a5b4020a7ec6b73fe899694ec9b0e8cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56ba640e1a42654d834787821b582a77"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a56ba640e1a42654d834787821b582a77">HtmlPassword</a> (string name, string value, string cssclass, int maxlength)</td></tr>
+<tr class="memdesc:a56ba640e1a42654d834787821b582a77"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML password input要素タグを生成する。CSSクラスと最大文字数指定版。  <a href="#a56ba640e1a42654d834787821b582a77"></a><br/></td></tr>
+<tr class="separator:a56ba640e1a42654d834787821b582a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d0c364cbda4733ec18fcbcc2efdeef2"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a0d0c364cbda4733ec18fcbcc2efdeef2">HtmlPassword</a> (StringBuilder sb, string name, string value)</td></tr>
+<tr class="memdesc:a0d0c364cbda4733ec18fcbcc2efdeef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML password input要素タグをStringBuilderに書き込む。  <a href="#a0d0c364cbda4733ec18fcbcc2efdeef2"></a><br/></td></tr>
+<tr class="separator:a0d0c364cbda4733ec18fcbcc2efdeef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1530dbe1d07d12d7b802fd12d32fedcf"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a1530dbe1d07d12d7b802fd12d32fedcf">HtmlPassword</a> (StringBuilder sb, string name, string value, string cssclass)</td></tr>
+<tr class="memdesc:a1530dbe1d07d12d7b802fd12d32fedcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML password input要素タグをStringBuilderに書き込む。CSSクラス指定版。  <a href="#a1530dbe1d07d12d7b802fd12d32fedcf"></a><br/></td></tr>
+<tr class="separator:a1530dbe1d07d12d7b802fd12d32fedcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad050325ded6f2356acf17e3203eb0bc0"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#ad050325ded6f2356acf17e3203eb0bc0">HtmlPassword</a> (StringBuilder sb, string name, string value, string cssclass, int maxlength)</td></tr>
+<tr class="memdesc:ad050325ded6f2356acf17e3203eb0bc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML password input要素タグをStringBuilderに書き込む。CSSクラスと最大文字数指定版。  <a href="#ad050325ded6f2356acf17e3203eb0bc0"></a><br/></td></tr>
+<tr class="separator:ad050325ded6f2356acf17e3203eb0bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18075373b02aa3c25823cd5c9d94f36b"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a18075373b02aa3c25823cd5c9d94f36b">HtmlSubmit</a> (string name, string text)</td></tr>
+<tr class="memdesc:a18075373b02aa3c25823cd5c9d94f36b"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML submit button input要素タグを生成する。  <a href="#a18075373b02aa3c25823cd5c9d94f36b"></a><br/></td></tr>
+<tr class="separator:a18075373b02aa3c25823cd5c9d94f36b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9690f3d780df23646e23b9d65f60ff03"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a9690f3d780df23646e23b9d65f60ff03">HtmlSubmit</a> (string name, string text, string cssclass)</td></tr>
+<tr class="memdesc:a9690f3d780df23646e23b9d65f60ff03"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML submit button input要素タグを生成する。CSSクラス指定版。  <a href="#a9690f3d780df23646e23b9d65f60ff03"></a><br/></td></tr>
+<tr class="separator:a9690f3d780df23646e23b9d65f60ff03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f9028d617ff5ff9cb04a2a2299a5817"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a0f9028d617ff5ff9cb04a2a2299a5817">HtmlSubmit</a> (string name, string text, string cssclass, string onclick)</td></tr>
+<tr class="memdesc:a0f9028d617ff5ff9cb04a2a2299a5817"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML submit button input要素タグを生成する。CSSクラスとOnClick指定版。  <a href="#a0f9028d617ff5ff9cb04a2a2299a5817"></a><br/></td></tr>
+<tr class="separator:a0f9028d617ff5ff9cb04a2a2299a5817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe3c48010c1b593f581524a720be0b46"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#afe3c48010c1b593f581524a720be0b46">HtmlSubmit</a> (StringBuilder sb, string name, string text)</td></tr>
+<tr class="memdesc:afe3c48010c1b593f581524a720be0b46"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML submit button input要素タグをStringBuilderに書き込む。  <a href="#afe3c48010c1b593f581524a720be0b46"></a><br/></td></tr>
+<tr class="separator:afe3c48010c1b593f581524a720be0b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84cf434a465c5d24df7d0f976544a367"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a84cf434a465c5d24df7d0f976544a367">HtmlSubmit</a> (StringBuilder sb, string name, string text, string cssclass)</td></tr>
+<tr class="memdesc:a84cf434a465c5d24df7d0f976544a367"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML submit button input要素タグをStringBuilderに書き込む。CSSクラス指定版。  <a href="#a84cf434a465c5d24df7d0f976544a367"></a><br/></td></tr>
+<tr class="separator:a84cf434a465c5d24df7d0f976544a367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b8dc730575aba7552f28d13206733a0"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a6b8dc730575aba7552f28d13206733a0">HtmlSubmit</a> (StringBuilder sb, string name, string text, string cssclass, string onclick)</td></tr>
+<tr class="memdesc:a6b8dc730575aba7552f28d13206733a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML submit button input要素タグをStringBuilderに書き込む。CSSクラスとOnClick指定版。  <a href="#a6b8dc730575aba7552f28d13206733a0"></a><br/></td></tr>
+<tr class="separator:a6b8dc730575aba7552f28d13206733a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f7c4e3f627e06adcf0e21bf1af943bb"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a2f7c4e3f627e06adcf0e21bf1af943bb">HtmlButton</a> (string type, string name, string text, string cssclass, string onclick)</td></tr>
+<tr class="memdesc:a2f7c4e3f627e06adcf0e21bf1af943bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML button input要素タグを生成する。  <a href="#a2f7c4e3f627e06adcf0e21bf1af943bb"></a><br/></td></tr>
+<tr class="separator:a2f7c4e3f627e06adcf0e21bf1af943bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94e90d88b72a69c7e2fc9e6d078c3d3e"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a94e90d88b72a69c7e2fc9e6d078c3d3e">HtmlButton</a> (StringBuilder sb, string type, string name, string text, string cssclass, string onclick)</td></tr>
+<tr class="memdesc:a94e90d88b72a69c7e2fc9e6d078c3d3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML button input要素タグをStringBuilderに書き込む。  <a href="#a94e90d88b72a69c7e2fc9e6d078c3d3e"></a><br/></td></tr>
+<tr class="separator:a94e90d88b72a69c7e2fc9e6d078c3d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6079a86d95f12de7686843a4060c7fbf"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#a6079a86d95f12de7686843a4060c7fbf">HtmlHidden</a> (string name, string value)</td></tr>
+<tr class="memdesc:a6079a86d95f12de7686843a4060c7fbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML hidden input要素タグを生成する。  <a href="#a6079a86d95f12de7686843a4060c7fbf"></a><br/></td></tr>
+<tr class="separator:a6079a86d95f12de7686843a4060c7fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea708270c15e08611370b4d6cf576bca"><td class="memItemLeft" align="right" valign="top">static StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HtmlTool.html#aea708270c15e08611370b4d6cf576bca">HtmlHidden</a> (StringBuilder sb, string name, string value)</td></tr>
+<tr class="memdesc:aea708270c15e08611370b4d6cf576bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML hidden input要素タグをStringBuilderに書き込む。  <a href="#aea708270c15e08611370b4d6cf576bca"></a><br/></td></tr>
+<tr class="separator:aea708270c15e08611370b4d6cf576bca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1284f279bf0a9b8e54f73714d7227934"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#a1284f279bf0a9b8e54f73714d7227934">GetExceptionMessage</a> (Exception e)</td></tr>
+<tr class="memdesc:a1284f279bf0a9b8e54f73714d7227934"><td class="mdescLeft">&#160;</td><td class="mdescRight">スタックトレースの文字列を得る  <a href="#a1284f279bf0a9b8e54f73714d7227934"></a><br/></td></tr>
+<tr class="separator:a1284f279bf0a9b8e54f73714d7227934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada26f178e7644144f5a870a978769d97"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#ada26f178e7644144f5a870a978769d97">SetGlobalLogger</a> (string filename, Encoding enc=null, int size=1000, int rotation=9)</td></tr>
+<tr class="memdesc:ada26f178e7644144f5a870a978769d97"><td class="mdescLeft">&#160;</td><td class="mdescRight">グローバルなログ書き込みファイルを登録する。  <a href="#ada26f178e7644144f5a870a978769d97"></a><br/></td></tr>
+<tr class="separator:ada26f178e7644144f5a870a978769d97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d37897df96ceaf15b7b9e0a80efcae9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#a4d37897df96ceaf15b7b9e0a80efcae9">SetGlobalLogger</a> (<a class="el" href="classMACS_1_1OpeLog.html">OpeLog</a> logger)</td></tr>
+<tr class="memdesc:a4d37897df96ceaf15b7b9e0a80efcae9"><td class="mdescLeft">&#160;</td><td class="mdescRight">グローバルなログ書き込みオブジェクトを登録する。  <a href="#a4d37897df96ceaf15b7b9e0a80efcae9"></a><br/></td></tr>
+<tr class="separator:a4d37897df96ceaf15b7b9e0a80efcae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected メソッド</h2></td></tr>
+<tr class="memitem:ac57c9bde5563e89ee88bbd0ddf7c0648"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#ac57c9bde5563e89ee88bbd0ddf7c0648">GetPageName</a> ()</td></tr>
+<tr class="memdesc:ac57c9bde5563e89ee88bbd0ddf7c0648"><td class="mdescLeft">&#160;</td><td class="mdescRight">動作ページ名を獲得する。 派生クラスでoverrideする事。  <a href="#ac57c9bde5563e89ee88bbd0ddf7c0648"></a><br/></td></tr>
+<tr class="separator:ac57c9bde5563e89ee88bbd0ddf7c0648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf0100222df4834cca5aa0169a81b07c"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#aaf0100222df4834cca5aa0169a81b07c">GetUserName</a> ()</td></tr>
+<tr class="memdesc:aaf0100222df4834cca5aa0169a81b07c"><td class="mdescLeft">&#160;</td><td class="mdescRight">操作ユーザー名を獲得する。 派生クラスでoverrideする事。  <a href="#aaf0100222df4834cca5aa0169a81b07c"></a><br/></td></tr>
+<tr class="separator:aaf0100222df4834cca5aa0169a81b07c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4811856aeafe07c2dbac425f73db780a"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#a4811856aeafe07c2dbac425f73db780a">GetCategoryName</a> ()</td></tr>
+<tr class="memdesc:a4811856aeafe07c2dbac425f73db780a"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトのログカテゴリ名を獲得する。 派生クラスでoverrideする事。  <a href="#a4811856aeafe07c2dbac425f73db780a"></a><br/></td></tr>
+<tr class="separator:a4811856aeafe07c2dbac425f73db780a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:af7bb643442c98c0602fe7a2668513974"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classMACS_1_1OpeLog.html">OpeLog</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#af7bb643442c98c0602fe7a2668513974">GlobalLogger</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:af7bb643442c98c0602fe7a2668513974"><td class="mdescLeft">&#160;</td><td class="mdescRight">グローバルロガー  <a href="#af7bb643442c98c0602fe7a2668513974"></a><br/></td></tr>
+<tr class="separator:af7bb643442c98c0602fe7a2668513974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad69aee2a6ba820e202d26a071ecfdcac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1OpeLog.html">OpeLog</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#ad69aee2a6ba820e202d26a071ecfdcac">Logger</a><code> [get]</code></td></tr>
+<tr class="memdesc:ad69aee2a6ba820e202d26a071ecfdcac"><td class="mdescLeft">&#160;</td><td class="mdescRight">ロガー  <a href="#ad69aee2a6ba820e202d26a071ecfdcac"></a><br/></td></tr>
+<tr class="separator:ad69aee2a6ba820e202d26a071ecfdcac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">説明</h2>
+<div class="textblock"><p>HTMLコード作成に便利なユーティリティ集。 </p>
+<p>全てグローバルな関数であり、本来はクラス化する必要が無い。 コード表記を簡略化するためのネームスペース代りに使っているにすぎない。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00024">24</a> 行で定義されています。</p>
+</div><h2 class="groupheader">メソッド</h2>
+<a class="anchor" id="a71580f1a6a478dc5792e4c0745056048"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.UE </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>URLエンコーディングした文字列を返す。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00029">29</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="HtmlTool_8cs_source.html#l00327">MACS.HtmlTool.HtmlAnchorButton()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0f84dc54300929d19029b7b7ecd1161c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.EU </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>URLエンコーディングされた文字列をデコードして返す。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00038">38</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a835509d2124357118a8a7ba879972da4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.HE </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTMLエンコーディングした文字列を返す。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00047">47</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="TableFormatter_8cs_source.html#l00079">MACS.TableFormatter.Record.GetDisplayString()</a>, <a class="el" href="HtmlTool_8cs_source.html#l00196">MACS.HtmlTool.HtmlCheckBox()</a>, <a class="el" href="HtmlTool_8cs_source.html#l00304">MACS.HtmlTool.HtmlOption()</a>, と <a class="el" href="HtmlTool_8cs_source.html#l00260">MACS.HtmlTool.HtmlRadio()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab0010ce77b92197d613048b8f21352f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.EH </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTMLエンコーディングされた文字列をデコードして返す。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00080">80</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad4b6d3d0f81079da27556ffcaf718c0c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.QE </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>クォート文字をエスケープした文字列を返す。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00089">89</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="HtmlTool_8cs_source.html#l00327">MACS.HtmlTool.HtmlAnchorButton()</a>, <a class="el" href="HtmlTool_8cs_source.html#l00519">MACS.HtmlTool.HtmlButton()</a>, <a class="el" href="HtmlTool_8cs_source.html#l00196">MACS.HtmlTool.HtmlCheckBox()</a>, <a class="el" href="HtmlTool_8cs_source.html#l00555">MACS.HtmlTool.HtmlHidden()</a>, <a class="el" href="HtmlTool_8cs_source.html#l00393">MACS.HtmlTool.HtmlInput()</a>, <a class="el" href="HtmlTool_8cs_source.html#l00304">MACS.HtmlTool.HtmlOption()</a>, と <a class="el" href="HtmlTool_8cs_source.html#l00260">MACS.HtmlTool.HtmlRadio()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa8996f40f686aaf51c1829234c5d8770"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.DT </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>日時表示をフォーマットしなおす </p>
+<p>年を表示しない。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00128">128</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a39d1c2c2485bcb4ce3b8155d8c6ddd87"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.HtmlCheckBox </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML checkbox input要素タグを生成する。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00140">140</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="HtmlTool_8cs_source.html#l00148">MACS.HtmlTool.HtmlCheckBox()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a64bef7146103eed8eeec445def89cf8f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlCheckBox </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML checkbox input要素タグをStringBuilderに書き込む。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00148">148</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4cffc9f7bc91d309209ee386e766f53f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.HtmlCheckBox </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML checkbox input要素タグを生成する。value付き。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00154">154</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab0ff5a267447e5ad3530880e2c87122f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlCheckBox </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML checkbox input要素タグをStringBuilderに書き込む。value付き。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00162">162</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a0cf04cdb40507fbd00dd3e009de2806d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.HtmlCheckBox </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disableflag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML checkbox input要素タグを生成する。disabledフラグ付き。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00168">168</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab43dc56ab8806ea5f95cdedab82f0e4b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlCheckBox </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disableflag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML checkbox input要素タグをStringBuilderに書き込む。disabledフラグ付き。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00176">176</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a32babb3406d36d60fa81cb659b813bc4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.HtmlCheckBox </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disableflag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML checkbox input要素タグを生成する。CSS以外全属性指定。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00182">182</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a64eb05d683691f2332cf8e02d86b188a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlCheckBox </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disableflag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML checkbox input要素タグをStringBuilderに書き込む。CSS以外全属性指定。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00190">190</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad2572e2d91ee5b0abdf72c8caa6dfd5e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlCheckBox </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cssclass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disableflag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML checkbox input要素タグをStringBuilderに書き込む。全属性指定。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00196">196</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa116cd5874f1f856fa61c8c5c9867a5f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.HtmlRadio </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML radio input要素タグを生成する。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00232">232</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="HtmlTool_8cs_source.html#l00240">MACS.HtmlTool.HtmlRadio()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab1b8ad407da462517fa787de83b84b15"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlRadio </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML radio input要素タグをStringBuilderに書き込む。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00240">240</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a36ff2c86b7e68c8e6f600f775fb1b584"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.HtmlRadio </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>checkflag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disableflag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML radio input要素タグを生成する。disabledフラグ付き。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00246">246</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a787c19e309c7c24072300c6cf3cd378d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlRadio </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>checkflag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disableflag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML radio input要素タグをStringBuilderに書き込む。disabledフラグ付き。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00254">254</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="acdadcdc24c20008fc636db8c8fd746b0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlRadio </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cssclass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>checkflag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disableflag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>onclick</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML radio input要素タグをStringBuilderに書き込む。全属性指定。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00260">260</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a718ce886460dc0075e15a751fc435f24"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.HtmlOption </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML option要素タグを生成する。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00296">296</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="acc3e1577bc75462d77eef14b7d65844b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlOption </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML option要素タグをStringBuilderに書き込む。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00304">304</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a61d9769b6f40303cfd9d6016d0cfa792"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.HtmlAnchorButton </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cssclass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>loc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML button input要素タグを生成する。(他ページへに遷移する版） </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00319">319</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5875f93e2161fb186e5ae16e277c3832"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlAnchorButton </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cssclass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>loc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML button input要素タグをStringBuilderに書き込む。(他ページへに遷移する版） </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00327">327</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="abd8814ddc20314e71372565c4fea2cfd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.HtmlInput </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML text input要素タグを生成する。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00345">345</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="HtmlTool_8cs_source.html#l00353">MACS.HtmlTool.HtmlInput()</a>, と <a class="el" href="HtmlTool_8cs_source.html#l00461">MACS.HtmlTool.HtmlPassword()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab6aca3a64d091989396064ee0b57889c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.HtmlInput </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cssclass</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML text input要素タグを生成する。CSSクラス指定版。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00353">353</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a3d3e5bbb390324027f03252c1f107a73"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.HtmlInput </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cssclass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxlength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML text input要素タグを生成する。CSSクラスと最大文字数指定版。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00361">361</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ade224ca067fa10760b52c1e00f5091ec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlInput </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML text input要素タグをStringBuilderに書き込む。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00369">369</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a47b4e07bb5b10414f34ef336c3941acf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlInput </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cssclass</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML text input要素タグをStringBuilderに書き込む。CSSクラス指定版。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00375">375</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a3781f69f6767116807e3b2a1f2f5badd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlInput </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cssclass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxlength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML text input要素タグをStringBuilderに書き込む。CSSクラスと最大文字数指定版。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00381">381</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a84c32e59b2a44e257eb81bed5eb7e80e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlInput </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cssclass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disabled</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxlength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML text input要素タグをStringBuilderに書き込む。CSSクラス、disableフラグ、最大文字数指定版。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00387">387</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac09c67b92fb6d5332547ae25a70595ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlInput </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cssclass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disabled</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxlength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML text input要素タグをStringBuilderに書き込む。全属性指定版。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00393">393</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a67761274a7e7aa72039374782845aeb9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.HtmlPassword </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML password input要素タグを生成する。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00425">425</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="HtmlTool_8cs_source.html#l00433">MACS.HtmlTool.HtmlPassword()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5b4020a7ec6b73fe899694ec9b0e8cdb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.HtmlPassword </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cssclass</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML password input要素タグを生成する。CSSクラス指定版。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00433">433</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a56ba640e1a42654d834787821b582a77"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.HtmlPassword </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cssclass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxlength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML password input要素タグを生成する。CSSクラスと最大文字数指定版。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00441">441</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a0d0c364cbda4733ec18fcbcc2efdeef2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlPassword </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML password input要素タグをStringBuilderに書き込む。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00449">449</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1530dbe1d07d12d7b802fd12d32fedcf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlPassword </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cssclass</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML password input要素タグをStringBuilderに書き込む。CSSクラス指定版。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00455">455</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad050325ded6f2356acf17e3203eb0bc0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlPassword </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cssclass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxlength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML password input要素タグをStringBuilderに書き込む。CSSクラスと最大文字数指定版。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00461">461</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a18075373b02aa3c25823cd5c9d94f36b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.HtmlSubmit </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML submit button input要素タグを生成する。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00468">468</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="HtmlTool_8cs_source.html#l00476">MACS.HtmlTool.HtmlSubmit()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9690f3d780df23646e23b9d65f60ff03"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.HtmlSubmit </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cssclass</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML submit button input要素タグを生成する。CSSクラス指定版。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00476">476</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a0f9028d617ff5ff9cb04a2a2299a5817"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.HtmlSubmit </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cssclass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>onclick</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML submit button input要素タグを生成する。CSSクラスとOnClick指定版。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00484">484</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="afe3c48010c1b593f581524a720be0b46"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlSubmit </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML submit button input要素タグをStringBuilderに書き込む。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00492">492</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a84cf434a465c5d24df7d0f976544a367"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlSubmit </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cssclass</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML submit button input要素タグをStringBuilderに書き込む。CSSクラス指定版。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00498">498</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a6b8dc730575aba7552f28d13206733a0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlSubmit </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cssclass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>onclick</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML submit button input要素タグをStringBuilderに書き込む。CSSクラスとOnClick指定版。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00504">504</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a2f7c4e3f627e06adcf0e21bf1af943bb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.HtmlButton </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cssclass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>onclick</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML button input要素タグを生成する。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00511">511</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="HtmlTool_8cs_source.html#l00504">MACS.HtmlTool.HtmlSubmit()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a94e90d88b72a69c7e2fc9e6d078c3d3e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlButton </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cssclass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>onclick</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML button input要素タグをStringBuilderに書き込む。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00519">519</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a6079a86d95f12de7686843a4060c7fbf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.HtmlTool.HtmlHidden </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML hidden input要素タグを生成する。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00547">547</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aea708270c15e08611370b4d6cf576bca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static StringBuilder MACS.HtmlTool.HtmlHidden </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTML hidden input要素タグをStringBuilderに書き込む。 </p>
+
+<p> <a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a> の <a class="el" href="HtmlTool_8cs_source.html#l00555">555</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1b087da523368e6c9210d1af3370615f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.LOG_EMERG </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>objs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>非常事態ログ </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00020">20</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a50252d11bef2f336ce5e840e4b9b25c2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.LOG_ALERT </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>objs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>警告ログ </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00028">28</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad887acb38cd24634df0ca3499d98e7c8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.LOG_CRIT </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>objs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>致命的ログ </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00036">36</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af713a231c44b784df68890b7ea001153"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.LOG_ERR </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>objs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>エラーログ </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00044">44</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="SendMail_8cs_source.html#l00234">MACS.SendMail.PopBeforeSmtp()</a>, と <a class="el" href="SendMail_8cs_source.html#l00170">MACS.SendMail.Send()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4e8ce70bcc869f7996904e868f12c23a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.LOG_WARNING </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>objs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注意ログ </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00052">52</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="afa1a837b35ad4917ff008375d628d8ef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.LOG_NOTICE </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>objs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>報告ログ </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00060">60</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a2af82eefc7d2b91a8fe52e4a7db6ca5e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.LOG_INFO </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>objs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>情報ログ </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00068">68</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="SendMail_8cs_source.html#l00170">MACS.SendMail.Send()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a18b319f0ae97bbac6108ed0938ba7662"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.LOG_DEBUG </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>objs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デバッグログ </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00076">76</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa934fdf4fd746a8ea328740a6805a3ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.LOG_EXCEPTION </td>
+          <td>(</td>
+          <td class="paramtype">Exception&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>例外のログ </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00084">84</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1284f279bf0a9b8e54f73714d7227934"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.Loggable.GetExceptionMessage </td>
+          <td>(</td>
+          <td class="paramtype">Exception&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>スタックトレースの文字列を得る </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00092">92</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="Loggable_8cs_source.html#l00084">MACS.Loggable.LOG_EXCEPTION()</a>, と <a class="el" href="StaticLoggable_8cs_source.html#l00086">MACS.StaticLoggable.LOG_EXCEPTION()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ada26f178e7644144f5a870a978769d97"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.Loggable.SetGlobalLogger </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoding&#160;</td>
+          <td class="paramname"><em>enc</em> = <code>null</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em> = <code>1000</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rotation</em> = <code>9</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>グローバルなログ書き込みファイルを登録する。 </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00118">118</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4d37897df96ceaf15b7b9e0a80efcae9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.Loggable.SetGlobalLogger </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1OpeLog.html">OpeLog</a>&#160;</td>
+          <td class="paramname"><em>logger</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>グローバルなログ書き込みオブジェクトを登録する。 </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00125">125</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5d0b356336848258a1c04bc5ddfd4af6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.SetLogger </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1OpeLog.html">OpeLog</a>&#160;</td>
+          <td class="paramname"><em>logger_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>独自のロガーをセットする </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00145">145</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1129d7aba79f6bf0ba61b50d18d61716"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.SetLogger </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoding&#160;</td>
+          <td class="paramname"><em>enc</em> = <code>null</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em> = <code>1000</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rotation</em> = <code>9</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>独自のロガーをセットする </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00152">152</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aaa470b89d1ce59a04539c6521099cf31"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.DisableLogging </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>一時的にログ記録を停止する </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00166">166</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ace864dc269e9b20cfc4bb17267efcb39"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.EnableLogging </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DisableLoggingで止めたログ記録を再開する </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00173">173</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac57c9bde5563e89ee88bbd0ddf7c0648"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual string MACS.Loggable.GetPageName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>動作ページ名を獲得する。 派生クラスでoverrideする事。 </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00181">181</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aaf0100222df4834cca5aa0169a81b07c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual string MACS.Loggable.GetUserName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>操作ユーザー名を獲得する。 派生クラスでoverrideする事。 </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00189">189</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4811856aeafe07c2dbac425f73db780a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual string MACS.Loggable.GetCategoryName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デフォルトのログカテゴリ名を獲得する。 派生クラスでoverrideする事。 </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00198">198</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="Loggable_8cs_source.html#l00028">MACS.Loggable.LOG_ALERT()</a>, <a class="el" href="Loggable_8cs_source.html#l00036">MACS.Loggable.LOG_CRIT()</a>, <a class="el" href="Loggable_8cs_source.html#l00076">MACS.Loggable.LOG_DEBUG()</a>, <a class="el" href="Loggable_8cs_source.html#l00020">MACS.Loggable.LOG_EMERG()</a>, <a class="el" href="Loggable_8cs_source.html#l00044">MACS.Loggable.LOG_ERR()</a>, <a class="el" href="Loggable_8cs_source.html#l00084">MACS.Loggable.LOG_EXCEPTION()</a>, <a class="el" href="Loggable_8cs_source.html#l00068">MACS.Loggable.LOG_INFO()</a>, <a class="el" href="Loggable_8cs_source.html#l00060">MACS.Loggable.LOG_NOTICE()</a>, と <a class="el" href="Loggable_8cs_source.html#l00052">MACS.Loggable.LOG_WARNING()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">プロパティ</h2>
+<a class="anchor" id="af7bb643442c98c0602fe7a2668513974"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1OpeLog.html">OpeLog</a> MACS.Loggable.GlobalLogger</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span><span class="mlabel">set</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>グローバルロガー </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00132">132</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad69aee2a6ba820e202d26a071ecfdcac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1OpeLog.html">OpeLog</a> MACS.Loggable.Logger</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ロガー </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00159">159</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="Loggable_8cs_source.html#l00028">MACS.Loggable.LOG_ALERT()</a>, <a class="el" href="Loggable_8cs_source.html#l00036">MACS.Loggable.LOG_CRIT()</a>, <a class="el" href="Loggable_8cs_source.html#l00076">MACS.Loggable.LOG_DEBUG()</a>, <a class="el" href="Loggable_8cs_source.html#l00020">MACS.Loggable.LOG_EMERG()</a>, <a class="el" href="Loggable_8cs_source.html#l00044">MACS.Loggable.LOG_ERR()</a>, <a class="el" href="Loggable_8cs_source.html#l00084">MACS.Loggable.LOG_EXCEPTION()</a>, <a class="el" href="Loggable_8cs_source.html#l00068">MACS.Loggable.LOG_INFO()</a>, <a class="el" href="Loggable_8cs_source.html#l00060">MACS.Loggable.LOG_NOTICE()</a>, <a class="el" href="Loggable_8cs_source.html#l00052">MACS.Loggable.LOG_WARNING()</a>, と <a class="el" href="NThread_8cs_source.html#l00446">MACS.NThread.Measure.Measure()</a>.</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="HtmlTool_8cs_source.html">HtmlTool.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceMACS.html">MACS</a></li><li class="navelem"><a class="el" href="classMACS_1_1HtmlTool.html">HtmlTool</a></li>
+    <li class="footer">MACS.Coreに対してWed Jun 27 2018 17:45:44に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>PDFReport: バーコード</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PDFReport
+   </div>
+   <div id="projectbrief">PDF Table Report Generator</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('Example1_17.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">バーコード </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>PDFReportは主要なバーコードの印字機能を持っています。</p>
+<p>本例では、Example1_16で用いたデータファイルのうち、 example.ini と example2.csv を使います。</p>
+<p>帳票フォーマットファイル: Example1_17.xml </p>
+<pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;document&gt;
+  &lt;font name="default" size="12" /&gt;
+
+  &lt;table x="50%" y="10mm" width="150mm" rows="10" align="center" border-top="0.3mm" border-bottom="0.3mm"&gt;
+    &lt;header height="1.5line" border-bottom="0.3mm"&gt;
+      &lt;text y="1mm" x="1mm"&gt;バーコード&lt;/text&gt;
+      &lt;text x="+55mm"&gt;商品コード&lt;/text&gt;
+      &lt;text x="+40mm" align="right"&gt;定価&lt;/text&gt;
+      &lt;text x="+20mm" align="right"&gt;在庫数&lt;/text&gt;
+    &lt;/header&gt;
+    &lt;body height="15mm" border-bottom="0.1mm"&gt;
+      &lt;barcode y="1mm" x="1mm" type="CODE39"&gt;{list.商品コード}&lt;/barcode&gt;
+      &lt;text y="5mm" x="+55mm"&gt;{list.商品コード}&lt;/text&gt;
+      &lt;text x="+40mm" align="right"&gt;{list.定価:decimal:postfix(円)}&lt;/text&gt;
+      &lt;text x="+20mm" align="right"&gt;{list.在庫数:decimal}&lt;/text&gt;
+    &lt;/body&gt;
+  &lt;/table&gt;
+
+&lt;/document&gt;
+</pre><p>実行方法: </p>
+<pre class="fragment">% PDFReport Example1_17.xml example.ini example2.csv -o Example1_17.pdf
+</pre><p>結果は、<a href="Example1_17.pdf">Example1_17.pdf</a>をご覧下さい。</p>
+<p><code>barcode</code> タグを使うと、バーコードを描画することができます。 使用するコード形式は <code>type</code> 属性で指定します。 指定できるコード形式は以下の通りです。</p>
+<table class="doxtable">
+<tr>
+<th>指定名称</th><th>コード形式</th><th>備考 </th></tr>
+<tr>
+<td>EAN13</td><td>EANコード標準</td><td>13桁 </td></tr>
+<tr>
+<td>EAN8</td><td>EANコード短縮</td><td>8桁 </td></tr>
+<tr>
+<td>UPCA</td><td>UPC-Aコード</td><td>12桁 </td></tr>
+<tr>
+<td>UPCE</td><td>UPC-Eコード</td><td>6桁 </td></tr>
+<tr>
+<td>ITF</td><td>ITFコード</td><td>偶数桁 </td></tr>
+<tr>
+<td>CODE39</td><td>CODE39コード</td><td>アルファベット/一部記号可 </td></tr>
+<tr>
+<td>CODABAR</td><td>CODABAR(NW-7)コード</td><td>A-Dのスタートストップコードが必要 </td></tr>
+</table>
+<p>なお、"EAN","JAN13","JAN"が"EAN13"の別名として、"JAN8"が"EAN8"の別名として、"ITF14"が"ITF"の別名として用いることができます。</p>
+<p><code>barcode</code> タグには、描画位置指定の <code>x</code> , <code>y</code> , <code>width</code> , <code>height</code> , <code>align</code> 属性が指定できる他、次の属性を指定することができます。 </p>
+<table class="doxtable">
+<tr>
+<th>属性名</th><th>意味</th><th>例</th><th>備考 </th></tr>
+<tr>
+<td>type</td><td>バーコード種類</td><td>type="JAN8"</td><td></td></tr>
+<tr>
+<td>font</td><td>コード内文字表示用フォント</td><td>font="small"</td><td>widthまたはheightが指定された際は指定した文字サイズにはならない </td></tr>
+<tr>
+<td>startstoptext</td><td>スタートストップテキスト表示</td><td>startstoptext="yes"</td><td>CODE39およびCODABARで有効 </td></tr>
+<tr>
+<td>notext</td><td>コード文字表示無し</td><td>notext="yes"</td><td></td></tr>
+<tr>
+<td>toptext</td><td>コード文字を上に表示</td><td>toptext="yes"</td><td></td></tr>
+<tr>
+<td>alttext</td><td>コード文字として表示する文字列</td><td>alttext="02-{list.商品コード}-00"</td><td><code>{<em>項目名</em>}</code>による外部データ項目を指定可 </td></tr>
+</table>
+<p><code>width</code> 属性または <code>height</code> 属性で描画の大きさを指定した場合、（文字表示部分を含めた）バーコードイメージを指定した大きさに拡大／縮小します。 このとき、縦横比は保持されません。</p>
+<p>指定したコード種類では表示できないコードが与えられた場合（EAN8コードなのに8桁の数値ではない、CODABARなのに'A'〜'D'のスタートストップコードがついていない、など）、コード文字列そのものが描画されます。</p>
+<p>コードが空（一文字もない）場合には、全く何も描画されません。 </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="index.html">index</a></li><li class="navelem"><a class="el" href="PDF_xE5_xB8_xB3_xE7_xA5_xA8_xE7_x94_x9F_xE6_x88_x90_xE3_x82_xB7_xE3_x82_xB9_xE3_x83_x86_xE3_x83_0c0cb9027cd8211d527ea2b3c0c75b6c.html">PDF帳票生成システム利用サンプル</a></li>
+    <li class="footer">PDFReportに対してWed Jun 27 2018 17:45:49に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

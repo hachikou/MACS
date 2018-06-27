@@ -1,0 +1,688 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.Core: クラス MACS.OpeLog</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.Core
+   </div>
+   <div id="projectbrief">Miscellaneous Assets for C-Sharp</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classMACS_1_1OpeLog.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 型</a> &#124;
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-static-methods">Static Public メソッド</a> &#124;
+<a href="classMACS_1_1OpeLog-members.html">すべてのメンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス MACS.OpeLog</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>操作ログファイルを取り扱うオブジェクト  
+ <a href="classMACS_1_1OpeLog.html#details">[詳細]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 型</h2></td></tr>
+<tr class="memitem:a12582f7db7d31a97097e24e02d5bbb6d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">Level</a> { <br/>
+&#160;&#160;<a class="el" href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">DEBUG</a>, 
+<a class="el" href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">INFO</a>, 
+<a class="el" href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">NOTICE</a>, 
+<a class="el" href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">WARNING</a>, 
+<br/>
+&#160;&#160;<a class="el" href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">ERR</a>, 
+<a class="el" href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">CRIT</a>, 
+<a class="el" href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">ALERT</a>, 
+<a class="el" href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">EMERG</a>
+<br/>
+ }</td></tr>
+<tr class="memdesc:a12582f7db7d31a97097e24e02d5bbb6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ログレベル  <a href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">[詳細]</a><br/></td></tr>
+<tr class="separator:a12582f7db7d31a97097e24e02d5bbb6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr class="memitem:a48c02a9b7cc969646c663b29d0e1b339"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1OpeLog.html#a48c02a9b7cc969646c663b29d0e1b339">OpeLog</a> (string filename)</td></tr>
+<tr class="memdesc:a48c02a9b7cc969646c663b29d0e1b339"><td class="mdescLeft">&#160;</td><td class="mdescRight">操作ログファイルオブジェクトを生成する。  <a href="#a48c02a9b7cc969646c663b29d0e1b339"></a><br/></td></tr>
+<tr class="separator:a48c02a9b7cc969646c663b29d0e1b339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4fead25006c2385ecb1d0a60bd5e268"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1OpeLog.html#af4fead25006c2385ecb1d0a60bd5e268">OpeLog</a> (string filename, Encoding enc, int rotatesize, int ages)</td></tr>
+<tr class="memdesc:af4fead25006c2385ecb1d0a60bd5e268"><td class="mdescLeft">&#160;</td><td class="mdescRight">操作ログファイルオブジェクトを生成する。  <a href="#af4fead25006c2385ecb1d0a60bd5e268"></a><br/></td></tr>
+<tr class="separator:af4fead25006c2385ecb1d0a60bd5e268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14a3cba237255643fb44a95bd4dbd883"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1OpeLog.html#a14a3cba237255643fb44a95bd4dbd883">SetLevel</a> (<a class="el" href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">Level</a> lv)</td></tr>
+<tr class="memdesc:a14a3cba237255643fb44a95bd4dbd883"><td class="mdescLeft">&#160;</td><td class="mdescRight">記録するログレベルを指定する。 指定したレベル以上のログメッセージがログファイルに記録される。  <a href="#a14a3cba237255643fb44a95bd4dbd883"></a><br/></td></tr>
+<tr class="separator:a14a3cba237255643fb44a95bd4dbd883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7994f7e7e00aca2b315e90060c7aa26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1OpeLog.html#af7994f7e7e00aca2b315e90060c7aa26">SetLevel</a> (string lv)</td></tr>
+<tr class="memdesc:af7994f7e7e00aca2b315e90060c7aa26"><td class="mdescLeft">&#160;</td><td class="mdescRight">記録するログレベルを指定する。 指定したレベル以上のログメッセージがログファイルに記録される。  <a href="#af7994f7e7e00aca2b315e90060c7aa26"></a><br/></td></tr>
+<tr class="separator:af7994f7e7e00aca2b315e90060c7aa26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a552c930affcd374f0a3dbb78943a6735"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">Level</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1OpeLog.html#a552c930affcd374f0a3dbb78943a6735">GetLevel</a> ()</td></tr>
+<tr class="memdesc:a552c930affcd374f0a3dbb78943a6735"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在のログレベルを返す  <a href="#a552c930affcd374f0a3dbb78943a6735"></a><br/></td></tr>
+<tr class="separator:a552c930affcd374f0a3dbb78943a6735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad990552d33b2a1de02f6e732f997d3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1OpeLog.html#aad990552d33b2a1de02f6e732f997d3c">SetConsoleLevel</a> (<a class="el" href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">Level</a> lv)</td></tr>
+<tr class="memdesc:aad990552d33b2a1de02f6e732f997d3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンソール出力するログレベルを指定する。 指定したレベル以上のログメッセージがコンソールに出力される。  <a href="#aad990552d33b2a1de02f6e732f997d3c"></a><br/></td></tr>
+<tr class="separator:aad990552d33b2a1de02f6e732f997d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3e8270ad6f628cf7c622524113489e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1OpeLog.html#ad3e8270ad6f628cf7c622524113489e2">SetConsoleLevel</a> (string lv)</td></tr>
+<tr class="memdesc:ad3e8270ad6f628cf7c622524113489e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンソール出力するログレベルを指定する。 指定したレベル以上のログメッセージがコンソールに出力される。  <a href="#ad3e8270ad6f628cf7c622524113489e2"></a><br/></td></tr>
+<tr class="separator:ad3e8270ad6f628cf7c622524113489e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2f6f02d408d93ca1d2666de9ce5cab9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1OpeLog.html#ab2f6f02d408d93ca1d2666de9ce5cab9">Log</a> (string category, <a class="el" href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">Level</a> lv, string msg, bool ignoreNewLine=true)</td></tr>
+<tr class="memdesc:ab2f6f02d408d93ca1d2666de9ce5cab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">ログを追記する  <a href="#ab2f6f02d408d93ca1d2666de9ce5cab9"></a><br/></td></tr>
+<tr class="separator:ab2f6f02d408d93ca1d2666de9ce5cab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeaba65a42d163e245c05b5712054134"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1OpeLog.html#adeaba65a42d163e245c05b5712054134">Log</a> (string category, <a class="el" href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">Level</a> lv, string msg, params object[] objs)</td></tr>
+<tr class="memdesc:adeaba65a42d163e245c05b5712054134"><td class="mdescLeft">&#160;</td><td class="mdescRight">ログを追記する  <a href="#adeaba65a42d163e245c05b5712054134"></a><br/></td></tr>
+<tr class="separator:adeaba65a42d163e245c05b5712054134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8648f597874f7d1e5f273a37e4b5e67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1OpeLog.html#ae8648f597874f7d1e5f273a37e4b5e67">Rotate</a> ()</td></tr>
+<tr class="memdesc:ae8648f597874f7d1e5f273a37e4b5e67"><td class="mdescLeft">&#160;</td><td class="mdescRight">ローテートする  <a href="#ae8648f597874f7d1e5f273a37e4b5e67"></a><br/></td></tr>
+<tr class="separator:ae8648f597874f7d1e5f273a37e4b5e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48d2e7fa71c8e8d8623218f101f22137"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1OpeLog.html#a48d2e7fa71c8e8d8623218f101f22137">SetRotateSize</a> (int sz)</td></tr>
+<tr class="memdesc:a48d2e7fa71c8e8d8623218f101f22137"><td class="mdescLeft">&#160;</td><td class="mdescRight">ローテーションサイズをセットする。 単位はkilobyte。  <a href="#a48d2e7fa71c8e8d8623218f101f22137"></a><br/></td></tr>
+<tr class="separator:a48d2e7fa71c8e8d8623218f101f22137"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a924d842440453f482970edce85028deb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1OpeLog.html#a924d842440453f482970edce85028deb">GetRotateSize</a> ()</td></tr>
+<tr class="memdesc:a924d842440453f482970edce85028deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">ローテーションサイズを獲得する。  <a href="#a924d842440453f482970edce85028deb"></a><br/></td></tr>
+<tr class="separator:a924d842440453f482970edce85028deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c8b658eb5b909024e0adb5b69989db9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1OpeLog.html#a2c8b658eb5b909024e0adb5b69989db9">SetRotateAges</a> (int ages)</td></tr>
+<tr class="memdesc:a2c8b658eb5b909024e0adb5b69989db9"><td class="mdescLeft">&#160;</td><td class="mdescRight">ローテーション世代数をセットする。  <a href="#a2c8b658eb5b909024e0adb5b69989db9"></a><br/></td></tr>
+<tr class="separator:a2c8b658eb5b909024e0adb5b69989db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a923831cc453091f3f1d93dfe1eb4797a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1OpeLog.html#a923831cc453091f3f1d93dfe1eb4797a">GetRotateAges</a> ()</td></tr>
+<tr class="memdesc:a923831cc453091f3f1d93dfe1eb4797a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ローテーション世代数を獲得する。  <a href="#a923831cc453091f3f1d93dfe1eb4797a"></a><br/></td></tr>
+<tr class="separator:a923831cc453091f3f1d93dfe1eb4797a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd0bfe0c852cc4a41be83149eef843d8"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1OpeLog.html#afd0bfe0c852cc4a41be83149eef843d8">GetFileName</a> ()</td></tr>
+<tr class="memdesc:afd0bfe0c852cc4a41be83149eef843d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">ログファイル名を獲得する。  <a href="#afd0bfe0c852cc4a41be83149eef843d8"></a><br/></td></tr>
+<tr class="separator:afd0bfe0c852cc4a41be83149eef843d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc10ad657ffa86c4ab0dde039cbd9d56"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1OpeLog.html#adc10ad657ffa86c4ab0dde039cbd9d56">GetFileName</a> (int n)</td></tr>
+<tr class="memdesc:adc10ad657ffa86c4ab0dde039cbd9d56"><td class="mdescLeft">&#160;</td><td class="mdescRight">過去ログファイル名を獲得する。  <a href="#adc10ad657ffa86c4ab0dde039cbd9d56"></a><br/></td></tr>
+<tr class="separator:adc10ad657ffa86c4ab0dde039cbd9d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public メソッド</h2></td></tr>
+<tr class="memitem:afcc020d7d6ae0d16c843347dbb80d480"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">Level</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1OpeLog.html#afcc020d7d6ae0d16c843347dbb80d480">GetLevel</a> (string str)</td></tr>
+<tr class="memdesc:afcc020d7d6ae0d16c843347dbb80d480"><td class="mdescLeft">&#160;</td><td class="mdescRight">レベル指定文字列からレベルを獲得する。  <a href="#afcc020d7d6ae0d16c843347dbb80d480"></a><br/></td></tr>
+<tr class="separator:afcc020d7d6ae0d16c843347dbb80d480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">説明</h2>
+<div class="textblock"><p>操作ログファイルを取り扱うオブジェクト </p>
+
+<p> <a class="el" href="OpeLog_8cs_source.html">OpeLog.cs</a> の <a class="el" href="OpeLog_8cs_source.html#l00019">19</a> 行で定義されています。</p>
+</div><h2 class="groupheader">列挙型</h2>
+<a class="anchor" id="a12582f7db7d31a97097e24e02d5bbb6d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">MACS.OpeLog.Level</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ログレベル </p>
+<dl><dt><b>列挙型の値: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a12582f7db7d31a97097e24e02d5bbb6d"></a>DEBUG</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a12582f7db7d31a97097e24e02d5bbb6d"></a>INFO</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a12582f7db7d31a97097e24e02d5bbb6d"></a>NOTICE</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a12582f7db7d31a97097e24e02d5bbb6d"></a>WARNING</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a12582f7db7d31a97097e24e02d5bbb6d"></a>ERR</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a12582f7db7d31a97097e24e02d5bbb6d"></a>CRIT</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a12582f7db7d31a97097e24e02d5bbb6d"></a>ALERT</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a12582f7db7d31a97097e24e02d5bbb6d"></a>EMERG</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p> <a class="el" href="OpeLog_8cs_source.html">OpeLog.cs</a> の <a class="el" href="OpeLog_8cs_source.html#l00024">24</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">コンストラクタとデストラクタ</h2>
+<a class="anchor" id="a48c02a9b7cc969646c663b29d0e1b339"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.OpeLog.OpeLog </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>操作ログファイルオブジェクトを生成する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>ログファイル名（ディレクトリ名付き） </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>エンコーディングはデフォルト, ファイルサイズは1000kbytes, 保存世代数は9。 </p>
+
+<p> <a class="el" href="OpeLog_8cs_source.html">OpeLog.cs</a> の <a class="el" href="OpeLog_8cs_source.html#l00053">53</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af4fead25006c2385ecb1d0a60bd5e268"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.OpeLog.OpeLog </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoding&#160;</td>
+          <td class="paramname"><em>enc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rotatesize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ages</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>操作ログファイルオブジェクトを生成する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>ログファイル名（ディレクトリ名付き） </td></tr>
+    <tr><td class="paramname">enc</td><td>エンコーディング（null=デフォルト）</td></tr>
+    <tr><td class="paramname">rotatesize</td><td>ファイルサイズ（kbytes）</td></tr>
+    <tr><td class="paramname">ages</td><td>保存世代数</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>ファイルサイズが0以下の時には無制限として扱われる。 保存世代数の最大は99。それ以上を指定しても99として扱われる。 保存世代数が0以下の時には過去ログは保存されない。 </p>
+
+<p> <a class="el" href="OpeLog_8cs_source.html">OpeLog.cs</a> の <a class="el" href="OpeLog_8cs_source.html#l00080">80</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド</h2>
+<a class="anchor" id="a14a3cba237255643fb44a95bd4dbd883"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.OpeLog.SetLevel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">Level</a>&#160;</td>
+          <td class="paramname"><em>lv</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>記録するログレベルを指定する。 指定したレベル以上のログメッセージがログファイルに記録される。 </p>
+
+<p> <a class="el" href="OpeLog_8cs_source.html">OpeLog.cs</a> の <a class="el" href="OpeLog_8cs_source.html#l00097">97</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="OpeLog_8cs_source.html#l00107">MACS.OpeLog.SetLevel()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af7994f7e7e00aca2b315e90060c7aa26"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.OpeLog.SetLevel </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>lv</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>記録するログレベルを指定する。 指定したレベル以上のログメッセージがログファイルに記録される。 </p>
+
+<p> <a class="el" href="OpeLog_8cs_source.html">OpeLog.cs</a> の <a class="el" href="OpeLog_8cs_source.html#l00107">107</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a552c930affcd374f0a3dbb78943a6735"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">Level</a> MACS.OpeLog.GetLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>現在のログレベルを返す </p>
+
+<p> <a class="el" href="OpeLog_8cs_source.html">OpeLog.cs</a> の <a class="el" href="OpeLog_8cs_source.html#l00114">114</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="OpeLog_8cs_source.html#l00132">MACS.OpeLog.SetConsoleLevel()</a>, と <a class="el" href="OpeLog_8cs_source.html#l00107">MACS.OpeLog.SetLevel()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aad990552d33b2a1de02f6e732f997d3c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.OpeLog.SetConsoleLevel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">Level</a>&#160;</td>
+          <td class="paramname"><em>lv</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンソール出力するログレベルを指定する。 指定したレベル以上のログメッセージがコンソールに出力される。 </p>
+
+<p> <a class="el" href="OpeLog_8cs_source.html">OpeLog.cs</a> の <a class="el" href="OpeLog_8cs_source.html#l00122">122</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="OpeLog_8cs_source.html#l00132">MACS.OpeLog.SetConsoleLevel()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad3e8270ad6f628cf7c622524113489e2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.OpeLog.SetConsoleLevel </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>lv</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンソール出力するログレベルを指定する。 指定したレベル以上のログメッセージがコンソールに出力される。 </p>
+
+<p> <a class="el" href="OpeLog_8cs_source.html">OpeLog.cs</a> の <a class="el" href="OpeLog_8cs_source.html#l00132">132</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="afcc020d7d6ae0d16c843347dbb80d480"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">Level</a> MACS.OpeLog.GetLevel </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>レベル指定文字列からレベルを獲得する。 </p>
+
+<p> <a class="el" href="OpeLog_8cs_source.html">OpeLog.cs</a> の <a class="el" href="OpeLog_8cs_source.html#l00139">139</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab2f6f02d408d93ca1d2666de9ce5cab9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.OpeLog.Log </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>category</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">Level</a>&#160;</td>
+          <td class="paramname"><em>lv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>ignoreNewLine</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ログを追記する </p>
+
+<p> <a class="el" href="OpeLog_8cs_source.html">OpeLog.cs</a> の <a class="el" href="OpeLog_8cs_source.html#l00152">152</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="NThread_8cs_source.html#l00576">MACS.NThread.DumpAll()</a>, <a class="el" href="OpeLog_8cs_source.html#l00191">MACS.OpeLog.Log()</a>, <a class="el" href="Loggable_8cs_source.html#l00028">MACS.Loggable.LOG_ALERT()</a>, <a class="el" href="StaticLoggable_8cs_source.html#l00030">MACS.StaticLoggable.LOG_ALERT()</a>, <a class="el" href="Loggable_8cs_source.html#l00036">MACS.Loggable.LOG_CRIT()</a>, <a class="el" href="StaticLoggable_8cs_source.html#l00038">MACS.StaticLoggable.LOG_CRIT()</a>, <a class="el" href="Loggable_8cs_source.html#l00076">MACS.Loggable.LOG_DEBUG()</a>, <a class="el" href="StaticLoggable_8cs_source.html#l00078">MACS.StaticLoggable.LOG_DEBUG()</a>, <a class="el" href="Loggable_8cs_source.html#l00020">MACS.Loggable.LOG_EMERG()</a>, <a class="el" href="StaticLoggable_8cs_source.html#l00022">MACS.StaticLoggable.LOG_EMERG()</a>, <a class="el" href="Loggable_8cs_source.html#l00044">MACS.Loggable.LOG_ERR()</a>, <a class="el" href="StaticLoggable_8cs_source.html#l00046">MACS.StaticLoggable.LOG_ERR()</a>, <a class="el" href="Loggable_8cs_source.html#l00084">MACS.Loggable.LOG_EXCEPTION()</a>, <a class="el" href="StaticLoggable_8cs_source.html#l00086">MACS.StaticLoggable.LOG_EXCEPTION()</a>, <a class="el" href="Loggable_8cs_source.html#l00068">MACS.Loggable.LOG_INFO()</a>, <a class="el" href="StaticLoggable_8cs_source.html#l00070">MACS.StaticLoggable.LOG_INFO()</a>, <a class="el" href="Loggable_8cs_source.html#l00060">MACS.Loggable.LOG_NOTICE()</a>, <a class="el" href="StaticLoggable_8cs_source.html#l00062">MACS.StaticLoggable.LOG_NOTICE()</a>, <a class="el" href="Loggable_8cs_source.html#l00052">MACS.Loggable.LOG_WARNING()</a>, <a class="el" href="StaticLoggable_8cs_source.html#l00054">MACS.StaticLoggable.LOG_WARNING()</a>, と <a class="el" href="OpeLog_8cs_source.html#l00198">MACS.OpeLog.Rotate()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adeaba65a42d163e245c05b5712054134"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.OpeLog.Log </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>category</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1OpeLog.html#a12582f7db7d31a97097e24e02d5bbb6d">Level</a>&#160;</td>
+          <td class="paramname"><em>lv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>objs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ログを追記する </p>
+
+<p> <a class="el" href="OpeLog_8cs_source.html">OpeLog.cs</a> の <a class="el" href="OpeLog_8cs_source.html#l00191">191</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae8648f597874f7d1e5f273a37e4b5e67"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.OpeLog.Rotate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ローテートする </p>
+
+<p> <a class="el" href="OpeLog_8cs_source.html">OpeLog.cs</a> の <a class="el" href="OpeLog_8cs_source.html#l00198">198</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="OpeLog_8cs_source.html#l00152">MACS.OpeLog.Log()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a48d2e7fa71c8e8d8623218f101f22137"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.OpeLog.SetRotateSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sz</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ローテーションサイズをセットする。 単位はkilobyte。 </p>
+<p>ファイルサイズが0以下の時には無制限として扱われる。 </p>
+
+<p> <a class="el" href="OpeLog_8cs_source.html">OpeLog.cs</a> の <a class="el" href="OpeLog_8cs_source.html#l00228">228</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a924d842440453f482970edce85028deb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.OpeLog.GetRotateSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ローテーションサイズを獲得する。 </p>
+
+<p> <a class="el" href="OpeLog_8cs_source.html">OpeLog.cs</a> の <a class="el" href="OpeLog_8cs_source.html#l00237">237</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a2c8b658eb5b909024e0adb5b69989db9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.OpeLog.SetRotateAges </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ages</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ローテーション世代数をセットする。 </p>
+<p>保存世代数の最大は99。それ以上を指定しても99として扱われる。 保存世代数が0以下の時には過去ログは保存されない。 既に指定した世代数以上の過去ログファイルがある場合には削除される。 </p>
+
+<p> <a class="el" href="OpeLog_8cs_source.html">OpeLog.cs</a> の <a class="el" href="OpeLog_8cs_source.html#l00251">251</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a923831cc453091f3f1d93dfe1eb4797a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.OpeLog.GetRotateAges </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ローテーション世代数を獲得する。 </p>
+
+<p> <a class="el" href="OpeLog_8cs_source.html">OpeLog.cs</a> の <a class="el" href="OpeLog_8cs_source.html#l00261">261</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="afd0bfe0c852cc4a41be83149eef843d8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.OpeLog.GetFileName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ログファイル名を獲得する。 </p>
+
+<p> <a class="el" href="OpeLog_8cs_source.html">OpeLog.cs</a> の <a class="el" href="OpeLog_8cs_source.html#l00268">268</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="adc10ad657ffa86c4ab0dde039cbd9d56"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.OpeLog.GetFileName </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>過去ログファイル名を獲得する。 </p>
+
+<p> <a class="el" href="OpeLog_8cs_source.html">OpeLog.cs</a> の <a class="el" href="OpeLog_8cs_source.html#l00275">275</a> 行で定義されています。</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="OpeLog_8cs_source.html">OpeLog.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceMACS.html">MACS</a></li><li class="navelem"><a class="el" href="classMACS_1_1OpeLog.html">OpeLog</a></li>
+    <li class="footer">MACS.Coreに対してWed Jun 27 2018 17:45:44に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

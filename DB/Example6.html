@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.DB: 検索結果の獲得いろいろ</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.DB
+   </div>
+   <div id="projectbrief">SQL Database Access Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('Example6.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">検索結果の獲得いろいろ </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Example6.cs: </p>
+<div class="fragment"><div class="line">﻿<span class="comment">/*! @file Example6.cs</span></div>
+<div class="line"><span class="comment"> * $Id: Example6.cs 1890 2014-06-05 04:34:56Z shibuya $</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Copyright (C) 2008-2012 Microbrains Inc.</span></div>
+<div class="line"><span class="comment"> * All Rights Reserved.</span></div>
+<div class="line"><span class="comment"> * This code was designed and coded by SHIBUYA K.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">using</span> System;</div>
+<div class="line"><span class="keyword">using</span> System.Collections.Generic;</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">class </span><a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classProgram.html">Program</a> {</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classProgram.html#afcfdd245ac54647c4931389fa84f5693">Main</a>(<span class="keywordtype">string</span>[] args) {</div>
+<div class="line"></div>
+<div class="line">        IniFile conf = <span class="keyword">new</span> IniFile(<span class="stringliteral">&quot;Example.ini&quot;</span>);</div>
+<div class="line">        DBCon.UseConsoleLog = <span class="keyword">true</span>;</div>
+<div class="line">        DBTableDef.LoadAll(<span class="stringliteral">&quot;tabledef&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">        <span class="keyword">using</span>(DBCon db = <span class="keyword">new</span> DBCon(conf)) {</div>
+<div class="line"></div>
+<div class="line">            DBTable tbl = <span class="keyword">new</span> DBTable(db, <span class="stringliteral">&quot;サンプルテーブル&quot;</span>);</div>
+<div class="line">            tbl.SetColumns(<span class="stringliteral">&quot;名前&quot;</span>, <span class="stringliteral">&quot;電話番号&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// 結果を1件だけ抽出する</span></div>
+<div class="line">            DataArray rec = tbl.GetRecordData(<span class="stringliteral">&quot;ID&quot;</span>, 1);</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// 上記は以下のコードと同じ動作をする</span></div>
+<div class="line">            <span class="comment">// tbl.SetCondition(&quot;ID&quot;, 1);</span></div>
+<div class="line">            <span class="comment">// List&lt;DataArray&gt; recs = tbl.GetData(1);</span></div>
+<div class="line">            <span class="comment">// DataArray rec;</span></div>
+<div class="line">            <span class="comment">// if(recs.Count &gt; 0)</span></div>
+<div class="line">            <span class="comment">//     rec = recs[0];</span></div>
+<div class="line">            <span class="comment">// else</span></div>
+<div class="line">            <span class="comment">//     rec = null;</span></div>
+<div class="line"></div>
+<div class="line">            Console.WriteLine(<span class="stringliteral">&quot;なまえ:{0}、でんわ:{1}&quot;</span>, rec[<span class="stringliteral">&quot;名前&quot;</span>], rec[<span class="stringliteral">&quot;電話番号&quot;</span>]);</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// 該当件数だけを獲得する</span></div>
+<div class="line">            tbl.SetCondition(DBCondition.Code.GreaterOrEqual, <span class="stringliteral">&quot;ID&quot;</span>, 100);</div>
+<div class="line">            <span class="keywordtype">int</span> n = tbl.GetCount();</div>
+<div class="line">            Console.WriteLine(<span class="stringliteral">&quot;該当件数は{0}&quot;</span>, n);</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// 該当件数が巨大であることが見込まれる場合の処理方法</span></div>
+<div class="line">            tbl.SetCondition(DBCondition.Code.GreaterThan, <span class="stringliteral">&quot;ID&quot;</span>, 0);</div>
+<div class="line">            <span class="keyword">using</span>(DBReader reader = tbl.Query(0,0)) {</div>
+<div class="line">                <span class="keywordtype">string</span>[] val;</div>
+<div class="line">                <span class="keywordflow">while</span>((val = reader.Get()) != null) {</div>
+<div class="line">                    rec = <span class="keyword">new</span> DataArray(tbl.Columns, val);</div>
+<div class="line">                    Console.WriteLine(<span class="stringliteral">&quot;なまえ:{0}、でんわ:{1}&quot;</span>, rec[<span class="stringliteral">&quot;名前&quot;</span>], rec[<span class="stringliteral">&quot;電話番号&quot;</span>]);</div>
+<div class="line">                }</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">return</span> 0;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>実行結果の例: </p>
+<pre class="fragment">mydb: Open Server=192.168.10.125;Database=mydb;Uid=myuser;Pwd=mypass;CharSet=utf8
+mydb: SELECT 名前,電話番号 FROM サンプルテーブル WHERE ID=1 LIMIT 1 OFFSET 0
+なまえ:テスト一郎、でんわ:03-4567-8901
+mydb: SELECT COUNT(1) FROM サンプルテーブル WHERE ID&gt;=100
+該当件数は3
+mydb: SELECT 名前,電話番号 FROM サンプルテーブル WHERE ID&gt;0
+なまえ:テスト一郎、でんわ:03-4567-8901
+なまえ:テスト次郎、でんわ:03-4444-5555
+なまえ:テスト三郎、でんわ:03-6666-7777
+なまえ:山田太郎、でんわ:
+なまえ:山田花子、でんわ:090-0000-1111
+なまえ:鈴木一郎、でんわ:090-9876-5432
+mydb: Closed.
+</pre><p>検索結果が1件しか必要ないという事がしばしば発生します。 そのようなケースの際には DBTable.GetRecordData() を使うと便利です。 DBTable.GetRecordData() は引数で等値条件を1項目から3項目まで指定できます。</p>
+<p>等値条件以外の場合は、 DBTable.SetCondition() と DBTable.GetOneData() を組み合わせて使って下さい。</p>
+<p>該当件数だけが必要な場合は、 DBTable.GetCount() を使います。 この場合、対象カラム指定はする必要がありません。（しても無視されます。）</p>
+<p>Example4の説明のところで説明した通り、 DBTable.GetData() は検索結果を全て取り込んでリストを作成するため、検索結果が膨大な量になる場合にはメモリ使用量が膨大になってしまいます。 このような場合には、データを1件ずつ取り込んで処理をする必要があります。 DBTable.Query() を使うと、検索のカーソルを作成して DBReader オブジェクトを得ることができます。 DBReader.Read() または DBReader.Get() を使うと、データを1件ずつ取り出して処理をすることができます。 </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="index.html">index</a></li><li class="navelem"><a class="el" href="DB_xE3_x82_x92_xE4_xBD_xBF_xE3_x81_xA3_xE3_x81_x9F_xE3_x83_x87_xE3_x83_xBC_xE3_x82_xBF_xE3_x83_xecb51fe6fcb759ae61f839d5c92dd895.html">DBを使ったデータベースアクセスプログラム作成例</a></li>
+    <li class="footer">MACS.DBに対してWed Jun 27 2018 17:45:48に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

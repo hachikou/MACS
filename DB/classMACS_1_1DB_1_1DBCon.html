@@ -1,0 +1,1677 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.DB: クラス MACS.DB.DBCon</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.DB
+   </div>
+   <div id="projectbrief">SQL Database Access Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classMACS_1_1DB_1_1DBCon.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 型</a> &#124;
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-static-methods">Static Public メソッド</a> &#124;
+<a href="#pub-attribs">Public 変数</a> &#124;
+<a href="#pub-static-attribs">Static Public 変数</a> &#124;
+<a href="#pro-methods">Protected メソッド</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="classMACS_1_1DB_1_1DBCon-members.html">すべてのメンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス MACS.DB.DBCon</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>DB接続を取り扱うクラス。 ADO.NETのDbConnectをもっと簡便に扱えるようにラッピングしたもの。  
+ <a href="classMACS_1_1DB_1_1DBCon.html#details">[詳細]</a></p>
+<div class="dynheader">
+MACS.DB.DBConに対する継承グラフ</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classMACS_1_1DB_1_1DBCon.png" usemap="#MACS.DB.DBCon_map" alt=""/>
+  <map id="MACS.DB.DBCon_map" name="MACS.DB.DBCon_map">
+<area doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html" alt="MACS::Loggable" shape="rect" coords="0,0,114,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 型</h2></td></tr>
+<tr class="memitem:ad7b8c61d79c82716809c2ec3ecd2c822"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#ad7b8c61d79c82716809c2ec3ecd2c822">Type</a> { <a class="el" href="classMACS_1_1DB_1_1DBCon.html#ad7b8c61d79c82716809c2ec3ecd2c822">Invalid</a>, 
+<a class="el" href="classMACS_1_1DB_1_1DBCon.html#ad7b8c61d79c82716809c2ec3ecd2c822">MySQL</a>, 
+<a class="el" href="classMACS_1_1DB_1_1DBCon.html#ad7b8c61d79c82716809c2ec3ecd2c822">Oracle</a>, 
+<a class="el" href="classMACS_1_1DB_1_1DBCon.html#ad7b8c61d79c82716809c2ec3ecd2c822">PostgreSQL</a>
+ }</td></tr>
+<tr class="memdesc:ad7b8c61d79c82716809c2ec3ecd2c822"><td class="mdescLeft">&#160;</td><td class="mdescRight">DBの種類  <a href="classMACS_1_1DB_1_1DBCon.html#ad7b8c61d79c82716809c2ec3ecd2c822">[詳細]</a><br/></td></tr>
+<tr class="separator:ad7b8c61d79c82716809c2ec3ecd2c822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr class="memitem:ab680d964a420944e3afead564f8052bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#ab680d964a420944e3afead564f8052bd">DBCon</a> (<a class="el" href="classMACS_1_1DB_1_1DBCon.html#ad7b8c61d79c82716809c2ec3ecd2c822">Type</a> dbtype_, string server, string dbname_, string user, string passwd)</td></tr>
+<tr class="memdesc:ab680d964a420944e3afead564f8052bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">DBと接続する。  <a href="#ab680d964a420944e3afead564f8052bd"></a><br/></td></tr>
+<tr class="separator:ab680d964a420944e3afead564f8052bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad55a8763cba92a0ab9f0981ad42f4632"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#ad55a8763cba92a0ab9f0981ad42f4632">DBCon</a> (<a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1IniFile.html">IniFile</a> inifile, string prefix=&quot;db&quot;)</td></tr>
+<tr class="memdesc:ad55a8763cba92a0ab9f0981ad42f4632"><td class="mdescLeft">&#160;</td><td class="mdescRight">INIファイルの設定に従ってDBと接続する  <a href="#ad55a8763cba92a0ab9f0981ad42f4632"></a><br/></td></tr>
+<tr class="separator:ad55a8763cba92a0ab9f0981ad42f4632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79a1f6ba9ef06b274e0a06851a155b37"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a79a1f6ba9ef06b274e0a06851a155b37">DBCon</a> (<a class="el" href="classMACS_1_1DB_1_1DBConPool.html">DBConPool</a> pool_)</td></tr>
+<tr class="memdesc:a79a1f6ba9ef06b274e0a06851a155b37"><td class="mdescLeft">&#160;</td><td class="mdescRight">DBConPoolの接続を使ってDBConを作成する  <a href="#a79a1f6ba9ef06b274e0a06851a155b37"></a><br/></td></tr>
+<tr class="separator:a79a1f6ba9ef06b274e0a06851a155b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afde928559d97fe64cadef5d0460ecac4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#afde928559d97fe64cadef5d0460ecac4">DBCon</a> ()</td></tr>
+<tr class="memdesc:afde928559d97fe64cadef5d0460ecac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">DB接続を持たないダミーのDBConを作成する  <a href="#afde928559d97fe64cadef5d0460ecac4"></a><br/></td></tr>
+<tr class="separator:afde928559d97fe64cadef5d0460ecac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6806ab1dc10cbd70d4dd5287680e5951"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a6806ab1dc10cbd70d4dd5287680e5951">Dispose</a> ()</td></tr>
+<tr class="memdesc:a6806ab1dc10cbd70d4dd5287680e5951"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用リソースを解放する。  <a href="#a6806ab1dc10cbd70d4dd5287680e5951"></a><br/></td></tr>
+<tr class="separator:a6806ab1dc10cbd70d4dd5287680e5951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33f154a12ffba4eac60809329c19f5a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a33f154a12ffba4eac60809329c19f5a8">Close</a> ()</td></tr>
+<tr class="memdesc:a33f154a12ffba4eac60809329c19f5a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">DB接続を切断する。  <a href="#a33f154a12ffba4eac60809329c19f5a8"></a><br/></td></tr>
+<tr class="separator:a33f154a12ffba4eac60809329c19f5a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab5ce330fd2c9791331a4920bd6424da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1DB_1_1DBReader.html">DBReader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#aab5ce330fd2c9791331a4920bd6424da">Query</a> (string sql)</td></tr>
+<tr class="memdesc:aab5ce330fd2c9791331a4920bd6424da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query発行  <a href="#aab5ce330fd2c9791331a4920bd6424da"></a><br/></td></tr>
+<tr class="separator:aab5ce330fd2c9791331a4920bd6424da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24ecbdfa7962d298ed4bb7db177ed94e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1DB_1_1DBReader.html">DBReader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a24ecbdfa7962d298ed4bb7db177ed94e">Query</a> (StringBuilder sql)</td></tr>
+<tr class="memdesc:a24ecbdfa7962d298ed4bb7db177ed94e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query発行  <a href="#a24ecbdfa7962d298ed4bb7db177ed94e"></a><br/></td></tr>
+<tr class="separator:a24ecbdfa7962d298ed4bb7db177ed94e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace68a3f77e1e1a531527b49f63ef6c2a"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#ace68a3f77e1e1a531527b49f63ef6c2a">QueryString</a> (string sql)</td></tr>
+<tr class="memdesc:ace68a3f77e1e1a531527b49f63ef6c2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">単一結果を返すQuery実行  <a href="#ace68a3f77e1e1a531527b49f63ef6c2a"></a><br/></td></tr>
+<tr class="separator:ace68a3f77e1e1a531527b49f63ef6c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20818be391710f0fd72be32b441af398"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a20818be391710f0fd72be32b441af398">QueryString</a> (StringBuilder sql)</td></tr>
+<tr class="memdesc:a20818be391710f0fd72be32b441af398"><td class="mdescLeft">&#160;</td><td class="mdescRight">単一結果を返すQuery実行  <a href="#a20818be391710f0fd72be32b441af398"></a><br/></td></tr>
+<tr class="separator:a20818be391710f0fd72be32b441af398"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c83cc728bcf9af2f797eb1b033ba61f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a6c83cc728bcf9af2f797eb1b033ba61f">QueryInt</a> (string sql)</td></tr>
+<tr class="memdesc:a6c83cc728bcf9af2f797eb1b033ba61f"><td class="mdescLeft">&#160;</td><td class="mdescRight">単一結果を返すQuery実行（整数版）  <a href="#a6c83cc728bcf9af2f797eb1b033ba61f"></a><br/></td></tr>
+<tr class="separator:a6c83cc728bcf9af2f797eb1b033ba61f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72b14b6c0ac8feb0dccfda509ddfd8d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a72b14b6c0ac8feb0dccfda509ddfd8d5">QueryInt</a> (StringBuilder sql)</td></tr>
+<tr class="memdesc:a72b14b6c0ac8feb0dccfda509ddfd8d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">単一結果を返すQuery実行（整数版）  <a href="#a72b14b6c0ac8feb0dccfda509ddfd8d5"></a><br/></td></tr>
+<tr class="separator:a72b14b6c0ac8feb0dccfda509ddfd8d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2646b8bac70fce449307eca385c597a"><td class="memItemLeft" align="right" valign="top">DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#ae2646b8bac70fce449307eca385c597a">QueryDateTime</a> (string sql)</td></tr>
+<tr class="memdesc:ae2646b8bac70fce449307eca385c597a"><td class="mdescLeft">&#160;</td><td class="mdescRight">単一結果を返すQuery実行（DateTime版）  <a href="#ae2646b8bac70fce449307eca385c597a"></a><br/></td></tr>
+<tr class="separator:ae2646b8bac70fce449307eca385c597a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac29a9f3592a3b44114a147a0181af245"><td class="memItemLeft" align="right" valign="top">DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#ac29a9f3592a3b44114a147a0181af245">QueryDateTime</a> (StringBuilder sql)</td></tr>
+<tr class="memdesc:ac29a9f3592a3b44114a147a0181af245"><td class="mdescLeft">&#160;</td><td class="mdescRight">単一結果を返すQuery実行（DateTime）  <a href="#ac29a9f3592a3b44114a147a0181af245"></a><br/></td></tr>
+<tr class="separator:ac29a9f3592a3b44114a147a0181af245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeda24eacffc553a040b8ad8b726bc889"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#aeda24eacffc553a040b8ad8b726bc889">Execute</a> (string sql)</td></tr>
+<tr class="memdesc:aeda24eacffc553a040b8ad8b726bc889"><td class="mdescLeft">&#160;</td><td class="mdescRight">SQL実行  <a href="#aeda24eacffc553a040b8ad8b726bc889"></a><br/></td></tr>
+<tr class="separator:aeda24eacffc553a040b8ad8b726bc889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26bd989805d2d490ab0dca4a26d93dad"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a26bd989805d2d490ab0dca4a26d93dad">Execute</a> (StringBuilder sql)</td></tr>
+<tr class="memdesc:a26bd989805d2d490ab0dca4a26d93dad"><td class="mdescLeft">&#160;</td><td class="mdescRight">SQL実行  <a href="#a26bd989805d2d490ab0dca4a26d93dad"></a><br/></td></tr>
+<tr class="separator:a26bd989805d2d490ab0dca4a26d93dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f1336aa38b6b44ff059420ad169dd26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a1f1336aa38b6b44ff059420ad169dd26">Begin</a> ()</td></tr>
+<tr class="memdesc:a1f1336aa38b6b44ff059420ad169dd26"><td class="mdescLeft">&#160;</td><td class="mdescRight">トランザクション開始  <a href="#a1f1336aa38b6b44ff059420ad169dd26"></a><br/></td></tr>
+<tr class="separator:a1f1336aa38b6b44ff059420ad169dd26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98a7077205a13e29cb52c04040fe3d3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a98a7077205a13e29cb52c04040fe3d3b">Commit</a> ()</td></tr>
+<tr class="memdesc:a98a7077205a13e29cb52c04040fe3d3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">トランザクションコミット  <a href="#a98a7077205a13e29cb52c04040fe3d3b"></a><br/></td></tr>
+<tr class="separator:a98a7077205a13e29cb52c04040fe3d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af51d7a67ef6e48603e5cda37d3b2e00d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#af51d7a67ef6e48603e5cda37d3b2e00d">Rollback</a> ()</td></tr>
+<tr class="memdesc:af51d7a67ef6e48603e5cda37d3b2e00d"><td class="mdescLeft">&#160;</td><td class="mdescRight">トランザクションロールバック  <a href="#af51d7a67ef6e48603e5cda37d3b2e00d"></a><br/></td></tr>
+<tr class="separator:af51d7a67ef6e48603e5cda37d3b2e00d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0facf762f480ab8cbe67c0d78ea9a6e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a0facf762f480ab8cbe67c0d78ea9a6e9">Execute</a> (string sql, TextWriter w)</td></tr>
+<tr class="memdesc:a0facf762f480ab8cbe67c0d78ea9a6e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">SQLを実行して実行結果をテキストストリームにHumanReadableな形で書き出す  <a href="#a0facf762f480ab8cbe67c0d78ea9a6e9"></a><br/></td></tr>
+<tr class="separator:a0facf762f480ab8cbe67c0d78ea9a6e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a873796a89a841e03c20802bb5ece3044"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a873796a89a841e03c20802bb5ece3044">CreateDatabase</a> (string newname, string user, string password)</td></tr>
+<tr class="memdesc:a873796a89a841e03c20802bb5ece3044"><td class="mdescLeft">&#160;</td><td class="mdescRight">データベースを新たに作る  <a href="#a873796a89a841e03c20802bb5ece3044"></a><br/></td></tr>
+<tr class="separator:a873796a89a841e03c20802bb5ece3044"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5a04fb2952701f4d519eceed5813197"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#ae5a04fb2952701f4d519eceed5813197">GetSize</a> ()</td></tr>
+<tr class="memdesc:ae5a04fb2952701f4d519eceed5813197"><td class="mdescLeft">&#160;</td><td class="mdescRight">データベースのサイズを得る  <a href="#ae5a04fb2952701f4d519eceed5813197"></a><br/></td></tr>
+<tr class="separator:ae5a04fb2952701f4d519eceed5813197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0da7136213cd7ca418e81535fbdd0a8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a0da7136213cd7ca418e81535fbdd0a8e">CopyTable</a> (string src, string dst)</td></tr>
+<tr class="memdesc:a0da7136213cd7ca418e81535fbdd0a8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">テーブルの複製を作成する  <a href="#a0da7136213cd7ca418e81535fbdd0a8e"></a><br/></td></tr>
+<tr class="separator:a0da7136213cd7ca418e81535fbdd0a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2a421d885cc3bdecdadd2eb20b3dac8"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#aa2a421d885cc3bdecdadd2eb20b3dac8">GetColumnNameList</a> (string tblname)</td></tr>
+<tr class="memdesc:aa2a421d885cc3bdecdadd2eb20b3dac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定テーブルのカラム名一覧を得る  <a href="#aa2a421d885cc3bdecdadd2eb20b3dac8"></a><br/></td></tr>
+<tr class="separator:aa2a421d885cc3bdecdadd2eb20b3dac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b087da523368e6c9210d1af3370615f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#a1b087da523368e6c9210d1af3370615f">LOG_EMERG</a> (string msg, params object[] objs)</td></tr>
+<tr class="separator:a1b087da523368e6c9210d1af3370615f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50252d11bef2f336ce5e840e4b9b25c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#a50252d11bef2f336ce5e840e4b9b25c2">LOG_ALERT</a> (string msg, params object[] objs)</td></tr>
+<tr class="separator:a50252d11bef2f336ce5e840e4b9b25c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad887acb38cd24634df0ca3499d98e7c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#ad887acb38cd24634df0ca3499d98e7c8">LOG_CRIT</a> (string msg, params object[] objs)</td></tr>
+<tr class="separator:ad887acb38cd24634df0ca3499d98e7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af713a231c44b784df68890b7ea001153"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#af713a231c44b784df68890b7ea001153">LOG_ERR</a> (string msg, params object[] objs)</td></tr>
+<tr class="separator:af713a231c44b784df68890b7ea001153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e8ce70bcc869f7996904e868f12c23a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#a4e8ce70bcc869f7996904e868f12c23a">LOG_WARNING</a> (string msg, params object[] objs)</td></tr>
+<tr class="separator:a4e8ce70bcc869f7996904e868f12c23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa1a837b35ad4917ff008375d628d8ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#afa1a837b35ad4917ff008375d628d8ef">LOG_NOTICE</a> (string msg, params object[] objs)</td></tr>
+<tr class="separator:afa1a837b35ad4917ff008375d628d8ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2af82eefc7d2b91a8fe52e4a7db6ca5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#a2af82eefc7d2b91a8fe52e4a7db6ca5e">LOG_INFO</a> (string msg, params object[] objs)</td></tr>
+<tr class="separator:a2af82eefc7d2b91a8fe52e4a7db6ca5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18b319f0ae97bbac6108ed0938ba7662"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#a18b319f0ae97bbac6108ed0938ba7662">LOG_DEBUG</a> (string msg, params object[] objs)</td></tr>
+<tr class="separator:a18b319f0ae97bbac6108ed0938ba7662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa934fdf4fd746a8ea328740a6805a3ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#aa934fdf4fd746a8ea328740a6805a3ed">LOG_EXCEPTION</a> (Exception e)</td></tr>
+<tr class="separator:aa934fdf4fd746a8ea328740a6805a3ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d0b356336848258a1c04bc5ddfd4af6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#a5d0b356336848258a1c04bc5ddfd4af6">SetLogger</a> (<a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1OpeLog.html">OpeLog</a> logger_)</td></tr>
+<tr class="separator:a5d0b356336848258a1c04bc5ddfd4af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1129d7aba79f6bf0ba61b50d18d61716"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#a1129d7aba79f6bf0ba61b50d18d61716">SetLogger</a> (string filename, Encoding enc=null, int size=1000, int rotation=9)</td></tr>
+<tr class="separator:a1129d7aba79f6bf0ba61b50d18d61716"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa470b89d1ce59a04539c6521099cf31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#aaa470b89d1ce59a04539c6521099cf31">DisableLogging</a> ()</td></tr>
+<tr class="separator:aaa470b89d1ce59a04539c6521099cf31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace864dc269e9b20cfc4bb17267efcb39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#ace864dc269e9b20cfc4bb17267efcb39">EnableLogging</a> ()</td></tr>
+<tr class="separator:ace864dc269e9b20cfc4bb17267efcb39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public メソッド</h2></td></tr>
+<tr class="memitem:af288e2b23e39b58b48117c1749e261d4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classMACS_1_1DB_1_1DBCon.html#ad7b8c61d79c82716809c2ec3ecd2c822">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#af288e2b23e39b58b48117c1749e261d4">ToType</a> (string str)</td></tr>
+<tr class="memdesc:af288e2b23e39b58b48117c1749e261d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">DB種別を文字列からパースする  <a href="#af288e2b23e39b58b48117c1749e261d4"></a><br/></td></tr>
+<tr class="separator:af288e2b23e39b58b48117c1749e261d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a109c3bcb3511fed8c7f39181464620bb"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a109c3bcb3511fed8c7f39181464620bb">Literal</a> (string txt)</td></tr>
+<tr class="memdesc:a109c3bcb3511fed8c7f39181464620bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">SQLの文字列定数を生成する  <a href="#a109c3bcb3511fed8c7f39181464620bb"></a><br/></td></tr>
+<tr class="separator:a109c3bcb3511fed8c7f39181464620bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abea9aae05fa56c8e9e13819cd5ed93d1"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#abea9aae05fa56c8e9e13819cd5ed93d1">Escape</a> (string txt)</td></tr>
+<tr class="memdesc:abea9aae05fa56c8e9e13819cd5ed93d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">SQLの文字列定数として使ってはいけない文字をエスケープする  <a href="#abea9aae05fa56c8e9e13819cd5ed93d1"></a><br/></td></tr>
+<tr class="separator:abea9aae05fa56c8e9e13819cd5ed93d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa24a2eee276f9e41082ea75027cbcbd7"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#aa24a2eee276f9e41082ea75027cbcbd7">LikeEscape</a> (string txt)</td></tr>
+<tr class="memdesc:aa24a2eee276f9e41082ea75027cbcbd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">SQLのLIKE指定文字列として使ってはいけない文字をエスケープする  <a href="#aa24a2eee276f9e41082ea75027cbcbd7"></a><br/></td></tr>
+<tr class="separator:aa24a2eee276f9e41082ea75027cbcbd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8adbfd0a65c1427f144aed2da383ec08"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a8adbfd0a65c1427f144aed2da383ec08">DateString</a> (DateTime dt)</td></tr>
+<tr class="memdesc:a8adbfd0a65c1427f144aed2da383ec08"><td class="mdescLeft">&#160;</td><td class="mdescRight">SQLの日付指定文字列を得る  <a href="#a8adbfd0a65c1427f144aed2da383ec08"></a><br/></td></tr>
+<tr class="separator:a8adbfd0a65c1427f144aed2da383ec08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e7500f1f093b3d9de97d6cebc1465a7"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a7e7500f1f093b3d9de97d6cebc1465a7">DateTimeString</a> (DateTime dt)</td></tr>
+<tr class="memdesc:a7e7500f1f093b3d9de97d6cebc1465a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">SQLの日時指定文字列を得る  <a href="#a7e7500f1f093b3d9de97d6cebc1465a7"></a><br/></td></tr>
+<tr class="separator:a7e7500f1f093b3d9de97d6cebc1465a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae7c3b95e66c232d6de20ced12c3e696"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#aae7c3b95e66c232d6de20ced12c3e696">IsValidDatabaseName</a> (string newname)</td></tr>
+<tr class="memdesc:aae7c3b95e66c232d6de20ced12c3e696"><td class="mdescLeft">&#160;</td><td class="mdescRight">データベース名として有効かどうか調べる  <a href="#aae7c3b95e66c232d6de20ced12c3e696"></a><br/></td></tr>
+<tr class="separator:aae7c3b95e66c232d6de20ced12c3e696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3878b309f642891cefeca93518db0dd6"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a3878b309f642891cefeca93518db0dd6">GetDefaultSuperUser</a> (<a class="el" href="classMACS_1_1DB_1_1DBCon.html#ad7b8c61d79c82716809c2ec3ecd2c822">Type</a> dbtype)</td></tr>
+<tr class="memdesc:a3878b309f642891cefeca93518db0dd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">データベースの初期ユーザ名を得る  <a href="#a3878b309f642891cefeca93518db0dd6"></a><br/></td></tr>
+<tr class="separator:a3878b309f642891cefeca93518db0dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1284f279bf0a9b8e54f73714d7227934"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#a1284f279bf0a9b8e54f73714d7227934">GetExceptionMessage</a> (Exception e)</td></tr>
+<tr class="separator:a1284f279bf0a9b8e54f73714d7227934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada26f178e7644144f5a870a978769d97"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#ada26f178e7644144f5a870a978769d97">SetGlobalLogger</a> (string filename, Encoding enc=null, int size=1000, int rotation=9)</td></tr>
+<tr class="separator:ada26f178e7644144f5a870a978769d97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d37897df96ceaf15b7b9e0a80efcae9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#a4d37897df96ceaf15b7b9e0a80efcae9">SetGlobalLogger</a> (<a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1OpeLog.html">OpeLog</a> logger)</td></tr>
+<tr class="separator:a4d37897df96ceaf15b7b9e0a80efcae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 変数</h2></td></tr>
+<tr class="memitem:ab785566617b0ee9d1f78b560066dddc3"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#ab785566617b0ee9d1f78b560066dddc3">DEFAULT_DATABASE</a></td></tr>
+<tr class="memdesc:ab785566617b0ee9d1f78b560066dddc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期データベースを指定する時の特別な名前  <a href="#ab785566617b0ee9d1f78b560066dddc3"></a><br/></td></tr>
+<tr class="separator:ab785566617b0ee9d1f78b560066dddc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac195790478ba0128e2f104c24ae1fe67"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#ac195790478ba0128e2f104c24ae1fe67">DefaultCommandTimeout</a></td></tr>
+<tr class="memdesc:ac195790478ba0128e2f104c24ae1fe67"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトのタイムアウト時間  <a href="#ac195790478ba0128e2f104c24ae1fe67"></a><br/></td></tr>
+<tr class="separator:ac195790478ba0128e2f104c24ae1fe67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29f001e08295b796698a99e95e46f8d4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a29f001e08295b796698a99e95e46f8d4">UseDebugLog</a></td></tr>
+<tr class="memdesc:a29f001e08295b796698a99e95e46f8d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loggerにデバッグログを残すかどうか  <a href="#a29f001e08295b796698a99e95e46f8d4"></a><br/></td></tr>
+<tr class="separator:a29f001e08295b796698a99e95e46f8d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a620a496754aeadc6e8ef6f9b3b1a5683"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a620a496754aeadc6e8ef6f9b3b1a5683">UseConsoleLog</a></td></tr>
+<tr class="memdesc:a620a496754aeadc6e8ef6f9b3b1a5683"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンソールにデバッグログを出すかどうか  <a href="#a620a496754aeadc6e8ef6f9b3b1a5683"></a><br/></td></tr>
+<tr class="separator:a620a496754aeadc6e8ef6f9b3b1a5683"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4a643c4bcff70f74c3f5ca92e89b57a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#ac4a643c4bcff70f74c3f5ca92e89b57a">WarnThresholdTime</a></td></tr>
+<tr class="memdesc:ac4a643c4bcff70f74c3f5ca92e89b57a"><td class="mdescLeft">&#160;</td><td class="mdescRight">SQL実行時間が長すぎる警告ログを記録する閾値（ミリ秒）  <a href="#ac4a643c4bcff70f74c3f5ca92e89b57a"></a><br/></td></tr>
+<tr class="separator:ac4a643c4bcff70f74c3f5ca92e89b57a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public 変数</h2></td></tr>
+<tr class="memitem:aaf56948c63a94d341e3260bbdf240cc8"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#aaf56948c63a94d341e3260bbdf240cc8">DefaultUseDebugLog</a></td></tr>
+<tr class="memdesc:aaf56948c63a94d341e3260bbdf240cc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loggerにデバッグログを残すかどうか（デフォルト値）  <a href="#aaf56948c63a94d341e3260bbdf240cc8"></a><br/></td></tr>
+<tr class="separator:aaf56948c63a94d341e3260bbdf240cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3e1da59c296c92a410445555f18a0cb"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#ae3e1da59c296c92a410445555f18a0cb">DefaultUseConsoleLog</a></td></tr>
+<tr class="memdesc:ae3e1da59c296c92a410445555f18a0cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンソールにデバッグログを出すかどうか（デフォルト値）  <a href="#ae3e1da59c296c92a410445555f18a0cb"></a><br/></td></tr>
+<tr class="separator:ae3e1da59c296c92a410445555f18a0cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac75ea9bc9a2c0edf1663f7fddeebe997"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#ac75ea9bc9a2c0edf1663f7fddeebe997">DefaultWarnThresholdTime</a></td></tr>
+<tr class="memdesc:ac75ea9bc9a2c0edf1663f7fddeebe997"><td class="mdescLeft">&#160;</td><td class="mdescRight">SQL実行時間が長すぎる警告ログを記録する閾値（ミリ秒）（デフォルト値）  <a href="#ac75ea9bc9a2c0edf1663f7fddeebe997"></a><br/></td></tr>
+<tr class="separator:ac75ea9bc9a2c0edf1663f7fddeebe997"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a976aa28a258180724cd8b1e597cef4c4"><td class="memItemLeft" align="right" valign="top">static readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a976aa28a258180724cd8b1e597cef4c4">ValidDatabaseNameChars</a></td></tr>
+<tr class="memdesc:a976aa28a258180724cd8b1e597cef4c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">データベース名に使うことができる文字  <a href="#a976aa28a258180724cd8b1e597cef4c4"></a><br/></td></tr>
+<tr class="separator:a976aa28a258180724cd8b1e597cef4c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected メソッド</h2></td></tr>
+<tr class="memitem:a23774e08a0a90adc39ea3d6aa7607b5e"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a23774e08a0a90adc39ea3d6aa7607b5e">GetCategoryName</a> ()</td></tr>
+<tr class="separator:a23774e08a0a90adc39ea3d6aa7607b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac57c9bde5563e89ee88bbd0ddf7c0648"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#ac57c9bde5563e89ee88bbd0ddf7c0648">GetPageName</a> ()</td></tr>
+<tr class="separator:ac57c9bde5563e89ee88bbd0ddf7c0648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf0100222df4834cca5aa0169a81b07c"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#aaf0100222df4834cca5aa0169a81b07c">GetUserName</a> ()</td></tr>
+<tr class="separator:aaf0100222df4834cca5aa0169a81b07c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:a8fabf46b0c76ec209b32bc8f04457df4"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a8fabf46b0c76ec209b32bc8f04457df4">Name</a><code> [get]</code></td></tr>
+<tr class="memdesc:a8fabf46b0c76ec209b32bc8f04457df4"><td class="mdescLeft">&#160;</td><td class="mdescRight">接続DB名  <a href="#a8fabf46b0c76ec209b32bc8f04457df4"></a><br/></td></tr>
+<tr class="separator:a8fabf46b0c76ec209b32bc8f04457df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba544893c126313ebf47217c85e7fd57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#ad7b8c61d79c82716809c2ec3ecd2c822">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#aba544893c126313ebf47217c85e7fd57">DBType</a><code> [get]</code></td></tr>
+<tr class="memdesc:aba544893c126313ebf47217c85e7fd57"><td class="mdescLeft">&#160;</td><td class="mdescRight">DB種別  <a href="#aba544893c126313ebf47217c85e7fd57"></a><br/></td></tr>
+<tr class="separator:aba544893c126313ebf47217c85e7fd57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4464fa61fd9179f5e757f948ad5654b2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a4464fa61fd9179f5e757f948ad5654b2">CommandTimeout</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a4464fa61fd9179f5e757f948ad5654b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">SQL実行タイムアウト（秒）  <a href="#a4464fa61fd9179f5e757f948ad5654b2"></a><br/></td></tr>
+<tr class="separator:a4464fa61fd9179f5e757f948ad5654b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2da0cc971c10c4631f32d9ccbd2d6f9f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a2da0cc971c10c4631f32d9ccbd2d6f9f">IgnoreException</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a2da0cc971c10c4631f32d9ccbd2d6f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">SQL実行時の Exception を握りつぶすかどうか  <a href="#a2da0cc971c10c4631f32d9ccbd2d6f9f"></a><br/></td></tr>
+<tr class="separator:a2da0cc971c10c4631f32d9ccbd2d6f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2748322d2739172a67cd0bb77ffa6b5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#af2748322d2739172a67cd0bb77ffa6b5">Connected</a><code> [get]</code></td></tr>
+<tr class="memdesc:af2748322d2739172a67cd0bb77ffa6b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">DBと接続できているかどうか  <a href="#af2748322d2739172a67cd0bb77ffa6b5"></a><br/></td></tr>
+<tr class="separator:af2748322d2739172a67cd0bb77ffa6b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3db1880486402fc5097e07d2f6d99adf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a3db1880486402fc5097e07d2f6d99adf">IsMySQL</a><code> [get]</code></td></tr>
+<tr class="memdesc:a3db1880486402fc5097e07d2f6d99adf"><td class="mdescLeft">&#160;</td><td class="mdescRight">DBがMySQLかどうか  <a href="#a3db1880486402fc5097e07d2f6d99adf"></a><br/></td></tr>
+<tr class="separator:a3db1880486402fc5097e07d2f6d99adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4db78a73666641747ae352ef3be1061e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a4db78a73666641747ae352ef3be1061e">IsOracle</a><code> [get]</code></td></tr>
+<tr class="memdesc:a4db78a73666641747ae352ef3be1061e"><td class="mdescLeft">&#160;</td><td class="mdescRight">DBがORACLEかどうか  <a href="#a4db78a73666641747ae352ef3be1061e"></a><br/></td></tr>
+<tr class="separator:a4db78a73666641747ae352ef3be1061e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acad9140022aa5a030209ae29fe00150f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#acad9140022aa5a030209ae29fe00150f">IsPostgreSQL</a><code> [get]</code></td></tr>
+<tr class="memdesc:acad9140022aa5a030209ae29fe00150f"><td class="mdescLeft">&#160;</td><td class="mdescRight">DBがPostgreSQLかどうか  <a href="#acad9140022aa5a030209ae29fe00150f"></a><br/></td></tr>
+<tr class="separator:acad9140022aa5a030209ae29fe00150f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63eab39f386458dae1a45ccc7ddbbce5"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a63eab39f386458dae1a45ccc7ddbbce5">CurrentSQL</a><code> [get]</code></td></tr>
+<tr class="memdesc:a63eab39f386458dae1a45ccc7ddbbce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在実行中のSQL  <a href="#a63eab39f386458dae1a45ccc7ddbbce5"></a><br/></td></tr>
+<tr class="separator:a63eab39f386458dae1a45ccc7ddbbce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bdfb33009d7bfdb59719b1dbe967984"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#a1bdfb33009d7bfdb59719b1dbe967984">Version</a><code> [get]</code></td></tr>
+<tr class="memdesc:a1bdfb33009d7bfdb59719b1dbe967984"><td class="mdescLeft">&#160;</td><td class="mdescRight">データベースサーバのバージョン名  <a href="#a1bdfb33009d7bfdb59719b1dbe967984"></a><br/></td></tr>
+<tr class="separator:a1bdfb33009d7bfdb59719b1dbe967984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8ccb03158a9a036bf5329d49b51f853"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#ad8ccb03158a9a036bf5329d49b51f853">VersionNumber</a><code> [get]</code></td></tr>
+<tr class="memdesc:ad8ccb03158a9a036bf5329d49b51f853"><td class="mdescLeft">&#160;</td><td class="mdescRight">データベースバージョン番号  <a href="#ad8ccb03158a9a036bf5329d49b51f853"></a><br/></td></tr>
+<tr class="separator:ad8ccb03158a9a036bf5329d49b51f853"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7bb643442c98c0602fe7a2668513974"><td class="memItemLeft" align="right" valign="top">static <a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1OpeLog.html">OpeLog</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#af7bb643442c98c0602fe7a2668513974">GlobalLogger</a></td></tr>
+<tr class="separator:af7bb643442c98c0602fe7a2668513974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad69aee2a6ba820e202d26a071ecfdcac"><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1OpeLog.html">OpeLog</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#ad69aee2a6ba820e202d26a071ecfdcac">Logger</a></td></tr>
+<tr class="separator:ad69aee2a6ba820e202d26a071ecfdcac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">説明</h2>
+<div class="textblock"><p>DB接続を取り扱うクラス。 ADO.NETのDbConnectをもっと簡便に扱えるようにラッピングしたもの。 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00032">32</a> 行で定義されています。</p>
+</div><h2 class="groupheader">列挙型</h2>
+<a class="anchor" id="ad7b8c61d79c82716809c2ec3ecd2c822"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classMACS_1_1DB_1_1DBCon.html#ad7b8c61d79c82716809c2ec3ecd2c822">MACS.DB.DBCon.Type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DBの種類 </p>
+<dl><dt><b>列挙型の値: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="ad7b8c61d79c82716809c2ec3ecd2c822"></a>Invalid</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ad7b8c61d79c82716809c2ec3ecd2c822"></a>MySQL</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ad7b8c61d79c82716809c2ec3ecd2c822"></a>Oracle</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ad7b8c61d79c82716809c2ec3ecd2c822"></a>PostgreSQL</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00037">37</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">コンストラクタとデストラクタ</h2>
+<a class="anchor" id="ab680d964a420944e3afead564f8052bd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.DB.DBCon.DBCon </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#ad7b8c61d79c82716809c2ec3ecd2c822">Type</a>&#160;</td>
+          <td class="paramname"><em>dbtype_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>server</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>dbname_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>user</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>passwd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DBと接続する。 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00136">136</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad55a8763cba92a0ab9f0981ad42f4632"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.DB.DBCon.DBCon </td>
+          <td>(</td>
+          <td class="paramtype"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1IniFile.html">IniFile</a>&#160;</td>
+          <td class="paramname"><em>inifile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>prefix</em> = <code>&quot;db&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>INIファイルの設定に従ってDBと接続する </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00143">143</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a79a1f6ba9ef06b274e0a06851a155b37"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.DB.DBCon.DBCon </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1DB_1_1DBConPool.html">DBConPool</a>&#160;</td>
+          <td class="paramname"><em>pool_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DBConPoolの接続を使ってDBConを作成する </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00150">150</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="afde928559d97fe64cadef5d0460ecac4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.DB.DBCon.DBCon </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DB接続を持たないダミーのDBConを作成する </p>
+<p>このDBConに対するQueryは常に空リストを返し、Executeは何もしない。 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00170">170</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド</h2>
+<a class="anchor" id="af288e2b23e39b58b48117c1749e261d4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classMACS_1_1DB_1_1DBCon.html#ad7b8c61d79c82716809c2ec3ecd2c822">Type</a> MACS.DB.DBCon.ToType </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DB種別を文字列からパースする </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00099">99</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="DBConPool_8cs_source.html#l00047">MACS.DB.DBConPool.DBConPool()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6806ab1dc10cbd70d4dd5287680e5951"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.DB.DBCon.Dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>使用リソースを解放する。 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00299">299</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a33f154a12ffba4eac60809329c19f5a8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.DB.DBCon.Close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DB接続を切断する。 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00310">310</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aab5ce330fd2c9791331a4920bd6424da"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1DB_1_1DBReader.html">DBReader</a> MACS.DB.DBCon.Query </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>sql</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Query発行 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00431">431</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a24ecbdfa7962d298ed4bb7db177ed94e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1DB_1_1DBReader.html">DBReader</a> MACS.DB.DBCon.Query </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sql</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Query発行 </p>
+<p>引数sqlはQuery実行後クリアされる。 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00479">479</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ace68a3f77e1e1a531527b49f63ef6c2a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.DB.DBCon.QueryString </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>sql</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>単一結果を返すQuery実行 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00490">490</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a20818be391710f0fd72be32b441af398"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.DB.DBCon.QueryString </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sql</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>単一結果を返すQuery実行 </p>
+<p>引数sqlはQuery実行後クリアされる。 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00533">533</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a6c83cc728bcf9af2f797eb1b033ba61f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.DB.DBCon.QueryInt </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>sql</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>単一結果を返すQuery実行（整数版） </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00544">544</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a72b14b6c0ac8feb0dccfda509ddfd8d5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.DB.DBCon.QueryInt </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sql</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>単一結果を返すQuery実行（整数版） </p>
+<p>引数sqlはQuery実行後クリアされる。 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00587">587</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae2646b8bac70fce449307eca385c597a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime MACS.DB.DBCon.QueryDateTime </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>sql</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>単一結果を返すQuery実行（DateTime版） </p>
+<p>検索結果、該当行が存在しないときやNULLのときはDateTime(0)を返す。 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00603">603</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac29a9f3592a3b44114a147a0181af245"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime MACS.DB.DBCon.QueryDateTime </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sql</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>単一結果を返すQuery実行（DateTime） </p>
+<p>引数sqlはQuery実行後クリアされる。 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00618">618</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aeda24eacffc553a040b8ad8b726bc889"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.DB.DBCon.Execute </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>sql</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SQL実行 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00629">629</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a26bd989805d2d490ab0dca4a26d93dad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.DB.DBCon.Execute </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder&#160;</td>
+          <td class="paramname"><em>sql</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SQL実行 </p>
+<p>引数sqlはQuery実行後クリアされる。 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00677">677</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1f1336aa38b6b44ff059420ad169dd26"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.DB.DBCon.Begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>トランザクション開始 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00688">688</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a98a7077205a13e29cb52c04040fe3d3b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.DB.DBCon.Commit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>トランザクションコミット </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00702">702</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af51d7a67ef6e48603e5cda37d3b2e00d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.DB.DBCon.Rollback </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>トランザクションロールバック </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00720">720</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a109c3bcb3511fed8c7f39181464620bb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.DB.DBCon.Literal </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SQLの文字列定数を生成する </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00742">742</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="abea9aae05fa56c8e9e13819cd5ed93d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.DB.DBCon.Escape </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SQLの文字列定数として使ってはいけない文字をエスケープする </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00751">751</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa24a2eee276f9e41082ea75027cbcbd7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.DB.DBCon.LikeEscape </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SQLのLIKE指定文字列として使ってはいけない文字をエスケープする </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00758">758</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="DBCondition_8cs_source.html#l00449">MACS.DB.DBCondition.ToString()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8adbfd0a65c1427f144aed2da383ec08"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.DB.DBCon.DateString </td>
+          <td>(</td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>dt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SQLの日付指定文字列を得る </p>
+<p>DateTime(0)は'0001-01-01'になる </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00770">770</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a7e7500f1f093b3d9de97d6cebc1465a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.DB.DBCon.DateTimeString </td>
+          <td>(</td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>dt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SQLの日時指定文字列を得る </p>
+<p>DateTime(0)は'0001-01-01 00:00:00'になる </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00784">784</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a0facf762f480ab8cbe67c0d78ea9a6e9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.DB.DBCon.Execute </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>sql</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TextWriter&#160;</td>
+          <td class="paramname"><em>w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SQLを実行して実行結果をテキストストリームにHumanReadableな形で書き出す </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00793">793</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aae7c3b95e66c232d6de20ced12c3e696"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool MACS.DB.DBCon.IsValidDatabaseName </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>newname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>データベース名として有効かどうか調べる </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00869">869</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a873796a89a841e03c20802bb5ece3044"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.DB.DBCon.CreateDatabase </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>newname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>user</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>データベースを新たに作る </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00885">885</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae5a04fb2952701f4d519eceed5813197"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long MACS.DB.DBCon.GetSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>データベースのサイズを得る </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00917">917</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a0da7136213cd7ca418e81535fbdd0a8e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.DB.DBCon.CopyTable </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>テーブルの複製を作成する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>コピー元テーブル名</td></tr>
+    <tr><td class="paramname">dst</td><td>コピー先テーブル名</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00937">937</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa2a421d885cc3bdecdadd2eb20b3dac8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] MACS.DB.DBCon.GetColumnNameList </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tblname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定テーブルのカラム名一覧を得る </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00957">957</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a3878b309f642891cefeca93518db0dd6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.DB.DBCon.GetDefaultSuperUser </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#ad7b8c61d79c82716809c2ec3ecd2c822">Type</a>&#160;</td>
+          <td class="paramname"><em>dbtype</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>データベースの初期ユーザ名を得る </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00986">986</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a23774e08a0a90adc39ea3d6aa7607b5e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override string MACS.DB.DBCon.GetCategoryName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#a4811856aeafe07c2dbac425f73db780a">MACS::Loggable</a>を再定義しています。</p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l01098">1098</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">変数</h2>
+<a class="anchor" id="ab785566617b0ee9d1f78b560066dddc3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string MACS.DB.DBCon.DEFAULT_DATABASE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期データベースを指定する時の特別な名前 </p>
+<p>CREATE DATABASEをするためにDBConを使う場合などに、接続データベース名 として使用してください。 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00053">53</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac195790478ba0128e2f104c24ae1fe67"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int MACS.DB.DBCon.DefaultCommandTimeout</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>デフォルトのタイムアウト時間 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00058">58</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a29f001e08295b796698a99e95e46f8d4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.DB.DBCon.UseDebugLog</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loggerにデバッグログを残すかどうか </p>
+<p>エラーログは本設定にかかわらず記録されます。 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00068">68</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="DBDump_8cs_source.html#l00210">MACS.DB.DBDump.Load()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a620a496754aeadc6e8ef6f9b3b1a5683"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.DB.DBCon.UseConsoleLog</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンソールにデバッグログを出すかどうか </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00073">73</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="DBDump_8cs_source.html#l00210">MACS.DB.DBDump.Load()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaf56948c63a94d341e3260bbdf240cc8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.DB.DBCon.DefaultUseDebugLog</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loggerにデバッグログを残すかどうか（デフォルト値） </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00078">78</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae3e1da59c296c92a410445555f18a0cb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.DB.DBCon.DefaultUseConsoleLog</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コンソールにデバッグログを出すかどうか（デフォルト値） </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00083">83</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac4a643c4bcff70f74c3f5ca92e89b57a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.DB.DBCon.WarnThresholdTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SQL実行時間が長すぎる警告ログを記録する閾値（ミリ秒） </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00088">88</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac75ea9bc9a2c0edf1663f7fddeebe997"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.DB.DBCon.DefaultWarnThresholdTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SQL実行時間が長すぎる警告ログを記録する閾値（ミリ秒）（デフォルト値） </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00093">93</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a976aa28a258180724cd8b1e597cef4c4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly string MACS.DB.DBCon.ValidDatabaseNameChars</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>データベース名に使うことができる文字 </p>
+<p>PostgreSQLのコネクターが英大文字と小文字の区別を誤ることがあるため 英大文字を禁止しています。 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00864">864</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">プロパティ</h2>
+<a class="anchor" id="a8fabf46b0c76ec209b32bc8f04457df4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.DB.DBCon.Name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>接続DB名 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00343">343</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aba544893c126313ebf47217c85e7fd57"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#ad7b8c61d79c82716809c2ec3ecd2c822">Type</a> MACS.DB.DBCon.DBType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DB種別 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00350">350</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4464fa61fd9179f5e757f948ad5654b2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.DB.DBCon.CommandTimeout</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SQL実行タイムアウト（秒） </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00357">357</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a2da0cc971c10c4631f32d9ccbd2d6f9f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.DB.DBCon.IgnoreException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SQL実行時の Exception を握りつぶすかどうか </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00365">365</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af2748322d2739172a67cd0bb77ffa6b5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.DB.DBCon.Connected</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DBと接続できているかどうか </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00373">373</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a3db1880486402fc5097e07d2f6d99adf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.DB.DBCon.IsMySQL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DBがMySQLかどうか </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00380">380</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4db78a73666641747ae352ef3be1061e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.DB.DBCon.IsOracle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DBがORACLEかどうか </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00393">393</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="acad9140022aa5a030209ae29fe00150f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.DB.DBCon.IsPostgreSQL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DBがPostgreSQLかどうか </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00406">406</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a63eab39f386458dae1a45ccc7ddbbce5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.DB.DBCon.CurrentSQL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>現在実行中のSQL </p>
+<p>現在実行中でない場合はnullを返す。 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l00424">424</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1bdfb33009d7bfdb59719b1dbe967984"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.DB.DBCon.Version</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>データベースサーバのバージョン名 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l01000">1000</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad8ccb03158a9a036bf5329d49b51f853"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.DB.DBCon.VersionNumber</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>データベースバージョン番号 </p>
+<p>メジャー番号*10000+マイナー番号*100+サブマイナー番号 </p>
+
+<p> <a class="el" href="DBCon_8cs_source.html">DBCon.cs</a> の <a class="el" href="DBCon_8cs_source.html#l01017">1017</a> 行で定義されています。</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="DBCon_8cs_source.html">DBCon.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceMACS.html">MACS</a></li><li class="navelem"><a class="el" href="namespaceMACS_1_1DB.html">DB</a></li><li class="navelem"><a class="el" href="classMACS_1_1DB_1_1DBCon.html">DBCon</a></li>
+    <li class="footer">MACS.DBに対してWed Jun 27 2018 17:45:48に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

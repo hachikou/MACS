@@ -1,0 +1,1204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.Core: クラス MACS.FtpClient</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.Core
+   </div>
+   <div id="projectbrief">Miscellaneous Assets for C-Sharp</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classMACS_1_1FtpClient.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-static-methods">Static Public メソッド</a> &#124;
+<a href="#pro-methods">Protected メソッド</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="classMACS_1_1FtpClient-members.html">すべてのメンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス MACS.FtpClient</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>FTPクライアント動作のためのクラス。  
+ <a href="classMACS_1_1FtpClient.html#details">[詳細]</a></p>
+<div class="dynheader">
+MACS.FtpClientに対する継承グラフ</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classMACS_1_1FtpClient.png" usemap="#MACS.FtpClient_map" alt=""/>
+  <map id="MACS.FtpClient_map" name="MACS.FtpClient_map">
+<area href="classMACS_1_1Loggable.html" title="操作ログ記録アプリケーション用基底クラス " alt="MACS.Loggable" shape="rect" coords="0,0,105,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr class="memitem:a64c86421003fa3114b4b788bcd752f52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FtpClient.html#a64c86421003fa3114b4b788bcd752f52">FtpClient</a> (string host_)</td></tr>
+<tr class="memdesc:a64c86421003fa3114b4b788bcd752f52"><td class="mdescLeft">&#160;</td><td class="mdescRight">FTPクライアントを作成  <a href="#a64c86421003fa3114b4b788bcd752f52"></a><br/></td></tr>
+<tr class="separator:a64c86421003fa3114b4b788bcd752f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad64c90659a048ef0a05c3e89a9f2c081"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FtpClient.html#ad64c90659a048ef0a05c3e89a9f2c081">SetUserAndPassword</a> (string user_, string passwd_)</td></tr>
+<tr class="memdesc:ad64c90659a048ef0a05c3e89a9f2c081"><td class="mdescLeft">&#160;</td><td class="mdescRight">ユーザとパスワードを指定する  <a href="#ad64c90659a048ef0a05c3e89a9f2c081"></a><br/></td></tr>
+<tr class="separator:ad64c90659a048ef0a05c3e89a9f2c081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a915a3a86126b5d2ba61a1aab79d449c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FtpClient.html#a915a3a86126b5d2ba61a1aab79d449c7">Download</a> (string filename, string outputfilename)</td></tr>
+<tr class="memdesc:a915a3a86126b5d2ba61a1aab79d449c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルをダウンロードする  <a href="#a915a3a86126b5d2ba61a1aab79d449c7"></a><br/></td></tr>
+<tr class="separator:a915a3a86126b5d2ba61a1aab79d449c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a79e46f4af86da145e4f5a9e4f651f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FtpClient.html#a5a79e46f4af86da145e4f5a9e4f651f9">Download</a> (string filename, FileStream fs)</td></tr>
+<tr class="memdesc:a5a79e46f4af86da145e4f5a9e4f651f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルをダウンロードする  <a href="#a5a79e46f4af86da145e4f5a9e4f651f9"></a><br/></td></tr>
+<tr class="separator:a5a79e46f4af86da145e4f5a9e4f651f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa51922aecbff3d79a11610d8f443a0e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FtpClient.html#aa51922aecbff3d79a11610d8f443a0e0">Upload</a> (string filename, string outputfilename)</td></tr>
+<tr class="memdesc:aa51922aecbff3d79a11610d8f443a0e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルをアップロードする  <a href="#aa51922aecbff3d79a11610d8f443a0e0"></a><br/></td></tr>
+<tr class="separator:aa51922aecbff3d79a11610d8f443a0e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c0cf76c9a1686b1d4c43b6690f576ec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FtpClient.html#a7c0cf76c9a1686b1d4c43b6690f576ec">Upload</a> (Stream fs, string outputfilename)</td></tr>
+<tr class="memdesc:a7c0cf76c9a1686b1d4c43b6690f576ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルをアップロードする  <a href="#a7c0cf76c9a1686b1d4c43b6690f576ec"></a><br/></td></tr>
+<tr class="separator:a7c0cf76c9a1686b1d4c43b6690f576ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b087da523368e6c9210d1af3370615f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#a1b087da523368e6c9210d1af3370615f">LOG_EMERG</a> (string msg, params object[] objs)</td></tr>
+<tr class="memdesc:a1b087da523368e6c9210d1af3370615f"><td class="mdescLeft">&#160;</td><td class="mdescRight">非常事態ログ  <a href="#a1b087da523368e6c9210d1af3370615f"></a><br/></td></tr>
+<tr class="separator:a1b087da523368e6c9210d1af3370615f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50252d11bef2f336ce5e840e4b9b25c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#a50252d11bef2f336ce5e840e4b9b25c2">LOG_ALERT</a> (string msg, params object[] objs)</td></tr>
+<tr class="memdesc:a50252d11bef2f336ce5e840e4b9b25c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">警告ログ  <a href="#a50252d11bef2f336ce5e840e4b9b25c2"></a><br/></td></tr>
+<tr class="separator:a50252d11bef2f336ce5e840e4b9b25c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad887acb38cd24634df0ca3499d98e7c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#ad887acb38cd24634df0ca3499d98e7c8">LOG_CRIT</a> (string msg, params object[] objs)</td></tr>
+<tr class="memdesc:ad887acb38cd24634df0ca3499d98e7c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">致命的ログ  <a href="#ad887acb38cd24634df0ca3499d98e7c8"></a><br/></td></tr>
+<tr class="separator:ad887acb38cd24634df0ca3499d98e7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af713a231c44b784df68890b7ea001153"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#af713a231c44b784df68890b7ea001153">LOG_ERR</a> (string msg, params object[] objs)</td></tr>
+<tr class="memdesc:af713a231c44b784df68890b7ea001153"><td class="mdescLeft">&#160;</td><td class="mdescRight">エラーログ  <a href="#af713a231c44b784df68890b7ea001153"></a><br/></td></tr>
+<tr class="separator:af713a231c44b784df68890b7ea001153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e8ce70bcc869f7996904e868f12c23a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#a4e8ce70bcc869f7996904e868f12c23a">LOG_WARNING</a> (string msg, params object[] objs)</td></tr>
+<tr class="memdesc:a4e8ce70bcc869f7996904e868f12c23a"><td class="mdescLeft">&#160;</td><td class="mdescRight">注意ログ  <a href="#a4e8ce70bcc869f7996904e868f12c23a"></a><br/></td></tr>
+<tr class="separator:a4e8ce70bcc869f7996904e868f12c23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa1a837b35ad4917ff008375d628d8ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#afa1a837b35ad4917ff008375d628d8ef">LOG_NOTICE</a> (string msg, params object[] objs)</td></tr>
+<tr class="memdesc:afa1a837b35ad4917ff008375d628d8ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">報告ログ  <a href="#afa1a837b35ad4917ff008375d628d8ef"></a><br/></td></tr>
+<tr class="separator:afa1a837b35ad4917ff008375d628d8ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2af82eefc7d2b91a8fe52e4a7db6ca5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#a2af82eefc7d2b91a8fe52e4a7db6ca5e">LOG_INFO</a> (string msg, params object[] objs)</td></tr>
+<tr class="memdesc:a2af82eefc7d2b91a8fe52e4a7db6ca5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">情報ログ  <a href="#a2af82eefc7d2b91a8fe52e4a7db6ca5e"></a><br/></td></tr>
+<tr class="separator:a2af82eefc7d2b91a8fe52e4a7db6ca5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18b319f0ae97bbac6108ed0938ba7662"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#a18b319f0ae97bbac6108ed0938ba7662">LOG_DEBUG</a> (string msg, params object[] objs)</td></tr>
+<tr class="memdesc:a18b319f0ae97bbac6108ed0938ba7662"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグログ  <a href="#a18b319f0ae97bbac6108ed0938ba7662"></a><br/></td></tr>
+<tr class="separator:a18b319f0ae97bbac6108ed0938ba7662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa934fdf4fd746a8ea328740a6805a3ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#aa934fdf4fd746a8ea328740a6805a3ed">LOG_EXCEPTION</a> (Exception e)</td></tr>
+<tr class="memdesc:aa934fdf4fd746a8ea328740a6805a3ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">例外のログ  <a href="#aa934fdf4fd746a8ea328740a6805a3ed"></a><br/></td></tr>
+<tr class="separator:aa934fdf4fd746a8ea328740a6805a3ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d0b356336848258a1c04bc5ddfd4af6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#a5d0b356336848258a1c04bc5ddfd4af6">SetLogger</a> (<a class="el" href="classMACS_1_1OpeLog.html">OpeLog</a> logger_)</td></tr>
+<tr class="memdesc:a5d0b356336848258a1c04bc5ddfd4af6"><td class="mdescLeft">&#160;</td><td class="mdescRight">独自のロガーをセットする  <a href="#a5d0b356336848258a1c04bc5ddfd4af6"></a><br/></td></tr>
+<tr class="separator:a5d0b356336848258a1c04bc5ddfd4af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1129d7aba79f6bf0ba61b50d18d61716"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#a1129d7aba79f6bf0ba61b50d18d61716">SetLogger</a> (string filename, Encoding enc=null, int size=1000, int rotation=9)</td></tr>
+<tr class="memdesc:a1129d7aba79f6bf0ba61b50d18d61716"><td class="mdescLeft">&#160;</td><td class="mdescRight">独自のロガーをセットする  <a href="#a1129d7aba79f6bf0ba61b50d18d61716"></a><br/></td></tr>
+<tr class="separator:a1129d7aba79f6bf0ba61b50d18d61716"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa470b89d1ce59a04539c6521099cf31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#aaa470b89d1ce59a04539c6521099cf31">DisableLogging</a> ()</td></tr>
+<tr class="memdesc:aaa470b89d1ce59a04539c6521099cf31"><td class="mdescLeft">&#160;</td><td class="mdescRight">一時的にログ記録を停止する  <a href="#aaa470b89d1ce59a04539c6521099cf31"></a><br/></td></tr>
+<tr class="separator:aaa470b89d1ce59a04539c6521099cf31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace864dc269e9b20cfc4bb17267efcb39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#ace864dc269e9b20cfc4bb17267efcb39">EnableLogging</a> ()</td></tr>
+<tr class="memdesc:ace864dc269e9b20cfc4bb17267efcb39"><td class="mdescLeft">&#160;</td><td class="mdescRight">DisableLoggingで止めたログ記録を再開する  <a href="#ace864dc269e9b20cfc4bb17267efcb39"></a><br/></td></tr>
+<tr class="separator:ace864dc269e9b20cfc4bb17267efcb39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public メソッド</h2></td></tr>
+<tr class="memitem:a1284f279bf0a9b8e54f73714d7227934"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#a1284f279bf0a9b8e54f73714d7227934">GetExceptionMessage</a> (Exception e)</td></tr>
+<tr class="memdesc:a1284f279bf0a9b8e54f73714d7227934"><td class="mdescLeft">&#160;</td><td class="mdescRight">スタックトレースの文字列を得る  <a href="#a1284f279bf0a9b8e54f73714d7227934"></a><br/></td></tr>
+<tr class="separator:a1284f279bf0a9b8e54f73714d7227934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada26f178e7644144f5a870a978769d97"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#ada26f178e7644144f5a870a978769d97">SetGlobalLogger</a> (string filename, Encoding enc=null, int size=1000, int rotation=9)</td></tr>
+<tr class="memdesc:ada26f178e7644144f5a870a978769d97"><td class="mdescLeft">&#160;</td><td class="mdescRight">グローバルなログ書き込みファイルを登録する。  <a href="#ada26f178e7644144f5a870a978769d97"></a><br/></td></tr>
+<tr class="separator:ada26f178e7644144f5a870a978769d97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d37897df96ceaf15b7b9e0a80efcae9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#a4d37897df96ceaf15b7b9e0a80efcae9">SetGlobalLogger</a> (<a class="el" href="classMACS_1_1OpeLog.html">OpeLog</a> logger)</td></tr>
+<tr class="memdesc:a4d37897df96ceaf15b7b9e0a80efcae9"><td class="mdescLeft">&#160;</td><td class="mdescRight">グローバルなログ書き込みオブジェクトを登録する。  <a href="#a4d37897df96ceaf15b7b9e0a80efcae9"></a><br/></td></tr>
+<tr class="separator:a4d37897df96ceaf15b7b9e0a80efcae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected メソッド</h2></td></tr>
+<tr class="memitem:ac57c9bde5563e89ee88bbd0ddf7c0648"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#ac57c9bde5563e89ee88bbd0ddf7c0648">GetPageName</a> ()</td></tr>
+<tr class="memdesc:ac57c9bde5563e89ee88bbd0ddf7c0648"><td class="mdescLeft">&#160;</td><td class="mdescRight">動作ページ名を獲得する。 派生クラスでoverrideする事。  <a href="#ac57c9bde5563e89ee88bbd0ddf7c0648"></a><br/></td></tr>
+<tr class="separator:ac57c9bde5563e89ee88bbd0ddf7c0648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf0100222df4834cca5aa0169a81b07c"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#aaf0100222df4834cca5aa0169a81b07c">GetUserName</a> ()</td></tr>
+<tr class="memdesc:aaf0100222df4834cca5aa0169a81b07c"><td class="mdescLeft">&#160;</td><td class="mdescRight">操作ユーザー名を獲得する。 派生クラスでoverrideする事。  <a href="#aaf0100222df4834cca5aa0169a81b07c"></a><br/></td></tr>
+<tr class="separator:aaf0100222df4834cca5aa0169a81b07c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4811856aeafe07c2dbac425f73db780a"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#a4811856aeafe07c2dbac425f73db780a">GetCategoryName</a> ()</td></tr>
+<tr class="memdesc:a4811856aeafe07c2dbac425f73db780a"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトのログカテゴリ名を獲得する。 派生クラスでoverrideする事。  <a href="#a4811856aeafe07c2dbac425f73db780a"></a><br/></td></tr>
+<tr class="separator:a4811856aeafe07c2dbac425f73db780a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:abe428dda80936a880f785270b0023795"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FtpClient.html#abe428dda80936a880f785270b0023795">User</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:abe428dda80936a880f785270b0023795"><td class="mdescLeft">&#160;</td><td class="mdescRight">ユーザ指定  <a href="#abe428dda80936a880f785270b0023795"></a><br/></td></tr>
+<tr class="separator:abe428dda80936a880f785270b0023795"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14dccd5a242033bd5bb81c2b6c3bb855"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FtpClient.html#a14dccd5a242033bd5bb81c2b6c3bb855">Password</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a14dccd5a242033bd5bb81c2b6c3bb855"><td class="mdescLeft">&#160;</td><td class="mdescRight">パスワード指定  <a href="#a14dccd5a242033bd5bb81c2b6c3bb855"></a><br/></td></tr>
+<tr class="separator:a14dccd5a242033bd5bb81c2b6c3bb855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada052351af1c1b354492b2fc2db9f779"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1FtpClient.html#ada052351af1c1b354492b2fc2db9f779">IsPassive</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ada052351af1c1b354492b2fc2db9f779"><td class="mdescLeft">&#160;</td><td class="mdescRight">PASSIVEモードかどうか  <a href="#ada052351af1c1b354492b2fc2db9f779"></a><br/></td></tr>
+<tr class="separator:ada052351af1c1b354492b2fc2db9f779"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7bb643442c98c0602fe7a2668513974"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classMACS_1_1OpeLog.html">OpeLog</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#af7bb643442c98c0602fe7a2668513974">GlobalLogger</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:af7bb643442c98c0602fe7a2668513974"><td class="mdescLeft">&#160;</td><td class="mdescRight">グローバルロガー  <a href="#af7bb643442c98c0602fe7a2668513974"></a><br/></td></tr>
+<tr class="separator:af7bb643442c98c0602fe7a2668513974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad69aee2a6ba820e202d26a071ecfdcac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1OpeLog.html">OpeLog</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1Loggable.html#ad69aee2a6ba820e202d26a071ecfdcac">Logger</a><code> [get]</code></td></tr>
+<tr class="memdesc:ad69aee2a6ba820e202d26a071ecfdcac"><td class="mdescLeft">&#160;</td><td class="mdescRight">ロガー  <a href="#ad69aee2a6ba820e202d26a071ecfdcac"></a><br/></td></tr>
+<tr class="separator:ad69aee2a6ba820e202d26a071ecfdcac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">説明</h2>
+<div class="textblock"><p>FTPクライアント動作のためのクラス。 </p>
+<p>.NetのFtpWebRequestクラスなどがあまりにも使いづらいので、ラッピングクラスを用意した。 </p>
+
+<p> <a class="el" href="FtpClient_8cs_source.html">FtpClient.cs</a> の <a class="el" href="FtpClient_8cs_source.html#l00021">21</a> 行で定義されています。</p>
+</div><h2 class="groupheader">コンストラクタとデストラクタ</h2>
+<a class="anchor" id="a64c86421003fa3114b4b788bcd752f52"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.FtpClient.FtpClient </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>host_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>FTPクライアントを作成 </p>
+
+<p> <a class="el" href="FtpClient_8cs_source.html">FtpClient.cs</a> の <a class="el" href="FtpClient_8cs_source.html#l00026">26</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド</h2>
+<a class="anchor" id="ad64c90659a048ef0a05c3e89a9f2c081"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.FtpClient.SetUserAndPassword </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>user_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>passwd_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ユーザとパスワードを指定する </p>
+
+<p> <a class="el" href="FtpClient_8cs_source.html">FtpClient.cs</a> の <a class="el" href="FtpClient_8cs_source.html#l00035">35</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a915a3a86126b5d2ba61a1aab79d449c7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.FtpClient.Download </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>outputfilename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ファイルをダウンロードする </p>
+
+<p> <a class="el" href="FtpClient_8cs_source.html">FtpClient.cs</a> の <a class="el" href="FtpClient_8cs_source.html#l00067">67</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5a79e46f4af86da145e4f5a9e4f651f9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.FtpClient.Download </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FileStream&#160;</td>
+          <td class="paramname"><em>fs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ファイルをダウンロードする </p>
+
+<p> <a class="el" href="FtpClient_8cs_source.html">FtpClient.cs</a> の <a class="el" href="FtpClient_8cs_source.html#l00079">79</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa51922aecbff3d79a11610d8f443a0e0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.FtpClient.Upload </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>outputfilename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ファイルをアップロードする </p>
+
+<p> <a class="el" href="FtpClient_8cs_source.html">FtpClient.cs</a> の <a class="el" href="FtpClient_8cs_source.html#l00112">112</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a7c0cf76c9a1686b1d4c43b6690f576ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.FtpClient.Upload </td>
+          <td>(</td>
+          <td class="paramtype">Stream&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>outputfilename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ファイルをアップロードする </p>
+
+<p> <a class="el" href="FtpClient_8cs_source.html">FtpClient.cs</a> の <a class="el" href="FtpClient_8cs_source.html#l00124">124</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1b087da523368e6c9210d1af3370615f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.LOG_EMERG </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>objs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>非常事態ログ </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00020">20</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a50252d11bef2f336ce5e840e4b9b25c2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.LOG_ALERT </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>objs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>警告ログ </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00028">28</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad887acb38cd24634df0ca3499d98e7c8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.LOG_CRIT </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>objs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>致命的ログ </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00036">36</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af713a231c44b784df68890b7ea001153"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.LOG_ERR </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>objs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>エラーログ </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00044">44</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="SendMail_8cs_source.html#l00234">MACS.SendMail.PopBeforeSmtp()</a>, と <a class="el" href="SendMail_8cs_source.html#l00170">MACS.SendMail.Send()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4e8ce70bcc869f7996904e868f12c23a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.LOG_WARNING </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>objs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注意ログ </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00052">52</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="afa1a837b35ad4917ff008375d628d8ef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.LOG_NOTICE </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>objs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>報告ログ </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00060">60</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a2af82eefc7d2b91a8fe52e4a7db6ca5e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.LOG_INFO </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>objs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>情報ログ </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00068">68</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="SendMail_8cs_source.html#l00170">MACS.SendMail.Send()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a18b319f0ae97bbac6108ed0938ba7662"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.LOG_DEBUG </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>objs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デバッグログ </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00076">76</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa934fdf4fd746a8ea328740a6805a3ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.LOG_EXCEPTION </td>
+          <td>(</td>
+          <td class="paramtype">Exception&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>例外のログ </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00084">84</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1284f279bf0a9b8e54f73714d7227934"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.Loggable.GetExceptionMessage </td>
+          <td>(</td>
+          <td class="paramtype">Exception&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>スタックトレースの文字列を得る </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00092">92</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="Loggable_8cs_source.html#l00084">MACS.Loggable.LOG_EXCEPTION()</a>, と <a class="el" href="StaticLoggable_8cs_source.html#l00086">MACS.StaticLoggable.LOG_EXCEPTION()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ada26f178e7644144f5a870a978769d97"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.Loggable.SetGlobalLogger </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoding&#160;</td>
+          <td class="paramname"><em>enc</em> = <code>null</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em> = <code>1000</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rotation</em> = <code>9</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>グローバルなログ書き込みファイルを登録する。 </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00118">118</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4d37897df96ceaf15b7b9e0a80efcae9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.Loggable.SetGlobalLogger </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1OpeLog.html">OpeLog</a>&#160;</td>
+          <td class="paramname"><em>logger</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>グローバルなログ書き込みオブジェクトを登録する。 </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00125">125</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5d0b356336848258a1c04bc5ddfd4af6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.SetLogger </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1OpeLog.html">OpeLog</a>&#160;</td>
+          <td class="paramname"><em>logger_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>独自のロガーをセットする </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00145">145</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1129d7aba79f6bf0ba61b50d18d61716"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.SetLogger </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoding&#160;</td>
+          <td class="paramname"><em>enc</em> = <code>null</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em> = <code>1000</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rotation</em> = <code>9</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>独自のロガーをセットする </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00152">152</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aaa470b89d1ce59a04539c6521099cf31"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.DisableLogging </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>一時的にログ記録を停止する </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00166">166</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ace864dc269e9b20cfc4bb17267efcb39"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.Loggable.EnableLogging </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DisableLoggingで止めたログ記録を再開する </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00173">173</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac57c9bde5563e89ee88bbd0ddf7c0648"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual string MACS.Loggable.GetPageName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>動作ページ名を獲得する。 派生クラスでoverrideする事。 </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00181">181</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aaf0100222df4834cca5aa0169a81b07c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual string MACS.Loggable.GetUserName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>操作ユーザー名を獲得する。 派生クラスでoverrideする事。 </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00189">189</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4811856aeafe07c2dbac425f73db780a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual string MACS.Loggable.GetCategoryName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デフォルトのログカテゴリ名を獲得する。 派生クラスでoverrideする事。 </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00198">198</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="Loggable_8cs_source.html#l00028">MACS.Loggable.LOG_ALERT()</a>, <a class="el" href="Loggable_8cs_source.html#l00036">MACS.Loggable.LOG_CRIT()</a>, <a class="el" href="Loggable_8cs_source.html#l00076">MACS.Loggable.LOG_DEBUG()</a>, <a class="el" href="Loggable_8cs_source.html#l00020">MACS.Loggable.LOG_EMERG()</a>, <a class="el" href="Loggable_8cs_source.html#l00044">MACS.Loggable.LOG_ERR()</a>, <a class="el" href="Loggable_8cs_source.html#l00084">MACS.Loggable.LOG_EXCEPTION()</a>, <a class="el" href="Loggable_8cs_source.html#l00068">MACS.Loggable.LOG_INFO()</a>, <a class="el" href="Loggable_8cs_source.html#l00060">MACS.Loggable.LOG_NOTICE()</a>, と <a class="el" href="Loggable_8cs_source.html#l00052">MACS.Loggable.LOG_WARNING()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">プロパティ</h2>
+<a class="anchor" id="abe428dda80936a880f785270b0023795"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.FtpClient.User</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ユーザ指定 </p>
+
+<p> <a class="el" href="FtpClient_8cs_source.html">FtpClient.cs</a> の <a class="el" href="FtpClient_8cs_source.html#l00043">43</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a14dccd5a242033bd5bb81c2b6c3bb855"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.FtpClient.Password</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>パスワード指定 </p>
+
+<p> <a class="el" href="FtpClient_8cs_source.html">FtpClient.cs</a> の <a class="el" href="FtpClient_8cs_source.html#l00051">51</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ada052351af1c1b354492b2fc2db9f779"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.FtpClient.IsPassive</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>PASSIVEモードかどうか </p>
+
+<p> <a class="el" href="FtpClient_8cs_source.html">FtpClient.cs</a> の <a class="el" href="FtpClient_8cs_source.html#l00059">59</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af7bb643442c98c0602fe7a2668513974"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1OpeLog.html">OpeLog</a> MACS.Loggable.GlobalLogger</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span><span class="mlabel">set</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>グローバルロガー </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00132">132</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad69aee2a6ba820e202d26a071ecfdcac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1OpeLog.html">OpeLog</a> MACS.Loggable.Logger</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ロガー </p>
+
+<p> <a class="el" href="Loggable_8cs_source.html">Loggable.cs</a> の <a class="el" href="Loggable_8cs_source.html#l00159">159</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="Loggable_8cs_source.html#l00028">MACS.Loggable.LOG_ALERT()</a>, <a class="el" href="Loggable_8cs_source.html#l00036">MACS.Loggable.LOG_CRIT()</a>, <a class="el" href="Loggable_8cs_source.html#l00076">MACS.Loggable.LOG_DEBUG()</a>, <a class="el" href="Loggable_8cs_source.html#l00020">MACS.Loggable.LOG_EMERG()</a>, <a class="el" href="Loggable_8cs_source.html#l00044">MACS.Loggable.LOG_ERR()</a>, <a class="el" href="Loggable_8cs_source.html#l00084">MACS.Loggable.LOG_EXCEPTION()</a>, <a class="el" href="Loggable_8cs_source.html#l00068">MACS.Loggable.LOG_INFO()</a>, <a class="el" href="Loggable_8cs_source.html#l00060">MACS.Loggable.LOG_NOTICE()</a>, <a class="el" href="Loggable_8cs_source.html#l00052">MACS.Loggable.LOG_WARNING()</a>, と <a class="el" href="NThread_8cs_source.html#l00446">MACS.NThread.Measure.Measure()</a>.</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="FtpClient_8cs_source.html">FtpClient.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceMACS.html">MACS</a></li><li class="navelem"><a class="el" href="classMACS_1_1FtpClient.html">FtpClient</a></li>
+    <li class="footer">MACS.Coreに対してWed Jun 27 2018 17:45:44に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

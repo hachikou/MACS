@@ -1,0 +1,1148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.HttpServer: クラス MACS.HttpServer.HttpServer</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.HttpServer
+   </div>
+   <div id="projectbrief">HTTP Server and Template Engine</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classMACS_1_1HttpServer_1_1HttpServer.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">構成</a> &#124;
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-static-methods">Static Public メソッド</a> &#124;
+<a href="#pub-attribs">Public 変数</a> &#124;
+<a href="#pro-methods">Protected メソッド</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="classMACS_1_1HttpServer_1_1HttpServer-members.html">すべてのメンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス MACS.HttpServer.HttpServer</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>HTTPサーバ  
+ <a href="classMACS_1_1HttpServer_1_1HttpServer.html#details">[詳細]</a></p>
+<div class="dynheader">
+MACS.HttpServer.HttpServerに対する継承グラフ</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classMACS_1_1HttpServer_1_1HttpServer.png" usemap="#MACS.HttpServer.HttpServer_map" alt=""/>
+  <map id="MACS.HttpServer.HttpServer_map" name="MACS.HttpServer.HttpServer_map">
+<area doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html" alt="MACS::Loggable" shape="rect" coords="0,0,179,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+構成</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer_1_1PageRedirectException.html">PageRedirectException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">他ページにリダイレクトする際に用いる例外  <a href="classMACS_1_1HttpServer_1_1HttpServer_1_1PageRedirectException.html#details">[詳細]</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer_1_1Statistics.html">Statistics</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">サーバ稼働状況データ  <a href="classMACS_1_1HttpServer_1_1HttpServer_1_1Statistics.html#details">[詳細]</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr class="memitem:a4f3bdb07583c42678150ff551dcf3936"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a4f3bdb07583c42678150ff551dcf3936">HttpServer</a> (string servername, string domain, int port)</td></tr>
+<tr class="memdesc:a4f3bdb07583c42678150ff551dcf3936"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTPサーバオブジェクトを作る。  <a href="#a4f3bdb07583c42678150ff551dcf3936"></a><br/></td></tr>
+<tr class="separator:a4f3bdb07583c42678150ff551dcf3936"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a870b05e860313753dd46db6181b8d9db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a870b05e860313753dd46db6181b8d9db">LoadSession</a> ()</td></tr>
+<tr class="memdesc:a870b05e860313753dd46db6181b8d9db"><td class="mdescLeft">&#160;</td><td class="mdescRight">セッション変数、アプリケーション変数をファイルから取り込む。  <a href="#a870b05e860313753dd46db6181b8d9db"></a><br/></td></tr>
+<tr class="separator:a870b05e860313753dd46db6181b8d9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9ac8abefe45a2d920380585f03a9a55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#aa9ac8abefe45a2d920380585f03a9a55">LoadSession</a> (string path)</td></tr>
+<tr class="memdesc:aa9ac8abefe45a2d920380585f03a9a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">セッション変数、アプリケーション変数をファイルから取り込む。 ファイル名を指定するバージョン。  <a href="#aa9ac8abefe45a2d920380585f03a9a55"></a><br/></td></tr>
+<tr class="separator:aa9ac8abefe45a2d920380585f03a9a55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af99a34865438050f82474f0ae14ab639"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#af99a34865438050f82474f0ae14ab639">SaveSession</a> ()</td></tr>
+<tr class="memdesc:af99a34865438050f82474f0ae14ab639"><td class="mdescLeft">&#160;</td><td class="mdescRight">セッション変数、アプリケーション変数をファイルに書き出す  <a href="#af99a34865438050f82474f0ae14ab639"></a><br/></td></tr>
+<tr class="separator:af99a34865438050f82474f0ae14ab639"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2ce2597f99f58836d5045607f4b5f6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#aa2ce2597f99f58836d5045607f4b5f6a">SaveSession</a> (string path)</td></tr>
+<tr class="memdesc:aa2ce2597f99f58836d5045607f4b5f6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">セッション変数、アプリケーション変数をファイルに書き出す ファイル名を指定するバージョン。  <a href="#aa2ce2597f99f58836d5045607f4b5f6a"></a><br/></td></tr>
+<tr class="separator:aa2ce2597f99f58836d5045607f4b5f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3760a770a35bfb800ce263b36a2dfdef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a3760a770a35bfb800ce263b36a2dfdef">PurgeSession</a> ()</td></tr>
+<tr class="memdesc:a3760a770a35bfb800ce263b36a2dfdef"><td class="mdescLeft">&#160;</td><td class="mdescRight">古いセッション変数を削除する  <a href="#a3760a770a35bfb800ce263b36a2dfdef"></a><br/></td></tr>
+<tr class="separator:a3760a770a35bfb800ce263b36a2dfdef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a184ee7bb9fcf524a90f17f9348261f50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a184ee7bb9fcf524a90f17f9348261f50">AddPage</a> (string path, Type pageClass)</td></tr>
+<tr class="memdesc:a184ee7bb9fcf524a90f17f9348261f50"><td class="mdescLeft">&#160;</td><td class="mdescRight">URLに対応するページレンダラを登録する。  <a href="#a184ee7bb9fcf524a90f17f9348261f50"></a><br/></td></tr>
+<tr class="separator:a184ee7bb9fcf524a90f17f9348261f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c093a78c1596db621192a4513914300"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a8c093a78c1596db621192a4513914300">AddStaticPage</a> (string path, string dir)</td></tr>
+<tr class="memdesc:a8c093a78c1596db621192a4513914300"><td class="mdescLeft">&#160;</td><td class="mdescRight">静的ページのハンドラを登録する。  <a href="#a8c093a78c1596db621192a4513914300"></a><br/></td></tr>
+<tr class="separator:a8c093a78c1596db621192a4513914300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a454d846a11027123f2c061e9d0fcd271"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a454d846a11027123f2c061e9d0fcd271">AddStaticPage</a> (string path, <a class="el" href="classMACS_1_1HttpServer_1_1HttpStaticPage.html">HttpStaticPage</a> page)</td></tr>
+<tr class="memdesc:a454d846a11027123f2c061e9d0fcd271"><td class="mdescLeft">&#160;</td><td class="mdescRight">静的ページのハンドラを登録する。  <a href="#a454d846a11027123f2c061e9d0fcd271"></a><br/></td></tr>
+<tr class="separator:a454d846a11027123f2c061e9d0fcd271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88b7cbdc2e8aa53ab97c37405b170f2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a88b7cbdc2e8aa53ab97c37405b170f2e">SetEmergencyPage</a> (Type pageClass)</td></tr>
+<tr class="memdesc:a88b7cbdc2e8aa53ab97c37405b170f2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">緊急ページレンダラを登録する  <a href="#a88b7cbdc2e8aa53ab97c37405b170f2e"></a><br/></td></tr>
+<tr class="separator:a88b7cbdc2e8aa53ab97c37405b170f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5305457e794c1c7aa684506ede0eca21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a5305457e794c1c7aa684506ede0eca21">ClearAllowAddress</a> ()</td></tr>
+<tr class="memdesc:a5305457e794c1c7aa684506ede0eca21"><td class="mdescLeft">&#160;</td><td class="mdescRight">接続許可アドレス一覧をクリアする（どこからでも接続できるようにする）  <a href="#a5305457e794c1c7aa684506ede0eca21"></a><br/></td></tr>
+<tr class="separator:a5305457e794c1c7aa684506ede0eca21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70a51768d8673725db4515323a38c966"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a70a51768d8673725db4515323a38c966">AddAllowAddress</a> (<a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Ipaddr.html">Ipaddr</a> netaddr, <a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Ipaddr.html">Ipaddr</a> netmask)</td></tr>
+<tr class="memdesc:a70a51768d8673725db4515323a38c966"><td class="mdescLeft">&#160;</td><td class="mdescRight">接続許可ネットワークアドレス/ネットマスクを追加登録する  <a href="#a70a51768d8673725db4515323a38c966"></a><br/></td></tr>
+<tr class="separator:a70a51768d8673725db4515323a38c966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b6d3b7c2b6b56c036daac98e49add7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a7b6d3b7c2b6b56c036daac98e49add7a">AllowLocalSegment</a> ()</td></tr>
+<tr class="memdesc:a7b6d3b7c2b6b56c036daac98e49add7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">自分と同じセグメントからのアクセスを接続許可にする  <a href="#a7b6d3b7c2b6b56c036daac98e49add7a"></a><br/></td></tr>
+<tr class="separator:a7b6d3b7c2b6b56c036daac98e49add7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e0ab80b59b98d95482a1818d13af88c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a6e0ab80b59b98d95482a1818d13af88c">Run</a> (int initworkers)</td></tr>
+<tr class="memdesc:a6e0ab80b59b98d95482a1818d13af88c"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTPサーバを動かす。  <a href="#a6e0ab80b59b98d95482a1818d13af88c"></a><br/></td></tr>
+<tr class="separator:a6e0ab80b59b98d95482a1818d13af88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59bdc08f0237378b4fff8222a9aec251"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a59bdc08f0237378b4fff8222a9aec251">Stop</a> ()</td></tr>
+<tr class="memdesc:a59bdc08f0237378b4fff8222a9aec251"><td class="mdescLeft">&#160;</td><td class="mdescRight">既に動いているHTTPサーバを停止する。  <a href="#a59bdc08f0237378b4fff8222a9aec251"></a><br/></td></tr>
+<tr class="separator:a59bdc08f0237378b4fff8222a9aec251"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5843c30b161e7d14051c9b4587f9cdd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer_1_1Statistics.html">Statistics</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#ab5843c30b161e7d14051c9b4587f9cdd">GetStatistics</a> ()</td></tr>
+<tr class="memdesc:ab5843c30b161e7d14051c9b4587f9cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">サーバ稼働状況獲得  <a href="#ab5843c30b161e7d14051c9b4587f9cdd"></a><br/></td></tr>
+<tr class="separator:ab5843c30b161e7d14051c9b4587f9cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f7905e57142eb4ea61d6a3b2602b696"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a7f7905e57142eb4ea61d6a3b2602b696">DebugLog</a> (bool detail=false)</td></tr>
+<tr class="memdesc:a7f7905e57142eb4ea61d6a3b2602b696"><td class="mdescLeft">&#160;</td><td class="mdescRight">サーバ稼働状況をログに出力する  <a href="#a7f7905e57142eb4ea61d6a3b2602b696"></a><br/></td></tr>
+<tr class="separator:a7f7905e57142eb4ea61d6a3b2602b696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15b026d60705dae3c7fed5cb47399ac2"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a15b026d60705dae3c7fed5cb47399ac2">GetDebugMessage</a> (bool detail=false)</td></tr>
+<tr class="memdesc:a15b026d60705dae3c7fed5cb47399ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">サーバ稼働状況メッセージを得る  <a href="#a15b026d60705dae3c7fed5cb47399ac2"></a><br/></td></tr>
+<tr class="separator:a15b026d60705dae3c7fed5cb47399ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9530a6830de9336b694dbc526e33285"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#ac9530a6830de9336b694dbc526e33285">Transfer</a> (string pagename)</td></tr>
+<tr class="memdesc:ac9530a6830de9336b694dbc526e33285"><td class="mdescLeft">&#160;</td><td class="mdescRight">他ページにリダイレクトする。  <a href="#ac9530a6830de9336b694dbc526e33285"></a><br/></td></tr>
+<tr class="separator:ac9530a6830de9336b694dbc526e33285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b087da523368e6c9210d1af3370615f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#a1b087da523368e6c9210d1af3370615f">LOG_EMERG</a> (string msg, params object[] objs)</td></tr>
+<tr class="separator:a1b087da523368e6c9210d1af3370615f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50252d11bef2f336ce5e840e4b9b25c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#a50252d11bef2f336ce5e840e4b9b25c2">LOG_ALERT</a> (string msg, params object[] objs)</td></tr>
+<tr class="separator:a50252d11bef2f336ce5e840e4b9b25c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad887acb38cd24634df0ca3499d98e7c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#ad887acb38cd24634df0ca3499d98e7c8">LOG_CRIT</a> (string msg, params object[] objs)</td></tr>
+<tr class="separator:ad887acb38cd24634df0ca3499d98e7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af713a231c44b784df68890b7ea001153"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#af713a231c44b784df68890b7ea001153">LOG_ERR</a> (string msg, params object[] objs)</td></tr>
+<tr class="separator:af713a231c44b784df68890b7ea001153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e8ce70bcc869f7996904e868f12c23a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#a4e8ce70bcc869f7996904e868f12c23a">LOG_WARNING</a> (string msg, params object[] objs)</td></tr>
+<tr class="separator:a4e8ce70bcc869f7996904e868f12c23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa1a837b35ad4917ff008375d628d8ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#afa1a837b35ad4917ff008375d628d8ef">LOG_NOTICE</a> (string msg, params object[] objs)</td></tr>
+<tr class="separator:afa1a837b35ad4917ff008375d628d8ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2af82eefc7d2b91a8fe52e4a7db6ca5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#a2af82eefc7d2b91a8fe52e4a7db6ca5e">LOG_INFO</a> (string msg, params object[] objs)</td></tr>
+<tr class="separator:a2af82eefc7d2b91a8fe52e4a7db6ca5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18b319f0ae97bbac6108ed0938ba7662"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#a18b319f0ae97bbac6108ed0938ba7662">LOG_DEBUG</a> (string msg, params object[] objs)</td></tr>
+<tr class="separator:a18b319f0ae97bbac6108ed0938ba7662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa934fdf4fd746a8ea328740a6805a3ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#aa934fdf4fd746a8ea328740a6805a3ed">LOG_EXCEPTION</a> (Exception e)</td></tr>
+<tr class="separator:aa934fdf4fd746a8ea328740a6805a3ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d0b356336848258a1c04bc5ddfd4af6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#a5d0b356336848258a1c04bc5ddfd4af6">SetLogger</a> (<a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1OpeLog.html">OpeLog</a> logger_)</td></tr>
+<tr class="separator:a5d0b356336848258a1c04bc5ddfd4af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1129d7aba79f6bf0ba61b50d18d61716"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#a1129d7aba79f6bf0ba61b50d18d61716">SetLogger</a> (string filename, Encoding enc=null, int size=1000, int rotation=9)</td></tr>
+<tr class="separator:a1129d7aba79f6bf0ba61b50d18d61716"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa470b89d1ce59a04539c6521099cf31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#aaa470b89d1ce59a04539c6521099cf31">DisableLogging</a> ()</td></tr>
+<tr class="separator:aaa470b89d1ce59a04539c6521099cf31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace864dc269e9b20cfc4bb17267efcb39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#ace864dc269e9b20cfc4bb17267efcb39">EnableLogging</a> ()</td></tr>
+<tr class="separator:ace864dc269e9b20cfc4bb17267efcb39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public メソッド</h2></td></tr>
+<tr class="memitem:a1284f279bf0a9b8e54f73714d7227934"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#a1284f279bf0a9b8e54f73714d7227934">GetExceptionMessage</a> (Exception e)</td></tr>
+<tr class="separator:a1284f279bf0a9b8e54f73714d7227934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada26f178e7644144f5a870a978769d97"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#ada26f178e7644144f5a870a978769d97">SetGlobalLogger</a> (string filename, Encoding enc=null, int size=1000, int rotation=9)</td></tr>
+<tr class="separator:ada26f178e7644144f5a870a978769d97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d37897df96ceaf15b7b9e0a80efcae9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#a4d37897df96ceaf15b7b9e0a80efcae9">SetGlobalLogger</a> (<a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1OpeLog.html">OpeLog</a> logger)</td></tr>
+<tr class="separator:a4d37897df96ceaf15b7b9e0a80efcae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 変数</h2></td></tr>
+<tr class="memitem:aeb0e45d111f8614afbfec8faa3689025"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#aeb0e45d111f8614afbfec8faa3689025">TemporaryDirectory</a></td></tr>
+<tr class="memdesc:aeb0e45d111f8614afbfec8faa3689025"><td class="mdescLeft">&#160;</td><td class="mdescRight">一時ファイルを格納するディレクトリ  <a href="#aeb0e45d111f8614afbfec8faa3689025"></a><br/></td></tr>
+<tr class="separator:aeb0e45d111f8614afbfec8faa3689025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8716f01ef9cf497a3b20dfee5d16990a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a8716f01ef9cf497a3b20dfee5d16990a">TemporaryLifetime</a></td></tr>
+<tr class="memdesc:a8716f01ef9cf497a3b20dfee5d16990a"><td class="mdescLeft">&#160;</td><td class="mdescRight">一時ファイルの最大保存時間（秒）  <a href="#a8716f01ef9cf497a3b20dfee5d16990a"></a><br/></td></tr>
+<tr class="separator:a8716f01ef9cf497a3b20dfee5d16990a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a980b8f98c51b309651222bae8e7b1ae2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a980b8f98c51b309651222bae8e7b1ae2">SessionTimeout</a></td></tr>
+<tr class="memdesc:a980b8f98c51b309651222bae8e7b1ae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">セッション変数の保持時間（秒）  <a href="#a980b8f98c51b309651222bae8e7b1ae2"></a><br/></td></tr>
+<tr class="separator:a980b8f98c51b309651222bae8e7b1ae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a019cd7d6f06efc057a544e7eafcd9b8d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a019cd7d6f06efc057a544e7eafcd9b8d">UseCookieExpires</a></td></tr>
+<tr class="memdesc:a019cd7d6f06efc057a544e7eafcd9b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTPクッキーにexpiresをつけるかどうか  <a href="#a019cd7d6f06efc057a544e7eafcd9b8d"></a><br/></td></tr>
+<tr class="separator:a019cd7d6f06efc057a544e7eafcd9b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae089085dbabe45a1f8215ba677d89a8a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#ae089085dbabe45a1f8215ba677d89a8a">DefaultTimeout</a></td></tr>
+<tr class="memdesc:ae089085dbabe45a1f8215ba677d89a8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ページレンダリングタイムアウトのデフォルト値（ミリ秒）  <a href="#ae089085dbabe45a1f8215ba677d89a8a"></a><br/></td></tr>
+<tr class="separator:ae089085dbabe45a1f8215ba677d89a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7cc6be896c0696c792d54fa51644d78"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#ae7cc6be896c0696c792d54fa51644d78">SessionPath</a></td></tr>
+<tr class="memdesc:ae7cc6be896c0696c792d54fa51644d78"><td class="mdescLeft">&#160;</td><td class="mdescRight">セッション変数を保存するファイル名  <a href="#ae7cc6be896c0696c792d54fa51644d78"></a><br/></td></tr>
+<tr class="separator:ae7cc6be896c0696c792d54fa51644d78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83119e9bc3da9c61cffe3d48ff3e7ced"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a83119e9bc3da9c61cffe3d48ff3e7ced">ShowStackTrace</a></td></tr>
+<tr class="memdesc:a83119e9bc3da9c61cffe3d48ff3e7ced"><td class="mdescLeft">&#160;</td><td class="mdescRight">ワーカが例外を発した時にスタックトレースページを表示するかどうか  <a href="#a83119e9bc3da9c61cffe3d48ff3e7ced"></a><br/></td></tr>
+<tr class="separator:a83119e9bc3da9c61cffe3d48ff3e7ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected メソッド</h2></td></tr>
+<tr class="memitem:ac57c9bde5563e89ee88bbd0ddf7c0648"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#ac57c9bde5563e89ee88bbd0ddf7c0648">GetPageName</a> ()</td></tr>
+<tr class="separator:ac57c9bde5563e89ee88bbd0ddf7c0648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf0100222df4834cca5aa0169a81b07c"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#aaf0100222df4834cca5aa0169a81b07c">GetUserName</a> ()</td></tr>
+<tr class="separator:aaf0100222df4834cca5aa0169a81b07c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4811856aeafe07c2dbac425f73db780a"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#a4811856aeafe07c2dbac425f73db780a">GetCategoryName</a> ()</td></tr>
+<tr class="separator:a4811856aeafe07c2dbac425f73db780a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:ad9959869bd029896c3d254ec3d9ddeb6"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#ad9959869bd029896c3d254ec3d9ddeb6">ServerName</a><code> [get]</code></td></tr>
+<tr class="memdesc:ad9959869bd029896c3d254ec3d9ddeb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">サーバ名  <a href="#ad9959869bd029896c3d254ec3d9ddeb6"></a><br/></td></tr>
+<tr class="separator:ad9959869bd029896c3d254ec3d9ddeb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56e5589782de6942fff83e70da773ead"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a56e5589782de6942fff83e70da773ead">PortNo</a><code> [get]</code></td></tr>
+<tr class="memdesc:a56e5589782de6942fff83e70da773ead"><td class="mdescLeft">&#160;</td><td class="mdescRight">ポート番号  <a href="#a56e5589782de6942fff83e70da773ead"></a><br/></td></tr>
+<tr class="separator:a56e5589782de6942fff83e70da773ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a007c8cb011c43a9dbf8ab20543b84318"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a007c8cb011c43a9dbf8ab20543b84318">URL</a><code> [get]</code></td></tr>
+<tr class="memdesc:a007c8cb011c43a9dbf8ab20543b84318"><td class="mdescLeft">&#160;</td><td class="mdescRight">URL  <a href="#a007c8cb011c43a9dbf8ab20543b84318"></a><br/></td></tr>
+<tr class="separator:a007c8cb011c43a9dbf8ab20543b84318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6322f47e9b0b655e51877d5e918d17e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a6322f47e9b0b655e51877d5e918d17e2">MaxWorkers</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a6322f47e9b0b655e51877d5e918d17e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大ワーカースレッド数  <a href="#a6322f47e9b0b655e51877d5e918d17e2"></a><br/></td></tr>
+<tr class="separator:a6322f47e9b0b655e51877d5e918d17e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82cf4689d9293c178c8cd81dec02809d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a82cf4689d9293c178c8cd81dec02809d">MaxActivePages</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a82cf4689d9293c178c8cd81dec02809d"><td class="mdescLeft">&#160;</td><td class="mdescRight">WEBアプリ用最大ワーカースレッド数  <a href="#a82cf4689d9293c178c8cd81dec02809d"></a><br/></td></tr>
+<tr class="separator:a82cf4689d9293c178c8cd81dec02809d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff26dfe77fe43ff8fce71f98bfdc42fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#aff26dfe77fe43ff8fce71f98bfdc42fb">ReservedWorkers</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:aff26dfe77fe43ff8fce71f98bfdc42fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">緊急時用ワーカスレッド数  <a href="#aff26dfe77fe43ff8fce71f98bfdc42fb"></a><br/></td></tr>
+<tr class="separator:aff26dfe77fe43ff8fce71f98bfdc42fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea5002448673c643cd82b455cbd94b33"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#aea5002448673c643cd82b455cbd94b33">IsRunning</a><code> [get]</code></td></tr>
+<tr class="memdesc:aea5002448673c643cd82b455cbd94b33"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTPサーバが動いているかどうか  <a href="#aea5002448673c643cd82b455cbd94b33"></a><br/></td></tr>
+<tr class="separator:aea5002448673c643cd82b455cbd94b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2b8ad205d4b4dd3448fe4234d6be8c4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#af2b8ad205d4b4dd3448fe4234d6be8c4">IsListening</a><code> [get]</code></td></tr>
+<tr class="memdesc:af2b8ad205d4b4dd3448fe4234d6be8c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTPサーバが接続待ち状態かどうか  <a href="#af2b8ad205d4b4dd3448fe4234d6be8c4"></a><br/></td></tr>
+<tr class="separator:af2b8ad205d4b4dd3448fe4234d6be8c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7b860e0caaad2b6db1b48639c8e0c8e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#ae7b860e0caaad2b6db1b48639c8e0c8e">DefaultPage</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ae7b860e0caaad2b6db1b48639c8e0c8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトページ  <a href="#ae7b860e0caaad2b6db1b48639c8e0c8e"></a><br/></td></tr>
+<tr class="separator:ae7b860e0caaad2b6db1b48639c8e0c8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7bb643442c98c0602fe7a2668513974"><td class="memItemLeft" align="right" valign="top">static <a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1OpeLog.html">OpeLog</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#af7bb643442c98c0602fe7a2668513974">GlobalLogger</a></td></tr>
+<tr class="separator:af7bb643442c98c0602fe7a2668513974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad69aee2a6ba820e202d26a071ecfdcac"><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1OpeLog.html">OpeLog</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Loggable.html#ad69aee2a6ba820e202d26a071ecfdcac">Logger</a></td></tr>
+<tr class="separator:ad69aee2a6ba820e202d26a071ecfdcac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">説明</h2>
+<div class="textblock"><p>HTTPサーバ </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00025">25</a> 行で定義されています。</p>
+</div><h2 class="groupheader">コンストラクタとデストラクタ</h2>
+<a class="anchor" id="a4f3bdb07583c42678150ff551dcf3936"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.HttpServer.HttpServer.HttpServer </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>servername</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>domain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>HTTPサーバオブジェクトを作る。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">servername</td><td>クッキーなどに使われるサーバーのID名。</td></tr>
+    <tr><td class="paramname">domain</td><td>Listenするインタフェースを特定するためのドメイン名またはIPアドレス。特定しない場合は、"*"を指定する。</td></tr>
+    <tr><td class="paramname">port</td><td>Listenするポート番号。</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00155">155</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド</h2>
+<a class="anchor" id="a870b05e860313753dd46db6181b8d9db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HttpServer.HttpServer.LoadSession </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>セッション変数、アプリケーション変数をファイルから取り込む。 </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00178">178</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa9ac8abefe45a2d920380585f03a9a55"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HttpServer.HttpServer.LoadSession </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>セッション変数、アプリケーション変数をファイルから取り込む。 ファイル名を指定するバージョン。 </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00187">187</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af99a34865438050f82474f0ae14ab639"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HttpServer.HttpServer.SaveSession </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>セッション変数、アプリケーション変数をファイルに書き出す </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00199">199</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa2ce2597f99f58836d5045607f4b5f6a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HttpServer.HttpServer.SaveSession </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>セッション変数、アプリケーション変数をファイルに書き出す ファイル名を指定するバージョン。 </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00207">207</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a3760a770a35bfb800ce263b36a2dfdef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HttpServer.HttpServer.PurgeSession </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>古いセッション変数を削除する </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00220">220</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a184ee7bb9fcf524a90f17f9348261f50"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HttpServer.HttpServer.AddPage </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>pageClass</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>URLに対応するページレンダラを登録する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>URL内のパス名。/から始まる。</td></tr>
+    <tr><td class="paramname">pageClass</td><td>pathにアクセスした時にこのクラスのPageLoadメソッドが呼び出される。 このクラスはHttpPageのサブクラスでなければいけない。</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a class="code" href="classMACS_1_1HttpServer_1_1HttpServer.html#a4f3bdb07583c42678150ff551dcf3936" title="HTTPサーバオブジェクトを作る。 ">HttpServer</a> sv = <span class="keyword">new</span> <a class="code" href="classMACS_1_1HttpServer_1_1HttpServer.html#a4f3bdb07583c42678150ff551dcf3936" title="HTTPサーバオブジェクトを作る。 ">HttpServer</a>(<span class="stringliteral">&quot;MyServerName&quot;</span>, <span class="stringliteral">&quot;*&quot;</span>, <span class="stringliteral">&quot;80&quot;</span>);</div>
+<div class="line">sv.AddPage(<span class="stringliteral">&quot;/hoge&quot;</span>, typeof(HogePage));</div>
+<div class="line">...</div>
+<div class="line">class HogePage : HttpPage {</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> PageLoad(<span class="keywordtype">string</span> param) {</div>
+<div class="line">        ...</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> これで、"http://MyServerName/hoge/abcd.html"にアクセスするとHogePageクラスのPageLoadメソッドが呼び出される。 PageLoadの引数paramには "/abcd.html" がセットされる。 </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00285">285</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8c093a78c1596db621192a4513914300"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HttpServer.HttpServer.AddStaticPage </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>dir</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>静的ページのハンドラを登録する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>URL内のパス名（ディレクトリ名）。/から始まる。</td></tr>
+    <tr><td class="paramname">dir</td><td>静的ページが入っているディレクトリ名。</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a class="code" href="classMACS_1_1HttpServer_1_1HttpServer.html#a4f3bdb07583c42678150ff551dcf3936" title="HTTPサーバオブジェクトを作る。 ">HttpServer</a> sv = <span class="keyword">new</span> <a class="code" href="classMACS_1_1HttpServer_1_1HttpServer.html#a4f3bdb07583c42678150ff551dcf3936" title="HTTPサーバオブジェクトを作る。 ">HttpServer</a>(<span class="stringliteral">&quot;MyServerName&quot;</span>, <span class="stringliteral">&quot;*&quot;</span>, <span class="stringliteral">&quot;80&quot;</span>);</div>
+<div class="line">sv.AddStaticPage(<span class="stringliteral">&quot;/hoge&quot;</span>, <span class="stringliteral">&quot;foo&quot;</span>);</div>
+</div><!-- fragment --><p> これで、"http://MyServerName/hoge/abcd.html"にアクセスすると"foo/abcd.html"が返されるようになる。 </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00303">303</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a454d846a11027123f2c061e9d0fcd271"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HttpServer.HttpServer.AddStaticPage </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1HttpServer_1_1HttpStaticPage.html">HttpStaticPage</a>&#160;</td>
+          <td class="paramname"><em>page</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>静的ページのハンドラを登録する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>URL内のパス名（ディレクトリ名）。/から始まる。</td></tr>
+    <tr><td class="paramname">page</td><td>静的ページを返すハンドラ。</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a class="code" href="classMACS_1_1HttpServer_1_1HttpServer.html#a4f3bdb07583c42678150ff551dcf3936" title="HTTPサーバオブジェクトを作る。 ">HttpServer</a> sv = <span class="keyword">new</span> <a class="code" href="classMACS_1_1HttpServer_1_1HttpServer.html#a4f3bdb07583c42678150ff551dcf3936" title="HTTPサーバオブジェクトを作る。 ">HttpServer</a>(<span class="stringliteral">&quot;MyServerName&quot;</span>, <span class="stringliteral">&quot;*&quot;</span>, <span class="stringliteral">&quot;80&quot;</span>);</div>
+<div class="line">sv.AddStaticPage(<span class="stringliteral">&quot;/hoge&quot;</span>, <span class="keyword">new</span> HttpStaticPage(<span class="stringliteral">&quot;foo&quot;</span>));</div>
+</div><!-- fragment --><p> これで、"http://MyServerName/hoge/abcd.html"にアクセスすると"foo/abcd.html"が返されるようになる。 </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00319">319</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a88b7cbdc2e8aa53ab97c37405b170f2e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HttpServer.HttpServer.SetEmergencyPage </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>pageClass</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>緊急ページレンダラを登録する </p>
+<p>動的ページを処理中のワーカー数がMaxActivePagesを超えた場合には、ここ で指定されたページレンダラが呼び出される。 一般的には、緊急ページレンダラは、HTTPアクセスが過負荷状態になって いることを表示して終了する。 </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00334">334</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5305457e794c1c7aa684506ede0eca21"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HttpServer.HttpServer.ClearAllowAddress </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>接続許可アドレス一覧をクリアする（どこからでも接続できるようにする） </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00343">343</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a70a51768d8673725db4515323a38c966"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HttpServer.HttpServer.AddAllowAddress </td>
+          <td>(</td>
+          <td class="paramtype"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Ipaddr.html">Ipaddr</a>&#160;</td>
+          <td class="paramname"><em>netaddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="elRef" doxygen="MACS.tag:../Core/" href="../Core/classMACS_1_1Ipaddr.html">Ipaddr</a>&#160;</td>
+          <td class="paramname"><em>netmask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>接続許可ネットワークアドレス/ネットマスクを追加登録する </p>
+<p>現在のところ、IPv4しか対応していない。1つでも接続許可ネットワーク アドレスを登録すると、IPv4以外のプロトコルでのアクセスは接続拒否 するようになる。</p>
+<p>Loopbackアドレスからのアクセスは常に許可される。 </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00362">362</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a7b6d3b7c2b6b56c036daac98e49add7a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HttpServer.HttpServer.AllowLocalSegment </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>自分と同じセグメントからのアクセスを接続許可にする </p>
+<p>Monoでは自分のIPアドレスの獲得ができないため、本呼び出しは何もしない。 </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00377">377</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a6e0ab80b59b98d95482a1818d13af88c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HttpServer.HttpServer.Run </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>initworkers</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>HTTPサーバを動かす。 </p>
+<p><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html#a59bdc08f0237378b4fff8222a9aec251" title="既に動いているHTTPサーバを停止する。 ">Stop()</a>が（他のスレッドで）呼び出されるまで、本メソッドは戻らない。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initworkers</td><td>初期ワーカースレッド数</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00395">395</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a59bdc08f0237378b4fff8222a9aec251"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HttpServer.HttpServer.Stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>既に動いているHTTPサーバを停止する。 </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00506">506</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab5843c30b161e7d14051c9b4587f9cdd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer_1_1Statistics.html">Statistics</a> MACS.HttpServer.HttpServer.GetStatistics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>サーバ稼働状況獲得 </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00575">575</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a7f7905e57142eb4ea61d6a3b2602b696"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HttpServer.HttpServer.DebugLog </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>detail</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>サーバ稼働状況をログに出力する </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00613">613</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a15b026d60705dae3c7fed5cb47399ac2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] MACS.HttpServer.HttpServer.GetDebugMessage </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>detail</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>サーバ稼働状況メッセージを得る </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00621">621</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac9530a6830de9336b694dbc526e33285"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.HttpServer.HttpServer.Transfer </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>pagename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>他ページにリダイレクトする。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pagename</td><td>リダイレクト先のURL</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>ページレンダラ用。本関数の呼び出しは戻らない。 </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00655">655</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">変数</h2>
+<a class="anchor" id="aeb0e45d111f8614afbfec8faa3689025"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.HttpServer.HttpServer.TemporaryDirectory</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>一時ファイルを格納するディレクトリ </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00051">51</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8716f01ef9cf497a3b20dfee5d16990a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.HttpServer.HttpServer.TemporaryLifetime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>一時ファイルの最大保存時間（秒） </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00056">56</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a980b8f98c51b309651222bae8e7b1ae2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.HttpServer.HttpServer.SessionTimeout</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>セッション変数の保持時間（秒） </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00061">61</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a019cd7d6f06efc057a544e7eafcd9b8d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.HttpServer.HttpServer.UseCookieExpires</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>HTTPクッキーにexpiresをつけるかどうか </p>
+<p>HTTPサーバの時計が狂っていてクッキーの有効期限が正しく処理されない 場合にはfalseにするとよい。 </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00072">72</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae089085dbabe45a1f8215ba677d89a8a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.HttpServer.HttpServer.DefaultTimeout</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ページレンダリングタイムアウトのデフォルト値（ミリ秒） </p>
+<p>この時間経過してもPageLoadが完了しない場合、AbortExceptionが 発生する。 0を設定するとタイムアウト処理なしになる。 </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00142">142</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae7cc6be896c0696c792d54fa51644d78"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.HttpServer.HttpServer.SessionPath</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>セッション変数を保存するファイル名 </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00147">147</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a83119e9bc3da9c61cffe3d48ff3e7ced"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.HttpServer.HttpServer.ShowStackTrace</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ワーカが例外を発した時にスタックトレースページを表示するかどうか </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00263">263</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">プロパティ</h2>
+<a class="anchor" id="ad9959869bd029896c3d254ec3d9ddeb6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.HttpServer.HttpServer.ServerName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>サーバ名 </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00030">30</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a56e5589782de6942fff83e70da773ead"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.HttpServer.HttpServer.PortNo</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ポート番号 </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00037">37</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a007c8cb011c43a9dbf8ab20543b84318"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.HttpServer.HttpServer.URL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>URL </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00044">44</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a6322f47e9b0b655e51877d5e918d17e2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.HttpServer.HttpServer.MaxWorkers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最大ワーカースレッド数 </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00077">77</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a82cf4689d9293c178c8cd81dec02809d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.HttpServer.HttpServer.MaxActivePages</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>WEBアプリ用最大ワーカースレッド数 </p>
+<p>動的ページ処理をするワーカースレッドの最大同時実行数。 この個数を超える動的ページのHttpセッションが要求された時には、 EmergencyPageクラスで処理が行なわれるようになる。 </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00099">99</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aff26dfe77fe43ff8fce71f98bfdc42fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.HttpServer.HttpServer.ReservedWorkers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>緊急時用ワーカスレッド数 </p>
+<p>この数は、MaxWorkersに含まれる。 MaxActivePagesを超えた数の動的ページ生成セッションが張られた時に緊急 ページ表示に使用するためのワーカスレッド数。 </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00121">121</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aea5002448673c643cd82b455cbd94b33"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.HttpServer.HttpServer.IsRunning</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTTPサーバが動いているかどうか </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00240">240</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af2b8ad205d4b4dd3448fe4234d6be8c4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.HttpServer.HttpServer.IsListening</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTTPサーバが接続待ち状態かどうか </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00247">247</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae7b860e0caaad2b6db1b48639c8e0c8e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.HttpServer.HttpServer.DefaultPage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デフォルトページ </p>
+
+<p> <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a> の <a class="el" href="HttpServer_8cs_source.html#l00254">254</a> 行で定義されています。</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceMACS.html">MACS</a></li><li class="navelem"><a class="el" href="namespaceMACS_1_1HttpServer.html">HttpServer</a></li><li class="navelem"><a class="el" href="classMACS_1_1HttpServer_1_1HttpServer.html">HttpServer</a></li>
+    <li class="footer">MACS.HttpServerに対してWed Jun 27 2018 17:45:46に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

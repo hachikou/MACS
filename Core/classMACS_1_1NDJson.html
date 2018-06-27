@@ -1,0 +1,3185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.Core: クラス MACS.NDJson</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.Core
+   </div>
+   <div id="projectbrief">Miscellaneous Assets for C-Sharp</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classMACS_1_1NDJson.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">構成</a> &#124;
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-static-methods">Static Public メソッド</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="classMACS_1_1NDJson-members.html">すべてのメンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス MACS.NDJson</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>dynamicを使わないJSON  
+ <a href="classMACS_1_1NDJson.html#details">[詳細]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr class="memitem:a740a5ee053d73ec19c66778cd007f7e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a740a5ee053d73ec19c66778cd007f7e1">NDJson</a> ()</td></tr>
+<tr class="memdesc:a740a5ee053d73ec19c66778cd007f7e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">値が空のコンストラクタ  <a href="#a740a5ee053d73ec19c66778cd007f7e1"></a><br/></td></tr>
+<tr class="separator:a740a5ee053d73ec19c66778cd007f7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7593317dd4c2d7f951c818bc7f9fde49"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a7593317dd4c2d7f951c818bc7f9fde49">NDJson</a> (string val)</td></tr>
+<tr class="memdesc:a7593317dd4c2d7f951c818bc7f9fde49"><td class="mdescLeft">&#160;</td><td class="mdescRight">値が文字列のコンストラクタ  <a href="#a7593317dd4c2d7f951c818bc7f9fde49"></a><br/></td></tr>
+<tr class="separator:a7593317dd4c2d7f951c818bc7f9fde49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedc705bf6573218a5398772b8443883f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#aedc705bf6573218a5398772b8443883f">NDJson</a> (int val)</td></tr>
+<tr class="memdesc:aedc705bf6573218a5398772b8443883f"><td class="mdescLeft">&#160;</td><td class="mdescRight">値がintのコンストラクタ  <a href="#aedc705bf6573218a5398772b8443883f"></a><br/></td></tr>
+<tr class="separator:aedc705bf6573218a5398772b8443883f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9bd885746cd9635ff75d55dac535bd6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#aa9bd885746cd9635ff75d55dac535bd6">NDJson</a> (double val)</td></tr>
+<tr class="memdesc:aa9bd885746cd9635ff75d55dac535bd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">値がdoubleのコンストラクタ  <a href="#aa9bd885746cd9635ff75d55dac535bd6"></a><br/></td></tr>
+<tr class="separator:aa9bd885746cd9635ff75d55dac535bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac3a4f8a8afd1ac4870da4e18a0934b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#aac3a4f8a8afd1ac4870da4e18a0934b4">NDJson</a> (bool val)</td></tr>
+<tr class="memdesc:aac3a4f8a8afd1ac4870da4e18a0934b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">値がboolのコンストラクタ  <a href="#aac3a4f8a8afd1ac4870da4e18a0934b4"></a><br/></td></tr>
+<tr class="separator:aac3a4f8a8afd1ac4870da4e18a0934b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42a49dc77ad1ce638421436f05fc6de7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a42a49dc77ad1ce638421436f05fc6de7">NDJson</a> (string key, object value, params object[] args)</td></tr>
+<tr class="memdesc:a42a49dc77ad1ce638421436f05fc6de7"><td class="mdescLeft">&#160;</td><td class="mdescRight">値がオブジェクトのコンストラクタ  <a href="#a42a49dc77ad1ce638421436f05fc6de7"></a><br/></td></tr>
+<tr class="separator:a42a49dc77ad1ce638421436f05fc6de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40ba6cd82f26040b06149f7d522be115"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a40ba6cd82f26040b06149f7d522be115">NDJson</a> (string key, string value)</td></tr>
+<tr class="memdesc:a40ba6cd82f26040b06149f7d522be115"><td class="mdescLeft">&#160;</td><td class="mdescRight">値がオブジェクトのコンストラクタ  <a href="#a40ba6cd82f26040b06149f7d522be115"></a><br/></td></tr>
+<tr class="separator:a40ba6cd82f26040b06149f7d522be115"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4804adbabf3c1a463c6ad4e8851715fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a4804adbabf3c1a463c6ad4e8851715fd">NDJson</a> (string key, int value)</td></tr>
+<tr class="memdesc:a4804adbabf3c1a463c6ad4e8851715fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">値がオブジェクトのコンストラクタ  <a href="#a4804adbabf3c1a463c6ad4e8851715fd"></a><br/></td></tr>
+<tr class="separator:a4804adbabf3c1a463c6ad4e8851715fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4ecaa6e975931c8a8b1e76fa6ce572e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#aa4ecaa6e975931c8a8b1e76fa6ce572e">NDJson</a> (string key, double value)</td></tr>
+<tr class="memdesc:aa4ecaa6e975931c8a8b1e76fa6ce572e"><td class="mdescLeft">&#160;</td><td class="mdescRight">値がオブジェクトのコンストラクタ  <a href="#aa4ecaa6e975931c8a8b1e76fa6ce572e"></a><br/></td></tr>
+<tr class="separator:aa4ecaa6e975931c8a8b1e76fa6ce572e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad67f0a9ae095118f5cbc86e34e14e56f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#ad67f0a9ae095118f5cbc86e34e14e56f">NDJson</a> (string[] values)</td></tr>
+<tr class="memdesc:ad67f0a9ae095118f5cbc86e34e14e56f"><td class="mdescLeft">&#160;</td><td class="mdescRight">値が文字列の配列であるコンストラクタ  <a href="#ad67f0a9ae095118f5cbc86e34e14e56f"></a><br/></td></tr>
+<tr class="separator:ad67f0a9ae095118f5cbc86e34e14e56f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fc9e928da7cf8a794a4850f56498510"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a5fc9e928da7cf8a794a4850f56498510">NDJson</a> (int[] values)</td></tr>
+<tr class="memdesc:a5fc9e928da7cf8a794a4850f56498510"><td class="mdescLeft">&#160;</td><td class="mdescRight">値がintの配列であるコンストラクタ  <a href="#a5fc9e928da7cf8a794a4850f56498510"></a><br/></td></tr>
+<tr class="separator:a5fc9e928da7cf8a794a4850f56498510"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a979b2b757d5933c41153b18e3a8c8cd6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a979b2b757d5933c41153b18e3a8c8cd6">NDJson</a> (double[] values)</td></tr>
+<tr class="memdesc:a979b2b757d5933c41153b18e3a8c8cd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">値がdoubleの配列であるコンストラクタ  <a href="#a979b2b757d5933c41153b18e3a8c8cd6"></a><br/></td></tr>
+<tr class="separator:a979b2b757d5933c41153b18e3a8c8cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f6b74be451f69dcda4b090a176af11c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a1f6b74be451f69dcda4b090a176af11c">NDJson</a> (bool[] values)</td></tr>
+<tr class="memdesc:a1f6b74be451f69dcda4b090a176af11c"><td class="mdescLeft">&#160;</td><td class="mdescRight">値がboolの配列であるコンストラクタ  <a href="#a1f6b74be451f69dcda4b090a176af11c"></a><br/></td></tr>
+<tr class="separator:a1f6b74be451f69dcda4b090a176af11c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad19da92da97d60b9e7f7e4c16bc0b019"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#ad19da92da97d60b9e7f7e4c16bc0b019">NDJson</a> (<a class="el" href="classMACS_1_1NDJson.html">NDJson</a>[] values)</td></tr>
+<tr class="memdesc:ad19da92da97d60b9e7f7e4c16bc0b019"><td class="mdescLeft">&#160;</td><td class="mdescRight">値がNDJsonの配列であるコンストラクタ  <a href="#ad19da92da97d60b9e7f7e4c16bc0b019"></a><br/></td></tr>
+<tr class="separator:ad19da92da97d60b9e7f7e4c16bc0b019"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60bc9f205c820d142c09ff62492aa213"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a60bc9f205c820d142c09ff62492aa213">NDJson</a> (object[] values)</td></tr>
+<tr class="memdesc:a60bc9f205c820d142c09ff62492aa213"><td class="mdescLeft">&#160;</td><td class="mdescRight">値がobjectの配列であるコンストラクタ  <a href="#a60bc9f205c820d142c09ff62492aa213"></a><br/></td></tr>
+<tr class="separator:a60bc9f205c820d142c09ff62492aa213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa9cd81b075831da8ff13a0d0ed69b30"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#aaa9cd81b075831da8ff13a0d0ed69b30">NDJson</a> (<a class="el" href="classMACS_1_1NDJson.html">NDJson</a> val)</td></tr>
+<tr class="memdesc:aaa9cd81b075831da8ff13a0d0ed69b30"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピーコンストラクタ  <a href="#aaa9cd81b075831da8ff13a0d0ed69b30"></a><br/></td></tr>
+<tr class="separator:aaa9cd81b075831da8ff13a0d0ed69b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bf7884ec602b7b5d64111e16033b271"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a5bf7884ec602b7b5d64111e16033b271">Set</a> (object obj)</td></tr>
+<tr class="memdesc:a5bf7884ec602b7b5d64111e16033b271"><td class="mdescLeft">&#160;</td><td class="mdescRight">値をセットする。  <a href="#a5bf7884ec602b7b5d64111e16033b271"></a><br/></td></tr>
+<tr class="separator:a5bf7884ec602b7b5d64111e16033b271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34034987267b239d8f04c13338da6bcd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a34034987267b239d8f04c13338da6bcd">Set</a> (string value)</td></tr>
+<tr class="memdesc:a34034987267b239d8f04c13338da6bcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列を値にする。  <a href="#a34034987267b239d8f04c13338da6bcd"></a><br/></td></tr>
+<tr class="separator:a34034987267b239d8f04c13338da6bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc1c33ca200354c4aca92f2fdf4a2c0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#afc1c33ca200354c4aca92f2fdf4a2c0b">Set</a> (int value)</td></tr>
+<tr class="memdesc:afc1c33ca200354c4aca92f2fdf4a2c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">intを値にする。  <a href="#afc1c33ca200354c4aca92f2fdf4a2c0b"></a><br/></td></tr>
+<tr class="separator:afc1c33ca200354c4aca92f2fdf4a2c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae85c710e1416d00f27c72602aa1be4f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#ae85c710e1416d00f27c72602aa1be4f3">Set</a> (double value)</td></tr>
+<tr class="memdesc:ae85c710e1416d00f27c72602aa1be4f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">doubleを値にする。  <a href="#ae85c710e1416d00f27c72602aa1be4f3"></a><br/></td></tr>
+<tr class="separator:ae85c710e1416d00f27c72602aa1be4f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc4f9e3e4e355ff287bb4038d00b0343"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#afc4f9e3e4e355ff287bb4038d00b0343">Set</a> (bool value)</td></tr>
+<tr class="memdesc:afc4f9e3e4e355ff287bb4038d00b0343"><td class="mdescLeft">&#160;</td><td class="mdescRight">boolを値にする。  <a href="#afc4f9e3e4e355ff287bb4038d00b0343"></a><br/></td></tr>
+<tr class="separator:afc4f9e3e4e355ff287bb4038d00b0343"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9da0e7102cf04c1caaa90907e290fcc7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a9da0e7102cf04c1caaa90907e290fcc7">Get</a> (string key)</td></tr>
+<tr class="memdesc:a9da0e7102cf04c1caaa90907e290fcc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーに対応する値を返す  <a href="#a9da0e7102cf04c1caaa90907e290fcc7"></a><br/></td></tr>
+<tr class="separator:a9da0e7102cf04c1caaa90907e290fcc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e8de80c07130cbf3324822d4cf044b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a5e8de80c07130cbf3324822d4cf044b7">Get</a> (string key, <a class="el" href="classMACS_1_1NDJson.html">NDJson</a> defval)</td></tr>
+<tr class="memdesc:a5e8de80c07130cbf3324822d4cf044b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーに対応する値を返す  <a href="#a5e8de80c07130cbf3324822d4cf044b7"></a><br/></td></tr>
+<tr class="separator:a5e8de80c07130cbf3324822d4cf044b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dd2653437a9fff56347a58fe1ccc364"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a8dd2653437a9fff56347a58fe1ccc364">Get</a> (string key, string defval)</td></tr>
+<tr class="memdesc:a8dd2653437a9fff56347a58fe1ccc364"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーに対応する値を返す  <a href="#a8dd2653437a9fff56347a58fe1ccc364"></a><br/></td></tr>
+<tr class="separator:a8dd2653437a9fff56347a58fe1ccc364"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a025bbb33f5d2e73ee73be0daacaff775"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a025bbb33f5d2e73ee73be0daacaff775">Get</a> (string key, int defval)</td></tr>
+<tr class="memdesc:a025bbb33f5d2e73ee73be0daacaff775"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーに対応する値を返す  <a href="#a025bbb33f5d2e73ee73be0daacaff775"></a><br/></td></tr>
+<tr class="separator:a025bbb33f5d2e73ee73be0daacaff775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdb1dfb60a2785cc6a46fd1bbc85ee31"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#acdb1dfb60a2785cc6a46fd1bbc85ee31">Get</a> (string key, double defval)</td></tr>
+<tr class="memdesc:acdb1dfb60a2785cc6a46fd1bbc85ee31"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーに対応する値を返す  <a href="#acdb1dfb60a2785cc6a46fd1bbc85ee31"></a><br/></td></tr>
+<tr class="separator:acdb1dfb60a2785cc6a46fd1bbc85ee31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4965b14a0cb80283c944f33519b5004a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a4965b14a0cb80283c944f33519b5004a">Get</a> (string key, bool defval)</td></tr>
+<tr class="memdesc:a4965b14a0cb80283c944f33519b5004a"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーに対応する値を返す  <a href="#a4965b14a0cb80283c944f33519b5004a"></a><br/></td></tr>
+<tr class="separator:a4965b14a0cb80283c944f33519b5004a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3f9ed650645ef2e2eee164d540bdc3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#af3f9ed650645ef2e2eee164d540bdc3e">Set</a> (string key, object val, params object[] args)</td></tr>
+<tr class="memdesc:af3f9ed650645ef2e2eee164d540bdc3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーに対応する値をセットする  <a href="#af3f9ed650645ef2e2eee164d540bdc3e"></a><br/></td></tr>
+<tr class="separator:af3f9ed650645ef2e2eee164d540bdc3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cac0a9b9174753aa0315e9f6547e314"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a3cac0a9b9174753aa0315e9f6547e314">Set</a> (string key, <a class="el" href="classMACS_1_1NDJson.html">NDJson</a> val)</td></tr>
+<tr class="memdesc:a3cac0a9b9174753aa0315e9f6547e314"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーに対応する値をセットする  <a href="#a3cac0a9b9174753aa0315e9f6547e314"></a><br/></td></tr>
+<tr class="separator:a3cac0a9b9174753aa0315e9f6547e314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9019157eaafad444598a11671d1d8b00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a9019157eaafad444598a11671d1d8b00">Set</a> (string key, string val)</td></tr>
+<tr class="memdesc:a9019157eaafad444598a11671d1d8b00"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーに対応する値をセットする  <a href="#a9019157eaafad444598a11671d1d8b00"></a><br/></td></tr>
+<tr class="separator:a9019157eaafad444598a11671d1d8b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1841ae8045b998460b840a00749c175a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a1841ae8045b998460b840a00749c175a">Set</a> (string key, int val)</td></tr>
+<tr class="memdesc:a1841ae8045b998460b840a00749c175a"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーに対応する値をセットする  <a href="#a1841ae8045b998460b840a00749c175a"></a><br/></td></tr>
+<tr class="separator:a1841ae8045b998460b840a00749c175a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48da3f27679204461d6684e10d7e45bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a48da3f27679204461d6684e10d7e45bd">Set</a> (string key, double val)</td></tr>
+<tr class="memdesc:a48da3f27679204461d6684e10d7e45bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーに対応する値をセットする  <a href="#a48da3f27679204461d6684e10d7e45bd"></a><br/></td></tr>
+<tr class="separator:a48da3f27679204461d6684e10d7e45bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c6a0ccbc5bb950246d7421e498f636"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a05c6a0ccbc5bb950246d7421e498f636">Set</a> (string key, bool val)</td></tr>
+<tr class="memdesc:a05c6a0ccbc5bb950246d7421e498f636"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーに対応する値をセットする  <a href="#a05c6a0ccbc5bb950246d7421e498f636"></a><br/></td></tr>
+<tr class="separator:a05c6a0ccbc5bb950246d7421e498f636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa200d767f78e86d3475e5eaa50e73d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#afa200d767f78e86d3475e5eaa50e73d2">IsDefined</a> (string key)</td></tr>
+<tr class="memdesc:afa200d767f78e86d3475e5eaa50e73d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定キーが存在するかどうかを返す  <a href="#afa200d767f78e86d3475e5eaa50e73d2"></a><br/></td></tr>
+<tr class="separator:afa200d767f78e86d3475e5eaa50e73d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a361e4f7a6b1318e4458b1bf77ecc29f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a361e4f7a6b1318e4458b1bf77ecc29f3">Delete</a> (string key)</td></tr>
+<tr class="memdesc:a361e4f7a6b1318e4458b1bf77ecc29f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定キーを削除する  <a href="#a361e4f7a6b1318e4458b1bf77ecc29f3"></a><br/></td></tr>
+<tr class="separator:a361e4f7a6b1318e4458b1bf77ecc29f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd4b244cd33c6ce39248b432c87aa6c2"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, <a class="el" href="classMACS_1_1NDJson.html">NDJson</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#afd4b244cd33c6ce39248b432c87aa6c2">GetDictionary</a> ()</td></tr>
+<tr class="memdesc:afd4b244cd33c6ce39248b432c87aa6c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ディクショナリとして値を獲得する  <a href="#afd4b244cd33c6ce39248b432c87aa6c2"></a><br/></td></tr>
+<tr class="separator:afd4b244cd33c6ce39248b432c87aa6c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afedf520077313b0a0a78b9c73bcd2fcf"><td class="memItemLeft" align="right" valign="top">IEnumerator&lt; KeyValuePair<br class="typebreak"/>
+&lt; string, <a class="el" href="classMACS_1_1NDJson.html">NDJson</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#afedf520077313b0a0a78b9c73bcd2fcf">GetEnumerator</a> ()</td></tr>
+<tr class="memdesc:afedf520077313b0a0a78b9c73bcd2fcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">イテレータ  <a href="#afedf520077313b0a0a78b9c73bcd2fcf"></a><br/></td></tr>
+<tr class="separator:afedf520077313b0a0a78b9c73bcd2fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bae3dd5c4d5fd2751e754494d35e6cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a7bae3dd5c4d5fd2751e754494d35e6cd">Get</a> (int index)</td></tr>
+<tr class="memdesc:a7bae3dd5c4d5fd2751e754494d35e6cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックスに対応する値を返す  <a href="#a7bae3dd5c4d5fd2751e754494d35e6cd"></a><br/></td></tr>
+<tr class="separator:a7bae3dd5c4d5fd2751e754494d35e6cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83b07c5259a1437033763a0c95ef0530"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a83b07c5259a1437033763a0c95ef0530">Get</a> (int index, <a class="el" href="classMACS_1_1NDJson.html">NDJson</a> defval)</td></tr>
+<tr class="memdesc:a83b07c5259a1437033763a0c95ef0530"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックスに対応する値を返す  <a href="#a83b07c5259a1437033763a0c95ef0530"></a><br/></td></tr>
+<tr class="separator:a83b07c5259a1437033763a0c95ef0530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee72953b309f2ab13b946b907177a0a3"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#aee72953b309f2ab13b946b907177a0a3">Get</a> (int index, string defval)</td></tr>
+<tr class="memdesc:aee72953b309f2ab13b946b907177a0a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックスに対応する値を返す  <a href="#aee72953b309f2ab13b946b907177a0a3"></a><br/></td></tr>
+<tr class="separator:aee72953b309f2ab13b946b907177a0a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6726de3c99da5dae20ca8cda754bc82"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#af6726de3c99da5dae20ca8cda754bc82">Get</a> (int index, int defval)</td></tr>
+<tr class="memdesc:af6726de3c99da5dae20ca8cda754bc82"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックスに対応する値を返す  <a href="#af6726de3c99da5dae20ca8cda754bc82"></a><br/></td></tr>
+<tr class="separator:af6726de3c99da5dae20ca8cda754bc82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85550b766b7c37fd83a73bc3fd6b3c74"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a85550b766b7c37fd83a73bc3fd6b3c74">Get</a> (int index, double defval)</td></tr>
+<tr class="memdesc:a85550b766b7c37fd83a73bc3fd6b3c74"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックスに対応する値を返す  <a href="#a85550b766b7c37fd83a73bc3fd6b3c74"></a><br/></td></tr>
+<tr class="separator:a85550b766b7c37fd83a73bc3fd6b3c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ca8059ef4801a03b2a7fd9dd80b4b08"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a1ca8059ef4801a03b2a7fd9dd80b4b08">Get</a> (int index, bool defval)</td></tr>
+<tr class="memdesc:a1ca8059ef4801a03b2a7fd9dd80b4b08"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックスに対応する値を返す  <a href="#a1ca8059ef4801a03b2a7fd9dd80b4b08"></a><br/></td></tr>
+<tr class="separator:a1ca8059ef4801a03b2a7fd9dd80b4b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af698dda0fe584777149e751d3a8de44c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#af698dda0fe584777149e751d3a8de44c">Set</a> (int index, object val, params object[] args)</td></tr>
+<tr class="memdesc:af698dda0fe584777149e751d3a8de44c"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックスに対応する値をセットする  <a href="#af698dda0fe584777149e751d3a8de44c"></a><br/></td></tr>
+<tr class="separator:af698dda0fe584777149e751d3a8de44c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37c425da93faa6574af1dd1c89c2f8f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a37c425da93faa6574af1dd1c89c2f8f4">Set</a> (int index, <a class="el" href="classMACS_1_1NDJson.html">NDJson</a> val)</td></tr>
+<tr class="memdesc:a37c425da93faa6574af1dd1c89c2f8f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックスに対応する値をセットする  <a href="#a37c425da93faa6574af1dd1c89c2f8f4"></a><br/></td></tr>
+<tr class="separator:a37c425da93faa6574af1dd1c89c2f8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1383a09e2c7ecc649b42faa49e6dec68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a1383a09e2c7ecc649b42faa49e6dec68">Set</a> (int index, string val)</td></tr>
+<tr class="memdesc:a1383a09e2c7ecc649b42faa49e6dec68"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックスに対応する値をセットする  <a href="#a1383a09e2c7ecc649b42faa49e6dec68"></a><br/></td></tr>
+<tr class="separator:a1383a09e2c7ecc649b42faa49e6dec68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fceec8c511c0605ab4bd99c9f373ae8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a2fceec8c511c0605ab4bd99c9f373ae8">Set</a> (int index, int val)</td></tr>
+<tr class="memdesc:a2fceec8c511c0605ab4bd99c9f373ae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックスに対応する値をセットする  <a href="#a2fceec8c511c0605ab4bd99c9f373ae8"></a><br/></td></tr>
+<tr class="separator:a2fceec8c511c0605ab4bd99c9f373ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae556f588e5987ac54dd83e305511a7ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#ae556f588e5987ac54dd83e305511a7ba">Set</a> (int index, double val)</td></tr>
+<tr class="memdesc:ae556f588e5987ac54dd83e305511a7ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックスに対応する値をセットする  <a href="#ae556f588e5987ac54dd83e305511a7ba"></a><br/></td></tr>
+<tr class="separator:ae556f588e5987ac54dd83e305511a7ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae03f7800c4757e960a0bfa4c0766c7b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#ae03f7800c4757e960a0bfa4c0766c7b8">Set</a> (int index, bool val)</td></tr>
+<tr class="memdesc:ae03f7800c4757e960a0bfa4c0766c7b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックスに対応する値をセットする  <a href="#ae03f7800c4757e960a0bfa4c0766c7b8"></a><br/></td></tr>
+<tr class="separator:ae03f7800c4757e960a0bfa4c0766c7b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd9853b4f31adc047fa427d3ce57eda0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#afd9853b4f31adc047fa427d3ce57eda0">Add</a> (object val)</td></tr>
+<tr class="memdesc:afd9853b4f31adc047fa427d3ce57eda0"><td class="mdescLeft">&#160;</td><td class="mdescRight">配列に値を追加する  <a href="#afd9853b4f31adc047fa427d3ce57eda0"></a><br/></td></tr>
+<tr class="separator:afd9853b4f31adc047fa427d3ce57eda0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64fcf3600f734c43142152ec302efecc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a64fcf3600f734c43142152ec302efecc">Add</a> (<a class="el" href="classMACS_1_1NDJson.html">NDJson</a> val)</td></tr>
+<tr class="memdesc:a64fcf3600f734c43142152ec302efecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">配列に値を追加する  <a href="#a64fcf3600f734c43142152ec302efecc"></a><br/></td></tr>
+<tr class="separator:a64fcf3600f734c43142152ec302efecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b0c1e10af0867313ec78a078fb23fdf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a1b0c1e10af0867313ec78a078fb23fdf">Add</a> (string val)</td></tr>
+<tr class="memdesc:a1b0c1e10af0867313ec78a078fb23fdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">配列に値を追加する  <a href="#a1b0c1e10af0867313ec78a078fb23fdf"></a><br/></td></tr>
+<tr class="separator:a1b0c1e10af0867313ec78a078fb23fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d28560ed5ced24cbde2872bb820be26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a0d28560ed5ced24cbde2872bb820be26">Add</a> (int val)</td></tr>
+<tr class="memdesc:a0d28560ed5ced24cbde2872bb820be26"><td class="mdescLeft">&#160;</td><td class="mdescRight">配列に値を追加する  <a href="#a0d28560ed5ced24cbde2872bb820be26"></a><br/></td></tr>
+<tr class="separator:a0d28560ed5ced24cbde2872bb820be26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6cbd4a6d1c3255498c1af12b3fb0898"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#ae6cbd4a6d1c3255498c1af12b3fb0898">Add</a> (double val)</td></tr>
+<tr class="memdesc:ae6cbd4a6d1c3255498c1af12b3fb0898"><td class="mdescLeft">&#160;</td><td class="mdescRight">配列に値を追加する  <a href="#ae6cbd4a6d1c3255498c1af12b3fb0898"></a><br/></td></tr>
+<tr class="separator:ae6cbd4a6d1c3255498c1af12b3fb0898"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5ef0f11b571381df3af9b5b43c90c06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#ad5ef0f11b571381df3af9b5b43c90c06">Add</a> (bool val)</td></tr>
+<tr class="memdesc:ad5ef0f11b571381df3af9b5b43c90c06"><td class="mdescLeft">&#160;</td><td class="mdescRight">配列に値を追加する  <a href="#ad5ef0f11b571381df3af9b5b43c90c06"></a><br/></td></tr>
+<tr class="separator:ad5ef0f11b571381df3af9b5b43c90c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab93bb0d374a49182060718c5479e0bdf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#ab93bb0d374a49182060718c5479e0bdf">Delete</a> (int index)</td></tr>
+<tr class="memdesc:ab93bb0d374a49182060718c5479e0bdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定インデックスを削除する  <a href="#ab93bb0d374a49182060718c5479e0bdf"></a><br/></td></tr>
+<tr class="separator:ab93bb0d374a49182060718c5479e0bdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5abba3d22735ac4493ed532dcd4f2e9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a5abba3d22735ac4493ed532dcd4f2e9c">Set</a> (string[] values)</td></tr>
+<tr class="memdesc:a5abba3d22735ac4493ed532dcd4f2e9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列配列をいっぺんにセットする  <a href="#a5abba3d22735ac4493ed532dcd4f2e9c"></a><br/></td></tr>
+<tr class="separator:a5abba3d22735ac4493ed532dcd4f2e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa23a2a6d93536e74be01e667ced4cd96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#aa23a2a6d93536e74be01e667ced4cd96">Add</a> (string[] values)</td></tr>
+<tr class="memdesc:aa23a2a6d93536e74be01e667ced4cd96"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列配列をいっぺんに追加する  <a href="#aa23a2a6d93536e74be01e667ced4cd96"></a><br/></td></tr>
+<tr class="separator:aa23a2a6d93536e74be01e667ced4cd96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eb0bcdc1e2e408e3fb52bca316b1cae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a8eb0bcdc1e2e408e3fb52bca316b1cae">Set</a> (int[] values)</td></tr>
+<tr class="memdesc:a8eb0bcdc1e2e408e3fb52bca316b1cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">int配列をいっぺんにセットする  <a href="#a8eb0bcdc1e2e408e3fb52bca316b1cae"></a><br/></td></tr>
+<tr class="separator:a8eb0bcdc1e2e408e3fb52bca316b1cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4d066202c9c1e350d372b1f554067f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#ae4d066202c9c1e350d372b1f554067f2">Add</a> (int[] values)</td></tr>
+<tr class="memdesc:ae4d066202c9c1e350d372b1f554067f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">int配列をいっぺんに追加する  <a href="#ae4d066202c9c1e350d372b1f554067f2"></a><br/></td></tr>
+<tr class="separator:ae4d066202c9c1e350d372b1f554067f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cc6044f0631a2f37e5329901d1a39a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a2cc6044f0631a2f37e5329901d1a39a9">Set</a> (double[] values)</td></tr>
+<tr class="memdesc:a2cc6044f0631a2f37e5329901d1a39a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">double配列をいっぺんにセットする  <a href="#a2cc6044f0631a2f37e5329901d1a39a9"></a><br/></td></tr>
+<tr class="separator:a2cc6044f0631a2f37e5329901d1a39a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d337e36701fc39251062e873fb55655"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a7d337e36701fc39251062e873fb55655">Add</a> (double[] values)</td></tr>
+<tr class="memdesc:a7d337e36701fc39251062e873fb55655"><td class="mdescLeft">&#160;</td><td class="mdescRight">double配列をいっぺんに追加する  <a href="#a7d337e36701fc39251062e873fb55655"></a><br/></td></tr>
+<tr class="separator:a7d337e36701fc39251062e873fb55655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55408c2b7949c47a9c43aedc55a13de8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a55408c2b7949c47a9c43aedc55a13de8">Set</a> (bool[] values)</td></tr>
+<tr class="memdesc:a55408c2b7949c47a9c43aedc55a13de8"><td class="mdescLeft">&#160;</td><td class="mdescRight">bool配列をいっぺんにセットする  <a href="#a55408c2b7949c47a9c43aedc55a13de8"></a><br/></td></tr>
+<tr class="separator:a55408c2b7949c47a9c43aedc55a13de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48d0a5a84e8f8870714a31337681d255"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a48d0a5a84e8f8870714a31337681d255">Add</a> (bool[] values)</td></tr>
+<tr class="memdesc:a48d0a5a84e8f8870714a31337681d255"><td class="mdescLeft">&#160;</td><td class="mdescRight">bool配列をいっぺんに追加する  <a href="#a48d0a5a84e8f8870714a31337681d255"></a><br/></td></tr>
+<tr class="separator:a48d0a5a84e8f8870714a31337681d255"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6fefa1aa9ea534a7dea19ce28b94c83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#ae6fefa1aa9ea534a7dea19ce28b94c83">Set</a> (<a class="el" href="classMACS_1_1NDJson.html">NDJson</a>[] values)</td></tr>
+<tr class="memdesc:ae6fefa1aa9ea534a7dea19ce28b94c83"><td class="mdescLeft">&#160;</td><td class="mdescRight">NDJson配列をいっぺんにセットする  <a href="#ae6fefa1aa9ea534a7dea19ce28b94c83"></a><br/></td></tr>
+<tr class="separator:ae6fefa1aa9ea534a7dea19ce28b94c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a175eb9532fb1fa0fa11386c1209d0ea4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a175eb9532fb1fa0fa11386c1209d0ea4">Add</a> (<a class="el" href="classMACS_1_1NDJson.html">NDJson</a>[] values)</td></tr>
+<tr class="memdesc:a175eb9532fb1fa0fa11386c1209d0ea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">NDJson配列をいっぺんに追加する  <a href="#a175eb9532fb1fa0fa11386c1209d0ea4"></a><br/></td></tr>
+<tr class="separator:a175eb9532fb1fa0fa11386c1209d0ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a568c0815baacf15df595e968c3a98f5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a568c0815baacf15df595e968c3a98f5f">Set</a> (object[] values)</td></tr>
+<tr class="memdesc:a568c0815baacf15df595e968c3a98f5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">object配列をいっぺんにセットする  <a href="#a568c0815baacf15df595e968c3a98f5f"></a><br/></td></tr>
+<tr class="separator:a568c0815baacf15df595e968c3a98f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a027770f691fcc8754f7302d3bdbc8f63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a027770f691fcc8754f7302d3bdbc8f63">Add</a> (object[] values)</td></tr>
+<tr class="memdesc:a027770f691fcc8754f7302d3bdbc8f63"><td class="mdescLeft">&#160;</td><td class="mdescRight">object配列をいっぺんに追加する  <a href="#a027770f691fcc8754f7302d3bdbc8f63"></a><br/></td></tr>
+<tr class="separator:a027770f691fcc8754f7302d3bdbc8f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7514b02a3697c77eed45dcdfc43c6e58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a7514b02a3697c77eed45dcdfc43c6e58">GetArray</a> ()</td></tr>
+<tr class="memdesc:a7514b02a3697c77eed45dcdfc43c6e58"><td class="mdescLeft">&#160;</td><td class="mdescRight">値をNDJsonの配列として取り出す  <a href="#a7514b02a3697c77eed45dcdfc43c6e58"></a><br/></td></tr>
+<tr class="separator:a7514b02a3697c77eed45dcdfc43c6e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b0fb0923c5ef99c6e712e2bb46b3d64"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a8b0fb0923c5ef99c6e712e2bb46b3d64">GetStringArray</a> ()</td></tr>
+<tr class="memdesc:a8b0fb0923c5ef99c6e712e2bb46b3d64"><td class="mdescLeft">&#160;</td><td class="mdescRight">値を文字列の配列として取り出す  <a href="#a8b0fb0923c5ef99c6e712e2bb46b3d64"></a><br/></td></tr>
+<tr class="separator:a8b0fb0923c5ef99c6e712e2bb46b3d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47832e5027f3df963e5b8191cc158fee"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a47832e5027f3df963e5b8191cc158fee">GetIntArray</a> ()</td></tr>
+<tr class="memdesc:a47832e5027f3df963e5b8191cc158fee"><td class="mdescLeft">&#160;</td><td class="mdescRight">値をintの配列として取り出す  <a href="#a47832e5027f3df963e5b8191cc158fee"></a><br/></td></tr>
+<tr class="separator:a47832e5027f3df963e5b8191cc158fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29a701d7431405b35357d8eaf82787c0"><td class="memItemLeft" align="right" valign="top">double[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a29a701d7431405b35357d8eaf82787c0">GetDoubleArray</a> ()</td></tr>
+<tr class="memdesc:a29a701d7431405b35357d8eaf82787c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">値をdoubleの配列として取り出す  <a href="#a29a701d7431405b35357d8eaf82787c0"></a><br/></td></tr>
+<tr class="separator:a29a701d7431405b35357d8eaf82787c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48aa5a6d2215c508335d5114a0f0c6e8"><td class="memItemLeft" align="right" valign="top">bool[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a48aa5a6d2215c508335d5114a0f0c6e8">GetBoolArray</a> ()</td></tr>
+<tr class="memdesc:a48aa5a6d2215c508335d5114a0f0c6e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">値をboolの配列として取り出す  <a href="#a48aa5a6d2215c508335d5114a0f0c6e8"></a><br/></td></tr>
+<tr class="separator:a48aa5a6d2215c508335d5114a0f0c6e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1dec6d675578a4a12100abac72d7101"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#aa1dec6d675578a4a12100abac72d7101">CopyFrom</a> (<a class="el" href="classMACS_1_1NDJson.html">NDJson</a> src)</td></tr>
+<tr class="memdesc:aa1dec6d675578a4a12100abac72d7101"><td class="mdescLeft">&#160;</td><td class="mdescRight">値をコピーする  <a href="#aa1dec6d675578a4a12100abac72d7101"></a><br/></td></tr>
+<tr class="separator:aa1dec6d675578a4a12100abac72d7101"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2407825767c0f99f8b1ebec986b9f11e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a2407825767c0f99f8b1ebec986b9f11e">DeepCopyFrom</a> (<a class="el" href="classMACS_1_1NDJson.html">NDJson</a> src)</td></tr>
+<tr class="memdesc:a2407825767c0f99f8b1ebec986b9f11e"><td class="mdescLeft">&#160;</td><td class="mdescRight">値をディープコピーする  <a href="#a2407825767c0f99f8b1ebec986b9f11e"></a><br/></td></tr>
+<tr class="separator:a2407825767c0f99f8b1ebec986b9f11e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe0a3522b26ac6c74aa0d79aacf174cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#afe0a3522b26ac6c74aa0d79aacf174cd">Clear</a> ()</td></tr>
+<tr class="memdesc:afe0a3522b26ac6c74aa0d79aacf174cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">値を空の状態にする  <a href="#afe0a3522b26ac6c74aa0d79aacf174cd"></a><br/></td></tr>
+<tr class="separator:afe0a3522b26ac6c74aa0d79aacf174cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab49ad9a2c5d775e5cc2224f454f3ae1c"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#ab49ad9a2c5d775e5cc2224f454f3ae1c">ToString</a> ()</td></tr>
+<tr class="memdesc:ab49ad9a2c5d775e5cc2224f454f3ae1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">JSON文字列にする  <a href="#ab49ad9a2c5d775e5cc2224f454f3ae1c"></a><br/></td></tr>
+<tr class="separator:ab49ad9a2c5d775e5cc2224f454f3ae1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16c6ac17ef31a54004c704c8d1424ae8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a16c6ac17ef31a54004c704c8d1424ae8">WriteTo</a> (TextWriter writer)</td></tr>
+<tr class="memdesc:a16c6ac17ef31a54004c704c8d1424ae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">JSON文字列を出力する  <a href="#a16c6ac17ef31a54004c704c8d1424ae8"></a><br/></td></tr>
+<tr class="separator:a16c6ac17ef31a54004c704c8d1424ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae19625987ded939c02ad8605f49018ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#ae19625987ded939c02ad8605f49018ca">StartParse</a> ()</td></tr>
+<tr class="memdesc:ae19625987ded939c02ad8605f49018ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">JSON文字列のパースを開始する  <a href="#ae19625987ded939c02ad8605f49018ca"></a><br/></td></tr>
+<tr class="separator:ae19625987ded939c02ad8605f49018ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af61d199d531bbecc0a0a6823fe50e809"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#af61d199d531bbecc0a0a6823fe50e809">FinishParse</a> ()</td></tr>
+<tr class="memdesc:af61d199d531bbecc0a0a6823fe50e809"><td class="mdescLeft">&#160;</td><td class="mdescRight">JSON文字列のパースを終了する  <a href="#af61d199d531bbecc0a0a6823fe50e809"></a><br/></td></tr>
+<tr class="separator:af61d199d531bbecc0a0a6823fe50e809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb46140e08937380379072b787774743"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#abb46140e08937380379072b787774743">ParseChar</a> (char ch)</td></tr>
+<tr class="memdesc:abb46140e08937380379072b787774743"><td class="mdescLeft">&#160;</td><td class="mdescRight">1文字をパーサに供給する  <a href="#abb46140e08937380379072b787774743"></a><br/></td></tr>
+<tr class="separator:abb46140e08937380379072b787774743"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public メソッド</h2></td></tr>
+<tr class="memitem:a1dcb0dbe4965684c4184c32f0c4ab726"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a1dcb0dbe4965684c4184c32f0c4ab726">Copy</a> (<a class="el" href="classMACS_1_1NDJson.html">NDJson</a> src)</td></tr>
+<tr class="memdesc:a1dcb0dbe4965684c4184c32f0c4ab726"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピーを作成する  <a href="#a1dcb0dbe4965684c4184c32f0c4ab726"></a><br/></td></tr>
+<tr class="separator:a1dcb0dbe4965684c4184c32f0c4ab726"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59763825e2a543d80be2897a3bcc7ba5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a59763825e2a543d80be2897a3bcc7ba5">DeepCopy</a> (<a class="el" href="classMACS_1_1NDJson.html">NDJson</a> src)</td></tr>
+<tr class="memdesc:a59763825e2a543d80be2897a3bcc7ba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ディープコピーを作成する  <a href="#a59763825e2a543d80be2897a3bcc7ba5"></a><br/></td></tr>
+<tr class="separator:a59763825e2a543d80be2897a3bcc7ba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a0a2247a9aa073308443b82960d6af3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a8a0a2247a9aa073308443b82960d6af3">NewObject</a> ()</td></tr>
+<tr class="memdesc:a8a0a2247a9aa073308443b82960d6af3"><td class="mdescLeft">&#160;</td><td class="mdescRight">OBJECT型の空のJSONを作成する  <a href="#a8a0a2247a9aa073308443b82960d6af3"></a><br/></td></tr>
+<tr class="separator:a8a0a2247a9aa073308443b82960d6af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa207e7ab9a37966e10efc243fa804069"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#aa207e7ab9a37966e10efc243fa804069">NewArray</a> ()</td></tr>
+<tr class="memdesc:aa207e7ab9a37966e10efc243fa804069"><td class="mdescLeft">&#160;</td><td class="mdescRight">ARRAY型の空のJSONを作成する  <a href="#aa207e7ab9a37966e10efc243fa804069"></a><br/></td></tr>
+<tr class="separator:aa207e7ab9a37966e10efc243fa804069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a579dffb2b7b0b04e64e60db7931741fb"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a579dffb2b7b0b04e64e60db7931741fb">Escape</a> (string txt)</td></tr>
+<tr class="memdesc:a579dffb2b7b0b04e64e60db7931741fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">JSONで使えない文字をエスケープした文字列を返す  <a href="#a579dffb2b7b0b04e64e60db7931741fb"></a><br/></td></tr>
+<tr class="separator:a579dffb2b7b0b04e64e60db7931741fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a790ffe20c7751684da0b54b27a1d1ac8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a790ffe20c7751684da0b54b27a1d1ac8">Parse</a> (string txt)</td></tr>
+<tr class="memdesc:a790ffe20c7751684da0b54b27a1d1ac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">JSON文字列をパースして新しいNDJsonを作る  <a href="#a790ffe20c7751684da0b54b27a1d1ac8"></a><br/></td></tr>
+<tr class="separator:a790ffe20c7751684da0b54b27a1d1ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad3701d993dd95ce14d29ae2b39952d8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#aad3701d993dd95ce14d29ae2b39952d8">Parse</a> (string txt, out string rest)</td></tr>
+<tr class="memdesc:aad3701d993dd95ce14d29ae2b39952d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">JSON文字列をパースして新しいNDJsonを作る  <a href="#aad3701d993dd95ce14d29ae2b39952d8"></a><br/></td></tr>
+<tr class="separator:aad3701d993dd95ce14d29ae2b39952d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa81ff42d38169177180a18edd3793da8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#aa81ff42d38169177180a18edd3793da8">Parse</a> (TextReader textReader)</td></tr>
+<tr class="memdesc:aa81ff42d38169177180a18edd3793da8"><td class="mdescLeft">&#160;</td><td class="mdescRight">JSON文字列をパースして新しいNDJsonを作る  <a href="#aa81ff42d38169177180a18edd3793da8"></a><br/></td></tr>
+<tr class="separator:aa81ff42d38169177180a18edd3793da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:a4de7beabb8bd7f81d802d2d8ce3e7b46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceMACS.html#acd4074309840ad1cb89fe92f00720de6">NDJsonType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a4de7beabb8bd7f81d802d2d8ce3e7b46">Type</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a4de7beabb8bd7f81d802d2d8ce3e7b46"><td class="mdescLeft">&#160;</td><td class="mdescRight">値の型  <a href="#a4de7beabb8bd7f81d802d2d8ce3e7b46"></a><br/></td></tr>
+<tr class="separator:a4de7beabb8bd7f81d802d2d8ce3e7b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52adca75e4a74f13cb8629c59bb0000e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a52adca75e4a74f13cb8629c59bb0000e">IsNull</a><code> [get]</code></td></tr>
+<tr class="memdesc:a52adca75e4a74f13cb8629c59bb0000e"><td class="mdescLeft">&#160;</td><td class="mdescRight">値がNULL型かどうか  <a href="#a52adca75e4a74f13cb8629c59bb0000e"></a><br/></td></tr>
+<tr class="separator:a52adca75e4a74f13cb8629c59bb0000e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d5da75d6b8a6cb8d778d4acad499e75"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a3d5da75d6b8a6cb8d778d4acad499e75">IsString</a><code> [get]</code></td></tr>
+<tr class="memdesc:a3d5da75d6b8a6cb8d778d4acad499e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">値がSTRING型かどうか  <a href="#a3d5da75d6b8a6cb8d778d4acad499e75"></a><br/></td></tr>
+<tr class="separator:a3d5da75d6b8a6cb8d778d4acad499e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa31bd4ba6cb8444d39f392e13db44d63"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#aa31bd4ba6cb8444d39f392e13db44d63">IsNumber</a><code> [get]</code></td></tr>
+<tr class="memdesc:aa31bd4ba6cb8444d39f392e13db44d63"><td class="mdescLeft">&#160;</td><td class="mdescRight">値がNUMBER型かどうか  <a href="#aa31bd4ba6cb8444d39f392e13db44d63"></a><br/></td></tr>
+<tr class="separator:aa31bd4ba6cb8444d39f392e13db44d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f9f66fdaf8c88ef77ed996195dcf6dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a8f9f66fdaf8c88ef77ed996195dcf6dc">IsBool</a><code> [get]</code></td></tr>
+<tr class="memdesc:a8f9f66fdaf8c88ef77ed996195dcf6dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">値がBOOL型かどうか  <a href="#a8f9f66fdaf8c88ef77ed996195dcf6dc"></a><br/></td></tr>
+<tr class="separator:a8f9f66fdaf8c88ef77ed996195dcf6dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae398b7cb3b25045fad69d0b7c87be55e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#ae398b7cb3b25045fad69d0b7c87be55e">IsObject</a><code> [get]</code></td></tr>
+<tr class="memdesc:ae398b7cb3b25045fad69d0b7c87be55e"><td class="mdescLeft">&#160;</td><td class="mdescRight">値がOBJECT型かどうか  <a href="#ae398b7cb3b25045fad69d0b7c87be55e"></a><br/></td></tr>
+<tr class="separator:ae398b7cb3b25045fad69d0b7c87be55e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae10093ab6efd1b0f0d1e407cafde6d90"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#ae10093ab6efd1b0f0d1e407cafde6d90">IsArray</a><code> [get]</code></td></tr>
+<tr class="memdesc:ae10093ab6efd1b0f0d1e407cafde6d90"><td class="mdescLeft">&#160;</td><td class="mdescRight">値がARRAY型かどうか  <a href="#ae10093ab6efd1b0f0d1e407cafde6d90"></a><br/></td></tr>
+<tr class="separator:ae10093ab6efd1b0f0d1e407cafde6d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba6db1b5592ad588bec06c4834024c56"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#aba6db1b5592ad588bec06c4834024c56">StringValue</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:aba6db1b5592ad588bec06c4834024c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">値を文字列としてアクセスする  <a href="#aba6db1b5592ad588bec06c4834024c56"></a><br/></td></tr>
+<tr class="separator:aba6db1b5592ad588bec06c4834024c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7466c894dde66618a123b9e0de8e07c7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a7466c894dde66618a123b9e0de8e07c7">IntValue</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a7466c894dde66618a123b9e0de8e07c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">値をintとしてアクセスする  <a href="#a7466c894dde66618a123b9e0de8e07c7"></a><br/></td></tr>
+<tr class="separator:a7466c894dde66618a123b9e0de8e07c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a352b5bdb571a31be0c98fa7725cb64b6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a352b5bdb571a31be0c98fa7725cb64b6">DoubleValue</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a352b5bdb571a31be0c98fa7725cb64b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">値をdoubleとしてアクセスする  <a href="#a352b5bdb571a31be0c98fa7725cb64b6"></a><br/></td></tr>
+<tr class="separator:a352b5bdb571a31be0c98fa7725cb64b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a136ed80281486ac9ab3891adca7061db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a136ed80281486ac9ab3891adca7061db">BoolValue</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a136ed80281486ac9ab3891adca7061db"><td class="mdescLeft">&#160;</td><td class="mdescRight">値をboolとしてアクセスする  <a href="#a136ed80281486ac9ab3891adca7061db"></a><br/></td></tr>
+<tr class="separator:a136ed80281486ac9ab3891adca7061db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c3caf5984155a36e3c3c339d9268377"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a6c3caf5984155a36e3c3c339d9268377">this[string key]</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a6c3caf5984155a36e3c3c339d9268377"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデクサ  <a href="#a6c3caf5984155a36e3c3c339d9268377"></a><br/></td></tr>
+<tr class="separator:a6c3caf5984155a36e3c3c339d9268377"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a253b6149246c21403dcd460fc91c0300"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a253b6149246c21403dcd460fc91c0300">this[int index]</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a253b6149246c21403dcd460fc91c0300"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデクサ  <a href="#a253b6149246c21403dcd460fc91c0300"></a><br/></td></tr>
+<tr class="separator:a253b6149246c21403dcd460fc91c0300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f1ade2cdc5cb841dc44d96646ff5e48"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a3f1ade2cdc5cb841dc44d96646ff5e48">Length</a><code> [get]</code></td></tr>
+<tr class="memdesc:a3f1ade2cdc5cb841dc44d96646ff5e48"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素数を返す  <a href="#a3f1ade2cdc5cb841dc44d96646ff5e48"></a><br/></td></tr>
+<tr class="separator:a3f1ade2cdc5cb841dc44d96646ff5e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c9d8075f118909584737fcc3a27aa17"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1NDJson.html#a4c9d8075f118909584737fcc3a27aa17">Count</a><code> [get]</code></td></tr>
+<tr class="memdesc:a4c9d8075f118909584737fcc3a27aa17"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素数を返す  <a href="#a4c9d8075f118909584737fcc3a27aa17"></a><br/></td></tr>
+<tr class="separator:a4c9d8075f118909584737fcc3a27aa17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">説明</h2>
+<div class="textblock"><p>dynamicを使わないJSON </p>
+<p>DynamicJsonを使うとコンパイル時の型チェックが弱くなって実行時の致命的 エラーが多発したため、腹が立ってこのクラスを自作しました。 本クラスはマルチスレッドセーフではありません。 使い方の例は、SELFTESTのregionをご覧ください。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00026">26</a> 行で定義されています。</p>
+</div><h2 class="groupheader">コンストラクタとデストラクタ</h2>
+<a class="anchor" id="a740a5ee053d73ec19c66778cd007f7e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.NDJson.NDJson </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値が空のコンストラクタ </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00085">85</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="NDJson_8cs_source.html#l00231">MACS.NDJson.Copy()</a>, <a class="el" href="NDJson_8cs_source.html#l00246">MACS.NDJson.DeepCopy()</a>, <a class="el" href="NDJson_8cs_source.html#l00493">MACS.NDJson.Get()</a>, <a class="el" href="NDJson_8cs_source.html#l00265">MACS.NDJson.NewArray()</a>, <a class="el" href="NDJson_8cs_source.html#l00255">MACS.NDJson.NewObject()</a>, <a class="el" href="NDJson_8cs_source.html#l01737">MACS.NDJson.Parse()</a>, と <a class="el" href="NDJson_8cs_source.html#l00607">MACS.NDJson.Set()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7593317dd4c2d7f951c818bc7f9fde49"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.NDJson.NDJson </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値が文字列のコンストラクタ </p>
+<p>文字列をJSONパースするわけではないことに注意してください。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00097">97</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aedc705bf6573218a5398772b8443883f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.NDJson.NDJson </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値がintのコンストラクタ </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00105">105</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa9bd885746cd9635ff75d55dac535bd6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.NDJson.NDJson </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値がdoubleのコンストラクタ </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00113">113</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aac3a4f8a8afd1ac4870da4e18a0934b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.NDJson.NDJson </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値がboolのコンストラクタ </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00121">121</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a42a49dc77ad1ce638421436f05fc6de7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.NDJson.NDJson </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値がオブジェクトのコンストラクタ </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00129">129</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a40ba6cd82f26040b06149f7d522be115"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.NDJson.NDJson </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値がオブジェクトのコンストラクタ </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00137">137</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4804adbabf3c1a463c6ad4e8851715fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.NDJson.NDJson </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値がオブジェクトのコンストラクタ </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00145">145</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa4ecaa6e975931c8a8b1e76fa6ce572e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.NDJson.NDJson </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値がオブジェクトのコンストラクタ </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00153">153</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad67f0a9ae095118f5cbc86e34e14e56f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.NDJson.NDJson </td>
+          <td>(</td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値が文字列の配列であるコンストラクタ </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00161">161</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5fc9e928da7cf8a794a4850f56498510"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.NDJson.NDJson </td>
+          <td>(</td>
+          <td class="paramtype">int[]&#160;</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値がintの配列であるコンストラクタ </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00169">169</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a979b2b757d5933c41153b18e3a8c8cd6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.NDJson.NDJson </td>
+          <td>(</td>
+          <td class="paramtype">double[]&#160;</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値がdoubleの配列であるコンストラクタ </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00177">177</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1f6b74be451f69dcda4b090a176af11c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.NDJson.NDJson </td>
+          <td>(</td>
+          <td class="paramtype">bool[]&#160;</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値がboolの配列であるコンストラクタ </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00185">185</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad19da92da97d60b9e7f7e4c16bc0b019"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.NDJson.NDJson </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>[]&#160;</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値がNDJsonの配列であるコンストラクタ </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00193">193</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a60bc9f205c820d142c09ff62492aa213"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.NDJson.NDJson </td>
+          <td>(</td>
+          <td class="paramtype">object[]&#160;</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値がobjectの配列であるコンストラクタ </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00201">201</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aaa9cd81b075831da8ff13a0d0ed69b30"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.NDJson.NDJson </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コピーコンストラクタ </p>
+<p>コピー元がOBJECT型、ARRAY型でNDJsonを内包している場合、内包するもの はコピーされません。（shallow copy） ディープコピーが必要な場合、DeepCopy()メソッドを使ってください。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00216">216</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド</h2>
+<a class="anchor" id="a1dcb0dbe4965684c4184c32f0c4ab726"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Copy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コピーを作成する </p>
+<p>コピー元がOBJECT型、ARRAY型でNDJsonを内包している場合、内包するもの はコピーされません。（shallow copy） ディープコピーが必要な場合、DeepCopy()メソッドを使ってください。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00231">231</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a59763825e2a543d80be2897a3bcc7ba5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.DeepCopy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ディープコピーを作成する </p>
+<p>コピー元がOBJECT型、ARRAY型でNDJsonを内包している場合、内包するもの もコピーが作成されます。（deep copy） </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00246">246</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="NDJson_8cs_source.html#l01608">MACS.NDJson.DeepCopyFrom()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8a0a2247a9aa073308443b82960d6af3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.NewObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>OBJECT型の空のJSONを作成する </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00255">255</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa207e7ab9a37966e10efc243fa804069"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.NewArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ARRAY型の空のJSONを作成する </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00265">265</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5bf7884ec602b7b5d64111e16033b271"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値をセットする。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>セットする値</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>objがint型の時はSet(int), double型の時はSet(double), それ以外の時は <a class="el" href="classMACS_1_1NDJson.html#a34034987267b239d8f04c13338da6bcd" title="文字列を値にする。 ">Set(string)</a>が使われます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00287">287</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="NDJson_8cs_source.html#l01043">MACS.NDJson.Add()</a>, <a class="el" href="NDJson_8cs_source.html#l00097">MACS.NDJson.NDJson()</a>, と <a class="el" href="NDJson_8cs_source.html#l00628">MACS.NDJson.Set()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a34034987267b239d8f04c13338da6bcd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>文字列を値にする。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>値の型はSTRING型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00331">331</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="afc1c33ca200354c4aca92f2fdf4a2c0b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>intを値にする。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>値の型はNUMBER型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00379">379</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae85c710e1416d00f27c72602aa1be4f3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>doubleを値にする。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>値の型はNUMBER型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00423">423</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="afc4f9e3e4e355ff287bb4038d00b0343"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>boolを値にする。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>値の型はBOOL型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00473">473</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a9da0e7102cf04c1caaa90907e290fcc7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Get </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>キーに対応する値を返す </p>
+<p>指定したキーが存在しない場合や値がOBJECT型でないときはダミーの空NDJsonを返します。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00493">493</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5e8de80c07130cbf3324822d4cf044b7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Get </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td>
+          <td class="paramname"><em>defval</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>キーに対応する値を返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>キー</td></tr>
+    <tr><td class="paramname">defval</td><td>指定したキーが存在しない場合や値がOBJECT型でないときに返す値</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00507">507</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8dd2653437a9fff56347a58fe1ccc364"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.NDJson.Get </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>defval</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>キーに対応する値を返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>キー</td></tr>
+    <tr><td class="paramname">defval</td><td>指定したキーが存在しない場合や値がOBJECT型でないときに返す値</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00521">521</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a025bbb33f5d2e73ee73be0daacaff775"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.NDJson.Get </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>defval</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>キーに対応する値を返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>キー</td></tr>
+    <tr><td class="paramname">defval</td><td>指定したキーが存在しない場合や値がOBJECT型でないときに返す値</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00535">535</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="acdb1dfb60a2785cc6a46fd1bbc85ee31"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double MACS.NDJson.Get </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>defval</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>キーに対応する値を返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>キー</td></tr>
+    <tr><td class="paramname">defval</td><td>指定したキーが存在しない場合や値がOBJECT型でないときに返す値</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00549">549</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4965b14a0cb80283c944f33519b5004a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.NDJson.Get </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>defval</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>キーに対応する値を返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>キー</td></tr>
+    <tr><td class="paramname">defval</td><td>指定したキーが存在しない場合や値がOBJECT型でないときに返す値</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00563">563</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af3f9ed650645ef2e2eee164d540bdc3e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>キーに対応する値をセットする </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>valがint型の時はSet(string,int), double型の時はSet(string,double), NDJsonの時はSet(string,NDJson), それ以外の時は <a class="el" href="classMACS_1_1NDJson.html#a9019157eaafad444598a11671d1d8b00" title="キーに対応する値をセットする ">Set(string,string)</a>が 使われます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00583">583</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a3cac0a9b9174753aa0315e9f6547e314"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>キーに対応する値をセットする </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>キー名</td></tr>
+    <tr><td class="paramname">val</td><td>値</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>本NDJsonの値の型はOBJECT型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00607">607</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a9019157eaafad444598a11671d1d8b00"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>キーに対応する値をセットする </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>本NDJsonの値の型はOBJECT型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00628">628</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1841ae8045b998460b840a00749c175a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>キーに対応する値をセットする </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>本NDJsonの値の型はOBJECT型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00641">641</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a48da3f27679204461d6684e10d7e45bd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>キーに対応する値をセットする </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>本NDJsonの値の型はOBJECT型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00654">654</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a05c6a0ccbc5bb950246d7421e498f636"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>キーに対応する値をセットする </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>本NDJsonの値の型はOBJECT型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00667">667</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="afa200d767f78e86d3475e5eaa50e73d2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.NDJson.IsDefined </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定キーが存在するかどうかを返す </p>
+<p>OBJECT型以外のときは常にfalseを返します。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00693">693</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a361e4f7a6b1318e4458b1bf77ecc29f3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.NDJson.Delete </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定キーを削除する </p>
+<dl class="section return"><dt>戻り値</dt><dd>true=削除した, false=削除しなかった</dd></dl>
+<p>指定キーが存在しない場合や、OBJECT型ではない場合は、何もしません。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00708">708</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="afd4b244cd33c6ce39248b432c87aa6c2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;string,<a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&gt; MACS.NDJson.GetDictionary </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ディクショナリとして値を獲得する </p>
+<p>OBJECT型の時はキーと値の辞書を作成して返します。 ARRAY型の時はインデックスを文字列化したものがキーになります。 STRING型,NUMBER型,BOOL型の時は空文字列がキーとなる1要素の辞書を作成して返します。 NULL型の時は空辞書を返します。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00725">725</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="afedf520077313b0a0a78b9c73bcd2fcf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator&lt;KeyValuePair&lt;string,<a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&gt; &gt; MACS.NDJson.GetEnumerator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>イテレータ </p>
+<p>OBJECT型の時はKeyValuePair&lt;string,NDJson&gt;のイテレータを返します。 ARRAY型の時はインデックスを文字列化したものがキーになります。 STRING型,NUMBER型,BOOL型の時は空文字列がキーとなる1要素だけのイテレータを作成して返します。 NULL型の時は空イテレータを返します。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00758">758</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a7bae3dd5c4d5fd2751e754494d35e6cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Get </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>インデックスに対応する値を返す </p>
+<p>indexが負の時は末尾からの指定になります。（Get(-1)は末尾の要素を返します。） 指定したインデックスが存在しない場合や値がARRAY型でないときはダミーの空NDJsonを返します。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00792">792</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a83b07c5259a1437033763a0c95ef0530"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Get </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td>
+          <td class="paramname"><em>defval</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>インデックスに対応する値を返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>インデックス</td></tr>
+    <tr><td class="paramname">defval</td><td>指定したインデックスが存在しない場合や値がARRAY型でないときに返す値</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>indexが負の時は末尾からの指定になります。（Get(-1)は末尾の要素を返します。） </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00812">812</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aee72953b309f2ab13b946b907177a0a3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.NDJson.Get </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>defval</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>インデックスに対応する値を返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>インデックス</td></tr>
+    <tr><td class="paramname">defval</td><td>指定したインデックスが存在しない場合や値がARRAY型でないときに返す値</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>indexが負の時は末尾からの指定になります。（Get(-1)は末尾の要素を返します。） </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00832">832</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af6726de3c99da5dae20ca8cda754bc82"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.NDJson.Get </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>defval</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>インデックスに対応する値を返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>インデックス</td></tr>
+    <tr><td class="paramname">defval</td><td>指定したインデックスが存在しない場合や値がARRAY型でないときに返す値</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>indexが負の時は末尾からの指定になります。（Get(-1)は末尾の要素を返します。） </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00852">852</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a85550b766b7c37fd83a73bc3fd6b3c74"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double MACS.NDJson.Get </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>defval</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>インデックスに対応する値を返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>インデックス</td></tr>
+    <tr><td class="paramname">defval</td><td>指定したインデックスが存在しない場合や値がARRAY型でないときに返す値</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>indexが負の時は末尾からの指定になります。（Get(-1)は末尾の要素を返します。） </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00872">872</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1ca8059ef4801a03b2a7fd9dd80b4b08"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.NDJson.Get </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>defval</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>インデックスに対応する値を返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>インデックス</td></tr>
+    <tr><td class="paramname">defval</td><td>指定したインデックスが存在しない場合や値がARRAY型でないときに返す値</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>indexが負の時は末尾からの指定になります。（Get(-1)は末尾の要素を返します。） </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00892">892</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af698dda0fe584777149e751d3a8de44c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>インデックスに対応する値をセットする </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>valがint型の時はSet(int,int), double型の時はSet(int,double), <a class="el" href="classMACS_1_1NDJson.html" title="dynamicを使わないJSON ">NDJson</a> の時はSet(int,NDJson), それ以外の時は <a class="el" href="classMACS_1_1NDJson.html#a1383a09e2c7ecc649b42faa49e6dec68" title="インデックスに対応する値をセットする ">Set(int,string)</a>が使われます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00912">912</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a37c425da93faa6574af1dd1c89c2f8f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>インデックスに対応する値をセットする </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>indexが負の時は末尾からの指定になります。（Get(-1)は末尾の要素を変更します。） 指定インデックスが存在しない場合、指定インデックスまで空のNDJson オブジェクトが自動的に挿入されます。 本NDJsonの値の型はARRAY型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00936">936</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1383a09e2c7ecc649b42faa49e6dec68"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>インデックスに対応する値をセットする </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>indexが負の時は末尾からの指定になります。（Get(-1)は末尾の要素を変更します。） 指定インデックスが存在しない場合、指定インデックスまで空のNDJson オブジェクトが自動的に挿入されます。 本NDJsonの値の型はARRAY型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00968">968</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a2fceec8c511c0605ab4bd99c9f373ae8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>インデックスに対応する値をセットする </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>indexが負の時は末尾からの指定になります。（Get(-1)は末尾の要素を変更します。） 指定インデックスが存在しない場合、指定インデックスまで空のNDJson オブジェクトが自動的に挿入されます。 本NDJsonの値の型はARRAY型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00984">984</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae556f588e5987ac54dd83e305511a7ba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>インデックスに対応する値をセットする </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>indexが負の時は末尾からの指定になります。（Get(-1)は末尾の要素を変更します。） 指定インデックスが存在しない場合、指定インデックスまで空のNDJson オブジェクトが自動的に挿入されます。 本NDJsonの値の型はARRAY型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01000">1000</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae03f7800c4757e960a0bfa4c0766c7b8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>インデックスに対応する値をセットする </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>indexが負の時は末尾からの指定になります。（Get(-1)は末尾の要素を変更します。） 指定インデックスが存在しない場合、指定インデックスまで空のNDJson オブジェクトが自動的に挿入されます。 本NDJsonの値の型はARRAY型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01016">1016</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="afd9853b4f31adc047fa427d3ce57eda0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Add </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>配列に値を追加する </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>本NDJsonの値の型はARRAY型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01043">1043</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="NDJson_8cs_source.html#l01167">MACS.NDJson.Add()</a>, と <a class="el" href="NDJson_8cs_source.html#l01151">MACS.NDJson.Set()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a64fcf3600f734c43142152ec302efecc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>配列に値を追加する </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>本NDJsonの値の型はARRAY型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01058">1058</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1b0c1e10af0867313ec78a078fb23fdf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Add </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>配列に値を追加する </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>本NDJsonの値の型はARRAY型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01073">1073</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a0d28560ed5ced24cbde2872bb820be26"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Add </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>配列に値を追加する </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>本NDJsonの値の型はARRAY型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01088">1088</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae6cbd4a6d1c3255498c1af12b3fb0898"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Add </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>配列に値を追加する </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>本NDJsonの値の型はARRAY型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01103">1103</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad5ef0f11b571381df3af9b5b43c90c06"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Add </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>配列に値を追加する </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>本NDJsonの値の型はARRAY型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01118">1118</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab93bb0d374a49182060718c5479e0bdf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.NDJson.Delete </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定インデックスを削除する </p>
+<dl class="section return"><dt>戻り値</dt><dd>true=削除した, false=削除しなかった</dd></dl>
+<p>指定インデックスが存在しない場合や、ARRAY型ではない場合は、何もしません。 インデックスに負の値を指定すると、末尾から数えたインデックス位置が 指定されたものとみなします。（-1は最後の要素を、-2は最後から2つめの 要素を削除します。） </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01136">1136</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5abba3d22735ac4493ed532dcd4f2e9c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>文字列配列をいっぺんにセットする </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01151">1151</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa23a2a6d93536e74be01e667ced4cd96"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Add </td>
+          <td>(</td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>文字列配列をいっぺんに追加する </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01167">1167</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8eb0bcdc1e2e408e3fb52bca316b1cae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype">int[]&#160;</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>int配列をいっぺんにセットする </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01180">1180</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae4d066202c9c1e350d372b1f554067f2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Add </td>
+          <td>(</td>
+          <td class="paramtype">int[]&#160;</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>int配列をいっぺんに追加する </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01196">1196</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a2cc6044f0631a2f37e5329901d1a39a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype">double[]&#160;</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>double配列をいっぺんにセットする </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01209">1209</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a7d337e36701fc39251062e873fb55655"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Add </td>
+          <td>(</td>
+          <td class="paramtype">double[]&#160;</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>double配列をいっぺんに追加する </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01225">1225</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a55408c2b7949c47a9c43aedc55a13de8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype">bool[]&#160;</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>bool配列をいっぺんにセットする </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01238">1238</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a48d0a5a84e8f8870714a31337681d255"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Add </td>
+          <td>(</td>
+          <td class="paramtype">bool[]&#160;</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>bool配列をいっぺんに追加する </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01254">1254</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae6fefa1aa9ea534a7dea19ce28b94c83"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>[]&#160;</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>NDJson配列をいっぺんにセットする </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01267">1267</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a175eb9532fb1fa0fa11386c1209d0ea4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>[]&#160;</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>NDJson配列をいっぺんに追加する </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01283">1283</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a568c0815baacf15df595e968c3a98f5f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Set </td>
+          <td>(</td>
+          <td class="paramtype">object[]&#160;</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>object配列をいっぺんにセットする </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01296">1296</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a027770f691fcc8754f7302d3bdbc8f63"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Add </td>
+          <td>(</td>
+          <td class="paramtype">object[]&#160;</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>object配列をいっぺんに追加する </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01312">1312</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a7514b02a3697c77eed45dcdfc43c6e58"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> [] MACS.NDJson.GetArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値をNDJsonの配列として取り出す </p>
+<p>ARRAY型の時は各要素を配列化して返します。 OBJECT型の時は各要素の値を配列化して返します。 STRING型,NUMBER型,BOOL型の時は要素数1の配列を返します。 NULL型の時は空配列を返します。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01332">1332</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8b0fb0923c5ef99c6e712e2bb46b3d64"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] MACS.NDJson.GetStringArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値を文字列の配列として取り出す </p>
+<p>ARRAY型の時は各要素の値を文字列化した配列を返します。 OBJECT型の時は各要素のキー名を配列化して返します。 STRING型,NUMBER型,BOOL型の時は要素数1の配列を返します。 NULL型の時は空配列を返します。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01368">1368</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a47832e5027f3df963e5b8191cc158fee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] MACS.NDJson.GetIntArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値をintの配列として取り出す </p>
+<p>ARRAY型の時は各要素の値を整数化した配列を返します。 OBJECT型の時は各要素の値を整数化したものを配列化して返します。 STRING型,NUMBER型,BOOL型の時は要素数1の配列を返します。 NULL型の時は空配列を返します。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01408">1408</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a29a701d7431405b35357d8eaf82787c0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double [] MACS.NDJson.GetDoubleArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値をdoubleの配列として取り出す </p>
+<p>ARRAY型の時は各要素の値をdouble化した配列を返します。 OBJECT型の時は各要素の値をdouble化したものを配列化して返します。 STRING型,NUMBER型,BOOL型の時は要素数1の配列を返します。 NULL型の時は空配列を返します。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01448">1448</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a48aa5a6d2215c508335d5114a0f0c6e8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool [] MACS.NDJson.GetBoolArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値をboolの配列として取り出す </p>
+<p>ARRAY型の時は各要素のBoolValueを配列化して返します。 OBJECT型の時は各要素のBoolValueを配列化して返します。 STRING型,NUMBER型,BOOL型の時は要素数1の配列を返します。 NULL型の時は空配列を返します。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01488">1488</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa1dec6d675578a4a12100abac72d7101"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.CopyFrom </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値をコピーする </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>コピー元がOBJECT型、ARRAY型でNDJsonを内包している場合、内包するもの はコピーされません。（shallow copy） ディープコピーが必要な場合、DeepCopyFrom()メソッドを使ってください。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01564">1564</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="NDJson_8cs_source.html#l00231">MACS.NDJson.Copy()</a>, と <a class="el" href="NDJson_8cs_source.html#l00216">MACS.NDJson.NDJson()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2407825767c0f99f8b1ebec986b9f11e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.DeepCopyFrom </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a>&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値をディープコピーする </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>コピー元がOBJECT型、ARRAY型でNDJsonを内包している場合、内包するもの もコピーが作成されます。（deep copy） </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01608">1608</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="NDJson_8cs_source.html#l00246">MACS.NDJson.DeepCopy()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afe0a3522b26ac6c74aa0d79aacf174cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値を空の状態にする </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01649">1649</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab49ad9a2c5d775e5cc2224f454f3ae1c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override string MACS.NDJson.ToString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>JSON文字列にする </p>
+<p>文字列は"で囲まれ、エスケープ処理もされます。 単に値の文字列を得たい場合は、StringValueを使ってください。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01664">1664</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a16c6ac17ef31a54004c704c8d1424ae8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.NDJson.WriteTo </td>
+          <td>(</td>
+          <td class="paramtype">TextWriter&#160;</td>
+          <td class="paramname"><em>writer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>JSON文字列を出力する </p>
+<p>文字列は"で囲まれ、エスケープ処理もされます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01678">1678</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a579dffb2b7b0b04e64e60db7931741fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.NDJson.Escape </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>JSONで使えない文字をエスケープした文字列を返す </p>
+<p>Unicode文字のエスケープは行なわれません。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01690">1690</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a790ffe20c7751684da0b54b27a1d1ac8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Parse </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>JSON文字列をパースして新しいNDJsonを作る </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">txt</td><td>パースする文字列</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>JSONパース後に余分な文字があってもそれは無視されます。 JSONフォーマット違反がある場合は ArgumentExceptionが発生します。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01737">1737</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aad3701d993dd95ce14d29ae2b39952d8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Parse </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out string&#160;</td>
+          <td class="paramname"><em>rest</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>JSON文字列をパースして新しいNDJsonを作る </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">txt</td><td>パースする文字列</td></tr>
+    <tr><td class="paramname">rest</td><td>パース後に残った文字列</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>JSONフォーマット違反がある場合は ArgumentExceptionが発生します。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01760">1760</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa81ff42d38169177180a18edd3793da8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.Parse </td>
+          <td>(</td>
+          <td class="paramtype">TextReader&#160;</td>
+          <td class="paramname"><em>textReader</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>JSON文字列をパースして新しいNDJsonを作る </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textReader</td><td>パースする文字列を供給するTextReader</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>JSONフォーマット違反がある場合は ArgumentExceptionが発生します。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01785">1785</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae19625987ded939c02ad8605f49018ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.NDJson.StartParse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>JSON文字列のパースを開始する </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01802">1802</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="NDJson_8cs_source.html#l01737">MACS.NDJson.Parse()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af61d199d531bbecc0a0a6823fe50e809"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.NDJson.FinishParse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>JSON文字列のパースを終了する </p>
+<p>パースが完了していない状態で本メソッドが呼ばれると、ArgumentException が発生します。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01816">1816</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="NDJson_8cs_source.html#l01785">MACS.NDJson.Parse()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abb46140e08937380379072b787774743"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.NDJson.ParseChar </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>ch</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>1文字をパーサに供給する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ch</td><td>パースさせる文字</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><p class="startdd">true=パース完了、false=パース未完了 </p>
+<p class="enddd">本メソッドはStartParse呼び出し後に呼び出すこと。 </p>
+</dd></dl>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01855">1855</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="NDJson_8cs_source.html#l01816">MACS.NDJson.FinishParse()</a>, と <a class="el" href="NDJson_8cs_source.html#l01785">MACS.NDJson.Parse()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">プロパティ</h2>
+<a class="anchor" id="a4de7beabb8bd7f81d802d2d8ce3e7b46"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceMACS.html#acd4074309840ad1cb89fe92f00720de6">NDJsonType</a> MACS.NDJson.Type</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>値の型 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00034">34</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="NDJson_8cs_source.html#l01043">MACS.NDJson.Add()</a>, <a class="el" href="NDJson_8cs_source.html#l01649">MACS.NDJson.Clear()</a>, <a class="el" href="NDJson_8cs_source.html#l01564">MACS.NDJson.CopyFrom()</a>, <a class="el" href="NDJson_8cs_source.html#l01608">MACS.NDJson.DeepCopyFrom()</a>, <a class="el" href="NDJson_8cs_source.html#l00708">MACS.NDJson.Delete()</a>, <a class="el" href="NDJson_8cs_source.html#l00493">MACS.NDJson.Get()</a>, <a class="el" href="NDJson_8cs_source.html#l01332">MACS.NDJson.GetArray()</a>, <a class="el" href="NDJson_8cs_source.html#l01488">MACS.NDJson.GetBoolArray()</a>, <a class="el" href="NDJson_8cs_source.html#l00725">MACS.NDJson.GetDictionary()</a>, <a class="el" href="NDJson_8cs_source.html#l01448">MACS.NDJson.GetDoubleArray()</a>, <a class="el" href="NDJson_8cs_source.html#l00758">MACS.NDJson.GetEnumerator()</a>, <a class="el" href="NDJson_8cs_source.html#l01408">MACS.NDJson.GetIntArray()</a>, <a class="el" href="NDJson_8cs_source.html#l01368">MACS.NDJson.GetStringArray()</a>, <a class="el" href="NDJson_8cs_source.html#l00693">MACS.NDJson.IsDefined()</a>, <a class="el" href="NDJson_8cs_source.html#l00085">MACS.NDJson.NDJson()</a>, <a class="el" href="NDJson_8cs_source.html#l00265">MACS.NDJson.NewArray()</a>, <a class="el" href="NDJson_8cs_source.html#l00255">MACS.NDJson.NewObject()</a>, と <a class="el" href="NDJson_8cs_source.html#l00331">MACS.NDJson.Set()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a52adca75e4a74f13cb8629c59bb0000e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.NDJson.IsNull</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>値がNULL型かどうか </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00039">39</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a3d5da75d6b8a6cb8d778d4acad499e75"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.NDJson.IsString</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>値がSTRING型かどうか </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00046">46</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa31bd4ba6cb8444d39f392e13db44d63"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.NDJson.IsNumber</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>値がNUMBER型かどうか </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00053">53</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8f9f66fdaf8c88ef77ed996195dcf6dc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.NDJson.IsBool</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>値がBOOL型かどうか </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00060">60</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae398b7cb3b25045fad69d0b7c87be55e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.NDJson.IsObject</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>値がOBJECT型かどうか </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00067">67</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae10093ab6efd1b0f0d1e407cafde6d90"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.NDJson.IsArray</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>値がARRAY型かどうか </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00074">74</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aba6db1b5592ad588bec06c4834024c56"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.NDJson.StringValue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>値を文字列としてアクセスする </p>
+<p>getアクセスするとき、値がOBJECT型、ARRAY型の場合はJSON文字列を返します。 setアクセスすると、値の型はSTRING型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00304">304</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="NDJson_8cs_source.html#l00521">MACS.NDJson.Get()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7466c894dde66618a123b9e0de8e07c7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.NDJson.IntValue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>値をintとしてアクセスする </p>
+<dl class="section return"><dt>戻り値</dt><dd>自分自身</dd></dl>
+<p>getアクセスするとき、値が整数に変換できない場合は0を返します。 setアクセスすると、値の型はNUMBER型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00352">352</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="NDJson_8cs_source.html#l00535">MACS.NDJson.Get()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a352b5bdb571a31be0c98fa7725cb64b6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double MACS.NDJson.DoubleValue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>値をdoubleとしてアクセスする </p>
+<p>getアクセスするとき、値が浮動小数点数に変換できない場合は0を返します。 setアクセスすると、値の型はNUMBER型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00396">396</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="NDJson_8cs_source.html#l00549">MACS.NDJson.Get()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a136ed80281486ac9ab3891adca7061db"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.NDJson.BoolValue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>値をboolとしてアクセスする </p>
+<p>getアクセスするとき、NUMBER型は0以外のときにtrue、STRING型は"false", "no",空文字列以外の文字列の時にtrue、ARRAY型とOBJECT型はLengthが1以 上の時にtrueを返します。 setアクセスすると、値の型はBOOL型になり、他の型の値は消えます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00442">442</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="NDJson_8cs_source.html#l00563">MACS.NDJson.Get()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6c3caf5984155a36e3c3c339d9268377"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.this[string key]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>インデクサ </p>
+<p>getアクセスの場合、Get(string key)が実行されます。 setアクセスの場合、Set(string key, NDJson val)が実行されます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l00680">680</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a253b6149246c21403dcd460fc91c0300"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a> MACS.NDJson.this[int index]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>インデクサ </p>
+<p>getアクセスの場合、Get(int index)が実行されます。 setアクセスの場合、Set(int index, NDJson val)が実行されます。 </p>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01029">1029</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a3f1ade2cdc5cb841dc44d96646ff5e48"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.NDJson.Length</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>要素数を返す </p>
+<dl class="section return"><dt>戻り値</dt><dd>要素数</dd></dl>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01519">1519</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="NDJson_8cs_source.html#l01332">MACS.NDJson.GetArray()</a>, <a class="el" href="NDJson_8cs_source.html#l01488">MACS.NDJson.GetBoolArray()</a>, <a class="el" href="NDJson_8cs_source.html#l01448">MACS.NDJson.GetDoubleArray()</a>, <a class="el" href="NDJson_8cs_source.html#l01408">MACS.NDJson.GetIntArray()</a>, と <a class="el" href="NDJson_8cs_source.html#l01368">MACS.NDJson.GetStringArray()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4c9d8075f118909584737fcc3a27aa17"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MACS.NDJson.Count</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>要素数を返す </p>
+<p>Lengthと全く同じ。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>要素数</dd></dl>
+
+<p> <a class="el" href="NDJson_8cs_source.html">NDJson.cs</a> の <a class="el" href="NDJson_8cs_source.html#l01545">1545</a> 行で定義されています。</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="NDJson_8cs_source.html">NDJson.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceMACS.html">MACS</a></li><li class="navelem"><a class="el" href="classMACS_1_1NDJson.html">NDJson</a></li>
+    <li class="footer">MACS.Coreに対してWed Jun 27 2018 17:45:44に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

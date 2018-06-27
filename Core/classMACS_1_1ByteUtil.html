@@ -1,0 +1,3093 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.Core: クラス MACS.ByteUtil</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.Core
+   </div>
+   <div id="projectbrief">Miscellaneous Assets for C-Sharp</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classMACS_1_1ByteUtil.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Static Public メソッド</a> &#124;
+<a href="classMACS_1_1ByteUtil-members.html">すべてのメンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス MACS.ByteUtil</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>各種の値をバイト列からまたはバイト列に変換するユーティリティ。 BitConverterでは使いづらいパターンの変換に対応。  
+ <a href="classMACS_1_1ByteUtil.html#details">[詳細]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public メソッド</h2></td></tr>
+<tr class="memitem:a7b48b3c02a6c70b9015081c035bd4c8e"><td class="memItemLeft" align="right" valign="top">static ulong&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a7b48b3c02a6c70b9015081c035bd4c8e">ToULong</a> (byte[] buf)</td></tr>
+<tr class="memdesc:a7b48b3c02a6c70b9015081c035bd4c8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">64bit符号無し整数を読み取る  <a href="#a7b48b3c02a6c70b9015081c035bd4c8e"></a><br/></td></tr>
+<tr class="separator:a7b48b3c02a6c70b9015081c035bd4c8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e1de992af77108956504d749ce5950d"><td class="memItemLeft" align="right" valign="top">static ulong&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a6e1de992af77108956504d749ce5950d">ToULong</a> (byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a6e1de992af77108956504d749ce5950d"><td class="mdescLeft">&#160;</td><td class="mdescRight">64bit符号無し整数を読み取る  <a href="#a6e1de992af77108956504d749ce5950d"></a><br/></td></tr>
+<tr class="separator:a6e1de992af77108956504d749ce5950d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3b8f838147f3727d96d4eb6df5efd8e"><td class="memItemLeft" align="right" valign="top">static ulong&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#ae3b8f838147f3727d96d4eb6df5efd8e">ToULong</a> (byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:ae3b8f838147f3727d96d4eb6df5efd8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">64bit符号無し整数を読み取る  <a href="#ae3b8f838147f3727d96d4eb6df5efd8e"></a><br/></td></tr>
+<tr class="separator:ae3b8f838147f3727d96d4eb6df5efd8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49dd03f72d35d5948bdf681ed8479ce7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a49dd03f72d35d5948bdf681ed8479ce7">ToBytes</a> (ulong val, byte[] buf)</td></tr>
+<tr class="memdesc:a49dd03f72d35d5948bdf681ed8479ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">64bit符号無し整数を書き込む  <a href="#a49dd03f72d35d5948bdf681ed8479ce7"></a><br/></td></tr>
+<tr class="separator:a49dd03f72d35d5948bdf681ed8479ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a823498b7c9f8c3c657e53c1d8b2b927d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a823498b7c9f8c3c657e53c1d8b2b927d">ToBytes</a> (ulong val, byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a823498b7c9f8c3c657e53c1d8b2b927d"><td class="mdescLeft">&#160;</td><td class="mdescRight">64bit符号無し整数を書き込む  <a href="#a823498b7c9f8c3c657e53c1d8b2b927d"></a><br/></td></tr>
+<tr class="separator:a823498b7c9f8c3c657e53c1d8b2b927d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82cd46335762e8b78d9429261a8e6596"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a82cd46335762e8b78d9429261a8e6596">ToBytes</a> (ulong val, byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:a82cd46335762e8b78d9429261a8e6596"><td class="mdescLeft">&#160;</td><td class="mdescRight">64bit符号無し整数を書き込む  <a href="#a82cd46335762e8b78d9429261a8e6596"></a><br/></td></tr>
+<tr class="separator:a82cd46335762e8b78d9429261a8e6596"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef0fe4aaba0ea358466ce74bc5cff492"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#aef0fe4aaba0ea358466ce74bc5cff492">ToLong</a> (byte[] buf)</td></tr>
+<tr class="memdesc:aef0fe4aaba0ea358466ce74bc5cff492"><td class="mdescLeft">&#160;</td><td class="mdescRight">64bit符号付き整数を読み取る  <a href="#aef0fe4aaba0ea358466ce74bc5cff492"></a><br/></td></tr>
+<tr class="separator:aef0fe4aaba0ea358466ce74bc5cff492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac37bf3feebfb5c8e5ef0a078bee34828"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#ac37bf3feebfb5c8e5ef0a078bee34828">ToLong</a> (byte[] buf, int offset)</td></tr>
+<tr class="memdesc:ac37bf3feebfb5c8e5ef0a078bee34828"><td class="mdescLeft">&#160;</td><td class="mdescRight">64bit符号付き整数を読み取る  <a href="#ac37bf3feebfb5c8e5ef0a078bee34828"></a><br/></td></tr>
+<tr class="separator:ac37bf3feebfb5c8e5ef0a078bee34828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5cd45767a18e0483daa65f2272ce409"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#af5cd45767a18e0483daa65f2272ce409">ToLong</a> (byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:af5cd45767a18e0483daa65f2272ce409"><td class="mdescLeft">&#160;</td><td class="mdescRight">64bit符号付き整数を読み取る  <a href="#af5cd45767a18e0483daa65f2272ce409"></a><br/></td></tr>
+<tr class="separator:af5cd45767a18e0483daa65f2272ce409"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f1f0a2be2b84e995951f75c3ab766c0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a6f1f0a2be2b84e995951f75c3ab766c0">ToBytes</a> (long val, byte[] buf)</td></tr>
+<tr class="memdesc:a6f1f0a2be2b84e995951f75c3ab766c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">64bit符号付き整数を書き込む  <a href="#a6f1f0a2be2b84e995951f75c3ab766c0"></a><br/></td></tr>
+<tr class="separator:a6f1f0a2be2b84e995951f75c3ab766c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d280a7b2a67a78bbe112366f7749294"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a8d280a7b2a67a78bbe112366f7749294">ToBytes</a> (long val, byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a8d280a7b2a67a78bbe112366f7749294"><td class="mdescLeft">&#160;</td><td class="mdescRight">64bit符号付き整数を書き込む  <a href="#a8d280a7b2a67a78bbe112366f7749294"></a><br/></td></tr>
+<tr class="separator:a8d280a7b2a67a78bbe112366f7749294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac62779e48b2d336abec44d9160c83ed"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#aac62779e48b2d336abec44d9160c83ed">ToBytes</a> (long val, byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:aac62779e48b2d336abec44d9160c83ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">64bit符号付き整数を書き込む  <a href="#aac62779e48b2d336abec44d9160c83ed"></a><br/></td></tr>
+<tr class="separator:aac62779e48b2d336abec44d9160c83ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fa8650898c52c55bdb139571364439e"><td class="memItemLeft" align="right" valign="top">static uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a5fa8650898c52c55bdb139571364439e">ToUInt</a> (byte[] buf)</td></tr>
+<tr class="memdesc:a5fa8650898c52c55bdb139571364439e"><td class="mdescLeft">&#160;</td><td class="mdescRight">32bit符号無し整数を読み取る  <a href="#a5fa8650898c52c55bdb139571364439e"></a><br/></td></tr>
+<tr class="separator:a5fa8650898c52c55bdb139571364439e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a920e43186460ae43f055337df0ce89a7"><td class="memItemLeft" align="right" valign="top">static uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a920e43186460ae43f055337df0ce89a7">ToUInt</a> (byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a920e43186460ae43f055337df0ce89a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">32bit符号無し整数を読み取る  <a href="#a920e43186460ae43f055337df0ce89a7"></a><br/></td></tr>
+<tr class="separator:a920e43186460ae43f055337df0ce89a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad64be6b91e160d3bf6a77e4c71cf6eff"><td class="memItemLeft" align="right" valign="top">static uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#ad64be6b91e160d3bf6a77e4c71cf6eff">ToUInt</a> (byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:ad64be6b91e160d3bf6a77e4c71cf6eff"><td class="mdescLeft">&#160;</td><td class="mdescRight">32bit符号無し整数を読み取る  <a href="#ad64be6b91e160d3bf6a77e4c71cf6eff"></a><br/></td></tr>
+<tr class="separator:ad64be6b91e160d3bf6a77e4c71cf6eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33200f6ede6d066f93646d7237e99dd0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a33200f6ede6d066f93646d7237e99dd0">ToBytes</a> (uint val, byte[] buf)</td></tr>
+<tr class="memdesc:a33200f6ede6d066f93646d7237e99dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">32bit符号無し整数を書き込む  <a href="#a33200f6ede6d066f93646d7237e99dd0"></a><br/></td></tr>
+<tr class="separator:a33200f6ede6d066f93646d7237e99dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93e6e32f2511865f098b0b4bc92306df"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a93e6e32f2511865f098b0b4bc92306df">ToBytes</a> (uint val, byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a93e6e32f2511865f098b0b4bc92306df"><td class="mdescLeft">&#160;</td><td class="mdescRight">32bit符号無し整数を書き込む  <a href="#a93e6e32f2511865f098b0b4bc92306df"></a><br/></td></tr>
+<tr class="separator:a93e6e32f2511865f098b0b4bc92306df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedf35cc5fb4755bccf7be855e7339f26"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#aedf35cc5fb4755bccf7be855e7339f26">ToBytes</a> (uint val, byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:aedf35cc5fb4755bccf7be855e7339f26"><td class="mdescLeft">&#160;</td><td class="mdescRight">32bit符号無し整数を書き込む  <a href="#aedf35cc5fb4755bccf7be855e7339f26"></a><br/></td></tr>
+<tr class="separator:aedf35cc5fb4755bccf7be855e7339f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a725d85aa113c53f442f68b28314f7c28"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a725d85aa113c53f442f68b28314f7c28">ToInt</a> (byte[] buf)</td></tr>
+<tr class="memdesc:a725d85aa113c53f442f68b28314f7c28"><td class="mdescLeft">&#160;</td><td class="mdescRight">32bit符号付き整数を読み取る  <a href="#a725d85aa113c53f442f68b28314f7c28"></a><br/></td></tr>
+<tr class="separator:a725d85aa113c53f442f68b28314f7c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a4ed03afc58f1753832fe95f64e5c4a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a3a4ed03afc58f1753832fe95f64e5c4a">ToInt</a> (byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a3a4ed03afc58f1753832fe95f64e5c4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">32bit符号付き整数を読み取る  <a href="#a3a4ed03afc58f1753832fe95f64e5c4a"></a><br/></td></tr>
+<tr class="separator:a3a4ed03afc58f1753832fe95f64e5c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a243c9099eb1a2db39910d2d0bbf1d39b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a243c9099eb1a2db39910d2d0bbf1d39b">ToInt</a> (byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:a243c9099eb1a2db39910d2d0bbf1d39b"><td class="mdescLeft">&#160;</td><td class="mdescRight">32bit符号付き整数を読み取る  <a href="#a243c9099eb1a2db39910d2d0bbf1d39b"></a><br/></td></tr>
+<tr class="separator:a243c9099eb1a2db39910d2d0bbf1d39b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f81735c74e99c85f036fc3d6190ee31"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a4f81735c74e99c85f036fc3d6190ee31">ToBytes</a> (int val, byte[] buf)</td></tr>
+<tr class="memdesc:a4f81735c74e99c85f036fc3d6190ee31"><td class="mdescLeft">&#160;</td><td class="mdescRight">32bit符号付き整数を書き込む  <a href="#a4f81735c74e99c85f036fc3d6190ee31"></a><br/></td></tr>
+<tr class="separator:a4f81735c74e99c85f036fc3d6190ee31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaf5f496bfac7d6c3ce782ea4e9081db"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#aeaf5f496bfac7d6c3ce782ea4e9081db">ToBytes</a> (int val, byte[] buf, int offset)</td></tr>
+<tr class="memdesc:aeaf5f496bfac7d6c3ce782ea4e9081db"><td class="mdescLeft">&#160;</td><td class="mdescRight">32bit符号付き整数を書き込む  <a href="#aeaf5f496bfac7d6c3ce782ea4e9081db"></a><br/></td></tr>
+<tr class="separator:aeaf5f496bfac7d6c3ce782ea4e9081db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a324192e3c825e61c2c9b659fc938c420"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a324192e3c825e61c2c9b659fc938c420">ToBytes</a> (int val, byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:a324192e3c825e61c2c9b659fc938c420"><td class="mdescLeft">&#160;</td><td class="mdescRight">32bit符号付き整数を書き込む  <a href="#a324192e3c825e61c2c9b659fc938c420"></a><br/></td></tr>
+<tr class="separator:a324192e3c825e61c2c9b659fc938c420"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c926fdef23d5392cd5fe1f980c1a57b"><td class="memItemLeft" align="right" valign="top">static ushort&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a9c926fdef23d5392cd5fe1f980c1a57b">ToUShort</a> (byte[] buf)</td></tr>
+<tr class="memdesc:a9c926fdef23d5392cd5fe1f980c1a57b"><td class="mdescLeft">&#160;</td><td class="mdescRight">16bit符号無し整数を読み取る  <a href="#a9c926fdef23d5392cd5fe1f980c1a57b"></a><br/></td></tr>
+<tr class="separator:a9c926fdef23d5392cd5fe1f980c1a57b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d4a411806bf2c273991ba2a5875fbf9"><td class="memItemLeft" align="right" valign="top">static ushort&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a1d4a411806bf2c273991ba2a5875fbf9">ToUShort</a> (byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a1d4a411806bf2c273991ba2a5875fbf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">16bit符号無し整数を読み取る  <a href="#a1d4a411806bf2c273991ba2a5875fbf9"></a><br/></td></tr>
+<tr class="separator:a1d4a411806bf2c273991ba2a5875fbf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a561cdb8b7bb55136c55058e7cb4c22a8"><td class="memItemLeft" align="right" valign="top">static ushort&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a561cdb8b7bb55136c55058e7cb4c22a8">ToUShort</a> (byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:a561cdb8b7bb55136c55058e7cb4c22a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">16bit符号無し整数を読み取る  <a href="#a561cdb8b7bb55136c55058e7cb4c22a8"></a><br/></td></tr>
+<tr class="separator:a561cdb8b7bb55136c55058e7cb4c22a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5b3128501b544746632c36ea3d4f5d5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#ad5b3128501b544746632c36ea3d4f5d5">ToBytes</a> (ushort val, byte[] buf)</td></tr>
+<tr class="memdesc:ad5b3128501b544746632c36ea3d4f5d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">16bit符号無し整数を書き込む  <a href="#ad5b3128501b544746632c36ea3d4f5d5"></a><br/></td></tr>
+<tr class="separator:ad5b3128501b544746632c36ea3d4f5d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d178c00d1dba41b1db28d7c8a541a43"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a8d178c00d1dba41b1db28d7c8a541a43">ToBytes</a> (ushort val, byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a8d178c00d1dba41b1db28d7c8a541a43"><td class="mdescLeft">&#160;</td><td class="mdescRight">16bit符号無し整数を書き込む  <a href="#a8d178c00d1dba41b1db28d7c8a541a43"></a><br/></td></tr>
+<tr class="separator:a8d178c00d1dba41b1db28d7c8a541a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04e215fba710e337e368425b1205de83"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a04e215fba710e337e368425b1205de83">ToBytes</a> (ushort val, byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:a04e215fba710e337e368425b1205de83"><td class="mdescLeft">&#160;</td><td class="mdescRight">16bit符号無し整数を書き込む  <a href="#a04e215fba710e337e368425b1205de83"></a><br/></td></tr>
+<tr class="separator:a04e215fba710e337e368425b1205de83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0b5c778d44b05222ccc0007cbc999cf"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#ac0b5c778d44b05222ccc0007cbc999cf">ToShort</a> (byte[] buf)</td></tr>
+<tr class="memdesc:ac0b5c778d44b05222ccc0007cbc999cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">16bit符号付き整数を読み取る  <a href="#ac0b5c778d44b05222ccc0007cbc999cf"></a><br/></td></tr>
+<tr class="separator:ac0b5c778d44b05222ccc0007cbc999cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8b141f43d0e915f6e3061f69aa4d94a"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#af8b141f43d0e915f6e3061f69aa4d94a">ToShort</a> (byte[] buf, int offset)</td></tr>
+<tr class="memdesc:af8b141f43d0e915f6e3061f69aa4d94a"><td class="mdescLeft">&#160;</td><td class="mdescRight">16bit符号付き整数を読み取る  <a href="#af8b141f43d0e915f6e3061f69aa4d94a"></a><br/></td></tr>
+<tr class="separator:af8b141f43d0e915f6e3061f69aa4d94a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb044dea945ffdfa88e6412c8f9e62a2"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#aeb044dea945ffdfa88e6412c8f9e62a2">ToShort</a> (byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:aeb044dea945ffdfa88e6412c8f9e62a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">16bit符号付き整数を読み取る  <a href="#aeb044dea945ffdfa88e6412c8f9e62a2"></a><br/></td></tr>
+<tr class="separator:aeb044dea945ffdfa88e6412c8f9e62a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04459470dade3b3ccffa52fad485bf5e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a04459470dade3b3ccffa52fad485bf5e">ToBytes</a> (short val, byte[] buf)</td></tr>
+<tr class="memdesc:a04459470dade3b3ccffa52fad485bf5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">16bit符号付き整数を書き込む  <a href="#a04459470dade3b3ccffa52fad485bf5e"></a><br/></td></tr>
+<tr class="separator:a04459470dade3b3ccffa52fad485bf5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8818d3ad37ef505d17a7ff95a15dc8e0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a8818d3ad37ef505d17a7ff95a15dc8e0">ToBytes</a> (short val, byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a8818d3ad37ef505d17a7ff95a15dc8e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">16bit符号付き整数を書き込む  <a href="#a8818d3ad37ef505d17a7ff95a15dc8e0"></a><br/></td></tr>
+<tr class="separator:a8818d3ad37ef505d17a7ff95a15dc8e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adefbb0fbe12a178122556dd02a481a47"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#adefbb0fbe12a178122556dd02a481a47">ToBytes</a> (short val, byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:adefbb0fbe12a178122556dd02a481a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">16bit符号付き整数を書き込む  <a href="#adefbb0fbe12a178122556dd02a481a47"></a><br/></td></tr>
+<tr class="separator:adefbb0fbe12a178122556dd02a481a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a569ae6c5885a0f4bc69fd15688a48e1e"><td class="memItemLeft" align="right" valign="top">static byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a569ae6c5885a0f4bc69fd15688a48e1e">ToByte</a> (byte[] buf)</td></tr>
+<tr class="memdesc:a569ae6c5885a0f4bc69fd15688a48e1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">8bit符号無し整数を読み取る  <a href="#a569ae6c5885a0f4bc69fd15688a48e1e"></a><br/></td></tr>
+<tr class="separator:a569ae6c5885a0f4bc69fd15688a48e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3eab2f97a60de2564de7af1ad4b5a46"><td class="memItemLeft" align="right" valign="top">static byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#af3eab2f97a60de2564de7af1ad4b5a46">ToByte</a> (byte[] buf, int offset)</td></tr>
+<tr class="memdesc:af3eab2f97a60de2564de7af1ad4b5a46"><td class="mdescLeft">&#160;</td><td class="mdescRight">8bit符号無し整数を読み取る  <a href="#af3eab2f97a60de2564de7af1ad4b5a46"></a><br/></td></tr>
+<tr class="separator:af3eab2f97a60de2564de7af1ad4b5a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae431dfe953f0a576e99ec7e36dffbefa"><td class="memItemLeft" align="right" valign="top">static byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#ae431dfe953f0a576e99ec7e36dffbefa">ToByte</a> (byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:ae431dfe953f0a576e99ec7e36dffbefa"><td class="mdescLeft">&#160;</td><td class="mdescRight">8bit符号無し整数を読み取る  <a href="#ae431dfe953f0a576e99ec7e36dffbefa"></a><br/></td></tr>
+<tr class="separator:ae431dfe953f0a576e99ec7e36dffbefa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68cf542eae76f39f6f323bc773380f3f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a68cf542eae76f39f6f323bc773380f3f">ToBytes</a> (byte val, byte[] buf)</td></tr>
+<tr class="memdesc:a68cf542eae76f39f6f323bc773380f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">8bit符号無し整数を書き込む  <a href="#a68cf542eae76f39f6f323bc773380f3f"></a><br/></td></tr>
+<tr class="separator:a68cf542eae76f39f6f323bc773380f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20d4e9d6b0224d47146466d321842bc4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a20d4e9d6b0224d47146466d321842bc4">ToBytes</a> (byte val, byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a20d4e9d6b0224d47146466d321842bc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">8bit符号無し整数を書き込む  <a href="#a20d4e9d6b0224d47146466d321842bc4"></a><br/></td></tr>
+<tr class="separator:a20d4e9d6b0224d47146466d321842bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c4bc194ad45322aeac8e635c0c039de"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a1c4bc194ad45322aeac8e635c0c039de">ToBytes</a> (byte val, byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:a1c4bc194ad45322aeac8e635c0c039de"><td class="mdescLeft">&#160;</td><td class="mdescRight">8bit符号無し整数を書き込む  <a href="#a1c4bc194ad45322aeac8e635c0c039de"></a><br/></td></tr>
+<tr class="separator:a1c4bc194ad45322aeac8e635c0c039de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4831f03bf466462ae9599647a0f79735"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a4831f03bf466462ae9599647a0f79735">ToBool</a> (byte[] buf)</td></tr>
+<tr class="memdesc:a4831f03bf466462ae9599647a0f79735"><td class="mdescLeft">&#160;</td><td class="mdescRight">bool値を読み取る  <a href="#a4831f03bf466462ae9599647a0f79735"></a><br/></td></tr>
+<tr class="separator:a4831f03bf466462ae9599647a0f79735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa090ad292096fbef7fd4383de5593b97"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#aa090ad292096fbef7fd4383de5593b97">ToBool</a> (byte[] buf, int offset)</td></tr>
+<tr class="memdesc:aa090ad292096fbef7fd4383de5593b97"><td class="mdescLeft">&#160;</td><td class="mdescRight">bool値を読み取る  <a href="#aa090ad292096fbef7fd4383de5593b97"></a><br/></td></tr>
+<tr class="separator:aa090ad292096fbef7fd4383de5593b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24f77ff507e0227cab0052ce240f9d5d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a24f77ff507e0227cab0052ce240f9d5d">ToBool</a> (byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:a24f77ff507e0227cab0052ce240f9d5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">bool値を読み取る  <a href="#a24f77ff507e0227cab0052ce240f9d5d"></a><br/></td></tr>
+<tr class="separator:a24f77ff507e0227cab0052ce240f9d5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4173f6a00f6b48b60c20614bc5d0e7e9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a4173f6a00f6b48b60c20614bc5d0e7e9">ToBytes</a> (bool val, byte[] buf)</td></tr>
+<tr class="memdesc:a4173f6a00f6b48b60c20614bc5d0e7e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">bool値を書き込む  <a href="#a4173f6a00f6b48b60c20614bc5d0e7e9"></a><br/></td></tr>
+<tr class="separator:a4173f6a00f6b48b60c20614bc5d0e7e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01d656dbf30575efa9eb4f4fe8f611cc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a01d656dbf30575efa9eb4f4fe8f611cc">ToBytes</a> (bool val, byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a01d656dbf30575efa9eb4f4fe8f611cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">bool値を書き込む  <a href="#a01d656dbf30575efa9eb4f4fe8f611cc"></a><br/></td></tr>
+<tr class="separator:a01d656dbf30575efa9eb4f4fe8f611cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdc12fce6c96c9bf641b86f4f102b5f3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#afdc12fce6c96c9bf641b86f4f102b5f3">ToBytes</a> (bool val, byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:afdc12fce6c96c9bf641b86f4f102b5f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">bool値を書き込む  <a href="#afdc12fce6c96c9bf641b86f4f102b5f3"></a><br/></td></tr>
+<tr class="separator:afdc12fce6c96c9bf641b86f4f102b5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab92d0e17d23febd5ebb0d2ce8e0e435f"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#ab92d0e17d23febd5ebb0d2ce8e0e435f">ToFloat</a> (byte[] buf)</td></tr>
+<tr class="memdesc:ab92d0e17d23febd5ebb0d2ce8e0e435f"><td class="mdescLeft">&#160;</td><td class="mdescRight">float値を読み取る  <a href="#ab92d0e17d23febd5ebb0d2ce8e0e435f"></a><br/></td></tr>
+<tr class="separator:ab92d0e17d23febd5ebb0d2ce8e0e435f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3a59c3fe56af74a184f5943de839379"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#ac3a59c3fe56af74a184f5943de839379">ToFloat</a> (byte[] buf, int offset)</td></tr>
+<tr class="memdesc:ac3a59c3fe56af74a184f5943de839379"><td class="mdescLeft">&#160;</td><td class="mdescRight">float値を読み取る  <a href="#ac3a59c3fe56af74a184f5943de839379"></a><br/></td></tr>
+<tr class="separator:ac3a59c3fe56af74a184f5943de839379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d4d2a0e7a8c3ced58e86513d3f1228f"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a9d4d2a0e7a8c3ced58e86513d3f1228f">ToFloat</a> (byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:a9d4d2a0e7a8c3ced58e86513d3f1228f"><td class="mdescLeft">&#160;</td><td class="mdescRight">float値を読み取る  <a href="#a9d4d2a0e7a8c3ced58e86513d3f1228f"></a><br/></td></tr>
+<tr class="separator:a9d4d2a0e7a8c3ced58e86513d3f1228f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ec6b5288e52d72a8c9f209852722099"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a3ec6b5288e52d72a8c9f209852722099">ToBytes</a> (float val, byte[] buf)</td></tr>
+<tr class="memdesc:a3ec6b5288e52d72a8c9f209852722099"><td class="mdescLeft">&#160;</td><td class="mdescRight">float値を書き込む  <a href="#a3ec6b5288e52d72a8c9f209852722099"></a><br/></td></tr>
+<tr class="separator:a3ec6b5288e52d72a8c9f209852722099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b8caa6167aa79c523a3c31a3a640280"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a5b8caa6167aa79c523a3c31a3a640280">ToBytes</a> (float val, byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a5b8caa6167aa79c523a3c31a3a640280"><td class="mdescLeft">&#160;</td><td class="mdescRight">float値を書き込む  <a href="#a5b8caa6167aa79c523a3c31a3a640280"></a><br/></td></tr>
+<tr class="separator:a5b8caa6167aa79c523a3c31a3a640280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7418141c91fef92e10f0398742bf2af8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a7418141c91fef92e10f0398742bf2af8">ToBytes</a> (float val, byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:a7418141c91fef92e10f0398742bf2af8"><td class="mdescLeft">&#160;</td><td class="mdescRight">float値を書き込む  <a href="#a7418141c91fef92e10f0398742bf2af8"></a><br/></td></tr>
+<tr class="separator:a7418141c91fef92e10f0398742bf2af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac893ed9d157f7befd3a3cbdcec7ce008"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#ac893ed9d157f7befd3a3cbdcec7ce008">ToDouble</a> (byte[] buf)</td></tr>
+<tr class="memdesc:ac893ed9d157f7befd3a3cbdcec7ce008"><td class="mdescLeft">&#160;</td><td class="mdescRight">double値を読み取る  <a href="#ac893ed9d157f7befd3a3cbdcec7ce008"></a><br/></td></tr>
+<tr class="separator:ac893ed9d157f7befd3a3cbdcec7ce008"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09532f454723328de0b408872019b138"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a09532f454723328de0b408872019b138">ToDouble</a> (byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a09532f454723328de0b408872019b138"><td class="mdescLeft">&#160;</td><td class="mdescRight">double値を読み取る  <a href="#a09532f454723328de0b408872019b138"></a><br/></td></tr>
+<tr class="separator:a09532f454723328de0b408872019b138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49b778fc6fb4707dd1f3f4b6e51d37e9"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a49b778fc6fb4707dd1f3f4b6e51d37e9">ToDouble</a> (byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:a49b778fc6fb4707dd1f3f4b6e51d37e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">double値を読み取る  <a href="#a49b778fc6fb4707dd1f3f4b6e51d37e9"></a><br/></td></tr>
+<tr class="separator:a49b778fc6fb4707dd1f3f4b6e51d37e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af85a24ea16c99bd7d40d4af14dcedbf6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#af85a24ea16c99bd7d40d4af14dcedbf6">ToBytes</a> (double val, byte[] buf)</td></tr>
+<tr class="memdesc:af85a24ea16c99bd7d40d4af14dcedbf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">double値を書き込む  <a href="#af85a24ea16c99bd7d40d4af14dcedbf6"></a><br/></td></tr>
+<tr class="separator:af85a24ea16c99bd7d40d4af14dcedbf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a3640b13570cfcc45cf910dfd9ef89f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a4a3640b13570cfcc45cf910dfd9ef89f">ToBytes</a> (double val, byte[] buf, int offset)</td></tr>
+<tr class="memdesc:a4a3640b13570cfcc45cf910dfd9ef89f"><td class="mdescLeft">&#160;</td><td class="mdescRight">double値を書き込む  <a href="#a4a3640b13570cfcc45cf910dfd9ef89f"></a><br/></td></tr>
+<tr class="separator:a4a3640b13570cfcc45cf910dfd9ef89f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af67b576e885eb8829e2c366c54441a64"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#af67b576e885eb8829e2c366c54441a64">ToBytes</a> (double val, byte[] buf, ref int offset)</td></tr>
+<tr class="memdesc:af67b576e885eb8829e2c366c54441a64"><td class="mdescLeft">&#160;</td><td class="mdescRight">double値を書き込む  <a href="#af67b576e885eb8829e2c366c54441a64"></a><br/></td></tr>
+<tr class="separator:af67b576e885eb8829e2c366c54441a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc8d00741cd1cd322962bf8f049a3cfa"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#adc8d00741cd1cd322962bf8f049a3cfa">ToString</a> (byte[] buf, int offset, int len, Encoding enc)</td></tr>
+<tr class="memdesc:adc8d00741cd1cd322962bf8f049a3cfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列を読み取る  <a href="#adc8d00741cd1cd322962bf8f049a3cfa"></a><br/></td></tr>
+<tr class="separator:adc8d00741cd1cd322962bf8f049a3cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9020b379a62fd4e428a6f7d535c59d61"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a9020b379a62fd4e428a6f7d535c59d61">ToString</a> (byte[] buf, ref int offset, int len, Encoding enc)</td></tr>
+<tr class="memdesc:a9020b379a62fd4e428a6f7d535c59d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列を読み取る  <a href="#a9020b379a62fd4e428a6f7d535c59d61"></a><br/></td></tr>
+<tr class="separator:a9020b379a62fd4e428a6f7d535c59d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2062628ab4276b623e8dbdc7a1be3ee"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#ad2062628ab4276b623e8dbdc7a1be3ee">ToBytes</a> (string val, byte[] buf, int offset, int len, Encoding enc)</td></tr>
+<tr class="memdesc:ad2062628ab4276b623e8dbdc7a1be3ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列を書き込む  <a href="#ad2062628ab4276b623e8dbdc7a1be3ee"></a><br/></td></tr>
+<tr class="separator:ad2062628ab4276b623e8dbdc7a1be3ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a353a622695593329b12e1a81c90669c9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a353a622695593329b12e1a81c90669c9">ToBytes</a> (string val, byte[] buf, ref int offset, int len, Encoding enc)</td></tr>
+<tr class="memdesc:a353a622695593329b12e1a81c90669c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列を書き込む  <a href="#a353a622695593329b12e1a81c90669c9"></a><br/></td></tr>
+<tr class="separator:a353a622695593329b12e1a81c90669c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d47b2fabc762b778cd88b0b5fc236ca"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a4d47b2fabc762b778cd88b0b5fc236ca">ToBytes</a> (string val, byte[] buf, int offset, int len, byte fill, Encoding enc)</td></tr>
+<tr class="memdesc:a4d47b2fabc762b778cd88b0b5fc236ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列を書き込む  <a href="#a4d47b2fabc762b778cd88b0b5fc236ca"></a><br/></td></tr>
+<tr class="separator:a4d47b2fabc762b778cd88b0b5fc236ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bc5e86c23d077f5462cdc6d76b21bc9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a2bc5e86c23d077f5462cdc6d76b21bc9">ToBytes</a> (string val, byte[] buf, ref int offset, int len, byte fill, Encoding enc)</td></tr>
+<tr class="memdesc:a2bc5e86c23d077f5462cdc6d76b21bc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列を書き込む  <a href="#a2bc5e86c23d077f5462cdc6d76b21bc9"></a><br/></td></tr>
+<tr class="separator:a2bc5e86c23d077f5462cdc6d76b21bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48866011e5861dabdde2f553fef028d3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a48866011e5861dabdde2f553fef028d3">ToBytes</a> (byte[] val, byte[] buf, int offset, int len, byte fill=0)</td></tr>
+<tr class="memdesc:a48866011e5861dabdde2f553fef028d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">バイト列を書き込む。 コピー元バイト列の長さが必要サイズ未満の場合には、fillで埋められる。  <a href="#a48866011e5861dabdde2f553fef028d3"></a><br/></td></tr>
+<tr class="separator:a48866011e5861dabdde2f553fef028d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92cdc25b0a8ab1e0511dc195d90cc614"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1ByteUtil.html#a92cdc25b0a8ab1e0511dc195d90cc614">ToBytes</a> (byte[] val, byte[] buf, ref int offset, int len, byte fill=0)</td></tr>
+<tr class="memdesc:a92cdc25b0a8ab1e0511dc195d90cc614"><td class="mdescLeft">&#160;</td><td class="mdescRight">バイト列を書き込む。 コピー元バイト列の長さが必要サイズ未満の場合には、fillで埋められる。  <a href="#a92cdc25b0a8ab1e0511dc195d90cc614"></a><br/></td></tr>
+<tr class="separator:a92cdc25b0a8ab1e0511dc195d90cc614"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">説明</h2>
+<div class="textblock"><p>各種の値をバイト列からまたはバイト列に変換するユーティリティ。 BitConverterでは使いづらいパターンの変換に対応。 </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00016">16</a> 行で定義されています。</p>
+</div><h2 class="groupheader">メソッド</h2>
+<a class="anchor" id="a7b48b3c02a6c70b9015081c035bd4c8e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ulong MACS.ByteUtil.ToULong </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>64bit符号無し整数を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00021">21</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a6e1de992af77108956504d749ce5950d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ulong MACS.ByteUtil.ToULong </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>64bit符号無し整数を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00027">27</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae3b8f838147f3727d96d4eb6df5efd8e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ulong MACS.ByteUtil.ToULong </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>64bit符号無し整数を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00033">33</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a49dd03f72d35d5948bdf681ed8479ce7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">ulong&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>64bit符号無し整数を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00042">42</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="ByteUtil_8cs_source.html#l00068">MACS.ByteUtil.ToBytes()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a823498b7c9f8c3c657e53c1d8b2b927d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">ulong&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>64bit符号無し整数を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00048">48</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a82cd46335762e8b78d9429261a8e6596"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">ulong&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>64bit符号無し整数を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00068">68</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aef0fe4aaba0ea358466ce74bc5cff492"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static long MACS.ByteUtil.ToLong </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>64bit符号付き整数を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00076">76</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac37bf3feebfb5c8e5ef0a078bee34828"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static long MACS.ByteUtil.ToLong </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>64bit符号付き整数を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00082">82</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af5cd45767a18e0483daa65f2272ce409"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static long MACS.ByteUtil.ToLong </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>64bit符号付き整数を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00088">88</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a6f1f0a2be2b84e995951f75c3ab766c0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>64bit符号付き整数を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00097">97</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d280a7b2a67a78bbe112366f7749294"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>64bit符号付き整数を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00103">103</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aac62779e48b2d336abec44d9160c83ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>64bit符号付き整数を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00109">109</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5fa8650898c52c55bdb139571364439e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint MACS.ByteUtil.ToUInt </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>32bit符号無し整数を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00117">117</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a920e43186460ae43f055337df0ce89a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint MACS.ByteUtil.ToUInt </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>32bit符号無し整数を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00123">123</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad64be6b91e160d3bf6a77e4c71cf6eff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint MACS.ByteUtil.ToUInt </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>32bit符号無し整数を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00129">129</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a33200f6ede6d066f93646d7237e99dd0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>32bit符号無し整数を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00138">138</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a93e6e32f2511865f098b0b4bc92306df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>32bit符号無し整数を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00144">144</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aedf35cc5fb4755bccf7be855e7339f26"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>32bit符号無し整数を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00156">156</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a725d85aa113c53f442f68b28314f7c28"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.ByteUtil.ToInt </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>32bit符号付き整数を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00164">164</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a3a4ed03afc58f1753832fe95f64e5c4a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.ByteUtil.ToInt </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>32bit符号付き整数を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00170">170</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a243c9099eb1a2db39910d2d0bbf1d39b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.ByteUtil.ToInt </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>32bit符号付き整数を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00176">176</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4f81735c74e99c85f036fc3d6190ee31"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>32bit符号付き整数を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00185">185</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aeaf5f496bfac7d6c3ce782ea4e9081db"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>32bit符号付き整数を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00191">191</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a324192e3c825e61c2c9b659fc938c420"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>32bit符号付き整数を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00197">197</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a9c926fdef23d5392cd5fe1f980c1a57b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ushort MACS.ByteUtil.ToUShort </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>16bit符号無し整数を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00205">205</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1d4a411806bf2c273991ba2a5875fbf9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ushort MACS.ByteUtil.ToUShort </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>16bit符号無し整数を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00211">211</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a561cdb8b7bb55136c55058e7cb4c22a8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ushort MACS.ByteUtil.ToUShort </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>16bit符号無し整数を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00217">217</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad5b3128501b544746632c36ea3d4f5d5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">ushort&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>16bit符号無し整数を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00226">226</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d178c00d1dba41b1db28d7c8a541a43"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">ushort&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>16bit符号無し整数を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00232">232</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a04e215fba710e337e368425b1205de83"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">ushort&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>16bit符号無し整数を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00240">240</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac0b5c778d44b05222ccc0007cbc999cf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static short MACS.ByteUtil.ToShort </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>16bit符号付き整数を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00248">248</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af8b141f43d0e915f6e3061f69aa4d94a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static short MACS.ByteUtil.ToShort </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>16bit符号付き整数を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00254">254</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aeb044dea945ffdfa88e6412c8f9e62a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static short MACS.ByteUtil.ToShort </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>16bit符号付き整数を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00260">260</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a04459470dade3b3ccffa52fad485bf5e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>16bit符号付き整数を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00269">269</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8818d3ad37ef505d17a7ff95a15dc8e0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>16bit符号付き整数を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00275">275</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="adefbb0fbe12a178122556dd02a481a47"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>16bit符号付き整数を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00281">281</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a569ae6c5885a0f4bc69fd15688a48e1e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static byte MACS.ByteUtil.ToByte </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>8bit符号無し整数を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00289">289</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af3eab2f97a60de2564de7af1ad4b5a46"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static byte MACS.ByteUtil.ToByte </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>8bit符号無し整数を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00295">295</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae431dfe953f0a576e99ec7e36dffbefa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static byte MACS.ByteUtil.ToByte </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>8bit符号無し整数を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00301">301</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a68cf542eae76f39f6f323bc773380f3f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>8bit符号無し整数を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00310">310</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a20d4e9d6b0224d47146466d321842bc4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>8bit符号無し整数を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00316">316</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1c4bc194ad45322aeac8e635c0c039de"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>8bit符号無し整数を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00322">322</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4831f03bf466462ae9599647a0f79735"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool MACS.ByteUtil.ToBool </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>bool値を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00330">330</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa090ad292096fbef7fd4383de5593b97"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool MACS.ByteUtil.ToBool </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>bool値を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00336">336</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a24f77ff507e0227cab0052ce240f9d5d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool MACS.ByteUtil.ToBool </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>bool値を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00342">342</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4173f6a00f6b48b60c20614bc5d0e7e9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>bool値を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00351">351</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a01d656dbf30575efa9eb4f4fe8f611cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>bool値を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00357">357</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="afdc12fce6c96c9bf641b86f4f102b5f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>bool値を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00363">363</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab92d0e17d23febd5ebb0d2ce8e0e435f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float MACS.ByteUtil.ToFloat </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>float値を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00371">371</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac3a59c3fe56af74a184f5943de839379"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float MACS.ByteUtil.ToFloat </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>float値を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00377">377</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a9d4d2a0e7a8c3ced58e86513d3f1228f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float MACS.ByteUtil.ToFloat </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>float値を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00383">383</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a3ec6b5288e52d72a8c9f209852722099"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>float値を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00392">392</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a5b8caa6167aa79c523a3c31a3a640280"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>float値を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00398">398</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a7418141c91fef92e10f0398742bf2af8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>float値を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00404">404</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac893ed9d157f7befd3a3cbdcec7ce008"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double MACS.ByteUtil.ToDouble </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>double値を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00413">413</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a09532f454723328de0b408872019b138"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double MACS.ByteUtil.ToDouble </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>double値を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00419">419</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a49b778fc6fb4707dd1f3f4b6e51d37e9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double MACS.ByteUtil.ToDouble </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>double値を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00425">425</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af85a24ea16c99bd7d40d4af14dcedbf6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>double値を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00434">434</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4a3640b13570cfcc45cf910dfd9ef89f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>double値を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00440">440</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af67b576e885eb8829e2c366c54441a64"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>double値を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00446">446</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="adc8d00741cd1cd322962bf8f049a3cfa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.ByteUtil.ToString </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoding&#160;</td>
+          <td class="paramname"><em>enc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文字列を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00455">455</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a9020b379a62fd4e428a6f7d535c59d61"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string MACS.ByteUtil.ToString </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoding&#160;</td>
+          <td class="paramname"><em>enc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文字列を読み取る </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00461">461</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad2062628ab4276b623e8dbdc7a1be3ee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoding&#160;</td>
+          <td class="paramname"><em>enc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文字列を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00470">470</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a353a622695593329b12e1a81c90669c9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoding&#160;</td>
+          <td class="paramname"><em>enc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文字列を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00476">476</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4d47b2fabc762b778cd88b0b5fc236ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>fill</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoding&#160;</td>
+          <td class="paramname"><em>enc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文字列を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00483">483</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a2bc5e86c23d077f5462cdc6d76b21bc9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>fill</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoding&#160;</td>
+          <td class="paramname"><em>enc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文字列を書き込む </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00497">497</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a48866011e5861dabdde2f553fef028d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>fill</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>バイト列を書き込む。 コピー元バイト列の長さが必要サイズ未満の場合には、fillで埋められる。 </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00514">514</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a92cdc25b0a8ab1e0511dc195d90cc614"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.ByteUtil.ToBytes </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>fill</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>バイト列を書き込む。 コピー元バイト列の長さが必要サイズ未満の場合には、fillで埋められる。 </p>
+
+<p> <a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a> の <a class="el" href="ByteUtil_8cs_source.html#l00538">538</a> 行で定義されています。</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="ByteUtil_8cs_source.html">ByteUtil.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceMACS.html">MACS</a></li><li class="navelem"><a class="el" href="classMACS_1_1ByteUtil.html">ByteUtil</a></li>
+    <li class="footer">MACS.Coreに対してWed Jun 27 2018 17:45:44に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.DB: トランザクション</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.DB
+   </div>
+   <div id="projectbrief">SQL Database Access Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('Example17.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">トランザクション </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>SQLのトランザクションを管理するには、 DBCon.Begin() と DBCon.Commit() を使います。</p>
+<p>Example17.cs: </p>
+<div class="fragment"><div class="line">﻿<span class="comment">/*! @file Example17.cs</span></div>
+<div class="line"><span class="comment"> * $Id: Example17.cs 1890 2014-06-05 04:34:56Z shibuya $</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Copyright (C) 2008-2012 Microbrains Inc.</span></div>
+<div class="line"><span class="comment"> * All Rights Reserved.</span></div>
+<div class="line"><span class="comment"> * This code was designed and coded by SHIBUYA K.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">using</span> System;</div>
+<div class="line"><span class="keyword">using</span> System.Collections.Generic;</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">class </span><a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classProgram.html">Program</a> {</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="codeRef" doxygen="MACS.tag:../Core/" href="../Core/classProgram.html#afcfdd245ac54647c4931389fa84f5693">Main</a>(<span class="keywordtype">string</span>[] args) {</div>
+<div class="line"></div>
+<div class="line">        IniFile conf = <span class="keyword">new</span> IniFile(<span class="stringliteral">&quot;Example.ini&quot;</span>);</div>
+<div class="line">        DBCon.UseConsoleLog = <span class="keyword">true</span>;</div>
+<div class="line">        DBTableDef.LoadAll(<span class="stringliteral">&quot;tabledef&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">        <span class="keyword">using</span>(DBCon db = <span class="keyword">new</span> DBCon(conf)) {</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// データベーストランザクションを開始する</span></div>
+<div class="line">            db.Begin();</div>
+<div class="line"></div>
+<div class="line">            DBTable tbl = <span class="keyword">new</span> DBTable(db, <span class="stringliteral">&quot;サンプルテーブル&quot;</span>);</div>
+<div class="line">            tbl.SetAllColumns();</div>
+<div class="line">            DataArray rec = <span class="keyword">new</span> DataArray(tbl.Columns, null);</div>
+<div class="line">            rec[<span class="stringliteral">&quot;ID&quot;</span>] = <span class="stringliteral">&quot;2000&quot;</span>;</div>
+<div class="line">            rec[<span class="stringliteral">&quot;名前&quot;</span>] = <span class="stringliteral">&quot;カルロス ゴーン&quot;</span>;</div>
+<div class="line">            tbl.Insert(rec);</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// トランザクションをコミットするとデータベース変更が確定する</span></div>
+<div class="line">            db.Commit();</div>
+<div class="line"></div>
+<div class="line">            <span class="keywordflow">foreach</span>(DataArray xrec <span class="keywordflow">in</span> tbl.GetData())</div>
+<div class="line">                Console.WriteLine(<span class="stringliteral">&quot;{0}: {1}&quot;</span>, xrec[<span class="stringliteral">&quot;ID&quot;</span>], xrec[<span class="stringliteral">&quot;名前&quot;</span>]);</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// もう一度トランザクションを開始する</span></div>
+<div class="line">            db.Begin();</div>
+<div class="line"></div>
+<div class="line">            rec[<span class="stringliteral">&quot;ID&quot;</span>] = <span class="stringliteral">&quot;2001&quot;</span>;</div>
+<div class="line">            rec[<span class="stringliteral">&quot;名前&quot;</span>] = <span class="stringliteral">&quot;マイケル ウッドフォード&quot;</span>;</div>
+<div class="line">            tbl.Insert(rec);</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// トランザクションをロールバックするとデータベース変更は破棄される</span></div>
+<div class="line">            db.Rollback();</div>
+<div class="line"></div>
+<div class="line">            <span class="keywordflow">foreach</span>(DataArray xrec <span class="keywordflow">in</span> tbl.GetData())</div>
+<div class="line">                Console.WriteLine(<span class="stringliteral">&quot;{0}: {1}&quot;</span>, xrec[<span class="stringliteral">&quot;ID&quot;</span>], xrec[<span class="stringliteral">&quot;名前&quot;</span>]);</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// もう一度トランザクションを開始する</span></div>
+<div class="line">            db.Begin();</div>
+<div class="line"></div>
+<div class="line">            rec[<span class="stringliteral">&quot;ID&quot;</span>] = <span class="stringliteral">&quot;2002&quot;</span>;</div>
+<div class="line">            rec[<span class="stringliteral">&quot;名前&quot;</span>] = <span class="stringliteral">&quot;堀江貴文&quot;</span>;</div>
+<div class="line">            tbl.Insert(rec);</div>
+<div class="line">            </div>
+<div class="line">            <span class="comment">// コミットしないまま DBConがDisposeされると、自動的にロールバックする</span></div>
+<div class="line">            <span class="keywordflow">if</span>(rec[<span class="stringliteral">&quot;名前&quot;</span>] == <span class="stringliteral">&quot;堀江貴文&quot;</span>)</div>
+<div class="line">                <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception(<span class="stringliteral">&quot;Aborted&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">return</span> 0;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>実行結果の例: </p>
+<pre class="fragment">mydb: Open Server=192.168.10.125;Database=mydb;Uid=myuser;Pwd=mypass;CharSet=utf8
+mydb: START TRANSACTION
+mydb: INSERT INTO サンプルテーブル (ID,名前) VALUES (2000,'カルロス ゴーン')
+mydb: COMMIT
+mydb: SELECT ID,名前,電話番号 FROM サンプルテーブル
+1: テスト一郎
+2: テスト次郎
+3: テスト三郎
+100: 山田太郎
+101: 山田花子
+102: 鈴木一郎
+2000: カルロス ゴーン
+mydb: START TRANSACTION
+mydb: INSERT INTO サンプルテーブル (ID,名前) VALUES (2001,'マイケル ウッドフォード')
+mydb: ROLLBACK
+mydb: SELECT ID,名前,電話番号 FROM サンプルテーブル
+1: テスト一郎
+2: テスト次郎
+3: テスト三郎
+100: 山田太郎
+101: 山田花子
+102: 鈴木一郎
+2000: カルロス ゴーン
+mydb: START TRANSACTION
+mydb: INSERT INTO サンプルテーブル (ID,名前) VALUES (2002,'堀江貴文')
+
+Unhandled Exception: System.Exception: Aborted
+  at Program.Main (System.String[] args) [0x001ab] in examples/Example17.cs:59 
+mydb: ROLLBACK
+mydb: Closed.
+[ERROR] FATAL UNHANDLED EXCEPTION: System.Exception: Aborted
+  at Program.Main (System.String[] args) [0x001ab] in examples/Example17.cs:59 
+</pre><p>DBCon.Begin() を実行すると、SQLのトランザクションが開始され、 DBCon.Commit() が実行されるまでの間データベースへの変更は確定しません。</p>
+<p>DBCon.Commit() が呼ばれないまま DBCon.Rollback() が実行された場合には、 DBCon.Begin() 以降のデータベース変更は全て破棄され、内容が DBCon.Begin() 実行時点の状態に戻ります。</p>
+<p>例外発生など、なんらかの理由で DBCon.Dispose() が呼び出されると、自動的に DBCon.Rollback() が呼び出され、データベースはロールバックします。 （この例では new DBCon() をusing文で保護しているため、usingブロックから外に出る時に確実に DBCon.Dispose() が呼び出されます。）</p>
+<p>もちろん、 DBCon.Begin() が呼び出されていない場合はトランザクション管理は行なわれず、SQL実行の都度データベースに変更が反映されます。 また、 DBCon.Dispose() はロールバックを行ないません。 </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="index.html">index</a></li><li class="navelem"><a class="el" href="DB_xE3_x82_x92_xE4_xBD_xBF_xE3_x81_xA3_xE3_x81_x9F_xE3_x83_x87_xE3_x83_xBC_xE3_x82_xBF_xE3_x83_xecb51fe6fcb759ae61f839d5c92dd895.html">DBを使ったデータベースアクセスプログラム作成例</a></li>
+    <li class="footer">MACS.DBに対してWed Jun 27 2018 17:45:48に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

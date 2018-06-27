@@ -1,0 +1,701 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.Core: クラス MACS.IpaddrRange</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.Core
+   </div>
+   <div id="projectbrief">Miscellaneous Assets for C-Sharp</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classMACS_1_1IpaddrRange.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-static-methods">Static Public メソッド</a> &#124;
+<a href="#pub-attribs">Public 変数</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="classMACS_1_1IpaddrRange-members.html">すべてのメンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス MACS.IpaddrRange</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>IPアドレス範囲クラス  
+ <a href="classMACS_1_1IpaddrRange.html#details">[詳細]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr class="memitem:a70ad15653b767a306c627ee15d0c65b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1IpaddrRange.html#a70ad15653b767a306c627ee15d0c65b1">IpaddrRange</a> ()</td></tr>
+<tr class="memdesc:a70ad15653b767a306c627ee15d0c65b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ  <a href="#a70ad15653b767a306c627ee15d0c65b1"></a><br/></td></tr>
+<tr class="separator:a70ad15653b767a306c627ee15d0c65b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54f38bcf606d98a7d3ad9b244dd28047"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1IpaddrRange.html#a54f38bcf606d98a7d3ad9b244dd28047">IpaddrRange</a> (<a class="el" href="classMACS_1_1Ipaddr.html">Ipaddr</a> start, <a class="el" href="classMACS_1_1Ipaddr.html">Ipaddr</a> end)</td></tr>
+<tr class="memdesc:a54f38bcf606d98a7d3ad9b244dd28047"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#a54f38bcf606d98a7d3ad9b244dd28047"></a><br/></td></tr>
+<tr class="separator:a54f38bcf606d98a7d3ad9b244dd28047"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac335ace717d28620a6d5bde55171e4bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1IpaddrRange.html#ac335ace717d28620a6d5bde55171e4bf">IpaddrRange</a> (string start, string end)</td></tr>
+<tr class="memdesc:ac335ace717d28620a6d5bde55171e4bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#ac335ace717d28620a6d5bde55171e4bf"></a><br/></td></tr>
+<tr class="separator:ac335ace717d28620a6d5bde55171e4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8345d0653301500700f5779377db884b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1IpaddrRange.html#a8345d0653301500700f5779377db884b">IpaddrRange</a> (<a class="el" href="classMACS_1_1Ipaddr.html">Ipaddr</a> addr)</td></tr>
+<tr class="memdesc:a8345d0653301500700f5779377db884b"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#a8345d0653301500700f5779377db884b"></a><br/></td></tr>
+<tr class="separator:a8345d0653301500700f5779377db884b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4ac3f584146e3a507377cd00ffb2310"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1IpaddrRange.html#aa4ac3f584146e3a507377cd00ffb2310">IpaddrRange</a> (string addr)</td></tr>
+<tr class="memdesc:aa4ac3f584146e3a507377cd00ffb2310"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#aa4ac3f584146e3a507377cd00ffb2310"></a><br/></td></tr>
+<tr class="separator:aa4ac3f584146e3a507377cd00ffb2310"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20ca00be1b2ea3d31c234a23e0c89339"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1IpaddrRange.html#a20ca00be1b2ea3d31c234a23e0c89339">IpaddrRange</a> (<a class="el" href="classMACS_1_1Ipaddr.html">Ipaddr</a>[] addrList)</td></tr>
+<tr class="memdesc:a20ca00be1b2ea3d31c234a23e0c89339"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#a20ca00be1b2ea3d31c234a23e0c89339"></a><br/></td></tr>
+<tr class="separator:a20ca00be1b2ea3d31c234a23e0c89339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a612202ef680983adb170ed709300647c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1IpaddrRange.html#a612202ef680983adb170ed709300647c">IpaddrRange</a> (<a class="el" href="classMACS_1_1IpaddrRange.html">IpaddrRange</a> src)</td></tr>
+<tr class="memdesc:a612202ef680983adb170ed709300647c"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピーコンストラクタ  <a href="#a612202ef680983adb170ed709300647c"></a><br/></td></tr>
+<tr class="separator:a612202ef680983adb170ed709300647c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e0b080bceff617cf382e389c4f0a785"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1IpaddrRange.html#a0e0b080bceff617cf382e389c4f0a785">Set</a> (<a class="el" href="classMACS_1_1Ipaddr.html">Ipaddr</a> start, <a class="el" href="classMACS_1_1Ipaddr.html">Ipaddr</a> end)</td></tr>
+<tr class="memdesc:a0e0b080bceff617cf382e389c4f0a785"><td class="mdescLeft">&#160;</td><td class="mdescRight">アドレス範囲をセットする  <a href="#a0e0b080bceff617cf382e389c4f0a785"></a><br/></td></tr>
+<tr class="separator:a0e0b080bceff617cf382e389c4f0a785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adec11788fa28409d9d8ad5a97692a4f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1IpaddrRange.html#adec11788fa28409d9d8ad5a97692a4f1">Set</a> (<a class="el" href="classMACS_1_1Ipaddr.html">Ipaddr</a> addr)</td></tr>
+<tr class="memdesc:adec11788fa28409d9d8ad5a97692a4f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">1個のアドレスをアドレス範囲としてセットする  <a href="#adec11788fa28409d9d8ad5a97692a4f1"></a><br/></td></tr>
+<tr class="separator:adec11788fa28409d9d8ad5a97692a4f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dea01fc5dd6de8ecc8ffd14d80f5685"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1Ipaddr.html">Ipaddr</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1IpaddrRange.html#a0dea01fc5dd6de8ecc8ffd14d80f5685">GetList</a> (int limit=-1)</td></tr>
+<tr class="memdesc:a0dea01fc5dd6de8ecc8ffd14d80f5685"><td class="mdescLeft">&#160;</td><td class="mdescRight">アドレス範囲をアドレスリストにして返す  <a href="#a0dea01fc5dd6de8ecc8ffd14d80f5685"></a><br/></td></tr>
+<tr class="separator:a0dea01fc5dd6de8ecc8ffd14d80f5685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70d514479c6b143e819c003fae2779c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1IpaddrRange.html#a70d514479c6b143e819c003fae2779c6">GetList</a> (List&lt; <a class="el" href="classMACS_1_1Ipaddr.html">Ipaddr</a> &gt; list, int limit)</td></tr>
+<tr class="memdesc:a70d514479c6b143e819c003fae2779c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">アドレス範囲内のアドレスをアドレスリストに追加する  <a href="#a70d514479c6b143e819c003fae2779c6"></a><br/></td></tr>
+<tr class="separator:a70d514479c6b143e819c003fae2779c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e8be05d5334c025bf69f76b73a70670"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1IpaddrRange.html#a7e8be05d5334c025bf69f76b73a70670">Equals</a> (<a class="el" href="classMACS_1_1IpaddrRange.html">IpaddrRange</a> src)</td></tr>
+<tr class="memdesc:a7e8be05d5334c025bf69f76b73a70670"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスがsrcで示されるアドレス範囲と同じかどうかを返す  <a href="#a7e8be05d5334c025bf69f76b73a70670"></a><br/></td></tr>
+<tr class="separator:a7e8be05d5334c025bf69f76b73a70670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a371129707242c91cc2d42e5356bd2af1"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1IpaddrRange.html#a371129707242c91cc2d42e5356bd2af1">Equals</a> (Object obj)</td></tr>
+<tr class="memdesc:a371129707242c91cc2d42e5356bd2af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスがsrcで示されるアドレス範囲と同じかどうかを返す 一般オブジェクトとの比較バージョン。  <a href="#a371129707242c91cc2d42e5356bd2af1"></a><br/></td></tr>
+<tr class="separator:a371129707242c91cc2d42e5356bd2af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbe86a5530b14f1cbeda43a710dbad49"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1IpaddrRange.html#abbe86a5530b14f1cbeda43a710dbad49">GetHashCode</a> ()</td></tr>
+<tr class="memdesc:abbe86a5530b14f1cbeda43a710dbad49"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスのハッシュコードを返す。  <a href="#abbe86a5530b14f1cbeda43a710dbad49"></a><br/></td></tr>
+<tr class="separator:abbe86a5530b14f1cbeda43a710dbad49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeaee31be8660dbb756cc4033f923cba"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1IpaddrRange.html#adeaee31be8660dbb756cc4033f923cba">ToString</a> ()</td></tr>
+<tr class="memdesc:adeaee31be8660dbb756cc4033f923cba"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列表現を返す  <a href="#adeaee31be8660dbb756cc4033f923cba"></a><br/></td></tr>
+<tr class="separator:adeaee31be8660dbb756cc4033f923cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public メソッド</h2></td></tr>
+<tr class="memitem:acbc54ef8543f9111b338a971efd09e57"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1IpaddrRange.html#acbc54ef8543f9111b338a971efd09e57">operator==</a> (<a class="el" href="classMACS_1_1IpaddrRange.html">IpaddrRange</a> a, <a class="el" href="classMACS_1_1IpaddrRange.html">IpaddrRange</a> b)</td></tr>
+<tr class="separator:acbc54ef8543f9111b338a971efd09e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8290fb94af70eee7bccb58cfeeeeb029"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1IpaddrRange.html#a8290fb94af70eee7bccb58cfeeeeb029">operator!=</a> (<a class="el" href="classMACS_1_1IpaddrRange.html">IpaddrRange</a> a, <a class="el" href="classMACS_1_1IpaddrRange.html">IpaddrRange</a> b)</td></tr>
+<tr class="separator:a8290fb94af70eee7bccb58cfeeeeb029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 変数</h2></td></tr>
+<tr class="memitem:aff689a824ab72de81a0c8eb00579be87"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="classMACS_1_1Ipaddr.html">Ipaddr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1IpaddrRange.html#aff689a824ab72de81a0c8eb00579be87">StartAddr</a></td></tr>
+<tr class="memdesc:aff689a824ab72de81a0c8eb00579be87"><td class="mdescLeft">&#160;</td><td class="mdescRight">開始アドレス  <a href="#aff689a824ab72de81a0c8eb00579be87"></a><br/></td></tr>
+<tr class="separator:aff689a824ab72de81a0c8eb00579be87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bed2e2f064f55fca893a3507c7d655c"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="classMACS_1_1Ipaddr.html">Ipaddr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1IpaddrRange.html#a5bed2e2f064f55fca893a3507c7d655c">EndAddr</a></td></tr>
+<tr class="memdesc:a5bed2e2f064f55fca893a3507c7d655c"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了アドレス  <a href="#a5bed2e2f064f55fca893a3507c7d655c"></a><br/></td></tr>
+<tr class="separator:a5bed2e2f064f55fca893a3507c7d655c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:accfd04983c2d8503f7832372c9298914"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1IpaddrRange.html#accfd04983c2d8503f7832372c9298914">IsValid</a><code> [get]</code></td></tr>
+<tr class="memdesc:accfd04983c2d8503f7832372c9298914"><td class="mdescLeft">&#160;</td><td class="mdescRight">有効なアドレス範囲かどうか  <a href="#accfd04983c2d8503f7832372c9298914"></a><br/></td></tr>
+<tr class="separator:accfd04983c2d8503f7832372c9298914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">説明</h2>
+<div class="textblock"><p>IPアドレス範囲クラス </p>
+
+<p> <a class="el" href="IpaddrRange_8cs_source.html">IpaddrRange.cs</a> の <a class="el" href="IpaddrRange_8cs_source.html#l00016">16</a> 行で定義されています。</p>
+</div><h2 class="groupheader">コンストラクタとデストラクタ</h2>
+<a class="anchor" id="a70ad15653b767a306c627ee15d0c65b1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.IpaddrRange.IpaddrRange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>デフォルトコンストラクタ </p>
+
+<p> <a class="el" href="IpaddrRange_8cs_source.html">IpaddrRange.cs</a> の <a class="el" href="IpaddrRange_8cs_source.html#l00031">31</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="IpaddrRange_8cs_source.html#l00163">MACS.IpaddrRange.Equals()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a54f38bcf606d98a7d3ad9b244dd28047"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.IpaddrRange.IpaddrRange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1Ipaddr.html">Ipaddr</a>&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1Ipaddr.html">Ipaddr</a>&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+
+<p> <a class="el" href="IpaddrRange_8cs_source.html">IpaddrRange.cs</a> の <a class="el" href="IpaddrRange_8cs_source.html#l00038">38</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac335ace717d28620a6d5bde55171e4bf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.IpaddrRange.IpaddrRange </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+
+<p> <a class="el" href="IpaddrRange_8cs_source.html">IpaddrRange.cs</a> の <a class="el" href="IpaddrRange_8cs_source.html#l00045">45</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8345d0653301500700f5779377db884b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.IpaddrRange.IpaddrRange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1Ipaddr.html">Ipaddr</a>&#160;</td>
+          <td class="paramname"><em>addr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+
+<p> <a class="el" href="IpaddrRange_8cs_source.html">IpaddrRange.cs</a> の <a class="el" href="IpaddrRange_8cs_source.html#l00052">52</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa4ac3f584146e3a507377cd00ffb2310"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.IpaddrRange.IpaddrRange </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>addr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+
+<p> <a class="el" href="IpaddrRange_8cs_source.html">IpaddrRange.cs</a> の <a class="el" href="IpaddrRange_8cs_source.html#l00060">60</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a20ca00be1b2ea3d31c234a23e0c89339"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.IpaddrRange.IpaddrRange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1Ipaddr.html">Ipaddr</a>[]&#160;</td>
+          <td class="paramname"><em>addrList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+
+<p> <a class="el" href="IpaddrRange_8cs_source.html">IpaddrRange.cs</a> の <a class="el" href="IpaddrRange_8cs_source.html#l00068">68</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a612202ef680983adb170ed709300647c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.IpaddrRange.IpaddrRange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1IpaddrRange.html">IpaddrRange</a>&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コピーコンストラクタ </p>
+
+<p> <a class="el" href="IpaddrRange_8cs_source.html">IpaddrRange.cs</a> の <a class="el" href="IpaddrRange_8cs_source.html#l00089">89</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド</h2>
+<a class="anchor" id="a0e0b080bceff617cf382e389c4f0a785"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.IpaddrRange.Set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1Ipaddr.html">Ipaddr</a>&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1Ipaddr.html">Ipaddr</a>&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アドレス範囲をセットする </p>
+
+<p> <a class="el" href="IpaddrRange_8cs_source.html">IpaddrRange.cs</a> の <a class="el" href="IpaddrRange_8cs_source.html#l00097">97</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="IpaddrRange_8cs_source.html#l00038">MACS.IpaddrRange.IpaddrRange()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adec11788fa28409d9d8ad5a97692a4f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.IpaddrRange.Set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1Ipaddr.html">Ipaddr</a>&#160;</td>
+          <td class="paramname"><em>addr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>1個のアドレスをアドレス範囲としてセットする </p>
+
+<p> <a class="el" href="IpaddrRange_8cs_source.html">IpaddrRange.cs</a> の <a class="el" href="IpaddrRange_8cs_source.html#l00110">110</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a0dea01fc5dd6de8ecc8ffd14d80f5685"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1Ipaddr.html">Ipaddr</a> [] MACS.IpaddrRange.GetList </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>limit</em> = <code>-1</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アドレス範囲をアドレスリストにして返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">limit</td><td>最大件数（負の場合制限無し）</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="IpaddrRange_8cs_source.html">IpaddrRange.cs</a> の <a class="el" href="IpaddrRange_8cs_source.html#l00119">119</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a70d514479c6b143e819c003fae2779c6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.IpaddrRange.GetList </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classMACS_1_1Ipaddr.html">Ipaddr</a> &gt;&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>limit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アドレス範囲内のアドレスをアドレスリストに追加する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>このリストに追加する</td></tr>
+    <tr><td class="paramname">limit</td><td>最大件数（負の場合制限無し）</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="IpaddrRange_8cs_source.html">IpaddrRange.cs</a> の <a class="el" href="IpaddrRange_8cs_source.html#l00130">130</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a7e8be05d5334c025bf69f76b73a70670"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.IpaddrRange.Equals </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1IpaddrRange.html">IpaddrRange</a>&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>インスタンスがsrcで示されるアドレス範囲と同じかどうかを返す </p>
+
+<p> <a class="el" href="IpaddrRange_8cs_source.html">IpaddrRange.cs</a> の <a class="el" href="IpaddrRange_8cs_source.html#l00153">153</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="IpaddrRange_8cs_source.html#l00163">MACS.IpaddrRange.Equals()</a>, と <a class="el" href="IpaddrRange_8cs_source.html#l00177">MACS.IpaddrRange.operator==()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a371129707242c91cc2d42e5356bd2af1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool MACS.IpaddrRange.Equals </td>
+          <td>(</td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>インスタンスがsrcで示されるアドレス範囲と同じかどうかを返す 一般オブジェクトとの比較バージョン。 </p>
+
+<p> <a class="el" href="IpaddrRange_8cs_source.html">IpaddrRange.cs</a> の <a class="el" href="IpaddrRange_8cs_source.html#l00163">163</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="abbe86a5530b14f1cbeda43a710dbad49"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override int MACS.IpaddrRange.GetHashCode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>インスタンスのハッシュコードを返す。 </p>
+
+<p> <a class="el" href="IpaddrRange_8cs_source.html">IpaddrRange.cs</a> の <a class="el" href="IpaddrRange_8cs_source.html#l00173">173</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="acbc54ef8543f9111b338a971efd09e57"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool MACS.IpaddrRange.operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1IpaddrRange.html">IpaddrRange</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1IpaddrRange.html">IpaddrRange</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="IpaddrRange_8cs_source.html">IpaddrRange.cs</a> の <a class="el" href="IpaddrRange_8cs_source.html#l00177">177</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8290fb94af70eee7bccb58cfeeeeb029"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool MACS.IpaddrRange.operator!= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1IpaddrRange.html">IpaddrRange</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1IpaddrRange.html">IpaddrRange</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="IpaddrRange_8cs_source.html">IpaddrRange.cs</a> の <a class="el" href="IpaddrRange_8cs_source.html#l00185">185</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="adeaee31be8660dbb756cc4033f923cba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override string MACS.IpaddrRange.ToString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>文字列表現を返す </p>
+<p>開始アドレスと終了アドレスが同一の場合は単一IPアドレスの形式、 さもなければ '-'で開始アドレスを終了アドレスをつなげた形式。 無効なIPアドレスの場合は空文字列を返します。 </p>
+
+<p> <a class="el" href="IpaddrRange_8cs_source.html">IpaddrRange.cs</a> の <a class="el" href="IpaddrRange_8cs_source.html#l00199">199</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">変数</h2>
+<a class="anchor" id="aff689a824ab72de81a0c8eb00579be87"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="classMACS_1_1Ipaddr.html">Ipaddr</a> MACS.IpaddrRange.StartAddr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>開始アドレス </p>
+
+<p> <a class="el" href="IpaddrRange_8cs_source.html">IpaddrRange.cs</a> の <a class="el" href="IpaddrRange_8cs_source.html#l00021">21</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="IpaddrRange_8cs_source.html#l00153">MACS.IpaddrRange.Equals()</a>, <a class="el" href="IpaddrRange_8cs_source.html#l00173">MACS.IpaddrRange.GetHashCode()</a>, <a class="el" href="IpaddrRange_8cs_source.html#l00130">MACS.IpaddrRange.GetList()</a>, <a class="el" href="IpaddrRange_8cs_source.html#l00052">MACS.IpaddrRange.IpaddrRange()</a>, <a class="el" href="IpaddrRange_8cs_source.html#l00097">MACS.IpaddrRange.Set()</a>, と <a class="el" href="IpaddrRange_8cs_source.html#l00199">MACS.IpaddrRange.ToString()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5bed2e2f064f55fca893a3507c7d655c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="classMACS_1_1Ipaddr.html">Ipaddr</a> MACS.IpaddrRange.EndAddr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>終了アドレス </p>
+
+<p> <a class="el" href="IpaddrRange_8cs_source.html">IpaddrRange.cs</a> の <a class="el" href="IpaddrRange_8cs_source.html#l00026">26</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="IpaddrRange_8cs_source.html#l00153">MACS.IpaddrRange.Equals()</a>, <a class="el" href="IpaddrRange_8cs_source.html#l00173">MACS.IpaddrRange.GetHashCode()</a>, <a class="el" href="IpaddrRange_8cs_source.html#l00130">MACS.IpaddrRange.GetList()</a>, <a class="el" href="IpaddrRange_8cs_source.html#l00052">MACS.IpaddrRange.IpaddrRange()</a>, <a class="el" href="IpaddrRange_8cs_source.html#l00097">MACS.IpaddrRange.Set()</a>, と <a class="el" href="IpaddrRange_8cs_source.html#l00199">MACS.IpaddrRange.ToString()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">プロパティ</h2>
+<a class="anchor" id="accfd04983c2d8503f7832372c9298914"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.IpaddrRange.IsValid</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>有効なアドレス範囲かどうか </p>
+
+<p> <a class="el" href="IpaddrRange_8cs_source.html">IpaddrRange.cs</a> の <a class="el" href="IpaddrRange_8cs_source.html#l00144">144</a> 行で定義されています。</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="IpaddrRange_8cs_source.html">IpaddrRange.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceMACS.html">MACS</a></li><li class="navelem"><a class="el" href="classMACS_1_1IpaddrRange.html">IpaddrRange</a></li>
+    <li class="footer">MACS.Coreに対してWed Jun 27 2018 17:45:44に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>

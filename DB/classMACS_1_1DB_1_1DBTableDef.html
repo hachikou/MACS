@@ -1,0 +1,1004 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MACS.DB: クラス MACS.DB.DBTableDef</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MACS.DB
+   </div>
+   <div id="projectbrief">SQL Database Access Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>パッケージ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classMACS_1_1DB_1_1DBTableDef.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>ネームスペース</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>ファイル</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>変数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>列挙型</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>プロパティ</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>ページ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-static-methods">Static Public メソッド</a> &#124;
+<a href="#pub-static-attribs">Static Public 変数</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="classMACS_1_1DB_1_1DBTableDef-members.html">すべてのメンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス MACS.DB.DBTableDef</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>データベーステーブル定義  
+ <a href="classMACS_1_1DB_1_1DBTableDef.html#details">[詳細]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr class="memitem:af2d64c530e574d59077d30096f781c39"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#af2d64c530e574d59077d30096f781c39">DBTableDef</a> ()</td></tr>
+<tr class="memdesc:af2d64c530e574d59077d30096f781c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">空のコンストラクタ  <a href="#af2d64c530e574d59077d30096f781c39"></a><br/></td></tr>
+<tr class="separator:af2d64c530e574d59077d30096f781c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86f728941b20a5fb1e312b00cbcb3b68"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#a86f728941b20a5fb1e312b00cbcb3b68">DBTableDef</a> (string name_)</td></tr>
+<tr class="memdesc:a86f728941b20a5fb1e312b00cbcb3b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">テーブル名を指定したコンストラクタ  <a href="#a86f728941b20a5fb1e312b00cbcb3b68"></a><br/></td></tr>
+<tr class="separator:a86f728941b20a5fb1e312b00cbcb3b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d7a035d4ab6f0080a24866ee01c23a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#a8d7a035d4ab6f0080a24866ee01c23a2">HasColumn</a> (string colname)</td></tr>
+<tr class="memdesc:a8d7a035d4ab6f0080a24866ee01c23a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した名前のカラムを持つかどうか  <a href="#a8d7a035d4ab6f0080a24866ee01c23a2"></a><br/></td></tr>
+<tr class="separator:a8d7a035d4ab6f0080a24866ee01c23a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf17adf68075a58b55da753b63b441f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1DB_1_1DBColumnDef.html">DBColumnDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#aaf17adf68075a58b55da753b63b441f4">GetColumnDef</a> (string colname)</td></tr>
+<tr class="memdesc:aaf17adf68075a58b55da753b63b441f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した名前のカラムの定義を獲得する  <a href="#aaf17adf68075a58b55da753b63b441f4"></a><br/></td></tr>
+<tr class="separator:aaf17adf68075a58b55da753b63b441f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bffe971fcd2ee78e4467345d0b8e961"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#a7bffe971fcd2ee78e4467345d0b8e961">Load</a> (string xmlfile_)</td></tr>
+<tr class="memdesc:a7bffe971fcd2ee78e4467345d0b8e961"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ファイルからテーブル定義を読み取る  <a href="#a7bffe971fcd2ee78e4467345d0b8e961"></a><br/></td></tr>
+<tr class="separator:a7bffe971fcd2ee78e4467345d0b8e961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ba910157af8757597ba1d99a2b587d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#a8ba910157af8757597ba1d99a2b587d3">SaveAs</a> (string filepath)</td></tr>
+<tr class="memdesc:a8ba910157af8757597ba1d99a2b587d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ファイルに定義を書き出す  <a href="#a8ba910157af8757597ba1d99a2b587d3"></a><br/></td></tr>
+<tr class="separator:a8ba910157af8757597ba1d99a2b587d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c5537d33df3fbc0cc274c43157d0921"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#a5c5537d33df3fbc0cc274c43157d0921">AddColumn</a> (<a class="el" href="classMACS_1_1DB_1_1DBColumnDef.html">DBColumnDef</a> col)</td></tr>
+<tr class="memdesc:a5c5537d33df3fbc0cc274c43157d0921"><td class="mdescLeft">&#160;</td><td class="mdescRight">カラム追加  <a href="#a5c5537d33df3fbc0cc274c43157d0921"></a><br/></td></tr>
+<tr class="separator:a5c5537d33df3fbc0cc274c43157d0921"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8581bb12d6e97db0cb03440056454319"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#a8581bb12d6e97db0cb03440056454319">AddIndex</a> (<a class="el" href="classMACS_1_1DB_1_1DBIndexDef.html">DBIndexDef</a> ind)</td></tr>
+<tr class="memdesc:a8581bb12d6e97db0cb03440056454319"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックス追加  <a href="#a8581bb12d6e97db0cb03440056454319"></a><br/></td></tr>
+<tr class="separator:a8581bb12d6e97db0cb03440056454319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66831075bd4efcbb64f597fae1a390df"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#a66831075bd4efcbb64f597fae1a390df">GenerateCreator</a> (<a class="el" href="classMACS_1_1DB_1_1DBCon.html#ad7b8c61d79c82716809c2ec3ecd2c822">DBCon.Type</a> dbtype=DBCon.Type.Invalid)</td></tr>
+<tr class="memdesc:a66831075bd4efcbb64f597fae1a390df"><td class="mdescLeft">&#160;</td><td class="mdescRight">テーブルを生成するSQL文を作る  <a href="#a66831075bd4efcbb64f597fae1a390df"></a><br/></td></tr>
+<tr class="separator:a66831075bd4efcbb64f597fae1a390df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8302e3b3f36edceb69cb81368536880b"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#a8302e3b3f36edceb69cb81368536880b">GenerateDropper</a> (<a class="el" href="classMACS_1_1DB_1_1DBCon.html#ad7b8c61d79c82716809c2ec3ecd2c822">DBCon.Type</a> dbtype=DBCon.Type.Invalid)</td></tr>
+<tr class="memdesc:a8302e3b3f36edceb69cb81368536880b"><td class="mdescLeft">&#160;</td><td class="mdescRight">テーブルを削除するSQL文を作る  <a href="#a8302e3b3f36edceb69cb81368536880b"></a><br/></td></tr>
+<tr class="separator:a8302e3b3f36edceb69cb81368536880b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public メソッド</h2></td></tr>
+<tr class="memitem:aeb03fe5e325b83477a334e0507502b69"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#aeb03fe5e325b83477a334e0507502b69">LoadAll</a> (string dir)</td></tr>
+<tr class="memdesc:aeb03fe5e325b83477a334e0507502b69"><td class="mdescLeft">&#160;</td><td class="mdescRight">テーブル定義XMLファイルを指定ディレクトリから読み込む  <a href="#aeb03fe5e325b83477a334e0507502b69"></a><br/></td></tr>
+<tr class="separator:aeb03fe5e325b83477a334e0507502b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a61c7ba4a3ce53064493c6d5c32080a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#a0a61c7ba4a3ce53064493c6d5c32080a">Load</a> (string dir, string filepattern)</td></tr>
+<tr class="memdesc:a0a61c7ba4a3ce53064493c6d5c32080a"><td class="mdescLeft">&#160;</td><td class="mdescRight">テーブル定義XMLファイルを指定ディレクトリから読み込む  <a href="#a0a61c7ba4a3ce53064493c6d5c32080a"></a><br/></td></tr>
+<tr class="separator:a0a61c7ba4a3ce53064493c6d5c32080a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a5d851942fa8e55d33e73c077fc6941"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classMACS_1_1DB_1_1DBTableDef.html">DBTableDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#a0a5d851942fa8e55d33e73c077fc6941">Get</a> (string name)</td></tr>
+<tr class="memdesc:a0a5d851942fa8e55d33e73c077fc6941"><td class="mdescLeft">&#160;</td><td class="mdescRight">テーブル名またはIDを指定してテーブル定義を獲得する  <a href="#a0a5d851942fa8e55d33e73c077fc6941"></a><br/></td></tr>
+<tr class="separator:a0a5d851942fa8e55d33e73c077fc6941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5ea0e0d7ba57046bd4ae7e97d4fcc7e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classMACS_1_1DB_1_1DBTableDef.html">DBTableDef</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#af5ea0e0d7ba57046bd4ae7e97d4fcc7e">GetTableDefs</a> (string dirname)</td></tr>
+<tr class="memdesc:af5ea0e0d7ba57046bd4ae7e97d4fcc7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ディレクトリ内から全テーブル定義を読み取る。  <a href="#af5ea0e0d7ba57046bd4ae7e97d4fcc7e"></a><br/></td></tr>
+<tr class="separator:af5ea0e0d7ba57046bd4ae7e97d4fcc7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbac892a63222a1033bcbbb7214ecb8c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classMACS_1_1DB_1_1DBTableDef.html">DBTableDef</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#abbac892a63222a1033bcbbb7214ecb8c">GetTableDefs</a> (string dirname, string filepattern)</td></tr>
+<tr class="memdesc:abbac892a63222a1033bcbbb7214ecb8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ディレクトリ内から全テーブル定義を読み取る。  <a href="#abbac892a63222a1033bcbbb7214ecb8c"></a><br/></td></tr>
+<tr class="separator:abbac892a63222a1033bcbbb7214ecb8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af22b4051000a17ae663954d9890dfdb2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#af22b4051000a17ae663954d9890dfdb2">GeneratePdf</a> (List&lt; <a class="el" href="classMACS_1_1DB_1_1DBTableDef.html">DBTableDef</a> &gt; list, string filepath)</td></tr>
+<tr class="memdesc:af22b4051000a17ae663954d9890dfdb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">テーブル定義をPDF化する。  <a href="#af22b4051000a17ae663954d9890dfdb2"></a><br/></td></tr>
+<tr class="separator:af22b4051000a17ae663954d9890dfdb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public 変数</h2></td></tr>
+<tr class="memitem:a4708a785501a7c0353e9a28931fdea67"><td class="memItemLeft" align="right" valign="top">static readonly string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#a4708a785501a7c0353e9a28931fdea67">OwnerList</a></td></tr>
+<tr class="memdesc:a4708a785501a7c0353e9a28931fdea67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oracleデータベース上のスキーマ（オーナ）一覧  <a href="#a4708a785501a7c0353e9a28931fdea67"></a><br/></td></tr>
+<tr class="separator:a4708a785501a7c0353e9a28931fdea67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad52817b1f977ac63a47640c4b3305d9"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#aad52817b1f977ac63a47640c4b3305d9">FontFile</a></td></tr>
+<tr class="separator:aad52817b1f977ac63a47640c4b3305d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:a44cb1ea72eae13245a9e5dab478e3484"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="classMACS_1_1DB_1_1DBTableDef.html">DBTableDef</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#a44cb1ea72eae13245a9e5dab478e3484">TableList</a><code> [get]</code></td></tr>
+<tr class="memdesc:a44cb1ea72eae13245a9e5dab478e3484"><td class="mdescLeft">&#160;</td><td class="mdescRight">テーブル定義一覧  <a href="#a44cb1ea72eae13245a9e5dab478e3484"></a><br/></td></tr>
+<tr class="separator:a44cb1ea72eae13245a9e5dab478e3484"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef2e08ea279b490b86afd0f3d980f32b"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#aef2e08ea279b490b86afd0f3d980f32b">Id</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:aef2e08ea279b490b86afd0f3d980f32b"><td class="mdescLeft">&#160;</td><td class="mdescRight">テーブルID名  <a href="#aef2e08ea279b490b86afd0f3d980f32b"></a><br/></td></tr>
+<tr class="separator:aef2e08ea279b490b86afd0f3d980f32b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9d2b0a2eb688184b9c9659066f9e07e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#af9d2b0a2eb688184b9c9659066f9e07e">Name</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:af9d2b0a2eb688184b9c9659066f9e07e"><td class="mdescLeft">&#160;</td><td class="mdescRight">テーブル名  <a href="#af9d2b0a2eb688184b9c9659066f9e07e"></a><br/></td></tr>
+<tr class="separator:af9d2b0a2eb688184b9c9659066f9e07e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a967092d98a14280c542f387e8e5260fd"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#a967092d98a14280c542f387e8e5260fd">Expr</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a967092d98a14280c542f387e8e5260fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">テーブル内容  <a href="#a967092d98a14280c542f387e8e5260fd"></a><br/></td></tr>
+<tr class="separator:a967092d98a14280c542f387e8e5260fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb8ae3741a965ecf6d7fc2802307952a"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#adb8ae3741a965ecf6d7fc2802307952a">Note</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:adb8ae3741a965ecf6d7fc2802307952a"><td class="mdescLeft">&#160;</td><td class="mdescRight">説明文  <a href="#adb8ae3741a965ecf6d7fc2802307952a"></a><br/></td></tr>
+<tr class="separator:adb8ae3741a965ecf6d7fc2802307952a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a708c6d655c4f2438e9d74d16e11c0b91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1DB_1_1DBColumnDef.html">DBColumnDef</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#a708c6d655c4f2438e9d74d16e11c0b91">Columns</a><code> [get]</code></td></tr>
+<tr class="memdesc:a708c6d655c4f2438e9d74d16e11c0b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">カラム定義  <a href="#a708c6d655c4f2438e9d74d16e11c0b91"></a><br/></td></tr>
+<tr class="separator:a708c6d655c4f2438e9d74d16e11c0b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5b439af99ff5316548addd54ecdd51d"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#af5b439af99ff5316548addd54ecdd51d">ColumnNames</a><code> [get]</code></td></tr>
+<tr class="memdesc:af5b439af99ff5316548addd54ecdd51d"><td class="mdescLeft">&#160;</td><td class="mdescRight">カラム名一覧  <a href="#af5b439af99ff5316548addd54ecdd51d"></a><br/></td></tr>
+<tr class="separator:af5b439af99ff5316548addd54ecdd51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66867a7e92f22aaa8fe3760b406d873d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMACS_1_1DB_1_1DBIndexDef.html">DBIndexDef</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#a66867a7e92f22aaa8fe3760b406d873d">Indexes</a><code> [get]</code></td></tr>
+<tr class="memdesc:a66867a7e92f22aaa8fe3760b406d873d"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックス定義  <a href="#a66867a7e92f22aaa8fe3760b406d873d"></a><br/></td></tr>
+<tr class="separator:a66867a7e92f22aaa8fe3760b406d873d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5a6f9cddeec8e7f62bfb9e85321cfd5"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#ab5a6f9cddeec8e7f62bfb9e85321cfd5">XmlFileName</a><code> [get]</code></td></tr>
+<tr class="memdesc:ab5a6f9cddeec8e7f62bfb9e85321cfd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">定義XMLファイル名  <a href="#ab5a6f9cddeec8e7f62bfb9e85321cfd5"></a><br/></td></tr>
+<tr class="separator:ab5a6f9cddeec8e7f62bfb9e85321cfd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a014d22e22cc13cf6951295bcf51dc7a1"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#a014d22e22cc13cf6951295bcf51dc7a1">Owner</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a014d22e22cc13cf6951295bcf51dc7a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oracleデータベース上のスキーマ（オーナ）  <a href="#a014d22e22cc13cf6951295bcf51dc7a1"></a><br/></td></tr>
+<tr class="separator:a014d22e22cc13cf6951295bcf51dc7a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fe81d05e0cc9258df6ce884dfc3a907"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html#a0fe81d05e0cc9258df6ce884dfc3a907">HasPrimaryKey</a><code> [get]</code></td></tr>
+<tr class="memdesc:a0fe81d05e0cc9258df6ce884dfc3a907"><td class="mdescLeft">&#160;</td><td class="mdescRight">主キーを持つかどうか  <a href="#a0fe81d05e0cc9258df6ce884dfc3a907"></a><br/></td></tr>
+<tr class="separator:a0fe81d05e0cc9258df6ce884dfc3a907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">説明</h2>
+<div class="textblock"><p>データベーステーブル定義 </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00019">19</a> 行で定義されています。</p>
+</div><h2 class="groupheader">コンストラクタとデストラクタ</h2>
+<a class="anchor" id="af2d64c530e574d59077d30096f781c39"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.DB.DBTableDef.DBTableDef </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>空のコンストラクタ </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00199">199</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a86f728941b20a5fb1e312b00cbcb3b68"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MACS.DB.DBTableDef.DBTableDef </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>テーブル名を指定したコンストラクタ </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00204">204</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド</h2>
+<a class="anchor" id="aeb03fe5e325b83477a334e0507502b69"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.DB.DBTableDef.LoadAll </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>テーブル定義XMLファイルを指定ディレクトリから読み込む </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dir</td><td>XMLファイル群が格納されているディレクトリ名</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>読み込んだテーブル数</dd></dl>
+<p>指定ディレクトリ内の"table*.xml"というパターンの名前のファイルを 全て読み込む。 同じIDの定義が重複している場合には以前の定義は上書きされる。 つまり、同じディレクトリを指定すると定義のリロードになる。 </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00034">34</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a0a61c7ba4a3ce53064493c6d5c32080a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MACS.DB.DBTableDef.Load </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filepattern</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>テーブル定義XMLファイルを指定ディレクトリから読み込む </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dir</td><td>XMLファイル群が格納されているディレクトリ名</td></tr>
+    <tr><td class="paramname">filepattern</td><td>取り込むファイル名のパターン</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>読み込んだテーブル数</dd></dl>
+<p>同じIDの定義が重複している場合には以前の定義は上書きされる。 </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00049">49</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="DBTableDef_8cs_source.html#l00670">MACS.DB.DBTableDef.GetTableDefs()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0a5d851942fa8e55d33e73c077fc6941"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classMACS_1_1DB_1_1DBTableDef.html">DBTableDef</a> MACS.DB.DBTableDef.Get </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>テーブル名またはIDを指定してテーブル定義を獲得する </p>
+<p>指定した名前またはIDのテーブル定義が存在しない場合はnullを返す。 </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00088">88</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d7a035d4ab6f0080a24866ee01c23a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.DB.DBTableDef.HasColumn </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>colname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定した名前のカラムを持つかどうか </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00212">212</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aaf17adf68075a58b55da753b63b441f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1DB_1_1DBColumnDef.html">DBColumnDef</a> MACS.DB.DBTableDef.GetColumnDef </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>colname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定した名前のカラムの定義を獲得する </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00223">223</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a7bffe971fcd2ee78e4467345d0b8e961"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.DB.DBTableDef.Load </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>xmlfile_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定ファイルからテーブル定義を読み取る </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00248">248</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8ba910157af8757597ba1d99a2b587d3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.DB.DBTableDef.SaveAs </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filepath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定ファイルに定義を書き出す </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00277">277</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="A5erToDBTableDef_8cs_source.html#l00030">MACS.DB.A5erToDBTableDef.Convert()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5c5537d33df3fbc0cc274c43157d0921"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.DB.DBTableDef.AddColumn </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1DB_1_1DBColumnDef.html">DBColumnDef</a>&#160;</td>
+          <td class="paramname"><em>col</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>カラム追加 </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00327">327</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="A5erToDBTableDef_8cs_source.html#l00030">MACS.DB.A5erToDBTableDef.Convert()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8581bb12d6e97db0cb03440056454319"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MACS.DB.DBTableDef.AddIndex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1DB_1_1DBIndexDef.html">DBIndexDef</a>&#160;</td>
+          <td class="paramname"><em>ind</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>インデックス追加 </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00343">343</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="A5erToDBTableDef_8cs_source.html#l00030">MACS.DB.A5erToDBTableDef.Convert()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a66831075bd4efcbb64f597fae1a390df"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.DB.DBTableDef.GenerateCreator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#ad7b8c61d79c82716809c2ec3ecd2c822">DBCon.Type</a>&#160;</td>
+          <td class="paramname"><em>dbtype</em> = <code>DBCon.Type.Invalid</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>テーブルを生成するSQL文を作る </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00362">362</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a8302e3b3f36edceb69cb81368536880b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.DB.DBTableDef.GenerateDropper </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMACS_1_1DB_1_1DBCon.html#ad7b8c61d79c82716809c2ec3ecd2c822">DBCon.Type</a>&#160;</td>
+          <td class="paramname"><em>dbtype</em> = <code>DBCon.Type.Invalid</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>テーブルを削除するSQL文を作る </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00601">601</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af5ea0e0d7ba57046bd4ae7e97d4fcc7e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classMACS_1_1DB_1_1DBTableDef.html">DBTableDef</a> [] MACS.DB.DBTableDef.GetTableDefs </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>dirname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定ディレクトリ内から全テーブル定義を読み取る。 </p>
+<p>指定ディレクトリ内の"table*.xml"というパターンの名前のファイルを 全て読み込む。 </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00661">661</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="abbac892a63222a1033bcbbb7214ecb8c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classMACS_1_1DB_1_1DBTableDef.html">DBTableDef</a> [] MACS.DB.DBTableDef.GetTableDefs </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>dirname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filepattern</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定ディレクトリ内から全テーブル定義を読み取る。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dirname</td><td>ディレクトリ名</td></tr>
+    <tr><td class="paramname">filepattern</td><td>ファイル名パターン</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00670">670</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af22b4051000a17ae663954d9890dfdb2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MACS.DB.DBTableDef.GeneratePdf </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classMACS_1_1DB_1_1DBTableDef.html">DBTableDef</a> &gt;&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filepath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>テーブル定義をPDF化する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>テーブル定義リスト</td></tr>
+    <tr><td class="paramname">filepath</td><td>PDFファイルパス</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p> <a class="el" href="DBTableDef__Pdf_8cs_source.html">DBTableDef_Pdf.cs</a> の <a class="el" href="DBTableDef__Pdf_8cs_source.html#l00030">30</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">変数</h2>
+<a class="anchor" id="a4708a785501a7c0353e9a28931fdea67"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly string [] MACS.DB.DBTableDef.OwnerList</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Oracleデータベース上のスキーマ（オーナ）一覧 </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00194">194</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aad52817b1f977ac63a47640c4b3305d9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.DB.DBTableDef.FontFile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p> <a class="el" href="DBTableDef__Pdf_8cs_source.html">DBTableDef_Pdf.cs</a> の <a class="el" href="DBTableDef__Pdf_8cs_source.html#l00023">23</a> 行で定義されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">プロパティ</h2>
+<a class="anchor" id="a44cb1ea72eae13245a9e5dab478e3484"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classMACS_1_1DB_1_1DBTableDef.html">DBTableDef</a>&gt; MACS.DB.DBTableDef.TableList</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>テーブル定義一覧 </p>
+<p>LoadAllまたはLoadで読み込まれたテーブル定義の一覧。 </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00076">76</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="aef2e08ea279b490b86afd0f3d980f32b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.DB.DBTableDef.Id</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>テーブルID名 </p>
+<p>定義ファイル名のディレクトリ名と拡張子を除いたもの </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00111">111</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="A5erToDBTableDef_8cs_source.html#l00030">MACS.DB.A5erToDBTableDef.Convert()</a>, <a class="el" href="DBTableDef_8cs_source.html#l00088">MACS.DB.DBTableDef.Get()</a>, と <a class="el" href="DBTableDef_8cs_source.html#l00049">MACS.DB.DBTableDef.Load()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af9d2b0a2eb688184b9c9659066f9e07e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.DB.DBTableDef.Name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>テーブル名 </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00125">125</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="A5erToDBTableDef_8cs_source.html#l00030">MACS.DB.A5erToDBTableDef.Convert()</a>, <a class="el" href="DBTable_8cs_source.html#l00080">MACS.DB.DBTable.DBTable()</a>, <a class="el" href="DBTableDef_8cs_source.html#l00088">MACS.DB.DBTableDef.Get()</a>, <a class="el" href="DBTable_8cs_source.html#l01565">MACS.DB.DBTable.InnerJoin()</a>, と <a class="el" href="DBTable_8cs_source.html#l01434">MACS.DB.DBTable.Join()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a967092d98a14280c542f387e8e5260fd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.DB.DBTableDef.Expr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>テーブル内容 </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00133">133</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="A5erToDBTableDef_8cs_source.html#l00030">MACS.DB.A5erToDBTableDef.Convert()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adb8ae3741a965ecf6d7fc2802307952a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.DB.DBTableDef.Note</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>説明文 </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00141">141</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="A5erToDBTableDef_8cs_source.html#l00030">MACS.DB.A5erToDBTableDef.Convert()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a708c6d655c4f2438e9d74d16e11c0b91"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1DB_1_1DBColumnDef.html">DBColumnDef</a> [] MACS.DB.DBTableDef.Columns</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>カラム定義 </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00149">149</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="A5erToDBTableDef_8cs_source.html#l00030">MACS.DB.A5erToDBTableDef.Convert()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af5b439af99ff5316548addd54ecdd51d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] MACS.DB.DBTableDef.ColumnNames</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>カラム名一覧 </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00156">156</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a66867a7e92f22aaa8fe3760b406d873d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMACS_1_1DB_1_1DBIndexDef.html">DBIndexDef</a> [] MACS.DB.DBTableDef.Indexes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>インデックス定義 </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00168">168</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab5a6f9cddeec8e7f62bfb9e85321cfd5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.DB.DBTableDef.XmlFileName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>定義XMLファイル名 </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00179">179</a> 行で定義されています。</p>
+
+<p>参照元 <a class="el" href="A5erToDBTableDef_8cs_source.html#l00030">MACS.DB.A5erToDBTableDef.Convert()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a014d22e22cc13cf6951295bcf51dc7a1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MACS.DB.DBTableDef.Owner</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Oracleデータベース上のスキーマ（オーナ） </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00186">186</a> 行で定義されています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a0fe81d05e0cc9258df6ce884dfc3a907"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MACS.DB.DBTableDef.HasPrimaryKey</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>主キーを持つかどうか </p>
+
+<p> <a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a> の <a class="el" href="DBTableDef_8cs_source.html#l00234">234</a> 行で定義されています。</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="DBTableDef_8cs_source.html">DBTableDef.cs</a></li>
+<li><a class="el" href="DBTableDef__Pdf_8cs_source.html">DBTableDef_Pdf.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceMACS.html">MACS</a></li><li class="navelem"><a class="el" href="namespaceMACS_1_1DB.html">DB</a></li><li class="navelem"><a class="el" href="classMACS_1_1DB_1_1DBTableDef.html">DBTableDef</a></li>
+    <li class="footer">MACS.DBに対してWed Jun 27 2018 17:45:48に生成されました。
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
+</body>
+</html>
