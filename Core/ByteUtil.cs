@@ -1,11 +1,8 @@
-﻿/*! @file ByteUtil.cs
- * @brief 各種の値をバイト列からまたはバイト列に変換するユーティリティ。
- * $Id: $
- *
- * Copyright (C) 2008-2012 Microbrains Inc.
- * All Rights Reserved.
- * This code was designed and coded by SHIBUYA K.
- */
+/// ByteUtil: 各種の値をバイト列からまたはバイト列に変換するユーティリティ。.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 using System;
 using System.Text;

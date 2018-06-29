@@ -1,10 +1,8 @@
-﻿/*
-  * SQL検索条件管理クラス
-  * $Id: DBCondition.cs 1890 2014-06-05 04:34:56Z shibuya $
-  *
-  * Copyright (C) 2011-2012 Microbrains Inc. All rights reserved.
-  * This code was designed and coded by SHIBUYA K.
-  */
+/// DBCondition: SQL検索条件管理クラス.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 using System;
 using System.Text;

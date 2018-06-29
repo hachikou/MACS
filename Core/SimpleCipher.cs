@@ -1,10 +1,8 @@
-﻿/*
-  * 文字列の簡易暗号化
-  * $Id: $
-  *
-  * Copyright (C) 2013 Microbrains Inc. All rights reserved.
-  * This code was designed and coded by SHIBUYA K.
-  */
+/// SimpleCipher: 文字列の簡易暗号化.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 using System;
 using System.Text;

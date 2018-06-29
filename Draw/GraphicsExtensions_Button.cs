@@ -1,3 +1,9 @@
+/// GraphicsExtensions_Button: System.Drawing.Graphicsクラスの拡張メソッド: ボタン描画.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
+
 using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;

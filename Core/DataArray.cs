@@ -1,10 +1,8 @@
-﻿/** @file DataArray.cs
-  * @brief 文字列配列取り扱い用クラス
-  * $Id: $
-  *
-  * Copyright (C) 2012 Microbrains Inc. All rights reserved.
-  * This code was designed and coded by SHIBUYA K.
-  */
+/// DataArray: 文字列配列取り扱い用クラス.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 using System;
 using System.Collections.Generic;

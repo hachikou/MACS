@@ -1,3 +1,9 @@
+/// GraphicsExtensions_AttrText: System.Drawing.Graphicsクラスの拡張メソッド : 属性指定テキスト描画.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
+
 using System;
 using System.Windows.Forms;
 using System.Drawing;

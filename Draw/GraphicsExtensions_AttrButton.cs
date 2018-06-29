@@ -1,3 +1,9 @@
+/// GraphicsExtensions_AttrButton: System.Drawing.Graphicsクラスの拡張メソッド: テキスト属性指定ボタン描画.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
+
 using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;

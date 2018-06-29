@@ -1,11 +1,8 @@
-﻿/*! @file UnixTime.cs
- * @brief UNIX時刻データ操作用クラス。
- * $Id: $
- *
- * Copyright (C) 2008-2012 Microbrains Inc.
- * All Rights Reserved.
- * This code was designed and coded by SHIBUYA K.
- */
+/// UnixTime: UNIX時刻データ操作用クラス.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 using System;
 

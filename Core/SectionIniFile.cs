@@ -1,12 +1,8 @@
-﻿/*! @file SectionIniFile.cs
- *	@brief セクション分けされたINIファイルツール
- *
- * @author shibuya@ncad.co.jp
- * @date 2010/02/19
- * @version $Id: SectionIniFile.cs 68 2011-06-16 05:17:50Z shibuya $
- *
- * Copyright (C) 2011-2015 Nippon C.A.D. Co.,Ltd. All rights reserved.
- */
+/// SectionIniFile: セクション分けされたINIファイルツール.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 using System;
 using System.IO;

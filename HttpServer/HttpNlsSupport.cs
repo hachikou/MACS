@@ -1,11 +1,8 @@
-﻿/*! @file HttpNlsSupport.cs
- * @brief 多言語化サポート用基底クラス。
- * $Id: $
- *
- * Copyright (C) 2008-2012 Microbrains Inc.
- * All Rights Reserved.
- * This code was designed and coded by SHIBUYA K.
- */
+/// HttpNlsSupport: 多言語化サポート用基底クラス.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 using System;
 using System.IO;

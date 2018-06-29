@@ -1,11 +1,8 @@
-﻿/*! @file HtmlTool.cs
- * @brief HTMLコード作成に便利なユーティリティ集。
- * $Id: $
- *
- * Copyright (C) 2008-2012 Microbrains Inc.
- * All Rights Reserved.
- * This code was designed and coded by SHIBUYA K.
- */
+/// HtmlTool: HTMLコード作成に便利なユーティリティ集.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 using System;
 using System.Web;

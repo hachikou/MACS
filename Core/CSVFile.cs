@@ -1,11 +1,8 @@
-﻿/*! @file CSVFile.cs
- * @brief CSV形式のファイルを取り扱うオブジェクト
- * $Id: $
- *
- * Copyright (C) 2012 Microbrains Inc.
- * All Rights Reserved.
- * This code was designed and coded by SHIBUYA K.
- */
+/// CSVFile: CSV形式のファイルを取り扱うオブジェクト.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 using System;
 using System.IO;

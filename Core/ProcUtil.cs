@@ -1,11 +1,8 @@
-﻿/*! @file ProcUtil.cs
- * @brief 外部コマンド実行ユーティリティ
- * $Id: $
- *
- * Copyright (C) 2012 Microbrains Inc.
- * All Rights Reserved.
- * This code was designed and coded by SHIBUYA K.
- */
+/// ProcUtil: 外部コマンド実行ユーティリティ.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 using System;
 using System.IO;

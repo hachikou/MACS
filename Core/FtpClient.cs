@@ -1,11 +1,8 @@
-﻿/*! @file FtpClient.cs
- * @brief FTPクライアントクラス
- * $Id: $
- *
- * Copyright (C) 2012-2015 Microbrains Inc.
- * All Rights Reserved.
- * This code was designed and coded by SHIBUYA K.
- */
+/// FtpClient: FTPクライアントクラス.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 using System;
 using System.IO;

@@ -1,11 +1,8 @@
-﻿/*! @file DBCon.cs
- * @brief DB接続を取り扱うクラス
- * $Id: DBCon.cs 2058 2015-02-04 01:06:13Z miyafuji $
- *
- * Copyright (C) 2012-2015 Microbrains Inc.
- * All Rights Reserved.
- * This code was designed and coded by SHIBUYA K.
- */
+/// DBCon: DB接続を取り扱うクラス.
+///
+/// Copyright (C) 2008-2018 by Microbrains Inc. and Nippon C.A.D. Co.,Ltd.
+/// Released under the MIT license
+/// See ../MITLicense.txt
 
 using System;
 using System.Data;
