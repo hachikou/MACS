@@ -71,3 +71,9 @@ CascadedAttributeTest.exe: CascadedAttributeTest.cs CascadedAttribute.cs StringU
 
 ObjectDictionaryTest.exe: ObjectDictionary.cs StringUtil.cs DataArray.cs FileUtil.cs
 	$(MCS) $(MCSFLAGS) -define:SELFTEST $^ -out:$@
+
+IniFileTest.exe: IniFile.cs StringUtil.cs FileUtil.cs
+	$(MCS) $(MCSFLAGS) -define:SELFTEST IniFile.cs StringUtil.cs FileUtil.cs -out:$@
+
+SectionIniFileTest.exe: SectionIniFile.cs IniFile.cs StringUtil.cs FileUtil.cs
+	$(MCS) $(MCSFLAGS) -define:SECTIONSELFTEST SectionIniFile.cs IniFile.cs StringUtil.cs FileUtil.cs -out:$@
