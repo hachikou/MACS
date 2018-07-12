@@ -165,7 +165,11 @@ public class DBReader: IDisposable {
                     return x;
                 }
             default:
-                return reader.GetValue(i).ToString();
+                var val = reader.GetValue(i);
+                if(val is Byte[])
+                    return System.Text.Encoding.ASCII.GetString((byte[])val);
+                else
+                    return val.ToString();
             }
         }
 #if USE_MYSQL
