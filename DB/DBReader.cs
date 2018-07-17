@@ -165,6 +165,7 @@ public class DBReader: IDisposable {
                     return x;
                 }
             default:
+                // group_concat を使うと、VARCHARじゃない型で、MySQLのバージョンによって System.Byte[] になるバグへの対応
                 var val = reader.GetValue(i);
                 if(val is Byte[])
                     return System.Text.Encoding.ASCII.GetString((byte[])val);
