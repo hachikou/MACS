@@ -111,71 +111,33 @@ public class IniFile {
     ///   </para>
     /// </remarks>
     public bool Write(bool makebak=true, string tmpdir=null) {
-        lock(m_mutex){
-            if(m_filename == null)
-                return false;
-            string tmpfilename;
-            if(String.IsNullOrEmpty(tmpdir)) {
-                tmpfilename = m_filename;
-            } else {
-                tmpfilename = Path.Combine(tmpdir,Path.GetFileName(m_filename));
-            }
-            tmpfilename += "."+rnd.Next(1000000).ToString();
-            try {
-                // まず元ファイルを一時ファイルにコピーする
-                if(File.Exists(m_filename)) {
-                    if(!FileUtil.Copy(m_filename, tmpfilename))
-                        return false;
-                    if(makebak)
-                        FileUtil.Copy(m_filename, m_filename+".bak");
-                }
-                using(StreamWriter sw = FileUtil.Writer(m_filename, m_enc)){
-                    if(sw == null)
-                        return false;
-                    if(m_data == null)
-                        m_data = new Dictionary<string,string>(); // ダミーで空データを書き出す
-                    if(File.Exists(tmpfilename)) {
-                        using(StreamReader sr = FileUtil.Reader(tmpfilename, m_enc)){
-                            if(sr == null)
-                                return false;
-                            while(!sr.EndOfStream) {
-                                string line = sr.ReadLine().Trim();
-                                if(line.StartsWith("#") || line.StartsWith(";") || line.StartsWith("[")) {
-                                    sw.WriteLine(line);
-                                    continue;
-                                }
-                                string[] keyval = line.Split("=".ToCharArray(), 2);
-                                if(keyval.Length != 2) {
-                                    sw.WriteLine(line);
-                                    continue;
-                                }
-                                string key = keyval[0].Trim();
-                                if(m_data.ContainsKey(key)) {
-                                    sw.WriteLine(key + "=" + m_data[key]);
-                                    m_data.Remove(key);
-                                } else {
-                                    sw.WriteLine(line);
-                                }
-                            }
-                            sr.Close();
-                        }
-                    } else {
-                        if(m_sectionname != null)
-                            sw.WriteLine("[" + m_sectionname + "]");
-                    }
-                    foreach(string key in m_data.Keys) {
-                        sw.WriteLine(key + "=" + m_data[key]);
-                    }
-                    sw.Close();
-                }
-            } finally {
-                if(File.Exists(tmpfilename))
-                    File.Delete(tmpfilename);
-            }
-            return _reload();
+        lock(m_mutex) {
+            return _write(m_filename, makebak, tmpdir);
         }
     }
 
+    /// <summary>
+    ///   INIファイルをアップグレードする。
+    /// </summary>
+    /// <param name="srcfile">アップグレードのベースとなるファイル。</param>
+    /// <param name="makebak">バックアップファイルを作るかどうか。</param>
+    /// <param name="tmpdir">一時保存ファイルを作るディレクトリ名。nullを指定したり省略した場合はINIファイルと同じディレクトリが使われる。</param>
+    /// <remarks>
+    ///   <para>
+    ///     ベースとなるファイルに書かれている内容のうち、本データベースで値を
+    ///     持っている定義行以外のすべての行は、そのまま保持される。（コメント行
+    ///     や空行は変更されない。）
+    ///     ベースファイルの定義値と本データベースの現在の値が異なる場合には、
+    ///     ベースファイルの定義行がコメントとして残る。
+    ///   </para>
+    /// </remarks>
+    public bool Upgrade(string srcfile, bool makebak=true, string tmpdir=null) {
+        lock(m_mutex) {
+            _reload_ifneeded();
+            return _write(srcfile, makebak, tmpdir);
+        }
+    }
+        
     /// <summary>
     ///   指定したキーに対応する値を返す。デフォルトは""。
     /// </summary>
@@ -188,8 +150,9 @@ public class IniFile {
     public string Get(string key, string def) {
         lock(m_mutex){
             _reload_ifneeded();
-            if((m_data != null) && m_data.ContainsKey(key))
-                return m_data[key];
+            string val;
+            if((m_data != null) && m_data.TryGetValue(key, out val))
+                return val;
             return def;
         }
     }
@@ -391,7 +354,147 @@ public class IniFile {
         return true;
     }
 
+    private bool _write(string srcfile, bool makebak, string tmpdir) {
+        if(m_filename == null)
+            return false;
+        bool upgradeMode = (srcfile != m_filename);
+        string tmpfilename;
+        if(String.IsNullOrEmpty(tmpdir)) {
+            tmpfilename = m_filename;
+        } else {
+            tmpfilename = Path.Combine(tmpdir,Path.GetFileName(m_filename));
+        }
+        tmpfilename += "."+rnd.Next(1000000).ToString();
+        try {
+            // まず元ファイルを一時ファイルにコピーする
+            if(File.Exists(srcfile)) {
+                if(!FileUtil.Copy(srcfile, tmpfilename))
+                    return false;
+            }
+            if(makebak && File.Exists(m_filename))
+                FileUtil.Copy(m_filename, m_filename+".bak");
+            using(StreamWriter sw = FileUtil.Writer(m_filename, m_enc)){
+                if(sw == null)
+                    return false;
+                if(m_data == null)
+                    m_data = new Dictionary<string,string>(); // ダミーで空データを書き出す
+                if(File.Exists(tmpfilename)) {
+                    using(StreamReader sr = FileUtil.Reader(tmpfilename, m_enc)){
+                        if(sr == null)
+                            return false;
+                        while(!sr.EndOfStream) {
+                            string line = sr.ReadLine().Trim();
+                            if(line.StartsWith("#") || line.StartsWith(";") || line.StartsWith("[")) {
+                                sw.WriteLine(line);
+                                continue;
+                            }
+                            string[] keyval = line.Split("=".ToCharArray(), 2);
+                            if(keyval.Length != 2) {
+                                sw.WriteLine(line);
+                                continue;
+                            }
+                            string key = keyval[0].Trim();
+                            string val;
+                            if(m_data.TryGetValue(key, out val)) {
+                                string xval = keyval[1].Trim();
+                                if(val == xval) {
+                                    sw.WriteLine(line);
+                                } else {
+                                    if(upgradeMode)
+                                        sw.WriteLine("#"+line);
+                                    sw.WriteLine(key + "=" + val);
+                                }
+                                m_data.Remove(key);
+                            } else {
+                                sw.WriteLine(line);
+                            }
+                        }
+                        sr.Close();
+                    }
+                } else {
+                    if(m_sectionname != null)
+                        sw.WriteLine("[" + m_sectionname + "]");
+                }
+                foreach(string key in m_data.Keys) {
+                    sw.WriteLine(key + "=" + m_data[key]);
+                }
+                sw.Close();
+            }
+        } finally {
+            if(File.Exists(tmpfilename))
+                File.Delete(tmpfilename);
+        }
+        return _reload();
+    }
+
     private static Random rnd = new Random();
+
+
+#region SELFTEST
+#if SELFTEST
+    public static int Main(string[] args) {
+        string inifilename = "IniFileTest.ini";
+        
+        // サンプルのINIファイルを作る
+        using(StreamWriter sw = FileUtil.Writer(inifilename)) {
+            sw.WriteLine("# Sample INI file");
+            sw.WriteLine("");
+            sw.WriteLine("hogehoge = mogera");
+            sw.WriteLine("hogehoge2 = mogera2");
+            sw.WriteLine("# hogehoge3 = mogera3");
+            sw.WriteLine("hogehoge4 = 314");
+        }
+
+        // IniFileを作って、ちゃんと定義されているか確認
+        IniFile ini = new IniFile(inifilename);
+        if(ini.Get("hogehoge") == "mogera")
+            Console.WriteLine("hogehoge: OK");
+        else
+            Console.WriteLine("hogehoge: NG");
+        if(ini.Get("hogehoge2") == "mogera2")
+            Console.WriteLine("hogehoge2: OK");
+        else
+            Console.WriteLine("hogehoge2: NG");
+        if(ini.Get("hogehoge3") == "")
+            Console.WriteLine("hogehoge3: OK");
+        else
+            Console.WriteLine("hogehoge3: NG");
+        if(ini.Get("hogehoge4",0) == 314)
+            Console.WriteLine("hogehoge4: OK");
+        else
+            Console.WriteLine("hogehoge4: NG");
+
+        // 定義を追加して書き出してみる
+        ini.Set("piyopiyo", "punyo");
+        ini.Set("hogehoge4", 512);
+        ini.Write();
+        using(StreamReader sr = FileUtil.Reader(inifilename)) {
+            while(!sr.EndOfStream) {
+                Console.WriteLine(sr.ReadLine());
+            }
+        }
+
+        // Upgradeの試験
+        using(StreamWriter sw = FileUtil.Writer(inifilename+".dist")) {
+            sw.WriteLine("# Upgraded Sample INI file");
+            sw.WriteLine("");
+            sw.WriteLine("hogehoge = mogerachu");
+            sw.WriteLine("hogehoge2 = mogera2");
+            sw.WriteLine("# added hogehoge3.");
+            sw.WriteLine("hogehoge3 = mogera3");
+            sw.WriteLine("hogehoge4 = 314");
+        }
+        ini.Upgrade(inifilename+".dist");
+        using(StreamReader sr = FileUtil.Reader(inifilename)) {
+            while(!sr.EndOfStream) {
+                Console.WriteLine(sr.ReadLine());
+            }
+        }
+
+        return 0;
+    }
+#endif
+#endregion
 
 }
 
