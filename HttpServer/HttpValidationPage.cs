@@ -741,7 +741,7 @@ public abstract class HttpValidationPage : HttpTemplatePage {
     ///     itemを指定しておくと、エラー時にそのitemのCssClassを"error"にする。
     ///   </para>
     /// </remarks>
-    protected string ValidateRegex(string txt, string fieldname, WebControl item) {
+    protected string ValidateRegex(string txt, string fieldname, WebControl item, bool required=false) {
         if(txt == null)
             txt = "";
         txt = txt.Trim();
@@ -753,6 +753,9 @@ public abstract class HttpValidationPage : HttpTemplatePage {
                 AddValidationMessage(string.Format(_("{0}は正規表現として正しくない文字列です。{1}"), fieldname, ae.Message),item);
                 goto fail;
             }
+        } else if(required) {
+            AddValidationMessage(string.Format(_("{0}は必須です。"), fieldname), item);
+            goto fail;
         }
         if(item != null) {
             item.RemoveCssClass("error");
