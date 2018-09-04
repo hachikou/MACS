@@ -763,7 +763,7 @@ public abstract class HttpValidationPage : HttpTemplatePage {
         if(item != null) {
             item.AddCssClass("error");
         }
-        return "";
+        return txt;
     }
 
     /// <summary>
