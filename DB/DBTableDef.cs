@@ -155,6 +155,8 @@ public partial class DBTableDef {
     /// </summary>
     public string[] ColumnNames {
         get {
+            if(columns == null)
+                return null;
             string[] res = new string[columns.Length];
             for(int i = 0; i < columns.Length; i++)
                 res[i] = columns[i].Name;
@@ -210,6 +212,8 @@ public partial class DBTableDef {
     ///   指定した名前のカラムを持つかどうか
     /// </summary>
     public bool HasColumn(string colname) {
+        if(columns == null)
+            return false;
         foreach(DBColumnDef col in columns) {
             if(colname.Equals(col.Name, StringComparison.OrdinalIgnoreCase))
                 return true;
@@ -221,6 +225,8 @@ public partial class DBTableDef {
     ///   指定した名前のカラムの定義を獲得する
     /// </summary>
     public DBColumnDef GetColumnDef(string colname) {
+        if(columns == null)
+            return null;
         foreach(DBColumnDef col in columns) {
             if(colname.Equals(col.Name, StringComparison.OrdinalIgnoreCase))
                 return col;
@@ -233,6 +239,8 @@ public partial class DBTableDef {
     /// </summary>
     public bool HasPrimaryKey {
         get {
+            if(columns == null)
+                return false;
             foreach(DBColumnDef col in columns) {
                 if(col.PrimaryKey)
                     return true;
