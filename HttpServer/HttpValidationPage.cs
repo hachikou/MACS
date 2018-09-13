@@ -771,6 +771,48 @@ public abstract class HttpValidationPage : HttpTemplatePage {
     }
 
     /// <summary>
+    ///   nameがエンコード名として有効であるかどうかを確認する。
+    /// </summary>
+    /// <param name="name">確認する文字列</param>
+    /// <param name="fieldname">入力欄の名称</param>
+    /// <param name="item">フォーム要素に対応するWebControl</param>
+    /// <param name="required">入力が必須かどうか</param>
+    /// <remarks>
+    ///   <para>
+    ///     条件を満たさない時は m_validation_messageにエラーメッセージをセットする。
+    ///
+    ///     itemを指定しておくと、エラー時にそのitemのCssClassを"error"にする。
+    ///   </para>
+    /// </remarks>
+    protected string ValidateEncodeName(string name, string fieldname, WebControl item, bool required=false) {
+        if(name == null)
+            name = "";
+        name = name.Trim();
+        if(name.Length > 0){
+            try {
+                Encoding e = Encoding.GetEncoding(name);
+                e.GetType();
+            } catch(ArgumentException ae) {
+                AddValidationMessage(string.Format(_("{0}はエンコード名として正しくない文字列です。{1}"), fieldname, ae.Message),item);
+                goto fail;
+            }
+        } else if(required) {
+            AddValidationMessage(string.Format(_("{0}は必須です。"), fieldname), item);
+            goto fail;
+        }
+        if(item != null) {
+            item.RemoveCssClass("error");
+        }
+        return name;
+
+    fail:
+        if(item != null) {
+            item.AddCssClass("error");
+        }
+        return name;
+    }
+
+    /// <summary>
     ///   WebControlフィールド全部にInLineErrorフラグを立てる
     /// </summary>
     /// <remarks>
