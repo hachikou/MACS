@@ -734,6 +734,7 @@ public abstract class HttpValidationPage : HttpTemplatePage {
     /// <param name="txt">確認する文字列</param>
     /// <param name="fieldname">入力欄の名称</param>
     /// <param name="item">フォーム要素に対応するWebControl</param>
+    /// <param name="required">入力が必須かどうか</param>
     /// <remarks>
     ///   <para>
     ///     条件を満たさない時は m_validation_messageにエラーメッセージをセットする。
