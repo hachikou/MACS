@@ -123,7 +123,7 @@ public class MPText : System.Windows.Forms.Control {
         }
 
         Brush  bgBrush = null;
-        if(BackColor != null) {
+        if((BackColor != null) && (BackColor.A > 0)) {
             //始点を-1,-1にしないとスキマが出来てしまうため、幅、高さを+1した
             Rectangle target = new Rectangle(-1, -1,this.Width + 1,this.Height + 1);
             bgBrush = new SolidBrush(BackColor);
