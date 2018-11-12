@@ -455,7 +455,8 @@ public class DBCon : Loggable, IDisposable {
                         return new DBReader(); // 握りつぶすときはダミーリーダー
                     else
                         throw;
-                } catch(Exception) {
+                } catch(Exception e) {
+                    logErr(String.Format("{0}: {1}: SQL={2}", e.GetType().Name, e.Message, sql));
                     abort();
                     if(ignoreexception)
                         return new DBReader(); // 握りつぶすときはダミーリーダー
@@ -509,7 +510,8 @@ public class DBCon : Loggable, IDisposable {
                         return "";
                     else
                         throw;
-                } catch(Exception) {
+                } catch(Exception e) {
+                    logErr(String.Format("{0}: {1}: SQL={2}", e.GetType().Name, e.Message, sql));
                     abort();
                     if(ignoreexception)
                         return "";
@@ -563,7 +565,8 @@ public class DBCon : Loggable, IDisposable {
                         return 0;
                     else
                         throw;
-                } catch(Exception) {
+                } catch(Exception e) {
+                    logErr(String.Format("{0}: {1}: SQL={2}", e.GetType().Name, e.Message, sql));
                     abort();
                     if(ignoreexception)
                         return 0;
@@ -654,7 +657,8 @@ public class DBCon : Loggable, IDisposable {
                     return -1; // 握りつぶすときは -1
                 else
                     throw;
-            } catch(Exception) {
+            } catch(Exception e) {
+                logErr(String.Format("{0}: {1}: SQL={2}", e.GetType().Name, e.Message, sql));
                 abort();
                 if(ignoreexception)
                     return -1; // 握りつぶすときは -1
@@ -701,7 +705,7 @@ public class DBCon : Loggable, IDisposable {
     /// </summary>
     public void Commit() {
         if(con == null)
-            return;
+            throw new DBConException("DB connection has been lost while commiting");
         lock(con) {
             if(reader != null) {
                 reader.Close();
@@ -1103,6 +1107,22 @@ public class DBCon : Loggable, IDisposable {
         get { return con; }
     }
 
+}
+
+/// <summary>
+///   DBCon内で発生した異常事象用の例外
+/// </summary>
+/// <remarks>
+///   <para>
+///     DbExceptionクラスがabstractになっているので、本クラスを定義しました。
+///     中身は特にありません。
+///   </para>
+/// </remarks>
+public class DBConException : DbException {
+
+    public DBConException() : base() {}
+    public DBConException(string msg) : base(msg) {}
+    
 }
 
 } // End of namespace
