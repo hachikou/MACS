@@ -2441,7 +2441,7 @@ public class DBTable {
             DBColumnDef coldef = GetColumnDef(mycolumns[i]);
             if(coldef == null)
                 throw new ArgumentException(String.Format("Invalid column name ({0})", mycolumns[i]));
-            sql.Append(ConvertValue(coldef, rec[i]));
+            sql.Append(convertValue(coldef, rec[i]));
         }
         sql.Append(" WHERE ");
         sql.Append(condition.ToString());
@@ -2545,7 +2545,7 @@ public class DBTable {
             DBColumnDef coldef = GetColumnDef(mycolumns[i]);
             if(coldef == null)
                 throw new ArgumentException(String.Format("Invalid column name ({0})", mycolumns[i]));
-            sql.Append(ConvertValue(coldef, rec[i]));
+            sql.Append(convertValue(coldef, rec[i]));
         }
         sql.Append(" WHERE ");
         sql.Append(condition.ToString());
@@ -2960,12 +2960,12 @@ public class DBTable {
             case DBCondition.Code.Equals:
                 condvar.Append(expandColumnName(columnname));
                 condvar.Append("=");
-                condvar.Append(ConvertValue(coldef, columnvalue.ToString()));
+                condvar.Append(convertValue(coldef, columnvalue));
                 break;
             case DBCondition.Code.NotEquals:
                 condvar.Append(expandColumnName(columnname));
                 condvar.Append("<>");
-                condvar.Append(ConvertValue(coldef, columnvalue.ToString()));
+                condvar.Append(convertValue(coldef, columnvalue));
                 break;
             case DBCondition.Code.Contains:
                 condvar.Append(expandColumnName(columnname));
@@ -2994,22 +2994,22 @@ public class DBTable {
             case DBCondition.Code.GreaterOrEqual:
                 condvar.Append(expandColumnName(columnname));
                 condvar.Append(">=");
-                condvar.Append(ConvertValue(coldef, columnvalue.ToString()));
+                condvar.Append(convertValue(coldef, columnvalue));
                 break;
             case DBCondition.Code.GreaterThan:
                 condvar.Append(expandColumnName(columnname));
                 condvar.Append(">");
-                condvar.Append(ConvertValue(coldef, columnvalue.ToString()));
+                condvar.Append(convertValue(coldef, columnvalue));
                 break;
             case DBCondition.Code.LessOrEqual:
                 condvar.Append(expandColumnName(columnname));
                 condvar.Append("<=");
-                condvar.Append(ConvertValue(coldef, columnvalue.ToString()));
+                condvar.Append(convertValue(coldef, columnvalue));
                 break;
             case DBCondition.Code.LessThan:
                 condvar.Append(expandColumnName(columnname));
                 condvar.Append("<");
-                condvar.Append(ConvertValue(coldef, columnvalue.ToString()));
+                condvar.Append(convertValue(coldef, columnvalue));
                 break;
             case DBCondition.Code.In:
                 if(columnvalue is DBTable) {
@@ -3028,7 +3028,7 @@ public class DBTable {
                                 first = false;
                             else
                                 condvar.Append(',');
-                            condvar.Append(ConvertValue(coldef,x));
+                            condvar.Append(convertValue(coldef,x));
                         }
                     }
                 } else if(columnvalue is Array) {
@@ -3043,7 +3043,7 @@ public class DBTable {
                                 first = false;
                             else
                                 condvar.Append(',');
-                            condvar.Append(ConvertValue(coldef,x.ToString()));
+                            condvar.Append(convertValue(coldef,x));
                         }
                     }
                 } else {
@@ -3068,7 +3068,7 @@ public class DBTable {
                                 first = false;
                             else
                                 condvar.Append(',');
-                            condvar.Append(ConvertValue(coldef,x));
+                            condvar.Append(convertValue(coldef,x));
                         }
                     }
                 } else if(columnvalue is Array) {
@@ -3083,7 +3083,7 @@ public class DBTable {
                                 first = false;
                             else
                                 condvar.Append(',');
-                            condvar.Append(ConvertValue(coldef,x.ToString()));
+                            condvar.Append(convertValue(coldef,x));
                         }
                     }
                 } else {
@@ -3096,7 +3096,7 @@ public class DBTable {
                 case DBCon.Type.MySQL:
                     condvar.Append(expandColumnName(columnname));
                     condvar.Append("=");
-                    condvar.Append(ConvertValue(coldef, columnvalue.ToString()));
+                    condvar.Append(convertValue(coldef, columnvalue));
                     condvar.Append(" COLLATE utf8_unicode_ci");
                     break;
                 case DBCon.Type.PostgreSQL:
@@ -3114,7 +3114,7 @@ public class DBTable {
                 case DBCon.Type.MySQL:
                     condvar.Append(expandColumnName(columnname));
                     condvar.Append("<>");
-                    condvar.Append(ConvertValue(coldef, columnvalue.ToString()));
+                    condvar.Append(convertValue(coldef, columnvalue));
                     condvar.Append(" COLLATE utf8_unicode_ci");
                     break;
                 case DBCon.Type.PostgreSQL:
@@ -3256,16 +3256,16 @@ public class DBTable {
         case DBCondition.Code.Between:
             condvar.Append(expandColumnName(columnname));
             condvar.Append(" BETWEEN ");
-            condvar.Append(ConvertValue(coldef, columnvalue1.ToString()));
+            condvar.Append(convertValue(coldef, columnvalue1));
             condvar.Append(" AND ");
-            condvar.Append(ConvertValue(coldef, columnvalue2.ToString()));
+            condvar.Append(convertValue(coldef, columnvalue2));
             break;
         case DBCondition.Code.NotBetween:
             condvar.Append(expandColumnName(columnname));
             condvar.Append(" NOT BETWEEN ");
-            condvar.Append(ConvertValue(coldef, columnvalue1.ToString()));
+            condvar.Append(convertValue(coldef, columnvalue1));
             condvar.Append(" AND ");
-            condvar.Append(ConvertValue(coldef, columnvalue2.ToString()));
+            condvar.Append(convertValue(coldef, columnvalue2));
             break;
         default:
             throw new ArgumentException(String.Format("Invalid condition code ({0})", conditioncode.ToString()));
@@ -3382,7 +3382,7 @@ public class DBTable {
             if(coldef == null)
                 throw new ArgumentException(String.Format("Invalid column name ({0})", mycolumns[i]));
             cols.Append(mycolumns[i]);
-            vals.Append(ConvertValue(coldef, rec[i]));
+            vals.Append(convertValue(coldef, rec[i]));
         }
         sql.Append(" (");
         sql.Append(cols.ToString());
@@ -3427,12 +3427,16 @@ public class DBTable {
     }
 
 
-    private string ConvertValue(DBColumnDef col, string val) {
-        if(val == null)
+    private string convertValue(DBColumnDef col, object obj) {
+        if(obj == null)
             return "NULL";
+        string val;
+        if(obj is DateTime)
+            val = DBCon.DateTimeString((DateTime)obj);
+        else
+            val = obj.ToString().Trim();
         if(!String.IsNullOrEmpty(EscapeValuePrefix) && val.StartsWith(EscapeValuePrefix))
             return val.Substring(EscapeValuePrefix.Length);
-        val = val.Trim();
         if(col == null)
             return DBCon.Literal(val);
         if(col.Type == "NUMBER") {
