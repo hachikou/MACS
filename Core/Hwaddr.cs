@@ -191,6 +191,17 @@ public class Hwaddr:IComparable {
     }
 
     /// <summary>
+    ///   インスタンスがIsCompleteでかつオール0かあるいはオールFのアドレスを持っていなければtrueを返す
+    /// </summary>
+    public bool IsSafe() {
+        if(!IsComplete() ||
+           (vals[0] == 0x00 && vals[1] == 0x00 && vals[2] == 0x00 && vals[3] == 0x00 && vals[4] == 0x00 && vals[5] == 0x00) ||
+           (vals[0] == 0xff && vals[1] == 0xff && vals[2] == 0xff && vals[3] == 0xff && vals[4] == 0xff && vals[5] == 0xff))
+            return false;
+        return true;
+    }
+
+    /// <summary>
     ///   文字列表現を返す
     /// </summary>
     override public string ToString() {
