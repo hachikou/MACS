@@ -432,6 +432,8 @@ public abstract class HttpValidationPage : HttpTemplatePage {
 
         if (txt.Length != 17)
             goto parsefail;
+        if (txt == "00:00:00:00:00:00" || txt.ToUpper() == "FF:FF:FF:FF:FF:FF")
+            goto formaterror;
         int pos = 0;
         byte[] bytes = new byte[] {(byte)0, (byte)0, (byte)0, (byte)0, (byte)0, (byte)0};
         for(var i = 0; i < txt.Length; ++i) {
@@ -459,6 +461,10 @@ public abstract class HttpValidationPage : HttpTemplatePage {
 
     parsefail:
         AddValidationMessage(string.Format(_("{0}はXX:XX:XX:XX:XX:XXの形式でなければいけません。"), fieldname),item);
+        goto fail;
+
+    formaterror:
+        AddValidationMessage(string.Format(_("無効な{0}が指定されています。"), fieldname),item);
         goto fail;
 
     fail:
