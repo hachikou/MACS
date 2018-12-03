@@ -163,7 +163,62 @@ public class MPButton : Control {
         } else {
             g.DrawButton(this.ClientRectangle, Radius, this.Text, TextAttribute, face);
         }
+
+        //Pathを計算する。
+        GraphicsPath gPath = new GraphicsPath();
+        AddButtonPath(this.ClientRectangle, Radius, face, gPath);
+        this.Region = new System.Drawing.Region(gPath);
+        gPath.Dispose();
+
         face.Dispose();
+    }
+    
+    /// <summary>
+    /// コントールパス取得
+    /// </summary>
+    /// <param name="rect">コントロールのクライアント領域を表す四角形</param>
+    /// <param name="radius">角の丸み</param>
+    /// <param name="face">ボタン描画パラメータ</param>
+    /// <param name="gPath">パスを追加する領域</param>
+    /// <param name="x">並行移動X座標</param>
+    /// <param name="y">並行移動Y座標</param>
+    public static void AddButtonPath(Rectangle rect, float radius, ButtonFace face, GraphicsPath gPath, float x = 0, float y = 0) {        
+        // 内接長方形
+        Rectangle iRect = new Rectangle(rect.X, rect.Y, rect.Width, rect.Height);
+
+        if ((face.TopLeftPen != null) && (face.TopLeftPen.Width > 0)) {
+            int sz = (int)Math.Ceiling(face.TopLeftPen.Width / 2F);
+            iRect.X += sz;
+            iRect.Y += sz;
+            iRect.Width -= sz;
+            iRect.Height -= sz;
+        }
+        if ((face.BottomRightPen != null) && (face.BottomRightPen.Width > 0)) {
+            int sz = (int)Math.Ceiling(face.BottomRightPen.Width / 2F);
+            iRect.Width -= sz;
+            iRect.Height -= sz;
+        }
+
+        // 内接長方形に合わせて角丸半径を調整
+        if ((int)radius > iRect.Width/2)
+            radius = (float)iRect.Width/2.0F;
+        if((int)radius > iRect.Height/2)
+            radius = (float)iRect.Height/2.0F;
+        
+        // パスの作成
+        int rr = (int)(radius*2F);
+        if(rr <= 0)
+            rr = 1;
+
+        gPath.StartFigure();
+        gPath.AddArc(x + iRect.X, y+ iRect.Y+iRect.Height-rr, rr, rr, 135F, 45F);
+        gPath.AddArc(x + iRect.X, y+ iRect.Y, rr, rr, 180F, 90F);
+        gPath.AddArc(x + iRect.X+iRect.Width-rr, y+ iRect.Y, rr, rr, -90F, 45F);
+
+        gPath.AddArc(x + iRect.X+iRect.Width-rr, y+ iRect.Y, rr, rr, -45F, 45F);
+        gPath.AddArc(x + iRect.X+iRect.Width-rr, y+ iRect.Y+iRect.Height-rr, rr, rr, 0F, 90F);
+        gPath.AddArc(x + iRect.X, y+ iRect.Y+iRect.Height-rr, rr, rr, 90F, 45F);
+        gPath.CloseFigure();
     }
 
     protected override void OnPaintBackground(PaintEventArgs e) {

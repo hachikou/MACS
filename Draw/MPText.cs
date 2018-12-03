@@ -95,6 +95,28 @@ public class MPText : System.Windows.Forms.Control {
         this.TabStop = false;
     }
 
+    /// <summary>
+    ///  アウトラインテキストのパス取得
+    /// </summary>
+    /// <param name="x">並行移動X座標</param>
+    /// <param name="y">並行移動Y座標</param>
+    /// <returns></returns>
+    public GraphicsPath GetTextPath(float x, float y) {
+        Brush shadow = null;
+        if (this.ShadowColor.A > 0) {
+            shadow = new SolidBrush(this.ShadowColor);
+        }
+
+        float shadowOffsetX = this.Font.GetEmSize() * this.ShadowOffsetX;
+        float shadowOffsetY = this.Font.GetEmSize() * this.ShadowOffsetY;
+
+        //描画テキストパス取得
+        GraphicsPath gPath = GraphicsExtensions.GetTextPath(this.Text, this.Font, this.ClientRectangle, this.HPosition, this.VPosition, this.LineHeight,
+                shadow:shadow, shadowOffsetX: shadowOffsetX, shadowOffsetY: shadowOffsetY, x: x, y: y);
+        
+        return gPath;
+    }
+
     protected override void OnTextChanged(EventArgs e) {
         this.Invalidate();
     }
@@ -121,6 +143,14 @@ public class MPText : System.Windows.Forms.Control {
         } else {
             outlineColor = OutlineColor;
         }
+
+        Brush  bgBrush = null; 
+        if((BackColor != null) && (BackColor.A > 0)) {
+            //始点を-1,-1にしないとスキマが出来てしまうため、幅、高さを+1した
+            Rectangle target = new Rectangle(-1, -1,this.Width + 1,this.Height + 1);
+            bgBrush = new SolidBrush(BackColor);
+            g.FillRectangle(bgBrush, target); 
+        } 
         float outlineWidth = Font.GetEmSize()*OutlineRatio;
         Brush brush = null;
         if(color.A > 0)
@@ -136,12 +166,15 @@ public class MPText : System.Windows.Forms.Control {
         float shadowOffsetY = Font.GetEmSize()*ShadowOffsetY;
         g.DrawText(Text, Font, pen, brush, ClientRectangle, HPosition, VPosition, LineHeight,
                    shadow:shadow, shadowOffsetX:shadowOffsetX, shadowOffsetY:shadowOffsetY);
+        
         if(brush != null)
             brush.Dispose();
         if(pen != null)
             pen.Dispose();
         if(shadow != null)
             shadow.Dispose();
+        if(bgBrush != null)
+            bgBrush.Dispose(); 
     }
 
     private void paintAttrText(Graphics g) {
