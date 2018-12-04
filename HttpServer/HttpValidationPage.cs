@@ -411,6 +411,7 @@ public abstract class HttpValidationPage : HttpTemplatePage {
     /// <param name="required">入力が必須かどうか</param>
     /// <param name="fieldname">入力欄の名称</param>
     /// <param name="item">フォーム要素に対応するWebControl</param>
+    /// <param name="issafe">MACアドレスがオール0またはオールFでないかをチェックするフラグ</param>
     /// <remarks>
     ///   <para>
     ///     条件を満たさない時は m_validation_messageにエラーメッセージをセットする。
@@ -418,7 +419,7 @@ public abstract class HttpValidationPage : HttpTemplatePage {
     ///     itemを指定しておくと、エラー時にそのitemのCssClassを"error"にする。
     ///   </para>
     /// </remarks>
-    protected Hwaddr ValidateHwaddr(string txt, bool required, string fieldname, WebControl item) {
+    protected Hwaddr ValidateHwaddr(string txt, bool required, string fieldname, WebControl item, bool issafe=false) {
         if (string.IsNullOrEmpty(txt)) {
             if (required) {
                 AddValidationMessage(string.Format(_("{0}は必須です。"), fieldname),item);
@@ -432,7 +433,7 @@ public abstract class HttpValidationPage : HttpTemplatePage {
 
         if (txt.Length != 17)
             goto parsefail;
-        if (txt == "00:00:00:00:00:00" || txt.ToUpper() == "FF:FF:FF:FF:FF:FF")
+        if (issafe && (txt == "00:00:00:00:00:00" || txt.ToUpper() == "FF:FF:FF:FF:FF:FF"))
             goto formaterror;
         int pos = 0;
         byte[] bytes = new byte[] {(byte)0, (byte)0, (byte)0, (byte)0, (byte)0, (byte)0};
