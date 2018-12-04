@@ -411,7 +411,6 @@ public abstract class HttpValidationPage : HttpTemplatePage {
     /// <param name="required">入力が必須かどうか</param>
     /// <param name="fieldname">入力欄の名称</param>
     /// <param name="item">フォーム要素に対応するWebControl</param>
-    /// <param name="issafe">MACアドレスがオール0またはオールFでないかをチェックするフラグ</param>
     /// <remarks>
     ///   <para>
     ///     条件を満たさない時は m_validation_messageにエラーメッセージをセットする。
@@ -419,7 +418,30 @@ public abstract class HttpValidationPage : HttpTemplatePage {
     ///     itemを指定しておくと、エラー時にそのitemのCssClassを"error"にする。
     ///   </para>
     /// </remarks>
-    protected Hwaddr ValidateHwaddr(string txt, bool required, string fieldname, WebControl item, bool issafe=false) {
+    protected Hwaddr ValidateHwaddr(string txt, bool required, string fieldname, WebControl item) {
+        return validateHwaddr(txt, required, false, fieldname, item);
+    }
+    
+    /// <summary>
+    ///   txtの文字列がMACアドレスの形式をしていることを確認する。
+    //    プライベートメソッドのvalidateHwaddrの第３引数にtrueを渡してオール0とオールFのチェックも行う
+    /// </summary>
+    /// <param name="txt">確認する文字列</param>
+    /// <param name="required">入力が必須かどうか</param>
+    /// <param name="fieldname">入力欄の名称</param>
+    /// <param name="item">フォーム要素に対応するWebControl</param>
+    /// <remarks>
+    ///   <para>
+    ///     条件を満たさない時は m_validation_messageにエラーメッセージをセットする。
+    ///
+    ///     itemを指定しておくと、エラー時にそのitemのCssClassを"error"にする。
+    ///   </para>
+    /// </remarks>
+    protected Hwaddr ValidateSafeHwaddr(string txt, bool required, string fieldname, WebControl item) {
+        return validateHwaddr(txt, required, true, fieldname, item);
+    }
+
+    private Hwaddr validateHwaddr(string txt, bool required, bool issafe, string fieldname, WebControl item) {
         if (string.IsNullOrEmpty(txt)) {
             if (required) {
                 AddValidationMessage(string.Format(_("{0}は必須です。"), fieldname),item);

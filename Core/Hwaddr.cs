@@ -196,8 +196,8 @@ public class Hwaddr:IComparable {
     public bool IsSafe(bool required) {
         if((required && !IsComplete()) ||
            (!required && !IsCompleteOrNull()) ||
-           (vals.Length == 6 && vals[0] == 0x00 && vals[1] == 0x00 && vals[2] == 0x00 && vals[3] == 0x00 && vals[4] == 0x00 && vals[5] == 0x00) ||
-           (vals.Length == 6 && vals[0] == 0xff && vals[1] == 0xff && vals[2] == 0xff && vals[3] == 0xff && vals[4] == 0xff && vals[5] == 0xff))
+           (vals != null && vals[0] == 0x00 && vals[1] == 0x00 && vals[2] == 0x00 && vals[3] == 0x00 && vals[4] == 0x00 && vals[5] == 0x00) ||
+           (vals != null && vals[0] == 0xff && vals[1] == 0xff && vals[2] == 0xff && vals[3] == 0xff && vals[4] == 0xff && vals[5] == 0xff))
             return false;
         return true;
     }
