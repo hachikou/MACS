@@ -166,7 +166,7 @@ public class MPButton : Control {
 
         //Pathを計算する。
         GraphicsPath gPath = new GraphicsPath();
-        AddButtonPath(this.ClientRectangle, Radius, face, gPath);
+        AddButtonPath(gPath, this.ClientRectangle, Radius, face);
         this.Region = new System.Drawing.Region(gPath);
         gPath.Dispose();
 
@@ -176,13 +176,13 @@ public class MPButton : Control {
     /// <summary>
     /// コントールパス取得
     /// </summary>
+    /// <param name="gPath">パスを追加する領域</param>
     /// <param name="rect">コントロールのクライアント領域を表す四角形</param>
     /// <param name="radius">角の丸み</param>
     /// <param name="face">ボタン描画パラメータ</param>
-    /// <param name="gPath">パスを追加する領域</param>
     /// <param name="x">並行移動X座標</param>
     /// <param name="y">並行移動Y座標</param>
-    public static void AddButtonPath(Rectangle rect, float radius, ButtonFace face, GraphicsPath gPath, float x = 0, float y = 0) {        
+    public static void AddButtonPath(GraphicsPath gPath, Rectangle rect, float radius, ButtonFace face,float x = 0, float y = 0) {        
         // 内接長方形
         Rectangle iRect = new Rectangle(rect.X, rect.Y, rect.Width, rect.Height);
 
