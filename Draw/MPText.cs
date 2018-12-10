@@ -95,28 +95,6 @@ public class MPText : System.Windows.Forms.Control {
         this.TabStop = false;
     }
 
-    /// <summary>
-    ///  アウトラインテキストのパス取得
-    /// </summary>
-    /// <param name="x">並行移動X座標</param>
-    /// <param name="y">並行移動Y座標</param>
-    /// <returns></returns>
-    public GraphicsPath GetTextPath(float x, float y) {
-        Brush shadow = null;
-        if (this.ShadowColor.A > 0) {
-            shadow = new SolidBrush(this.ShadowColor);
-        }
-
-        float shadowOffsetX = this.Font.GetEmSize() * this.ShadowOffsetX;
-        float shadowOffsetY = this.Font.GetEmSize() * this.ShadowOffsetY;
-
-        //描画テキストパス取得
-        GraphicsPath gPath = GraphicsExtensions.GetTextPath(this.Text, this.Font, this.ClientRectangle, this.HPosition, this.VPosition, this.LineHeight,
-                shadow:shadow, shadowOffsetX: shadowOffsetX, shadowOffsetY: shadowOffsetY, x: x, y: y);
-        
-        return gPath;
-    }
-
     protected override void OnTextChanged(EventArgs e) {
         this.Invalidate();
     }
