@@ -406,7 +406,7 @@ public static partial class GraphicsExtensions {
     /// <param name="y">並行移動Y座標</param>
     /// <param name="fontRatio">文字の縦横比</param>
     /// <returns>アウトラインテキストのパス</returns>
-    public static GraphicsPath GetTextPath(string text, Font font,
+    public static GraphicsPath GetTextPath(this Graphics g, string text, Font font,
                                            Rectangle rect, TextHPosition hpos = TextHPosition.Left, TextVPosition vpos = TextVPosition.Top,
                                            float lineHeight = 1.2F, Brush shadow = null,
                                            float shadowOffsetX = float.MaxValue, float shadowOffsetY = float.MaxValue, float shadowWidth = float.MaxValue,
