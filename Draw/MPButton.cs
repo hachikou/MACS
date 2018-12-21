@@ -166,7 +166,7 @@ public class MPButton : Control {
 
         //Pathを計算する。
         GraphicsPath gPath = new GraphicsPath();
-        AddButtonPath(gPath, this.ClientRectangle, Radius, face);
+        AddButtonPath(gPath);
         this.Region = new System.Drawing.Region(gPath);
         gPath.Dispose();
 
@@ -177,14 +177,13 @@ public class MPButton : Control {
     /// コントールパス取得
     /// </summary>
     /// <param name="gPath">パスを追加する領域</param>
-    /// <param name="rect">コントロールのクライアント領域を表す四角形</param>
-    /// <param name="radius">角の丸み</param>
-    /// <param name="face">ボタン描画パラメータ</param>
     /// <param name="x">並行移動X座標</param>
     /// <param name="y">並行移動Y座標</param>
-    public static void AddButtonPath(GraphicsPath gPath, Rectangle rect, float radius, ButtonFace face,float x = 0, float y = 0) {        
+    public void AddButtonPath(GraphicsPath gPath, float x = 0, float y = 0) {        
         // 内接長方形
-        Rectangle iRect = new Rectangle(rect.X, rect.Y, rect.Width, rect.Height);
+        Rectangle iRect = new Rectangle(this.ClientRectangle.X, this.ClientRectangle.Y, this.ClientRectangle.Width, this.ClientRectangle.Height);
+        // ボタン描画パラメータ
+        ButtonFace face = new ButtonFace(this.Font, this.BackColor, this.ShadowStrength, this.BorderWidth);
 
         if ((face.TopLeftPen != null) && (face.TopLeftPen.Width > 0)) {
             int sz = (int)Math.Ceiling(face.TopLeftPen.Width / 2F);
@@ -200,13 +199,13 @@ public class MPButton : Control {
         }
 
         // 内接長方形に合わせて角丸半径を調整
-        if ((int)radius > iRect.Width/2)
-            radius = (float)iRect.Width/2.0F;
-        if((int)radius > iRect.Height/2)
-            radius = (float)iRect.Height/2.0F;
+        if ((int)this.Radius > iRect.Width/2)
+            this.Radius = (float)iRect.Width/2.0F;
+        if((int)this.Radius > iRect.Height/2)
+            this.Radius = (float)iRect.Height/2.0F;
         
         // パスの作成
-        int rr = (int)(radius*2F);
+        int rr = (int)(this.Radius*2F);
         if(rr <= 0)
             rr = 1;
 
@@ -219,6 +218,8 @@ public class MPButton : Control {
         gPath.AddArc(x + iRect.X+iRect.Width-rr, y+ iRect.Y+iRect.Height-rr, rr, rr, 0F, 90F);
         gPath.AddArc(x + iRect.X, y+ iRect.Y+iRect.Height-rr, rr, rr, 90F, 45F);
         gPath.CloseFigure();
+
+        face.Dispose();
     }
 
     protected override void OnPaintBackground(PaintEventArgs e) {
