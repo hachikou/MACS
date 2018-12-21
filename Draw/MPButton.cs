@@ -41,6 +41,16 @@ public class MPButton : Control {
     public float ShadowStrength = 0.1F;
 
     /// <summary>
+    ///   枠色
+    /// </summary>
+    public Color BorderColor = ColorUtil.Auto;
+    
+    /// <summary>
+    ///   枠影付強さ
+    /// </summary>
+    public float BorderShadowStrength = 0.3F;
+
+    /// <summary>
     ///   文字色自動設定
     /// </summary>
     /// <remarks>
@@ -140,7 +150,7 @@ public class MPButton : Control {
             else
                 backColor = StateColor[nState-1];
         }
-        ButtonFace face = new ButtonFace(this.Font, backColor, this.ShadowStrength, this.BorderWidth);
+        ButtonFace face = new ButtonFace(this.Font, backColor, this.ShadowStrength, this.BorderWidth, this.BorderColor, this.BorderShadowStrength);
         if(!this.AutoForeColor)
             face.SetTextColor(this.ForeColor);
         if(this.UseEnabledColor || this.Enabled) {
@@ -183,7 +193,7 @@ public class MPButton : Control {
         // 内接長方形
         Rectangle iRect = new Rectangle(this.ClientRectangle.X, this.ClientRectangle.Y, this.ClientRectangle.Width, this.ClientRectangle.Height);
         // ボタン描画パラメータ
-        ButtonFace face = new ButtonFace(this.Font, this.BackColor, this.ShadowStrength, this.BorderWidth);
+        ButtonFace face = new ButtonFace(this.Font, this.BackColor, this.ShadowStrength, this.BorderWidth, this.BorderColor, this.BorderShadowStrength);
 
         if ((face.TopLeftPen != null) && (face.TopLeftPen.Width > 0)) {
             int sz = (int)Math.Ceiling(face.TopLeftPen.Width / 2F);
