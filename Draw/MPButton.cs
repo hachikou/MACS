@@ -176,15 +176,15 @@ public class MPButton : Control {
 
         //Pathを計算する。
         GraphicsPath gPath = new GraphicsPath();
-        AddButtonPath(gPath);
+        addButtonPath(gPath);
         this.Region = new System.Drawing.Region(gPath);
         gPath.Dispose();
 
         face.Dispose();
     }
-    
+
     /// <summary>
-    /// コントールパス取得
+    /// コントールパス追加
     /// </summary>
     /// <param name="gPath">パスを追加する領域</param>
     /// <param name="x">並行移動X座標</param>
@@ -312,6 +312,55 @@ public class MPButton : Control {
     private void setBtnStatus(ButtonStatusCode btn_status) {
         ButtonStatus = btn_status;
         this.Invalidate();
+    }
+
+    /// <summary>
+    /// コントールパス追加
+    /// </summary>
+    /// <param name="gPath">パスを追加する領域</param>
+    /// <param name="x">並行移動X座標</param>
+    /// <param name="y">並行移動Y座標</param>
+    private void addButtonPath(GraphicsPath gPath, float x = 0, float y = 0) {        
+        // 内接長方形
+        Rectangle iRect = new Rectangle(this.ClientRectangle.X, this.ClientRectangle.Y, this.ClientRectangle.Width, this.ClientRectangle.Height);
+        // ボタン描画パラメータ
+        ButtonFace face = new ButtonFace(this.Font, this.BackColor, this.ShadowStrength, this.BorderWidth);
+
+        if ((face.TopLeftPen != null) && (face.TopLeftPen.Width > 0)) {
+            int sz = (int)Math.Ceiling(face.TopLeftPen.Width / 2F);
+            iRect.X += sz;
+            iRect.Y += sz;
+            iRect.Width -= sz;
+            iRect.Height -= sz;
+        }
+        if ((face.BottomRightPen != null) && (face.BottomRightPen.Width > 0)) {
+            int sz = (int)Math.Ceiling(face.BottomRightPen.Width / 2F);
+            iRect.Width -= sz;
+            iRect.Height -= sz;
+        }
+
+        // 内接長方形に合わせて角丸半径を調整
+        if ((int)this.Radius > iRect.Width/2)
+            this.Radius = (float)iRect.Width/2.0F;
+        if((int)this.Radius > iRect.Height/2)
+            this.Radius = (float)iRect.Height/2.0F;
+        
+        // パスの作成
+        int rr = (int)(this.Radius*2F);
+        if(rr <= 0)
+            rr = 1;
+
+        gPath.StartFigure();
+        gPath.AddArc(x + iRect.X, y+ iRect.Y+iRect.Height-rr, rr, rr, 135F, 45F);
+        gPath.AddArc(x + iRect.X, y+ iRect.Y, rr, rr, 180F, 90F);
+        gPath.AddArc(x + iRect.X+iRect.Width-rr, y+ iRect.Y, rr, rr, -90F, 45F);
+
+        gPath.AddArc(x + iRect.X+iRect.Width-rr, y+ iRect.Y, rr, rr, -45F, 45F);
+        gPath.AddArc(x + iRect.X+iRect.Width-rr, y+ iRect.Y+iRect.Height-rr, rr, rr, 0F, 90F);
+        gPath.AddArc(x + iRect.X, y+ iRect.Y+iRect.Height-rr, rr, rr, 90F, 45F);
+        gPath.CloseFigure();
+
+        face.Dispose();
     }
 }
 
