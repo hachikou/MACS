@@ -483,15 +483,19 @@ public static partial class GraphicsExtensions {
         } else if(pp != null && ppp == null) {
             //影あり、アウトラインなしの場合
             pp.AddPath(p, true);
+            p.Dispose();
             return pp;
         } else if(pp == null && ppp != null) {
             //影なし、アウトラインありの場合
             ppp.AddPath(p, true);
+            p.Dispose();
             return ppp;
         } else {
             //影あり、アウトラインありの場合
             pp.AddPath(p, true);
             ppp.AddPath(pp, true);
+            p.Dispose();
+            pp.Dispose();
             return ppp;
         }
     }
