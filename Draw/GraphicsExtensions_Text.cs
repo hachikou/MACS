@@ -462,7 +462,7 @@ public static partial class GraphicsExtensions {
         //アウトライン描画
         GraphicsPath ppp = null;
         if(outline > 0) {
-                //テキストパス取得
+            //テキストパス取得
             ppp = makeTextPath(textBuf, font, rect, hpos, vpos, lineHeight, fontRatio, emSize);
             using (Matrix m = new Matrix()) {
                 //テキストパス並行移動
