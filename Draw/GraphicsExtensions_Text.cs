@@ -390,7 +390,7 @@ public static partial class GraphicsExtensions {
     }
 
     /// <summary>
-    ///  アウトラインテキストのパス取得
+    ///  テキストのパス取得
     /// </summary>
     /// <param name="text">描画文字列</param>
     /// <param name="font">使用フォント</param>
@@ -402,14 +402,15 @@ public static partial class GraphicsExtensions {
     /// <param name="shadowOffsetX">影描画時のXオフセット。未指定の場合フォント高さの10%</param>
     /// <param name="shadowOffsetY">影描画時のYオフセット。未指定の場合フォント高さの10%</param>
     /// <param name="shadowWidth">影描画時の太さ。未指定の場合shadowOffsetXとshadowOffsetYの二乗平均</param>
+    /// <param name="outline">アウトライン幅</param>
     /// <param name="x">並行移動X座標</param>
     /// <param name="y">並行移動Y座標</param>
     /// <param name="fontRatio">文字の縦横比</param>
-    /// <returns>アウトラインテキストのパス</returns>
+    /// <returns>テキストのパス</returns>
     public static GraphicsPath GetTextPath(this Graphics g, string text, Font font,
                                            Rectangle rect, TextHPosition hpos = TextHPosition.Left, TextVPosition vpos = TextVPosition.Top,
                                            float lineHeight = 1.2F, Brush shadow = null,
-                                           float shadowOffsetX = float.MaxValue, float shadowOffsetY = float.MaxValue, float shadowWidth = float.MaxValue,
+                                           float shadowOffsetX = float.MaxValue, float shadowOffsetY = float.MaxValue, float shadowWidth = float.MaxValue, float outline = 0,
                                            float x = 0, float y = 0, float fontRatio = 1.0F) {
         
         //テキスト改行ごとに配列
@@ -431,28 +432,72 @@ public static partial class GraphicsExtensions {
         }
 
         // 影描画
-        // TODO:影を作るとパスが崩れる以下の処理を見直す必要がある。
-        // 当面は背景透過する場合は、影を作らないようにする。
+        GraphicsPath pp = null;
         if(shadow != null) {
-            p.StartFigure();
-            if(shadowOffsetX == float.MaxValue)
-                shadowOffsetX = emSize/10F;
-            if(shadowOffsetY == float.MaxValue)
-                shadowOffsetY = shadowOffsetX;
-            using(Matrix m = new Matrix()) {
-                m.Translate(shadowOffsetX, shadowOffsetY);
-                p.Transform(m);
-            }
-            if(shadowWidth == float.MaxValue)
-                shadowWidth = (float)Math.Sqrt(shadowOffsetX*shadowOffsetX+shadowOffsetY*shadowOffsetY);
-            using(Pen pen = new Pen(Color.Black, shadowWidth)) {
-                p.Widen(pen);
+            //テキストパス取得
+            pp = makeTextPath(textBuf, font, rect, hpos, vpos, lineHeight, fontRatio, emSize);
+            using (Matrix m = new Matrix()) {
+                //テキストパス並行移動
+                m.Translate(x + (float)rect.X, y + (float)rect.Y);
+                pp.Transform(m);
             }
 
-            p.CloseFigure();
+            if (shadowOffsetX == float.MaxValue)
+                shadowOffsetX = emSize / 10F;
+            if (shadowOffsetY == float.MaxValue)
+                shadowOffsetY = shadowOffsetX;
+            using (Matrix m = new Matrix()) {
+                m.Translate(shadowOffsetX, shadowOffsetY);
+                pp.Transform(m);
+            }
+            if (shadowWidth == float.MaxValue)
+                shadowWidth = (float)Math.Sqrt(shadowOffsetX * shadowOffsetX + shadowOffsetY * shadowOffsetY);
+            using (Pen pen = new Pen(Color.Black, shadowWidth)) {
+                pp.Widen(pen);
+            }
+
+            pp.CloseFigure();
         }
 
-        return p;
+        //アウトライン描画
+        GraphicsPath ppp = null;
+        if(outline > 0) {
+            //テキストパス取得
+            ppp = makeTextPath(textBuf, font, rect, hpos, vpos, lineHeight, fontRatio, emSize);
+            using (Matrix m = new Matrix()) {
+                //テキストパス並行移動
+                m.Translate(x + (float)rect.X, y + (float)rect.Y);
+                ppp.Transform(m);
+            }
+            float outlineWidth = font.GetEmSize()*(float)outline;
+            using(Pen pen = new Pen(Color.Black, outlineWidth)) {
+                ppp.Widen(pen);
+            };
+
+            ppp.CloseFigure();
+        }
+
+        if(pp == null && ppp == null) {
+            //影なし、アウトラインなしの場合
+            return p;
+        } else if(pp != null && ppp == null) {
+            //影あり、アウトラインなしの場合
+            pp.AddPath(p, true);
+            p.Dispose();
+            return pp;
+        } else if(pp == null && ppp != null) {
+            //影なし、アウトラインありの場合
+            ppp.AddPath(p, true);
+            p.Dispose();
+            return ppp;
+        } else {
+            //影あり、アウトラインありの場合
+            pp.AddPath(p, true);
+            ppp.AddPath(pp, true);
+            p.Dispose();
+            pp.Dispose();
+            return ppp;
+        }
     }
 
 
