@@ -24,8 +24,9 @@ public static class ProcUtil {
     /// <param name="cmd">実行コマンド名（パス名付きも可）</param>
     /// <param name="timeout">最大実行待ち時間（ミリ秒）</param>
     /// <param name="args">コマンド引数（nullの場合コマンド引数無しで実行）</param>
-    /// <param name="createNoWindow">trueでコマンドプロンプトを開かない</param>
-    /// <param name="killOnTimeout">timeout時間待ってもプロセスが終了しないときにプロセスをkillするかどうか</param>
+    /// <param name="createNoWindow">trueでコマンドプロンプトを開かない。デフォルトはtrue</param>
+    /// <param name="killOnTimeout">timeout時間待ってもプロセスが終了しないときにプロセスをkillするかどうか。デフォルトはtrue</param>
+    /// <param name="useShell">シェル経由で実行するかどうか。デフォルトはfalse</param>
     /// <returns>コマンドの終了コード</returns>
     /// <remarks>
     ///   <para>
@@ -33,7 +34,7 @@ public static class ProcUtil {
     ///     区切りとみなされます。
     ///   </para>
     /// </remarks>
-    public static int Exec(string cmd, int timeout, string[] args, bool createNoWindow=true, bool killOnTimeout=true) {
+    public static int Exec(string cmd, int timeout, string[] args, bool createNoWindow=true, bool killOnTimeout=true, bool useShell=false) {
         StringBuilder argstr = new StringBuilder();
         if(args != null) {
             bool first = true;
@@ -50,7 +51,7 @@ public static class ProcUtil {
             proc.StartInfo = new ProcessStartInfo(cmd, argstr.ToString());
             proc.StartInfo.RedirectStandardError = false;
             proc.StartInfo.RedirectStandardOutput = false;
-            proc.StartInfo.UseShellExecute = false;
+            proc.StartInfo.UseShellExecute = useShell;
             proc.StartInfo.CreateNoWindow = createNoWindow;
             proc.Start();
             try {
