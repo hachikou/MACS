@@ -446,6 +446,37 @@ public class FileUtil {
     }
 
     /// <summary>
+    ///   2つのファイルの内容が同じかどうか確認する
+    /// </summary>
+    public static bool IsSameFile(string src, string dst) {
+        using(FileStream fsrc = BinaryReader(src)){
+            if(fsrc == null)
+                return false;
+            using(FileStream fdst = BinaryReader(dst)) {
+                if(fdst == null)
+                    return false;
+                int srclen, dstlen;
+                byte[] srcbuf = new byte[1024*4];
+                byte[] dstbuf = new byte[srcbuf.Length];
+                while((srclen = fsrc.Read(srcbuf, 0, srcbuf.Length)) > 0) {
+                    dstlen = fdst.Read(dstbuf, 0, dstbuf.Length);
+                    if(srclen != dstlen)
+                        return false;
+                    for(int i = 0; i < srclen; i++) {
+                        if(srcbuf[i] != dstbuf[i])
+                            return false;
+                    }
+                }
+                if(fdst.Read(dstbuf, 0, dstbuf.Length) != 0)
+                    return false;
+                fdst.Close();
+                fsrc.Close();
+            }
+        }
+        return true;
+    }
+
+    /// <summary>
     ///   ファイル内容をBase64文字列に変換する
     /// </summary>
     public static string FileToBase64String(string src) {
