@@ -27,20 +27,25 @@ public class SectionIniFile {
     /// <summary>
     ///   INIファイルを読み取り、データベースを作成する。
     /// </summary>
-    public SectionIniFile(string filename, Encoding enc) {
+    public SectionIniFile(string filename, Encoding enc, bool upgradeFlag = false) {
         m_mutex = new object();
         m_filename = filename;
         m_enc = enc;
+        if(upgradeFlag)
+            _upgrade();
         _reload();
-    }
+     }
+ 
     /// <summary>
     ///   INIファイルを読み取り、データベースを作成する。
     ///   デフォルトエンコーディング版。
     /// </summary>
-    public SectionIniFile(string filename) {
+    public SectionIniFile(string filename, bool upgradeFlag = false) {
         m_mutex = new object();
         m_filename = filename;
         m_enc = null;
+        if (upgradeFlag)
+            _upgrade();
         _reload();
     }
 
@@ -334,6 +339,19 @@ public class SectionIniFile {
                 File.Delete(tmpfilename);
         }
         return _reload();
+    }
+
+    private void _upgrade() {
+        if(File.Exists(m_filename + ".dist")) {
+            if(File.Exists(m_filename)) {
+                // .distファイルのほうが新しい場合、.iniファイルをアップグレードする
+                if(File.GetLastWriteTime(m_filename) < File.GetLastWriteTime(m_filename + ".dist"))
+                    Upgrade(m_filename + ".dist");
+            } else {
+                // .iniファイルがないときは.distファイルをコピーする
+                FileUtil.Copy(m_filename + ".dist", m_filename);
+            }
+        }
     }
 
     private static Random rnd = new Random();
