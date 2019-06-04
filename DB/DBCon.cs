@@ -753,14 +753,23 @@ public class DBCon : Loggable, IDisposable {
     ///   SQLの文字列定数として使ってはいけない文字をエスケープする
     /// </summary>
     public static string Escape(string txt) {
-        return txt.Replace("'", "''");
+        if(txt.Length > 0) {
+            txt = txt.Replace("'", "''");
+            // 末尾の連続する'\'を処理する
+            int bcount = 0;
+            while((txt.Length > bcount) && (txt[txt.Length-bcount-1] == '\\'))
+                bcount++;
+            if(bcount%2 != 0)
+                txt += "\\";
+        }
+        return txt;
     }
 
     /// <summary>
     ///   SQLのLIKE指定文字列として使ってはいけない文字をエスケープする
     /// </summary>
     public static string LikeEscape(string txt) {
-        return txt.Replace("'", "''").Replace("%", "\\%").Replace("_","\\_");
+        return txt.Replace("'", "''").Replace("\\", "\\\\").Replace("%", "\\%").Replace("_","\\_");
     }
 
     /// <summary>
