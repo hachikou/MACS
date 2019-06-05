@@ -27,12 +27,12 @@ public class SectionIniFile {
     /// <summary>
     ///   INIファイルを読み取り、データベースを作成する。
     /// </summary>
-    public SectionIniFile(string filename, Encoding enc, bool upgradeFlag = false) {
+    public SectionIniFile(string filename, Encoding enc, string distfile = null) {
         m_mutex = new object();
         m_filename = filename;
         m_enc = enc;
-        if(upgradeFlag)
-            _upgrade();
+        if(!String.IsNullOrEmpty(distfile))
+            _upgrade(distfile);
         _reload();
      }
  
@@ -40,12 +40,12 @@ public class SectionIniFile {
     ///   INIファイルを読み取り、データベースを作成する。
     ///   デフォルトエンコーディング版。
     /// </summary>
-    public SectionIniFile(string filename, bool upgradeFlag = false) {
+    public SectionIniFile(string filename, string distfile = null) {
         m_mutex = new object();
         m_filename = filename;
         m_enc = null;
-        if (upgradeFlag)
-            _upgrade();
+        if(!String.IsNullOrEmpty(distfile))
+            _upgrade(distfile);
         _reload();
     }
 
@@ -341,15 +341,15 @@ public class SectionIniFile {
         return _reload();
     }
 
-    private void _upgrade() {
-        if(File.Exists(m_filename + ".dist")) {
+    private void _upgrade(string distfile) {
+        if(File.Exists(distfile)) {
             if(File.Exists(m_filename)) {
                 // .distファイルのほうが新しい場合、.iniファイルをアップグレードする
-                if(File.GetLastWriteTime(m_filename) < File.GetLastWriteTime(m_filename + ".dist"))
-                    Upgrade(m_filename + ".dist");
+                if(File.GetLastWriteTime(m_filename) < File.GetLastWriteTime(distfile))
+                    Upgrade(distfile);
             } else {
                 // .iniファイルがないときは.distファイルをコピーする
-                FileUtil.Copy(m_filename + ".dist", m_filename);
+                FileUtil.Copy(distfile, m_filename);
             }
         }
     }
