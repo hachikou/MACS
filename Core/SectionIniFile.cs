@@ -27,6 +27,17 @@ public class SectionIniFile {
     /// <summary>
     ///   INIファイルを読み取り、データベースを作成する。
     /// </summary>
+    /// <param name="filename">ファイル名</param>
+    /// <param name="enc">ファイルエンコード</param>
+    /// <param name="distfile">INIファイルのテンプレート (optional)</param>
+    /// <remarks>
+    ///   <para>
+    ///     指定ファイルが存在していなくてもコンストラクションは成功します。
+    ///     この場合、のちにWriteを実行するとそのファイルが作成されます。
+    ///     encにnullを指定すると、FileUtil.DefaultEncoding が使われます。
+    ///     distfileを指定すると、そのファイルを使って Upgradeが実行されます。
+    ///   </para>
+    /// </remarks>
     public SectionIniFile(string filename, Encoding enc, string distfile = null) {
         m_mutex = new object();
         m_filename = filename;
@@ -40,6 +51,16 @@ public class SectionIniFile {
     ///   INIファイルを読み取り、データベースを作成する。
     ///   デフォルトエンコーディング版。
     /// </summary>
+    /// <param name="filename">ファイル名</param>
+    /// <param name="distfile">INIファイルのテンプレート (optional)</param>
+    /// <remarks>
+    ///   <para>
+    ///     指定ファイルが存在していなくてもコンストラクションは成功します。
+    ///     この場合、のちにWriteを実行するとそのファイルが作成されます。
+    ///     文字エンコードは FileUtil.DefaultEncoding が使われます。
+    ///     distfileを指定すると、そのファイルを使って Upgradeが実行されます。
+    ///   </para>
+    /// </remarks>
     public SectionIniFile(string filename, string distfile = null) {
         m_mutex = new object();
         m_filename = filename;
