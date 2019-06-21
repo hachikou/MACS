@@ -68,6 +68,7 @@ public class IniFile {
     /// </summary>
     public string FileName {
         get { return m_filename; }
+        set { m_filename = value; }
     }
 
     /// <summary>
@@ -295,7 +296,7 @@ public class IniFile {
     }
 
 
-    private readonly string m_filename;
+    private string m_filename;
     private readonly Encoding m_enc;
     private Dictionary<string, string> m_data;
     private string m_sectionname;
