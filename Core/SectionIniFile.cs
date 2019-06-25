@@ -18,7 +18,7 @@ namespace MACS {
 /// </summary>
 public class SectionIniFile {
 
-    private readonly string m_filename;
+    private string m_filename;
     private readonly Encoding m_enc;
     private SortedDictionary<string, IniFile> m_section;
     private DateTime m_lasttime;
@@ -49,6 +49,7 @@ public class SectionIniFile {
     /// </summary>
     public string FileName {
         get { return m_filename; }
+        set { m_filename = value; }
     }
 
     /// <summary>
