@@ -690,8 +690,13 @@ public class DBCon : Loggable, IDisposable {
     ///   トランザクション開始
     /// </summary>
     public void Begin() {
-        if(con == null)
-            return;
+        if(con == null) {
+            if(ignoreexception) {
+                logErr("Failed to start transaction (DB connection is lost)");
+                return;
+            }
+            throw new DBConException("Failed to start transaction (DB connection is lost)");
+        }
         lock(con) {
             if(inTransaction)
                 return;
@@ -704,8 +709,13 @@ public class DBCon : Loggable, IDisposable {
     ///   トランザクションコミット
     /// </summary>
     public void Commit() {
-        if(con == null)
+        if(con == null) {
+            if(ignoreexception) {
+                logErr("DB connection has been lost while commiting");
+                return;
+            }
             throw new DBConException("DB connection has been lost while commiting");
+        }
         lock(con) {
             if(reader != null) {
                 reader.Close();
