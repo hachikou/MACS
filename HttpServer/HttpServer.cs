@@ -837,9 +837,7 @@ public class HttpServer : Loggable {
                                 Cookie sessid = context.Request.Cookies[m_servername+"-SID"];
                                 ObjectDictionary sess;
                                 lock(m_sessiondict){
-                                    if((sessid != null) && m_sessiondict.ContainsKey(sessid.Value)){
-                                        sess = m_sessiondict[sessid.Value];
-                                    }else{
+                                    if((sessid == null) || !m_sessiondict.TryGetValue(sessid.Value, out sess)){
                                         sessid = new Cookie(m_servername+"-SID", m_rand.Next(9999999).ToString()+m_rand.Next(9999999).ToString());
                                         sess = new ObjectDictionary();
                                         m_sessiondict[sessid.Value] = sess;
@@ -897,8 +895,8 @@ public class HttpServer : Loggable {
 
             if(status == 0){
                 // ルート静的ページを探す
-                if(m_staticpagelist.ContainsKey("/")){
-                    HttpStaticPage pg = m_staticpagelist["/"];
+                HttpStaticPage pg;
+                if(m_staticpagelist.TryGetValue("/", out pg)) {
                     if(context.Request.HttpMethod == "GET"){
                         lock(pg){
                             pg.SetLogger(this.Logger);

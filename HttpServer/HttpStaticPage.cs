@@ -179,10 +179,10 @@ public class HttpStaticPage : HttpNlsSupport {
                 if(m_ext_type == null)
                     SetDefaultContentTypeList();
                 string ext_ = ext.ToLower();
-                if(m_ext_type.ContainsKey(ext_))
-                    Response.ContentType = m_ext_type[ext_];
-                else
-                    Response.ContentType = default_contenttype;
+                string contenttype;
+                if(!m_ext_type.TryGetValue(ext_, out contenttype))
+                    contenttype = default_contenttype;
+                Response.ContentType = contenttype;
             }else{
                 Response.ContentType = m_contenttype;
             }

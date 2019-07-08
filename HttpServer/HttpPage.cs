@@ -599,8 +599,9 @@ public class HttpPage : HtmlTool, IDisposable {
     public HttpPostedFile FetchFile(string name) {
         if(m_fileform == null)
             FetchForm();
-        if(m_fileform.ContainsKey(name))
-            return m_fileform[name];
+        HttpPostedFile f;
+        if(m_fileform.TryGetValue(name, out f))
+            return f;
         return null;
     }
 

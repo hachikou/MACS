@@ -497,12 +497,12 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
 
     private int CommandInclude(string line, int index, TemplateContext tc, string commandname, string param){
         ObjectDictionary args = ObjectDictionary.FromString(param);
+        object obj;
         string fname = null;
-        if(args.ContainsKey("0"))
-            fname = args["0"].ToString();
-        else if(args.ContainsKey("file"))
-            fname = args["file"].ToString();
-        if(string.IsNullOrEmpty(fname)){
+        if(args.TryGetValue("0", out obj) || args.TryGetValue("file", out obj)) {
+            fname = obj.ToString();
+        }
+        if(String.IsNullOrEmpty(fname)) {
             LOG_ERR(string.Format("Error: {0}{1}{2} directive must have filename argument.", m_commandprefix, commandname, m_commandpostfix));
             return index;
         }
@@ -534,17 +534,14 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
 
     private int CommandAssign(string line, int index, TemplateContext tc, string commandname, string param){
         ObjectDictionary args = ObjectDictionary.FromString(param);
+        object obj;
         string variable = null;
-        if(args.ContainsKey("0"))
-            variable = args["0"].ToString();
-        else if(args.ContainsKey("var"))
-            variable = args["var"].ToString();
+        if(args.TryGetValue("0", out obj) || args.TryGetValue("var", out obj))
+            variable = obj.ToString();
 
         string value = null;
-        if(args.ContainsKey("1"))
-            value = args["1"].ToString();
-        else if(args.ContainsKey("value"))
-            value = args["value"].ToString();
+        if(args.TryGetValue("1", out obj) || args.TryGetValue("value", out obj))
+            value = obj.ToString();
 
         if((variable == null) || (value == null)){
             LOG_ERR(string.Format("Error: Invalid syntax, should be '{0}{1} var-name expression{2}'", m_commandprefix, commandname, m_commandpostfix));
@@ -558,36 +555,37 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
         string contents;
         index = Capture(line, index, m_commandprefix+commandname, m_commandprefix+"end"+commandname+m_commandpostfix, out contents);
         ObjectDictionary args = ObjectDictionary.FromString(param);
+        object obj;
         string variable = null;
-        if(args.ContainsKey("0"))
-            variable = args["0"].ToString();
-        else if(args.ContainsKey("var"))
-            variable = args["var"].ToString();
+        if(args.TryGetValue("0", out obj) || args.TryGetValue("var", out obj))
+            variable = obj.ToString();
 
         string list = null;
-        if(args.ContainsKey("1") && (args["1"].ToString() == "in") && args.ContainsKey("2"))
-            list = args["2"].ToString();
-        else if(args.ContainsKey("list"))
-            list = args["list"].ToString();
+        if(args.TryGetValue("1", out obj) && (obj.ToString() == "in")) {
+            if(args.TryGetValue("2", out obj))
+                list = obj.ToString();
+        } else if(args.TryGetValue("list", out obj)) {
+            list = obj.ToString();
+        }
 
         string countvar = null;
-        if(args.ContainsKey("count"))
-            countvar = args["count"].ToString();
+        if(args.TryGetValue("count", out obj))
+            countvar = obj.ToString();
         int countstart = 1;
-        if(args.ContainsKey("countstart")) {
-            object countstartobj = tc.dict.GetObject(args["countstart"].ToString());
+        if(args.TryGetValue("countstart", out obj)) {
+            object countstartobj = tc.dict.GetObject(obj.ToString());
             if(countstartobj != null)
                 countstart = StringUtil.ToInt(countstartobj.ToString(), countstart);
         }
         string indexvar = null;
-        if(args.ContainsKey("index"))
-            indexvar = args["index"].ToString();
+        if(args.TryGetValue("index", out obj))
+            indexvar = obj.ToString();
         string evenvar = null;
-        if(args.ContainsKey("even"))
-            evenvar = args["even"].ToString();
+        if(args.TryGetValue("even", out obj))
+            evenvar = obj.ToString();
         string oddvar = null;
-        if(args.ContainsKey("odd"))
-            oddvar = args["odd"].ToString();
+        if(args.TryGetValue("odd", out obj))
+            oddvar = obj.ToString();
 
         if(string.IsNullOrEmpty(variable) || string.IsNullOrEmpty(list)){
             LOG_ERR(string.Format("Error: Invalid syntax, should be '{0}{1} var-name in list-variable {2}'", m_commandprefix, commandname, m_commandpostfix));
@@ -604,8 +602,8 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
         }
         TemplateContext innertc = new TemplateContext(tc.sb, tc.dict);
         int i = 0;
-        foreach(object obj in (listobj as IEnumerable)) {
-            innertc.dict[variable] = obj;
+        foreach(object elem in (listobj as IEnumerable)) {
+            innertc.dict[variable] = elem;
             if(!String.IsNullOrEmpty(countvar))
                 innertc.dict[countvar] = i+countstart;
             if(!String.IsNullOrEmpty(indexvar))
@@ -629,11 +627,10 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
         string contents;
         index = Capture(line, index, m_commandprefix+commandname, m_commandprefix+"end"+commandname+m_commandpostfix, out contents);
         ObjectDictionary args = ObjectDictionary.FromString(param);
+        object obj;
         string variable = null;
-        if(args.ContainsKey("0"))
-            variable = args["0"].ToString();
-        else if(args.ContainsKey("var"))
-            variable = args["var"].ToString();
+        if(args.TryGetValue("0", out obj) || args.TryGetValue("var", out obj))
+            variable = obj.ToString();
 
         if(string.IsNullOrEmpty(variable)){
             LOG_ERR(string.Format("Error: Invalid syntax, should be '{0}{1} var-name{2}'", m_commandprefix, commandname, m_commandpostfix));
@@ -650,17 +647,16 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
 
     private int CommandExtract(string line, int index, TemplateContext tc, string commandname, string param){
         ObjectDictionary args = ObjectDictionary.FromString(param);
+        object obj;
         string variable = null;
-        if(args.ContainsKey("0"))
-            variable = args["0"].ToString();
-        else if(args.ContainsKey("var"))
-            variable = args["var"].ToString();
+        if(args.TryGetValue("0", out obj) || args.TryGetValue("var", out obj))
+            variable = obj.ToString();
 
         if(string.IsNullOrEmpty(variable)){
             LOG_ERR(string.Format("Error: Invalid syntax, should be '{0}{1} var-name{2}'", m_commandprefix, commandname, m_commandpostfix));
             return index;
         }
-        object obj = tc.dict.GetObject(variable);
+        obj = tc.dict.GetObject(variable);
         if(obj == null){
             LOG_ERR(string.Format("Error: Object {0} is not assigned.", variable));
             return index;
