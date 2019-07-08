@@ -503,7 +503,10 @@ public class HttpServer : Loggable {
     /// <summary>
     ///   既に動いているHTTPサーバを停止する。
     /// </summary>
-    public void Stop() {
+    /// <param name="timeout">停止を待つ最大時間（ミリ秒）。0を指定すると全く待たない</param>
+    public void Stop(int timeout=Int32.MaxValue) {
+        Stopwatch sw = new Stopwatch();
+        sw.Start();
         m_stoprequest = true;
         if(m_listener != null){
             try {
@@ -512,7 +515,7 @@ public class HttpServer : Loggable {
                 // just ignore.
             }
         }
-        while(IsRunning){
+        while(IsRunning && (sw.ElapsedMilliseconds < timeout)){
             Thread.Sleep(50);
         }
     }
