@@ -22,7 +22,7 @@ namespace MACS.HttpServer {
 /// <summary>
 ///   HTTPサーバ
 /// </summary>
-public class HttpServer : Loggable {
+public class HttpServer : Loggable, IDisposable {
 
     /// <summary>
     ///   サーバ名
@@ -170,6 +170,20 @@ public class HttpServer : Loggable {
             m_rand = new Random(DateTime.Now.Millisecond);
         m_pagecount = 0;
         m_listening = false;
+    }
+
+    /// <summary>
+    ///   デストラクタ
+    /// </summary>
+    ~HttpServer() {
+        Dispose();
+    }
+
+    /// <summary>
+    ///   アンマネージドな資源開放
+    /// </summary>
+    public void Dispose() {
+        Stop();
     }
 
     /// <summary>
@@ -505,6 +519,8 @@ public class HttpServer : Loggable {
     /// </summary>
     /// <param name="timeout">停止を待つ最大時間（ミリ秒）。0を指定すると全く待たない</param>
     public void Stop(int timeout=Int32.MaxValue) {
+        if(!IsRunning)
+            return;
         Stopwatch sw = new Stopwatch();
         sw.Start();
         m_stoprequest = true;
