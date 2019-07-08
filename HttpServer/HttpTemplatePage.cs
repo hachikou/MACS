@@ -85,6 +85,13 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
         RegisterCommand("extract", new Command(this.CommandExtract));
     }
 
+    /// <summary>
+    ///   初期化（テンプレートディレクトリ指定）
+    /// </summary>
+    public HttpTemplatePage(string dir) : this() {
+        if(dir != null)
+            m_dir = dir;
+    }
 
     /// <summary>
     ///   テンプレート変数の値定義
