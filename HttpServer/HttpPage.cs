@@ -287,6 +287,8 @@ public class HttpPage : HtmlTool, IDisposable {
     /// </summary>
     /// <param name="statuscode">HTTPステータスコード</param>
     protected void Render(int statuscode) {
+        if((statuscode < 100) || (statuscode > 999))
+            statuscode = 500;
         HttpListenerRequest req = m_context.Request;
         Response.StatusCode = statuscode;
         string body = null;

@@ -11,9 +11,10 @@ public class ScssPage : HttpStaticPage {
     public string CssDir = "/css/";
     public string ScssDir = "/sass/";
     public Encoding CssEncoding = new UTF8Encoding(false);
+    public ScssOptions Options = new ScssOptions();
 
     public ScssPage(string path) : base(path){}
-
+    
     public override void PageLoad(string param) {
         
         // .cssファイルが要求されていないときは普通のStaticPageとして処理する
@@ -23,11 +24,9 @@ public class ScssPage : HttpStaticPage {
             string scssfile = fname.Replace(CssDir, ScssDir).Replace(".css", ".scss");
             if(File.Exists(scssfile) && (ForceCompile || !File.Exists(fname) || (File.GetLastWriteTime(fname) < File.GetLastWriteTime(scssfile)))) {
                 // .scssファイルを.cssファイルにコンパイルする
-                var result = Scss.ConvertFileToCss(scssfile, new ScssOptions(){
-                        InputFile = scssfile,
-                        OutputFile = fname,
-                        GenerateSourceMap = true
-                    });
+                Options.InputFile = scssfile;
+                Options.OutputFile = fname;
+                var result = Scss.ConvertFileToCss(scssfile, Options);
                 using(StreamWriter sw = FileUtil.Writer(fname, CssEncoding)) {
                     if(sw == null)
                         throw new IOException(String.Format("Can't write to {0}", fname));
