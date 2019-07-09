@@ -10,7 +10,7 @@ SRCS = 	HttpServer.cs HttpPage.cs HttpBuiltinContentsSupport.cs HttpNlsSupport.c
 	HttpProxy.cs ScssPage.cs
 LIBDIR = ..
 LOCALLIBS = $(LIBDIR)/MACS.dll
-IMPORTLIBS = SharpScss.dll
+IMPORTLIBS = SharpScss/SharpScss.dll
 LIBS = $(LOCALLIBS) System.Web.dll System.Drawing.dll $(IMPORTLIBS)
 DOXFILES = Index.dox examples/Example.dox
 DOCDIR = ../doc/HttpServer
