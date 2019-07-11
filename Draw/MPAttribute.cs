@@ -29,15 +29,17 @@ public class MPAttribute : CascadedAttribute {
         return ColorUtil.Get(cname, defValue);
     }
 
+    public TextureBrush GetTextureBrush(string filepath) {
+        if(!File.Exists(filepath))
+            return null;
+        return new TextureBrush(Image.FromFile(filepath));
+    }
+
     public TextureBrush GetTextureBrush(string name, string defaultPath) {
         string cname = Get(name);
         if(String.IsNullOrEmpty(cname))
             return null;
-        string filepath = Path.Combine(defaultPath, cname);
-        if (!File.Exists(filepath)) {
-            return null;
-        }
-        return new TextureBrush(Image.FromFile(filepath));
+        return GetTextureBrush(Path.Combine(defaultPath, cname));
     }
 
     public Font GetFont(Font defFont, string key="") {
