@@ -182,6 +182,8 @@ public class HttpStaticPage : HttpNlsSupport {
                 string contenttype;
                 if(!m_ext_type.TryGetValue(ext_, out contenttype))
                     contenttype = default_contenttype;
+                if(contenttype.StartsWith("text/") && (m_encoding == Encoding.UTF8))
+                    contenttype += "; charset=utf-8";
                 Response.ContentType = contenttype;
             }else{
                 Response.ContentType = m_contenttype;
