@@ -2912,6 +2912,21 @@ public class DBTable {
 #region テーブルの作り直し
 
     /// <summary>
+    ///   現在のテーブル定義通りのカラムがDBテーブルに存在するか確認する
+    /// </summary>
+    public bool NeedsRenovation() {
+        if(joinList != null)
+            throw new ArgumentException("Can't renovate joined tables");
+        this.SetAllColumns();
+        try {
+            Get(1); // ダミーで全項目をQueryしてみる
+        } catch(DbException) {
+            return true;
+        }
+        return false;
+    }
+
+    /// <summary>
     ///   現在のテーブル定義に従って既存のDBテーブルを作り直す
     /// </summary>
     /// <remarks>
@@ -2923,6 +2938,8 @@ public class DBTable {
     ///   </para>
     /// </remarks>
     public void Renovate() {
+        if(joinList != null)
+            throw new ArgumentException("Can't renovate joined tables");
         string tmptblname = "tmp_"+def.Name;
         bool hasOld = false;
         dbcon.LOG_NOTICE("Upgrade table schema for {0}", def.Name);
