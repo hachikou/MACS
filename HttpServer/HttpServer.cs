@@ -22,7 +22,7 @@ namespace MACS.HttpServer {
 /// <summary>
 ///   HTTPサーバ
 /// </summary>
-public class HttpServer : Loggable {
+public class HttpServer : Loggable, IDisposable {
 
     /// <summary>
     ///   サーバ名
@@ -170,6 +170,20 @@ public class HttpServer : Loggable {
             m_rand = new Random(DateTime.Now.Millisecond);
         m_pagecount = 0;
         m_listening = false;
+    }
+
+    /// <summary>
+    ///   デストラクタ
+    /// </summary>
+    ~HttpServer() {
+        Dispose();
+    }
+
+    /// <summary>
+    ///   アンマネージドな資源開放
+    /// </summary>
+    public void Dispose() {
+        Stop();
     }
 
     /// <summary>
@@ -503,7 +517,12 @@ public class HttpServer : Loggable {
     /// <summary>
     ///   既に動いているHTTPサーバを停止する。
     /// </summary>
-    public void Stop() {
+    /// <param name="timeout">停止を待つ最大時間（ミリ秒）。0を指定すると全く待たない</param>
+    public void Stop(int timeout=Int32.MaxValue) {
+        if(!IsRunning)
+            return;
+        Stopwatch sw = new Stopwatch();
+        sw.Start();
         m_stoprequest = true;
         if(m_listener != null){
             try {
@@ -512,7 +531,7 @@ public class HttpServer : Loggable {
                 // just ignore.
             }
         }
-        while(IsRunning){
+        while(IsRunning && (sw.ElapsedMilliseconds < timeout)){
             Thread.Sleep(50);
         }
     }
@@ -834,9 +853,7 @@ public class HttpServer : Loggable {
                                 Cookie sessid = context.Request.Cookies[m_servername+"-SID"];
                                 ObjectDictionary sess;
                                 lock(m_sessiondict){
-                                    if((sessid != null) && m_sessiondict.ContainsKey(sessid.Value)){
-                                        sess = m_sessiondict[sessid.Value];
-                                    }else{
+                                    if((sessid == null) || !m_sessiondict.TryGetValue(sessid.Value, out sess)){
                                         sessid = new Cookie(m_servername+"-SID", m_rand.Next(9999999).ToString()+m_rand.Next(9999999).ToString());
                                         sess = new ObjectDictionary();
                                         m_sessiondict[sessid.Value] = sess;
@@ -894,8 +911,8 @@ public class HttpServer : Loggable {
 
             if(status == 0){
                 // ルート静的ページを探す
-                if(m_staticpagelist.ContainsKey("/")){
-                    HttpStaticPage pg = m_staticpagelist["/"];
+                HttpStaticPage pg;
+                if(m_staticpagelist.TryGetValue("/", out pg)) {
                     if(context.Request.HttpMethod == "GET"){
                         lock(pg){
                             pg.SetLogger(this.Logger);

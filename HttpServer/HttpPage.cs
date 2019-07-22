@@ -287,6 +287,8 @@ public class HttpPage : HtmlTool, IDisposable {
     /// </summary>
     /// <param name="statuscode">HTTPステータスコード</param>
     protected void Render(int statuscode) {
+        if((statuscode < 100) || (statuscode > 999))
+            statuscode = 500;
         HttpListenerRequest req = m_context.Request;
         Response.StatusCode = statuscode;
         string body = null;
@@ -599,8 +601,9 @@ public class HttpPage : HtmlTool, IDisposable {
     public HttpPostedFile FetchFile(string name) {
         if(m_fileform == null)
             FetchForm();
-        if(m_fileform.ContainsKey(name))
-            return m_fileform[name];
+        HttpPostedFile f;
+        if(m_fileform.TryGetValue(name, out f))
+            return f;
         return null;
     }
 
