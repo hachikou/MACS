@@ -105,6 +105,20 @@ public class DropDown : TranslatableWebControl {
     }
 
     /// <summary>
+    ///   選択されている項目の表示文字列
+    /// </summary>
+    public string Text {
+        get {
+            string v = (Value == null)?"":Value.ToString();
+            for(int i = 0; i < Values.Length; i++){
+                if(Values[i] == v)
+                    return Labels[i];
+            }
+            return "";
+        }
+    }
+    
+    /// <summary>
     ///   変更時に呼び出されるJavaScript
     /// </summary>
     public string OnChange;
