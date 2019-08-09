@@ -909,20 +909,16 @@ public class HttpServer : Loggable, IDisposable {
                 }
             }
 
-            if(status == 0){
+            if((status == 0) && (context.Request.HttpMethod == "GET")) {
                 // ルート静的ページを探す
                 HttpStaticPage pg;
                 if(m_staticpagelist.TryGetValue("/", out pg)) {
-                    if(context.Request.HttpMethod == "GET"){
-                        lock(pg){
-                            pg.SetLogger(this.Logger);
-                            pg.SetServerContext(this, context, path);
-                            pg.PageLoad(path);
-                        }
-                        status = 200;
-                    }else{
-                        status = 405;
+                    lock(pg){
+                        pg.SetLogger(this.Logger);
+                        pg.SetServerContext(this, context, path);
+                        pg.PageLoad(path);
                     }
+                    status = 200;
                 }
             }
 
