@@ -35,6 +35,53 @@ public class DropDown : TranslatableWebControl {
     public string[] Labels;
 
     /// <summary>
+    ///   値がすでに存在するかどうか
+    /// </summary>
+    public bool ContainsValue(string txt) {
+        if(Values == null)
+            return false;
+        foreach(string x in Values) {
+            if(x == txt)
+                return true;
+        }
+        return false;
+    }
+
+    /// <summary>
+    ///   表示文字列がすでに存在するかどうか
+    /// </summary>
+    public bool ContainsLabel(string txt) {
+        if(Labels == null)
+            return false;
+        foreach(string x in Labels) {
+            if(x == txt)
+                return true;
+        }
+        return false;
+    }
+
+    /// <summary>
+    ///   表示文字列、値を追加する
+    /// </summary>
+    public void AddItem(string label, string value) {
+        if((Labels == null) || (Values == null)) {
+            Labels = new string[1]{label};
+            Values = new string[1]{value};
+            return;
+        }
+        string[] xlabels = new string[Labels.Length+1];
+        string[] xvalues = new string[Values.Length+1];
+        for(int i = 0; i < Labels.Length; i++)
+            xlabels[i] = Labels[i];
+        for(int i = 0; i < Values.Length; i++)
+            xvalues[i] = Values[i];
+        xlabels[xlabels.Length-1] = label;
+        xvalues[xvalues.Length-1] = value;
+        Labels = xlabels;
+        Values = xvalues;
+    }
+
+    /// <summary>
     ///   全ての値と表示文字列のペアを "値:表示文字列,値:表示文字列,..."という文字列にまとめたもの
     /// </summary>
     public string List {
