@@ -1,5 +1,6 @@
 TARGET = MACS.dll
-SRCS = UnixTime.cs StringUtil.cs NetworkByteOrder.cs ByteUtil.cs SimpleCipher.cs\
+SRCS = UnixTime.cs StringUtil.cs NetworkByteOrder.cs ByteUtil.cs\
+       SimpleCipher.cs ComplexCipher.cs\
        FileUtil.cs IniFile.cs SectionIniFile.cs\
        Ipaddr.cs IpaddrRange.cs Hwaddr.cs HwaddrRange.cs\
        OpeLog.cs Loggable.cs StaticLoggable.cs ObjectDictionary.cs\
