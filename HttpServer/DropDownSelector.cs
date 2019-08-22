@@ -41,6 +41,18 @@ public class DropDownSelector<T> : TranslatableWebControl
     }
 
     /// <summary>
+    ///   選択された値の表示名。
+    /// </summary>
+    public string SelectedText {
+        get {
+            string vv;
+            if((Text == null) || !Text.TryGetValue(Selected, out vv))
+                vv = _(typeof(T).Name+"."+Selected.ToString());
+            return vv;
+        }
+    }
+
+    /// <summary>
     ///   選択肢に含まない項目を指定する
     /// </summary>
     public void SetException(params T[] ex) {
