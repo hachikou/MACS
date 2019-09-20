@@ -58,41 +58,41 @@ public class DateSelector : TranslatableWebControl {
     public string OnChange;
     
     /// <summary>
-    /// 　年の選択表示
-    /// 　<remarks>
-    /// 　　true:プルダウン表示 false:プルダウン非表示
-    /// 　</remarks>
+    ///   年の選択表示
+    ///   <remarks>
+    ///     true:プルダウン表示 false:プルダウン非表示
+    ///   </remarks>
     /// </summary>
     public bool ShowYear= true; 
 
     /// <summary>
-    /// 　月の選択表示
-    /// 　<remarks>
-    /// 　　true:プルダウン表示 false:プルダウン非表示
-    /// 　</remarks>
+    ///   月の選択表示
+    ///   <remarks>
+    ///     true:プルダウン表示 false:プルダウン非表示
+    ///   </remarks>
     /// </summary>
     public bool ShowMonth = true; 
 
     /// <summary>
-    /// 　日の選択表示
-    /// 　<remarks>
-    /// 　　true:プルダウン表示 false:プルダウン非表示
-    /// 　</remarks>
+    ///   日の選択表示
+    ///   <remarks>
+    ///     true:プルダウン表示 false:プルダウン非表示
+    ///   </remarks>
     /// </summary>
     public bool ShowDay = true; 
     
     /// <summary>
-    /// 　年のフォーマット
+    ///   年のフォーマット
     /// </summary>
     public string YearFormat = null;
     
     /// <summary>
-    /// 　月のフォーマット
+    ///   月のフォーマット
     /// </summary>
     public string MonthFormat = null;
     
     /// <summary>
-    /// 　日のフォーマット
+    ///   日のフォーマット
     /// </summary>
     public string DayFormat = null;
 
@@ -104,45 +104,39 @@ public class DateSelector : TranslatableWebControl {
             Name = "DateSelector";
         }
         if(!Visible) {
-            if(ShowYear) {
-                sb.Append("<input type=\"hidden\" name=\"");
-                sb.Append(Name+"Year");
-                sb.Append("\" value=\"");
-                sb.Append(Selected.Year.ToString());
+            sb.Append("<input type=\"hidden\" name=\"");
+            sb.Append(Name+"Year");
+            sb.Append("\" value=\"");
+            sb.Append(Selected.Year.ToString());
+            sb.Append("\"");
+            if(!String.IsNullOrEmpty(ID)) {
+                sb.Append(" id=\"");
+                sb.Append(ID+"Year");
                 sb.Append("\"");
-                if(!String.IsNullOrEmpty(ID)) {
-                    sb.Append(" id=\"");
-                    sb.Append(ID+"Year");
-                    sb.Append("\"");
-                }
-                sb.Append("/>");
             }
-            if(ShowMonth) {
-                sb.Append("<input type=\"hidden\" name=\"");
-                sb.Append(Name+"Month");
-                sb.Append("\" value=\"");
-                sb.Append(Selected.Month.ToString());
+            sb.Append("/>");
+            sb.Append("<input type=\"hidden\" name=\"");
+            sb.Append(Name+"Month");
+            sb.Append("\" value=\"");
+            sb.Append(Selected.Month.ToString());
+            sb.Append("\"");
+            if(!String.IsNullOrEmpty(ID)) {
+                sb.Append(" id=\"");
+                sb.Append(ID+"Month");
                 sb.Append("\"");
-                if(!String.IsNullOrEmpty(ID)) {
-                    sb.Append(" id=\"");
-                    sb.Append(ID+"Month");
-                    sb.Append("\"");
-                }
-                sb.Append("/>");
             }
-            if(ShowDay) {
-                sb.Append("<input type=\"hidden\" name=\"");
-                sb.Append(Name+"Day");
-                sb.Append("\" value=\"");
-                sb.Append(Selected.Day.ToString());
+            sb.Append("/>");
+            sb.Append("<input type=\"hidden\" name=\"");
+            sb.Append(Name+"Day");
+            sb.Append("\" value=\"");
+            sb.Append(Selected.Day.ToString());
+            sb.Append("\"");
+            if(!String.IsNullOrEmpty(ID)) {
+                sb.Append(" id=\"");
+                sb.Append(ID+"Day");
                 sb.Append("\"");
-                if(!String.IsNullOrEmpty(ID)) {
-                    sb.Append(" id=\"");
-                    sb.Append(ID+"Day");
-                    sb.Append("\"");
-                }
-                sb.Append("/>");
             }
+            sb.Append("/>");
             return sb;
         }
         sb.Append("<span class=\"dateselector");
@@ -207,6 +201,18 @@ public class DateSelector : TranslatableWebControl {
             if(!String.IsNullOrEmpty(yearSeparator)) {
                 sb.Append(" "+yearSeparator+" ");
             }
+        } else {
+            sb.Append("<input type=\"hidden\" name=\"");
+            sb.Append(Name+"Year");
+            sb.Append("\" value=\"");
+            sb.Append(Selected.Year.ToString());
+            sb.Append("\"");
+            if(!String.IsNullOrEmpty(ID)) {
+                sb.Append(" id=\"");
+                sb.Append(ID+"Year");
+                sb.Append("\"");
+            }
+            sb.Append("/>");
         }
 
         if(ShowMonth) {
@@ -233,6 +239,18 @@ public class DateSelector : TranslatableWebControl {
             if(!String.IsNullOrEmpty(monthSeparator)) {
                 sb.Append(" "+monthSeparator+" ");
             }
+        } else {
+            sb.Append("<input type=\"hidden\" name=\"");
+            sb.Append(Name+"Month");
+            sb.Append("\" value=\"");
+            sb.Append(Selected.Month.ToString());
+            sb.Append("\"");
+            if(!String.IsNullOrEmpty(ID)) {
+                sb.Append(" id=\"");
+                sb.Append(ID+"Month");
+                sb.Append("\"");
+            }
+            sb.Append("/>");
         }
 
         if(ShowDay) {
@@ -256,6 +274,18 @@ public class DateSelector : TranslatableWebControl {
                 sb.Append("</option>");
             }
             sb.Append("</select>");
+        } else {
+            sb.Append("<input type=\"hidden\" name=\"");
+            sb.Append(Name+"Day");
+            sb.Append("\" value=\"");
+            sb.Append(Selected.Day.ToString());
+            sb.Append("\"");
+            if(!String.IsNullOrEmpty(ID)) {
+                sb.Append(" id=\"");
+                sb.Append(ID+"Day");
+                sb.Append("\"");
+            }
+            sb.Append("/>");
         }
 
         sb.Append("</span>");
