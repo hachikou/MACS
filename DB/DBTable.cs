@@ -2462,7 +2462,7 @@ public class DBTable {
     ///     ただし、"!"で始まる文字列を指定した場合は"!"よりあとの文字列がそのまま使われる。（他項目の値を指定する時等に利用する。）
     ///   </para>
     /// </remarks>
-    public int Update(string[] rec) {
+    public int Update(params string[] rec) {
         if(sqlcolumns == null)
             sqlcolumns = Columns;
         return Update(sqlcolumns, rec);
