@@ -133,20 +133,22 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
     /// <summary>
     ///   WebControlフィールドを全部自動的にAssignする。
     /// </summary>
-    protected void AssignWebControls() {
-        foreach(FieldInfo fi in GetType().GetFields(BindingFlags.Instance|BindingFlags.Public|BindingFlags.NonPublic|BindingFlags.FlattenHierarchy)){
+    protected void AssignWebControls(object obj=null) {
+        if(obj == null)
+            obj = this;
+        foreach(FieldInfo fi in obj.GetType().GetFields(BindingFlags.Instance|BindingFlags.Public|BindingFlags.NonPublic|BindingFlags.FlattenHierarchy)){
             if(!fi.FieldType.IsSubclassOf(typeof(WebControl)))
                 continue;
-            WebControl i = (WebControl)(fi.GetValue(this));
+            WebControl i = (WebControl)(fi.GetValue(obj));
             if(i == null){
                 i = (WebControl)(fi.FieldType.GetConstructor(Type.EmptyTypes).Invoke(null));
-                fi.SetValue(this, i);
+                fi.SetValue(obj, i);
             }
-            if((fi.Name != null) && (fi.Name != "")) {
+            if(String.IsNullOrEmpty(i.Name))
                 i.Name = fi.Name;
-                Assign(fi.Name, i);
-            }
-            if(i is TranslatableWebControl) {
+            if(!String.IsNullOrEmpty(i.Name))
+                Assign(i.Name, i);
+            if((i is TranslatableWebControl) && ((i as TranslatableWebControl).Translator == null)) {
                 (i as TranslatableWebControl).Translator = this;
             }
         }
