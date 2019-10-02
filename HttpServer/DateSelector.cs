@@ -67,7 +67,7 @@ public class DateSelector : TranslatableWebControl {
     /// </summary>
     public string Text {
         get {
-            string yearFormat = YearFormat??_("DateSelector.YearFormat");
+            string yearFormat = YearFormat ?? _("DateSelector.YearFormat");
             string yearSeparator = "";
             if(!yearFormat.Contains("{0}")) {
                 yearFormat = "{0}";
@@ -76,7 +76,7 @@ public class DateSelector : TranslatableWebControl {
                     yearSeparator = "/";
                 }
             }
-            string monthFormat = MonthFormat??_("DateSelector.MonthFormat");
+            string monthFormat = MonthFormat ?? _("DateSelector.MonthFormat");
             string monthSeparator = "";
             if(!monthFormat.Contains("{0}")) {
                 monthFormat = "{0}";
@@ -85,7 +85,7 @@ public class DateSelector : TranslatableWebControl {
                     monthSeparator = "/";
                 }
             }
-            string dayFormat = DayFormat??_("DateSelector.DayFormat");
+            string dayFormat = DayFormat ?? _("DateSelector.DayFormat");
             if(!dayFormat.Contains("{0}")) {
                 dayFormat = "{0}";
             }
@@ -217,7 +217,7 @@ public class DateSelector : TranslatableWebControl {
         }
         sb.Append(">");
 
-        string yearFormat = YearFormat??_("DateSelector.YearFormat");
+        string yearFormat = YearFormat ?? _("DateSelector.YearFormat");
         string yearSeparator = "";
         if(!yearFormat.Contains("{0}")) {
             yearFormat = "{0}";
@@ -227,7 +227,7 @@ public class DateSelector : TranslatableWebControl {
                 yearSeparator = "/";
             }
         }
-        string monthFormat = MonthFormat??_("DateSelector.MonthFormat");
+        string monthFormat = MonthFormat ?? _("DateSelector.MonthFormat");
         string monthSeparator = "";
         if(!monthFormat.Contains("{0}")) {
             monthFormat = "{0}";
@@ -237,7 +237,7 @@ public class DateSelector : TranslatableWebControl {
                 monthSeparator = "/";
             }
         }
-        string dayFormat = DayFormat??_("DateSelector.DayFormat");
+        string dayFormat = DayFormat ?? _("DateSelector.DayFormat");
         if(!dayFormat.Contains("{0}")) {
             dayFormat = "{0}";
         }
