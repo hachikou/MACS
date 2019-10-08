@@ -27,9 +27,29 @@ public class DateSelector : TranslatableWebControl {
     public DateSelector() : base() {}
 
     /// <summary>
+    ///   コンストラクタ
+    /// </summary>
+    public DateSelector(string name, string id) : base(name, id) {}
+
+    /// <summary>
+    ///   コンストラクタ
+    /// </summary>
+    public DateSelector(string name) : base(name) {}
+
+    /// <summary>
     ///   翻訳機指定コンストラクタ
     /// </summary>
     public DateSelector(Translatable tr) : base(tr) {}
+
+    /// <summary>
+    ///   翻訳機指定コンストラクタ
+    /// </summary>
+    public DateSelector(string name, string id, Translatable tr) : base(name, id, tr) {}
+
+    /// <summary>
+    ///   翻訳機指定コンストラクタ
+    /// </summary>
+    public DateSelector(string name, Translatable tr) : base(name, tr) {}
 
     /// <summary>
     ///   選択された値。Valueと同じだが、DateTimeにキャストされている
@@ -40,6 +60,51 @@ public class DateSelector : TranslatableWebControl {
                 return new DateTime(0);
             return (DateTime)Value; }
         set { Value = value; }
+    }
+
+    /// <summary>
+    ///   選択された値の表示文字列
+    /// </summary>
+    public string Text {
+        get {
+            string yearFormat = YearFormat ?? _("DateSelector.YearFormat");
+            string yearSeparator = "";
+            if(!yearFormat.Contains("{0}")) {
+                yearFormat = "{0}";
+                //月、または日を表示する場合、セパレータ文字を設定する
+                if(ShowMonth || ShowDay) {
+                    yearSeparator = "/";
+                }
+            }
+            string monthFormat = MonthFormat ?? _("DateSelector.MonthFormat");
+            string monthSeparator = "";
+            if(!monthFormat.Contains("{0}")) {
+                monthFormat = "{0}";
+                //日を表示する場合、セパレータ文字を設定する
+                if(ShowDay) {
+                    monthSeparator = "/";
+                }
+            }
+            string dayFormat = DayFormat ?? _("DateSelector.DayFormat");
+            if(!dayFormat.Contains("{0}")) {
+                dayFormat = "{0}";
+            }
+            StringBuilder sb = new StringBuilder();
+            if(ShowYear) {
+                sb.AppendFormat(yearFormat, Selected.Year);
+                if(!String.IsNullOrEmpty(yearSeparator))
+                    sb.Append(yearSeparator);
+            }
+            if(ShowMonth) {
+                sb.AppendFormat(monthFormat, Selected.Month);
+                if(!String.IsNullOrEmpty(monthSeparator))
+                    sb.Append(monthSeparator);
+            }
+            if(ShowDay) {
+                sb.AppendFormat(dayFormat, Selected.Day);
+            }
+            return sb.ToString();
+        }
     }
 
     /// <summary>
@@ -152,7 +217,7 @@ public class DateSelector : TranslatableWebControl {
         }
         sb.Append(">");
 
-        string yearFormat = YearFormat??_("DateSelector.YearFormat");
+        string yearFormat = YearFormat ?? _("DateSelector.YearFormat");
         string yearSeparator = "";
         if(!yearFormat.Contains("{0}")) {
             yearFormat = "{0}";
@@ -162,7 +227,7 @@ public class DateSelector : TranslatableWebControl {
                 yearSeparator = "/";
             }
         }
-        string monthFormat = MonthFormat??_("DateSelector.MonthFormat");
+        string monthFormat = MonthFormat ?? _("DateSelector.MonthFormat");
         string monthSeparator = "";
         if(!monthFormat.Contains("{0}")) {
             monthFormat = "{0}";
@@ -172,7 +237,7 @@ public class DateSelector : TranslatableWebControl {
                 monthSeparator = "/";
             }
         }
-        string dayFormat = DayFormat??_("DateSelector.DayFormat");
+        string dayFormat = DayFormat ?? _("DateSelector.DayFormat");
         if(!dayFormat.Contains("{0}")) {
             dayFormat = "{0}";
         }

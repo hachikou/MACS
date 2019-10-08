@@ -161,7 +161,7 @@ public class DropDown : TranslatableWebControl {
                 if(Values[i] == v)
                     return Labels[i];
             }
-            return "";
+            return v;
         }
     }
     
