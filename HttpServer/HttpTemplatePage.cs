@@ -374,6 +374,7 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
         bool htmlescape = false;
         bool quoteescape = false;
         bool urlescape = false;
+        bool numberformat = false;
         char[] separators = " \t".ToCharArray();
         string[] p = varparam.Trim(separators).Split(separators, 2);
         // 最初の要素が変数名。
@@ -386,6 +387,9 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
         } else if(p[0].EndsWith(":u")){
             p[0] = p[0].Substring(0,p[0].Length-2);
             urlescape = true;
+        } else if(p[0].EndsWith(":n")){
+            p[0] = p[0].Substring(0,p[0].Length-2);
+            numberformat = true;
         }
         object obj = dict.GetObject(p[0]);
         if(obj == null)
@@ -402,6 +406,8 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
             return QE(obj.ToString());
         if(urlescape)
             return UE(obj.ToString());
+        if(numberformat)
+            return StringUtil.DecimalString(StringUtil.ToInt(obj.ToString()));
         return obj.ToString();
     }
 
