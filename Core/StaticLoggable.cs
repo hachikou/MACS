@@ -89,6 +89,14 @@ public abstract class StaticLoggable {
     }
 
     /// <summary>
+    ///   スタックトレースをログ出力する
+    /// </summary>
+    public static void LOG_STACKTRACE() {
+        if(enableLogging)
+            Logger.Log(className(), OpeLog.Level.DEBUG, Loggable.GetStackTraceMessage(Environment.StackTrace), false);
+    }
+
+    /// <summary>
     ///   独自のロガーをセットする
     /// </summary>
     public static void SetLogger(OpeLog logger_) {
