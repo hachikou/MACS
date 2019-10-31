@@ -7,7 +7,7 @@ SRCS = UnixTime.cs StringUtil.cs MathUtil.cs NetworkByteOrder.cs ByteUtil.cs\
        TempStream.cs TinyChunkStream.cs TelnetStream.cs\
        HtmlTool.cs TableFormatter.cs JsonTool.cs NDJson.cs\
        SendMail.cs Translator.cs Translatable.cs\
-       XmlFile.cs CascadedAttribute.cs\
+       XmlFile.cs CascadedAttribute.cs NumberList.cs\
        LinedStringBuilder.cs CSVFile.cs SJISWriter.cs SJISReader.cs\
        ProcUtil.cs ThreadBase.cs DataArray.cs SJISDictionary.cs\
        SocStream.cs SocStream_Server.cs SocError.cs\
