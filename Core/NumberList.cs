@@ -186,10 +186,59 @@ public class NumberList : IComparable<NumberList>, IEquatable<NumberList> {
     ///   番号列文字列を解釈し、追加する
     /// </summary>
     public NumberList Add(string txt) {
-        foreach(string x in txt.Split(',')) {
-            int n = StringUtil.ToInt(x);
-            if((n >= MinValue) && (n <= MaxValue) && !list.Contains(n))
-                list.Add(n);
+        if(String.IsNullOrEmpty(txt))
+            return this;
+        StringBuilder sb = new StringBuilder();
+        bool inRange = false;
+        int start = 0;
+        foreach(char ch in txt+'\n') {
+            if((ch >= '0') && (ch <= '9')) {
+                sb.Append(ch);
+            } else if(ch == '-') {
+                if(sb.Length == 0) {
+                    sb.Append(ch);
+                } else {
+                    int x = StringUtil.ToInt(sb.ToString());
+                    if(inRange) {
+                        if(start <= x) {
+                            for(int i = start; i <= x; i++) {
+                                if((i >= MinValue) && (i <= MaxValue) && !list.Contains(i))
+                                    list.Add(i);
+                            }
+                        } else {
+                            for(int i = x; i <= start; i++) {
+                                if((i >= MinValue) && (i <= MaxValue) && !list.Contains(i))
+                                    list.Add(i);
+                            }
+                        }
+                    }
+                    start = x;
+                    sb.Clear();
+                    inRange = true;
+                }
+            } else if((ch == ',') || (ch == '\n')) {
+                if(sb.Length > 0) {
+                    int x = StringUtil.ToInt(sb.ToString());
+                    if(inRange) {
+                        if(start <= x) {
+                            for(int i = start; i <= x; i++) {
+                                if((i >= MinValue) && (i <= MaxValue) && !list.Contains(i))
+                                    list.Add(i);
+                            }
+                        } else {
+                            for(int i = x; i <= start; i++) {
+                                if((i >= MinValue) && (i <= MaxValue) && !list.Contains(i))
+                                    list.Add(i);
+                            }
+                        }
+                        inRange = false;
+                    } else {
+                        if((x >= MinValue) && (x <= MaxValue) && !list.Contains(x))
+                            list.Add(x);
+                    }
+                    sb.Clear();
+                }
+            }
         }
         list.Sort();
         return this;
@@ -207,11 +256,31 @@ public class NumberList : IComparable<NumberList>, IEquatable<NumberList> {
     ///   文字列化する
     /// </summary>
     public override string ToString() {
+        if(list.Count == 0)
+            return "";
         StringBuilder sb = new StringBuilder();
-        foreach(int n in list) {
-            if(sb.Length > 0)
-                sb.Append(',');
-            sb.Append(n.ToString());
+        sb.Append(list[0].ToString());
+        bool inRange = false;
+        for(int i = 1; i < list.Count; i++) {
+            if(!inRange) {
+                if(list[i] == list[i-1]+1) {
+                    sb.Append('-');
+                    inRange = true;
+                } else {
+                    sb.Append(',');
+                    sb.Append(list[i].ToString());
+                }
+            } else {
+                if(list[i] != list[i-1]+1) {
+                    sb.Append(list[i-1].ToString());
+                    sb.Append(',');
+                    sb.Append(list[i].ToString());
+                    inRange = false;
+                }
+            }
+        }
+        if(inRange) {
+            sb.Append(list[list.Count-1].ToString());
         }
         return sb.ToString();
     }
@@ -298,6 +367,28 @@ public class NumberList : IComparable<NumberList>, IEquatable<NumberList> {
 
 
     private List<int> list = new List<int>();
+
+#region SELFTEST
+#if SELFTEST
+    public static int Main(string[] args) {
+        NumberList nl = new NumberList();
+        foreach(string x in args) {
+            Console.Write(x);
+            Console.Write("->");
+            nl.Parse(x);
+            for(int i = 0; i < nl.Count; i++) {
+                if(i > 0)
+                    Console.Write(',');
+                Console.Write(nl[i]);
+            }
+            Console.Write("->");
+            Console.WriteLine(nl.ToString());
+        }
+        return 0;
+    }
+#endif
+#endregion
+
 }
 
 } // End of namespace
