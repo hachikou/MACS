@@ -78,3 +78,6 @@ IniFileTest.exe: IniFile.cs StringUtil.cs FileUtil.cs
 
 SectionIniFileTest.exe: SectionIniFile.cs IniFile.cs StringUtil.cs FileUtil.cs
 	$(MCS) $(MCSFLAGS) -define:SECTIONSELFTEST SectionIniFile.cs IniFile.cs StringUtil.cs FileUtil.cs -out:$@
+
+NumberListTest.exe: NumberList.cs StringUtil.cs
+	$(MCS) $(MCSFLAGS) -define:SELFTEST NumberList.cs StringUtil.cs -out:$@
