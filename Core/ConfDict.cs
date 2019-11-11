@@ -23,7 +23,10 @@ public class ConfDict {
     /// <summary>
     ///   項目セパレータ文字列
     /// </summary>
-    public string Separator = "\n";
+    public string Separator {
+        get { return separator[0]; }
+        set { separator[0] = value; }
+    }
 
     /// <summary>
     ///   項目セパレータ代替文字列
@@ -86,7 +89,7 @@ public class ConfDict {
     /// </summary>
     public ConfDict Parse(string str) {
         lock(mutex) {
-            clear();
+            dict.Clear();
             append(str);
         }
         return this;
@@ -218,28 +221,28 @@ public class ConfDict {
     ///   指定したkeyに対するvalueを返す。
     /// </summary>
     public int Get(string key, int defval) {
-        StringUtil.ToInt(Get(key), defval);
+        return StringUtil.ToInt(Get(key), defval);
     }
 
     /// <summary>
     ///   指定したkeyに対するvalueを返す。
     /// </summary>
     public long Get(string key, long defval) {
-        StringUtil.ToLong(Get(key), defval);
+        return StringUtil.ToLong(Get(key), defval);
     }
 
     /// <summary>
     ///   指定したkeyに対するvalueを返す。
     /// </summary>
     public double Get(string key, double defval) {
-        StringUtil.ToDouble(Get(key), defval);
+        return StringUtil.ToDouble(Get(key), defval);
     }
 
     /// <summary>
     ///   指定したkeyに対するvalueを返す。
     /// </summary>
     public bool Get(string key, bool defval) {
-        StringUtil.ToBool(Get(key), defval);
+        return StringUtil.ToBool(Get(key), defval);
     }
 
     /// <summary>
@@ -264,10 +267,8 @@ public class ConfDict {
     ///   指定キーが登録されているかどうか
     /// </summary>
     public bool Contains(string key) {
-        get {
-            lock(mutex) {
-                return dict.ContainsKey(key);
-            }
+        lock(mutex) {
+            return dict.ContainsKey(key);
         }
     }
 
@@ -310,6 +311,7 @@ public class ConfDict {
 
     private object mutex = new object();
     private Dictionary<string,string> dict = new Dictionary<string,string>();
+    private string[] separator = new string[]{"\n"};
     private bool dirty = false;
 
     private static readonly char[] equalSeparator = "=".ToCharArray();
@@ -317,7 +319,7 @@ public class ConfDict {
     private void append(string str) {
         if(String.IsNullOrEmpty(str))
             return;
-        foreach(string x in str.Split(Separator)) {
+        foreach(string x in str.Split(separator, StringSplitOptions.RemoveEmptyEntries)) {
             string[] kv = x.Split(equalSeparator, 2);
             if(kv.Length == 1) {
                 kv = new string[]{kv[0], "yes"}; // bool型のtrue定義だとして取り扱う
@@ -367,6 +369,28 @@ public class ConfDict {
     }
 
 #endregion
+
+#region SELFTEST
+#if SELFTEST
+    public static int Main(string[] args) {
+        ConfDict dict = new ConfDict("a=hello\nb=my\nc=boy\\ngirl");
+        Console.WriteLine("b={0}", dict["b"]);
+        Console.WriteLine("c={0}", dict["c"]);
+        Console.WriteLine("hoge={0}", dict.Get("hoge", "mogera"));
+        dict.Set("hoge", 3.1415);
+        dict.Remove("b");
+        dict.Remove("x");
+        Console.WriteLine("hoge={0}", dict.Get("hoge", "mogera"));
+        Console.WriteLine();
+        Console.WriteLine(dict.ToString());
+        Console.WriteLine();
+        ConfDict dict2 = new ConfDict(dict.ToString());
+        Console.WriteLine("c={0}", dict2["c"]);
+        return 0;
+    }
+#endif
+#endregion
+
 } // End of ConfDict class
 
 } // End of namespace
