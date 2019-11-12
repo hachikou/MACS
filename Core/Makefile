@@ -1,7 +1,7 @@
 TARGET = MACS.dll
 SRCS = UnixTime.cs StringUtil.cs MathUtil.cs NetworkByteOrder.cs ByteUtil.cs\
        SimpleCipher.cs ComplexCipher.cs\
-       FileUtil.cs IniFile.cs SectionIniFile.cs\
+       FileUtil.cs IniFile.cs SectionIniFile.cs ConfDict.cs\
        Ipaddr.cs IpaddrRange.cs Hwaddr.cs HwaddrRange.cs\
        OpeLog.cs Loggable.cs StaticLoggable.cs ObjectDictionary.cs\
        TempStream.cs TinyChunkStream.cs TelnetStream.cs\
@@ -81,3 +81,6 @@ SectionIniFileTest.exe: SectionIniFile.cs IniFile.cs StringUtil.cs FileUtil.cs
 
 NumberListTest.exe: NumberList.cs StringUtil.cs
 	$(MCS) $(MCSFLAGS) -define:SELFTEST NumberList.cs StringUtil.cs -out:$@
+
+ConfDictTest.exe: ConfDict.cs StringUtil.cs
+	$(MCS) $(MCSFLAGS) -define:SELFTEST ConfDict.cs StringUtil.cs -out:$@
