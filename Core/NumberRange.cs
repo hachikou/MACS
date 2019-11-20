@@ -34,8 +34,8 @@ public class NumberRange : IComparable<NumberRange>, IEquatable<NumberRange> {
     /// <summary>
     ///   下限値、上限値からのコンストラクタ
     /// </summary>
-    public NumberRange(int min, int max) {
-        Set(min, max);
+    public NumberRange(int start, int end) {
+        Set(start, end);
     }
 
     /// <summary>
@@ -60,8 +60,10 @@ public class NumberRange : IComparable<NumberRange>, IEquatable<NumberRange> {
     /// </summary>
     public int Count {
         get {
-            if((Start == Int32.MinValue) && (End == Int32.MinValue))
+            if(!IsValid)
                 return 0;
+            if(IsFullRange)
+                return Int32.MaxValue;
             else if(Start <= End)
                 return End-Start+1;
             else
@@ -115,7 +117,7 @@ public class NumberRange : IComparable<NumberRange>, IEquatable<NumberRange> {
     public int[] ToIntArray() {
         int[] list;
         if(!IsValid) {
-            list = new list[0];
+            list = new int[0];
         } else if(IsAscend) {
             list = new int[End-Start+1];
             for(int i = 0; i < list.Length; i++) {
@@ -145,6 +147,15 @@ public class NumberRange : IComparable<NumberRange>, IEquatable<NumberRange> {
     /// </summary>
     public int this[int n] {
         get { return Get(n); }
+    }
+
+    /// <summary>
+    ///   番号範囲をセットする
+    /// </summary>
+    public NumberRange Set(int start, int end) {
+        Start = start;
+        End = end;
+        return this;
     }
 
     /// <summary>
@@ -228,12 +239,12 @@ public class NumberRange : IComparable<NumberRange>, IEquatable<NumberRange> {
     /// </summary>
     public IEnumerator<int> GetEnumerator() {
         if(!IsValid)
-            return;
+            yield break;
         if(IsAscend) {
             for(int i = Start; i <= End; i++)
                 yield return i;
         } else {
-            for(int i = Start; i <= End; i--)
+            for(int i = Start; i >= End; i--)
                 yield return i;
         }
     }
@@ -247,7 +258,7 @@ public class NumberRange : IComparable<NumberRange>, IEquatable<NumberRange> {
         if(IsAscend)
             return ((Start <= n) && (n <= End));
         else
-            return ((Start >= n) && (n >= END));
+            return ((Start >= n) && (n >= End));
     }
 
     /// <summary>
