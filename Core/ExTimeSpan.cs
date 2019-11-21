@@ -400,12 +400,12 @@ public class ExTimeSpan : IComparable<ExTimeSpan>, IEquatable<ExTimeSpan> {
             t = 60*60*1000*TimeSpan.TicksPerMillisecond-1;
         }
         if(!ceiling || (Hour != 0)) {
-            t = (dt.Hour+Hour)*60*60*1000*TimeSpan.TicksPerMillisecond;
+            t += (dt.Hour+Hour)*60*60*1000*TimeSpan.TicksPerMillisecond;
             ceiling = false;
         } else {
             t = 24*60*60*1000*TimeSpan.TicksPerMillisecond-1;
         }
-        return (new DateTime(dt.Year, dt.Month, dt.Day)).AddYears(-Year).AddMonths(-Month).AddDays(-Day).AddTicks(t);
+        return (new DateTime(dt.Year, dt.Month, dt.Day)).AddYears(Year).AddMonths(Month).AddDays(Day).AddTicks(t);
     }
 
 

@@ -85,5 +85,5 @@ NumberListTest.exe: NumberList.cs StringUtil.cs
 ConfDictTest.exe: ConfDict.cs StringUtil.cs
 	$(MCS) $(MCSFLAGS) -define:SELFTEST ConfDict.cs StringUtil.cs -out:$@
 
-ExTimeSpan.exe: ExTimeSpan.cs
+ExTimeSpanTest.exe: ExTimeSpan.cs
 	$(MCS) $(MCSFLAGS) -define:SELFTEST ExTimeSpan.cs -out:$@
