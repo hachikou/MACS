@@ -7,6 +7,7 @@
 using System;
 using System.Text;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace MACS {
 
@@ -655,11 +656,10 @@ public class StringUtil {
     public static float ToFloat(string str, float def){
         if(String.IsNullOrEmpty(str))
             return def;
-        try {
-            return float.Parse(str.Replace(",",""));
-        } catch(Exception) {
+        float res;
+        if(!Single.TryParse(str, NumberStyles.Number|NumberStyles.AllowExponent, CultureInfo.InvariantCulture, out res))
             return def;
-        }
+        return res;
     }
 
     /// <summary>
@@ -679,11 +679,10 @@ public class StringUtil {
     public static double ToDouble(string str, double def){
         if(String.IsNullOrEmpty(str))
             return def;
-        try {
-            return double.Parse(str.Replace(",",""));
-        } catch(Exception) {
+        double res;
+        if(!Double.TryParse(str, NumberStyles.Number|NumberStyles.AllowExponent, CultureInfo.InvariantCulture, out res))
             return def;
-        }
+        return res;
     }
 
     /// <summary>
