@@ -816,14 +816,15 @@ public class DBCon : Loggable, IDisposable {
     /// <param name="columnName">年齢カラムに付ける名前</param>
     /// <param name="birthdayColumnName">誕生日のカラム名</param>
     /// <param name="baseDate">基準日</param>
+    /// <param name="invalidValue">誕生日が不明な時の値</param>
     /// <remarks>
     ///   <para>
-    ///     誕生日が1000年より前だったり、基準日より後だったりするときは、0を返します。
+    ///     誕生日が1000年より前だったり、基準日より後だったりするときは、invalidValueを返します。
     ///   </para>
     /// </remarks>
-    public string AgeColumn(string columnName, string birthdayColumnName, DateTime baseDate) {
-        return String.Format("CASE WHEN `{0}` IS NULL THEN 0 WHEN YEAR(`{0}`)<1000 THEN 0 WHEN `{0}`>'{1:D4}-{2:D2}-{3:D2}' THEN 0 ELSE TRUNCATE(({4}-YEAR(`{0}`)*10000-MONTH(`{0}`)*100-DAYOFMONTH(`{0}`))/10000,0) END AS {5}",
-                             birthdayColumnName, baseDate.Year, baseDate.Month, baseDate.Day, baseDate.Year*10000+baseDate.Month*100+baseDate.Day, columnName);
+    public string AgeColumn(string columnName, string birthdayColumnName, DateTime baseDate, int invalidValue=0) {
+        return String.Format("CASE WHEN `{0}` IS NULL THEN {6} WHEN YEAR(`{0}`)<1000 THEN {6} WHEN `{0}`>'{1:D4}-{2:D2}-{3:D2}' THEN {6} ELSE TRUNCATE(({4}-YEAR(`{0}`)*10000-MONTH(`{0}`)*100-DAYOFMONTH(`{0}`))/10000,0) END AS {5}",
+                             birthdayColumnName, baseDate.Year, baseDate.Month, baseDate.Day, baseDate.Year*10000+baseDate.Month*100+baseDate.Day, columnName, invalidValue);
     }
 
     /// <summary>
@@ -831,13 +832,14 @@ public class DBCon : Loggable, IDisposable {
     /// </summary>
     /// <param name="columnName">年齢カラムに付ける名前</param>
     /// <param name="birthdayColumnName">誕生日のカラム名</param>
+    /// <param name="invalidValue">誕生日が不明な時の値</param>
     /// <remarks>
     ///   <para>
     ///     誕生日が1000年より前だったり、基準日より後だったりするときは、0を返します。
     ///   </para>
     /// </remarks>
-    public string AgeColumn(string columnName, string birthdayColumnName) {
-        return AgeColumn(columnName, birthdayColumnName, DateTime.Today);
+    public string AgeColumn(string columnName, string birthdayColumnName, int invalidValue=0) {
+        return AgeColumn(columnName, birthdayColumnName, DateTime.Today, invalidValue);
     }
 
     /// <summary>
@@ -846,14 +848,15 @@ public class DBCon : Loggable, IDisposable {
     /// <param name="columnName">年齢カラムに付ける名前</param>
     /// <param name="birthdayColumnName">誕生日のカラム名</param>
     /// <param name="baseDate">基準日</param>
+    /// <param name="invalidValue">誕生日が不明な時の値</param>
     /// <remarks>
     ///   <para>
     ///     学年年齢とは、基準日が1月～3月の時はその前年の4月1日時点の年齢を、
     ///     4月～12月の時はその年の4月1日時点の年齢を指します。
     ///   </para>
     /// </remarks>
-    public string SchoolAgeColumn(string columnName, string birthdayColumnName, DateTime baseDate) {
-        return AgeColumn(columnName, birthdayColumnName, new DateTime((baseDate.Month<4)?(baseDate.Year-1):baseDate.Year, 4, 1));
+    public string SchoolAgeColumn(string columnName, string birthdayColumnName, DateTime baseDate, int invalidValue=0) {
+        return AgeColumn(columnName, birthdayColumnName, new DateTime((baseDate.Month<4)?(baseDate.Year-1):baseDate.Year, 4, 1), invalidValue);
     }
     
     /// <summary>
@@ -861,14 +864,15 @@ public class DBCon : Loggable, IDisposable {
     /// </summary>
     /// <param name="columnName">年齢カラムに付ける名前</param>
     /// <param name="birthdayColumnName">誕生日のカラム名</param>
+    /// <param name="invalidValue">誕生日が不明な時の値</param>
     /// <remarks>
     ///   <para>
     ///     学年年齢とは、本日が1月～3月の時は前年の4月1日時点の年齢を、
     ///     4月～12月の時は本年の4月1日時点の年齢を指します。
     ///   </para>
     /// </remarks>
-    public string SchoolAgeColumn(string columnName, string birthdayColumnName) {
-        return SchoolAgeColumn(columnName, birthdayColumnName, DateTime.Today);
+    public string SchoolAgeColumn(string columnName, string birthdayColumnName, int invalidValue=0) {
+        return SchoolAgeColumn(columnName, birthdayColumnName, DateTime.Today, invalidValue);
     }
 
     /// <summary>
