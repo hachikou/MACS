@@ -835,7 +835,7 @@ public class DBCon : Loggable, IDisposable {
     /// <param name="invalidValue">誕生日が不明な時の値</param>
     /// <remarks>
     ///   <para>
-    ///     誕生日が1000年より前だったり、基準日より後だったりするときは、0を返します。
+    ///     誕生日が1000年より前だったり、基準日より後だったりするときは、invalidValueを返します。
     ///   </para>
     /// </remarks>
     public string AgeColumn(string columnName, string birthdayColumnName, int invalidValue=0) {
