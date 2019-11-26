@@ -7,7 +7,7 @@ SRCS = UnixTime.cs StringUtil.cs MathUtil.cs NetworkByteOrder.cs ByteUtil.cs\
        TempStream.cs TinyChunkStream.cs TelnetStream.cs\
        HtmlTool.cs TableFormatter.cs JsonTool.cs NDJson.cs\
        SendMail.cs Translator.cs Translatable.cs\
-       XmlFile.cs CascadedAttribute.cs NumberList.cs NumberRange.cs\
+       XmlFile.cs CascadedAttribute.cs NumberList.cs ExTimeSpan.cs NumberRange.cs\
        LinedStringBuilder.cs CSVFile.cs SJISWriter.cs SJISReader.cs\
        ProcUtil.cs ThreadBase.cs DataArray.cs SJISDictionary.cs\
        SocStream.cs SocStream_Server.cs SocError.cs\
@@ -87,3 +87,6 @@ NumberRangeTest.exe: NumberRange.cs StringUtil.cs
 
 ConfDictTest.exe: ConfDict.cs StringUtil.cs
 	$(MCS) $(MCSFLAGS) -define:SELFTEST ConfDict.cs StringUtil.cs -out:$@
+
+ExTimeSpanTest.exe: ExTimeSpan.cs
+	$(MCS) $(MCSFLAGS) -define:SELFTEST ExTimeSpan.cs -out:$@
