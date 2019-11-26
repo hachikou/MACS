@@ -821,7 +821,7 @@ public class DBCon : Loggable, IDisposable {
     ///     誕生日が1000年より前だったり、基準日より後だったりするときは、0を返します。
     ///   </para>
     /// </remarks>
-    public static string AgeColumn(string columnName, string birthdayColumnName, DateTime baseDate) {
+    public string AgeColumn(string columnName, string birthdayColumnName, DateTime baseDate) {
         return String.Format("CASE WHEN `{0}` IS NULL THEN 0 WHEN YEAR(`{0}`)<1000 THEN 0 WHEN `{0}`>'{1:D4}-{2:D2}-{3:D2}' THEN 0 ELSE TRUNCATE(({4}-YEAR(`{0}`)*10000-MONTH(`{0}`)*100-DAYOFMONTH(`{0}`))/10000,0) END AS {5}",
                              birthdayColumnName, baseDate.Year, baseDate.Month, baseDate.Day, baseDate.Year*10000+baseDate.Month*100+baseDate.Day, columnName);
     }
@@ -836,7 +836,7 @@ public class DBCon : Loggable, IDisposable {
     ///     誕生日が1000年より前だったり、基準日より後だったりするときは、0を返します。
     ///   </para>
     /// </remarks>
-    public static string AgeColumn(string columnName, string birthdayColumnName) {
+    public string AgeColumn(string columnName, string birthdayColumnName) {
         return AgeColumn(columnName, birthdayColumnName, DateTime.Today);
     }
 
@@ -852,7 +852,7 @@ public class DBCon : Loggable, IDisposable {
     ///     4月～12月の時はその年の4月1日時点の年齢を指します。
     ///   </para>
     /// </remarks>
-    public static string SchoolAgeColumn(string columnName, string birthdayColumnName, DateTime baseDate) {
+    public string SchoolAgeColumn(string columnName, string birthdayColumnName, DateTime baseDate) {
         return AgeColumn(columnName, birthdayColumnName, new DateTime((baseDate.Month<4)?(baseDate.Year-1):baseDate.Year, 4, 1));
     }
     
@@ -867,7 +867,7 @@ public class DBCon : Loggable, IDisposable {
     ///     4月～12月の時は本年の4月1日時点の年齢を指します。
     ///   </para>
     /// </remarks>
-    public static string SchoolAgeColumn(string columnName, string birthdayColumnName) {
+    public string SchoolAgeColumn(string columnName, string birthdayColumnName) {
         return SchoolAgeColumn(columnName, birthdayColumnName, DateTime.Today);
     }
 
