@@ -145,6 +145,21 @@ public class NumberList : IComparable<NumberList>, IEquatable<NumberList> {
     }
 
     /// <summary>
+    ///   番号を削除する
+    /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     指定した番号が番号列に入っていないときは何もしない
+    ///   </para>
+    /// </remarks>
+    public NumberList Remove(params int[] src) {
+        foreach(int n in src) {
+            list.Remove(n);
+        }
+        return this;
+    }
+
+    /// <summary>
     ///   List<int>をセットする
     /// </summary>
     public NumberList Set(List<int> src) {
@@ -162,6 +177,21 @@ public class NumberList : IComparable<NumberList>, IEquatable<NumberList> {
                 list.Add(n);
         }
         list.Sort();
+        return this;
+    }
+
+    /// <summary>
+    ///   番号を削除する
+    /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     指定した番号が番号列に入っていないときは何もしない
+    ///   </para>
+    /// </remarks>
+    public NumberList Remove(List<int> src) {
+        foreach(int n in src) {
+            list.Remove(n);
+        }
         return this;
     }
 
