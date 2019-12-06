@@ -2944,6 +2944,7 @@ public class DBTable {
         bool hasOld = false;
         dbcon.LOG_NOTICE("Upgrade table schema for {0}", def.Name);
         try {
+            dbcon.Execute("DROP TABLE IF EXISTS " + tmptblname);
             dbcon.CopyTable(def.Name, tmptblname);
             hasOld = true;
             dbcon.Execute(def.GenerateDropper(dbcon.DBType));
