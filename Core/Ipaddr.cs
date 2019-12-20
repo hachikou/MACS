@@ -453,6 +453,40 @@ public class Ipaddr: IComparable {
     }
 
     /// <summary>
+    ///   xxx.xxx.xxx.xxx/xx 形式の文字列からネットワークアドレスとネットマスクを得る
+    /// </summary>
+    public static bool GetNetworkAddress(string str, out Ipaddr netaddr, out Ipaddr netmask) {
+        if(String.IsNullOrEmpty(str)) {
+            netaddr = new Ipaddr();
+            netmask = new Ipaddr();
+            return false;
+        }
+        string[] x = str.Split('/');
+        if(x.Length == 1) {
+            netaddr = new Ipaddr(x[0]);
+            if(netaddr.IsV4()) {
+                netmask = GetNetmask(32);
+            } else if(netaddr.IsV6()) {
+                netmask = GetNetmask(128, true);
+            } else {
+                netmask = new Ipaddr();
+                return false;
+            }
+            return true;
+        }
+        netaddr = new Ipaddr(x[0]);
+        if(netaddr.IsV4()) {
+            netmask = GetNetmask(StringUtil.ToInt(x[1]));
+        } else if(netaddr.IsV6()) {
+            netmask = GetNetmask(StringUtil.ToInt(x[1]), true);
+        } else {
+            netmask = new Ipaddr();
+            return false;
+        }
+        return true;
+    }
+
+    /// <summary>
     ///   インスタンスがsrcで示されるアドレスパターンを内包しているかどうかをチェックする
     /// </summary>
     public bool Contains(Ipaddr src) {

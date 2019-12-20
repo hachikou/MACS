@@ -362,6 +362,23 @@ public class HttpServer : Loggable, IDisposable {
     }
 
     /// <summary>
+    ///   接続許可ネットワークアドレス/ネットマスクを設定する
+    /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     現在のところ、IPv4しか対応していない。1つでも接続許可ネットワーク
+    ///     アドレスを登録すると、IPv4以外のプロトコルでのアクセスは接続拒否
+    ///     するようになる。
+    ///
+    ///     Loopbackアドレスからのアクセスは常に許可される。
+    ///   </para>
+    /// </remarks>
+    public void SetAllowAddress(Ipaddr netaddr, Ipaddr netmask) {
+        ClearAllowAddress();
+        AddAllowAddress(netaddr, netmask);
+    }
+
+    /// <summary>
     ///   接続許可ネットワークアドレス/ネットマスクを追加登録する
     /// </summary>
     /// <remarks>
@@ -394,6 +411,42 @@ public class HttpServer : Loggable, IDisposable {
             AddAllowAddress(Ipaddr.GetMasked(IpaddrUtil.MyIpaddr[i], IpaddrUtil.MyMask[i]), IpaddrUtil.MyMask[i]);
         }
         */
+    }
+
+    /// <summary>
+    ///   接続許可IPアドレスを文字列からセットする
+    /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     xxx.xxx.xxx.xxx形式のIPアドレス、またはxxx.xxx.xxx.xxx/xx形式の
+    ///     ネットワークアドレスとネットマスク指定を、カンマで区切って書き並べた
+    ///     文字列を指定します。
+    ///   </para>
+    /// </remarks>
+    public void SetAllowAddress(string str) {
+        ClearAllowAddress();
+        AddAllowAddress(str);
+    }
+    
+    /// <summary>
+    ///   接続許可IPアドレスを文字列で追加指定する
+    /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     xxx.xxx.xxx.xxx形式のIPアドレス、またはxxx.xxx.xxx.xxx/xx形式の
+    ///     ネットワークアドレスとネットマスク指定を、カンマで区切って書き並べた
+    ///     文字列を指定します。
+    ///   </para>
+    /// </remarks>
+    public void AddAllowAddress(string str) {
+        if(String.IsNullOrEmpty(str))
+            return;
+        Ipaddr netaddr, netmask;
+        foreach(string x in str.Split(',')) {
+            if(Ipaddr.GetNetworkAddress(x.Trim(), out netaddr, out netmask)) {
+                AddAllowAddress(netaddr, netmask);
+            }
+        }
     }
 
 
