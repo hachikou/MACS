@@ -42,9 +42,9 @@ public class SectionIniFile {
         m_mutex = new object();
         m_filename = filename;
         m_enc = enc;
+        _reload();
         if(!String.IsNullOrEmpty(distfile))
             _upgrade(distfile);
-        _reload();
      }
  
     /// <summary>
@@ -65,9 +65,9 @@ public class SectionIniFile {
         m_mutex = new object();
         m_filename = filename;
         m_enc = null;
+        _reload();
         if(!String.IsNullOrEmpty(distfile))
             _upgrade(distfile);
-        _reload();
     }
 
     /// <summary>
@@ -374,6 +374,7 @@ public class SectionIniFile {
                 FileUtil.Copy(distfile, m_filename);
             }
         }
+        _reload();
     }
 
     private static Random rnd = new Random();
