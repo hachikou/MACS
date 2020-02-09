@@ -66,6 +66,22 @@ public class RadioSelector<T> : TranslatableWebControl
     public Dictionary<T,string> Text = null;
 
     /// <summary>
+    ///   選択された値の表示名
+    /// </summary>
+    public string SelectedText {
+        get {
+            string vv;
+            if((Text == null) || !Text.TryGetValue(Selected, out vv)) {
+                if(ShowEnumName)
+                    vv = _(typeof(T).Name+"."+Selected.ToString());
+                else
+                    vv = _(Selected.ToString());
+            }
+            return vv;
+        }
+    }
+
+    /// <summary>
     /// 　ラジオボタン Enum名表示
     /// 　<remarks>
     /// 　　true:Enum名表示 false:Enum名非表示
