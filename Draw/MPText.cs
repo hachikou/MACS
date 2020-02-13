@@ -121,6 +121,14 @@ public class MPText : System.Windows.Forms.Control {
         } else {
             outlineColor = OutlineColor;
         }
+
+        Brush  bgBrush = null;
+        if((BackColor != null) && (BackColor.A > 0)) {
+            //始点を-1,-1にしないとスキマが出来てしまうため、幅、高さを+1した
+            Rectangle target = new Rectangle(-1, -1,this.Width + 1,this.Height + 1);
+            bgBrush = new SolidBrush(BackColor);
+            g.FillRectangle(bgBrush, target);
+        }
         float outlineWidth = Font.GetEmSize()*OutlineRatio;
         Brush brush = null;
         if(color.A > 0)
@@ -142,6 +150,8 @@ public class MPText : System.Windows.Forms.Control {
             pen.Dispose();
         if(shadow != null)
             shadow.Dispose();
+        if(bgBrush != null)
+            bgBrush.Dispose();
     }
 
     private void paintAttrText(Graphics g) {

@@ -27,10 +27,24 @@ public class IniFile {
     /// <summary>
     ///   INIファイルを読み取り、データベースを作成する。
     /// </summary>
-    public IniFile(string filename, Encoding enc=null) {
+    /// <param name="filename">ファイル名</param>
+    /// <param name="enc">ファイルエンコード (optional)</param>
+    /// <param name="distfile">INIファイルのテンプレート (optional)</param>
+    /// <remarks>
+    ///   <para>
+    ///     指定ファイルが存在していなくてもコンストラクションは成功します。
+    ///     この場合、のちにWriteを実行するとそのファイルが作成されます。
+    ///     encを指定しないかnullを指定すると、FileUtil.DefaultEncoding が使われ
+    ///     ます。
+    ///     distfileを指定すると、そのファイルを使って Upgradeが実行されます。
+    ///   </para>
+    /// </remarks>
+    public IniFile(string filename, Encoding enc=null, string distfile=null) {
         m_mutex = new object();
         m_filename = filename;
         m_enc = enc;
+        if(!String.IsNullOrEmpty(distfile))
+            _upgrade(distfile);
     }
 
     /// <summary>
@@ -68,6 +82,7 @@ public class IniFile {
     /// </summary>
     public string FileName {
         get { return m_filename; }
+        set { m_filename = value; }
     }
 
     /// <summary>
@@ -295,7 +310,7 @@ public class IniFile {
     }
 
 
-    private readonly string m_filename;
+    private string m_filename;
     private readonly Encoding m_enc;
     private Dictionary<string, string> m_data;
     private string m_sectionname;
@@ -425,6 +440,19 @@ public class IniFile {
                 File.Delete(tmpfilename);
         }
         return _reload();
+    }
+
+    private void _upgrade(string distfile) {
+        if(File.Exists(distfile)) {
+            if(File.Exists(m_filename)) {
+                // .distファイルのほうが新しい場合、.iniファイルをアップグレードする
+                if(File.GetLastWriteTime(m_filename) < File.GetLastWriteTime(distfile))
+                    Upgrade(distfile);
+            } else {
+                // .iniファイルがないときは.distファイルをコピーする
+                FileUtil.Copy(distfile, m_filename);
+            }
+        }
     }
 
     private static Random rnd = new Random();

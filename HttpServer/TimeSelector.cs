@@ -28,9 +28,29 @@ public class TimeSelector : TranslatableWebControl {
     public TimeSelector() : base() {}
 
     /// <summary>
+    ///   コンストラクタ
+    /// </summary>
+    public TimeSelector(string name, string id) : base(name, id) {}
+
+    /// <summary>
+    ///   コンストラクタ
+    /// </summary>
+    public TimeSelector(string name) : base(name) {}
+
+    /// <summary>
     ///   翻訳機指定コンストラクタ
     /// </summary>
     public TimeSelector(Translatable tr) : base(tr) {}
+
+    /// <summary>
+    ///   翻訳機指定コンストラクタ
+    /// </summary>
+    public TimeSelector(string name, string id, Translatable tr) : base(name, id, tr) {}
+
+    /// <summary>
+    ///   翻訳機指定コンストラクタ
+    /// </summary>
+    public TimeSelector(string name, Translatable tr) : base(name, tr) {}
 
     /// <summary>
     ///   選択された値。Valueと同じだが、intにキャストされている。
@@ -46,6 +66,16 @@ public class TimeSelector : TranslatableWebControl {
         }
         set {
             Value = value;
+        }
+    }
+
+    /// <summary>
+    ///   選択された値の表示文字列
+    /// </summary>
+    public string Text {
+        get {
+            int hhmm = Selected;
+            return String.Format("{0:D}:{1:D2}", hhmm/60, hhmm%60);
         }
     }
 

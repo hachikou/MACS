@@ -22,7 +22,7 @@ namespace MACS.HttpServer {
 /// <summary>
 ///   HTTPサーバ
 /// </summary>
-public class HttpServer : Loggable {
+public class HttpServer : Loggable, IDisposable {
 
     /// <summary>
     ///   サーバ名
@@ -170,6 +170,20 @@ public class HttpServer : Loggable {
             m_rand = new Random(DateTime.Now.Millisecond);
         m_pagecount = 0;
         m_listening = false;
+    }
+
+    /// <summary>
+    ///   デストラクタ
+    /// </summary>
+    ~HttpServer() {
+        Dispose();
+    }
+
+    /// <summary>
+    ///   アンマネージドな資源開放
+    /// </summary>
+    public void Dispose() {
+        Stop();
     }
 
     /// <summary>
@@ -348,6 +362,23 @@ public class HttpServer : Loggable {
     }
 
     /// <summary>
+    ///   接続許可ネットワークアドレス/ネットマスクを設定する
+    /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     現在のところ、IPv4しか対応していない。1つでも接続許可ネットワーク
+    ///     アドレスを登録すると、IPv4以外のプロトコルでのアクセスは接続拒否
+    ///     するようになる。
+    ///
+    ///     Loopbackアドレスからのアクセスは常に許可される。
+    ///   </para>
+    /// </remarks>
+    public void SetAllowAddress(Ipaddr netaddr, Ipaddr netmask) {
+        ClearAllowAddress();
+        AddAllowAddress(netaddr, netmask);
+    }
+
+    /// <summary>
     ///   接続許可ネットワークアドレス/ネットマスクを追加登録する
     /// </summary>
     /// <remarks>
@@ -380,6 +411,42 @@ public class HttpServer : Loggable {
             AddAllowAddress(Ipaddr.GetMasked(IpaddrUtil.MyIpaddr[i], IpaddrUtil.MyMask[i]), IpaddrUtil.MyMask[i]);
         }
         */
+    }
+
+    /// <summary>
+    ///   接続許可IPアドレスを文字列からセットする
+    /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     xxx.xxx.xxx.xxx形式のIPアドレス、またはxxx.xxx.xxx.xxx/xx形式の
+    ///     ネットワークアドレスとネットマスク指定を、カンマで区切って書き並べた
+    ///     文字列を指定します。
+    ///   </para>
+    /// </remarks>
+    public void SetAllowAddress(string str) {
+        ClearAllowAddress();
+        AddAllowAddress(str);
+    }
+    
+    /// <summary>
+    ///   接続許可IPアドレスを文字列で追加指定する
+    /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     xxx.xxx.xxx.xxx形式のIPアドレス、またはxxx.xxx.xxx.xxx/xx形式の
+    ///     ネットワークアドレスとネットマスク指定を、カンマで区切って書き並べた
+    ///     文字列を指定します。
+    ///   </para>
+    /// </remarks>
+    public void AddAllowAddress(string str) {
+        if(String.IsNullOrEmpty(str))
+            return;
+        Ipaddr netaddr, netmask;
+        foreach(string x in str.Split(',')) {
+            if(Ipaddr.GetNetworkAddress(x.Trim(), out netaddr, out netmask)) {
+                AddAllowAddress(netaddr, netmask);
+            }
+        }
     }
 
 
@@ -503,7 +570,12 @@ public class HttpServer : Loggable {
     /// <summary>
     ///   既に動いているHTTPサーバを停止する。
     /// </summary>
-    public void Stop() {
+    /// <param name="timeout">停止を待つ最大時間（ミリ秒）。0を指定すると全く待たない</param>
+    public void Stop(int timeout=Int32.MaxValue) {
+        if(!IsRunning)
+            return;
+        Stopwatch sw = new Stopwatch();
+        sw.Start();
         m_stoprequest = true;
         if(m_listener != null){
             try {
@@ -512,7 +584,7 @@ public class HttpServer : Loggable {
                 // just ignore.
             }
         }
-        while(IsRunning){
+        while(IsRunning && (sw.ElapsedMilliseconds < timeout)){
             Thread.Sleep(50);
         }
     }
@@ -834,9 +906,7 @@ public class HttpServer : Loggable {
                                 Cookie sessid = context.Request.Cookies[m_servername+"-SID"];
                                 ObjectDictionary sess;
                                 lock(m_sessiondict){
-                                    if((sessid != null) && m_sessiondict.ContainsKey(sessid.Value)){
-                                        sess = m_sessiondict[sessid.Value];
-                                    }else{
+                                    if((sessid == null) || !m_sessiondict.TryGetValue(sessid.Value, out sess)){
                                         sessid = new Cookie(m_servername+"-SID", m_rand.Next(9999999).ToString()+m_rand.Next(9999999).ToString());
                                         sess = new ObjectDictionary();
                                         m_sessiondict[sessid.Value] = sess;
@@ -892,20 +962,16 @@ public class HttpServer : Loggable {
                 }
             }
 
-            if(status == 0){
+            if((status == 0) && (context.Request.HttpMethod == "GET")) {
                 // ルート静的ページを探す
-                if(m_staticpagelist.ContainsKey("/")){
-                    HttpStaticPage pg = m_staticpagelist["/"];
-                    if(context.Request.HttpMethod == "GET"){
-                        lock(pg){
-                            pg.SetLogger(this.Logger);
-                            pg.SetServerContext(this, context, path);
-                            pg.PageLoad(path);
-                        }
-                        status = 200;
-                    }else{
-                        status = 405;
+                HttpStaticPage pg;
+                if(m_staticpagelist.TryGetValue("/", out pg)) {
+                    lock(pg){
+                        pg.SetLogger(this.Logger);
+                        pg.SetServerContext(this, context, path);
+                        pg.PageLoad(path);
                     }
+                    status = 200;
                 }
             }
 

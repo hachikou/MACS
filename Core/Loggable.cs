@@ -87,7 +87,15 @@ public abstract class Loggable {
     }
 
     /// <summary>
-    ///   スタックトレースの文字列を得る
+    ///   スタックトレースをログ出力する
+    /// </summary>
+    public void LOG_STACKTRACE() {
+        if(enableLogging)
+            Logger.Log(GetCategoryName(), OpeLog.Level.DEBUG, GetStackTraceMessage(Environment.StackTrace), false);
+    }
+
+    /// <summary>
+    ///   例外表示の文字列を得る
     /// </summary>
     public static string GetExceptionMessage(Exception e) {
         StringBuilder sb = new StringBuilder();
@@ -95,13 +103,7 @@ public abstract class Loggable {
         while(e != null) {
             sb.Append(indent);
             sb.AppendFormat("{0}: {1}\n", e.GetType().Name, e.Message);
-            sb.AppendFormat(indent);
-            sb.AppendFormat("StackTrace:\n");
-            foreach(string st in e.StackTrace.Split("\n".ToCharArray())) {
-                sb.Append(indent);
-                sb.Append(st.Replace('\r',' '));
-                sb.Append('\n');
-            }
+            getStackTraceMessage(sb, indent, e.StackTrace);
             e = e.InnerException;
             if(e != null) {
                 sb.Append(indent);
@@ -110,6 +112,29 @@ public abstract class Loggable {
             }
         }
         return sb.ToString();
+    }
+
+    /// <summary>
+    ///   スタックトレースの文字列を得る
+    /// </summary>
+    public static string GetStackTraceMessage(string st) {
+        StringBuilder sb = new StringBuilder();
+        getStackTraceMessage(sb, "", st);
+        return sb.ToString();
+    }
+    
+    private static void getStackTraceMessage(StringBuilder sb, string indent, string stacktrace) {
+        sb.AppendFormat(indent);
+        if(String.IsNullOrEmpty(stacktrace)) {
+            sb.Append("StackTrace: none\n");
+            return;
+        }
+        sb.AppendFormat("StackTrace:\n");
+        foreach(string st in stacktrace.Split("\n".ToCharArray())) {
+            sb.Append(indent+"    ");
+            sb.Append(st.Replace('\r',' '));
+            sb.Append('\n');
+        }
     }
     
     /// <summary>

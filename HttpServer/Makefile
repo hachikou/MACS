@@ -7,10 +7,11 @@ SRCS = 	HttpServer.cs HttpPage.cs HttpBuiltinContentsSupport.cs HttpNlsSupport.c
 	RadioSelector.cs DropDownSelector.cs YesNoSelector.cs DateSelector.cs\
 	TimeSelector.cs\
 	HttpStackTracePage.cs HttpEmergencyPage.cs\
-	HttpProxy.cs
+	HttpProxy.cs ScssPage.cs
 LIBDIR = ..
 LOCALLIBS = $(LIBDIR)/MACS.dll
-LIBS = $(LOCALLIBS) System.Web.dll System.Drawing.dll
+IMPORTLIBS = SharpScss/SharpScss.dll
+LIBS = $(LOCALLIBS) System.Web.dll System.Drawing.dll $(IMPORTLIBS)
 DOXFILES = Index.dox examples/Example.dox
 DOCDIR = ../doc/HttpServer
 DOCFILE = $(DOCDIR)/index.html
@@ -34,14 +35,14 @@ doc: $(DOCFILE)
 
 $(TARGET): $(SRCS) Makefile $(LOCALLIBS)
 	$(MCS) $(MCSFLAGS) -t:library $(LIBS:%=-r:%) $(SRCS) -out:$@
-	cp $(TARGET) $(TARGET).mdb $(LIBDIR)
+	cp $(TARGET) $(TARGET).mdb $(IMPORTLIBS) $(LIBDIR)
 
 $(DOCFILE): $(SRCS) $(DOXFILES) Doxyfile Makefile
 	$(MKDIR) $(DOCDIR)
 	$(DOXYGEN)
 
 clean:
-	$(RM) *.dll *.mdb $(LIBDIR)/$(TARGET) $(LIBDIR)/$(TARGET).mdb $(DOCDIR)
+	$(RM) *.dll *.mdb $(LIBDIR)/$(TARGET) $(LIBDIR)/$(TARGET).mdb $(IMPORTLIBS:%=$(LIBDIR)/%) $(DOCDIR)
 
 release:
 	$(MCS) $(MCSFLAGS_RELEASE) -t:library $(LIBS:%=-r:%) $(SRCS) -out:$(TARGET)

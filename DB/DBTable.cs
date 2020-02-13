@@ -2249,7 +2249,7 @@ public class DBTable {
     ///     ただし、"!"で始まる文字列を指定した場合は"!"よりあとの文字列がそのまま使われる。（他項目の値を指定する時等に利用する。）
     ///   </para>
     /// </remarks>
-    public int Insert(string[] rec) {
+    public int Insert(params string[] rec) {
         if(sqlcolumns == null)
             sqlcolumns = Columns;
         return Insert(sqlcolumns, rec);
@@ -2265,7 +2265,7 @@ public class DBTable {
     ///     それ以外はInsertと同じ。
     ///   </para>
     /// </remarks>
-    public int Replace(string[] rec) {
+    public int Replace(params string[] rec) {
         if(sqlcolumns == null)
             sqlcolumns = Columns;
         return Replace(sqlcolumns, rec);
@@ -2462,7 +2462,7 @@ public class DBTable {
     ///     ただし、"!"で始まる文字列を指定した場合は"!"よりあとの文字列がそのまま使われる。（他項目の値を指定する時等に利用する。）
     ///   </para>
     /// </remarks>
-    public int Update(string[] rec) {
+    public int Update(params string[] rec) {
         if(sqlcolumns == null)
             sqlcolumns = Columns;
         return Update(sqlcolumns, rec);
@@ -2570,7 +2570,7 @@ public class DBTable {
     ///     ただし、"!"で始まる文字列を指定した場合は"!"よりあとの文字列がそのまま使われる。（他項目の値を指定する時等に利用する。）
     ///   </para>
     /// </remarks>
-    public int UpdateOrInsert(string[] rec) {
+    public int UpdateOrInsert(params string[] rec) {
         if(sqlcolumns == null)
             sqlcolumns = Columns;
         return UpdateOrInsert(sqlcolumns, rec);
@@ -2909,6 +2909,71 @@ public class DBTable {
 
 #endregion
 
+#region テーブルの作り直し
+
+    /// <summary>
+    ///   現在のテーブル定義通りのカラムがDBテーブルに存在するか確認する
+    /// </summary>
+    public bool NeedsRenovation() {
+        if(joinList != null)
+            throw new ArgumentException("Can't renovate joined tables");
+        this.SetAllColumns();
+        try {
+            Get(1); // ダミーで全項目をQueryしてみる
+        } catch(DbException) {
+            return true;
+        }
+        return false;
+    }
+
+    /// <summary>
+    ///   現在のテーブル定義に従って既存のDBテーブルを作り直す
+    /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     既存のテーブルを一旦"tmp_テーブル名"という名前でコピーした上で、既存
+    ///     テーブルを削除する。その後現在のテーブル定義に従ってテーブルを作る。
+    ///     tmp_テーブル名 のテーブルから新たに作ったテーブルに全データをコピー
+    ///     し、tmp_テーブル名 テーブルを削除する。
+    ///   </para>
+    /// </remarks>
+    public void Renovate() {
+        if(joinList != null)
+            throw new ArgumentException("Can't renovate joined tables");
+        string tmptblname = "tmp_"+def.Name;
+        bool hasOld = false;
+        dbcon.LOG_NOTICE("Upgrade table schema for {0}", def.Name);
+        try {
+            dbcon.Execute("DROP TABLE IF EXISTS " + tmptblname);
+            dbcon.CopyTable(def.Name, tmptblname);
+            hasOld = true;
+            dbcon.Execute(def.GenerateDropper(dbcon.DBType));
+        } catch(DbException) {
+            // just ignore.
+        }
+        dbcon.Execute(def.GenerateCreator(dbcon.DBType));
+        if(hasOld) {
+            // まず新しいカラム名の一覧をnewcolumnsに作る
+            List<string> newcolumns = new List<string>();
+            newcolumns.Add("rowid");
+            foreach(string col in def.ColumnNames)
+                newcolumns.Add(col);
+            // 既存のカラム名と共通するものだけをcolumnsに作る
+            List<string> columns = new List<string>();
+            foreach(string col in dbcon.GetColumnNameList(tmptblname)) {
+                if(newcolumns.Contains(col))
+                    columns.Add(col);
+            }
+            // 一時テーブルから全コピー
+            string sql = String.Format("INSERT INTO {0} ({2}) SELECT {2} FROM {1}", def.Name, tmptblname, StringUtil.Join(",", columns));
+            dbcon.Execute(sql);
+            // 一時テーブル削除
+            dbcon.Execute("DROP TABLE "+tmptblname);
+        }
+    }
+
+#endregion
+    
 #region private部
 
     private DBTableDef getTableDef(string tblname) {

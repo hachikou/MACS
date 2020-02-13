@@ -27,9 +27,29 @@ public class DateSelector : TranslatableWebControl {
     public DateSelector() : base() {}
 
     /// <summary>
+    ///   コンストラクタ
+    /// </summary>
+    public DateSelector(string name, string id) : base(name, id) {}
+
+    /// <summary>
+    ///   コンストラクタ
+    /// </summary>
+    public DateSelector(string name) : base(name) {}
+
+    /// <summary>
     ///   翻訳機指定コンストラクタ
     /// </summary>
     public DateSelector(Translatable tr) : base(tr) {}
+
+    /// <summary>
+    ///   翻訳機指定コンストラクタ
+    /// </summary>
+    public DateSelector(string name, string id, Translatable tr) : base(name, id, tr) {}
+
+    /// <summary>
+    ///   翻訳機指定コンストラクタ
+    /// </summary>
+    public DateSelector(string name, Translatable tr) : base(name, tr) {}
 
     /// <summary>
     ///   選択された値。Valueと同じだが、DateTimeにキャストされている
@@ -40,6 +60,51 @@ public class DateSelector : TranslatableWebControl {
                 return new DateTime(0);
             return (DateTime)Value; }
         set { Value = value; }
+    }
+
+    /// <summary>
+    ///   選択された値の表示文字列
+    /// </summary>
+    public string Text {
+        get {
+            string yearFormat = YearFormat ?? _("DateSelector.YearFormat");
+            string yearSeparator = "";
+            if(!yearFormat.Contains("{0}")) {
+                yearFormat = "{0}";
+                //月、または日を表示する場合、セパレータ文字を設定する
+                if(ShowMonth || ShowDay) {
+                    yearSeparator = "/";
+                }
+            }
+            string monthFormat = MonthFormat ?? _("DateSelector.MonthFormat");
+            string monthSeparator = "";
+            if(!monthFormat.Contains("{0}")) {
+                monthFormat = "{0}";
+                //日を表示する場合、セパレータ文字を設定する
+                if(ShowDay) {
+                    monthSeparator = "/";
+                }
+            }
+            string dayFormat = DayFormat ?? _("DateSelector.DayFormat");
+            if(!dayFormat.Contains("{0}")) {
+                dayFormat = "{0}";
+            }
+            StringBuilder sb = new StringBuilder();
+            if(ShowYear) {
+                sb.AppendFormat(yearFormat, Selected.Year);
+                if(!String.IsNullOrEmpty(yearSeparator))
+                    sb.Append(yearSeparator);
+            }
+            if(ShowMonth) {
+                sb.AppendFormat(monthFormat, Selected.Month);
+                if(!String.IsNullOrEmpty(monthSeparator))
+                    sb.Append(monthSeparator);
+            }
+            if(ShowDay) {
+                sb.AppendFormat(dayFormat, Selected.Day);
+            }
+            return sb.ToString();
+        }
     }
 
     /// <summary>
@@ -58,41 +123,41 @@ public class DateSelector : TranslatableWebControl {
     public string OnChange;
     
     /// <summary>
-    /// 　年の選択表示
-    /// 　<remarks>
-    /// 　　true:プルダウン表示 false:プルダウン非表示
-    /// 　</remarks>
+    ///   年の選択表示
+    ///   <remarks>
+    ///     true:プルダウン表示 false:プルダウン非表示
+    ///   </remarks>
     /// </summary>
     public bool ShowYear= true; 
 
     /// <summary>
-    /// 　月の選択表示
-    /// 　<remarks>
-    /// 　　true:プルダウン表示 false:プルダウン非表示
-    /// 　</remarks>
+    ///   月の選択表示
+    ///   <remarks>
+    ///     true:プルダウン表示 false:プルダウン非表示
+    ///   </remarks>
     /// </summary>
     public bool ShowMonth = true; 
 
     /// <summary>
-    /// 　日の選択表示
-    /// 　<remarks>
-    /// 　　true:プルダウン表示 false:プルダウン非表示
-    /// 　</remarks>
+    ///   日の選択表示
+    ///   <remarks>
+    ///     true:プルダウン表示 false:プルダウン非表示
+    ///   </remarks>
     /// </summary>
     public bool ShowDay = true; 
     
     /// <summary>
-    /// 　年のフォーマット
+    ///   年のフォーマット
     /// </summary>
     public string YearFormat = null;
     
     /// <summary>
-    /// 　月のフォーマット
+    ///   月のフォーマット
     /// </summary>
     public string MonthFormat = null;
     
     /// <summary>
-    /// 　日のフォーマット
+    ///   日のフォーマット
     /// </summary>
     public string DayFormat = null;
 
@@ -104,45 +169,39 @@ public class DateSelector : TranslatableWebControl {
             Name = "DateSelector";
         }
         if(!Visible) {
-            if(ShowYear) {
-                sb.Append("<input type=\"hidden\" name=\"");
-                sb.Append(Name+"Year");
-                sb.Append("\" value=\"");
-                sb.Append(Selected.Year.ToString());
+            sb.Append("<input type=\"hidden\" name=\"");
+            sb.Append(Name+"Year");
+            sb.Append("\" value=\"");
+            sb.Append(Selected.Year.ToString());
+            sb.Append("\"");
+            if(!String.IsNullOrEmpty(ID)) {
+                sb.Append(" id=\"");
+                sb.Append(ID+"Year");
                 sb.Append("\"");
-                if(!String.IsNullOrEmpty(ID)) {
-                    sb.Append(" id=\"");
-                    sb.Append(ID+"Year");
-                    sb.Append("\"");
-                }
-                sb.Append("/>");
             }
-            if(ShowMonth) {
-                sb.Append("<input type=\"hidden\" name=\"");
-                sb.Append(Name+"Month");
-                sb.Append("\" value=\"");
-                sb.Append(Selected.Month.ToString());
+            sb.Append("/>");
+            sb.Append("<input type=\"hidden\" name=\"");
+            sb.Append(Name+"Month");
+            sb.Append("\" value=\"");
+            sb.Append(Selected.Month.ToString());
+            sb.Append("\"");
+            if(!String.IsNullOrEmpty(ID)) {
+                sb.Append(" id=\"");
+                sb.Append(ID+"Month");
                 sb.Append("\"");
-                if(!String.IsNullOrEmpty(ID)) {
-                    sb.Append(" id=\"");
-                    sb.Append(ID+"Month");
-                    sb.Append("\"");
-                }
-                sb.Append("/>");
             }
-            if(ShowDay) {
-                sb.Append("<input type=\"hidden\" name=\"");
-                sb.Append(Name+"Day");
-                sb.Append("\" value=\"");
-                sb.Append(Selected.Day.ToString());
+            sb.Append("/>");
+            sb.Append("<input type=\"hidden\" name=\"");
+            sb.Append(Name+"Day");
+            sb.Append("\" value=\"");
+            sb.Append(Selected.Day.ToString());
+            sb.Append("\"");
+            if(!String.IsNullOrEmpty(ID)) {
+                sb.Append(" id=\"");
+                sb.Append(ID+"Day");
                 sb.Append("\"");
-                if(!String.IsNullOrEmpty(ID)) {
-                    sb.Append(" id=\"");
-                    sb.Append(ID+"Day");
-                    sb.Append("\"");
-                }
-                sb.Append("/>");
             }
+            sb.Append("/>");
             return sb;
         }
         sb.Append("<span class=\"dateselector");
@@ -158,7 +217,7 @@ public class DateSelector : TranslatableWebControl {
         }
         sb.Append(">");
 
-        string yearFormat = YearFormat??_("DateSelector.YearFormat");
+        string yearFormat = YearFormat ?? _("DateSelector.YearFormat");
         string yearSeparator = "";
         if(!yearFormat.Contains("{0}")) {
             yearFormat = "{0}";
@@ -168,7 +227,7 @@ public class DateSelector : TranslatableWebControl {
                 yearSeparator = "/";
             }
         }
-        string monthFormat = MonthFormat??_("DateSelector.MonthFormat");
+        string monthFormat = MonthFormat ?? _("DateSelector.MonthFormat");
         string monthSeparator = "";
         if(!monthFormat.Contains("{0}")) {
             monthFormat = "{0}";
@@ -178,7 +237,7 @@ public class DateSelector : TranslatableWebControl {
                 monthSeparator = "/";
             }
         }
-        string dayFormat = DayFormat??_("DateSelector.DayFormat");
+        string dayFormat = DayFormat ?? _("DateSelector.DayFormat");
         if(!dayFormat.Contains("{0}")) {
             dayFormat = "{0}";
         }
@@ -207,6 +266,18 @@ public class DateSelector : TranslatableWebControl {
             if(!String.IsNullOrEmpty(yearSeparator)) {
                 sb.Append(" "+yearSeparator+" ");
             }
+        } else {
+            sb.Append("<input type=\"hidden\" name=\"");
+            sb.Append(Name+"Year");
+            sb.Append("\" value=\"");
+            sb.Append(Selected.Year.ToString());
+            sb.Append("\"");
+            if(!String.IsNullOrEmpty(ID)) {
+                sb.Append(" id=\"");
+                sb.Append(ID+"Year");
+                sb.Append("\"");
+            }
+            sb.Append("/>");
         }
 
         if(ShowMonth) {
@@ -233,6 +304,18 @@ public class DateSelector : TranslatableWebControl {
             if(!String.IsNullOrEmpty(monthSeparator)) {
                 sb.Append(" "+monthSeparator+" ");
             }
+        } else {
+            sb.Append("<input type=\"hidden\" name=\"");
+            sb.Append(Name+"Month");
+            sb.Append("\" value=\"");
+            sb.Append(Selected.Month.ToString());
+            sb.Append("\"");
+            if(!String.IsNullOrEmpty(ID)) {
+                sb.Append(" id=\"");
+                sb.Append(ID+"Month");
+                sb.Append("\"");
+            }
+            sb.Append("/>");
         }
 
         if(ShowDay) {
@@ -256,6 +339,18 @@ public class DateSelector : TranslatableWebControl {
                 sb.Append("</option>");
             }
             sb.Append("</select>");
+        } else {
+            sb.Append("<input type=\"hidden\" name=\"");
+            sb.Append(Name+"Day");
+            sb.Append("\" value=\"");
+            sb.Append(Selected.Day.ToString());
+            sb.Append("\"");
+            if(!String.IsNullOrEmpty(ID)) {
+                sb.Append(" id=\"");
+                sb.Append(ID+"Day");
+                sb.Append("\"");
+            }
+            sb.Append("/>");
         }
 
         sb.Append("</span>");
