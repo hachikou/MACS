@@ -1175,6 +1175,7 @@ public class DBCon : Loggable, IDisposable {
                 if(!mo.Success) {
                     versionString = "";
                     versionNumber = 0;
+                    break;
                 }
             }
             versionString = mo.Groups[0].Value;
