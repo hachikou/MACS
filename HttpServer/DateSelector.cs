@@ -67,28 +67,10 @@ public class DateSelector : TranslatableWebControl {
     /// </summary>
     public string Text {
         get {
-            string yearFormat = YearFormat ?? _("DateSelector.YearFormat");
-            string yearSeparator = "";
-            if(!yearFormat.Contains("{0}")) {
-                yearFormat = "{0}";
-                //月、または日を表示する場合、セパレータ文字を設定する
-                if(ShowMonth || ShowDay) {
-                    yearSeparator = "/";
-                }
-            }
-            string monthFormat = MonthFormat ?? _("DateSelector.MonthFormat");
-            string monthSeparator = "";
-            if(!monthFormat.Contains("{0}")) {
-                monthFormat = "{0}";
-                //日を表示する場合、セパレータ文字を設定する
-                if(ShowDay) {
-                    monthSeparator = "/";
-                }
-            }
-            string dayFormat = DayFormat ?? _("DateSelector.DayFormat");
-            if(!dayFormat.Contains("{0}")) {
-                dayFormat = "{0}";
-            }
+            string yearFormat, yearSeparator;
+            string monthFormat, monthSeparator;
+            string dayFormat;
+            getFormat(out yearFormat, out yearSeparator, out monthFormat, out monthSeparator, out dayFormat);
             StringBuilder sb = new StringBuilder();
             if(ShowYear) {
                 sb.AppendFormat(yearFormat, Selected.Year);
@@ -217,31 +199,11 @@ public class DateSelector : TranslatableWebControl {
         }
         sb.Append(">");
 
-        string yearFormat = YearFormat ?? _("DateSelector.YearFormat");
-        string yearSeparator = "";
-        if(!yearFormat.Contains("{0}")) {
-            yearFormat = "{0}";
-            
-            //月、または日を表示する場合、セパレータ文字を設定する
-            if(ShowMonth || ShowDay) {
-                yearSeparator = "/";
-            }
-        }
-        string monthFormat = MonthFormat ?? _("DateSelector.MonthFormat");
-        string monthSeparator = "";
-        if(!monthFormat.Contains("{0}")) {
-            monthFormat = "{0}";
-            
-            //日を表示する場合、セパレータ文字を設定する
-            if(ShowDay) {
-                monthSeparator = "/";
-            }
-        }
-        string dayFormat = DayFormat ?? _("DateSelector.DayFormat");
-        if(!dayFormat.Contains("{0}")) {
-            dayFormat = "{0}";
-        }
-
+        string yearFormat, yearSeparator;
+        string monthFormat, monthSeparator;
+        string dayFormat;
+        getFormat(out yearFormat, out yearSeparator, out monthFormat, out monthSeparator, out dayFormat);
+        
         if(ShowYear) {
             sb.Append("<select name=\"");
             sb.Append(Name+"Year");
@@ -359,22 +321,59 @@ public class DateSelector : TranslatableWebControl {
     }
 
     public override void Fetch(HttpPage page, object defaultValue=null) {
-        int yy,mm,dd;
-        if(defaultValue is DateTime) {
-            DateTime d = (DateTime)defaultValue;
-            yy = d.Year;
-            mm = d.Month;
-            dd = d.Day;
-        } else {
-            yy = 0;
-            mm = 0;
-            dd = 0;
+        int yy = page.Fetch(Name+"Year", 0);
+        int mm = page.Fetch(Name+"Month", 0);
+        int dd = page.Fetch(Name+"Day", 0);
+        if((yy > 0) && (mm > 0) && (dd > 0)) {
+            // Name+Year,Name+Month,Name+Dayが設定されているときはそれを読み取る
+            Value = StringUtil.ToDateTime(String.Format("{0}/{1}/{2}", yy, mm, dd));
+            return;
         }
-        Value = StringUtil.ToDateTime(String.Format("{0}/{1}/{2}",
-                                                    page.Fetch(Name+"Year",yy),
-                                                    page.Fetch(Name+"Month",mm),
-                                                    page.Fetch(Name+"Day",dd)));
+        string val = page.Fetch(Name, null);
+        if(!String.IsNullOrEmpty(val)) {
+            // Nameが設定されているときはそれを読み取る
+            Value = StringUtil.ToDateTime(val);
+            return;
+        }
+        // デフォルト値を使う
+        if(defaultValue is DateTime) {
+            Value = (DateTime)defaultValue;
+        } else if(defaultValue is string) {
+            Value = StringUtil.ToDateTime((string)defaultValue);
+        } else {
+            Value = new DateTime(0);
+        }
     }
+
+    private void getFormat(out string yearFormat, out string yearSeparator,
+                           out string monthFormat, out string monthSeparator,
+                           out string dayFormat) {
+        yearFormat = YearFormat ?? _("DateSelector.YearFormat");
+        yearSeparator = "";
+        if(!yearFormat.Contains("{0}")) {
+            yearFormat = "{0}";
+            
+            //月、または日を表示する場合、セパレータ文字を設定する
+            if(ShowMonth || ShowDay) {
+                yearSeparator = "/";
+            }
+        }
+        monthFormat = MonthFormat ?? _("DateSelector.MonthFormat");
+        monthSeparator = "";
+        if(!monthFormat.Contains("{0}")) {
+            monthFormat = "{0}";
+            
+            //日を表示する場合、セパレータ文字を設定する
+            if(ShowDay) {
+                monthSeparator = "/";
+            }
+        }
+        dayFormat = DayFormat ?? _("DateSelector.DayFormat");
+        if(!dayFormat.Contains("{0}")) {
+            dayFormat = "{0}";
+        }
+    }
+
 }
 
 } // End of namespace
