@@ -1160,21 +1160,29 @@ public class DBCon : Loggable, IDisposable {
             Console.WriteLine("{0}: {1}", dbname, msg);
     }
 
-    private Regex pat_version = new Regex(@"(\d+)\.(\d+)\.(\d+)");
+    private Regex pat_version3 = new Regex(@"(\d+)\.(\d+)\.(\d+)");
+    private Regex pat_version2 = new Regex(@"(\d+)\.(\d+)");
     
     private void getVersion() {
         Match mo;
         switch(dbtype) {
         case Type.MySQL:
         case Type.PostgreSQL:
-            mo = pat_version.Match(QueryString("SELECT VERSION()"));
-            if(mo.Success) {
-                versionString = mo.Groups[0].Value;
-                versionNumber = StringUtil.ToInt(mo.Groups[1].Value)*10000+StringUtil.ToInt(mo.Groups[2].Value)*100+StringUtil.ToInt(mo.Groups[3].Value);
-            } else {
-                versionString = "";
-                versionNumber = 0;
+            string r = QueryString("SELECT VERSION()");
+            mo = pat_version3.Match(r);
+            if(!mo.Success) {
+                mo = pat_version2.Match(r);
+                if(!mo.Success) {
+                    versionString = "";
+                    versionNumber = 0;
+                    break;
+                }
             }
+            versionString = mo.Groups[0].Value;
+            if(mo.Groups.Count == 3)
+                versionNumber = StringUtil.ToInt(mo.Groups[1].Value)*10000+StringUtil.ToInt(mo.Groups[2].Value)*100+StringUtil.ToInt(mo.Groups[3].Value);
+            else
+                versionNumber = StringUtil.ToInt(mo.Groups[1].Value)*10000+StringUtil.ToInt(mo.Groups[2].Value)*100;
             break;
         default:
             versionString = "";
