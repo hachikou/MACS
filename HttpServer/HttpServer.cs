@@ -919,9 +919,9 @@ public class HttpServer : Loggable, IDisposable {
                                     sessid.Expires = DateTime.Now.AddSeconds(SessionTimeout);
                                     //context.Response.AppendCookie(sessid);
                                     // なぜか正しいSet-Cookieヘッダを生成してくれないので、自力でヘッダを作る。
-                                    context.Response.AppendHeader("Set-Cookie", string.Format("{0}={1}; expires={2}; path={3}; httponly", sessid.Name, sessid.Value, sessid.Expires.ToString("r"), sessid.Path));
+                                    context.Response.AppendHeader("Set-Cookie", string.Format("{0}={1}; expires={2}; path={3}; httponly; samesite=lax", sessid.Name, sessid.Value, sessid.Expires.ToString("r"), sessid.Path));
                                 } else {
-                                    context.Response.AppendHeader("Set-Cookie", string.Format("{0}={1}; path={2}; httponly", sessid.Name, sessid.Value, sessid.Path));
+                                    context.Response.AppendHeader("Set-Cookie", string.Format("{0}={1}; path={2}; httponly; samesite=lax", sessid.Name, sessid.Value, sessid.Path));
                                 }
 
                                 // ページレンダラの呼び出し
