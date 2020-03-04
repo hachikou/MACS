@@ -1777,6 +1777,78 @@ public class DBTable {
 
 #endregion
 
+#region UNION
+    /// <summary>
+    ///   サブクエリのUNION指定。
+    /// </summary>
+    /// <param name="table">サブクエリのDBTable</param>
+    /// <param name="limit">最大取り出し件数。0の場合無制限</param>
+    /// <param name="offset">何件目以降を返すか。先頭レコードは0</param>
+    /// <remarks>
+    ///   <para>
+    ///     UNIONされます。
+    ///     UNIONするカラムの数が違う場合、クエリ実行時エラーになります。
+    ///     カラムチェックはしていません。
+    ///   </para>
+    /// </remarks>
+    public void UnionAs(DBTable table, int limit = 0, int offset = 0) {
+
+        UnionAs(table.GetQuerySql(limit, offset));
+    }
+
+    /// <summary>
+    ///   サブクエリのUNION指定。
+    /// </summary>
+    /// <param name="query">クエリ文</param>
+    /// <remarks>
+    ///   <para>
+    ///     UNIONされます。
+    ///     UNIONするカラムの数が違う場合、クエリ実行時エラーになります。
+    ///     カラムチェックはしていません。
+    ///   </para>
+    /// </remarks>
+    public void UnionAs(string query) {
+        if(unionList == null)
+            unionList = new List<UnionTable>();
+        unionList.Add(new UnionTable(UnionTable.Mode.UNION, query));
+    }
+
+    /// <summary>
+    ///   サブクエリのUNION ALL指定。
+    /// </summary>
+    /// <param name="table">サブクエリのDBTable</param>
+    /// <param name="limit">最大取り出し件数。0の場合無制限</param>
+    /// <param name="offset">何件目以降を返すか。先頭レコードは0</param>
+    /// <remarks>
+    ///   <para>
+    ///     UNION ALLされます。
+    ///     UNION ALLするカラムの数が違う場合、クエリ実行時エラーになります。
+    ///     カラムチェックはしていません。
+    ///   </para>
+    /// </remarks>
+    public void UnionAllAs(DBTable table, int limit = 0, int offset = 0) {
+
+        UnionAllAs(table.GetQuerySql(limit, offset));
+    }
+
+    /// <summary>
+    ///   サブクエリのUNION ALL指定。
+    /// </summary>
+    /// <param name="query">クエリ文</param>
+    /// <remarks>
+    ///   <para>
+    ///     UNION ALLされます。
+    ///     UNION ALLするカラムの数が違う場合、クエリ実行時エラーになります。
+    ///     カラムチェックはしていません。
+    ///   </para>
+    /// </remarks>
+    public void UnionAllAs(string query) {
+        if(unionList == null)
+            unionList = new List<UnionTable>();
+        unionList.Add(new UnionTable(UnionTable.Mode.UNION_ALL, query));
+    }
+#endregion
+
 #region 検索オプション
 
     /// <summary>
@@ -2145,6 +2217,7 @@ public class DBTable {
             sql.Append(" HAVING ");
             sql.Append(having.ToString());
         }
+        expandUnion(sql);
         if(sortcolumns != null) {
             sql.Append(" ORDER BY ");
             first = true;
@@ -2190,6 +2263,8 @@ public class DBTable {
         }
         if(groupby != null)
             throw new ArgumentException("Can't count up records with group-by clause.");
+        if(unionList != null)
+            throw new ArgumentException("Can't count up records with union clause.");
         expandJoin(sql);
         if(!IsNullCondition) {
             sql.Append(" WHERE ");
@@ -2413,6 +2488,8 @@ public class DBTable {
             throw new ArgumentException(String.Format("Invalid number of columns for update. (required={0}, provided={1})", mycolumns.Length, rec.Length));
         //if(joinList != null)
         //    throw new ArgumentException("Can't update records on joined table.");
+        if(unionList != null)
+            throw new ArgumentException("Can't update records with union clause.");
         if(groupby != null)
             throw new ArgumentException("Can't update records with group-by clause.");
         if(IsNullCondition)
@@ -2522,6 +2599,8 @@ public class DBTable {
             throw new ArgumentException(String.Format("Invalid number of columns for update. (required={0}, provided={1})", mycolumns.Length, rec.Length));
         if(joinList != null)
             throw new ArgumentException("Can't update records on joined table.");
+        if(unionList != null)
+            throw new ArgumentException("Can't update records on unioned table.");
         if(groupby != null)
             throw new ArgumentException("Can't update records with group-by clause.");
         if(IsNullCondition)
@@ -2668,6 +2747,8 @@ public class DBTable {
     public void Truncate() {
         if(joinList != null)
             throw new ArgumentException("Can't truncate joined tables.");
+        if(unionList != null)
+            throw new ArgumentException("Can't truncate unioned tables.");
         if(def == null)
             throw new ArgumentException("Can't truncate on sub-query.");
         dbcon.Execute("TRUNCATE TABLE "+def.Name);
@@ -2787,6 +2868,8 @@ public class DBTable {
     public int LoadCSV(StreamReader sr, bool ignoreBadRecord=false, bool testRun=false) {
         if(joinList != null)
             throw new ArgumentException("Can't load CSV records to joined table.");
+        if(unionList != null)
+            throw new ArgumentException("Can't load CSV records to unioned table.");
         if(!testRun)
             dbcon.Begin();
         SetAllColumns();
@@ -2917,6 +3000,8 @@ public class DBTable {
     public bool NeedsRenovation() {
         if(joinList != null)
             throw new ArgumentException("Can't renovate joined tables");
+        if(unionList != null)
+            throw new ArgumentException("Can't renovate unioned tables");
         this.SetAllColumns();
         try {
             Get(1); // ダミーで全項目をQueryしてみる
@@ -2940,6 +3025,8 @@ public class DBTable {
     public void Renovate() {
         if(joinList != null)
             throw new ArgumentException("Can't renovate joined tables");
+        if(unionList != null)
+            throw new ArgumentException("Can't renovate unioned tables");
         string tmptblname = "tmp_"+def.Name;
         bool hasOld = false;
         dbcon.LOG_NOTICE("Upgrade table schema for {0}", def.Name);
@@ -3423,6 +3510,8 @@ public class DBTable {
             throw new ArgumentException(String.Format("Invalid number of columns for insert. (required={0}, provided={1})", mycolumns.Length, rec.Length));
         if(joinList != null)
             throw new ArgumentException("Can't insert records into joined table.");
+        if(unionList != null)
+            throw new ArgumentException("Can't insert records into unioned table.");
         if(groupby != null)
             throw new ArgumentException("Can't insert records with group-by clause.");
         if(def == null)
@@ -3465,6 +3554,8 @@ public class DBTable {
             throw new ArgumentException(String.Format("Invalid number of columns for insert. (required={0}, provided={1})", mycolumns.Length, subquery.Columns.Length));
         if(joinList != null)
             throw new ArgumentException("Can't insert records into joined table.");
+        if(unionList != null)
+            throw new ArgumentException("Can't insert records into unioned table.");
         if(groupby != null)
             throw new ArgumentException("Can't insert records with group-by clause.");
         if(def == null)
@@ -3574,6 +3665,28 @@ public class DBTable {
             sql.Append(jt.condition);
         }
     }
+
+    private void expandUnion(StringBuilder sql) {
+        if(unionList == null)
+            return;
+        foreach(UnionTable ut in unionList) {
+            switch (ut.mode){
+            case UnionTable.Mode.UNION:
+                sql.Append(" UNION ");
+                break;
+            case UnionTable.Mode.UNION_ALL:
+                sql.Append(" UNION ALL ");
+                break;
+            default:
+                throw new ArgumentException("This unioned table does not have valid definition");
+            }
+
+            if(String.IsNullOrEmpty(ut.query))
+                throw new ArgumentException("This unioned table does not have valid definition");
+
+            sql.AppendFormat(" ({0}) ", ut.query);
+        }
+    }
     
     private static string csvEscape(string str) {
         StringBuilder sb = new StringBuilder();
@@ -3660,6 +3773,22 @@ public class DBTable {
         public readonly string condition;
     }
 
+    private class UnionTable {
+
+        public enum Mode{
+            UNION,
+            UNION_ALL,
+        }
+
+        public UnionTable(Mode mode_, string  query_) {
+            mode = mode_;
+            query = query_;
+        }
+
+        public readonly Mode mode;
+        public readonly string query;
+    }
+
     private class IndexAndName {
         public readonly int Index;
         public readonly string Name;
@@ -3679,6 +3808,7 @@ public class DBTable {
     private StringBuilder condition;
     private StringBuilder having;
     private List<JoinTable> joinList;
+    private List<UnionTable> unionList;
     private string[] groupby;
     private bool forupdate;
     private bool calcrows;
