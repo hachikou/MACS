@@ -1791,9 +1791,9 @@ public class DBTable {
     ///     カラムチェックはしていません。
     ///   </para>
     /// </remarks>
-    public void UnionAs(DBTable table, int limit = 0, int offset = 0) {
+    public void Union(DBTable table, int limit = 0, int offset = 0) {
 
-        UnionAs(table.GetQuerySql(limit, offset));
+        Union(table.GetQuerySql(limit, offset));
     }
 
     /// <summary>
@@ -1807,7 +1807,7 @@ public class DBTable {
     ///     カラムチェックはしていません。
     ///   </para>
     /// </remarks>
-    public void UnionAs(string query) {
+    public void Union(string query) {
         if(unionList == null)
             unionList = new List<UnionTable>();
         unionList.Add(new UnionTable(UnionTable.Mode.UNION, query));
@@ -1826,9 +1826,9 @@ public class DBTable {
     ///     カラムチェックはしていません。
     ///   </para>
     /// </remarks>
-    public void UnionAllAs(DBTable table, int limit = 0, int offset = 0) {
+    public void UnionAll(DBTable table, int limit = 0, int offset = 0) {
 
-        UnionAllAs(table.GetQuerySql(limit, offset));
+        UnionAll(table.GetQuerySql(limit, offset));
     }
 
     /// <summary>
@@ -1842,7 +1842,7 @@ public class DBTable {
     ///     カラムチェックはしていません。
     ///   </para>
     /// </remarks>
-    public void UnionAllAs(string query) {
+    public void UnionAll(string query) {
         if(unionList == null)
             unionList = new List<UnionTable>();
         unionList.Add(new UnionTable(UnionTable.Mode.UNION_ALL, query));
