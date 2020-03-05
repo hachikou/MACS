@@ -39,6 +39,18 @@ public class YesNoSelector: TranslatableWebControl {
     }
 
     /// <summary>
+    ///   選択された値の表示名。
+    /// </summary>
+    public string SelectedText {
+        get {
+            if(Selected)
+                return _(YesString);
+            else
+                return _(NoString);
+        }
+    }
+
+    /// <summary>
     ///   yesの時の表示文字（これがTranslatorで翻訳される）
     /// </summary>
     public string YesString = "Yes";
