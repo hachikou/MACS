@@ -879,7 +879,7 @@ public class StringUtil {
             return new DateTime(0);
         try {
             string[] x = str.Split(" /:-,.;".ToCharArray());
-            int year,month,day,hour,minute,second;
+            int year,month,day,hour,minute,second,msecond;
             switch(x.Length) {
             case 1: // 項目が1つしかなければ、1年1月1日からの日数ということにする
                 return (new DateTime(0)).AddDays(ToInt(x[0]));
@@ -890,6 +890,7 @@ public class StringUtil {
                 hour = 0;
                 minute = 0;
                 second = 0;
+                msecond = 0;
                 break;
             case 3: // 項目が3つなら、年月日
                 year = ToInt(x[0], Int32.MinValue);
@@ -898,6 +899,7 @@ public class StringUtil {
                 hour = 0;
                 minute = 0;
                 second = 0;
+                msecond = 0;
                 break;
             case 4: // 項目が4つなら、年月日時
                 year = ToInt(x[0], Int32.MinValue);
@@ -906,6 +908,7 @@ public class StringUtil {
                 hour = ToInt(x[3], Int32.MinValue);
                 minute = 0;
                 second = 0;
+                msecond = 0;
                 break;
             case 5: // 項目が5つなら、年月日時分
                 year = ToInt(x[0], Int32.MinValue);
@@ -914,17 +917,28 @@ public class StringUtil {
                 hour = ToInt(x[3], Int32.MinValue);
                 minute = ToInt(x[4], Int32.MinValue);
                 second = 0;
+                msecond = 0;
                 break;
-            default: // 項目が6つ以上なら、年月日時分秒
+            case 6: // 項目が6つなら、年月日時分秒
                 year = ToInt(x[0], Int32.MinValue);
                 month = ToInt(x[1], Int32.MinValue);
                 day = ToInt(x[2], Int32.MinValue);
                 hour = ToInt(x[3], Int32.MinValue);
                 minute = ToInt(x[4], Int32.MinValue);
                 second = ToInt(x[5], Int32.MinValue);
+                msecond = 0;
+                break;
+            default: // 項目が7つ以上なら、年月日時分秒ミリ秒
+                year = ToInt(x[0], Int32.MinValue);
+                month = ToInt(x[1], Int32.MinValue);
+                day = ToInt(x[2], Int32.MinValue);
+                hour = ToInt(x[3], Int32.MinValue);
+                minute = ToInt(x[4], Int32.MinValue);
+                second = ToInt(x[5], Int32.MinValue);
+                msecond = ToInt(x[6], Int32.MinValue);
                 break;
             }
-            int add = 0;
+            long add = 0;
             if(year == Int32.MinValue)
                 return new DateTime(0);
             if(year < 1)
@@ -946,42 +960,64 @@ public class StringUtil {
             if(hour == Int32.MinValue)
                 return new DateTime(0);
             while(hour < 0){
-                add -= 24*60*60;
+                add -= 24*60*60*1000;
                 hour += 24;
             }
             while(hour >= 24){
-                add += 24*60*60;
+                add += 24*60*60*1000;
                 hour -= 24;
             }
             if(minute == Int32.MinValue)
                 return new DateTime(0);
             while(minute < 0){
-                add -= 60*60;
+                add -= 60*60*1000;
                 minute += 60;
             }
             while(minute >= 60){
-                add += 60*60;
+                add += 60*60*1000;
                 minute -= 60;
             }
             if(second == Int32.MinValue)
                 return new DateTime(0);
             while(second < 0){
-                add -= 60;
+                add -= 60*1000;
                 second += 60;
             }
             while(second >= 60){
-                add += 60;
+                add += 60*1000;
                 second -= 60;
             }
-            DateTime dt = new DateTime(year,month,day,hour,minute,second);
+            if(msecond == Int32.MinValue)
+                return new DateTime(0);
+            while(msecond < 0){
+                add -= 1000;
+                msecond += 1000;
+            }
+            while(msecond >= 1000){
+                add += 1000;
+                msecond -= 1000;
+            }
+            DateTime dt = new DateTime(year,month,day,hour,minute,second,msecond);
             if(add != 0)
-                dt = dt.AddSeconds(add);
+                dt = dt.AddMilliseconds(add);
             return dt;
         } catch(ArgumentException) {
             return new DateTime(0);
         }
     }
 
+    /// <summary>
+    ///   日時文字列を得る
+    /// </summary>
+    public static string PrettyDateTime(DateTime dt) {
+        if(dt.Millisecond != 0)
+            return dt.ToString("yyyy-MM-dd HH:mm:ss.fff");
+        if(dt.Second != 0)
+            return dt.ToString("yyyy-MM-dd HH:mm:ss");
+        if((dt.Hour != 0) || (dt.Minute != 0))
+            return dt.ToString("yyyy-MM-dd HH:mm");
+        return dt.ToString("yyyy-MM-dd");
+    }
 
     /// <summary>
     ///   安全な部分文字列取り出し
