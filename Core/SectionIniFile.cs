@@ -303,7 +303,7 @@ public class SectionIniFile {
                             if(line.StartsWith("[") && line.EndsWith("]")) {
                                 // セクション内の残りのkey-valueを書き出す
                                 foreach(string key in section.GetKeys()) {
-                                    sw.WriteLine(key+"="+section.Get(key));
+                                    sw.WriteLine(key+"="+section.Get(key).Replace("\n", "\\n").Replace("\r", ""));
                                 }
                                 m_section.Remove(sectionname);
                                 sectionname = line.Substring(1,line.Length-2).Trim();
@@ -317,14 +317,14 @@ public class SectionIniFile {
                             string[] keyval = line.Split("=".ToCharArray(), 2);
                             if(keyval.Length == 2) {
                                 string key = keyval[0].Trim();
-                                string xval = keyval[1].Trim();
+                                string xval = keyval[1].Trim().Replace("\\n", "\n");
                                 string val = section.Get(key, xval);
                                 if(val == xval) {
                                     sw.WriteLine(line);
                                 } else {
                                     if(upgradeMode)
                                         sw.WriteLine("#"+line);
-                                    sw.WriteLine(key+"="+val);
+                                    sw.WriteLine(key+"="+val.Replace("\n", "\\n").Replace("\r", ""));
                                 }
                                 section.Remove(key);
                             } else {
@@ -335,7 +335,7 @@ public class SectionIniFile {
 
                         // セクション内の残りのkey-valueを書き出す
                         foreach(string key in section.GetKeys()) {
-                            sw.WriteLine(key+"="+section.Get(key));
+                            sw.WriteLine(key+"="+section.Get(key).Replace("\n", "\\n").Replace("\r", ""));
                         }
                         m_section.Remove(sectionname);
                     }
@@ -351,7 +351,7 @@ public class SectionIniFile {
                     foreach(string key in ini.GetKeys()){
                         sw.Write(key);
                         sw.Write("=");
-                        sw.WriteLine(ini.Get(key));
+                        sw.WriteLine(ini.Get(key).Replace("\n", "\\n").Replace("\r", ""));
                     }
                 }
                 sw.Close();
