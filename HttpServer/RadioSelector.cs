@@ -46,6 +46,11 @@ public class RadioSelector<T> : TranslatableWebControl
     }
 
     /// <summary>
+    ///   変更時に呼び出されるJavaScript
+    /// </summary>
+    public string OnChange;
+
+    /// <summary>
     ///   縦に並べるかどうか
     /// </summary>
     public bool Vertical = false;
@@ -148,6 +153,11 @@ public class RadioSelector<T> : TranslatableWebControl
             if(!String.IsNullOrEmpty(OnClick)) {
                 sb.Append(" onclick=\"");
                 sb.Append(OnClick);
+                sb.Append("\"");
+            }
+            if(!String.IsNullOrEmpty(OnChange)) {
+                sb.Append(" onclick=\"");
+                sb.Append(OnChange);
                 sb.Append("\"");
             }
             sb.Append("/><label for=\"");
@@ -327,6 +337,11 @@ public class RadioSelector : TranslatableWebControl {
     }
     
     /// <summary>
+    ///   変更時に呼び出されるJavaScript
+    /// </summary>
+    public string OnChange;
+
+    /// <summary>
     ///   縦に並べるかどうか
     /// </summary>
     public bool Vertical = false;
@@ -404,6 +419,11 @@ public class RadioSelector : TranslatableWebControl {
             if(!String.IsNullOrEmpty(OnClick)) {
                 sb.Append(" onclick=\"");
                 sb.Append(OnClick);
+                sb.Append("\"");
+            }
+            if(!String.IsNullOrEmpty(OnChange)) {
+                sb.Append(" onclick=\"");
+                sb.Append(OnChange);
                 sb.Append("\"");
             }
             sb.Append("/><label for=\"");
