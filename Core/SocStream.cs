@@ -320,9 +320,14 @@ public partial class SocStream: Stream,IDisposable {
             res = 0;
             return false;
         }
+        if(Soc.Available <= 0) {
+            // 最後まで読み切った時
+            res = 0;
+            return false;
+        }
         byte[] buf = new byte[1];
         if(Soc.Receive(buf, 0, 1, SocketFlags.None) != 1)
-            throw new SocketException(SocError.NO_DATA);
+            throw new SocketException(SocError.EWOULDBLOCK);
         res = buf[0];
         return true;
     }
@@ -376,11 +381,15 @@ public partial class SocStream: Stream,IDisposable {
             }
             if(Soc.Poll(t*1000, SelectMode.SelectRead)) {
                 int sz = Soc.Available;
+                if(sz == 0)
+                    break;
+                if(sz < 0)
+                    throw new SocketException(SocError.EWOULDBLOCK);
                 if(size-len < sz)
                     sz = size-len;
                 int l = Soc.Receive(buf, offset+len, sz, SocketFlags.None);
                 if(l <= 0)
-                    throw new SocketException(SocError.NO_DATA);
+                    throw new SocketException(SocError.EWOULDBLOCK);
                 len += l;
             }
         }
@@ -533,7 +542,7 @@ public partial class SocStream: Stream,IDisposable {
             if(Soc.Poll(t*1000, SelectMode.SelectWrite)) {
                 int l = Soc.Send(writeBuf, len, writeIndex-len, SocketFlags.None);
                 if(l <= 0)
-                    throw new SocketException(SocError.NO_RECOVERY);
+                    throw new SocketException(SocError.EWOULDBLOCK);
                 len += l;
             }
         }
