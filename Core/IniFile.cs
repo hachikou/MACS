@@ -365,7 +365,7 @@ public class IniFile {
             return false;
         if(m_data == null)
             m_data = new Dictionary<string, string>();
-        m_data[keyval[0].Trim()] = keyval[1].Trim();
+        m_data[keyval[0].Trim()] = keyval[1].Trim().Replace("\\n", "\n");
         return true;
     }
 
@@ -411,13 +411,13 @@ public class IniFile {
                             string key = keyval[0].Trim();
                             string val;
                             if(m_data.TryGetValue(key, out val)) {
-                                string xval = keyval[1].Trim();
+                                string xval = keyval[1].Trim().Replace("\\n", "\n");
                                 if(val == xval) {
                                     sw.WriteLine(line);
                                 } else {
                                     if(upgradeMode)
                                         sw.WriteLine("#"+line);
-                                    sw.WriteLine(key + "=" + val);
+                                    sw.WriteLine(key + "=" + val.Replace("\n", "\\n").Replace("\r",""));
                                 }
                                 m_data.Remove(key);
                             } else {
@@ -431,7 +431,7 @@ public class IniFile {
                         sw.WriteLine("[" + m_sectionname + "]");
                 }
                 foreach(string key in m_data.Keys) {
-                    sw.WriteLine(key + "=" + m_data[key]);
+                    sw.WriteLine(key + "=" + m_data[key].Replace("\n", "\\n").Replace("\r", ""));
                 }
                 sw.Close();
             }
