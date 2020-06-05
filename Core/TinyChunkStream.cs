@@ -33,6 +33,11 @@ public class TinyChunkStream: Stream,IDisposable {
     /// <summary>
     ///   チャンクサイズ
     /// </summary>
+    /// <remarks>
+    ///   <para>
+    ///     書き出し時のチャンクサイズ。読み込み時のサイズは受信データから読み取られます。
+    ///   </para>
+    /// </remarks>
     public byte ChunkSize {
         get { return chunkSize; }
         set {
@@ -108,9 +113,9 @@ public class TinyChunkStream: Stream,IDisposable {
     /// </remarks>
     public override void Close() {
         if(baseStream != null) {
-            if(writing && (buffer != null)) {
+            if(writing) {
                 try {
-                    Finish();
+                    Finish(true);
                 } catch(Exception) {
                     // just ignore.
                 }
@@ -130,30 +135,34 @@ public class TinyChunkStream: Stream,IDisposable {
     }
 
     public override int Read(byte[] buf, int offset, int size) {
-        if(writing)
-            throw new InvalidOperationException("Can't read TinyChunkStream after write.");
-        if(chunkSize == 0)
+        if(writing) {
+            Finish(true);
+        }
+        if(rChunkSize == 0) {
+            rChunkSize = DefaultChunkSize; // 次のReadで新しいデータを読み取るように
             return 0;
-        if(buffer == null) {
-            buffer = new byte[255];
-            count = 0;
+        }
+        if(rBuffer == null) {
+            rBuffer = new byte[255];
+            rCount = 0;
         }
         int len = 0;
         while(size > 0) {
-            if(count == 0) {
-                if(baseStream.Read(buffer,0,1) != 1)
+            if(rCount == 0) {
+                if(baseStream.Read(rBuffer,0,1) != 1)
                     break;
-                chunkSize = count = buffer[0];
-                if(chunkSize == 0)
+                rChunkSize = rCount = rBuffer[0];
+                if(rChunkSize == 0)
                     break;
+                rCount = (byte)baseStream.Read(rBuffer, 0, rChunkSize);
             }
-            int sz = (int)count;
+            int sz = (int)rCount;
             if(size < sz)
                 sz = size;
-            Buffer.BlockCopy(buffer,chunkSize-count,buf,offset,sz);
+            Buffer.BlockCopy(rBuffer,rChunkSize-rCount,buf,offset,sz);
             size -= sz;
             offset += sz;
-            count -= (byte)sz;
+            rCount -= (byte)sz;
             len += sz;
         }
         return len;
@@ -166,11 +175,11 @@ public class TinyChunkStream: Stream,IDisposable {
     }
 
     public override void Write(byte[] buf, int offset, int size) {
-        if(buffer == null) {
+        if(!writing || (buffer == null)) {
             buffer = new byte[chunkSize];
             count = 0;
+            writing = true;
         }
-        writing = true;
         while(size > 0) {
             int sz = (int)(chunkSize-count);
             if(size < sz)
@@ -186,7 +195,7 @@ public class TinyChunkStream: Stream,IDisposable {
     }
 
     public override void Flush() {
-        baseStream.Flush();
+        Flush(true);
     }
 
     public void Flush(bool baseFlush) {
@@ -205,12 +214,12 @@ public class TinyChunkStream: Stream,IDisposable {
         if(!writing || (buffer == null))
             return;
         Flush(false);
-        byte[] b = new byte[1];
-        b[0] = 0;
-        baseStream.Write(b,0,1);
+        buffer[0] = 0;
+        baseStream.Write(buffer,0,1);
         if(baseFlush)
             baseStream.Flush();
         buffer = null;
+        writing = false;
     }
 
     public override void SetLength(long len) {
@@ -225,8 +234,11 @@ public class TinyChunkStream: Stream,IDisposable {
     private Stream baseStream;
     private bool leaveOpen;
     private byte[] buffer = null;
+    private byte[] rBuffer = null;
     private byte chunkSize;
+    private byte rChunkSize = DefaultChunkSize;
     private byte count = 0;
+    private byte rCount = 0;
     private bool writing = false;
 }
 

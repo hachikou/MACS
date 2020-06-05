@@ -145,9 +145,10 @@ public partial class SocStream: Stream,IDisposable {
     /// <param name="portno">接続先ポート番号</param>
     /// <param name="timeout">接続待ち最大時間（ミリ秒）0以下の場合無限に待つ。</param>
     /// <param name="crtfile">サーバ認証CRTファイル名。nullの場合SSL接続せずに単純なTCPソケット接続を行なう。</param>
-    public SocStream(string server, int portno, int timeout=0, string crtfile=null) {
+    /// <param name="noipv6">false=IPv6プロトコルも使う, true=IPv6プロトコルを使わない。</param>
+    public SocStream(string server, int portno, int timeout=0, string crtfile=null, bool noipv6=false) {
         init();
-        Connect(server, portno, timeout, crtfile);
+        Connect(server, portno, timeout, crtfile:crtfile, noipv6:noipv6);
     }
 
     /// <summary>
@@ -224,8 +225,9 @@ public partial class SocStream: Stream,IDisposable {
     /// <param name="portno">接続先ポート番号</param>
     /// <param name="timeout">接続待ち最大時間（ミリ秒）0以下の場合無限に待つ。</param>
     /// <param name="crtfile">サーバ認証CRTファイル名。nullの場合SSL接続せずに単純なTCPソケット接続を行なう。</param>
+    /// <param name="noipv6">false=IPv6プロトコルも使う, true=IPv6プロトコルを使わない。</param>
     /// <returns>true=接続成功, false=接続失敗</returns>
-    public bool Connect(string server, int portno, int timeout=-1, string crtfile=null) {
+    public bool Connect(string server, int portno, int timeout=-1, string crtfile=null, bool noipv6=false) {
         if(timeout < 0)
             timeout = -1;
         Close();
@@ -244,6 +246,8 @@ public partial class SocStream: Stream,IDisposable {
             throw ex;
         }
         foreach(IPAddress addr in host.AddressList) {
+            if(noipv6 && (addr.AddressFamily == AddressFamily.InterNetworkV6))
+                continue;
             IPEndPoint ipe = new IPEndPoint(addr, portno);
             Socket s = new Socket(ipe.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
             try {
