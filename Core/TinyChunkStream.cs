@@ -199,27 +199,27 @@ public class TinyChunkStream: Stream,IDisposable {
     }
 
     public void Flush(bool baseFlush) {
-        if(!writing || (count == 0) || (buffer == null))
-            return;
-        byte[] b = new byte[1];
-        b[0] = count;
-        baseStream.Write(b,0,1);
-        baseStream.Write(buffer,0,count);
+        if(writing && (count > 0) && (buffer != null)) {
+            byte[] b = new byte[1];
+            b[0] = count;
+            baseStream.Write(b,0,1);
+            baseStream.Write(buffer,0,count);
+            count = 0;
+        }
         if(baseFlush)
             baseStream.Flush();
-        count = 0;
     }
 
     public void Finish(bool baseFlush=false) {
-        if(!writing || (buffer == null))
-            return;
-        Flush(false);
-        buffer[0] = 0;
-        baseStream.Write(buffer,0,1);
+        if(writing && (buffer != null)) {
+            Flush(false);
+            buffer[0] = 0;
+            baseStream.Write(buffer,0,1);
+            buffer = null;
+            writing = false;
+        }
         if(baseFlush)
             baseStream.Flush();
-        buffer = null;
-        writing = false;
     }
 
     public override void SetLength(long len) {
