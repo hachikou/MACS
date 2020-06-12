@@ -90,12 +90,12 @@ public class TinyChunkStream: Stream,IDisposable {
     }
 
     public override long Length {
-        get { throw new InvalidOperationException(); }
+        get { throw new InvalidOperationException("Length is not supported"); }
     }
 
     public override long Position {
-        get { throw new InvalidOperationException(); }
-        set { throw new InvalidOperationException(); }
+        get { throw new InvalidOperationException("Position is not supported"); }
+        set { throw new InvalidOperationException("Position(set) is not supported"); }
     }
 
     /// <summary>
