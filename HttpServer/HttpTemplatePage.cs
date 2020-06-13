@@ -186,6 +186,8 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
         RenderTemplatePath(Path.Combine(m_dir, templatefile));
     }
 
+    protected ObjectDictionary m_dict;
+
 
     private static string m_defaulttemplatedir = "Page";
     private static string m_templatesuffix = ".html";
@@ -228,8 +230,6 @@ public abstract class HttpTemplatePage : HttpNlsSupport {
         m_command[name] = cmd;
     }
 
-
-    private ObjectDictionary m_dict;
 
     private void RenderTemplatePath(string fname) {
         Assign("self", m_pagename);
