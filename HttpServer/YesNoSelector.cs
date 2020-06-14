@@ -71,6 +71,11 @@ public class YesNoSelector: TranslatableWebControl {
     public bool SwapOrder = false;
     
     /// <summary>
+    ///   変更時に呼び出されるJavaScript
+    /// </summary>
+    public string OnChange;
+
+    /// <summary>
     ///   レンダリング
     /// </summary>
     public override StringBuilder Render(StringBuilder sb) {
@@ -138,6 +143,11 @@ public class YesNoSelector: TranslatableWebControl {
         if(!String.IsNullOrEmpty(OnClick)) {
             sb.Append(" onclick=\"");
             sb.Append(OnClick);
+            sb.Append("\"");
+        }
+        if(!String.IsNullOrEmpty(OnChange)) {
+            sb.Append(" onclick=\"");
+            sb.Append(OnChange);
             sb.Append("\"");
         }
         if(Disabled)
