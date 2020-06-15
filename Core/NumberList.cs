@@ -396,7 +396,87 @@ public class NumberList : IComparable<NumberList>, IEquatable<NumberList> {
     }
 
 
-    private List<int> list = new List<int>();
+    /// <summary>
+    ///   2つのNumberListの和集合を得る
+    /// </summary>
+    public static NumberList Union(NumberList a, NumberList b) {
+        if(a == null) {
+            if(b == null) {
+                return new NumberList();
+            }
+            return new NumberList(b);
+        }
+        return a.Union(b);
+    }
+
+    /// <summary>
+    ///   他のNumberListとの和集合を得る
+    /// </summary>
+    public NumberList Union(NumberList that) {
+        if(that == null) {
+            return new NumberList(this);
+        }
+        int min = this[0];
+        if(that[0] < min)
+            min = that[0];
+        int max = this[this.Length-1];
+        if(max < that[that.Length-1])
+            max = that[that.Length-1];
+        NumberList newList = new NumberList();
+        for(int i = min; i <= max; i++) {
+            if(this.list.Contains(i) || that.list.Contains(i))
+                newList.QuickAdd(i);
+        }
+        return newList;
+    }
+
+    /// <summary>
+    ///   2つのNumberListの積集合を得る
+    /// </summary>
+    public static NumberList Intersect(NumberList a, NumberList b) {
+        if(a == null)
+            return new NumberList();
+        return a.Intersect(b);
+    }
+
+    /// <summary>
+    ///   他のNumberListとの積集合を得る
+    /// </summary>
+    public NumberList Intersect(NumberList that) {
+        NumberList newList = new NumberList();
+        if(that == null)
+            return newList;
+        foreach(int i in this.list) {
+            if(that.list.Contains(i))
+                newList.QuickAdd(i);
+        }
+        return newList;
+    }
+
+    /// <summary>
+    ///   2つのNumberListに共通要素があるかどうか
+    /// </summary>
+    public static bool IsOverlapped(NumberList a, NumberList b) {
+        if(a == null)
+            return false;
+        return a.IsOverlapped(b);
+    }
+
+    /// <summary>
+    ///   他のNumberListと共通要素があるかどうか
+    /// </summary>
+    public bool IsOverlapped(NumberList that) {
+        if(that == null)
+            return false;
+        foreach(int i in this.list) {
+            if(that.list.Contains(i))
+                return true;
+        }
+        return false;
+    }
+        
+
+    protected List<int> list = new List<int>();
 
 #region SELFTEST
 #if SELFTEST
