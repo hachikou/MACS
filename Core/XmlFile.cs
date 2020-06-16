@@ -23,6 +23,7 @@ public class XmlFile : IDisposable {
     /// <summary>
     ///   XMLファイルを読み込み専用で開く。
     ///   指定ファイルがある場合にはそれを読み込む。
+    ///   ただし、filepathの先頭が"<?"である場合、filepathはファイル名ではなく、コンテンツが直接指定されたものとみなされる。
     /// </summary>
     public XmlFile(string filepath, string rootelementname) {
         setup(filepath, rootelementname, false);
@@ -31,6 +32,7 @@ public class XmlFile : IDisposable {
     /// <summary>
     ///   XMLファイルを読み込み用/書き込み用を指定して開く。
     ///   指定ファイルがある場合にはそれを読み込む。
+    ///   ただし、filepathの先頭が"<?"である場合、filepathはファイル名ではなく、コンテンツが直接指定されたものとみなされる。この場合、強制的に読み込み専用になる。
     /// </summary>
     public XmlFile(string filepath, string rootelementname, bool writable_) {
         setup(filepath, rootelementname, writable_);
@@ -350,9 +352,19 @@ public class XmlFile : IDisposable {
     ///   コンストラクタ下請け
     /// </summary>
     private void setup(string filepath_, string rootelementname, bool writable_) {
-        filePath = filepath_;
-        writable = writable_;
-        lockFile();
+        if(filepath_ == null)
+            filepath_ = "";
+        string content;
+        if(filepath_.StartsWith("<?")) {
+            filePath = "";
+            content = filepath_;
+            writable = false;
+        } else {
+            filePath = filepath_;
+            content = null;
+            writable = writable_;
+            lockFile();
+        }
         try {
             document = new XmlDocument();
             rootElement = null;
@@ -363,6 +375,11 @@ public class XmlFile : IDisposable {
                     document.Load(sr);
                     sr.Close();
                 }
+                XmlNodeList nodes = document.GetElementsByTagName(rootelementname);
+                if(nodes.Count > 0)
+                    rootElement = (XmlElement)nodes[0];
+            } else if(content != null) {
+                document.LoadXml(content);
                 XmlNodeList nodes = document.GetElementsByTagName(rootelementname);
                 if(nodes.Count > 0)
                     rootElement = (XmlElement)nodes[0];
