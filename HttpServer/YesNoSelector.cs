@@ -17,6 +17,25 @@ namespace MACS.HttpServer {
 public class YesNoSelector: TranslatableWebControl {
 
     /// <summary>
+    ///   コンストラクタ
+    /// </summary>
+    public YesNoSelector(string name, string id, bool value) : base(name, id) {
+        Value = value;
+    }
+
+    /// <summary>
+    ///   コンストラクタ
+    /// </summary>
+    public YesNoSelector(string name, bool value) : base(name) {
+        Value = value;
+    }
+
+    /// <summary>
+    ///   コンストラクタ
+    /// </summary>
+    public YesNoSelector(string name) : base(name) {}
+
+    /// <summary>
     ///   デフォルトコンストラクタ
     /// </summary>
     public YesNoSelector() : base() {}
