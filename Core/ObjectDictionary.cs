@@ -35,6 +35,16 @@ public class ObjectDictionary : SortedDictionary<string,object> {
     /// </summary>
     public ObjectDictionary(ObjectDictionary src) : base(src, src.Comparer) {}
 
+    /// <summary>
+    ///   Dictionary<string,string>からのコンストラクタ
+    /// </summary>
+    public ObjectDictionary(Dictionary<string,string> src) {
+        if(src == null)
+            return;
+        foreach(KeyValuePair<string,string> kv in src) {
+            this[kv.Key] = kv.Value;
+        }
+    }
 
     /// <summary>
     ///   キーに対応する要素を取り出す。
@@ -87,6 +97,19 @@ public class ObjectDictionary : SortedDictionary<string,object> {
         if(x is uint)
             return (uint)x;
         return StringUtil.ToUInt(x.ToString(), defaultValue);
+    }
+
+    /// <summary>
+    ///   キーに対応する要素を取り出す。（byte版）
+    ///   キーが存在しない場合にはdefaultValueを返す。
+    /// </summary>
+    public byte Get(string key, byte defaultValue) {
+        object x = this[key];
+        if(x == null)
+            return defaultValue;
+        if(x is byte)
+            return (byte)x;
+        return (byte)StringUtil.ToInt(x.ToString(), (int)defaultValue);
     }
 
     /// <summary>
@@ -179,6 +202,14 @@ public class ObjectDictionary : SortedDictionary<string,object> {
         ObjectDictionary dict = new ObjectDictionary(cmp);
         dict.Set(str);
         return dict;
+    }
+
+    /// <summary>
+    ///   キーが存在しないときに値をセットする
+    /// </summary>
+    public void XSet(string key, object val) {
+        if(!base.ContainsKey(key))
+            base[key] = val;
     }
 
     /// <summary>
@@ -402,6 +433,32 @@ public class ObjectDictionary : SortedDictionary<string,object> {
         return true;
     }
 
+    /// <summary>
+    ///   指定オブジェクトが真の値とみなされる場合はtrueを返す。
+    /// </summary>
+    public static bool IsTrue(object obj) {
+        if(obj == null)
+            return false;
+        if((obj is string) && ((string)obj == ""))
+            return false;
+        if((obj is byte) && ((byte)obj == 0))
+            return false;
+        if((obj is int) && ((int)obj == 0))
+            return false;
+        if((obj is uint) && ((uint)obj == 0))
+            return false;
+        if((obj is long) && ((long)obj == 0))
+            return false;
+        if((obj is ulong) && ((ulong)obj == 0))
+            return false;
+        if((obj is double) && ((double)obj == 0))
+            return false;
+        if((obj is float) && ((float)obj == 0))
+            return false;
+        if(obj is bool)
+            return (bool)obj;
+        return true;
+    }
 
 #if false
     /// <summary>
