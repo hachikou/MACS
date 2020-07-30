@@ -39,7 +39,7 @@ public class OpeLog {
     private Level m_level;
     private Level m_consolelevel;
     private object m_mutex;
-    private string identifier;
+    private string m_identifier;
 
 
     /// <summary>
@@ -62,7 +62,7 @@ public class OpeLog {
         m_level = Level.DEBUG;
         m_consolelevel = Level.EMERG;
         m_mutex = new object();
-        identifier = null;
+        m_identifier = null;
     }
 
     /// <summary>
@@ -90,7 +90,7 @@ public class OpeLog {
         setRotateAges(ages);
         m_level = Level.DEBUG;
         m_consolelevel = Level.EMERG;
-        identifier = null;
+        m_identifier = null;
     }
 
     /// <summary>
@@ -154,7 +154,7 @@ public class OpeLog {
     /// </summary>
     public void SetIdentifier(string identifier_ ) {
         lock(m_mutex) {
-            identifier = identifier_;
+            m_identifier = (identifier_ != "") ? identifier_ : null;
         }
     }
 
@@ -162,7 +162,7 @@ public class OpeLog {
     ///   現在の識別子を返す
     /// </summary>
     public string GetIdentifier() {
-        return identifier;
+        return m_identifier;
     }
 
     /// <summary>
@@ -188,12 +188,14 @@ public class OpeLog {
             StringBuilder txt = new StringBuilder();
             txt.Append(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.fff "));
             //識別子が設定されていれば、印字する
-            if(identifier != null) {
-                txt.Append(identifier);
+            if(!String.IsNullOrEmpty(m_identifier)) {
+                txt.Append(m_identifier);
                 txt.Append(' ');
             }
-            txt.Append(category);
-            txt.Append(' ');
+            if(!String.IsNullOrEmpty(category)) {
+                txt.Append(category);
+                txt.Append(' ');
+            }
             txt.Append(lv.ToString());
             txt.Append(' ');
             if(ignoreNewLine)
