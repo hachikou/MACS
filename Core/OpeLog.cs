@@ -39,6 +39,7 @@ public class OpeLog {
     private Level m_level;
     private Level m_consolelevel;
     private object m_mutex;
+    private string identifier;
 
 
     /// <summary>
@@ -61,6 +62,7 @@ public class OpeLog {
         m_level = Level.DEBUG;
         m_consolelevel = Level.EMERG;
         m_mutex = new object();
+        identifier = null;
     }
 
     /// <summary>
@@ -88,6 +90,7 @@ public class OpeLog {
         setRotateAges(ages);
         m_level = Level.DEBUG;
         m_consolelevel = Level.EMERG;
+        identifier = null;
     }
 
     /// <summary>
@@ -145,6 +148,22 @@ public class OpeLog {
         }
     }
 
+    /// <summary>
+    ///   識別子を指定する。
+    ///   指定した識別子がログファイルの各行に記録される。
+    /// </summary>
+    public void SetIdentifier(string identifier_ ) {
+        lock(m_mutex) {
+            identifier = identifier_;
+        }
+    }
+
+    /// <summary>
+    ///   現在の識別子を返す
+    /// </summary>
+    public string GetIdentifier() {
+        return identifier;
+    }
 
     /// <summary>
     ///   ログを追記する
@@ -168,6 +187,11 @@ public class OpeLog {
             }
             StringBuilder txt = new StringBuilder();
             txt.Append(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.fff "));
+            //識別子が設定されていれば、印字する
+            if(identifier != null) {
+                txt.Append(identifier);
+                txt.Append(' ');
+            }
             txt.Append(category);
             txt.Append(' ');
             txt.Append(lv.ToString());
