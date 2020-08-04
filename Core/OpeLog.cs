@@ -39,7 +39,8 @@ public class OpeLog {
     private Level m_level;
     private Level m_consolelevel;
     private object m_mutex;
-    private string m_identifier;
+
+    private static string m_identifier = null;
 
 
     /// <summary>
@@ -62,7 +63,6 @@ public class OpeLog {
         m_level = Level.DEBUG;
         m_consolelevel = Level.EMERG;
         m_mutex = new object();
-        m_identifier = null;
     }
 
     /// <summary>
@@ -90,7 +90,6 @@ public class OpeLog {
         setRotateAges(ages);
         m_level = Level.DEBUG;
         m_consolelevel = Level.EMERG;
-        m_identifier = null;
     }
 
     /// <summary>
@@ -152,8 +151,8 @@ public class OpeLog {
     ///   識別子を指定する。
     ///   指定した識別子がログファイルの各行に記録される。
     /// </summary>
-    public void SetIdentifier(string identifier_ ) {
-        lock(m_mutex) {
+    public static void SetIdentifier(string identifier_ ) {
+        lock(m_identifier) {
             m_identifier = (identifier_ != "") ? identifier_ : null;
         }
     }
@@ -161,7 +160,7 @@ public class OpeLog {
     /// <summary>
     ///   現在の識別子を返す
     /// </summary>
-    public string GetIdentifier() {
+    public static string GetIdentifier() {
         return m_identifier;
     }
 
