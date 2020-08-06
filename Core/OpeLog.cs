@@ -32,6 +32,12 @@ public class OpeLog {
         EMERG,
     };
 
+    /// <summary>
+    ///   識別子
+    ///   指定した識別子がログファイルの各行に記録
+    /// </summary>
+    public static string Identifier = null;
+
     private readonly string m_filename;
     private readonly Encoding m_enc;
     private int m_size; // in kilobyte
@@ -39,7 +45,6 @@ public class OpeLog {
     private Level m_level;
     private Level m_consolelevel;
     private object m_mutex;
-
 
     /// <summary>
     ///   操作ログファイルオブジェクトを生成する。
@@ -145,7 +150,6 @@ public class OpeLog {
         }
     }
 
-
     /// <summary>
     ///   ログを追記する
     /// </summary>
@@ -168,8 +172,15 @@ public class OpeLog {
             }
             StringBuilder txt = new StringBuilder();
             txt.Append(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.fff "));
-            txt.Append(category);
-            txt.Append(' ');
+            //識別子が設定されていれば、印字する
+            if(!String.IsNullOrEmpty(Identifier)) {
+                txt.Append(Identifier);
+                txt.Append(' ');
+            }
+            if(!String.IsNullOrEmpty(category)) {
+                txt.Append(category);
+                txt.Append(' ');
+            }
             txt.Append(lv.ToString());
             txt.Append(' ');
             if(ignoreNewLine)
