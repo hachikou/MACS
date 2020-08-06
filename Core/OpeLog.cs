@@ -152,9 +152,7 @@ public class OpeLog {
     ///   指定した識別子がログファイルの各行に記録される。
     /// </summary>
     public static void SetIdentifier(string identifier_ ) {
-        lock(m_identifier) {
-            m_identifier = (identifier_ != "") ? identifier_ : null;
-        }
+        m_identifier = (identifier_ != "") ? identifier_ : null;
     }
 
     /// <summary>
