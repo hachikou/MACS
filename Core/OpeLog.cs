@@ -40,8 +40,7 @@ public class OpeLog {
     private Level m_consolelevel;
     private object m_mutex;
 
-    private static string m_identifier = null;
-
+    public static string Identifier = null;
 
     /// <summary>
     ///   操作ログファイルオブジェクトを生成する。
@@ -148,21 +147,6 @@ public class OpeLog {
     }
 
     /// <summary>
-    ///   識別子を指定する。
-    ///   指定した識別子がログファイルの各行に記録される。
-    /// </summary>
-    public static void SetIdentifier(string identifier_ ) {
-        m_identifier = (identifier_ != "") ? identifier_ : null;
-    }
-
-    /// <summary>
-    ///   現在の識別子を返す
-    /// </summary>
-    public static string GetIdentifier() {
-        return m_identifier;
-    }
-
-    /// <summary>
     ///   ログを追記する
     /// </summary>
     public void Log(string category, Level lv, string msg, bool ignoreNewLine=true) {
@@ -185,8 +169,8 @@ public class OpeLog {
             StringBuilder txt = new StringBuilder();
             txt.Append(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.fff "));
             //識別子が設定されていれば、印字する
-            if(!String.IsNullOrEmpty(m_identifier)) {
-                txt.Append(m_identifier);
+            if(!String.IsNullOrEmpty(Identifier)) {
+                txt.Append(Identifier);
                 txt.Append(' ');
             }
             if(!String.IsNullOrEmpty(category)) {
