@@ -474,7 +474,19 @@ public class NumberList : IComparable<NumberList>, IEquatable<NumberList> {
         }
         return false;
     }
-        
+
+    /// <summary>
+    ///   他のNumberListの内容をすべて含んでいるかどうか
+    /// </summary>
+    public bool Contains(NumberList that) {
+        if(that == null)
+            return true;
+        foreach(int i in that.list) {
+            if(!this.list.Contains(i))
+                return false;
+        }
+        return true;
+    }
 
     protected List<int> list = new List<int>();
 
