@@ -236,6 +236,17 @@ public class SectionIniFile {
         }
     }
 
+    /// <summary>
+    ///   指定セクションが存在するかどうか
+    /// </summary>
+    public bool HasSection(string sectname) {
+        lock(m_mutex){
+            if(m_section == null)
+                return false;
+            return m_section.ContainsKey(sectname);
+        }
+    }
+
 
     private bool _reload() {
         m_section = null;
